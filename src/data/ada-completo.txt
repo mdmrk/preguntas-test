@@ -1,1004 +1,846 @@
-Un fontanero tiene una jornada de Q cuartos de hora (es así como se organiza la agenda) y tiene C clientes. El trabajo del cliente i tarda qi cuartos de hora y el fontanero le cobra un precio pi Es posible que no pueda atender todos los clientes en la jornada, que nunca puede alargar. Este problema tiene una solucion bien conocida que permite elegir que clientes visitar para que la suma cobrada al final de la jornada sea la maxima. ¿Que podemos decir de esta solucion?
+Un fontanero tiene una jornada de Q cuartos de hora (es así como se organiza la agenda) y tiene C clientes. El trabajo del cliente i tarda qi cuartos de hora y el fontanero le cobra un precio pi. Es posible que no pueda atender todos los clientes en la jornada, que nunca puede alargar. Este problema tiene una solución bien conocida que permite elegir qué clientes visitar para que la suma cobrada al final de la jornada sea la máxima. ¿Qué podemos decir de esta solución?
 1
-Que la organizacion de la agenda en cuartos de hora permite obtener una solucion de complejidad temporal Θ(QC) y complejidad espacial Θ(Q).
-Que se ha de implementar forzosamente con un algoritmo de busqueda y enumeracion como el de vuelta atras
-Que no se puede implementar con una solución de “divide y venceras” con memoizacion
+Que la organización de la agenda en cuartos de hora permite obtener una solución de complejidad temporal $\Theta(QC)$ y complejidad espacial $\Theta(Q)$.
+Que se ha de implementar forzosamente con un algoritmo de búsqueda y enumeración como el de vuelta atrás.
+Que no se puede implementar con una solución de "divide y vencerás" con memoización.
 
-Con respecto a los algoritmos estudiados durante el curso que encuentran el arbol de recubrimiento de mínimo coste, de las afirmaciones siguientes, o bien dos son verdaderas y una es falsa, o bien dos son falsas y una es verdadera. Marca la que (en este sentido) es diferente de las otras dos
+Con respecto a los algoritmos estudiados durante el curso que encuentran el árbol de recubrimiento de mínimo coste, de las afirmaciones siguientes, o bien dos son verdaderas y una es falsa, o bien dos son falsas y una es verdadera. Marca la que (en este sentido) es diferente de las otras dos
 3
-El algoritmo de Prim se puede acelerar notablemente si los vertices se organizan en una estructura union-find.
-La complejidad temporal del algoritmo de Prim es cubica con respecto al numero de vertices del grafo.
-El algoritmo de Kruskal va construyendo un bosque de arboles que va uniendo hasta que acaba con un arbol de recubrimiento de coste mínimo.
+El algoritmo de Prim se puede acelerar notablemente si los vértices se organizan en una estructura union-find.
+La complejidad temporal del algoritmo de Prim es cúbica con respecto al número de vértices del grafo.
+El algoritmo de Kruskal va construyendo un bosque de árboles que va uniendo hasta que acaba con un árbol de recubrimiento de coste mínimo.
 
-¿Que obtenemos con la siguiente declaracion de C++: ```priority queue< nodo > pq;``` ?
+¿Qué obtenemos con la siguiente declaración de C++: ```priority_queue<nodo> pq;``` ?
 3
 Un heap o montículo de mínimos.
-Un heap o montículo sin orden establecido ya que no se ha definido la funcion de comparacion.
-Un heap o montículo de maximos
+Un heap o montículo sin orden establecido ya que no se ha definido la función de comparación.
+Un heap o montículo de máximos.
 
-Con los valores numericos almacenados en un fichero, queremos construir un heap(montículo). ¿cual es la forma mas eficiente de proceder?
+Con los valores numéricos almacenados en un fichero, queremos construir un heap (montículo). ¿Cuál es la forma más eficiente de proceder?
 1
-Almacenar esos valores en un vector y despues, reorganizar sus elementos para que estén dispuestos en forma de heap
+Almacenar esos valores en un vector y después, reorganizar sus elementos para que estén dispuestos en forma de heap.
 Ambas formas de proceder son equivalentes en cuanto a eficiencia.
-Almacenar esos valores directamente en un heap que inicialmente esta vacío y vacreciendo por cada uno de los valores insertados
+Almacenar esos valores directamente en un heap que inicialmente está vacío y va creciendo por cada uno de los valores insertados.
 
-Queremos aplicar la tecnica de memoizacion a la siguiente funcion recursiva: ```Double f( double x ) {\n\tif( x < = 2 )\n\t\treturn x;\n\treturn f(sqrt(x-1)) + f(sqrt(x-2));\n}```¿Cual sería un buen candidato para el almacén? (La función sqrt() obtiene la raíz cuadrada; xMax es el valor de x en la primera llamada.)
+Queremos aplicar la técnica de memoización a la siguiente función recursiva: ```double f(double x) {\n\tif(x <= 2)\n\t\treturn x;\n\treturn f(sqrt(x-1)) + f(sqrt(x-2));\n}``` ¿Cuál sería un buen candidato para el almacén? (La función sqrt() obtiene la raíz cuadrada; xMax es el valor de x en la primera llamada.)
 2
-vector<  double  > M(xMax+1)
-Ninguna de las otras dos opciones es valida
-vector<  vector< double >  > M(xMax+1,vector< double >(xMax+1))
+vector<double> M(xMax+1)
+Ninguna de las otras dos opciones es válida
+vector<vector<double>> M(xMax+1, vector<double>(xMax+1))
 
-¿Cual es el coste de monticulizar (heapify) un vector de tamaño N?
+¿Cuál es el coste de monticulizar (heapify) un vector de tamaño N?
 3
-O(N) y Ω(1)
-O(N log N) y Ω(N)
-Θ(N)
+$O(N)$ y $\Omega(1)$
+$O(N \log N)$ y $\Omega(N)$
+$\Theta(N)$
 
 De las siguientes expresiones, o bien dos son ciertas y una es falsa, o bien al contrario, una es cierta y dos son falsas. Marca la que en este sentido es diferente a las otras dos.
 3
-n SUM i=1 (log i SUM j=1 2j ∈ O(n^2)
-(log n)SUM i=1 (n SUM j=1 2j ∈ O(n log n)
-(n/2)SUM i=1 (i SUM j=1 2j ∈ O(n log n)
+$\sum_{i=1}^{n} \sum_{j=1}^{\log i} 2^j \in O(n^2)$
+$\sum_{i=1}^{\log n} \sum_{j=1}^{n} 2^j \in O(n \log n)$
+$\sum_{i=1}^{n/2} \sum_{j=1}^{i} 2^j \in O(n \log n)$
 
-Se pretende resolver el problema del viajante de comercio (travelling salesman problem) mediante el esquema de vuelta atras. ¿Cual de los siguientes valores se espera que se comporte mejor como cota optimista para un nodo?
+Se pretende resolver el problema del viajante de comercio (travelling salesman problem) mediante el esquema de vuelta atrás. ¿Cuál de los siguientes valores se espera que se comporte mejor como cota optimista para un nodo?
 2
-La suma de los pesos de las aristas que completan la solucion paso a paso visitando el vertice mas cercano al ultimo visitado.
-La suma de los pesos de las k aristas restantes mas cortas, donde k es el numero de ciudades que quedan por visitar
-El valor que se obtiene de multiplicar k por el peso de la arista mas corta de entre las restantes, donde k es el numero de ciudades que quedan por visitar.
+La suma de los pesos de las aristas que completan la solución paso a paso visitando el vértice más cercano al último visitado.
+La suma de los pesos de las k aristas restantes más cortas, donde k es el número de ciudades que quedan por visitar.
+El valor que se obtiene de multiplicar k por el peso de la arista más corta de entre las restantes, donde k es el número de ciudades que quedan por visitar.
 
-En un algoritmo de busqueda y enumeracion, ¿que podemos decir acerca de la heurísticaque se utiliza para determinar si un nodo debe expandirse o no?
+En un algoritmo de búsqueda y enumeración, ¿qué podemos decir acerca de la heurística que se utiliza para determinar si un nodo debe expandirse o no?
 3
 Las otras dos opciones son ambas ciertas.
-Que puede equivocarse, por eso se le llama heurística
-Que también puede usarse como estrategia de busqueda
+Que puede equivocarse, por eso se le llama heurística.
+Que también puede usarse como estrategia de búsqueda.
 
-Se dispone de un conjunto de n valores numericos dispuestos en forma de monticulo y se desea obtener el valor de la suma de todos los que al menos tienen un hijo (es decir, no son nodos hoja). ¿Cual es la complejidad temporal del mejor algoritmo que se puede escribir
+Se dispone de un conjunto de n valores numéricos dispuestos en forma de montículo y se desea obtener el valor de la suma de todos los que al menos tienen un hijo (es decir, no son nodos hoja). ¿Cuál es la complejidad temporal del mejor algoritmo que se puede escribir?
 3
-O(log n)
-O(n log n)
-O(n)
+$O(\log n)$
+$O(n \log n)$
+$O(n)$
 
-¿Que hace la siguiente función? ```void f( vector< int >&A ) {\n\tpriority queue< int >pq;\n\tfor( auto i : A )\n\t\tpq.push(A[i]);\n\tA.clear();\n\twhile( !pq.empty() ) {\n\t\tA.push back(pq.top());\n\t\tpq.pop();\n\t}\n}``` CONFIRMADA
+¿Qué hace la siguiente función? ```void f(vector<int> &A) {\n\tpriority_queue<int> pq;\n\tfor(auto i : A)\n\t\tpq.push(A[i]);\n\tA.clear();\n\twhile(!pq.empty()) {\n\t\tA.push_back(pq.top());\n\t\tpq.pop();\n\t}\n}```
 3
-Invierte el vector A (el ultimo elemento quedara el primero)
+Invierte el vector A (el último elemento quedará el primero).
 Nada, deja el vector A como estaba.
-Ordena el vector A
+Ordena el vector A.
 
-Una empresa de transportes dispone de M vehículos para repartir N paquetes, todos al mismo destino. Cada paquete i tiene un peso Pi y se tiene que entregar antes de que transcurra un tiempo TPi. Por otro lado, cada vehículo j puede transportar una carga maxima Cj , tarda un tiempo TVj para llegar al destino y consume una cantidad Lj de litros de combustible, independientemente de la carga que transporta. Imaginad un algoritmo de vuelta atras que obtenga la manera en que se tienen que transportar los objetos (en que vehículo j tiene que ir cada objeto i) para que el consumo sea el mínimo. ¿Cual sería una buena cota optimista?
+Una empresa de transportes dispone de M vehículos para repartir N paquetes, todos al mismo destino. Cada paquete i tiene un peso Pi y se tiene que entregar antes de que transcurra un tiempo TPi. Por otro lado, cada vehículo j puede transportar una carga máxima Cj, tarda un tiempo TVj para llegar al destino y consume una cantidad Lj de litros de combustible, independientemente de la carga que transporta. Imaginad un algoritmo de vuelta atrás que obtenga la manera en que se tienen que transportar los objetos (en qué vehículo j tiene que ir cada objeto i) para que el consumo sea el mínimo. ¿Cuál sería una buena cota optimista?
 1
-Ambas son cotas optimistas validas.
-La solucion voraz del problema de cargar cada paquete en el camion de menor consumo donde cada paquete llega a tiempo, sin tener en cuenta si el camion se sobrecarga o no
-La solucion voraz del problema de cargar cada paquete en el camion de menor consumo, sin sobrecargarlo, sin tener en cuenta si el paquete llega a tiempo o no.
+Ambas son cotas optimistas válidas.
+La solución voraz del problema de cargar cada paquete en el camión de menor consumo donde cada paquete llega a tiempo, sin tener en cuenta si el camión se sobrecarga o no.
+La solución voraz del problema de cargar cada paquete en el camión de menor consumo, sin sobrecargarlo, sin tener en cuenta si el paquete llega a tiempo o no.
 
-En cuanto a la posibilidad de aplicar la tecnica de programacion dinamica iterativa para resolver un problema:
+En cuanto a la posibilidad de aplicar la técnica de programación dinámica iterativa para resolver un problema:
 3
-No necesariamente ha de conocerse de antemano todos los posibles subproblemaspero si debe saberse, dados dos de ellos cualesquiera, cual es mas pequeño. 
-Se debe conocer de antemano todos los posibles subproblemas pero no necesariamente se debe disponer de una ordenacion entre todos ellos segun tamaño.
-Se debe conocer de antemano todos los posibles subproblemas y ademas, se debe disponer de una ordenacion entre todos ellos segun tamaño.
+No necesariamente ha de conocerse de antemano todos los posibles subproblemas, pero sí debe saberse, dados dos de ellos cualesquiera, cuál es más pequeño.
+Se debe conocer de antemano todos los posibles subproblemas pero no necesariamente se debe disponer de una ordenación entre todos ellos según tamaño.
+Se debe conocer de antemano todos los posibles subproblemas y además, se debe disponer de una ordenación entre todos ellos según tamaño.
 
-Se dispone de un conjunto de n valores numericos dispuestos en un vector sin orden pre-establecido. Se desea escribir una funcion que reciba ese vector y un valor  k (n/2 < = k < = n) y que devuelva los k valores mas pequeños dispuestos en otro vector de manera ordenada. ¿Cual es la complejidad temporal del mejor algoritmo que se puede escribir?
+Se dispone de un conjunto de n valores numéricos dispuestos en un vector sin orden preestablecido. Se desea escribir una función que reciba ese vector y un valor k ($n/2 \leq k \leq n$) y que devuelva los k valores más pequeños dispuestos en otro vector de manera ordenada. ¿Cuál es la complejidad temporal del mejor algoritmo que se puede escribir?
 2
-O(kn)
-O(k log n)
+$O(kn)$
+$O(k \log n)$
 Ninguna de las otras dos opciones es cierta.
 
-Indica cual es la complejidad temporal en funcion de n, donde A es un vector de enteros y k es una constante que no depende de n, del fragmento siguiente:```for( int i = k; i <  n - k; i++){\n\tA[i] = 0;\n\tfor( int j = i - k; j <  i + k; j++ )\n\t\tA[i] += B[j];\n}```
+Indica cuál es la complejidad temporal en función de n, donde A es un vector de enteros y k es una constante que no depende de n, del fragmento siguiente: ```for(int i = k; i < n - k; i++) {\n\tA[i] = 0;\n\tfor(int j = i - k; j < i + k; j++)\n\t\tA[i] += B[j];\n}```
 3
-Θ(k)
-Θ(n^2)
-Θ(n)
+$\Theta(k)$
+$\Theta(n^2)$
+$\Theta(n)$
 
 En el problema del viajante de comercio (travelling salesman problem) queremos listar todas las soluciones factibles
 2
-lo mas importante es conseguir una cota pesimista adecuada. Las diferencias entre ramificacion y poda y vuelta atras son irrelevantes en este caso
-el orden en el que se exploran las soluciones parciales no es relevante; por ello, la tecnica ramificacion y poda no aporta nada fcon respecto a vuelta atras
-lo mas adecuado seria usar una tecnica de ramificacion y poda ya que es muy importante el orden en el que se exploran las soluciones parciales
+Lo más importante es conseguir una cota pesimista adecuada. Las diferencias entre ramificación y poda y vuelta atrás son irrelevantes en este caso.
+El orden en el que se exploran las soluciones parciales no es relevante; por ello, la técnica ramificación y poda no aporta nada con respecto a vuelta atrás.
+Lo más adecuado sería usar una técnica de ramificación y poda ya que es muy importante el orden en el que se exploran las soluciones parciales.
 
-El problema de la moneda consiste a formar una suma M con el numero mínimo de monedas tomadas (con repeticion) de un conjunto C donde hay una cantidad suficientemente grande de monedas con cada posible valor facial C = {c1, c2, . . . , c..} , con c1 = 1. ¿Cual de estas afirmaciones sobre un algoritmo recursivo de la forma nOPT (M)  = 1 + min nOPT(M-ci); nOPT(0) = 0; nOPT(x) = inf para x <  0 es falsa?
+El problema de la moneda consiste en formar una suma M con el número mínimo de monedas tomadas (con repetición) de un conjunto C donde hay una cantidad suficientemente grande de monedas con cada posible valor facial $C = \{c_1, c_2, \ldots, c_k\}$, con $c_1 = 1$. ¿Cuál de estas afirmaciones sobre un algoritmo recursivo de la forma $nOPT(M) = 1 + \min nOPT(M-c_i)$; $nOPT(0) = 0$; $nOPT(x) = \infty$ para $x < 0$ es falsa?
 2
-Tiene un coste temporal prohibitivo, ya que puede calcular nOPT(x) para el mismo valor de x mas de una vez.
-Dependiendo de cuales sean los valores faciales y la suma, puede ser que el algoritmo recursivo no encuentre solucion
-Encuentra siempre la solucion optima
+Tiene un coste temporal prohibitivo, ya que puede calcular $nOPT(x)$ para el mismo valor de x más de una vez.
+Dependiendo de cuáles sean los valores faciales y la suma, puede ser que el algoritmo recursivo no encuentre solución.
+Encuentra siempre la solución óptima.
 
-Dados dos nodos cualesquiera del arbol de busqueda de ramificacion y poda, en general, ¿se puede saber con certeza cual esta mas cerca de la solucion optima del problema a resolver? 
+Dados dos nodos cualesquiera del árbol de búsqueda de ramificación y poda, en general, ¿se puede saber con certeza cuál está más cerca de la solución óptima del problema a resolver?
 1
 Sí, pero solo si ambos nodos son hoja.
-Sí, el que tiene mejor cota pesimista
-Sí, el que tiene mejor cota optimista
+Sí, el que tiene mejor cota pesimista.
+Sí, el que tiene mejor cota optimista.
 
-¿Cual es la complejidad temporal en funcion de n, del siguiente fragmento:```for( int i = 0; i <  n; i++ ) {\n\tA[i] = 0;\n\tfor( int j = 0; j <  20; j++ )\n\t\tA[i] += B[j];\n}```
+¿Cuál es la complejidad temporal en función de n, del siguiente fragmento: ```for(int i = 0; i < n; i++) {\n\tA[i] = 0;\n\tfor(int j = 0; j < 20; j++)\n\t\tA[i] += B[j];\n}```
 2
-Θ(n logn)
-Θ(n)
-Θ(n^2)
+$\Theta(n \log n)$
+$\Theta(n)$
+$\Theta(n^2)$
 
-¿Cual es la complejidad, en función de n, del siguiente fragmento: (suponed que A está definido como vector< int >A(n) y sort() es la funcion de ordenacion de la librería estandar de C++, que tiene la mejor complejidad, temporal y espacial, posible para un algoritmo de ordenacion de proposito general.) ```std::sort(begin(A), end(A));\nint acc = 0;\nfor( auto i : A )  \n\tacc += i;```
+¿Cuál es la complejidad, en función de n, del siguiente fragmento: (suponed que A está definido como vector<int> A(n) y sort() es la función de ordenación de la librería estándar de C++, que tiene la mejor complejidad, temporal y espacial, posible para un algoritmo de ordenación de propósito general.) ```std::sort(begin(A), end(A));\nint acc = 0;\nfor(auto i : A)\n\tacc += i;```
 1
-Θ(n log n)
-Θ(n)
-Θ(n^2)
+$\Theta(n \log n)$
+$\Theta(n)$
+$\Theta(n^2)$
 
-¿De que clase de complejidad es la solucion de la siguiente relacion de recurrencia? CONFIRMADA ```f(n) = n(n - 1) + f(n - 1)   # si n  > 0 \nf(0) = 1 \t\t\t\t\t# si n = 0```
+¿De qué clase de complejidad es la solución de la siguiente relación de recurrencia? ```f(n) = n(n - 1) + f(n - 1)   # si n > 0\nf(0) = 1                      # si n = 0```
 3
-f(n) E Θ(n^2)
-Ninguna de las otras dos opciones es cierta
-f(n) E Θ(n^3)
+$f(n) \in \Theta(n^2)$
+Ninguna de las otras dos opciones es cierta.
+$f(n) \in \Theta(n^3)$
 
-¿Que tienen en comun los algoritmos de ordenacion Quicksort y Mergesort.
+¿Qué tienen en común los algoritmos de ordenación Quicksort y Mergesort?
 3
-El numero de llamadas recursivas que hacen en el mejor de los casos
+El número de llamadas recursivas que hacen en el mejor de los casos.
 La complejidad temporal de la combinación de las soluciones parciales.
-La complejidad temporal de la division en subproblemas
+La complejidad temporal de la división en subproblemas.
 
-De las siguientes expresiones, o bien dos son verdaderas y una es falsa, obien dos son falsas y una es verdadera. Marca la que (en este sentido) esdistinta a las otras dos.
+De las siguientes expresiones, o bien dos son verdaderas y una es falsa, o bien dos son falsas y una es verdadera. Marca la que (en este sentido) es distinta a las otras dos.
 3
-Ω(n^2) ⊂ Ω(n^3)
-Θ(n^2) ⊂ Θ(n^3)
-O(n^2) ⊂ O (n^3)
+$\Omega(n^2) \subset \Omega(n^3)$
+$\Theta(n^2) \subset \Theta(n^3)$
+$O(n^2) \subset O(n^3)$
 
 De las siguientes afirmaciones marca la que es verdadera.
 1
-En un esquema de vuelta atras, las cotas pesimistas no tienen sentido si lo que se pretende es obtener todas las soluciones factibles.
-El esquema de vuelta atras no es compatible con el uso conjuntode cotas pesimistas y optimistas.
-Las cotas pesimistas no son compatibles con un esquema de vuelta atras.
+En un esquema de vuelta atrás, las cotas pesimistas no tienen sentido si lo que se pretende es obtener todas las soluciones factibles.
+El esquema de vuelta atrás no es compatible con el uso conjunto de cotas pesimistas y optimistas.
+Las cotas pesimistas no son compatibles con un esquema de vuelta atrás.
 
-Si el coste temporal de un algoritmo es T(n), ¿cual de las siguientes situaciones es imposible?
+Si el coste temporal de un algoritmo es T(n), ¿cuál de las siguientes situaciones es imposible?
 1
-T(n) ∈ Ω(n) y T(n) ∈ Θ(n^2)
-T(n) ∈ Θ(n) y T(n) ∈ Ω(n^2)
-T(n) ∈ O(n) y T(n) ∈ Θ(n)
+$T(n) \in \Omega(n)$ y $T(n) \in \Theta(n^2)$
+$T(n) \in \Theta(n)$ y $T(n) \in \Omega(n^2)$
+$T(n) \in O(n)$ y $T(n) \in \Theta(n)$
 
-Dada la siguiente funcion: ```int exa (vector < int >& v){ \n\tint j, i=1, n=v.size(); \n\tif (n >1) \n\t\tdo{   \n\t\t\tint x = v[i];   \n\t\t\tfor (j=i; j  >0 and v[j-1]  >x; j--)     \n\t\t\t\tv[j]=v[j-1];   \n\t\t\tv[j]=x;   \n\t\t\ti++; \n\t\t} while (i< n); \n\treturn 0;\n}```
+Dada la siguiente función: ```int exa(vector<int> &v) {\n\tint j, i=1, n=v.size();\n\tif(n > 1)\n\t\tdo {\n\t\t\tint x = v[i];\n\t\t\tfor(j=i; j > 0 && v[j-1] > x; j--)\n\t\t\t\tv[j] = v[j-1];\n\t\t\tv[j] = x;\n\t\t\ti++;\n\t\t} while(i < n);\n\treturn 0;\n}```
 1
-La complejidad temporal en el mejor de los casos es Ω(n)
-La complejidad temporal en el mejor de los casos es Ω(1)
-La complejidad temporal exacta es Θ(n^2)
+La complejidad temporal en el mejor de los casos es $\Omega(n)$.
+La complejidad temporal en el mejor de los casos es $\Omega(1)$.
+La complejidad temporal exacta es $\Theta(n^2)$.
 
-En un problema de optimizacion, si el dominio de las decisiones es un conjunto infinito,
+En un problema de optimización, si el dominio de las decisiones es un conjunto infinito,
 2
-es probable que a traves de programacion dinamica se obtenga un algoritmo eficaz que lo solucione.
-podremos aplicar el esquema vuelta atras siempre que se trate de un conjunto infinito numerable
-una estrategia voraz puede ser la unica alternativa.
+Es probable que a través de programación dinámica se obtenga un algoritmo eficaz que lo solucione.
+Podremos aplicar el esquema vuelta atrás siempre que se trate de un conjunto infinito numerable.
+Una estrategia voraz puede ser la única alternativa.
 
-De las siguientes expresiones, o bien dos son verdaderas y una es falsa, o bien dos son falsas y una es verdadera. Marca la que (en este sentido) es distinta a las otras dos CONFIRMADA
+De las siguientes expresiones, o bien dos son verdaderas y una es falsa, o bien dos son falsas y una es verdadera. Marca la que (en este sentido) es distinta a las otras dos
 1
-O(n^2) ⊂ O(2^log2 n)
-n + n log2 n ∈ Ω(n + n log2 n)
-Ω(n^2) ⊂ Ω(n)
+$O(n^2) \subset O(2^{\log_2 n})$
+$n + n \log_2 n \in \Omega(n + n \log_2 n)$
+$\Omega(n^2) \subset \Omega(n)$
 
-Si lim n→∞ f(n) g(n) = ∞ entonces . . .
+Si $\lim_{n \to \infty} \frac{f(n)}{g(n)} = \infty$ entonces...
 2
-... f(n) ∈ O(g(n))
-... f(n) ∈ Ω(g(n))
-... f(n) ∈ Θ(g(n))
+$f(n) \in O(g(n))$
+$f(n) \in \Omega(g(n))$
+$f(n) \in \Theta(g(n))$
 
-Dado un problema de minimizacion resuelto mediante un esquema de ramificacion y poda, ¿que ocurre si la cota optimista resulta ser un valor excesivamente pequeno?
+Dado un problema de minimización resuelto mediante un esquema de ramificación y poda, ¿qué ocurre si la cota optimista resulta ser un valor excesivamente pequeño?
 3
-Que se podría explorar menos nodos de los necesarios
-Que se podría explorar mas nodos de los necesarios
-Que se podría podar el nodo que conduce a la solucion optima
+Que se podría explorar menos nodos de los necesarios.
+Que se podría explorar más nodos de los necesarios.
+Que se podría podar el nodo que conduce a la solución óptima.
 
-¿Que nos proporciona la media aritmetica entre el coste temporal asintotico (o complejidad temporal) en el peor caso y el coste temporal asintotico en el mejor caso? 
+¿Qué nos proporciona la media aritmética entre el coste temporal asintótico (o complejidad temporal) en el peor caso y el coste temporal asintótico en el mejor caso?
 3
-En general, nada de interes
-El coste temporal asintotico en el caso medio.
+En general, nada de interés.
+El coste temporal asintótico en el caso medio.
 El coste temporal promedio.
 
-Dada la siguiente funcion: ```int exa (string & cad, int pri, int ult){\n\tif (pri >=ult)  \n\t\treturn 1;\n\telse  if (cad[pri]==cad[ult])      \n\t\treturn exa(cad, pri+1, ult-1);  \n\telse      \n\t\treturn 0;\n}```
+Dada la siguiente función: ```int exa(string &cad, int pri, int ult) {\n\tif(pri >= ult)\n\t\treturn 1;\n\telse if(cad[pri] == cad[ult])\n\t\treturn exa(cad, pri+1, ult-1);\n\telse\n\t\treturn 0;\n}```
 3
-O(n^2)
-O(log n)
-O(n)
+$O(n^2)$
+$O(\log n)$
+$O(n)$
 
-Dado el problema de las torres de Hanoi resuelto mediante divide y venceras, ¿cual de las siguientes relaciones recurrencia expresa mejor su complejidad temporal para el caso general, siendo n el numero de discos? 
+Dado el problema de las torres de Hanoi resuelto mediante divide y vencerás, ¿cuál de las siguientes relaciones de recurrencia expresa mejor su complejidad temporal para el caso general, siendo n el número de discos?
 1
-T(n) = 2T(n - 1) + n
-T(n) = T(n - 1) + n
-T(n) = 2T(n - 1) + 1
+$T(n) = 2T(n - 1) + n$
+$T(n) = T(n - 1) + n$
+$T(n) = 2T(n - 1) + 1$
 
-En el problema del viajante de comercio (travelling salesman problem) queremos listar todas las soluciones factibles.
-1
-El orden en el que se exploran las soluciones parciales no es relevante; por ello, la tecnica ramificacion y poda no aporta nada con respecto a vuelta atras.
-Lo mas importante es conseguir una cota pesimista adecuada. Las diferencias entre ramificacion y poda y vuelta atras son irrelevantes en este caso.
-Lo mas adecuado sería usar una tecnica de ramificacion y poda ya que es muy importante el orden en el que se exploran las soluciones parciales.
-
-¿Cual de las siguientes estrategias de busqueda es mas apropiada en un esquema de vuelta atras? 
+¿Cuál de las siguientes estrategias de búsqueda es más apropiada en un esquema de vuelta atrás?
 3
-Ninguna de las otras dos estrategias es compatible con el esquema de vuelta atras.
-Explorar primero los nodos con mejor cota optimista
-Explorar primero los nodos con mejor valor hasta el momento en la funcion que se pretende optimizar.
+Ninguna de las otras dos estrategias es compatible con el esquema de vuelta atrás.
+Explorar primero los nodos con mejor cota optimista.
+Explorar primero los nodos con mejor valor hasta el momento en la función que se pretende optimizar.
 
-¿Cual seria la complejidad temporal de la siguiente funcion tras aplicar programacion dinamica?```double f(int n, int m) {    \n\tif(n == 0) \n\t\treturn 1;    \n\treturn m * f(n-1,m) * f(n-2,m);\n}```
+¿Cuál sería la complejidad temporal de la siguiente función tras aplicar programación dinámica? ```double f(int n, int m) {\n\tif(n == 0)\n\t\treturn 1;\n\treturn m * f(n-1, m) * f(n-2, m);\n}```
 1
-Θ(n)
-Θ(n^2)
-Θ(n · m)
+$\Theta(n)$
+$\Theta(n^2)$
+$\Theta(n \cdot m)$
 
-La siguiente relacion de recurrencia expresa la complejidad de un algoritmo recursivo, donde g(n) es una funcion polinomica: \n\t1 si n ≤ 1 \n\tT(n) = { \n\t2T(n/2) + g(n)   en otro caso \nDi cual de las siguientes afirmaciones es cierta: 
+La siguiente relación de recurrencia expresa la complejidad de un algoritmo recursivo, donde g(n) es una función polinómica:
+$T(n) = \begin{cases} 1 & \text{si } n \leq 1 \\ 2T(n/2) + g(n) & \text{en otro caso} \end{cases}$
+Di cuál de las siguientes afirmaciones es cierta:
 3
-Si g(n) ∈ Θ(n) la relacion de recurrencia representa la complejidad temporal del algoritmo de ordenacion mergesort.
-Si g(n) ∈ Θ(n^2) la relacion de recurrencia representa la complejidad temporal del algoritmo de ordenacion mediante insercion binaria.
-Si g(n) ∈ Θ(1) la relacion de recurrencia representa la complejidad temporal del algoritmo de busqueda dicotomica.
+Si $g(n) \in \Theta(n)$ la relación de recurrencia representa la complejidad temporal del algoritmo de ordenación mergesort.
+Si $g(n) \in \Theta(n^2)$ la relación de recurrencia representa la complejidad temporal del algoritmo de ordenación mediante inserción binaria.
+Si $g(n) \in \Theta(1)$ la relación de recurrencia representa la complejidad temporal del algoritmo de búsqueda dicotómica.
 
-Sea la siguiente relacion de recurrencia \n\t{ 1 si n ≤ 1 \n\tT(n) = {   \n\t{ 8T(n/8) + g(n) en otro caso \n\tSi T(n) ∈ Θ(n^2), \n¿en cual de estos tres casos nos podemos encontrar? 
+Sea la siguiente relación de recurrencia:
+$T(n) = \begin{cases} 1 & \text{si } n \leq 1 \\ 8T(n/8) + g(n) & \text{en otro caso} \end{cases}$
+Si $T(n) \in \Theta(n^2)$, ¿en cuál de estos tres casos nos podemos encontrar?
 3
-g(n) = n^2
-g(n) = n
-g(n) = n^3
+$g(n) = n^2$
+$g(n) = n$
+$g(n) = n^3$
 
-Se desea resolver el problema de la potencia enesima (x^n), asumiendo que n es par y que se utilizara la siguiente recurrencia: pot(x,n) = pot(x,n/2) * pot(x,n/2); ¿Que estrategia resulta ser mas eficiente en cuanto al coste temporal?
+Se desea resolver el problema de la potencia enésima ($x^n$), asumiendo que n es par y que se utilizará la siguiente recurrencia: pot(x,n) = pot(x,n/2) * pot(x,n/2); ¿Qué estrategia resulta ser más eficiente en cuanto al coste temporal?
 1
-En este caso tanto programacion dinamica como divide y venceras resultan ser equivalentes en cuanto a la complejidad temporal.
-Un algoritmo recursivo con memoizacion.
-Divide y venceras
+En este caso tanto programación dinámica como divide y vencerás resultan ser equivalentes en cuanto a la complejidad temporal.
+Un algoritmo recursivo con memoización.
+Divide y vencerás.
 
-En ausencia de cotas optimistas y pesimistas, la estrategia de vuelta atras. . .
+En ausencia de cotas optimistas y pesimistas, la estrategia de vuelta atrás...
 3
-. . . no se puede usar para resolver problemas de optimizacion
-. . . debe recorrer siempre todo el arbol.
-. . . no recorre todo el arbol si hay manera de descartar subárboles que representan conjuntos de soluciones no factibles.
+...no se puede usar para resolver problemas de optimización.
+...debe recorrer siempre todo el árbol.
+...no recorre todo el árbol si hay manera de descartar subárboles que representan conjuntos de soluciones no factibles.
 
-Se desea ordenar una lista enlazada de n elementos adaptando el algoritmo Mergesort. En este caso, al tratarse de una lista, la complejidad temporal asintotica de realizar la division en subproblemas resulta ser lineal con el tamaño de esa lista. ¿Cual sería entonces el coste temporal de realizar dicha ordenacion? 
+Se desea ordenar una lista enlazada de n elementos adaptando el algoritmo Mergesort. En este caso, al tratarse de una lista, la complejidad temporal asintótica de realizar la división en subproblemas resulta ser lineal con el tamaño de esa lista. ¿Cuál sería entonces el coste temporal de realizar dicha ordenación?
 1
-Θ(n log n)
+$\Theta(n \log n)$
 Ninguna de las otras dos opciones es cierta.
-Θ(n^2)
+$\Theta(n^2)$
 
-Si f  /∈ O(g1) y f ∈ O(g2) entonces siempre se cumplira:
+Si $f \notin O(g_1)$ y $f \in O(g_2)$ entonces siempre se cumplirá:
 2
-f ∈ Ω(mín(g1, g2))
-f /∈ O(max(g1, g2))
-f ∈ Ω(g1 + g2)
+$f \in \Omega(\min(g_1, g_2))$
+$f \notin O(\max(g_1, g_2))$
+$f \in \Omega(g_1 + g_2)$
 
-¿Que complejidad se obtiene a partir de la relación de recurrencia T(n) = 9T(n/3) + n^3 con T(1) = O(1)?
+¿Qué complejidad se obtiene a partir de la relación de recurrencia $T(n) = 9T(n/3) + n^3$ con $T(1) = O(1)$?
 3
-O(n^3 log n)
-O(n log n)
-O(n^3)
+$O(n^3 \log n)$
+$O(n \log n)$
+$O(n^3)$
 
-Queremos resolver mediante vuelta atras el problema de las 8 reinas (colocar 8 reinas en un tablero de ajedrez de manera que no se maten mutuamente). Una buena cota optimista permitirıa:
+Queremos resolver mediante vuelta atrás el problema de las 8 reinas (colocar 8 reinas en un tablero de ajedrez de manera que no se maten mutuamente). Una buena cota optimista permitiría:
 3
 Muy probablemente, resolver el problema de forma más rápida.
 No es aplicable este tipo de podas a este problema.
 Muy probablemente, explorar menos nodos.
 
-¿Cual de estos problemas tiene una solución eficiente utilizando programación dinámica?
+¿Cuál de estos problemas tiene una solución eficiente utilizando programación dinámica?
 3
 El problema del cambio.
-La mochila discreta con pesos y valores reales positivos
-El problema de la asignacion de tareas
+La mochila discreta con pesos y valores reales positivos.
+El problema de la asignación de tareas.
 
-Se desea obtener todas las permutaciones de una lista compuesta por n elementos. ¿Que esquema es el mas adecuado?
+Se desea obtener todas las permutaciones de una lista compuesta por n elementos. ¿Qué esquema es el más adecuado?
 3
-Ramificacion y poda, puesto que con buenas funciones de cota es mas eficiente que vuelta atrás. 
-Divide y venceras, puesto que la división en sublistas se podría hacer en tiempo constante
-Vuelta atras, es el esquema mas eficiente para este problema.
+Ramificación y poda, puesto que con buenas funciones de cota es más eficiente que vuelta atrás.
+Divide y vencerás, puesto que la división en sublistas se podría hacer en tiempo constante.
+Vuelta atrás, es el esquema más eficiente para este problema.
 
-Un algoritmo recursivo basado en el esquema divide y venceras...
+Un algoritmo recursivo basado en el esquema divide y vencerás...
 3
-... nunca tendra un coste temporal asintotico (o complejidad temporal) exponencial
-... alcanza su maxima eficiencia cuando el problema de tamaño se divide en a problemas de tamano n/a.
+...nunca tendrá un coste temporal asintótico (o complejidad temporal) exponencial.
+...alcanza su máxima eficiencia cuando el problema de tamaño n se divide en a problemas de tamaño n/a.
 Las otras dos opciones son ambas verdaderas.
 
-Dado un problema de minimización resuelto mediante un esquema de ramificación y poda, ¿qué propiedad cumple una cota optimista? 
+Dado un problema de minimización resuelto mediante un esquema de ramificación y poda, ¿qué propiedad cumple una cota optimista?
 2
 Las otras dos opciones son ambas falsas.
-Siempre es mayor o igual que la mejor solucion posible alcanzada
-Asegura un ahorro en la comprobación de todas las soluciones factibles
+Siempre es mayor o igual que la mejor solución posible alcanzada.
+Asegura un ahorro en la comprobación de todas las soluciones factibles.
 
-El esquema de vuelta atras...
+El esquema de vuelta atrás...
 3
 Se puede aplicar a cualquier tipo de problema aunque el coste temporal es elevado.
-Garantiza que encuentra la solucion optima a cualquier problema de seleccion discreta.
-Las otras dos opciones son ambas verdaderas
+Garantiza que encuentra la solución óptima a cualquier problema de selección discreta.
+Las otras dos opciones son ambas verdaderas.
 
-El algoritmo de ordenación Quicksort divide el problema en dos subproblemas. ¿Cual es la complejidad temporal asintotica de realizar esa division?
+El algoritmo de ordenación Quicksort divide el problema en dos subproblemas. ¿Cuál es la complejidad temporal asintótica de realizar esa división?
 3
-Θ(log n)
-Θ(n log n)
-Θ(n)
+$\Theta(\log n)$
+$\Theta(n \log n)$
+$\Theta(n)$
 
-Decid cual de estas tres estrategias proveería la cota pesimista mas ajustada al valor optimo de la mochila discreta:
+Decidid cuál de estas tres estrategias proveería la cota pesimista más ajustada al valor óptimo de la mochila discreta:
 3
-Completar las decisiones restantes basandose en la mejor solucion voraz que pueda encontrarse para los restantes objetos y espacio disponible de la mochila.
-Asumir que ya no se van a coger mas objetos.
-El valor de una mochila que contiene todos los objetos aunque se pase del peso maximo permitido.
+Completar las decisiones restantes basándose en la mejor solución voraz que pueda encontrarse para los restantes objetos y espacio disponible de la mochila.
+Asumir que ya no se van a coger más objetos.
+El valor de una mochila que contiene todos los objetos aunque se pase del peso máximo permitido.
 
-Se pretende resolver el problema del viajante de comercio (travelling salesman problem) mediante el esquema de vuelta atras, ¿cual de los siguientes valores se espera que se comporte mejor para decidir si un nodo es prometedor?
-2
-El valor que se obtiene de multiplicar k por el peso de la arista mas corta de entre las restantes, donde  k es el numero de ciudades que quedan por visitar.
-La suma de los pesos de las k aristas restantes mas cortas, donde k es el numero de ciudades que quedan por visitar. 
-La suma de los pesos de las aristas que completan la solucion paso a paso visitando el vertice mas cercano al ultimo visitado. 
-
-De los problemas siguientes, indicad cual no se puede tratar eficientemente como los otros dos:
+De los problemas siguientes, indicad cuál no se puede tratar eficientemente como los otros dos:
 3
-El problema del cambio, o sea, el de encontrar la manera de entregar una cantidad de dinero usando el minimo de monedas posibles.
-El problema de cortar un tubo de forma que se  obtenga el maximo beneficio posible.
+El problema del cambio, o sea, el de encontrar la manera de entregar una cantidad de dinero usando el mínimo de monedas posibles.
+El problema de cortar un tubo de forma que se obtenga el máximo beneficio posible.
 El problema de la mochila sin fraccionamiento y sin restricciones en cuanto al dominio de los pesos de los objetos y de sus valores.
 
-El coste temporal de un algoritmo se ajusta a la siguiente ecuacion de recurrencia :   t(n) 1 para n=0 , ,,,, , n + sumatorio de t(j) n  > 1, que coste temporal asintotico o complejidad temporal tendra el algoritmo
+El coste temporal de un algoritmo se ajusta a la siguiente ecuación de recurrencia:
+$t(n) = \begin{cases} 1 & \text{para } n = 0 \\ n + \sum_{j=0}^{n-1} t(j) & n > 1 \end{cases}$
+¿Qué coste temporal asintótico o complejidad temporal tendrá el algoritmo?
 3
-O(n^2)
-O(n log n)
-O(2^n)
+$O(n^2)$
+$O(n \log n)$
+$O(2^n)$
 
-Uno  de  estos  tres  problemas  no  tiene  una  solucion  trivial  y  eficiente  que  siga  el esquema voraz.
+Uno de estos tres problemas no tiene una solución trivial y eficiente que siga el esquema voraz.
 3
-El problema de la mochila discreta sin limitacion en la carga maxima de la mochila.
+El problema de la mochila discreta sin limitación en la carga máxima de la mochila.
 El problema de la mochila continua.
 El problema del cambio.
 
-Cual de estas tres expresiones es cierta?
+¿Cuál de estas tres expresiones es cierta?
 2
-O(n^2) C O(2^log(n)) C  O(2^n)
-O(2^log(n)) C O(N^2) C O(2^n)
-O(n^2) C O(2^log(n)) C  O(2^n)
+$O(n^2) \subset O(2^{\log n}) \subset O(2^n)$
+$O(2^{\log n}) \subset O(n^2) \subset O(2^n)$
+$O(n^2) \subset O(2^{\log n}) \subset O(2^n)$
 
-En ausencia de cotas optimistas y pesimistas, la estrategia de backtracking...
+Los algoritmos de ordenación quicksort y mergesort tienen en común:
 2
-debe recorrer siempre todo el árbol
-no  recorre  todo  el  arbol  si  hay  manera  de  descartar  subarboles  que  representen conjuntos de soluciones no factibles
-no se puede usar para resolver problemas de optimizacion
+Que ordenan el vector sin usar espacio adicional.
+Que aplican la estrategia de Divide y vencerás.
+Que ejecutan en tiempo $O(n)$.
 
-Sea la siguiente relacion de recurrencia T(n) = 1 si n< =1///2T(n/2 ) + g(n) en otro casoSi T(n) pertenece O(n), ¿en cusal de estos tres casos nos podemos encontrar?
+¿Qué algoritmo es asintóticamente más rápido el quicksort o el mergesort?
 3
-g(n) = n2
-g(n) = n
-g(n) = 1
+El mergesort es siempre el más rápido o igual (salvo una constante) que el quicksort.
+Como su nombre indica, quicksort.
+Son los dos igual de rápidos, ya que el coste temporal asintótico de ambos es $O(n \log n)$.
 
-Los algoritmos de ordenacion quicksort y mergesort tienen en comun:
-2
-que ordenan el vector sin usar espacio adicional
-que aplican la estrategia de Divide y venceras
-que ejecutan en tiempo O(n)
-
-En el problema del viajante de comercio queremos listar todas las soluciones factibles
+Cuando se resuelve el problema de la mochila discreta usando la estrategia de vuelta atrás, ¿puede ocurrir que se tarde menos en encontrar la solución óptima si se prueba primero a meter cada objeto antes de no meterlo?
 1
-el orden en el que se exploran las soluciones parciales no es relevante, por ello la poda de ramificacion y poda no aporta nada con respecto ala vuelta atras
-lo  mas  importante  es  conseguir  una  cota  pesimista  muy  adecuada  .  las  diferencias entre ramificacion y poda y vuelta atras son irrelevantes en este caso.
-lo  mas  adecuado  seria  usar  una tecnica  de  ramificacion  y  poda  ya  que  es  muy importante el orden en el que se exploran las soluciones parciales
-
-Que algoritmo es asintoticamente mas rapido el quicksort o el mergesort?
-3
-el mergesort es siempre el mas rapido o igual (salvo una constante) que el quicksort
-como su nombre indica, quicksort
-son los dos igual de rapidos , ya que el coste temporal asintotico de ambos es O (n log n)
-
-Cuando se resuelve el problema de la mochila discreta usando la estrategia de vuelta atras, ¿puede ocurrir que se tarde menos en encontrar la solucion  optima si se prueba primero a meter cada objeto antes de no meterlo?
-1
-Si, pero solo si se usan cotas optimistas para podar el  arbol de busqueda.
-Si, tanto si se usan cotas optimistas para podar el arbol de busqueda como si no.
+Sí, pero solo si se usan cotas optimistas para podar el árbol de búsqueda.
+Sí, tanto si se usan cotas optimistas para podar el árbol de búsqueda como si no.
 No, ya que en cualquier caso se deben explorar todas las soluciones factibles.
 
-La complejidad temporal (o coste temporal asintotico)  en el mejor de los casos
+La complejidad temporal (o coste temporal asintótico) en el mejor de los casos
 3
-las dos anteriores son verdaderas
-es el tiempo que tarda el algoritmoen resolver la talla mas pequeña que se le puede presentar
-es una funcion de la talla , o tamaño del problema, que tiene queestar definida para todos los posibles valores de esta
+Las dos anteriores son verdaderas.
+Es el tiempo que tarda el algoritmo en resolver la talla más pequeña que se le puede presentar.
+Es una función de la talla, o tamaño del problema, que tiene que estar definida para todos los posibles valores de esta.
 
-Los algoritmos de programacion dinamica hacen uso
+Los algoritmos de programación dinámica hacen uso
 1
-de que se puede ahorrar esfuerzo guardando los resultados de esfuerzos anteriores
-de una estrategia trivial consistente en examinar todas las soluciones posibles
-de que la solucion optima se puede construir anadiendo el componente optimo de los restantes , uno a uno
+De que se puede ahorrar esfuerzo guardando los resultados de esfuerzos anteriores.
+De una estrategia trivial consistente en examinar todas las soluciones posibles.
+De que la solución óptima se puede construir añadiendo el componente óptimo de los restantes, uno a uno.
 
-Un programa con dos bucles anidados uno dentro de otro , cada uno de los cuales hace aproximadamente n iteraciones , tarda un tiempo
+Un programa con dos bucles anidados uno dentro de otro, cada uno de los cuales hace aproximadamente n iteraciones, tarda un tiempo
 2
-O(n)
-O(n^2)
-O(2^n)
+$O(n)$
+$O(n^2)$
+$O(2^n)$
 
-La siguiente relacion de recurrencia expresa la complejidad de un algoritmo recursivo, donde g(n) es una funci on polin omica: T(n) =1 si n < = 1 //// 2T(n/2 ) + g(n) en otro caso Di cu al de las siguientes afirmaciones es falsa:
+La siguiente relación de recurrencia expresa la complejidad de un algoritmo recursivo, donde g(n) es una función polinómica:
+$T(n) = \begin{cases} 1 & \text{si } n \leq 1 \\ 2T(n/2) + g(n) & \text{en otro caso} \end{cases}$
+Di cuál de las siguientes afirmaciones es falsa:
 2
-Si g(n) pertenece O(1) la relacion de recurrenciarepresenta la complejidad temporal del algoritmo de busqueda dicotomica.
-Si g(n) pertenece O(n^2) la relacion de recurrencia representa la complejidad temporal del algoritmo de busqueda por insercion.
-Si g(n) pertenece O(n) la relacion de recurrencia representa la complejidad temporal del algoritmo de ordenacion mergesort.
+Si $g(n) \in O(1)$ la relación de recurrencia representa la complejidad temporal del algoritmo de búsqueda dicotómica.
+Si $g(n) \in O(n^2)$ la relación de recurrencia representa la complejidad temporal del algoritmo de búsqueda por inserción.
+Si $g(n) \in O(n)$ la relación de recurrencia representa la complejidad temporal del algoritmo de ordenación mergesort.
 
-Si un problema de optimizacion lo es para una funcionque toma valores continuos ...
+Si un problema de optimización lo es para una función que toma valores continuos...
 2
-El  uso  dememoria  de  la  programacion  dinamica  iterativa  y  de  la  programacion dinamica  recursiva  es  el  mismo  independientemente  de  si  el  dominio  es  discreto  o continuo.
-La  programacion  dinamica  recursiva  puede  resultar  mucho  mas  eficiente  que  la programacion dinamica iterativa en cuanto al uso de memoria.
-La  programacion  dinamica  iterativa  siempre  es  mucho  mas  eficiente  que  la programacion dinamica recursiva en cuanto al uso de memoria.
+El uso de memoria de la programación dinámica iterativa y de la programación dinámica recursiva es el mismo independientemente de si el dominio es discreto o continuo.
+La programación dinámica recursiva puede resultar mucho más eficiente que la programación dinámica iterativa en cuanto al uso de memoria.
+La programación dinámica iterativa siempre es mucho más eficiente que la programación dinámica recursiva en cuanto al uso de memoria.
 
 La eficiencia de los algoritmos voraces se basa en...
 1
-... el hecho de que las decisiones tomadas no se reconsideran
-... el hecho de que , con antelacion las, posibles decisiones se ordenan de mejor a peor
-...  en  el  esquema  voraz  no  se  puede  hablar  de  eficiencia  puesto  que  a  menudo  no resuelve el problema
+...el hecho de que las decisiones tomadas no se reconsideran.
+...el hecho de que, con antelación, las posibles decisiones se ordenan de mejor a peor.
+...en el esquema voraz no se puede hablar de eficiencia puesto que a menudo no resuelve el problema.
 
-Cual de estos tres problemas de optimizacion no tiene unasolucion voraz que sea optima 
+¿Cuál de estos tres problemas de optimización no tiene una solución voraz que sea óptima?
 2
-el arbol de cobertura de coste minimo de un grafo conexo
-el problema de la mochila discreta
-el problema de la mochila continua o con fraccionamiento
+El árbol de cobertura de coste mínimo de un grafo conexo.
+El problema de la mochila discreta.
+El problema de la mochila continua o con fraccionamiento.
 
-Pertenece 3n^2 + 3 a O(n^3)
+¿Pertenece $3n^2 + 3$ a $O(n^3)$?
 3
-solo para c=1 y n_0 = 5
-no
-si
+Solo para $c=1$ y $n_0 = 5$.
+No.
+Sí.
 
-En el esquema de vuelta atras el orden en el que se van asignando los distintos valores a las componentes del vector que contendra la solucion...
+En el esquema de vuelta atrás el orden en el que se van asignando los distintos valores a las componentes del vector que contendrá la solución...
 2
-... es irrelevante si no se utilizan mecanismos de poda basados en la mejor soluci on hasta el momento.
+...es irrelevante si no se utilizan mecanismos de poda basados en la mejor solución hasta el momento.
 Las otras dos anteriores son ciertas.
-... puede ser relevante si se utilizan mecanismos de poda basados en estimaciones optimistas.
+...puede ser relevante si se utilizan mecanismos de poda basados en estimaciones optimistas.
 
-Cual  de  los  siguientes  criterios  proveeria  una  cota  optimista  para  el  problema  de encontrar el camino mas corto entre dos ciudades (se supone que el grafo es conexo).
+¿Cuál de los siguientes criterios proveería una cota optimista para el problema de encontrar el camino más corto entre dos ciudades (se supone que el grafo es conexo)?
 3
-Utilizar la solucion (suboptima) que se obtiene al resolver el problema mediante un algoritmo voraz.
-Calcular la distancia recorrida moviendose al azar por el grafo hasta llegar (por azar) a la ciudad destino.
-Calcular la distancia geometrica (en linea recta) entre la ciudad origen y destino.
+Utilizar la solución (subóptima) que se obtiene al resolver el problema mediante un algoritmo voraz.
+Calcular la distancia recorrida moviéndose al azar por el grafo hasta llegar (por azar) a la ciudad destino.
+Calcular la distancia geométrica (en línea recta) entre la ciudad origen y destino.
 
-Tenemos n substancias diferentes en polvo y queremos generar todas las distintas formas de mezclarlas de forma que el peso no supere un gramocomo la balanza que tenemos solo tiene precision de 0.1 gramos no se consideraran pesos que no sean multipolosdeesa  cantidad.  queremos  hacer  un  programa  que  genere  todas  las combinaciones  posibles
+Tenemos n sustancias diferentes en polvo y queremos generar todas las distintas formas de mezclarlas de forma que el peso no supere un gramo. Como la balanza que tenemos solo tiene precisión de 0.1 gramos no se considerarán pesos que no sean múltiplos de esa cantidad. Queremos hacer un programa que genere todas las combinaciones posibles.
 1
-no hay ningun problema en usar una tecnica de vuelta atras
-no se puede usar backtracking porque el numero de combinaciones es infinito
-no se puede usar backtracking porque las decisiones no son valores abstractos
+No hay ningún problema en usar una técnica de vuelta atrás.
+No se puede usar backtracking porque el número de combinaciones es infinito.
+No se puede usar backtracking porque las decisiones no son valores abstractos.
 
-Indicad cual de estas tres expresiones es falsa
+Indicad cuál de estas tres expresiones es falsa
 2
-promedio(n) C O(n)
-promedio(n) C promedio(n^2)
-promedio(n/2) = promedio(n)
+$\Theta(n) \subset O(n)$
+$\Theta(n) \subset \Theta(n^2)$
+$\Theta(n/2) = \Theta(n)$
 
-Si el coste temporal de un algoritmo es T8n) , ¿cual de las siguientes situaciones esimposible?
+Se quieren ordenar d números distintos comprendidos entre 1 y n. Para ello se usa un array de n booleanos que se inicializan primero a false. A continuación se recorren los d números cambiando los valores del elemento del vector de booleanos correspondiente a su número a true. Por último se recorre el vector de booleanos escribiendo los índices de los elementos del vector de booleanos que son true. ¿Es este algoritmo más rápido (asintóticamente) que el mergesort?
 2
-T(n) pertenece omega(n) y T(n) pertenece promedio(n^2)
-T(n) pertenece promedio(n) y T(n) pertenece omega(n^2)
-T(n) pertenece O(n) y T(n) pertenece promedio(n)
-
-Se quieren ordenar d numeros distintos comprendidos entre 1 y n. Para ello se usa un array de n booleanos que se inicializan primero a false. A continuacion se recorren los d  numeros  cambiando  los  valores  del  elemento  del  vector  de  booleanos correspondiente a su numero a true. Por ultimo se recorre el vector de booleanos escribiendo los indices de los elementos del vector de booleanos que son true. ¿Es este algoritmo mas rapido (asintoticamente) que el mergesort?
-2
-Si, ya que el mergesort es O(n log n) y este es O(n)
-Solo si d log d  > k n (donde k es una constante que depende de la implementacion)
+Sí, ya que el mergesort es $O(n \log n)$ y este es $O(n)$.
+Solo si $d \log d > kn$ (donde k es una constante que depende de la implementación).
 No, ya que este algoritmo ha de recorrer varias veces el vector de booleanos.
 
-En un algoritmo de ramificacion y poda, si la lista de nodos vivos no est a ordenada de forma apropiada . . .
+En un algoritmo de ramificación y poda, si la lista de nodos vivos no está ordenada de forma apropiada...
 1
-. . . podria ocurrir que se exploren nodos de forma innecesaria.
-. . . podria ocurrir que se pode el nodo que conduce a la solucion optima.
-. . . podria ocurrir que se descarten nodos factibles.
+...podría ocurrir que se exploren nodos de forma innecesaria.
+...podría ocurrir que se pode el nodo que conduce a la solución óptima.
+...podría ocurrir que se descarten nodos factibles.
 
 Las relaciones de recurrencia
 3
-aparecen solo cuando la solucion es del tipo divide y venceras
-sirven para reducir el coste temporal deuna solucion cuando es prohibitivo
-expresan recursivamente el coste temporal de un algoritmo
+Aparecen solo cuando la solución es del tipo divide y vencerás.
+Sirven para reducir el coste temporal de una solución cuando es prohibitivo.
+Expresan recursivamente el coste temporal de un algoritmo.
 
-Complejidad de ```void f(int n, int arr[])\n{\n\tint i = 0, j = 0;\n\tfor(; i <  n; ++i)\n\t\twhile(j <  n && arr[i] <  arr[j])\n\t\t\tj++\n}```
+Complejidad de ```void f(int n, int arr[]) {\n\tint i = 0, j = 0;\n\tfor(; i < n; ++i)\n\t\twhile(j < n && arr[i] < arr[j])\n\t\t\tj++;\n}```
 3
-O(n2)
-O(n log n)
-O(n)
+$O(n^2)$
+$O(n \log n)$
+$O(n)$
 
-¿Cual de los siguientes pares de problemas son equivalentes en cuanto al tipo de solucion (optima, factible, etc.) aportada por el metodo voraz? Seleccione una:
+¿Cuál de los siguientes pares de problemas son equivalentes en cuanto al tipo de solución (óptima, factible, etc.) aportada por el método voraz?
 3
-El fontanero diligente y la asignacion de tareas.
+El fontanero diligente y la asignación de tareas.
 El fontanero diligente y el problema del cambio.
 El fontanero diligente y la mochila continua.
 
-Se desea encontrar el camino mas corto entre dos ciudades. Para ello se dispone de una tabla con la distancia entre los pares de ciudades en los que hay carreteras o un valor centinela (por ejemplo, -1) si no hay, por lo que para ir de la ciudad inicial a la final es posible que haya que pasar por varias ciudades. Como tambien se conocen las coordenadas geograficas de cada ciudad sequiere usar la distancia geografica (en linea recta) entre cada par de ciudades como cota para limitar la busqueda en un algoritmo de vuelta atras. ¿Que tipo de cota ser ia?
+Se desea encontrar el camino más corto entre dos ciudades. Para ello se dispone de una tabla con la distancia entre los pares de ciudades en los que hay carreteras o un valor centinela (por ejemplo, -1) si no hay, por lo que para ir de la ciudad inicial a la final es posible que haya que pasar por varias ciudades. Como también se conocen las coordenadas geográficas de cada ciudad se quiere usar la distancia geográfica (en línea recta) entre cada par de ciudades como cota para limitar la búsqueda en un algoritmo de vuelta atrás. ¿Qué tipo de cota sería?
 2
 Una cota pesimista.
 Una cota optimista.
-No se trataria de ninguna poda puesto que es posible que esa heuristica no encuentre una solucion factible.
+No se trataría de ninguna poda puesto que es posible que esa heurística no encuentre una solución factible.
 
-De los problemas siguientes, indicad cual no se puede tratar eficientemente como los otros dos
+De los problemas siguientes, indicad cuál no se puede tratar eficientemente como los otros dos
 2
-el problema del viajante de comercio
-el problema del corte de tubos, que se obtenga el maximo beneficio posible
-el  problema  del  cambio ,  osea,  el  de  entregar  una  cantidad  de  dinero  usando  las minimas monedas
+El problema del viajante de comercio.
+El problema del corte de tubos, que se obtenga el máximo beneficio posible.
+El problema del cambio, o sea, el de entregar una cantidad de dinero usando las mínimas monedas.
 
-¿Cual es la diferencia principal entre una solucion de vuelta atras y una solucion de ramificaion y poda para el problema de la mochila?
+¿Cuál es la diferencia principal entre una solución de vuelta atrás y una solución de ramificación y poda para el problema de la mochila?
 1
-el orden de exploracion de las soluciones
-el coste asintotico en el caso peor
-el hecho de que la solucion de ramificacion y poda puede empezar con una solucion suboptima voraz y backtracking no
+El orden de exploración de las soluciones.
+El coste asintótico en el caso peor.
+El hecho de que la solución de ramificación y poda puede empezar con una solución subóptima voraz y backtracking no.
 
-Los  algoritmos  de  vuelta  atras  que  hacen  uso  de  cotas optimistas  generan  las soluciones posibles al problema mediante . . .
+Los algoritmos de vuelta atrás que hacen uso de cotas optimistas generan las soluciones posibles al problema mediante...
 3
-. . . un recorrido guiado por una cola de prioridad de donde se extraen primero los nodos que representan los subarboles mas prometedores del espacio de soluciones.
-.  .  .  un  recorrido  guiado  por  estimaciones  de  las  mejores  ramas  del    arbol  que representa el espacio de soluciones.
-. . . un recorrido en profundidad del arbol que representa el espacio de soluciones.
+...un recorrido guiado por una cola de prioridad de donde se extraen primero los nodos que representan los subárboles más prometedores del espacio de soluciones.
+...un recorrido guiado por estimaciones de las mejores ramas del árbol que representa el espacio de soluciones.
+...un recorrido en profundidad del árbol que representa el espacio de soluciones.
 
-El problema de la funcion compuesta minima consiste en encontrar a partir de un cojunto  de  funcionesdadas  ,  al  secunecia  minima  de  composiciones  de  estas  que permita trasformarun numero n en otro m. se quiere resolver mediante ramificacion y poda. cual seria la forma mas adecuada  de representar las posibles soluciones?
+El problema de la función compuesta mínima consiste en encontrar a partir de un conjunto de funciones dadas, la secuencia mínima de composiciones de estas que permita transformar un número n en otro m. Se quiere resolver mediante ramificación y poda. ¿Cuál sería la forma más adecuada de representar las posibles soluciones?
 1
-mediante un vector de booleanos
-mediante un vector de reales
-este problema no se puede resolver usando ramificacion y poda si no se fija unacota superior al numero total de aplicaciones de funciones
+Mediante un vector de booleanos.
+Mediante un vector de reales.
+Este problema no se puede resolver usando ramificación y poda si no se fija una cota superior al número total de aplicaciones de funciones.
 
-Estudiad  la  relacion  de  recurrencia:T(n)  =  1  si  n< =1//////p*T(n/q)  +  g(n)  en  otro caso(donde p y q son enteros mayores que 1). Di cual de los siguientes esquemas algoritmicos produce de manera natural relacionesde recurrencia asi.
+Estudiad la relación de recurrencia: $T(n) = \begin{cases} 1 & \text{si } n \leq 1 \\ pT(n/q) + g(n) & \text{en otro caso} \end{cases}$ (donde p y q son enteros mayores que 1). Di cuál de los siguientes esquemas algorítmicos produce de manera natural relaciones de recurrencia así.
 1
-Divide y venceras
-Programacion dinamica
-Ramificacion y poda
+Divide y vencerás.
+Programación dinámica.
+Ramificación y poda.
 
-Sea f(n_i la solucion de la relacion de recurrencia f(n) = 2f(n-1) + 1; f(1) = 1. Indicad cual de estas tres expresiones es cierta
+Sea f(n) la solución de la relación de recurrencia $f(n) = 2f(n-1) + 1$; $f(1) = 1$. Indicad cuál de estas tres expresiones es cierta
 1
-f(n) pertenece promedio(2^n)
-f(n) pertenece promedio(n^2)
-f(n) pertenece promedio(n)
+$f(n) \in \Theta(2^n)$
+$f(n) \in \Theta(n^2)$
+$f(n) \in \Theta(n)$
 
-¿Que  nos  proporciona  la  media  entre  el  coste  temporal  asintotico(  o  complejidad temporal) en el peor caso y el coste temporal asintotico en el mejor caso?
+Sea f(n) la solución de la relación de recurrencia $f(n) = 2f(n/2) + n$; $f(1) = 1$. Indicad cuál de estas tres expresiones es cierta
+1
+$f(n) \in \Theta(n \log n)$
+$f(n) \in \Theta(n)$
+$f(n) \in \Theta(n^2)$
+
+Tenemos un conjunto de n enteros positivos y queremos encontrar el subconjunto de tamaño m y de suma mínima.
+3
+Para encontrar la solución habría que probar con todas las combinaciones posibles de m enteros, con lo que la técnica de ramificación y poda no aporta nada con respecto a vuelta atrás.
+Lo más adecuado sería usar una técnica de ramificación y poda, aunque en el peor caso el coste temporal asintótico (o complejidad temporal) sería exponencial.
+Una técnica voraz daría una solución óptima.
+
+Di cuál de estos resultados de coste temporal asintótico es falso
+3
+La ordenación de un vector usando el algoritmo quicksort requiere en el peor caso $\Omega(n^2)$.
+La búsqueda binaria en un vector ordenado requiere en el peor caso un tiempo en $O(\log n)$.
+La ordenación de un vector usando el algoritmo mergesort requiere en el peor caso un tiempo de $\Omega(n^2)$.
+
+¿Se puede reducir el coste temporal de un algoritmo recursivo almacenando los resultados devueltos por las llamadas recursivas?
 2
-el coste temporal promedio
-nada de interes
-el coste temporal asintotico en el caso medio
+No, ello no reduce el coste temporal ya que las llamadas recursivas se deben realizar de cualquier manera.
+Sí, si se repiten llamadas a la función con los mismos argumentos.
+No, solo se puede reducir el coste convirtiendo el algoritmo recursivo en iterativo.
 
-Sea f(n) la solucion de la relacion de recurrencia f(n) = 2f(n/2) +n; f(1) = 1 indicad cual de estas tres expresiones es cierta
-1
-f(n) pertenece promedio(n log n)
-f(n) pertenece promedio(n)
-f(n) pertenece promedio(n^2)
-
-Cual  de  estos  problemas  tiene  una  solucion  eficiente  utilizando  programacion dinamica?
-1
-El problema del cambio.
-El problema de la asignacion de tareas.
-La mochila discreta sin restricciones adicionales.
-
-Tenemos un conjunto de n enteros positivos y queremos encontrar el subconjunto de tamaño m y de suma minima.
+La versión del quicksort que ocupa como pivote el elemento que ocupa la posición central
 3
-para encontrar la solucion habria que probar con todas las combinaciones posibles de m enteros, con lo que la tecnica de ramificacion y poda no aporta nada con respecto a vuelta atras.
-lo mas adecuado seria usar una tecnica de ramificacion y poda , aunque en el peor caso el coste temporal asintotico ( o complejidad temporal) seria exponencial
-una tecnica voraz daria una solucion optima
+No presenta caso mejor y peor para instancias del mismo tamaño.
+Se comporta peor cuando el vector ya está ordenado.
+Se comporta mejor cuando el vector ya está ordenado.
 
-Di cual de estos resultados de coste temporal asintotico es falsa
+La solución recursiva ingenua (pero correcta) a un problema de optimización llama más de una vez a la función con los mismos parámetros. Una de las siguientes tres afirmaciones es falsa.
 3
-la  ordenacion  de  un  vector  usando  el  algoritmo  quicksort  requiere  en  el  peor  caso omega(n^2)
-la busqueda binaria en un vector ordenado requiere en el peor caso un tiempo en 0(log n)
-= la ordenacion de un vector usando el algoritmo mergesort requiereen el peor caso un tiempo de omega(n^2)
-
-¿Se  puede  reducir  el  coste  temporal  de  un  algoritmo  recursivo  almacenando  los resultados devueltos por las llamadas recursivas?
-2
-No, ello no reduce el coste temporal ya que las llamadas recursivas se deben realizar de cualquier manera
-Si, si se repiten llamadas a la funcion con los mismos argumentos
-No, solo se puede reducir el coste convirtiendo el algoritmo recursivo en iterativo
-
-La version del quicksort que ocupa como pivote el elemnto que ocupa la posicion central
-3
-no presenta caso mejor y peorpara instancias del mismo tamaño
-se comporta peor cuando el vector ya esta ordenado
-se comporta mejor cuando el vector ya esta ordenado
-
-Decid cual de estas tres es la cota pesimista mas ajustada al valor optimo de la mochila discreta:
-3
-El valor de una mochila que contiene todos los objetos restantes aunque se pase del pesomaximo permitido.
-El valor de la mochila continua correspondiente.
-El valor de la mochila discreta que se obtiene usando un algoritmo voraz basado en el valor especifico de los objetos.
-
-La solucion recursiva ingenua (pero correcta) a un problema de optimizacion llama mas de una vez a la funcion con los mismos parametros. Una de las siguientes tres afirmaciones es falsa.
-3
-Se puede mejorar la eficiencia del algoritmo guardando en una tabla el valor devuelto para cada conjunto de parametros de cada llamada cuando esta se produce por primera vez.
+Se puede mejorar la eficiencia del algoritmo guardando en una tabla el valor devuelto para cada conjunto de parámetros de cada llamada cuando esta se produce por primera vez.
 Se puede mejorar la eficiencia del algoritmo definiendo de antemano el orden en el que se deben calcular las soluciones a los subproblemas y llenando una tabla en ese orden.
-Se  puede  mejorar  la  eficiencia  del  algoritmo  convirtiendo  el  algoritmo  recursivo directamente en iterativo sin cambiar su funcionamiento basico.
+Se puede mejorar la eficiencia del algoritmo convirtiendo el algoritmo recursivo directamente en iterativo sin cambiar su funcionamiento básico.
 
-El coste temporal del algoritmo de ordenacion por insercion es 
+El coste temporal del algoritmo de ordenación por inserción es
 2
-O(n log n)
-O(N^2)
-O(N)
+$O(n \log n)$
+$O(n^2)$
+$O(n)$
 
-El coste temporal asintotico de insertar un elemento en un vector ordenado de forma que continue ordenado es
+El coste temporal asintótico de insertar un elemento en un vector ordenado de forma que continúe ordenado es
 1
-O(n)
-O(logn)
-O(n^2)
+$O(n)$
+$O(\log n)$
+$O(n^2)$
 
-¿Que tienen en comun el algoritmo que obtiene el k-esimo elemento mas pequeño de un vector (estudiado en clase) y el algoritmo de ordenacion Quicksort?
+¿Qué tienen en común el algoritmo que obtiene el k-ésimo elemento más pequeño de un vector (estudiado en clase) y el algoritmo de ordenación Quicksort?
 3
-El numero de llamadas recursivas que se hacen
-La combinacion de las soluciones a los subproblemas
-La division del problema en subproblemas.
+El número de llamadas recursivas que se hacen.
+La combinación de las soluciones a los subproblemas.
+La división del problema en subproblemas.
 
-En un algoritmo de ramificacion y poda, el orden escogido para priorizar los nodos en la lista de nodos vivos . . .
+En un algoritmo de ramificación y poda, el orden escogido para priorizar los nodos en la lista de nodos vivos...
 3
-. . . determina la complejidad temporal en el peor de los casos del algoritmo.
-. . . nunca
-. . . puede influir en el numero de nodos que se descartan sin llegar a expandirlos.
+...determina la complejidad temporal en el peor de los casos del algoritmo.
+...nunca influye en el resultado.
+...puede influir en el número de nodos que se descartan sin llegar a expandirlos.
 
-Dado un problema de optimizacion ¿cuando se puede aplicar el metodo de vuelta atras?
+Dado un problema de optimización ¿cuándo se puede aplicar el método de vuelta atrás?
 2
-no  solo  es  condicion  necesaria  que  el  dominio  de  las  decisiones  sea  discreto  o discretizable,  ademas  debe  cumplirse  que  se  puedan  emplear  mecanismos  de  poda basados en la mejor solucion hasta el momento.
-es  condicion  necesaria(aunque  no  suficiente)  que  el  dominio  de  las decisiones  sea discreto o discretizable
-es condicion necesaria y suficiente que el dominio de las decisiones sea discreto o discretizable
+No solo es condición necesaria que el dominio de las decisiones sea discreto o discretizable, además debe cumplirse que se puedan emplear mecanismos de poda basados en la mejor solución hasta el momento.
+Es condición necesaria (aunque no suficiente) que el dominio de las decisiones sea discreto o discretizable.
+Es condición necesaria y suficiente que el dominio de las decisiones sea discreto o discretizable.
 
-Indica cual es el coste temporal en funcion de n del problema siguiente ```s= 0; \nfor(i = 0; i < n ; i++) \n\tfor (j=i;j< n;j++) \n\t\ts+=n*ij;```
+Indica cuál es el coste temporal en función de n del problema siguiente ```s = 0;\nfor(i = 0; i < n; i++)\n\tfor(j = i; j < n; j++)\n\t\ts += n * i * j;```
 3
-es promedio(n)
-es O(n^2) pero no omega(n^2)
-es promedio(n^2)
+Es $\Theta(n)$
+Es $O(n^2)$ pero no $\Omega(n^2)$
+Es $\Theta(n^2)$
 
-¿Cual de estas estrategias para calcular el n-esimo elemento de la serie de Fibonacci ```(f(n) = f(n-1)+f(n-2), f(1) = f(2) = 1)``` es más eficiente?
+¿Cuál de estas estrategias para calcular el n-ésimo elemento de la serie de Fibonacci ($f(n) = f(n-1) + f(n-2)$, $f(1) = f(2) = 1$) es más eficiente?
 2
-La estrategia voraz
-Programacion dinamica
-Para este problema, las dos estrategias citadas serian similares en cuanto a eficiencia
+La estrategia voraz.
+Programación dinámica.
+Para este problema, las dos estrategias citadas serían similares en cuanto a eficiencia.
 
-Si f(n) pertenece a O(n^2), ¿podemos decir siempre que f(n) pertenece a O(n^3)?
+Si $f(n) \in O(n^2)$, ¿podemos decir siempre que $f(n) \in O(n^3)$?
 1
-Si ya que n2 pertenece a O(n^3)
-No, ya que n^2 no pertenece a O(n^3)
-Solo para valores bajos de n
+Sí ya que $n^2 \in O(n^3)$.
+No, ya que $n^2 \notin O(n^3)$.
+Solo para valores bajos de n.
 
-¿Para cual de estos problemas de optimizacion se conoce una solucion voraz?
+¿Para cuál de estos problemas de optimización se conoce una solución voraz?
 2
-El problema de la asignacion de coste minimo de n tareas a n trabajadores cuando el coste de asignar la tarea i al trabajador j, c_ij esta tabulado en una matriz
-El arbol de recubrimiento minimo para un grafo no dirigido con pesos.
+El problema de la asignación de coste mínimo de n tareas a n trabajadores cuando el coste de asignar la tarea i al trabajador j, $c_{ij}$ está tabulado en una matriz.
+El árbol de recubrimiento mínimo para un grafo no dirigido con pesos.
 El problema de la mochila discreta.
 
-Cuando  se  usa  un  algoritmovoraz  para  abordar  la  resolucion  de  un  problema  de optimizacion por seleccion discreta (es decir, un problema para el cual la solucion consiste en encontrar un subconjunto del conjunto de elementos que optimiza una determinada funcion), ¿cual de estas tres cosas es imposible que ocurra?
+Cuando se usa un algoritmo voraz para abordar la resolución de un problema de optimización por selección discreta (es decir, un problema para el cual la solución consiste en encontrar un subconjunto del conjunto de elementos que optimiza una determinada función), ¿cuál de estas tres cosas es imposible que ocurra?
 3
-Que la solucion no sea la optima.
-Que el algoritmo no encuentre ninguna solucion.
-Que se reconsidere la decision ya tomada anteriormente respecto a la selecci  on de un elemento a la vista de la decision que se debe tomar en un instante.
+Que la solución no sea la óptima.
+Que el algoritmo no encuentre ninguna solución.
+Que se reconsidere la decisión ya tomada anteriormente respecto a la selección de un elemento a la vista de la decisión que se debe tomar en un instante.
 
-Cual de estas expresiones es falsa?
+¿Cuál de estas expresiones es falsa?
 3
-n + nlogn pertenece promedio(n)
-n + nlogn pertenece omega(n)
-2n^2 + 3n + 1 pertenece O(n^3)
+$n + n \log n \in \Theta(n)$
+$n + n \log n \in \Omega(n)$
+$2n^2 + 3n + 1 \in O(n^3)$
 
-El algoritmo de ordenacion Quicksort divide el problema en dos subproblemas.¿Cual es la complejidad temporal asintotica de realizar esa division?
-3
-O(n log n)
-mejor(n) y O(n2)
-O(n)
-
-Sea  g(n)  =  (sumatorio  [desde  i=0]  hasta  K)  de  a_i*n^i.  Di  cual  de  las  siguientes afirmacioneses falsa:
+Sea $g(n) = \sum_{i=0}^{K} a_i n^i$. Di cuál de las siguientes afirmaciones es falsa:
 1
 Las otras dos afirmaciones son ambas falsas.
-g(n) pertenece a promedio(n^K)
-g(n) pertenece a mejor (n^K)
+$g(n) \in \Theta(n^K)$
+$g(n) \in \Omega(n^K)$
 
-Sea A una matriz cuadrada n * n. Se trata de buscar una permutacion de las columnas tal que la suma de los elementos de la diagonalde la matriz resultante sea minima. Indicad cual de las siguientes afirmaciones es falsa.
+Sea A una matriz cuadrada n × n. Se trata de buscar una permutación de las columnas tal que la suma de los elementos de la diagonal de la matriz resultante sea mínima. Indicad cuál de las siguientes afirmaciones es falsa.
 1
-La complejidad temporal de la mejor solucion posible al problema es O(n log n).
-Si se construye una solucion al problema basada en el esquema de ramificacion y poda, una  buena  eleccion  de  cotas  optimistas  y  pesimistas  podria  evitar  la  exploracion  de todas las permutaciones posibles.
-La complejidad temporal de la mejor solucion posible al problema esta en mejor(n^2).
+La complejidad temporal de la mejor solución posible al problema es $O(n \log n)$.
+Si se construye una solución al problema basada en el esquema de ramificación y poda, una buena elección de cotas optimistas y pesimistas podría evitar la exploración de todas las permutaciones posibles.
+La complejidad temporal de la mejor solución posible al problema está en $\Omega(n^2)$.
 
-Garantiza el uso de una estrategia “divide y vencerás” la existencia de una solucion de complejidad temporal polinomica a cualquier problema?
+¿Garantiza el uso de una estrategia "divide y vencerás" la existencia de una solución de complejidad temporal polinómica a cualquier problema?
 3
-Si, en cualquier caso.
-Si,  pero  siempre  que  la  complejidad  temporal  conjunta  de las  operaciones  de descomposicion del problema y la combinacion de las soluciones sea polinomica.
-No
+Sí, en cualquier caso.
+Sí, pero siempre que la complejidad temporal conjunta de las operaciones de descomposición del problema y la combinación de las soluciones sea polinómica.
+No.
 
-Un algoritmo recursivo basado en el esquema divide y venceras ...
+La versión de Quicksort que utiliza como pivote el elemento del vector que ocupa la posición central...
+3
+...no presenta caso mejor y peor para instancias del mismo tamaño.
+...se comporta peor cuando el vector ya está ordenado.
+...se comporta mejor cuando el vector ya está ordenado.
+
+La mejora que en general aporta la programación dinámica frente a la solución ingenua se consigue gracias al hecho de que...
+3
+...en la solución ingenua se resuelve pocas veces un número relativamente grande de subproblemas distintos.
+...el número de veces que se resuelven los subproblemas no tiene nada que ver con la eficiencia de los problemas resueltos mediante programación dinámica.
+...en la solución ingenua se resuelve muchas veces un número relativamente pequeño de subproblemas distintos.
+
+La estrategia de ramificación y poda genera las soluciones posibles al problema mediante
+3
+Un recorrido en profundidad del árbol que representa el espacio de soluciones.
+Un recorrido en anchura del árbol que representa el espacio de soluciones.
+Un recorrido guiado por estimaciones de las mejores ramas del árbol que representa el espacio de soluciones.
+
+Un tubo de n cm de largo se puede cortar en segmentos de 1 centímetro, 2 centímetros etc. Existe una lista de los precios a los que se venden los segmentos de cada longitud. Una de las maneras de cortar el tubo es que más ingresos nos producirá. Se quiere resolver el problema mediante vuelta atrás ¿cuál sería la forma más adecuada de representar las posibles soluciones?
+3
+Un par de enteros que indiquen los cortes realizados y el valor acumulado.
+Un vector de booleanos.
+Una tabla que indique para cada posición donde se va a cortar cada uno de los posibles valores acumulados.
+
+¿Cuál de los siguientes algoritmos proveería una cota pesimista para el problema de encontrar el camino más corto entre dos ciudades (se supone que el grafo es conexo)?
 2
-... las dos anteriores son verdaderas
-... alcanza  su  maxima  eficiencia  cuando  el  problema  de  tamaño  n  se  divide  en  a problemas de tamaño n/a
-... nunca tendra un coste temporal asintotico (o complejidad temporal) asintotico
+Calcular la distancia geométrica (en línea recta) entre la ciudad origen y destino.
+Calcular la distancia recorrida moviéndose al azar por el grafo hasta llegar (por azar) a la ciudad destino.
+Para todas las ciudades que son alcanzables en un paso desde la ciudad inicial, sumar la distancia a dicha ciudad y la distancia geométrica hasta la ciudad destino.
 
-La version de Quicksort que utiliza como pivote el elemento del vector que ocupa la posicion central . . .
-3
-... no presenta caso mejor y peorpara instancias del mismo tamaño
-... se comporta peor cuando el vector ya esta ordenado.
-... se comporta mejor cuando el vector ya esta ordenado.
-
-La  mejora  que  en  general  aporta  la  programacion  dinamica  frente  a  la  solucion ingenua se consigue gracias al hecho de que...
-3
-... en la solucion ingenua se resuelve pocas veces un numero relativamente grande de subproblemas distintos
-... el numero de veces que se resuelven los subproblemas no tiene nada que ver con la eficiencia de los problemas resueltos meidante programacion dinamica
-... en la solucion ingenua se resuelve muchas veces un numero relativamente pequeño de subproblemas distintos
-
-La  estrategia  de  ramificacion  y  poda  genera  las  soluciones  posibles  al  problema mediante
-3
-un recorrido en profundidad del arbol que representa el espacio de soluciones
-un recorrido en anchura del arbol que representa el espacio de soluciones
-un recorrido guiado por estimaciones de las mejores ramas del arbol que representa el espacio de soluciones
-
-Un tubo de n cm de largo se puede cortar en segmentos de 1 centimetro , 2 centimetros etc. existe una lista de los precios a los que se venden los segmentos de cada longituduna de las maneras de cortar el tubo es que mas ingresos nos producira . se quiere resolver el problema mediante vuelta atras¿cual seria la forma mas adecuada de representar las posibles soluciones?
-3
-un par de enteros que indiquen los cortes realizados y el valor acumulado
-un vector de booleanos
-una tabla que indique para cada posicion donde se va a cortar cada uno de los posibles valores acumulados
-
-La complejidad temporal en el mejor de los casos...
-3
-las otras dos opciones son ciertas
-... es el tiempo que tarda el algoritmo en resolver el problema de tamaño o talla mas pequeña que se le puede presentar 
-... es una funcion del tamaño o talla del problema que tiene que estar definida para todos los posibles valores de esta
-
-Cual de los siguientes algoritmos proveeria una cota pesimista para el problema de encontrar el camino mas corto entre dos ciudades (se supone que el grafo es conexo)
+Si $f(n) \in O(n^3)$, ¿puede pasar que $f(n) \in O(n^2)$?
 2
-calcular la distancia geometrica (en linea recta) entre la ciudad origen y destino 
-calcular la distancia recorrida moviendose al azar por el grafo hasta llegar (por azar) a la ciudad destino
-para todas las ciudades que son alcanzables en un paso desde la ciudad inicial, sumar la distancia a dicha ciudad y la distancia geometrica hasta la ciudad destino 
+Solo para valores bajos de n.
+Es perfectamente posible, ya que $O(n^2) \subset O(n^3)$.
+No, porque $n^3$ "no incrementa" $O(n^2)$.
 
-En un problema de optimizacion, si el dominio de las decisiones es un conjunto infinito
-2
-podremos aplicar el esquema vuelta atras siempre que se trate de un conjunto infinito numerable
-una estrategia voraz puede ser la unica alternativa
-es probable que a traves de programacion dinamica se obtenga un algoritmo eficaz que lo solucione
-
-Si f(n) pertenece 0(n^3),  ¿puede pasar que f(n) pertenece 0(n^2)?   
-2
-solo para valores bajos de n
-es perfectamente posible, ya que 0(n cuadrado) C 0(n^2)
-no, porque n al cubo “no incrementa” 0(n al cuadrado) 
-
-Si un problema de optimizacion lo es para una funcion que toma valores continuos ... 
-2
-la  programacion  dinamica  iterativa  siempre  es  mucho  mas  eficiente  que  la programacion dinamica iterativa ¿? en cuanto al uso de memoria
-la  programacion  dinamica  recursiva  puede  resultar  mucho  mas  eficiente  que  la programacion dinamica iterativa en cuanto al uso de memoria
-el  uso  de  memoria  de  la  programacion  dinamica  iterativa  y  dela  programacion dinamica  recursiva  es  el  mismo  independientemente  de  si  el  dominio  es  discreto  o continuo
-
-Un problema de tamaño n puede transformarse en O(n) en siete de tamaño n/7 , por otro lado la solucion al problema cuando la talla es 1 requiere tiempo constante ¿ que cota es mas ajustada?
+Un problema de tamaño n puede transformarse en $O(n)$ en siete de tamaño n/7, por otro lado la solución al problema cuando la talla es 1 requiere tiempo constante ¿qué cota es más ajustada?
 1
-O(n logn)
-O(n)
-O(n^2)
+$O(n \log n)$
+$O(n)$
+$O(n^2)$
 
-Sea A una matriz cuadrada n x n. Se trata de buscar una permutacion de las columnas tal que la suma de los elementos de la diagonal de la matriz resultante sea minima. Indicad cual de las siguientes afirmaciones es falsa 
+En los algoritmos de ramificación y poda, ¿el valor de una cota pesimista es menor que el valor de una cota optimista? (entendiendo que ambas cotas se aplican sobre el mismo nodo)
+2
+En general sí, si se trata de un problema de minimización, aunque en ocasiones ambos valores pueden coincidir.
+En general sí, si se trata de un problema de maximización, aunque en ocasiones ambos valores pueden coincidir.
+Sí, siempre es así.
+
+En los algoritmos de ramificación y poda...
+2
+Una cota pesimista es el valor que a lo sumo alcanza cualquier nodo factible que no es el óptimo.
+Una cota optimista es necesariamente un valor insuperable, de no ser así se podría podar el nodo que conduce a la solución óptima.
+Una cota optimista es necesariamente un valor alcanzable, de no ser así no está garantizado que se encuentre la solución óptima.
+
+El coste temporal asintótico del programa ```s = 0;\nfor(i = 0; i < n; i++)\n\tfor(j = i; j < n; j++)\n\t\ts += i * j;``` y del programa ```s = 0;\nfor(i = 0; i < n; i++)\n\tfor(j = 0; j < n; j++)\n\t\ts += i * i * j```
+2
+El del segundo, menor que el primero.
+Iguales.
+El del primero, menor que el segundo.
+
+¿Para qué sirven las cotas pesimistas en ramificación y poda?
+3
+Para descartar nodos basándose en la preferencia por algún otro nodo ya completado.
+Para tener la certeza de que la cota optimista está bien calculada.
+Para descartar nodos basándose en el beneficio esperado.
+
+La complejidad en el mejor de los casos de un algoritmo de ramificación y poda
 1
-la complejidad temporal de la mejor solucion posible al problema es Omega(n^2)
-si se construye una solucion al problema basada en el esquema de ramificacion y poda, una  buena  eleccion  de  cotas  optimistas  y  pesimistas  podria  evitar  la  exploracion  de todas las permutaciones posibles
-la complejidad temporal de la mejor solucion posible al problema es 0(n!)
+Puede ser polinómica con el número de decisiones a tomar.
+Suele ser polinómica con el número de alternativas por cada decisión.
+Es siempre exponencial con el número de decisiones a tomar.
 
-Decid cual de estas tres es la cota pesimista mas ajustada al valor optimo de la mochila discreta
+Cuando la descomposición de un problema da lugar a subproblemas de tamaño similar al original, muchos de los cuales se repiten, ¿qué esquema es a priori más apropiado?
 2
-el valor de la mochila continua correspondiente
-el valor de la mochila discreta que se obtiene usando un algoritmo voraz basado en el valor especifico de los objetos
-el  valor  de  una  mochila  que  contiene  todos  los  objetos  aunque  se  pase  del  peso maximo permitido
+Ramificación y poda.
+Programación dinámica.
+Divide y vencerás.
 
-En los algoritmos de ramificacion y poda , el valor de una cota pesimistaes menor que el  valor  de  una  cota  optimista  (entendiendo  que  ambas  cotas  se  aplican  sobre  el mismo nodo)
-2
-en  general  si ,  si  se  trata  de  un  problema  de  minimizacion  ,  aunque  en  ocasiones ambos valores pueden coincidir
-en  general  si ,  si  se  trata  de  un  problema  de  maximizacion  ,  aunque  en  ocasiones ambos valores pueden coincidir
-si, siempre es asi
-
-En los algoritmos de ramificacion y poda... 
-2
-una cota pesimista es el valor que a lo sumo alcanza cualquier nodo factible que no es el optimo 
-una cota optimista es necesariamente un valor insuperable, de no ser asi se podria podar el nodo que conduce a la solucion optima
-una cota optimista es necesariamente un valor  alcanzable, de no ser asi no esta garantizado que se encuentre la solucion optima
-
-Indica cual de las siguientes expresiones es falsa
-2
-promedio(n) C O(n)
-promedio(n) C O(n^2)
-promedio(n/2) = promedio(n)
-
-La solucion recursiva ingenua (pero correcta) a un problema de optimizacion llama mas de una vez a la funcion conlos mismos parametros. Una de las siguientes tres afirmaciones es falsa  
-2
-se puede mejorar la eficiencia del algoritmo guardando en una tabla el valor devuelto para cada conjunto de parametros de cada llamada cuando esta se produce por primera vez
-se puede mejorar la eficiencia del algoritmo convirtiendo el algoritmo recursivo directamente en iterativo sin cambiar su funcionamiento basico
-se puede mejorar la eficiencia del algoritmo definiendo de antemano el orden en el que se deben calcular las soluciones a los subproblemas y llenando una tabla en ese orden
-
-El coste temporal asintotico del programas ```s= 0; \nfor(i = 0; i <  n; i++) \nfor(j = i; j< n;j++) \n\ts+= i*j;```y del programas ```s= 0; \nfor(i = 0; i <  n; i++) \n\tfor(j = 0; j< n;j++) \n\t\ts+= i*i*j```
-2
-el del segundo, menor que el primero
-iguales
-el del primero, menor que el segundo
-
-Para que sirven las cotas pesimistas en ramificacion y poda
-3
-para descartar nodos basandose en la preferencia por algun otro nodo ya completado
-para tener la certeza de que la cota optimista esta bien calculada
-para descartar nodos basandose en el beneficio esperado
-
-La complejidad en el mejor de los casos de un algoritmo de ramificacion y poda
+Dado un problema de optimización, el método voraz...
 1
-puede ser polinomica con el numero de decisiones a tomar
-suele ser polinomica con el numero de alternativas por cada decision
-es siempre exponencial con el numero de decisiones a tomar
+...garantiza la solución óptima solo para determinados problemas.
+...siempre obtiene la solución óptima.
+...siempre obtiene una solución factible.
 
-Cuando la descomposicion de un problema da lugar a subproblemas de tamaño similar al original, muchos delos cuales se repiten, que esquema es a priori mas apropiado?
+Al resolver el problema del viajante de comercio mediante backtracking asumiendo un grafo de n vértices totalmente conexo ¿cuál de estas es una buena cota pesimista al iniciar la búsqueda?
 2
-ramificacion y poda
-programacion dinamica
-divide y venceras
+Se ordenan las aristas restantes de menor a mayor distancia y se calcula la suma de las n aristas más cortas.
+Se resuelve el problema usando un algoritmo voraz que añade cada vez al camino el vértice más cercano al último añadido.
+Se multiplica n por la distancia de la arista más corta que nos queda por considerar.
 
-Sea la solucion a la relacion de recurrencia f(n) = 2f(n/2) + n /// f(1) = 1
-3
-f(n) pertenece promedio(n)
-f(n) pertenece promedio(n^2)
-f(n) pertenece promedio(n logn)
+¿Cuál de estos tres problemas de optimización no tiene, o no se le conoce, una solución voraz (greedy) que es óptima?
+2
+El árbol de cobertura de coste mínimo de un grafo conexo.
+El problema de la mochila discreta.
+El problema de la mochila continua o con fraccionamiento.
 
-¿Cual  de  estos  problemas  tiene  una  solucion  eficiente  utilizando  programacion dinamica?
+La complejidad en el peor de los casos de un algoritmo de ramificación y poda
 1
-el problema del cambio
-el problema de la asignacion de tareas
-la mochila discreta sin restricciones adicionales 
+Es exponencial con el número de decisiones a tomar.
+Puede ser polinómica con el número de decisiones a tomar.
+Puede ser exponencial con el número de alternativas por cada decisión.
 
-Dado un problema de optimizacion, el metodo voraz....
+Un problema de tamaño n puede transformarse en tiempo $O(n^2)$ en nueve de tamaño n/3, por otro lado la solución al problema cuando la talla es 1 requiere un tiempo constante, ¿cuál de estas clases de coste temporal asintótico es la más ajustada?
+2
+$O(n \log n)$
+$O(n^2 \log n)$
+$O(n^2)$
+
+Cuando la descomposición recursiva de un problema da lugar a subproblemas de tamaño similar, ¿qué esquema promete ser más apropiado?
+2
+El método voraz.
+Programación dinámica.
+Divide y vencerás, siempre que se garantice que los subproblemas no son del mismo tamaño.
+
+Al resolver el problema del viajante de comercio mediante vuelta atrás, ¿cuál de estas cotas optimistas se espera que pode mejor el árbol de búsqueda?
+2
+Se resuelve el resto del problema usando un algoritmo voraz que añade cada vez al camino el vértice más cercano al último añadido.
+Se ordenan las aristas restantes de menor a mayor distancia y se calcula la suma de las k aristas más cortas, donde k es el número de saltos que nos quedan por dar.
+Se multiplica k por la distancia de la arista más corta que nos queda por considerar, donde k es el número de saltos que nos quedan por dar.
+
+El uso de funciones de cota en ramificación y poda...
+3
+...garantiza que el algoritmo va a ser más eficiente ante cualquier instancia del problema.
+...transforma en polinómicas complejidades que antes eran exponenciales.
+...puede reducir el número de instancias del problema que pertenecen al caso peor.
+
+Un problema de tamaño n puede transformarse en tiempo $O(n^2)$ en otro de tamaño n-1. Por otro lado, la solución al problema cuando la talla es 1 requiere un tiempo constante, ¿cuál de estas clases de coste temporal asintótico es la más ajustada?
+2
+$O(2^n)$
+$O(n^3)$
+$O(n^2)$
+
+Cuando se resuelve usando backtracking un problema de n decisiones en el que siempre hay como mínimo 2 opciones para cada decisión, ¿cuál de las siguientes complejidades es la mejor que nos podemos encontrar?
+3
+$O(n!)$
+$O(n^2)$
+$O(2^n)$
+
+Di cuál de estos tres algoritmos no es un algoritmo de divide y vencerás
+2
+Mergesort.
+Algoritmo de Prim.
+Quicksort.
+
+La solución recursiva ingenua a un determinado problema de optimización muestra estas dos características: por un lado, se basa en obtener soluciones óptimas a problemas parciales más pequeños y por otro, estos subproblemas se resuelven más de una vez durante el proceso recursivo. Este problema es candidato a tener una solución alternativa basada en...
+3
+Un algoritmo del estilo de divide y vencerás.
+Un algoritmo voraz.
+Un algoritmo de programación dinámica.
+
+Se desea encontrar el camino más corto entre dos ciudades. Para ello se dispone de una tabla con la distancia entre los pares de ciudades en los que hay carreteras o un valor centinela (por ejemplo, -1) si no hay por lo que para ir de la ciudad inicial a la final es posible que haya que pasar por varias ciudades. También se conocen las coordenadas geográficas de cada ciudad y por tanto la distancia geométrica (en línea recta) entre cada par de ciudades. Se pretende acelerar la búsqueda de un algoritmo de ramificación y poda priorizando los nodos vivos (ciudades) que estén a menor distancia geográfica de la ciudad objetivo
+3
+El nuevo algoritmo siempre será más rápido.
+Esta estrategia no asegura que se obtenga el camino más corto.
+El nuevo algoritmo no garantiza que vaya a ser más rápido para todas las instancias del problema posibles.
+
+¿Para cuál de estos problemas de optimización existe una solución voraz?
 1
-... garantiza la solucion optima solo para determinados problemas
- ...siempre obtiene la solucion optima  
-... siempre obtiene una solucion factible
+El árbol de recubrimiento mínimo para un grafo no dirigido con pesos.
+El problema de la mochila discreta.
+El problema de la asignación de coste mínimo de n tareas a n trabajadores cuando el coste de asignar la tarea i al trabajador j, $c_{ij}$ está tabulado en una matriz.
 
-Al resolver el problema del viajante de comercio mediantebacktracking asumiendo un grafo den vertices totalmente conexo ¿cual de estas es una buena cotapesimista al iniciar la busqueda?
+La mejor solución que se conoce para el problema de la mochila continua sigue el esquema...
+3
+...voraz.
+...ramificación y poda.
+...divide y vencerás.
+
+Si para resolver un mismo problema usamos un algoritmo de vuelta atrás y lo modificamos mínimamente para convertirlo en un algoritmo de ramificación y poda, ¿qué cambiamos realmente?
 2
-se ordenan las aristas restantes de menor a mayor distancia y se calcula la suma de las n aristas mas cortas
-se resuelve el problema usando un algoritmo voraz que añade cada vez al camino el vertice mas cercano al ultimo añadido
-se multiplica n por la distancia de la arista mas corta que nos queda por considerar
+Cambiamos la función que damos a la cota pesimista.
+El algoritmo puede aprovechar mejor las cotas optimistas.
+La comprobación de las soluciones factibles: en ramificación y poda no es necesario puesto que solo genera nodos factibles.
 
-Se desea obtener todas las permutaciones de una lista compuesta por n elementos ¿ que esquema es el mas adecuado?
+En los algoritmos de ramificación y poda ¿el valor de una cota pesimista es mayor que el valor de una cota optimista? (entendiendo que ambas cotas se aplican sobre el mismo nodo)
+3
+No, nunca es así.
+En general sí, si se trata de un problema de maximización, aunque en ocasiones ambos valores pueden coincidir.
+En general sí, si se trata de un problema de minimización, aunque en ocasiones ambos valores pueden coincidir.
+
+Uno de estos tres problemas no tiene una solución eficiente que siga el esquema de programación dinámica
+3
+El problema de la mochila discreta.
+El problema de las torres de Hanoi.
+El problema de cortar un tubo de longitud n en segmentos de longitud entera entre 1 y n de manera que se maximice el precio de acuerdo con una tabla que da el precio para cada longitud.
+
+En una cuadrícula se quiere dibujar el contorno de un cuadrado de n casillas de lado, ¿cuál será la complejidad temporal del mejor algoritmo que pueda existir?
+3
+$O(n^2)$
+$O(\sqrt{n})$
+$O(n)$
+
+Un algoritmo recursivo basado en el esquema divide y vencerás...
 1
-backtracking , para este problema no hay un esquema mas eficiente
-ramificacion y poda puesto que con buenas funciones de cota es mas eficiente para este problema que backtracking
-divide  y  venceras  puesto  que  la division  en  sublistas  se  podria  hacer  en  tiempo constante
+...será más eficiente cuanto más equitativa sea la división en subproblemas.
+Las dos anteriores son ciertas.
+...nunca tendrá una complejidad exponencial.
 
-¿Cual  de  estos  tres  problemas  de  optimizacion  no  tiene,  o  no  se  le  conoce,  una solucion voraz (greedy) que es optima? 
-2
-el arbol de cobertura de coste minimo de un grafo conexo
-el problema de la mochila discreta
-el problema de la mochila continuao con fraccionamiento
-
-La complejidad en el peor de los casos de un algoritmo de ramificacion y poda
-1
-es exponencial con el numero de decisiones a tomar
-puede ser polinomica con el numero de decisiones a tomar
-puede ser exponencial con el numero de alternativas por cada decision
-
-Un problema de tamaño n puede transformarse entiempo O(n^2) en nueve de tamaño n/3 por otro lado la solucion al problema cuando la talla es 1 requiere un tiempo constante, ¿cual de estas clases de coste temporal asintotico es las mas ajustada?
-2
-O(nlogn)
-O(n^2 logn)
-O(n^2)
-
-Cuando  la  descomposicion  recursiva  de  un  problema da  lugar  a  subproblemas  de tamaño similar, ¿que esquema promete ser mas apropiado?
-2
-el metodo voraz
-programacion dinamica
-divide y venceras, siempre que se garantice que los subproblemas no son del mismo tamaño
-
-Al resolver el problema del viajante de comercio mediante vuelta atras, ¿cual de estas cotas optimistas se espera que pode mejor el arbol de busqueda?
-2
-se resuelve el resto del problema usando un algoritmo voraz que añade cada vez al camino el vertice mas cercano al ultimo añadido
-se ordenan las aristas restantes de menor a mayor distancia y se calcula la suma de las k aristas mas cortas, donde k es el numero de saltos que nos quedan por dar
-se multiplica k por la distancia de la arista mas corta que nos queda por considerar, donde k es el numero de saltos que nos quedan por dar
-
-El uso de funciones de cota en ramificacion y poda... 
+Sea la siguiente relación de recurrencia:
+$T(n) = \begin{cases} 1 & \text{si } n \leq 1 \\ 2T(n/2) + g(n) & \text{en otro caso} \end{cases}$
+Si $T(n) \in O(n^2)$, ¿en cuál de estos tres casos nos podemos encontrar?
 3
-... garantiza  queel  algoritmo  va  a  ser  mas  eficiente  ante cualquierinstancia  del problema
-... transforma en polinomicas complejidades que antes eran exponenciales
-... puede reducir el numero de instancias del problema que pertenecen al caso peor
+$g(n) = 1$
+$g(n) = n$
+$g(n) = n^2$
 
-Un problema de tamaño n puede transformarse en tiempo 0(n cuadrado) en otro de tamaño n-1.  Por otro lado, la solucion al problema cuando la talla es 1 requiere un tiempo  constante,  ¿cual  de  estas  clases  de  coste  temporal  asintotico  es  la  mas ajustada?
+Una de estas tres situaciones no es posible
+3
+$f(n) \in O(n)$ y $f(n) \in \Omega(1)$
+$f(n) \in O(n)$ y $f(n) \in O(n^2)$
+$f(n) \in \Theta(n^2)$ y $f(n) \in O(n)$
+
+La función $\Gamma$ de un número semiEntero positivo (un número es semiEntero si al restarle 0.5 es entero) se define como ```double gamma(double n) {\n\tif(n == 0.5)\n\t\treturn sqrt(PI);\n\treturn n * gamma(n-1);\n}``` ¿Se puede calcular usando programación dinámica iterativa?
 2
-0(2^n)
-0(n^3)
-0(n^2)
+No, ya que el índice del almacén sería un número real y no entero.
+Sí.
+No, ya que no podríamos almacenar los resultados intermedios en el almacén.
 
-Cuando  se  resuelve  usando  backtracking  un  problema  de  n  decisiones  en  el  que siempre  hay  como  minimo  2  opciones  para  cada  decision,  ¿cual  de  las  siguientes complejidades es la mejor que nos podemos encontrar?
+Dado un problema de optimización cualquiera, ¿la estrategia de vuelta atrás garantiza la solución óptima?
 3
-O(n!)
-O(n^2)
-O(2^n)
+Sí, puesto que este método analiza todas las posibilidades.
+Sí, siempre que el dominio de las decisiones sea discreto o discretizable y además se empleen mecanismos de poda basados en la mejor solución hasta el momento.
+Es condición necesaria que el dominio de las decisiones sea discreto o discretizable y que el número de decisiones a tomar esté acotado.
 
-En el esquema de vuelta atras el orden en el que se van asignando los distintos valores a las componentes del vector que contendra la solucion...
+La versión de Quicksort que utiliza como pivote el elemento del vector que ocupa la primera posición...
 2
-...puede ser relevante si se utilizan mecanismos de poda basados en estimaciones optimistas
-las otras dos opciones son ciertas
-...es irrelevante si no se utilizan mecanismos de poda basados en la mejor solucion hasta el momento
-
-Di cual de estos tres algoritmos no es un algoritmo de divide y venceras 
-2
-Mergesort
-Algoritmo de Prim
-Quicksort
-
-La complejidad en el mejor de los casos de un algoritmo de ramificacion y poda... 
-1
-... puede ser polinomica con el numero de decisiones a tomar
-... suele ser polinomica con el numero de alternativas por cada decision 
-... es siempre exponencial con el numero de decisiones a tomar
-
-La solucion recursiva ingenua a un determinado problema de optimizacion muestra estas  dos  caracteristicas:  por  un  lado,  se  basa  en  obtener  soluciones  optimas a problemas parciales mas pequeños y por otro, estos subproblemasse resuelven mas de una vez durante el proceso recursivo. Este problema es candidato a tener una solucion alternativa basada en...
-3
-un algoritmo del estilo de divide y venceras
-un algoritmo voraz
-un algoritmo de programacion dinamica
-
-Se desea encontrar el camino mas corto entre dos ciudades. Para ello se dispone de una tabla con la distancia entre los pares de ciudades en los que hay carreteras o un valor centinela (por ejemplo, -1) si no hay por lo que para ir de la ciudad inicial a la final  es  posible  que  haya  que  pasar  por  varias  ciudades.  Tambien  se  conocen  las coordenadas geograficas de cada ciudad y por tanto la distancia geometrica (en linea recta) entre cada par de ciudades. Se pretende acelerar la busqueda de un algoritmo de  ramificacion  y  poda  priorizando  losnodos  vivos  (ciudades)  que  esten  a  menor distancia geografica de la ciudad objetivo
-3
-el nuevo algoritmo siempre sera mas rapido
-esta estrategia no asegura que se obtenga el camino mas corto
-el nuevo algoritmo no garantiza que vaya a ser mas rapido para todas las instancias del problema posibles
-
-Cuando  se  usa  un  algoritmo  voraz  para  abordar  la  resolucion  de  un  problema  de optimizacion por seleccion discreta (es decir, un problema para el cual la solucion consiste  en  encontrar  un  subconjuto  del  conjuto  de  elementos  que  optimiza  una determinada funcion), ¿cual de estas tres cosas es imposible que ocurra?
-2
-que la solucion no sea la optima
-que se reconsidere la decision ya tomada anteriormente respecto a la seleccion de unelemento a la vista de la decision que se debe tomar en el instante actua
-que el algoritmo no encuentre ninguna solucion
-
-Para cual de estos problemas de optimizacion existe una solucion voraz?
-1
-el arbol de recubrimiento minimo para un grafo no dirigido con pesos
-el problema de la mochila discreta
-el problema de la asignacion de coste minimo de n tareas a n trabajadores cuando el coste de asignar la tarea i al trabajador j, cij esta tabulado en una matriz
-
-La mejor solucion que se conoce para el problema de la mochila continua sigue el esquema...
-3
-... voraz 
-... ramificacion y poda
-... divide y venceras
-
-Si  para  resolver  unmismo  problema  usamos  un  algoritmo  de  vuelta  atras  y  lo modificamos minimamente para convertirlo en un algoritmo de ramificacion y poda, ¿que cambiamos realmente?
-2
-cambiamos la funcion que damos ala cota pesimista
-el algoritmo puede aprovechar mejor las cotas optimistas
-la comprobacion de las soluciones factibles: en ramificacion y poda no es necesario puesto que solo genera nodos factibles
-
-Cuando se resuelve el problema de la mochila discreta usando la estrategia de vuelta atras, ¿puede ocurrir que se tarde menos en encontrar la solucion optima si se prueba primero a meter cada objeto antes de no meterlo?
-1
-si, pero solosi se usan cotas optimistas para podar el arbol de busqued
-si, tanto si se usan cotas optimistas para podar el arbol de busqueda como si no
-no, ya que en cualquier caso se deben explorar todas las soluciones factibles
-
-En los algoritmos de ramificacion y poda ¿ el valor de una cota pesimista es mayor que el  valor  de  una  cota  optimista?(entendiendo  que  ambas  cotas  se  aplican  sobre  el mismo nodo
-3
-no , nunca es asi
-en general si, si se trata de un problema de maximizacion , aunque en ocasiones ambos valores pueden coincidir
-en general si, si se trata de un problema de minimizacion , aunque en ocasiones ambos valores pueden coincidir
-
-Uno de estos tres problemas no tiene una solucion eficiente que siga el esquema de programacion dinamica
-3
-el problema de la mochila discreta
-el problema de las torres de Hanoi
-el problema de cortar un tubo de longitud n en segmentos de longitud entera entre 1 y n de manera que se maximice el precio de acuerdo con una tabla que da el precio para cada longitud
-
-En los algoritmos de ramificacion y poda
-1
-una cota optimista es necesariamente un valor insuperable, de no ser asi se podria podar el nodo que conduce a la solucion optima
-una cota optimista es  necesariamente un valor alcanzable, de no ser asi no esta garantizado que se encuentre la solucion optima
-el uso de cotas pesimistas solo resulta eficaz cuando se dispone de una posible solucionde partida
-
-Se desea obtener todas las permutaciones de una lista compuesta por n elementos ¿Que esquema es el mas adecuado?
-2
-ramificacion y poda, puesto que con buenas funciones de cota es mas eficiente que vuelta atras
-vuelta atras, es el esquema mas eficiente para este problema
-divide y venceras, puesto que la division en sublistas se podria hacer en tiempo constante
-
-En una cuadricula se quiere dibujar el contorno deun cuadrado de n casillas de lado, ¿cual sera la complejidad temporal del mejor algoritmo que pueda existir? 
-3
-0 (n cuadrado)
-0 (raiz cuadrada n)
-0 (n)
-
-Un algoritmo recursivo basado en el esquema divide y venceras...
-1
-... sera mas eficiente cuanto mas equitativa sea la division en subproblemas
-las dos anteriores son ciertas
-... nunca tendra una complejidad exponencial 
-
-Se quieren ordenar d numeros distintos comprendidos entre 1 y n. Para ello se usa un array de n booleanos que se inicializan primero a false. Acontinuacion se recorren los d numeros  cambiando  los  valores  del  elemento  del  vector  de  booleanos correspondiente a su numero a true. Por ultimo se recorre el vector de booleanos escribiendo los indices de los elementos del vector de booleanos que son true. ¿Es este algoritmo mas rapido (asintoticamente) que el mergesort?
-2
-no, ya que este algoritmo ha de recorrer varias veces el vector de booleanos
-solo si d log d  > k n (donde k es una constante que depende de la implementacion)
-si, ya que el mergesort es 0(n log n) y este es 0(n)
-
-Sea la siguiente relacion de recurrencia  T(n) =  1    si n< =1 //////[ 2T (n/2) + g(n)   en otro caso Si T(n) pertenece 0(n cuadrado),  ¿en cual de estos tres casos nos podemos encontrar?
-3
-g(n) = 1 
-g(n) = n
-g(n) = n cuadrado
-
-Una de estas tres situaciones no es posible 
-3
-f(n) pertenece 0(n) y f(n) pertenece omega(1)
-f(n) pertenece 0(n) y f(n) pertenece 0(n cuadrado)
-f(n) pertenece mejorcaso(n cuadrado) y f(n) pertenece 0(n)
-
-A funcion Y de un numero semientero positivo( un numero es semientero si al restarle 0.5 es entero) se define como ```double gamma(double n) \n\tif(n == 0.5) \n\t\treturn sqrt(PI);\n\treturn n*gamma(n-1)```se puede calcular usando programacion dinamica iterativa?
-2
-no, ya que el indice del almacen seria un numero real y no entero
-si
-no, ya que no podriamos almacenar los resultados intermedios en el almacen
-
-Dado un problema de optimizacion cualquiera, ¿la estrategia de vuelta atras garantiza la solucion optima?
-3
-si, puesto que este metodo analiza todas las posibilidades
-si, siempre que eldominio de las decisiones sea discreto o discretizable y ademas se empleen mecanismos de poda basados en la mejor solucion hasta el momento
-es condicion necesaria que el dominio de las decisiones sea discreto o discretizable y que el numero de decisiones a tomar este acotado
-
-La version de Quicksort que utiliza como pivote el elemento del vector que ocupa la primera posicion... 
-2
-... no presenta caso mejor y peorpara instancias del mismo tamaño
-... se comporta peor cuando el vector ya esta ordenado
-... se comporta mejor cuando el vector ya esta ordenado
+...no presenta caso mejor y peor para instancias del mismo tamaño.
+...se comporta peor cuando el vector ya está ordenado.
+...se comporta mejor cuando el vector ya está ordenado.
 
 ¿Garantiza el uso de una estrategia “divide y venceras” la existencia de una solucion de complejidad temporal polinomica a cualquierproblema?
 3

@@ -49,7 +49,7 @@ import { useRoute } from "vue-router"
 const route = useRoute()
 const quizContent = ref("")
 const loading = ref(true)
-const currentQuestionIndex = ref(0)
+const currentQuestionIndex = ref(4)
 const answers = ref<Array<{ questionId: number; selectedOption: number; isCorrect: boolean }>>([])
 
 const quizId = computed(() => route.params.quizId as string)

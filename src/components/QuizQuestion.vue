@@ -2,10 +2,9 @@
   <div class="bg-gray-800 rounded-lg text-gray-50">
     <div class="mb-6">
       <h3 class="text-md text-gray-100">
-        {{ question.question }}
+        <MathRenderer :text="question.question" />
       </h3>
     </div>
-
     <div class="space-y-3 mb-6">
       <button
         v-for="(option, index) in question.options"
@@ -14,17 +13,17 @@
         :disabled="answered"
         :class="['w-full text-left p-3 rounded-lg border-2', getOptionClass(index)]"
       >
-        <span>{{ option }}</span>
+        <MathRenderer :text="option" />
       </button>
     </div>
-
     <div v-if="answered && question.explanation" class="mb-6">
       <div class="p-4 bg-blue-600 rounded-lg border border-blue-500">
         <h4 class="font-semibold mb-2 text-blue-100">Explicación</h4>
-        <p class="text-blue-50">{{ question.explanation }}</p>
+        <div class="text-blue-50">
+          <MathRenderer :text="question.explanation" />
+        </div>
       </div>
     </div>
-
     <div v-if="answered" class="text-center">
       <button
         @click="$emit('next')"
@@ -38,6 +37,7 @@
 
 <script setup lang="ts">
 import { computed, ref } from "vue"
+import MathRenderer from "./MathRenderer.vue"
 
 interface Question {
   id: number
@@ -68,10 +68,8 @@ const isCorrect = computed(() => {
 
 const selectAnswer = (index: number) => {
   if (answered.value) return
-
   selectedOption.value = index
   answered.value = true
-
   emit("answered", {
     questionId: props.question.id,
     selectedOption: index,
@@ -83,15 +81,12 @@ const getOptionClass = (index: number) => {
   if (!answered.value) {
     return "border-gray-600 bg-gray-700 hover:border-blue-400 hover:bg-blue-600 hover:bg-opacity-20 cursor-pointer text-gray-50"
   }
-
   if (index === props.question.correctAnswer) {
     return "border-green-400 bg-green-600 text-white"
   }
-
   if (index === selectedOption.value && !isCorrect.value) {
     return "border-red-400 bg-red-600 text-white"
   }
-
   return "border-gray-600 bg-gray-800 cursor-not-allowed opacity-50 text-gray-400"
 }
 </script>
