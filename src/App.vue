@@ -6,6 +6,5 @@ import { RouterView } from "vue-router"
 <template>
   <Analytics mode="production" />
   <header></header>
-
   <RouterView />
 </template>
