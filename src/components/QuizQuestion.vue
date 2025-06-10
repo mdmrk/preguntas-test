@@ -12,7 +12,7 @@
         :key="index"
         @click="selectAnswer(index)"
         :disabled="answered"
-        :class="['w-full text-left p-4 rounded-lg border-2', getOptionClass(index)]"
+        :class="['w-full text-left p-3 rounded-lg border-2', getOptionClass(index)]"
       >
         <span class="font-medium">{{ option }}</span>
       </button>
