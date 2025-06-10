@@ -1,9 +1,9 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
   --color-custom-green: hsla(160, 100%, 37%, 1);
   --color-custom-green-hover: hsla(160, 100%, 37%, 0.2);
-  --font-hanken-grotesk: 'Hanken Grotesk', sans-serif;
+  --font-hanken-grotesk: "Hanken Grotesk", sans-serif;
 }
 
 #app {
@@ -11,7 +11,7 @@
 }
 
 body {
-  @apply bg-white dark:bg-gray-800;
+  @apply bg-gray-50 dark:bg-gray-800;
 }
 
 a,

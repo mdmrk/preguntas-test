@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { ref } from "vue"
+import { useRouter } from "vue-router"
 const router = useRouter()
 
-import MainButton from '@/components/MainButton.vue'
+import MainButton from "@/components/MainButton.vue"
 const ada = ref(false)
 
 const navigateToQuiz = (quizId: string) => {
@@ -28,7 +28,7 @@ const navigateToQuiz = (quizId: string) => {
         </div>
       </div>
       <MainButton class="gradient-blue">PPSS</MainButton>
-      <MainButton class="gradient-green">GPI</MainButton>
+      <MainButton @click="navigateToQuiz('gpi')" class="gradient-green">GPI</MainButton>
     </nav>
   </main>
 </template>

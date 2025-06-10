@@ -5,9 +5,3 @@ export interface Question {
   correctAnswer: number
   explanation?: string
 }
-
-export interface QuizData {
-  title: string
-  description: string
-  questions: Question[]
-}
