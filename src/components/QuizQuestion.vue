@@ -79,14 +79,14 @@ const selectAnswer = (index: number) => {
 
 const getOptionClass = (index: number) => {
   if (!answered.value) {
-    return "border-gray-600 bg-gray-700 hover:border-blue-400 hover:bg-blue-600 hover:bg-opacity-20 cursor-pointer text-gray-50"
+    return "border-gray-600 bg-gray-900 hover:border-blue-400 hover:bg-blue-600 hover:bg-opacity-20 cursor-pointer"
   }
   if (index === props.question.correctAnswer) {
-    return "border-green-400 bg-green-600 text-white"
+    return "border-green-600 bg-green-900"
   }
   if (index === selectedOption.value && !isCorrect.value) {
-    return "border-red-400 bg-red-600 text-white"
+    return "border-red-600 bg-red-900"
   }
-  return "border-gray-600 bg-gray-800 cursor-not-allowed opacity-50 text-gray-400"
+  return "border-gray-600 bg-gray-900 cursor-not-allowed opacity-75"
 }
 </script>
