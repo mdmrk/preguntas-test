@@ -1,7 +1,7 @@
 <template>
   <div class="bg-gray-800 rounded-lg text-gray-50">
     <div class="mb-6">
-      <h3 class="text-lg font-semibold text-gray-100">
+      <h3 class="text-md text-gray-100">
         {{ question.question }}
       </h3>
     </div>
@@ -14,7 +14,7 @@
         :disabled="answered"
         :class="['w-full text-left p-3 rounded-lg border-2', getOptionClass(index)]"
       >
-        <span class="font-medium">{{ option }}</span>
+        <span>{{ option }}</span>
       </button>
     </div>
 

@@ -20,14 +20,17 @@
         </div>
 
         <div
-          v-show="answeredQuestions > 0"
-          class="w-full bg-gray-700 rounded-full h-2 flex overflow-hidden"
+         
+          class="w-full bg-gray-700 rounded-full h-2 flex overflow-hidden "
         >
           <div
+           v-show="answeredQuestions > 0"
             class="bg-green-400 rounded-l-full"
             :style="{ width: `${correctAnswersPercentage.toFixed(0)}%` }"
           ></div>
-          <div class="bg-red-400 flex-1 rounded-r-full"></div>
+          <div 
+           v-show="answeredQuestions > 0"
+          class="bg-red-400 flex-1 rounded-r-full"></div>
         </div>
       </div>
 
