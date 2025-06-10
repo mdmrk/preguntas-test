@@ -13,20 +13,3 @@
 body {
   @apply bg-gray-50 dark:bg-gray-800;
 }
-
-a,
-.green {
-  @apply no-underline text-custom-green transition-all duration-[400ms] p-1;
-}
-
-@media (hover: hover) {
-  a:hover {
-    @apply bg-custom-green-hover;
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    @apply flex items-center;
-  }
-}
