@@ -1,5 +1,3 @@
-<script setup lang="ts">
-import MainButton from '@/components/MainButton.vue'
-</script>
+<script setup lang="ts"></script>
 
-<template></template>
+<template>a</template>
