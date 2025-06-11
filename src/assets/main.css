@@ -4,12 +4,80 @@
 
 @theme {
   --font-hanken-grotesk: "Hanken Grotesk", sans-serif;
+  --svg-gray: brightness(0) saturate(100%) invert(88%) sepia(5%) saturate(245%) hue-rotate(162deg)
+    brightness(96%) contrast(95%);
+    
+  /* Light theme colors */
+  --color-bg-primary: #f9fafb;    /* gray-50 */
+  --color-bg-secondary: #ffffff;  /* white */
+  --color-bg-tertiary: #f3f4f6;  /* gray-100 */
+  --color-text-primary: #000000; /* black */
+  --color-text-secondary: #1f2937; /* gray-800 */
+  --color-border: #e5e7eb;       /* gray-200 */
+  --color-border-hover: #d1d5db; /* gray-300 */
+  
+  /* Dark theme colors */
+  --color-dark-bg-primary: #1f2937;   /* gray-800 */
+  --color-dark-bg-secondary: #111827; /* gray-900 */
+  --color-dark-bg-tertiary: #374151;  /* gray-700 */
+  --color-dark-text-primary: #f9fafb; /* gray-50 */
+  --color-dark-text-secondary: #f3f4f6; /* gray-100 */
+  --color-dark-border: #4b5563;      /* gray-600 */
+  --color-dark-border-hover: #6b7280; /* gray-500 */
 }
 
 #app {
-  @apply max-w-[720px] w-full min-h-svh mx-auto p-6 font-normal font-hanken-grotesk text-black dark:text-gray-50;
+  @apply max-w-[720px] w-full min-h-svh mx-auto p-6 font-normal font-hanken-grotesk;
+  color: var(--color-text-primary);
 }
 
 body {
-  @apply bg-gray-50 dark:bg-gray-800;
+  background-color: var(--color-bg-primary);
+}
+
+.dark body {
+  background-color: var(--color-dark-bg-primary);
+}
+
+pre {
+  @apply p-4 rounded-lg my-4 overflow-x-auto;
+  background-color: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border);
+}
+
+pre > code {
+  @apply whitespace-pre-wrap block text-sm;
+  color: var(--color-text-secondary);
+}
+
+.dark pre {
+  background-color: var(--color-dark-bg-secondary);
+  border: 1px solid var(--color-dark-border);
+}
+
+.dark pre > code {
+  color: var(--color-dark-text-secondary);
+}
+
+.nav-button {
+  @apply flex items-center justify-center p-2 rounded-md cursor-pointer mb-4;
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border-hover);
+}
+
+.nav-button:hover {
+  background-color: var(--color-bg-tertiary);
+}
+
+.dark .nav-button {
+  background-color: var(--color-dark-bg-primary);
+  border: 1px solid var(--color-dark-border);
+}
+
+.dark .nav-button:hover {
+  background-color: var(--color-dark-bg-tertiary);
+}
+
+.dark .nav-button img {
+  filter: var(--svg-gray);
 }

@@ -1,39 +1,38 @@
 <template>
-
-    <div class="mb-6">
-      <h3 class="text-lg font-medium">
-        <TextRenderer :text="question.question" />
-      </h3>
-    </div>
-    <div class="space-y-3 mb-6">
-      <button
-        v-for="(option, index) in question.options"
-        :key="index"
-        @click="selectAnswer(index)"
-        :disabled="answered"
-        :class="['w-full text-left p-4 rounded-lg border-2 font-medium', getOptionClass(index)]"
-      >
-        <TextRenderer :text="option" />
-      </button>
-    </div>
-    <div v-if="answered && question.explanation" class="mb-6">
-      <div
-        class="p-4 bg-blue-50 dark:bg-blue-900/50 border border-blue-200 dark:border-blue-700 rounded-lg"
-      >
-        <h4 class="font-semibold mb-2 text-blue-900 dark:text-blue-100">Explicación</h4>
-        <div class="text-blue-800 dark:text-blue-200">
-          <TextRenderer :text="question.explanation" />
-        </div>
+  <div class="mb-6">
+    <h3 class="text-lg font-medium">
+      <TextRenderer :text="question.question" />
+    </h3>
+  </div>
+  <div class="space-y-3 mb-6">
+    <button
+      v-for="(option, index) in question.options"
+      :key="index"
+      @click="selectAnswer(index)"
+      :disabled="answered"
+      :class="['w-full text-left p-4 rounded-lg border-2 font-medium', getOptionClass(index)]"
+    >
+      <TextRenderer :text="option" />
+    </button>
+  </div>
+  <div v-if="answered && question.explanation" class="mb-6">
+    <div
+      class="p-4 bg-blue-50 dark:bg-blue-900/50 border border-blue-200 dark:border-blue-700 rounded-lg"
+    >
+      <h4 class="font-semibold mb-2 text-blue-900 dark:text-blue-100">Explicación</h4>
+      <div class="text-blue-800 dark:text-blue-200">
+        <TextRenderer :text="question.explanation" />
       </div>
     </div>
-    <div v-if="answered" class="text-center">
-      <button
-        @click="$emit('next')"
-        class="bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg"
-      >
-        Siguiente
-      </button>
-    </div>
+  </div>
+  <div v-if="answered" class="text-center">
+    <button
+      @click="$emit('next')"
+      class="bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-gray-50 font-semibold py-3 px-8 rounded-lg"
+    >
+      Siguiente
+    </button>
+  </div>
 </template>
 
 <script setup lang="ts">

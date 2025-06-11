@@ -15,7 +15,7 @@ export class QuizLoader {
       let parsingQuestion = false
 
       for (let j = 0; j < lines.length; j++) {
-        const line = lines[j].trim()
+        const line = lines[j]
 
         if (line.startsWith("Q:")) {
           questionText = line.substring(2).trim()
@@ -24,7 +24,7 @@ export class QuizLoader {
           correctAnswerIndex = parseInt(line.substring(2)) - 1
           parsingQuestion = false
         } else if (parsingQuestion) {
-          questionText += " " + line
+          questionText += line + '\n'
         } else if (line.length > 0) {
           options.push(line)
         }

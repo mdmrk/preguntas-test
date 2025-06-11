@@ -1,9 +1,5 @@
 <template>
-  <button
-    @click="cycleTheme"
-    class="flex items-center justify-center p-2 border border-gray-300 dark:border-gray-600 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer"
-    :aria-label="`Switch from ${currentTheme} mode`"
-  >
+  <button @click="cycleTheme" class="nav-button" :aria-label="`Switch from ${currentTheme} mode`">
     <img v-if="currentTheme === 'light'" src="@/assets/sun.svg" alt="Light mode" class="w-5 h-5" />
     <img
       v-else-if="currentTheme === 'dark'"
