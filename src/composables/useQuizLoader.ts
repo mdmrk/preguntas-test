@@ -1,4 +1,5 @@
 import type { Question } from "@/types/quiz"
+import { shuffle } from "@/utils"
 
 export class QuizLoader {
   parseQuizText(text: string): Question[] {
@@ -40,6 +41,6 @@ export class QuizLoader {
       }
     }
 
-    return questions
+    return shuffle(questions)
   }
 }
