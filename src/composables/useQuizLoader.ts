@@ -24,7 +24,7 @@ export class QuizLoader {
           correctAnswerIndex = parseInt(line.substring(2)) - 1
           parsingQuestion = false
         } else if (parsingQuestion) {
-          questionText += line + '\n'
+          questionText += line + "\n"
         } else if (line.length > 0) {
           options.push(line)
         }
