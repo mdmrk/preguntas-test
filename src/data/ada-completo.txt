@@ -3081,1192 +3081,677 @@ Que la organización de la agenda en cuartos de hora permite obtener una soluci�
 Que se ha de implementar forzosamente con un algoritmo de búsqueda y enumeración como el de vuelta atrás.
 Que no se puede implementar con una solución de "divide y vencerás" con memoización.
 
-¿Puede ocurrir que la solución recursiva de estilo “divide y vencerás” pero con memoización de un problema resuelva menos subproblemas que la mejor solución iterativa posible de programación dinámica?
-2
+Q: ¿Puede ocurrir que la solución recursiva de estilo "divide y vencerás" pero con memoización de un problema resuelva menos subproblemas que la mejor solución iterativa posible de programación dinámica?
+A:2
 Sí, porque no existe garantía de que la mejor solución iterativa posible no resuelva problemas repetidos, mientras que la técnica de memoización lo garantiza directamente mediante el uso de un almacén.
-Sí, porque la mejor solución iterativa posible de programación dinámica puede resolversubproblemas que no sean necesarios al resolver subproblemas posteriores.
+Sí, porque la mejor solución iterativa posible de programación dinámica puede resolver subproblemas que no sean necesarios al resolver subproblemas posteriores.
 No, nunca.
 
-Sea un problema de optimización por selección discreta, con restricciones, en el que se debentomar n decisiones booleanas para optimizar un indicador, y se abordará mediante un método de búsqueda y enumeración (vuelta atrás, ramificación y poda). ¿Cuál de las siguientes afirmaciones es correcta?
-2
-La complejidad temporal será como mucho O(n·log(n)) porque en general basta con ordenar adecuadamente las decisiones para convertir cualquier problema de este tipo en un problema de complejidad temporal lineal.
-Puede haber problemas para los que la complejidad será exponencial o peor; ningunaestrategia de poda puede garantizar que esto no va a ocurrir.
-La complejidad temporal en el peor caso será O(n²) ya que se toman n decisiones binarias.
+Q: Sea un problema de optimización por selección discreta, con restricciones, en el que se deben tomar n decisiones booleanas para optimizar un indicador, y se abordará mediante un método de búsqueda y enumeración (vuelta atrás, ramificación y poda). ¿Cuál de las siguientes afirmaciones es correcta?
+A:2
+La complejidad temporal será como mucho $O(n \cdot \log(n))$ porque en general basta con ordenar adecuadamente las decisiones para convertir cualquier problema de este tipo en un problema de complejidad temporal lineal.
+Puede haber problemas para los que la complejidad será exponencial o peor; ninguna estrategia de poda puede garantizar que esto no va a ocurrir.
+La complejidad temporal en el peor caso será $O(n^2)$ ya que se toman n decisiones binarias.
 
-Se pretende calcular el valor $$2^n$$, $$n\in N$$, haciendo una transcripción literal de la expresión de la imagen. ¿Cuál sería la complejidad temporal asintótica, en función de n, del algoritmo resultante? \n\n\t\t\t\t\t\t $$2^n = 1 + \sum_{i=0}^{n-1} \prod_{j=1}^{i} 2$$
-3
-O(n)
-O(2^n)
-O(n²)
+Q: Se pretende calcular el valor $2^n$, $n \in \mathbb{N}$, haciendo una transcripción literal de la expresión de la imagen. ¿Cuál sería la complejidad temporal asintótica, en función de n, del algoritmo resultante? $$2^n = 1 + \sum_{i=0}^{n-1} \prod_{j=1}^{i} 2$$
+A:3
+$O(n)$
+$O(2^n)$
+$O(n^2)$
 
-Un algoritmo recursivo basado en el esquema divide y vencerás ...
-3
+Q: Un algoritmo recursivo basado en el esquema divide y vencerás ...
+A:3
 Las dos anteriores son verdaderas.
 ... nunca tendrá un coste temporal asintótico exponencial.
 ... alcanza su máxima eficiencia cuando el problema de tamaño n se divide en a problemas de tamaño n/a.
 
-Se dispone de un conjunto de n valores numéricos dispuestos en forma de árbol binario y se desea obtener el valor de la suma de todos ellos. ¿Cuál es la complejidad temporal del mejor algoritmo que se puede escribir?
-2
-O(log(n))
-O(n)
-O(n·log(n))
+Q: Se dispone de un conjunto de n valores numéricos dispuestos en forma de árbol binario y se desea obtener el valor de la suma de todos ellos. ¿Cuál es la complejidad temporal del mejor algoritmo que se puede escribir?
+A:2
+$O(\log(n))$
+$O(n)$
+$O(n \cdot \log(n))$
 
-¿Cuál de las siguientes formulaciones expresa mejor la complejidad temporal, en función delparámetro n, de la siguiente función? (asumimos que n es potencia exacta de 2)```int f(int n){ \n\tint k=0; \n\tfor (int i=2; i<=n; i*=2) \n\t\tfor (int j=i; j>0; j-=2) \n\t\t\tk++; \n\treturn k; \n} ```
-3
-$$\sum_{p=2}^{n/2}$$  (p - 1)/2
-$$\sum_{p=1}^{\log n} 2 \cdot (p - 1)$$
-$$\sum_{p=1}^{\log n} 2^{p-1}$$
+Q: ¿Cuál de las siguientes formulaciones expresa mejor la complejidad temporal, en función del parámetro n, de la siguiente función? (asumimos que n es potencia exacta de 2)
+```cpp
+int f(int n) {
+	int k = 0;
+	for (int i = 2; i <= n; i *= 2)
+		for (int j = i; j > 0; j -= 2)
+			k++;
+	return k;
+}
+```
+A:3
+$\sum_{p=2}^{n/2} \frac{(p - 1)}{2}$
+$\sum_{p=1}^{\log n} 2 \cdot (p - 1)$
+$\sum_{p=1}^{\log n} 2^{p-1}$
 
-Sea el vector v[8] = {8, 6, 4, 5, 4, 3, 2, 2}. Indica cuál de las siguientes opciones es cierta. (se asume la notación del lenguaje C/C++ en la que el primer elemento del vector está en la posición 0, es decir, en v[0]).
-3
-El vector v no es un montículo máximo porque el elemento v[2]=4 debe ser “hundido”(desplazado hacia la derecha)..
-El vector v no es un montículo máximo porque el elemento v[3]=5 debe ser “flotado”(desplazado hacia la izquierda).
+Q: Sea el vector v[8] = {8, 6, 4, 5, 4, 3, 2, 2}. Indica cuál de las siguientes opciones es cierta. (se asume la notación del lenguaje C/C++ en la que el primer elemento del vector está en la posición 0, es decir, en v[0]).
+A:3
+El vector v no es un montículo máximo porque el elemento v[2]=4 debe ser "hundido" (desplazado hacia la derecha).
+El vector v no es un montículo máximo porque el elemento v[3]=5 debe ser "flotado" (desplazado hacia la izquierda).
 El vector v es un montículo máximo.
 
-¿Se puede resolver mediante ramificación y poda un problema de selección discreta en el que cada una de las n decisiones se toman de un conjunto finito diferente?
-3
+Q: ¿Se puede resolver mediante ramificación y poda un problema de selección discreta en el que cada una de las n decisiones se toman de un conjunto finito diferente?
+A:3
 No. Las decisiones deben ser todas de la misma naturaleza.
 Sí, pero sólo si las decisiones son todas binarias.
 Sí, siempre.
 
-¿Podemos saber cuál sería el elemento en posición k cuando ordenáramos un vector de n elementos sin tener que ordenarlo?
-1
-Sí, y el algoritmo es Ω(n) y O(n²), aunque la frecuencia de los casos peores disminuye muy rápidamente con n.
-Sí, y el algoritmo es Ω(n·log(n)) y O(n²), aunque la frecuencia de los casos peores disminuye muy rápidamente con n.
+Q: ¿Podemos saber cuál sería el elemento en posición k cuando ordenáramos un vector de n elementos sin tener que ordenarlo?
+A:1
+Sí, y el algoritmo es $\Omega(n)$ y $O(n^2)$, aunque la frecuencia de los casos peores disminuye muy rápidamente con n.
+Sí, y el algoritmo es $\Omega(n \cdot \log(n))$ y $O(n^2)$, aunque la frecuencia de los casos peores disminuye muy rápidamente con n.
 No. Debemos ordenarlo.
 
-De las siguientes expresiones, o bien dos son verdaderas y una es falsa, o bien dos son falsas y una es verdadera. Marca la que (en este sentido) es distinta a las otras dos.
-3
-Ω(n) ⊂ Ω(1)
-Θ(log(n²)) = Θ(log(n³))
-O(n) ⊂ O(1)
+Q: De las siguientes expresiones, o bien dos son verdaderas y una es falsa, o bien dos son falsas y una es verdadera. Marca la que (en este sentido) es distinta a las otras dos.
+A:3
+$\Omega(n) \subset \Omega(1)$
+$\Theta(\log(n^2)) = \Theta(\log(n^3))$
+$O(n) \subset O(1)$
 
-Cuál es la complejidad temporal en función del tamaño del problema (n) de multiplicar dos matrices cuadradas?
-1
-O(n^(3/2))
-O(n²)
-O(n³)
+Q: Cuál es la complejidad temporal en función del tamaño del problema (n) de multiplicar dos matrices cuadradas?
+A:1
+$O(n^{3/2})$
+$O(n^2)$
+$O(n^3)$
 
-Se pretende mejorar mediante programación dinámica iterativa la siguiente función (v1 y v2 son vectores definidos como variables globales). ¿Cuál es la mejor complejidad espacial que se puede conseguir?```float f(unsigned n, int m){ \n\tif (m < 0) \n\t\treturn 0; \n\tfloat A = 0.0; \n\tif (v1[m] <= n) \n\t\tA = v2[m] + f( n-v1[m], m-1 ); \n\tfloat B = f( n, m-1 ); \n\treturn A+B; \n}```
-2
-O(m·n)
-O(n)
-O(m)
+Q: Se pretende mejorar mediante programación dinámica iterativa la siguiente función (v1 y v2 son vectores definidos como variables globales). ¿Cuál es la mejor complejidad espacial que se puede conseguir?
+```cpp
+float f(unsigned n, int m) {
+	if (m < 0)
+		return 0;
+	float A = 0.0;
+	if (v1[m] <= n)
+		A = v2[m] + f(n-v1[m], m-1);
+	float B = f(n, m-1);
+	return A+B;
+}
+```
+A:2
+$O(m \cdot n)$
+$O(n)$
+$O(m)$
 
-Encargamos a un becario que elabore un algoritmo para sumar todos los números de un vector.Al cabo de un rato nos viene con un algoritmo cuya complejidad temporal es O(log(n)). ¿Qué hacemos?
-1
+Q: Encargamos a un becario que elabore un algoritmo para sumar todos los números de un vector. Al cabo de un rato nos viene con un algoritmo cuya complejidad temporal es $O(\log(n))$. ¿Qué hacemos?
+A:1
 Despedimos al becario, eso es imposible.
 Subimos el sueldo al becario, ha encontrado un algoritmo innovador.
 Damos las gracias al becario, ese es el algoritmo obvio.
 
-¿Cuál de estos problemas no tiene una solución eficiente utilizando programación dinámica?
-1
+Q: ¿Cuál de estos problemas no tiene una solución eficiente utilizando programación dinámica?
+A:1
 El problema de la asignación de tareas.
 El problema del cambio.
 La mochila discreta cuyos pesos son números naturales.
 
-Una de las tres afirmaciones siguientes sobre los algoritmos que obtienen el árbol de recubrimiento mínimo de un grafo ponderado no dirigido es cierta. ¿Cuál es?
-3
+Q: Una de las tres afirmaciones siguientes sobre los algoritmos que obtienen el árbol de recubrimiento mínimo de un grafo ponderado no dirigido es cierta. ¿Cuál es?
+A:3
 El algoritmo de Kruskal va ampliando un único árbol de recubrimiento mínimo.
 El algoritmo de Prim se puede acelerar usando una estructura de datos de conjuntos disjuntos con las operaciones union y find.
 El algoritmo de Prim va ampliando un único árbol de recubrimiento mínimo.
 
-El esquema voraz...
-3
+Q: El esquema voraz...
+A:3
 Puede que no encuentre una solución pero si lo hace se garantiza que es la óptima.
 Garantiza encontrar una solución a cualquier problema, aunque puede que no sea óptima.
 Las otras dos opciones son ambas falsas.
 
-Tenemos un conjunto de n enteros positivos y queremos encontrar el subconjunto de tamaño m de suma mínima.
-2
-Para encontrar la solución habría que probar con todas las combinaciones posibles de menteros, con lo que la técnica de ramificación y poda no aporta nada con respecto a vuelta atrás.
+Q: Tenemos un conjunto de n enteros positivos y queremos encontrar el subconjunto de tamaño m de suma mínima.
+A:2
+Para encontrar la solución habría que probar con todas las combinaciones posibles de m enteros, con lo que la técnica de ramificación y poda no aporta nada con respecto a vuelta atrás.
 Una técnica voraz daría una solución óptima.
 Lo más adecuado sería usar una técnica de ramificación y poda, aunque en el peor caso el coste temporal asintótico (o complejidad temporal) sería exponencial.
 
-Existen dos algoritmos que para ordenar un vector de n elementos, buscan el máximo de esos n elementos, lo intercambian con el n-ésimo elemento para ponerlo al final, y luego ordenan, usando el mismo algoritmo, el vector de las primeras n - 1 componentes. ¿Cuál de las afirmaciones siguientes es cierta?
-2
-Uno de los algoritmos es heapsort y el otro es una de las posibles maneras de realizar laordenación por burbuja o bubblesort; el primero tiene un coste temporal O(n·log(n)) y el segundo, O(n²).
-Uno de los algoritmos es heapsort y el otro es una de las posibles maneras de realizarla ordenación por selección; el primero tiene un coste temporal O(n·log(n)) y el segundo,O(n²).
-Uno de los algoritmos es heapsort y el otro es una de las posibles maneras de realizar laordenación por selección; el primero tiene un coste temporal O(n) y el segundo, O(n²).
+Q: Existen dos algoritmos que para ordenar un vector de n elementos, buscan el máximo de esos n elementos, lo intercambian con el n-ésimo elemento para ponerlo al final, y luego ordenan, usando el mismo algoritmo, el vector de las primeras n - 1 componentes. ¿Cuál de las afirmaciones siguientes es cierta?
+A:2
+Uno de los algoritmos es heapsort y el otro es una de las posibles maneras de realizar la ordenación por burbuja o bubblesort; el primero tiene un coste temporal $O(n \cdot \log(n))$ y el segundo, $O(n^2)$.
+Uno de los algoritmos es heapsort y el otro es una de las posibles maneras de realizar la ordenación por selección; el primero tiene un coste temporal $O(n \cdot \log(n))$ y el segundo, $O(n^2)$.
+Uno de los algoritmos es heapsort y el otro es una de las posibles maneras de realizar la ordenación por selección; el primero tiene un coste temporal $O(n)$ y el segundo, $O(n^2)$.
 
-En la estrategia de ramificación y poda se suele usar una cola de prioridad para decidir en quéorden se expanden los nodos. Imaginemos un problema de optimización. ¿Puede ser que el valor por el cual se ordenan los nodos sea una cota pesimista del nodo?
-2
+Q: En la estrategia de ramificación y poda se suele usar una cola de prioridad para decidir en qué orden se expanden los nodos. Imaginemos un problema de optimización. ¿Puede ser que el valor por el cual se ordenan los nodos sea una cota pesimista del nodo?
+A:2
 No, porque para podar necesitamos una cota optimista.
 Sí.
 No, porque una cota pesimista es típicamente el valor que se encuentra en una de las hojas que cuelga del nodo.
 
-En un algoritmo de búsqueda exhaustiva, ¿Qué ocurre si la cota pesimista de un nodo se corresponde con una solución que no es factible?
-3
+Q: En un algoritmo de búsqueda exhaustiva, ¿Qué ocurre si la cota pesimista de un nodo se corresponde con una solución que no es factible?
+A:3
 Que el algoritmo sería más lento pues se explorarían más nodos de los necesarios.
 Nada especial, las cotas pesimistas no tienen por qué corresponderse con soluciones factibles.
 Que podría descartarse un nodo que conduce a la solución óptima.
 
-Tengo que sumar una larga lista de n cantidades diferentes y se me ha ocurrido que una manera de ganar tiempo es la siguiente estrategia recursiva: parto la lista en dos sublistas iguales, calculo su suma por separado usando la misma técnica y luego sumo las dos cantidades. Cuando al partir una lista me quedo con una cantidad sólo, la suma es esa cantidad, y si me quedan cero cantidades, la suma es cero. ¿Gano tiempo, es decir, hago menos sumas?
-2
-No, en este caso el coste temporal es Θ(n·log(n)).
-No, ya que la complejidad temporal del método propuesto es la misma que la de sumaruna a una las cantidades.
-Sí, ya que en este caso el coste temporal se reduce a Θ(log(n)).
+Q: Tengo que sumar una larga lista de n cantidades diferentes y se me ha ocurrido que una manera de ganar tiempo es la siguiente estrategia recursiva: parto la lista en dos sublistas iguales, calculo su suma por separado usando la misma técnica y luego sumo las dos cantidades. Cuando al partir una lista me quedo con una cantidad sólo, la suma es esa cantidad, y si me quedan cero cantidades, la suma es cero. ¿Gano tiempo, es decir, hago menos sumas?
+A:2
+No, en este caso el coste temporal es $\Theta(n \cdot \log(n))$.
+No, ya que la complejidad temporal del método propuesto es la misma que la de sumar una a una las cantidades.
+Sí, ya que en este caso el coste temporal se reduce a $\Theta(\log(n))$.
 
-Se pretende resolver el problema del viajante de comercio (travelling salesman problem) mediante el esquema de vuelta atrás, ¿cuál de los siguientes valores se espera que se comporte mejor para decidir si un nodo es prometedor?
-3
+Q: Se pretende resolver el problema del viajante de comercio (travelling salesman problem) mediante el esquema de vuelta atrás, ¿cuál de los siguientes valores se espera que se comporte mejor para decidir si un nodo es prometedor?
+A:3
 La suma de los pesos de las k aristas restantes más cortas, donde k es el número de ciudades que quedan por visitar.
-El valor que se obtiene de multiplicar k por el peso de la arista más corta de entre lasrestantes, donde k es el número de ciudades que quedan por visitar.
+El valor que se obtiene de multiplicar k por el peso de la arista más corta de entre las restantes, donde k es el número de ciudades que quedan por visitar.
 El coste del mínimo árbol de recubrimiento de las ciudades restantes.
 
-¿Cuál es el coste temporal de crear un montículo de máximos a partir de un vector ordenado demayor a menor?
-2
-Θ(1)
-Θ(n)
-Θ(n·log(n))
+Q: ¿Cuál es el coste temporal de crear un montículo de máximos a partir de un vector ordenado de mayor a menor?
+A:2
+$\Theta(1)$
+$\Theta(n)$
+$\Theta(n \cdot \log(n))$
 
-Con respecto al parámetro n, ¿Cuál sería la complejidad temporal de la siguiente función si seaplicara memoización?```long f(unsigned n) { \n\tif (n <= 1) \n\t\treturn 1; \n\treturn n * f(n - 2); \n}```
-3
+Q: Con respecto al parámetro n, ¿Cuál sería la complejidad temporal de la siguiente función si se aplicara memoización?
+```cpp
+long f(unsigned n) {
+	if (n <= 1)
+		return 1;
+	return n * f(n - 2);
+}
+```
+A:3
 logarítmica
 constante
 lineal
 
-En un problema de minimización resuelto mediante ramificación y poda, una cota pesimista es...
-1
+Q: En un problema de minimización resuelto mediante ramificación y poda, una cota pesimista es...
+A:1
 Ninguna de las otras dos opciones es cierta.
 ... una cota superior para el valor óptimo, pero que nunca coincide con este.
 ... una cota inferior para el valor óptimo que a veces coincide con este.
 
-La complejidad temporal del algoritmo Mergesort cuando se aplica a un vector de tamaño nes. . . (selecciona la más ajustada)
-2
-. . . Ω(n) y O(n²).
-. . . Θ(n·log(n)).
-. . . Ω(n·log(n)) y O(n²).
+Q: La complejidad temporal del algoritmo Mergesort cuando se aplica a un vector de tamaño n es... (selecciona la más ajustada)
+A:2
+... $\Omega(n)$ y $O(n^2)$.
+... $\Theta(n \cdot \log(n))$.
+... $\Omega(n \cdot \log(n))$ y $O(n^2)$.
 
-De las siguientes situaciones, o bien dos son posibles y una no lo es, o bien al contrario, solo una es posible y las otras dos no lo son. Marca la que, en este sentido, es diferente a las demás.
-1
-f(n) ∈ O(n) y f(n) ∈ Ω(n²).
-f(n) ∈ O(n) y f(n) ∈ Ω(1).
-f(n) ∈ O(n) y f(n) ∈ O(n²).
+Q: De las siguientes situaciones, o bien dos son posibles y una no lo es, o bien al contrario, solo una es posible y las otras dos no lo son. Marca la que, en este sentido, es diferente a las demás.
+A:1
+$f(n) \in O(n)$ y $f(n) \in \Omega(n^2)$.
+$f(n) \in O(n)$ y $f(n) \in \Omega(1)$.
+$f(n) \in O(n)$ y $f(n) \in O(n^2)$.
 
-¿Puede utilizarse relaciones de recurrencia para analizar la complejidad de un algoritmo de vuelta atrás?
-3
+Q: ¿Puede utilizarse relaciones de recurrencia para analizar la complejidad de un algoritmo de vuelta atrás?
+A:3
 No, ya que siempre saldría una complejidad exponencial
 No, las relaciones de recurrencia no se pueden aplicar en este caso.
 Sí
 
-¿Cuál es el caso peor del algoritmo de ordenación Quicksort que toma el primer elemento comopivote?
-2
+Q: ¿Cuál es el caso peor del algoritmo de ordenación Quicksort que toma el primer elemento como pivote?
+A:2
 Cuando el elemento pivote queda siempre en medio.
 Cuando el elemento pivote queda siempre en uno de los dos extremos.
 Cuando debemos hundir el pivote hasta el fondo del montículo.
 
-En cuanto a la complejidad temporal de la siguiente función, ¿qué podemos decir acerca del mejor de los casos?```int f(vector<int> &v) { \n\tint n = v.size(), i = 2, k = 0; \n\twhile (i < n) { \n\t\tint j = i; \n\t\twhile (v[j] != v[1]) { \n\t\t\tk++; \n\t\t\tj = j / 2; \n\t\t} \n\t\ti = i + 2; \n\t} \n\treturn k; \n}```
-1
-Que uno de los mejores casos ocurre cuando v[j] = v[1] ∀j ∈ N y la complejidad es Ω(n).
+Q: En cuanto a la complejidad temporal de la siguiente función, ¿qué podemos decir acerca del mejor de los casos?
+```cpp
+int f(vector<int> &v) {
+	int n = v.size(), i = 2, k = 0;
+	while (i < n) {
+		int j = i;
+		while (v[j] != v[1]) {
+			k++;
+			j = j / 2;
+		}
+		i = i + 2;
+	}
+	return k;
+}
+```
+A:1
+Que uno de los mejores casos ocurre cuando v[j] = v[1] ∀j ∈ N y la complejidad es $\Omega(n)$.
 Las otras dos opciones son ambas falsas.
-Que el mejor de los casos ocurre cuando el vector tiene 2 elementos o menos y la complejidad es Ω(1).
+Que el mejor de los casos ocurre cuando el vector tiene 2 elementos o menos y la complejidad es $\Omega(1)$.
 
-Tenemos un “superprocesador” que tiene una instrucción que permite la ordenación de 100 elementos en un tiempo constante. Para este superprecesador, adaptamos el algoritmo  Mergesort de forma que cada vez que queremos ordenar menos de 100 elementos, en lugar de hacer las llamadas recursivas, llama a esta instrucción. ¿cuál serı́a la complejidad de este algoritmo?
-1
-O(n·log(n))
-O(n)
-O(1)
+Q: Tenemos un "superprocesador" que tiene una instrucción que permite la ordenación de 100 elementos en un tiempo constante. Para este superprocesador, adaptamos el algoritmo Mergesort de forma que cada vez que queremos ordenar menos de 100 elementos, en lugar de hacer las llamadas recursivas, llama a esta instrucción. ¿cuál sería la complejidad de este algoritmo?
+A:1
+$O(n \cdot \log(n))$
+$O(n)$
+$O(1)$
 
-Uno de estos tres algoritmos de ordenación no opera directamente sobre el vector, y necesita almacenamiento adicional para los elementos del mismo. ¿Cuál es?
-1
+Q: Uno de estos tres algoritmos de ordenación no opera directamente sobre el vector, y necesita almacenamiento adicional para los elementos del mismo. ¿Cuál es?
+A:1
 Mergesort
 Quicksort
 Heapsort
 
-Los algoritmos Dijkstra, Floyd, Warshall y Kruskal resuelven respectivamente
-3
+Q: Los algoritmos Dijkstra, Floyd, Warshall y Kruskal resuelven respectivamente
+A:3
 Camino mínimo entre todos los vértices, camino mínimo de un vértice al resto, existencia de caminos entre todos los vértices, clausura transitiva
 Camino mínimo de un vértice al resto, existencia de caminos mínimos, existencia de caminos entre todos los vértices, árbol de expansión mínimo
 Camino mínimo de un vértice al resto, camino mínimo entre todos los vértices, existencia de caminos entre todos los vértices, árbol de expansión mínimo
-Camino mínimo entre todos los vértices,  camino mínimo de un vértice al resto, existencia de camino de un vértice al resto, árbol de expansión mínimo
+Camino mínimo entre todos los vértices, camino mínimo de un vértice al resto, existencia de camino de un vértice al resto, árbol de expansión mínimo
 
-Cual de los siguientes recorridos sobre un montículo de máximos nos garantiza la obtención de sus elementos ordenados de manera descendente
-1
+Q: Cual de los siguientes recorridos sobre un montículo de máximos nos garantiza la obtención de sus elementos ordenados de manera descendente
+A:1
 Ninguna
 InOrden
 PostOrden
 PreOrden
 
-Considera el siguiente algoritmo:Nos interesa medir cuantas veces se ejecuta nº 3 entonces el caso mejor se obtiene cuando
-4
-Cuando los datos vienen dispuestos en orden inverso, que se ejecuta del orden de n^2 veces
-Cuando los datos vienen ordenados ascendentemente, que se ejecuta del orden de n^2 veces
+Q: Considera el siguiente algoritmo: Nos interesa medir cuantas veces se ejecuta nº 3 entonces el caso mejor se obtiene cuando
+A:4
+Cuando los datos vienen dispuestos en orden inverso, que se ejecuta del orden de $n^2$ veces
+Cuando los datos vienen ordenados ascendentemente, que se ejecuta del orden de $n^2$ veces
 Cuando los datos vienen ordenados ascendentemente, que se ejecuta del orden de n veces
 Cuando los datos vienen ordenados ascendentemente, que se ejecuta 0 veces.
 
-Considera el siguiente algoritmo:Nos interesa medir cuantas veces se ejecuta nº 3 entonces el caso mejor se obtiene cuando :```Ordena (vector V[N] de enteros) \n\tint i, j, aux; \n\tfor (i=1; i < N; i++) { \n\t\tfor (j=0; j < N-i; j++) { \n\t\t\tif (V[j] > V[j+1]) { # (2) \n\t\t\t\taux = V[j]; \n\t\t\t\tV[j] = V[j+1]; # (3) \n\t\t\t\tV[j+1] = aux; \n\t\t\t} \n\t\t} \n\t}```
-4
-Cuando los datos vienen dispuestos en orden inverso, que se ejecuta del orden de n^2 veces
-Cuando los datos vienen ordenados ascendentemente, que se ejecuta del orden de n^2 veces
+Q: Considera el siguiente algoritmo: Nos interesa medir cuantas veces se ejecuta nº 3 entonces el caso mejor se obtiene cuando:
+```cpp
+Ordena (vector V[N] de enteros) {
+	int i, j, aux;
+	for (i=1; i < N; i++) {
+		for (j=0; j < N-i; j++) {
+			if (V[j] > V[j+1]) { // (2)
+				aux = V[j];
+				V[j] = V[j+1]; // (3)
+				V[j+1] = aux;
+			}
+		}
+	}
+}
+```
+A:4
+Cuando los datos vienen dispuestos en orden inverso, que se ejecuta del orden de $n^2$ veces
+Cuando los datos vienen ordenados ascendentemente, que se ejecuta del orden de $n^2$ veces
 Cuando los datos vienen ordenados ascendentemente, que se ejecuta del orden de n veces
 Cuando los datos vienen ordenados ascendentemente, que se ejecuta 0 veces.
 
-Supongamos que obtenemos de teclado una secuencia ordenada de datos la cual vamos a almacenar en un árbol binario ordenado entonces la gran ventaja de la estructura obtenida con respecto a una lista enlazada lineal
-1
+Q: Supongamos que obtenemos de teclado una secuencia ordenada de datos la cual vamos a almacenar en un árbol binario ordenado entonces la gran ventaja de la estructura obtenida con respecto a una lista enlazada lineal
+A:1
 Realmente no existen ventajas
 Esta en el coste de la operación de borrado
 Esta en el coste de la operación de inserción
 Esta en el coste de la operación de busqueda
 
-Tenemos un problema en el que hay que almacenar un numero variable de tiendas en la que existen un numero también variable de artículos tanto las tiendas como los artículos tienen una clave identificativa teniendo en cuenta que tenemos que realizar muchas consultar inserciones y borrados de artículos que estructura será la mas adecuada para implementarlo tened en cuenta que una tienda se puede cerrar en cualquier momento y todos sus artículos serian repartidos por las demás tiendas
-4
+Q: Tenemos un problema en el que hay que almacenar un numero variable de tiendas en la que existen un numero también variable de artículos tanto las tiendas como los artículos tienen una clave identificativa teniendo en cuenta que tenemos que realizar muchas consultar inserciones y borrados de artículos que estructura será la mas adecuada para implementarlo tened en cuenta que una tienda se puede cerrar en cualquier momento y todos sus artículos serian repartidos por las demás tiendas
+A:4
 Un árbol AVL para las tiendas y dentro de cada AVL otro para los artículos
 Una tabla hashing para las tiendas, y dentro de cada celda un conjunto de artículos
-Una tabla hashing para almacenarlas tiendas y dentro de cada tienda un árbol AVL para los artículos
+Una tabla hashing para almacenar las tiendas y dentro de cada tienda un árbol AVL para los artículos
 Un árbol AVL para las tiendas y dentro de cada nodo un árbol de búsqueda
 
-Sea G un grafo dirigido y A+ la matriz de cierre transitivo entonces
-2
+Q: Sea G un grafo dirigido y A+ la matriz de cierre transitivo entonces
+A:2
 Si A+[i,i] = 1 para algún valor de i significa que G es fuertemente conexo
 Si A+[i,i] = 1 para algún valor de i G tiene al menos un ciclo partiendo de i
-Si A+[i,i] = 1 para algún para todo  i significa que G es fuertemente conexo
+Si A+[i,i] = 1 para algún para todo i significa que G es fuertemente conexo
 Si A+[i,i] = 1 para algún valor de i existe un ciclo hamiltoniano partiendo de i
 
-Considera el algoritmo descrito a continuacion. Si consideramos como medida significativa el numero de movimientos del vector instrucciones 1 y 3 entonces el algoritmo tiene un coste: ```for (i=1; i<N; i++) {\n\tX=V[i]; # (1) \n\tIzq=0;\n\tDer=i-1;\n\twhile (Izq <= Der) {\n\t\tMedio = (Izq+Der)/2;\n\t\tif (X<V[Medio]) #(2)\n\t\t\tDer=Medio-1;\n\t\telse\n\t\t\tIzq = Medio +1;\n\t}\n\tfor(j=i-1; j>=Izq; j--) {\n\t\tV[j+1] = V[j]; # (3) \n\t}\n\tV[Izq]=X;\n}```
-4
-Θ(n^2)
-O(n)
-Θ(n)
-Ω(n) y O(n^2)
+Q: Considera el algoritmo descrito a continuacion. Si consideramos como medida significativa el numero de movimientos del vector instrucciones 1 y 3 entonces el algoritmo tiene un coste:
+```cpp
+for (i=1; i<N; i++) {
+	X=V[i]; // (1)
+	Izq=0;
+	Der=i-1;
+	while (Izq <= Der) {
+		Medio = (Izq+Der)/2;
+		if (X<V[Medio]) // (2)
+			Der=Medio-1;
+		else
+			Izq = Medio +1;
+	}
+	for(j=i-1; j>=Izq; j--) {
+		V[j+1] = V[j]; // (3)
+	}
+	V[Izq]=X;
+}
+```
+A:4
+$\Theta(n^2)$
+$O(n)$
+$\Theta(n)$
+$\Omega(n)$ y $O(n^2)$
 
-Calcula el numero de veces que se realiza la operación de escritura en la siguiente función siendo n el numero de elementos de la lista: ```Void imprime ( Lista L ) {\n\tDatosLista x;\n\tLista Aux;\n\tAux= L;\n\twhile (!L.Vacia()){\n\t\tx = L.Primero();\n\t\tcout <<x;\n\t\tAux.Resto();\n\t\tImprime(Aux);\n\t}\n}```
-1
+Q: Calcula el numero de veces que se realiza la operación de escritura en la siguiente función siendo n el numero de elementos de la lista:
+```cpp
+Void imprime ( Lista L ) {
+	DatosLista x;
+	Lista Aux;
+	Aux= L;
+	while (!L.Vacia()){
+		x = L.Primero();
+		cout <<x;
+		Aux.Resto();
+		Imprime(Aux);
+	}
+}
+```
+A:1
 n
 n+1
 2n + 1
 n-1
 Ninguna de las anteriores
 
-El algoritmo que se describe a continuación calcula: ```Función Ejercicio (ent A:ArbolBinarioGeneral):entero\nvariables Izq,Der: ArbolBinarioGeneral\ninicio\n\t si NO A.Vacio entonces\n\t\tA.HijoIzq(Izq); A.HijoDer(Der);\n\t\tretorna(ejercicio(izq)+ejercicio(der)+1)\n\t si no\n\t\tretorna (0)\n\tfinsi\nfin```
-3
+Q: El algoritmo que se describe a continuación calcula:
+```
+Función Ejercicio (ent A:ArbolBinarioGeneral):entero
+variables Izq,Der: ArbolBinarioGeneral
+inicio
+	si NO A.Vacio entonces
+		A.HijoIzq(Izq); A.HijoDer(Der);
+		retorna(ejercicio(izq)+ejercicio(der)+1)
+	si no
+		retorna (0)
+	finsi
+fin
+```
+A:3
 El nivel en el que se encuentra (hijo izquierdo + hijo derecho + 1) del árbol A
 Cuantos niveles distintos tiene el árbol A
 Ninguna de las anteriores
 El numero de veces que aparece el hijo izquierdo y el derecho en el árbol A
 El grado del árbol A
 
-Tras aplicar el algoritmo MM sobre un grafo dirigido y no valuado se obtiene que la matriz C resultante tiene todo a 1's menos la diagonal principal que esta a 0's entonces con este resultado podemos asegurar
-3
+Q: Tras aplicar el algoritmo MM sobre un grafo dirigido y no valuado se obtiene que la matriz C resultante tiene todo a 1's menos la diagonal principal que esta a 0's entonces con este resultado podemos asegurar
+A:3
 Que existen n componentes fuertemente conexas
 Que el grafo no es fuertemente conexo
 Ninguna de las anteriores
 Que el grado es aciclico
 
-Cual es la complejidad de la función pertenece de un dato, en un árbol binario ordenado
-1
-Ω(1) y O(n)
-Θ(log n)
-Ω(1) y O(n^2)
-Ninguna de las anterirores
+Q: Cual es la complejidad de la función pertenece de un dato, en un árbol binario ordenado
+A:1
+$\Omega(1)$ y $O(n)$
+$\Theta(\log n)$
+$\Omega(1)$ y $O(n^2)$
+Ninguna de las anteriores
 
-Sea A un árbol binario ordenado de n nodos, en el que todos sus elementos son distintos entonces la operación de búsqueda de un elemento que no esta en el árbol tendrá un coste
-3
-O(log n)
-Ω(log n) y O(n)
-Θ(log n)
-Θ(n)
+Q: Sea A un árbol binario ordenado de n nodos, en el que todos sus elementos son distintos entonces la operación de búsqueda de un elemento que no esta en el árbol tendrá un coste
+A:3
+$O(\log n)$
+$\Omega(\log n)$ y $O(n)$
+$\Theta(\log n)$
+$\Theta(n)$
 
-Su ecuación de recurrencia es: ```Función F (ent n: entero): entero\n\tvariables x, i: entero\n\tInicio\n\tsi (n>=1) entonces\n\t\tretorna 1\n\tsi no\n\t\tpara i de 1 a n hacer\n\t\t\tx← 1\n\t\t\tmientras x<n hacer\n\t\t\t\tx← x*2\n\t\t\tfinmientras\n\t\tfinpara\n\t\tretorna F(n/2)+F(n/2)\n\tfinsi\nfin```
-1
-2*T(n/2)+n*log n
-2*T(n-1)+1
-2*T(n/2)+1
-2*T(n-1)+n
-2*T(n/2)+1
+Q: Su ecuación de recurrencia es:
+```
+Función F (ent n: entero): entero
+	variables x, i: entero
+	Inicio
+	si (n>=1) entonces
+		retorna 1
+	si no
+		para i de 1 a n hacer
+			x← 1
+			mientras x<n hacer
+				x← x*2
+			finmientras
+		finpara
+		retorna F(n/2)+F(n/2)
+	finsi
+fin
+```
+A:1
+$2 \cdot T(n/2) + n \cdot \log n$
+$2 \cdot T(n-1) + 1$
+$2 \cdot T(n/2) + 1$
+$2 \cdot T(n-1) + n$
+$2 \cdot T(n/2) + 1$
 
-Cual seria la función de coste del algoritmo siguiente considera que la medida significativa es la operación * y que el modulo potencia es el calculo de la potencia implementado mediante productos sucesivos Tpotencia(n)=n: ```{Q} ={n=N, N> 1) \nint ejerc6 ( int n ) {\n\tint i = 1;\n\tint x = 1;\n\twhile (i<=n) {\n\t\tx = x*potencia(i, i);\n\t\ti=i+1;\n\t}\n\treturn x;\n}```
-4
-T(n) = 3 + c*n siendo c una constante
-T(n)  E^logn (i+1)
-T(n) = 3 + E3
-T(n) = E(i+1)
+Q: Cual seria la función de coste del algoritmo siguiente considera que la medida significativa es la operación * y que el modulo potencia es el calculo de la potencia implementado mediante productos sucesivos Tpotencia(n)=n:
+```cpp
+{Q} ={n=N, N> 1)
+int ejerc6 ( int n ) {
+	int i = 1;
+	int x = 1;
+	while (i<=n) {
+		x = x*potencia(i, i);
+		i=i+1;
+	}
+	return x;
+}
+```
+A:4
+$T(n) = 3 + c \cdot n$ siendo c una constante
+$T(n) \in \sum_{i=1}^{\log n} (i+1)$
+$T(n) = 3 + \sum_{i=1}^{3}$
+$T(n) = \sum_{i=1}^{n} (i+1)$
 
-Sea un vector de n elementos y supongamos que todos los elementos de a son distintos, considera el siguiente algoritmoSi consideramos como medida significativa el numero de comparaciones con respecto de los elementos del vector, entonces el algoritmo tiene una complejidad: ```función Ordena (ent/sal a:vector): nada\n\tvariables: i,j,temp: entero\n\tinicio\n\t\tpara i de 0 a n-2 hacer\n\t\t\tpara j de n-1 a i+1 incr-1 hacer\n\t\t\t\tsi a[j-1]>a[j] entonces\n\t\t\t\t\ttemp← a[j]\n\t\t\t\t\ta[j]← a[j-1]\n\t\t\t\t\ta[j-1]← temp\n\t\t\t\tfinsi\n\t\t\tfinpara\n\t\tfinpara\n\tfin```
-2
-Ω(n) y O(n^2)
-Θ(n^2)
-Ω(1) y O(n^2)
-Θ(n)
+Q: Sea un vector de n elementos y supongamos que todos los elementos de a son distintos, considera el siguiente algoritmo. Si consideramos como medida significativa el numero de comparaciones con respecto de los elementos del vector, entonces el algoritmo tiene una complejidad:
+```
+función Ordena (ent/sal a:vector): nada
+	variables: i,j,temp: entero
+	inicio
+		para i de 0 a n-2 hacer
+			para j de n-1 a i+1 incr-1 hacer
+				si a[j-1]>a[j] entonces
+					temp← a[j]
+					a[j]← a[j-1]
+					a[j-1]← temp
+				finsi
+			finpara
+		finpara
+	fin
+```
+A:2
+$\Omega(n)$ y $O(n^2)$
+$\Theta(n^2)$
+$\Omega(1)$ y $O(n^2)$
+$\Theta(n)$
 
-Si consideramos como medida significativa el numero de comparaciones con respecto a las variables Min y Max siendo n el numero total de elementos a trata. Entonces el caso mejor se obtiene
-2
+Q: Si consideramos como medida significativa el numero de comparaciones con respecto a las variables Min y Max siendo n el numero total de elementos a tratar. Entonces el caso mejor se obtiene
+A:2
 Cuando los datos vienen ordenados ascendentemente que hay n comparaciones
 Cuando los datos dispuestos en orden inverso que hay n comparaciones
 Cuando los datos vienen dispuesto en orden inverso que hay 2n comparaciones
 Cuando los datos vienen ordenado ascendentemente que hay 2n comparaciones
 
-Dadas las siguiente ecuaciones de recurrencia determinar el orden al que pertenecen cada una de ellas T1(n)=2T1(n/2)+c1, T2(n)=T2(n-1) + n + c2, T3(n) = cT3(n-1)+c3, T4(n) = T4(n-1)+c4
-1
-T1(n) E O(n), T2(n) E O(n^2), T3(n) E O(c^n) y T4(n) E O(n) 
-T1(n) E O(n), T2(n) E O(n), T3(n) E O(n^2) y T4(n) E O(n^2) 
-T1(n) E O(log n), T2(n) E O(2^n), T3(n) E O(c^n) y T4(n) E O(n) 
-T1(n) E O(log n), T2(n) E O(n^2), T3(n) E O(n) y T4(n) E O(n) 
+Q: Dadas las siguiente ecuaciones de recurrencia determinar el orden al que pertenecen cada una de ellas T1(n)=2T1(n/2)+c1, T2(n)=T2(n-1) + n + c2, T3(n) = cT3(n-1)+c3, T4(n) = T4(n-1)+c4
+A:1
+T1(n) ∈ O(n), T2(n) ∈ O(n²), T3(n) ∈ O(c^n) y T4(n) ∈ O(n)
+T1(n) ∈ O(n), T2(n) ∈ O(n), T3(n) ∈ O(n²) y T4(n) ∈ O(n²)
+T1(n) ∈ O(log n), T2(n) ∈ O(2^n), T3(n) ∈ O(c^n) y T4(n) ∈ O(n)
+T1(n) ∈ O(log n), T2(n) ∈ O(n²), T3(n) ∈ O(n) y T4(n) ∈ O(n)
 
-Considera la función siguiente, donde todos los elementos del vector L son distintos.Considera como medida significativa las asignaciones a max, entonces el numero de asignaciones para el caso mejor y pero son, respectivamente: ```int maximo( int L[N] ) {\n\tint i, max;\n\tmax=L[0];\n\tfor (i=1; i<N; i++)\n\t\tif (max<L[i])\n\t\t\tmax=L[i];\n\treturn (max);\n}```
-1
+Q: Considera la función siguiente, donde todos los elementos del vector L son distintos. Considera como medida significativa las asignaciones a max, entonces el numero de asignaciones para el caso mejor y peor son, respectivamente:
+```cpp
+int maximo( int L[N] ) {
+	int i, max;
+	max=L[0];
+	for (i=1; i<N; i++)
+		if (max<L[i])
+			max=L[i];
+	return (max);
+}
+```
+A:1
 1 cuando el mayor elemento esta en la posición inicial y n cuando los elementos están ordenados ascendentemente
 1 cuando los elementos están ordenados ascendentemente y n cuando los elementos están en orden inverso
-depende siempre del valor de N, estén como estén dispuestos los datos, si N=1 se obtiene el mejor caso, y el pero con el mayor numero de N
+depende siempre del valor de N, estén como estén dispuestos los datos, si N=1 se obtiene el mejor caso, y el peor con el mayor numero de N
 siempre tiene un coste lineal, independiente del orden inicial, pues todos los elementos son distintos por hipótesis y se realiza un numero fijo de iteraciones
 
-Cual seria el montículo de mínimos implementado en un vector resultantes después de haber insertado los siguientes elementos en el orden indicado 5,3,8,2,1
-3
+Q: Cual seria el montículo de mínimos implementado en un vector resultantes después de haber insertado los siguientes elementos en el orden indicado 5,3,8,2,1
+A:3
 0 1 2 3 4 5 5 3 8 2 1 ...
 0 1 2 3 4 5 1 3 8 5 2 ...
 0 1 2 3 4 5 1 2 8 5 3 ...
 0 1 2 3 4 5 1 2 3 5 8 ...
 
-Si estamos trabajando con un lenguaje de programacion no recursivo
-4
+Q: Si estamos trabajando con un lenguaje de programacion no recursivo
+A:4
 Ninguna de las anteriores es correcta
-Podáramos simular la recursividad mediante colas
+Podríamos simular la recursividad mediante colas
 No podríamos implementar ningún algoritmo recursivo
 Podríamos simular la recursividad mediante pilas
 No existen lenguajes de programación no recursivos
 
-Sea G un grafo no dirigido valuado con etiquetas positivas y conexo entonces los algoritmos Prim y kruskal aplicados sobre el grafo G
-2
+Q: Sea G un grafo no dirigido valuado con etiquetas positivas y conexo entonces los algoritmos Prim y kruskal aplicados sobre el grafo G
+A:2
 Darían el mismo resultado independientemente de como fueran las etiquetas del grafo G
 Darían el mismo resultado si todas las etiquetas del grafo G fueran distintas
 Siempre obtendrían resultados distintos
 Darían el mismo resultado solo si hubiera etiquetas con el mismo valor en el grafo G
 
-Cual seria la función de coste del algoritmo anterior en el caso medio
-1
-T(N) = 3 + E^logN i=1 2
-T(N) = 3 + c*N siendo c una constante
-T(N) = 2 + E^N i=1 3
-T(N) = 3+ E^N j=1 2
+Q: Cual seria la función de coste del algoritmo anterior en el caso medio
+A:1
+$T(N) = 3 + \sum_{i=1}^{\log N} 2$
+$T(N) = 3 + c \cdot N$ siendo c una constante
+$T(N) = 2 + \sum_{i=1}^{N} 3$
+$T(N) = 3+ \sum_{j=1}^{N} 2$
 
-La complejidad del algoritmo es: ```función recursiva(n: entero): entero;\nvar i:entero;\n{\n\tif(n<=1)then\n\t\trecursiva:=1\n\telse\n\t\tfor(i=1;i<=n;i++)\n\t\t\twriteln(i);\n\t\trecursiva:=recursiva(n/2)+recursiva(n/2)\n}```
-3
-O(2^n)
-O(log^2(n))
-O(n*log(n))
-O(log(n))
+Q: La complejidad del algoritmo es:
+```cpp
+función recursiva(n: entero): entero;
+var i:entero;
+{
+	if(n<=1)then
+		recursiva:=1
+	else
+		for(i=1;i<=n;i++)
+			writeln(i);
+		recursiva:=recursiva(n/2)+recursiva(n/2)
+}
+```
+A:3
+$O(2^n)$
+$O(\log^2(n))$
+$O(n \cdot \log(n))$
+$O(\log(n))$
 
-Sea A un array ordenado de n enteros que se vuelca en un árbol binario ordenado, y sea x un entero a buscar dentro del árbol binario. Entonces, la complejidad de ese algoritmo de búsqueda es:
-2
+Q: Sea A un array ordenado de n enteros que se vuelca en un árbol binario ordenado, y sea x un entero a buscar dentro del árbol binario. Entonces, la complejidad de ese algoritmo de búsqueda es:
+A:2
 Depende del algoritmo de volcado. Sera lineal si A se vuelca de forma lineal, y logarítmica si se sigue un algoritmo puro de back tracking para localizar el elemento x dentro del árbol.
 Depende del algoritmo de volcado del array. Sera lineal A si se vuelca de forma lineal, y logarítmica si se sigue una estrategia divide y vencerás, tomando como pivote A[N/2].
 Es independiente del algoritmo de volcado del array. Siempre es logarítmica, pues en una búsqueda de ABO siempre tenemos una ecuación de recurrencia de la forma T(n)=(n/2)+1;T(1)=O(1), que al resolverla nos proporciona una complejidad logarítmica.
 Depende del algoritmo de volcado. Si empieza desde el final será logarítmica y si empieza desde el principio será lineal.
 
-Dado el siguiente código, calcule la complejidad del mismo: ```int sumaDigitos ( int num ) {\n\tint s;\n\ts = num % 10;\n\twhile ( num >= 10 ) {\n\t\tnum = num/10\n\t\ts = s + (num % 10);\n\t}\n\treturn (s);\n}```
-2
-Ω(1) y O(log n)
-O(n)
-O(10n)
-O(1)
-O(log n)
+Q: Dado el siguiente código, calcule la complejidad del mismo:
+```cpp
+int sumaDigitos ( int num ) {
+	int s;
+	s = num % 10;
+	while ( num >= 10 ) {
+		num = num/10
+		s = s + (num % 10);
+	}
+	return (s);
+}
+```
+A:2
+$\Omega(1)$ y $O(\log n)$
+$O(n)$
+$O(10n)$
+$O(1)$
+$O(\log n)$
 
-Se entiende como solución optima al problema del viajante de comercio la que representa el ciclo de Hamilton de menor coste que se puede conseguir un grafo valuado que esquema nos garantiza la resolución optima de ese problema
-4
+Q: Se entiende como solución optima al problema del viajante de comercio la que representa el ciclo de Hamilton de menor coste que se puede conseguir un grafo valuado que esquema nos garantiza la resolución optima de ese problema
+A:4
 II y III
 I Aplicando un algoritmo de divide y vencerás basado en las componentes conexas del grafo
 III aplicando un algoritmo voraz con una función de selección basada en la arista mas corta
 II aplicando un esquema vuelta atrás back tracking
 
-Una función recursiva es
-5
+Q: Una función recursiva es
+A:5
 III una función que llama a otra y esta llama a la primera
 I una función que se llama a si misma
 Todas son correctas
 II una función que llama a otro numero indeterminado de veces
 IV I y III son correctas
 
-Un árbol binario ordenado se caracteriza porque
-2
+Q: Un árbol binario ordenado se caracteriza porque
+A:2
 Se construye desde la raíz hasta las hojas y no existe una relacion de orden entre los datos
 Se construye desde las hojas a la raíz y existe una relacion jerárquica entre los datos
 Se construye desde las hojas a la raíz y existe una relacion de orden entre los datos
 Se construye desde la raíz hasta las hojas y existe una relacion exclusivamente jerárquica entre los datos
 Se construye desde la raíz hasta las hojas y no existe ninguna relacion entre los datos
 
-Que calcula el siguiente algoritmo: ```función Ejercicio (ent A: ÁrbolBinario, ent/sal actual:entero):nada\nvariables\t\tx: entero\n\t\tIzq, Der: ÁrbolBinario\ninicio\n\tsi A.Vacio entonces\n\t\tA.HijoIzq(Izq)\n\t\tA.HijoDer(Der)\n\t\tA.Raíz(x)\n\t\tactual:=actual + x\n\t\tEjercicio (Izq, actual)\n\t\tEjercicio (Der, actual)\n\tfinsi\nfin\nLlamada desde el programa principal:\nn:= 0\t\t\t\t#Arb es un árbol\nEjercicio(Arb, n)```
-2
+Q: Que calcula el siguiente algoritmo:
+```
+función Ejercicio (ent A: ÁrbolBinario, ent/sal actual:entero):nada
+variables		x: entero
+		Izq, Der: ÁrbolBinario
+inicio
+	si A.Vacio entonces
+		A.HijoIzq(Izq)
+		A.HijoDer(Der)
+		A.Raíz(x)
+		actual:=actual + x
+		Ejercicio (Izq, actual)
+		Ejercicio (Der, actual)
+	finsi
+fin
+Llamada desde el programa principal:
+n:= 0			#Arb es un árbol
+Ejercicio(Arb, n)
+```
+A:2
 n devuelve la suma de los valores de los nodos que no son hojas en el arbol
 n devuelve la suma de valores de los nodos del arbol
 n devuelve el valor de la raiz del arbol
 n devuelve la suma de los valores de las hojas del arbol
 
-La complejidad de un algoritmo recursivo con dos llamadas recursivas crece de manera exponencial
-4
+Q: La complejidad de un algoritmo recursivo con dos llamadas recursivas crece de manera exponencial
+A:4
 Ninguna de las anteriores es correcta
 Si el algoritmo es recursivo y tenemos el numero de datos es de 2^k, siendo k el numero de llamadas recursivas
 Si en cada llamada recursiva vuelven a entrar los n datos
 Si se va decrementando los datos de forma lineal
 
-Mediante el algoritmo de floyd podemos
-2
+Q: Mediante el algoritmo de floyd podemos
+A:2
 e. Las respuestas a y c son correctas
 d. Las respuestas a b y c son correctas
 c. Calcular el coste mínimo de ir desde cualquier vértice i a cualquier otro
 b. Calcular el coste mínimo de ir desde un vértice i a todos los demás
 a. Calcular el coste mínimo de ir desde un vértice i a un vértice j
 
-Calcular la complejidad del siguiente fragmento de codigo: ```for(i=1; i<=n; i++)\n\tfor(j=1; j<= 10000; j++)\n\t\tfor(k=n-1; k<=n; k++)\n\t\t\tcout<<i<<j<<k<<endl;```
-4
-O(n^2)
-O(n^3)
-O(2^n)
-O(n)
-O(n*log n
+Q: Calcular la complejidad del siguiente fragmento de codigo:
+```cpp
+for(i=1; i<=n; i++)
+	for(j=1; j<= 10000; j++)
+		for(k=n-1; k<=n; k++)
+			cout<<i<<j<<k<<endl;
+```
+A:4
+$O(n^2)$
+$O(n^3)$
+$O(2^n)$
+$O(n)$
+$O(n \cdot \log n)$
 
-Mediante el algoritmo de Floyd podemos
-1
-IV Las respuestas l, ll y lll son correctas
+Q: Mediante el algoritmo de Floyd podemos
+A:1
+IV Las respuestas I, II y III son correctas
 II calcular el coste mínimo de ir desde un vértice i a todos los demás
 V Las respuesta I y II son correctas
-ll calcular el coste mínimo de ir desde cualquier vértice i a cualquier otro
+II calcular el coste mínimo de ir desde cualquier vértice i a cualquier otro
 I calcular el coste mínimo de ir desde un vértice i a un vértice j
 
-Un árbol binario ordenado se caracteriza porque
-2
+Q: Un árbol binario ordenado se caracteriza porque
+A:2
 Se construye desde la raíz hasta las hojas y no existe ninguna relacion entre los datos
 Se construye desde la raíz hasta las hojas y existe una relacion de orden entre los datos
 Se construye desde la raíz hasta las hojas y existe una relacion exclusivamente jerárquica entre los datos
 Se construye desde las hojas a la raíz y existe una relacion jerárquica entre los datos
 Se construye desde las hojas a la raíz y existe una relacion de orden entre los datos
 
-De los algoritmos vistos en clase, cual se corresponde con el siguiente: ```for(i=1; i<=n; i++) {\n\tX=V[i];\n\tIzq=0;\n\tDer=i-1;\n\twhile (Izq <= Der) {\n\t\tMedio = (Izq+Der)/2;\n\t\tif (X<V[Medio])\n\t\t\tDer=Medio-1;\n\t\telse\n\t\t\tIzq = Medio +1;\n\t}\n\tfor(j=i-1; j>=Izq; j--) {\n\t\tV[j+1] = V[j];\n\t}\n\tV[Izq]=X;\n}```
-3
+Q: De los algoritmos vistos en clase, cual se corresponde con el siguiente:
+```cpp
+for(i=1; i<=n; i++) {
+	X=V[i];
+	Izq=0;
+	Der=i-1;
+	while (Izq <= Der) {
+		Medio = (Izq+Der)/2;
+		if (X<V[Medio])
+			Der=Medio-1;
+		else
+			Izq = Medio +1;
+	}
+	for(j=i-1; j>=Izq; j--) {
+		V[j+1] = V[j];
+	}
+	V[Izq]=X;
+}
+```
+A:3
 Ordenación mediante el algoritmo de Quicksort
 Ordenación mediante el algoritmo de selección directa
 Ordenación mediante el algoritmo de inserción binaria
 Ordenación mediante el algoritmo de la burbuja
-
-¿Con que algoritmo de ordenación clásico se corresponde el pseudocodigo del siguiente ejemplo?: ```módulo ordena ( var A es vector de n enteros);\nvariables i, j, x: es entero\nfor (i = 2; i<=N; i++) {\n\tX=A[i];\n\tA[0]=X;\n\tj=i-1;\n\twhile ( X<A[j] ) { # (2)\n\t\tA[j+1]=A[j]; # (3) \n\t\tj = j – 1\n\t}\n\tA[j+1]=X;\n}\nfinmódulo```
-3
-Ordenación por el método de la burbuja
-Ordenación por el método de selección directa
-Ordenación por el método de inserción directa
-Ordenación por el método de inserción binaria
-
-Supongamos que queremos hacer una copia de seguridad de nuestro ficheros mas importantes y para ello solo disponemos de un DVD+R grabable de 4.7Gb según esto tenemos n ficheros con distintos tamaños respectivamente y además nuestro DVD tiene capacidad máxima T se cumple que T< t1+t2+t3+...+tn
-1
-Para maximizar el numero de ficheros en DVD utilizaría un esquema de voraz
-Para maximizar el numero de ficheros en DVD utilizaría un esquema de divide y vencerás
-Para maximizar el numero de ficheros en DVD utilizaría un esquema backtracking
-Para maximizar el numero de ficheros en DVD utilizaría un esquema de ramificación y poda
-
-Sea A un árbol binario ordenado equilibrado de n elementos, en el que todos sus elementos son distintos, entonces la función búsqueda de un elemento que no esta en el árbol tendrá coste
-4
-O(log n)
-Ω(log n) y O(n)
-Θ(n)
-Θ(log n)
-
-Que ventaja tiene un esquema de ramificación y poda frente a un vuelta atrás
-4
-Que no tiene un coste exponencial
-Que se exploran todos los nodos del árbol de búsqueda de soluciones
-Que simplifica el código
-Que tiene un coste menor
-
-Un conjunto es
-1
-Ninguna de las anteriores
-Una estructura no lineal en la que deberemos tener en cuenta el orden de llegada de los dats
-Una estructura lineal en la que puede haber repetidos
-Una estructura lineal y ordenada en la que no puede haber repetidos
-Una estructura no lineal en la que no puede haber elementos repetido y los elementos están ordenados
-
-La búsqueda de un elemento dentro de un árbol tiene un coste de
-5
-Siempre constante, O(1)
-Si es ABO es logarítmica siempre
-Si es un AVL es logarítmica siempre
-Siempre lineal, O(n)
-Ninguna de las anteriores
-
-El recorrido en profundidad de un grafo G no dirigido ha producido el arbol que se muestra en la figura, en el que cada nodo esta numerado siguiendo el orden de visita del recorrido en profundidad: ```\n    1\n   / \\n  2   6\n / \   \\n3   4   7\n   /\n  5```
-1
-El nodo 2 puede ser adyacente al nodo 5, y el nodo 4 puede ser adyacente al nodo 1
-El nodo 6 y 7 no son adyacentes y el nodo 5 y el nodo 7 si lo son
-El nodo 1 solo puede ser adyacente a los nodos 2,6 y 7
-El nodo 6 es adyacente al nodo 4
-
-Sabemos que un árbol se construye
-1
-Se construye de la raíz a las hojas si es un AVL, y de las hojas a la raíz si es un binario
-Ninguna de las anteriores
-Si el árbol es binario de la raíz a las hojas igual que si es un árbol en general
-Se construye empezando por la raíz luego por la izquierda y después por la derecha hasta llegar a las hojas si es binario ordenado y de las hojas a la raíz si es binario
-
-Si queremos implementar una cola dinámica utilizando un único puntero entonces alguna de las siguientes alternativas consigue complejidad de todas las operaciones de TAD Cola sean constantes
-4
-si, cuando el puntero indique el final de la cola
-no, siempre habrá alguna opción con complejidad lineal
-si, utilizando una lista circular donde el puntero indica el frente de la cola y el sucesor de este fuese el elemento del final
-si, utilizando una lista circular donde el puntero indica el final de la cola y el sucesor de este fuese el elemento del frente
-
-Supongamos que queremos hacer una copia de seguridad de nuestro ficheros mas importantes y para ello solo disponemos de un DVD+R grabable de 4.7Gb según esto tenemos n ficheros con distintos tamaños respectivamente y además nuestro DVD tiene capacidad máxima T se cumple que T< t1+t2+t3+...+tnCon respecto al problema anterior cual de las afirmaciones es cierta
-2
-para optimizar la utilización del espacio del DVD utilizaría un esquema de ramificación y poda
-para optimizar la utilización del espacio del DVD utilizaría un esquema de backtracking
-para optimizar la utilización del espacio del DVD utilizaría un esquema de divide y vencerás
-para optimizar la utilización del espacio del DVD utilizaría un esquema de voraz
-
-Dadas 2 soluciones recursivas A y B, para un problema de manera que las ecuaciones de recurrencia para el caso general (n > 1) son Ta(n)=Ta(n-1)+n y Tb(n-1)+1. (Los casos base de ambos problemas se resuelven con tiempo constante cuando n < =1). Desde el punto de vista asintotico ¿ cual de las dos soluciones es mejor?
-2
-La solución B
-La solución A
-Faltan datos para poder decirlo
-Ambas por igual
-
-Suponiendo la implementación mas eficiente para cada TAD establecer el coste de borrado de los elementos menor en una lista desordenada un árbol binario ordenado y un montículo de mínimos respectivamente
-1
-O(1),O(n),O(log n),O(1)
-O(log n),O(n),O(n),O(1)
-O(n),O(1),O(log n),O(log n)
-O(1),O(n),O(n),O(log n)
-
-Un grafo no dirigido tiene 200 arcos podemos entonces deducir que
-4
-Ninguna de las anteriores
-posee menos de 20 vertices
-posee mas de 20 vertices y siempre es conexo
-posee mas de 20 vertices
-
-Dado el algoritmo anterior y considerando como medida significativa el numero de comparaciones con respecto a la variable Min y Max. Entonces el numero de comparaciones medias viene determinado por la siguiente funcion
-2
-Tmed(n) = (log n)/2
-Tmed(n) = (3/2)n
-Tmed(n) = E^n (1/i -2(1+1i))
-Tmed(n) = E^n (1/i+2(1-1/i))
-
-Que algoritmo es menos costoso para obtener el camino mínimo entre todos los pares de vértices de un grafo
-3
-Floyd tiene menor cota superior de coste que Dijkstra en este caso
-Dijkstra es mas eficiente, puesto que tiene menor coste
-Aplicar sucesivamente Dijkstra en este caso tiene igual cota superior de coste que aplicar Floyd
-Calcular la matriz de cierre transitivo
-Kruskal es el mas adecuado para lograr este objetivo
-
-Sea un grafo no dirigido con n vertices entonces
-2
-Si se hace un recorrido en anchura partiendo del nodo x el conjunto de vértices visitados es igual al conjunto total de vértices del grafo
-Si se hace un recorrido en anchura que parte del nodo x el conjunto de visitados al final será igual que resultaría si el recorrido fuera en profundidad
-Si se hace un recorrido en anchura partiendo del nodo x no puede asegurarse que el conjunto de visitados al final resulte ser el mismo que si el recorrido fueran en profundidad
-Si se hace un recorrido en anchura que parte del nodo x y el grafo es cíclico se entra en un bucle infinito
-Si se hace un recorrido en anchura partiendo del nodo x y el conjunto de visitados resultante n es igual al conjunto total de vértices es porque el grafo no es fuertemente conexo
-
-Sea un grafo G no dirigido etiquetado con etiquetas positivas y conexo entonces es cierto que el algoritmo de Kruskal
-1
-Solo puede producir una única solución si todas las etiquetas tienen valores distintos
-Kruskal puede producir una única solución si todas las etiquetas tienen valores distintos
-Puede producir distintas soluciones si todas las etiquetas tienen valores distintos
-Solo puede producir una única solución independientemente de los valores de las etiquetas
-El numero de soluciones que puede generar Kruskal es imprevisible en cualquier caso
-
-Cual de las siguientes características es fundamental en los algoritmos ávidos
-3
-Se generan todas las secuencias de decisiones de forma sistemática y organizada
-Nos garantizan la obtención de la solución optima del problema
-Nunca se vuelve a reconsiderar una decisión ya tomada
-Se combinan las soluciones parciales para obtener la solución parcial
-
-A partir de cual de los siguientes recorridos se puede reconstruir un árbol binario completo
-3
-InOrden
-PostOrden
-Las tres respuestas son correctas
-PreOrden
-
-Sea A un árbol binario de profundidad k con n nodos donde n = 2^k-1 este datos nos permite saber entre otras cosas que
-3
-III existen en el árbol todos lo nodos de nivel k
-I el árbol es complejo
-IV I, II y III conjuntamente
-II el árbol es equilibrado
-
-Utilizaremos una estructura de cola en aquellas aplicaciones que requieran un tratamiento en el que los datos
-4
-debamos procesarlos en orden inverso a como se obtienen y puedan repetirse
-debamos procesarlos en el mismo orden en el que se obtienen y no puedan repetirse
-se insertan y se extraigan por un único punto, y deban estar ordenados
-debamos procesarlos en el mismo orden en el que se obtienen y puedan repetirse
-
-Suponiendo la implementación mas eficiente para cada TAD establecer el coste en el borrado del elemento menor en una lista ordenada una lista desordenada y un montículo de mínimos respectivamente
-3
-O(1),O(n),O(1)
-O(log n),O(n),O(1)
-O(1),O(n),O(log n)
-O(n),O(1),O(log n)
-
-Suponiendo que T1 E O(f) y que T2 E O(f) indicar cual de las siguientes afirmaciones es cierta
-1
-I y II son ciertas
-II T1 - T2 E O(f)
-III Ninguna de las anteriores
-I T1+T2 E O(f)
-
-Sea un grafo dirigido con n vértices entonces
-1
-El grafo puede tener como máximo n^2-n arcos
-El grafo debe tener con mínimo 1 arco ya que de lo contrario no se puede saber si es dirigido o no
-Si tiene mas de n-1 arcos necesariamente tiene un ciclo
-si tiene menos de n-1 arcos es imposible que tenga un ciclo
-El grafo puede tener máximo n^2
-
-Comparando los algoritmos de multiplicacion de matrices y warshall para un grafo no valuado G tenemos que 
-4
-Tienen complejidad diferente la multiplicación de matrices tiene O(n^4) y warshall O(n^3) la multiplicación de matrices se basa en aplicaciones de espacio de búsqueda y warshall se basa en ir obteniendo caminos de longitud mayor
-Ambos tienen la misma complejidad, multiplicación de matrices se basa en ir obteniendo caminos de longitud mayor aplicaciones de espacio de búsqueda y warshall se basa en aplicaciones de espacio de búsqueda
-Ambos tienen la misma complejidad, multiplicación de matrices se basa en aplicaciones de espacio de búsqueda y warshall se basa en ir obteniendo caminos de longitud mayor
-Tienen complejidad diferente la multiplicación de matrices tiene O(n^4) y warshall O(n^3) la multiplicación de matrices se basa en ir obteniendo caminos de longitud mayor y warshall se basa en aplicaciones de espacio de búsqueda
-
-Sea A un vector de n elementos y supongamos que todos los elementos de A son distintos. Considera el siguiente algoritmo:Nos interesa medir cuantas veces se ejecuta la instrucción nº 3 Entonces el caso mejor se obtiene cuando: ```módulo ordena ( var A es vector de n enteros);\nvariables i, j, x: es entero\nfor (i = 2; i<=N; i++) {\n\tX=A[i];\n\tA[0]=X;\n\tj=i-1;\n\twhile ( X<A[j] ) { # (2)\n\t\tA[j+1]=A[j]; # (3)\n\t\tj = j - 1\n\t}\n\tA[j+1]=X;\n}\nfinmódulo```
-1
-Los datos vienen ordenados ascendentemente, que se ejecuta exactamente 0 veces
-Los datos vienen ordenados ascendentemente, que se ejecuta exactamente n^2 veces
-Los datos vienen dispuestos en orden inverso, que se ejecuta exactamente n^2 veces
-Los datos vienen dispuestos en orden inverso, que se ejecuta exactamente n-i veces
-
-Dado el algoritmo el caso peor el numero de nodos procesados: ```Módulo Ejercicio (ent A es ArbolBinario) devuelve entero\nvariables\n\tIzq, Der es ArbolBinario\ninicio\n\tsi no A.Vacio entonces\n\t\tA.HijoIzq (Izq);\n\t\tA.HijoDer (Der);\n\t\tdevolver (ejercicio(izq) + ejercicio(der) + 1)\n\tsi no\n\t\tdevolver (0)\n\tfinsi\nfin```
-3
-es proporcional al logaritmo siempre
-es proporcional a n*logn
-sigue una función lineal siempre
-depende del grado de equilibrio que tenga
-ninguna respuesta es correcta
-
-Sea A un árbol binario ordenado equilibrad de n elementos en el que todos sus elementos son distintos, entonces la operación de búsqueda de un elemento que no esta en el árbol tendrá un coste
-2
-Θ(n)
-O(log n)
-Ω(log n) y O(n)
-Θ(log n)
-
-Supongamos que obtenemos de teclado una secuencia ordenada de datos la cual vamos almacenando en una determinada estructura de datos entonces conociendo de antemano que sobre esta estructura vas a realizar muchas operaciones de búsqueda que estructura de almacenamiento erigirías
-2
-Una lista enlazada dinámicamente
-Un vector
-Una cola enlazada dinamicamente
-Un árbol binario ordenado o árbol de búsqueda
-Un grafo
-
-Que estructura de datos es mas eficiente para almacenar los nodos vivos al implementar un algoritmo de ramificación y poda
-4
-Una lista
-Un árbol binario ordenado
-Un árbol balanceado
-Una cola de prioridad
-
-Cual es el objetivo de los rebalanceos en un árbol AVL
-2
-Que la búsqueda de los elementos en el árbol se mantenga constante
-Que la diferencia máxima entre sus dos subárboles sea 1
-Que todos los subarboles tengan la misma altura
-Que si un nodo del ultimo nivel esta vacío los siguientes en ese nivel también lo estén
-
-Sea G=(V,E) un grafo no dirigido donde Card(E) = Card()-1 cual de las siguientes afirmaciones es cierta
-4
-G es conexo, pero si se suprime una arista cualquiera deja de serl
-G es un arbol
-Dos vértices cualesquiera de G están conectados por un único camino simple
-Si G es conexo entonces G es acíclico
-
-Un grafo es una estructura formada por el par (V, E) donde
-3
-V es el conjunto de vértices y E es una matriz
-V es el conjunto de vértices del grafo y E un conjunto de arcos
-Todas las anteriores son correctas
-V es el conjunto de vértices y E un conjunto de arcos
-V es un vector y E es una lista de vértices adyacentes
-
-Que algoritmo es menos costoso para obtener el camino minimo entre todos los pares de vertices de un grafo
-1
-Aplicar sucesivamente Dijkstra en este caso tiene igual cota superior de coste que aplicar Floyd
-Calcularía la matriz de cierre transitivo
-Dijkstra es mas eficiente puesto que tiene menor coste
-Kruskal es mas adecuado para lograr este objetivo
-Floyd tiene menor cota superior de coste que Dijkstra en este caso
-
-El recorrido en profundidad de un grafo G no dirigido ha producido el arbol que se muestra en la figura, en el que cada nodo esta numerado siguiendo el orden de visita del recorrido en profundidad:```\n     1\n   / | \\n  2  5  7\n /|  |\n3 4  6```
-1
-Los nodos 1 y 2 pueden ser adyacentes al nodo 4
-El nodo 2 es adyacente al nodo 3 y el nodo 3 puede ser adyacente al nodo 4
-El nodo 1 puede ser adyacente al nodo 4 y al nodo 5 puede ser adyacente al nodo 7
-Los nodos 1 y 3 pueden ser adyacentes al nodo 6
-
-Podemos detectar todos los vertices involucrados en ciclos dentro de un grafo dirigido inspeccionando el resultad de
-2
-algoritmo Prim
-algoritmo Warshall
-algoritmo Floyd
-algoritmo Dijkstra
-
-El algoritmo que se describe a continuación calcula: ```Módulo Ejercicio (ent A es ArbolBinario) devuelve entero\nvariables\n\tIzq, Der es ArbolBinario\ninicio\n\tsi no A.Vacio entonces\n\t\tA.HijoIzq (Izq);\n\t\tA.HijoDer (Der);\n\t\tdevolver (ejercicio(izq) + ejercicio(der) + 1)\n\tsi no\n\t\tdevolver (0)\n\tfinsi\nfin```
-3
-Cuantos niveles distintos tiene el árbol A
-El numero de veces que aparece el hijo izquierdo y el hijo derecho en el árbol A
-Ninguna de las anteriores
-El grado del árbol A
-El nivel en el que se encuentra el (hijo izquierdo + hijo derecho + 1) del árbol A
-
-¿Cuál de estas afirmaciones sobre el algoritmo para calcular x^n es falsa? ```Función potencia ( ent x: entero, ent n: entero): entero\nInicio\n\tsi n==1 entonces\n\t\tretorna (x);\n\tsi no\n\t\tretorna (x*potencia(x,n-1));\n\tfinsi\nfin```
-4
-Se utiliza un esquema de divide y venceras para su solucion
-Su precondición es {Q} = {x entero, n natural, n>=1}
-Su ecuación de recurrencia es T(n) = T(n-1)+1
-Su coste temporal es O(x^n)
-
-Los algoritmos de Warshall, Prim y floyd son ejemplos de los siguientes esquemas algoritmicos
-4
-Warshall programación dinámica, Prim algoritmo voraz , Floyd algoritmo voraz
-Warshall programación dinámica, Prim programación dinámica, Floyd algoritmo voraz
-Warshall Algoritmo voraz, Prim programación dinámica, Floyd algoritmo voraz
-Warshall: programación dinámica, Prim algoritmo voraz, Floyd programación dinámica
-
-Suponiendo la implementación mas eficiente para cada TAD, establecer el coste en el borrado del elemento menor en una lista ordenada, una lista desordenada un árbol binario ordenado y un montículo de mínimos respectivamente.
-1
-O(1),O(n),O(n),O(log n)
-O(1),O(n),O(log n),O(1)
-O(log n),O(n),O(n),O(1)
-O(n),O(1),O(log n),O(log n)
-
-Sea un árbol binario de profundidad k con nodos, donde n - 2^k este dato nos permite saber entre otras cosas
-3
-Existen en árbol todos los nodos de nivel k
-El árbol es equilibrado
-Las 3 respuestas conjuntamente
-El árbol es completo
-
-Utilizaremos una estructura de cola en aquellas aplicaciones que requieran un tratamiento en los que los datos
-2
-debamos procesarlos en el mismo orden en el que se obtienen y no puedan repetirse
-debamos procesarlos en el mismo orden en el que se obtiene y puedan repetirse
-debamos procesarlos en orden inverso a como se obtienen y no puedan repetirse
-se inserten y extraigan por un único punto y deben ser ordenados
-debamos procesarlos en orden inverso a como se obtienen y puedan repetirse
-
-Sea v un vector de N elementos y supongamos que todos los elementos de v son distintos Considera el algoritmo siguiente Si tomamos como medida significativa el numero de comparaciones con elementos del vector(instrucción 2) entonces el algoritmo tiene un coste: ```for (i=1; i<N; i++) {\n\tX=V[i]; # (1)\n\tIzq=0;\n\tDer=i-1;\n\twhile (Izq <= Der) {\n\t\tMedio = (Izq+Der)/2;\n\t\tif (X<V[Medio]) # (2)\n\t\t\tDer=Medio-1;\n\t\telse\n\t\t\tIzq = Medio +1;\n\t}\n\tfor(j=i-1; j>=Izq; j--) {\n\t\tV[j+1] = V[j]; # (3)\n\t}\n\tV[Izq]=X;\n}```
-1
-Θ(n*log(n))
-O(log(n))
-Θ(n)
-Ω(log(n)) y O(n)
-
-La complejidad del siguiente bucle es: ```for (i=1; i<=N; i++) {\n\tif (T[i] == x)\n\t\tAux=i;\n}```
-2
-IV I y II son correctas
-V ninguna de las anteriores
-I Constante desde el punto de vista del numero de comparaciones
-III Varia en función de la ordenación del vector
-II Constante desde el punto de vista del numero de asignaciones
-
-Cuando tenemos un algoritmo backtracking
-4
-Cuando en un problema tenemos una cantidad de datos demasiad grande asi podemos hacer llamadas recursivas con una cantidad de datos mas pequeña
-Ninguna de las anteriores son correctas
-Las dos anteriores son correctas
-Cuando debamos probar todas las combinaciones posibles para encontrar la solucion de un problema
-
-Resolviendo la ecuación de recurrencia del ejercicio siguiente se obtiene que su función de coste es: ```Función F (ent n: entero): entero\nvariables x, i: entero\nInicio\n\tsi (n>=1) entonces\n\t\tretorna 1\n\tsi no\n\t\tpara i de 1 a n hacer\n\t\t\tx← 1\n\t\t\tmientras x<n hacer\n\t\t\t\tx← x*2\n\t\t\tfinmientras\n\t\tfinpara\n\t\tretorna F(n/2)+F(n/2)\n\tfinsi\nfin```
-1
-O(n*log^2 n)
-O(log n)
-O(2^n)
-O(n^2)
-O(n)
-
-Sea G un grado no dirigido de n vértices sabemos que G con n vértices en un árbol libre si es acíclico y conexo entonces
-1
-G tiene exactamente n-1 arcos
-G tiene al menos n arcos
-G tiene al menos n-1 arcos
-Ninguna de las anteriores
-
-Considera la función siguiente que es un algoritmo típico de búsquedaSupongamos que x esta en el vector y que todos los elementos son distintos. En este caso, el numero medio de comparaciones con la variable x es: ```Función pertenece (ent L: vector de enteros, ent x:entero):entero\nvariables: i, aux: entero\nInicio\n\taux← 0\n\tpara i de 0 a n-1 hacer\n\t\tsi L[i]==x entonces\n\t\t\taux← i\n\t\tfinsi\n\tfinpara\nretorna aux\nFin```
-1
-n
-(n+1)/2
-n/2
-1
-
-El recorrido en profundidad de un grafo G no dirigido ha producido el árbol que se muestra en el que cada nodo esta numerad siguiendo el orden de visita del recorrido en profundidad```\n     1\n    /|\\n   2 6 7\n  /   \n 3   \n/ \\n4 5```
-4
-El nodo 6 es adyacente al nodo 4
-Se trata de un grafo fuertemente conexo
-El nodo 1 solo puede ser adyacente a los nodos 2,6 y 7
-El nodo 2 puede ser adyacente al nodo 5 y el nodo 4 puede ser adyacente al nodo 1
-El nodo 6 y 7 no son adyacente y el nodo 5 y el nodo 7 si lo son
-
-Los algoritmos warshall, floyd y kruskal son ejempls de los siguientes algoritmos
-3
-Warshall programación dinámica, floyd programación dinámica, kruskal programación dinámica
-Warshall programación dinámica, floyd algoritmo voraz, kruskal backtracking
-Warshall programación dinámica, floyd programación dinámica, kruskal algoritmo voraz
-Warshall algoritmo voraz, floyd programación dinámica, kruskal algoritmo voraz
-
-Dadas las siguientes ecuaciones de recurrencia. Determinar el orden al que pertenece cada una de ellasT1(n)=2T1(n-1)+c1; T2(n)=T2(n-1)+c2, T3(n)=T3(n/2)+c3 y T4(n)=T4(n+1)+n+c4
-1
-T1(n) E O(2^n), T2(n) E O(n), T3(n) E O(log n), T4(n) E O(n^2)
-T1(n) E O(n), T2(n) E O(n), T3(n) E O(log n), T4(n) E O(n^2)
-T1(n) E O(log n), T2(n) E O(n), T3(n) E O(log n), T4(n) E O(n^2)
-T1(n) E O(2^n), T2(n) E O(n), T3(n) E O(log n), T4(n) E O(2n)
-
-¿Cuál es el objetivo de la etapa de análisis en el Diseño y Análisis de un Algoritmo?: 
-2
-Determinar el lenguaje y herramientas disponibles para su desarrollo. 
-Estimar los recursos que consumirá el algoritmo una vez implementado.
-Estimar la potencia y características del equipo informático necesarios para el correcto funcionamiento del algoritmo. 
-
-¿Cuál de las siguientes jerarquías de complejidades es la correcta? 
-3
-O(1)⊂O(lg n)⊂O(lg lg n) ⊂ ... 
-... ⊂ (n!)⊂O(2^n) ⊂O(n^n) 
-... ⊂ (2^n)⊂O(n!) ⊂O(n^n) 
-
-¿Cuál de los siguientes algoritmos de ordenación tiene menor complejidad? 
-3
-Burbuja 
-Inserción directa
-Mergesort
-
-¿El tiempo de ejecución de un algoritmo depende de la talla del problema? 
-3
-Sí, siempre 
-No, nunca 
-No necesariamente
-
-Ordena de menor a mayor las siguientes complejidades \n\t1. O(1) \n\t2. O(n^2) \n\t3. O(nlgn) \n\t4. O(n!) 
-2
-3, 1, 2 y 4
-1, 3, 2 y 4
-1, 3, 4 y 2
-
-El estudio de la complejidad resulta realmente interesante para tamaños grandes de problema por varios motivos: 
-3
-Las diferencias reales en tiempo de compilación de algoritmos con diferente coste para tamaños pequeños del problema no suelen ser muy significativas. 
-Las diferencias reales en tiempo de ejecución de algoritmos con diferente coste para tamaños grandes del problema no suelen ser muy significativas. 
-Ninguna de las anteriores. 
-
-¿Por que se emplean funciones de coste para expresar el coste de una algoritmo? 
-2
-Para poder expresar el coste de los algoritmos con mayor exactitud 
-Para que la expresión del coste del algoritmo sea válida para cualquier entrada al mismo
-Para poder expresar el coste de un algoritmo mediante una expresión matemática
-
-El caso base de una ecuación de recurrencia asociada a la complejidad temporal de un algoritmo expresa:
-3
-El coste de dicho algoritmo en el mejor de los casos. 
-El coste de dicho algoritmo en el peor de los casos.
-Ninguna de las anteriores.
-
-La complejidad de la función TB es: ```función TB (A: vector[λ]; iz , de : N) : N \nvar n,i:N; \n\tn=iz-de+1 \n\topcion \n\t\t(n < 1) : devuelve ( 0 ) ; \n\t\t(n = 1) : devuelve ( 1 ) ; \n\t\t(n > 1) : si (A[iz] = A[de]) entonces \n\t\t\t\tdevuelve (TB( A, iz + 1, de - 1 ) + 1); \n\t\t\tsino \n\t\t\t\tdevuelve (TB( A, iz + 1, de - 1 )) ; \n\t\t\tfinsi ; \n\tfopcion \nfin ```
-1
-Θ (n)
-Θ (n · lg n) 
-Θ (n^2 · lg n)
-
-Dado el polinomio $$f(n)= a_mn^m + a_{m-1}n^{m-1} + … + a_0,$$ con $$a_m \in{R^+}$$ entonces f pertenece al orden:
-3
-$$O(n^m)$$. 
-$$Ω(n^m)$$.
-Las dos respuestas anteriores son correctas.
-
-Si $$f1(n) \in{ Ο(g1(n))}$$ y $$f2(n) \in{ Ο(g2(n))}$$ entonces:
-2
-$$f1(n)·f2(n) \in{ Ο(maximo(g1(n),g2(n)))}$$
-$$f1(n)·f2(n) \in{ Ο (g1(n)· g2(n))}$$
-Ambas son correctas 
-
-Si $$f1(n) \in{ Ο(g1(n))}$$ y $$f2(n) \in{ Ο(g2(n))}$$ entonces:
-3
-$$f1(n)+f2(n) \in{ Ο(maximo(g1(n),g2(n)))}$$ 
-$$f1(n)+f2(n) \in{ Ο (g1(n)+g2(n))}$$
-Ambas son correctas 
-
-Un algoritmo cuya talla es n y que tarda $$40^n$$ segundos en resolver cualquier instancia tiene una complejidad temporal:
-2
-$$\Theta{( n^n )}$$
-$$\Theta{( 4^n )}$$
-Ninguna de las anteriores
-
-Si dos algoritmos tienen la misma complejidad asintótica:
-1
-No necesitan exactamente el mismo tiempo para su ejecución. 
-Necesitan exactamente el mismo tiempo para su ejecución.
-Ninguna de las anteriores 
-
-Los algoritmos directos de ordenación, respecto de los indirectos:
-1
-Presentan una mayor complejidad temporal y sus tiempos de ejecución absolutos son mayores. 
-Presentan una menor complejidad temporal y sus tiempos de ejecución absolutos son menores.
-Presentan una mayor complejidad temporal si bien sus tiempos de ejecución absolutos son menores. 
-
-La talla o tamaño de un problema depende de: 
-3
-Conjunto de valores asociados a la entrada y salida del problema.
-Conjunto de valores asociados a la salida del problema.
-Conjunto de valores asociados a la entrada del problema.
-
-En un algoritmo recursivo, la forma de dividir el problema en subproblemas:
-2
-Influye en la complejidad espacial del mismo. 
-Influye en su complejidad temporal.
-No influye en ninguna de sus complejidades. 
-
-$$f(n) = 5n+3m·n +11$$ entonces $$f(n)$$ pertenece a: 
-3
-$$O (n·m)$$. 
-$$O (n^m)$$.
-Las dos son correctas
-
-El sumatorio, desde $$i=1$$ hasta n, de $$i^k$$ pertenece a:
-1
-$$Ο(n^{k+1})$$ 
-$$Ο(n^k)$$
-Ninguna de las anteriores 
-
-La complejidad de la función A2 es: ```Funcion A2 (n, a: entero):entero; \nVar r: entero; fvar \n\tsi (a² > n) devuelve 0 \n\tsino \n\t\tr:= A2(n, 2a); \n\t\topción \n\t\t\tn < a²: devuelve r; \n\t\t\tn ≥ a² : devuelve r + a; \n\t\tfopción \n\tfsi \nfin```
-2
-$$O(\sqrt{n} · a)$$
-$$O( \sqrt{n} / a)$$
-$$O( n / \sqrt{a} )$$
-
-Cual de las siguientes definiciones es cierta: 
-1
-Las cotas de complejidad se emplean cuando para una misma talla se obtienen diferentes complejidades dependiendo de la entrada al problema.
-Las cotas de complejidad se emplean cuando para diferentes tallas se obtienen diferentes complejidades dependiendo de la entrada al problema.
-Ninguna de las anteriores 
-
-Cuando para distintas instancias de problema con el mismo tamaño no obtenemos el mismo resultado: 
-3
-No es posible calcular la complejidad a priori y debemos ejecutar el programa varias veces con la misma talla y obtener el tiempo medio para hallar la complejidad media. 
-No se puede aplicar la técnica de paso de programa, ya que esta técnica es para calcular la complejidad a priori. 
-Calculamos el máximo y mínimo coste que nos puede dar el algoritmo.
-
-$$f(n) = 5n+5$$ ¿ $$f(n)$$ pertenece a $$O(n)$$? 
-3
-Si. El valor de c es 5 y el valor mínimo de n_0 es de 3 
-Si. El valor de c es 9 y el valor mínimo de n_0 es de 1
-Si. El valor de c es 6 y el valor mínimo de n_0 es de 5
-
-$$f(n) = 10n+7$$ ¿ $$f(n)$$ pertenece a $$O(n 2)$$$? 
-2
-Si. Para c = 1 y a partir de un valor de n_0 =10. 
-Sí Para cualquier valor de c positivo siempre existe un n_0 a partir del que se cumple. 
-No. 
-
-Si f(n) ∈ Ω (g(n)) entonces:
-1
-∃ c, n_0 ∈ R^+ : f(n) ≥ c· g(n) ∀ n ≥ n_0
-∃ c, n_0 ∈ R^+ : f(n) ≥ c· g(n) ∀ n
-∃ c, n_0 ∈ R^+ : f(n) ≤ c· g(n) ∀ n ≥ n_0
-
-El coste asociado a la siguiente ecuación de recurrencia es: \n$$f(n) = \begin{cases} 1 & n \leq 1 \\ n + f(\frac{n}{2}) + f(\frac{n}{2}) & n > 1 \end{cases}$$
-3
-Θ(n lg n^2) 
-Θ(n^2 lg n) 
-Θ(n lg n)
-
-Un algoritmo recursivo basado en el esquema divide y vencerás...
-1
-... será más eficiente cuanto más equitativa sea la división en subproblemas.
-Las demás opciones son verdaderas.
-... nunca tendrá una complejidad exponencial.
-
-Indicad cuál de estas tres expresiones es falsa.
-2
-Θ(n / 2) = Θ(n)
-Θ(n) ⊆ Θ(n^2)
-Θ(n) ⊆ Θ(n)
-
-¿Cuál de estas tres expresiones es falsa?
-3
-3n^2 + 1 ∈ O(n^3)
-n + n log(n) ∈ Ω(n)
-n + n log(n) ∈ Θ(n)
-
-Indica cuál es la complejidad en el peor caso de la función replace:```unsigned bound( const vector<int>& v ) {\n\tfor( unsigned i = 0; i < v.size(); i++ )\n\t\tif( v[i] == '0')\n\t\t\treturn i;\n\treturn v.size();\n}\n\nvoid replace( vector<int>& v, int c ) {\n\tfor( unsigned i = 0; i < bound(v); i++)\n\t\tv[i] = c;\n}\n```
-2
-O(n log n)
-O(n^2)
-O(n)
-
-¿Cuál es la complejidad temporal de la siguiente función recursiva?```unsigned desperdicio (unsigned n){ \n\tif (n<=1) \n\t\treturn 0; \n\tunsigned sum = desperdicio(n/2) + desperdicio(n/2); \n\tfor (unsigned i=1; i<=n-1; i++) \n\t\tfor (unsigned j=1; j<=i; j++) \n\t\t\tsum+=1; \n\treturn sum; \n} \n```
-1
-Θ(n^2)
-Θ(2^n)
-Θ(n^2 log n)
-
-Sea f(n) la solución de la relación de recurrencia f(n) = 2f(n/2) + 1; f(1) = 1. Indica cual de estas tres expresiones es cierta.
-1
-f(n) ∈ Θ(n)
-f(n) ∈ Θ(n^2)
-f(n) ∈ Θ(n log n)
-
-Considerad estos dos fragmentos:```s=0; for(i=0;i<n;i++) s+=i;``` y ```s=0; for(i=0;i<n;i++) if (a[i] != 0) s+=i;``` y un array a[i] de números enteros. Indicad cuál de estas tres afirmaciones es cierta:
-2
-El coste temporal asintótico del primer programa en el caso peor es más alto que en el segundo.
-El coste temporal asintótico, tanto en el caso mejor como en el caso peor, de los dos programas es el mismo.
-El coste temporal asintótico del segundo programa en el caso peor es más alto que en el primero.
-
-Indica cual es la complejidad, en función de n, del fragmento siguiente:```int a = 0; \nfor( int i = 0; i < n; i++ ) \n\tfor( int j = i; j > 0; j /= 2 ) \n\t\ta += a[i][j];```
-1
-O(n log n)
-O(n)
-O(n^2)
-
-Indica cuál es la complejidad en función de n, donde K es una constante (no depende de n ), del fragmento siguiente:```for( int i = K; i < n - K; i++ ){ \n\tA[i] = 0; \n\tfor( int j = i - K; j < i + K; j++ ) \n\t\tA[i] += B[j]; \n}```
-1
-O(n)
-O(n log n)
-O(n^2)
-
-Pertenece $$3n^2 + 3$$ a $$O(n^3)$$?
-3
-Solo para c = 1 y n_0 = 5.
-No.
-Sí.
-
-La complejidad temporal en el mejor de los casos...
-3
-Las demás opciones son verdaderas.
-... es el tiempo que tarda el algoritmo en resolver la talla más pequeña que se le puede presentar.
-... es una función de la talla que tiene que estar definida para todos los posibles valores de esta.
-
-La versión de Quicksort que utiliza como pivote la mediana del vector...
-3
-... se comporta mejor cuando el vector ya está ordenado.
-... se comporta peor cuando el vector ya está ordenado.
-... El hecho de que el vector estuviera previamente ordenado o no, no influye en la complejidad temporal de este algoritmo.
-
-Dada la siguiente relación de recurrencia, ¿Qué cota es verdadera? \n\n$$f(n) = \begin{cases} 1 & n = 1 \\ \sqrt{n} + 3f(\frac{n}{3}) & n > 1 \end{cases}$$
-1
-f(n) ∈ Θ(n)
-f(n) ∈ Θ(n^3)
-f(n) ∈ Θ(√n log n)
-
-Un problema de tamaño $$n$$ puede transformarse en tiempo $$O(n^2)$$ en nueve de tamaño $$n/3$$. Por otro lado, la solución al problema cuando la talla es $$1$$ requiere un tiempo constante. \n¿Cuál de estas clases de coste temporal asintótico es la más ajustada?
-2
-O(n^2)
-O(n^2 log n)
-O(n log n)
-
-Indica cuál es la complejidad, en función de $$n$$, del siguiente fragmento de código: ```s=0; for(i=0;i<n;i++) for(j=i;j<n;j++) s+=i*j;```
-1
-$$\Theta(n^2)$$
-$$O(n^2)$$ pero no $$\Omega(n^2)$$
-$$\Theta(n)$$
-
-Sea ƒ(n) la solución de la relación de recurrencia ƒ (n) = 2ƒ(n-1)+1 ƒ(1) = 1. Indicad cuál de estas tres expresiones es cierta:
-2
-ƒ(n) ∈ Θ(n)
-ƒ(n) ∈ Θ(2^n)
-ƒ(n) ∈ Θ(n^2)
-
-Un programa con dos bucles anidados uno dentro del otro, El primero hace $$n$$ iteraciones aproximadamente y el segundo la mitad, tarda un tiempo
-2
-$$O(n \log{n})$$
-$$O(n^2)$$
-$$O(n \sqrt{n})$$
-
-Un problema de tamaño $$n$$ puede transformarse en tiempo $$O(\frac{n}{2})$$ en nueve de tamaño $$\frac{n}{3}$$; por otro lado, la solución al problema cuando la talla es 1 requiere un tiempo constante. ¿Cuál de estas clases de coste temporal asintótico es la más ajustada?
-2
-$$O(n \log n)$$
-$$O(n^2 \log n)$$
-$$O(n^2)$$
-
-¿Cuál es la complejidad temporal de la siguiente función recursiva?```unsigned desperdicio (unsigned n){ \nif (n<=1) \n\treturn 0; \nunsigned sum = desperdicio (n/2) + desperdicio (n/2); \nfor (unsigned i=1; i<n-1; i++) \n\tfor (unsigned j=1; j<=i; j++) \n\t\tfor (unsigned k=1; k<=j; k++) \n\t\t\tsum+=i*j*k; \nreturn sum; \n}```
-3
-$$O(2^n)$$
-$$O(n^3 \log n)$$
-$$O(n^3)$$
-
-Los algoritmos de ordenación Quicksort y Mergesort tienen en común ...
-3
-... que se ejecutan en tiempo O(n).
-... que ordenan el vector sin usar espacio adicional.
-... que aplican la estrategia de divide y vencerás.
-
-Indica cuál es la complejidad de la función siguiente:```unsigned sum( const mat &A ) {    # A es una matriz cuadrada \n\tunsigned d = A.n_rows(); \n\tunsigned a = 0; \n\tfor( unsigned i = 0; i < d; i++ ) \n\t\tfor( unsigned j = 0; j < d; j++ ) \n\t\t\ta += A(i,j); \n\treturn a; \n}```
-2
-$$O(n^2)$$
-$$O(n)$$
-$$O(n \log n)$$
-
-Indicad cuál de estas tres expresiones es falsa.
-3
-$$\Theta(n/2) = \space\space\space\space\space\space\space \Theta(n)$$
-$$\Theta(n) \subseteq \space \Theta(n)$$
-$$\Theta(n) \subseteq \space \Theta(n^2)$$
-
-¿Cuál de estos tres problemas de optimización no tiene, o no se le conoce, una solución voraz óptima?
-2
-El árbol de cobertura de coste mínimo de un grafo conexo.
-El problema de la mochila discreta o sin fraccionamiento.
-El problema de la mochila continua o con fraccionamiento.
-
-Los algoritmos de programación dinámica hacen uso ...
-2
-... de que la solución óptima se puede construir añadiendo a la solución el elemento óptimo de los elementos restantes, uno a uno.
-... de que se puede ahorrar cálculos guardando resultados anteriores en un almacén. 
-... de una estrategia trivial consistente en examinar todas las soluciones posibles.
-
-Cuando se calculan los coeficientes binomiales usando la recursión $$\binom{n}{r} = \binom{n-1}{r} + \binom{n-1}{r-1} $$, con $$ \binom{n}{0} = \binom{n}{n} = 1 $$, qué problema se da y cómo se puede resolver?
-3
-La recursión puede ser infinita y por tanto es necesario organizarla según el esquema iterativo de programación dinámica.
-Se repiten muchos cálculos y ello se puede evitar haciendo uso de una estrategia voraz.
-Se repiten muchos cálculos y ello se puede evitar usando programación dinámica.
-
-Sea $$f(n)$$ la solución de la relación de recurrencia $$f(n) = 2f(n/2) + n $$; $$ f(1) = 1 $$. Indicad cuál de estas tres expresiones es cierta.
-3
-$$ f(n) \in \Theta(n^2) $$
-$$ f(n) \in \Theta(n) $$
-$$ f(n) \in \Theta(n \log n) $$
-
-Para que la complejidad de un algoritmo presente caso mejor y peor distintos ...
-2
-... es condición necesaria y suficiente que existan instancias distintas del problema con el mismo tamaño.
-... es condición necesaria que existan instancias distintas del problema con el mismo tamaño.
-... es condición suficiente que existan instancias distintas del problema con el mismo tamaño.
-
-Indicad cuál de estas tres expresiones es cierta:
-3
-$$ O(n^2) \subseteq O(2^{\log(n)}) \subset   O(2^n) $$
-$$ O(n^2) \subseteq O(2^{\log(n)}) \subseteq O(2^n) $$
-$$ O(2^{\log(n)}) \subseteq O(n^2) \subseteq O(2^n) $$
-
-La complejidad temporal en el mejor de los casos de un algoritmo recursivo...
-2
-... coincide con el valor del caso base de la ecuación de recurrencia que expresa la complejidad temporal del algoritmo.
-Las demás opciones son falsas. 
-... siempre coincidirá con la complejidad temporal de las instancias que están en el caso base del algoritmo recursivo.
-
-Considerad la función siguiente:```int M( int i, int f ) { \n\tif ( i == f ) \n\t\treturn i; \n\telse { \n\t\te = v[ M( i, (i+f)/2 ) ]; \n\t\tf = v[ M( (i+f)/2+1, f ) ]; \n\t\tif (e<f) \n\t\t\treturn e; \n\t\telse \n\t\t\treturn f; \n\t} \n}```Si la talla del problema viene dada por $$ n = f - i + 1 $$, ¿cuál es el coste temporal asintótico en el supuesto de que $$ n $$ sea una potencia de 2?
-1
-$$ O(n) $$. 
-$$ O(n^2) $$.
-$$ O(n \log(n)) $$.
-
-El coste temporal asintótico del fragmento ```s=0; for(i=0;i<n;i++) for(j=i;j<n;j++) s+=i*j;``` y el del fragmento ```s=0; for(i=0;i<n;i++) for(j=0;j<n;j++) s+=i*i*j;```son ...
-1
-a. ... iguales.
-b. ... el del segundo, menor que el del primero.
-c. ... el del primero, menor que el del segundo.
-
-La versión de Quicksort que utiliza como pivote el elemento del vector que ocupa la primera posición ...
-2
-... se comporta mejor cuando el vector ya está ordenado.
-... se comporta peor cuando el vector ya está ordenado.
-... El hecho de que el vector estuviera previamente ordenado o no, no influye en la complejidad temporal de este algoritmo.
-
-La versión de Quicksort que utiliza como pivote el elemento del vector que ocupa la posición central ...
-1
-... se comporta mejor cuando el vector ya está ordenado.
-... se comporta peor cuando el vector ya está ordenado.
-... no presenta casos mejor y peor distintos para instancias del mismo tamaño.
-
-Dada la siguiente relación de recurrencia, ¿Qué cota es verdadera? \n\n $$ f(n) = \begin{cases} 1 & n = 1 \\ n + 3f(n/3) & n > 1 \end{cases} $$
-1
-$$ f(n) \in \Theta(n \log n) $$
-$$ f(n) \in \Theta(n^3) $$
-$$ f(n) \in \Theta(n) $$
 
 Sobre la complejidad temporal de la siguiente función: ```unsigned desperdicio (unsigned n){ \n\tif (n<=1) \n\t\treturn 0; \n\tunsigned sum = desperdicio (n/2) + desperdicio (n/2) + desperdicio (n/2); \n\tfor (unsigned i=1; i<n-1; i++) \n\t\tfor (unsigned j=1; j<=i; j++) \n\t\t\tfor (unsigned k=1; k<=j; k++) \n\t\t\t\tsum+=i*j*k; \n\treturn sum; \n}```
 1

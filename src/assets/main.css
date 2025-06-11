@@ -1,3 +1,6 @@
+@import url("highlight.js/styles/github-dark.css") screen and (prefers-color-scheme: dark);
+@import url("highlight.js/styles/intellij-light.min.css") screen and (prefers-color-scheme: light);
+
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -41,5 +44,5 @@ pre > code {
 }
 
 .nav-button {
-  @apply flex items-center justify-center p-2 border border-gray-300 dark:border-gray-600 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer mb-4 bg-white dark:bg-gray-800 dark:[&>img]:filter-(--svg-gray);
+  @apply flex items-center justify-center p-2 border border-gray-200 dark:border-gray-700 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer mb-4 bg-white dark:bg-gray-800 dark:[&>img]:filter-(--svg-gray);
 }

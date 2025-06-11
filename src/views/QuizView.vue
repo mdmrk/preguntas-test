@@ -68,7 +68,6 @@
 <script setup lang="ts">
 import QuizQuestion from "@/components/QuizQuestion.vue"
 import { QuizLoader } from "@/composables/useQuizLoader"
-import "highlight.js/styles/github-dark-dimmed.css"
 import "katex/dist/katex.min.css"
 import { computed, onMounted, ref } from "vue"
 import { useRoute } from "vue-router"

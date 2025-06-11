@@ -87,6 +87,6 @@ const getOptionClass = (index: number) => {
   if (index === selectedOption.value && !isCorrect.value) {
     return "border-red-500 bg-red-50 dark:bg-red-900/50 text-red-900 dark:text-red-100"
   }
-  return "border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 cursor-not-allowed opacity-60"
+  return "border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 cursor-not-allowed opacity-75"
 }
 </script>
