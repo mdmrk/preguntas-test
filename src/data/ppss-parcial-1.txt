@@ -1,5 +1,5 @@
 Q: Indica cuál de las siguientes afirmaciones es falsa acerca del uso de categorías en jUnit
-A: 3
+A: 2
 Se anota como categoría un método anotado como @test
 Se anota como categoría varios drivers de una clase
 Se anota como categoría una interfaz
@@ -14,35 +14,35 @@ Public void testC1(){
 	AssertEquals(resultadoEsperado, resultadoReal);
 }
 ```
-A: 3
+A: 2
 Error, si el metodoSUT() provoca la excepción MiExecpcion.class
 Passed, si el metodoSUT() provoca la excepción MiExecpcion.class
 Passed, si el metodoSUT() devuelve 0
 Failed, si el metodoSUT() provoca la excepción MiExecpcion.class
 
 Q: Indica cuál de las siguientes afirmaciones es cierta con respecto a estos 3 tipos de objeto que podemos crear una librería EasyMock: NiceMock, mock y StrictMock
-A: 3
+A: 2
 Con los tipos Mock y NiceMock se lanza un AssertionError si no hemos programado las expect.. de algún método
 Con los tres tipos se verifica si todas las llamadas esperadas a métodos realizadas por el doble realizan con los argumentos especificados
 Con los tres tipos siempre hay que invocar al método replay() de la librería.
 Con los tipos Mock y StrictMock se verifica el orden en el que se realizan las invocaciones al doble
 
 Q: Con respecto al método de caja negra de particiones equivalente, indica cuál de las siguientes afirmaciones es cierta:
-A: 2
+A: 1
 Todas las entradas y salidas se corresponden con parámetros de la SUT
 Dos elementos de la misma partición de entrada no se pueden corresponder con dos elementos de particiones de salida diferentes
 Las particiones pueden compartir elementos para mantener algunos datos de prueba redundantes
 Se deben probar todas las posibles combinaciones de las particiones
 
 Q: Cualquier librería que sea requerida en el proceso de construcción de un proyecto Maven
-A: 3
+A: 2
 si no se encuentra en un repositorio remoto, se busca en el repositorio local
 si se encuentra en un repositorio remoto, se descarga en el directorio target
 todas las afirmaciones anteriores son falsas
 si no se encuentra en un repositorio remoto, se busca en el directorio .m2
 
 Q: Utilizando un método de caja negra de particiones equivalentes si tenemos una entrada asociada a un tipo enumerado con 3 valores, indica cuál de las siguientes afirmaciones es falsa
-A: 4
+A: 3
 Podemos tener dos particiones válidas de dicha entrada
 Podemos tener una sola partición válida de dicha entrada
 Podemos tener tres particiones válidas de dicha entrada
@@ -54,21 +54,21 @@ Entrada 1 : "E1V1, E1V2, E1nV1"
 Entrada 2 : "E2V1, E2nV1, E2nV2"
 ```
 Indica cuál es la cardinalidad del conjunto de casos de prueba eficiente y efectivo al aplicar dicho método:
-A: 2
+A: 1
 4
 5
 No se puede obtener si no se conocen las particiones de salida válidas y no válidas.
 6
 
 Q: En un método de diseño de pruebas basado en el flujo de control del código, un camino imposible detectado
-A: 1
+A: 0
 No se asocia a ningún caso de prueba
 Se asocia a un caso de prueba con un resultado esperado desconocido
 Se asocia a un caso de prueba con valores de entrada desconocidos
 Todas las afirmaciones del resto de opciones son falsas
 
 Q: Cuando refactorizamos la SUT para poder inyectar el doble:
-A: 3
+A: 2
 Añadimos un método setter estamos obligando a cualquier código cliente de la SUT a conocer dicha dependencia antes de invocarla
 Si añadimos un parámetro a la SUT estamos obligados a declarar la dependencia como un atributo de la clase que contiene la SUT
 Si añadimos una factoría local, alteramos el comportamiento de la clase que contiene la SUT
@@ -97,14 +97,14 @@ public class GestorLLamadas {
 	}
 }
 ```
-A: 4
+A: 3
 En las líneas 7, 12, y 13
 Solo en la línea 13
 En las líneas 7 y 12
 En las líneas 12 y 13
 
 Q: El comando mvn de Maven
-A: 3
+A: 2
 Sirve para ejecutar fases, pero no goals
 Sirve para ejecutar goals pero no fases
 Se ejecuta desde el directorio donde se encuentra el fichero de configuración del proyecto Maven
@@ -113,7 +113,7 @@ Se ejecuta desde el directorio src para compilar los ficheros fuentes y desde el
 Q: Dado el siguiente diagrama de Venn que hemos trabajado en clase:
 ![Diagrama](/data/images/ppss-p1-1.png){width=200 height=200}
 Indica cuál de las siguientes afirmaciones es cierta:
-A: 2
+A: 1
 Un tester debe intentar que el subconjunto 7 sea lo más grande posible
 Con métodos de caja negra y de caja blanca, se pueden alcanzar comportamientos de los subconjuntos 1 y 2
 Con un método de caja negra se pueden alcanzar comportamientos del subconjunto 3
@@ -151,49 +151,49 @@ class MiClaseTest {
 ```
 Si desde la línea de comandos ejecutamos la orden:
 `mvn test -Dgroups=""`
-A: 1
+A: 0
 Se ejecutan los 3 drivers
 No se ejecuta ningún driver porque en la orden no se indica ninguna etiqueta
 Se ejecuta solo test3()
 Se ejecuta solo test1()
 
 Q: Con cuál de los siguientes comandos de Maven no se ejecutarían las pruebas unitarias:
-A: 1
+A: 0
 Mvn clean compile surefire:test
 Mvn test
 Mvn clean test-compile surefire:test
 Mvn test-compile surefire:test
 
 Q: Indica cuál de las siguientes afirmaciones es falsa:
-A: 4
+A: 3
 Durante el proceso de desarrollo de un producto, cuanto antes se detecte un defecto menos costoso será repararlo
 Aunque un producto funcione de acuerdo con los requerimientos especificados puede que no satisfaga las expectativas del cliente
 Aunque probemos un código utilizando un conjunto de pruebas eficiente y efectivo y todos los test pasen, no podemos garantizar que el código no presenta ningún defecto
 Las pruebas pueden demostrar la ausencia de defectos
 
 Q: Indica cuál de las siguientes afirmaciones es falsa acerca del uso de categorías en jUnit
-A: 2
+A: 1
 Se anota como categoría varios drivers de una clase
 Se anota como categoría una interfaz
 Se anota como categoría un método anotado como @test
 Se anota como categoría una clase que contiene drivers
 
 Q: El método de diseño de transición de estados
-A: 3
+A: 2
 Requiere que hayamos implementado todas las unidades para poder aplicarlo
 Al igual que el método del camino básico se aplica en pruebas dinámicas
 Es un método funcional y por lo tanto lo podemos aplicar en cualquier nivel de pruebas
 Representa las transiciones a partir de entradas y acciones
 
 Q: Indica cuál de las siguientes afirmaciones es falsa con respecto al uso de un objeto de tipo IMocksControl:
-A: 3
+A: 2
 no permite el uso de partial mock
 permite chequear el orden de invocaciones entre varios dobles
 no permite el uso de verify()
 permite chequear el orden de las invocaciones de un doble
 
 Q: Al ejecutar una clase de test que contiene n drivers:
-A: 3
+A: 2
 el método anotado con @BeforeEach se ejecuta n-1 veces
 el método anotado con @AfterAll se ejecuta n veces
 el método anotado con @BeforeAll se ejecuta una vez
@@ -206,21 +206,21 @@ Comando 2: mvn clean test
 Comando 3: mvn test
 Comando 4: mvn clean compile surefire:test
 Comando 5: mvn clean test surefire:test
-A: 4
+A: 3
 los comandos 2 y 3
 los comandos 1, 2, 4 y 5
 los comandos 1, 4 y 5
 los comandos 1 y 4
 
 Q: Con el método del camino básico de McCabe:
-A: 2
+A: 1
 debemos elegir el conjunto mínimo de caminos para conseguir que todas las sentencias se ejecuten al menos una vez en cada caso de prueba
 todas las afirmaciones del resto de opciones son falsas
 debemos elegir el conjunto mínimo de caminos para conseguir ejecutar todas las condiciones al menos una vez en cada caso de prueba
 debemos elegir todos los caminos del grafo
 
 Q: Para realizar pruebas de una SUT que contiene dependencias externas,
-A: 3
+A: 2
 usaremos una verificación basada en el estado para pruebas unitarias, y una verificación basada en el comportamiento para pruebas de integración
 todas las afirmaciones del resto de opciones son falsas
 el primer paso es identificar los seams que contiene la SUT
@@ -268,14 +268,14 @@ public class AlquilaCoches {
 	}
 }
 ```
-A: 4
+A: 3
 un PartialMock y dos StrictMock
 un StrictControl, un PartialMock y un Mock
 un StrictControl, un PartialMock y dos Mock
 un StrictMock, un PartialMock y un Mock
 
 Q: ![Diagrama](/data/images/ppss-p1-2.png){width=200 height=200}
-A: 4
+A: 3
 En las líneas 14 y 18
 Dejo la pregunta en blanco
 En las líneas 10 y 14
@@ -288,7 +288,7 @@ Comando 2: mvn clean compile package
 Comando 3: mvn clean test-compile package
 Comando 4: mvn clean verify
 Comando 5: mvn clean compiler:compile verify
-A: 4
+A: 3
 todos los comandos
 los comandos 1, 2 y 3
 los comandos 4 y 5
@@ -305,7 +305,7 @@ int sumatorio(int n) {
 }
 ```
 Se puede aplicar el método del camino básico
-A: 1
+A: 0
 con uno o 2 caminos
 al contener un bucle cuyo número de iteraciones depende del valor de entrada n, no podemos saber el número de caminos
 con n caminos
@@ -318,7 +318,7 @@ Comando 2: mvn clean test
 Comando 3: mvn test
 Comando 4: mvn clean compile surefire:test
 Comando 5: mvn clean test surefire:test
-A: 1
+A: 0
 los comandos 2, 3 y 5
 los comandos 1, 2, 4 y 5
 los comandos 1, 4 y 5
@@ -350,14 +350,14 @@ public class Premio {
 	}
 }
 ```
-A: 2
+A: 1
 un PartialMock y un Mock
 un StrictControl, un PartialMock y un Mock
 un PartialMock y un StrictMock
 un StrictControl y dos StrictMock
 
 Q: Indica cuál de las siguientes afirmaciones es cierta:
-A: 3
+A: 2
 si es necesario, se puede alterar temporalmente el código de la SUT para realizar pruebas
 si es necesario, refactorizamos la SUT para eliminar sus dependencias externas
 un doble reemplaza al código real de una dependencia externa durante las pruebas
@@ -368,7 +368,7 @@ Q: El artefacto maven con las siguientes coordenadas:
 ppss.examen:ejemplo:war:1.0-SNAPSHOT
 
 representa el fichero:
-A: 1
+A: 0
 $HOME/.m2/repository/ppss/examen/ejemplo/1.0-SNAPSHOT/ejemplo-1.0-SNAPSHOT.war
 $HOME/.m2/repository/ppss/examen/ejemplo-1.0-SNAPSHOT.war
 $HOME/.m2/repository/ppss/examen/ejemplo/ejemplo-1.0-SNAPSHOT.war
@@ -380,7 +380,7 @@ Entrada 1 : "E1V1, E1nV1"
 Entrada 2 : "E2V1, E2nV1, E2nV2"
 ```
 Indica cuál es la cardinalidad del conjunto de casos de prueba eficiente y efectivo al aplicar dicho método:
-A: 1
+A: 0
 4
 5
 No se puede obtener si no se conocen las particiones de salida válidas y no válidas.
@@ -395,42 +395,42 @@ else if (a < b || c > a)
 else
 	b = c;
 ```
-A: 1
+A: 0
 6
 4
 3
 5
 
 Q: Indica cuál de las siguientes afirmaciones es cierta:
-A: 4
+A: 3
 los defectos del software que no han sido detectados con las pruebas unitarias, serán detectados con las pruebas de integración
 con pruebas de integración no se pueden detectar errores en las unidades a integrar
 las pruebas unitarias son dinámicas y las pruebas de integración son estáticas
 todas las afirmaciones del resto de opciones son falsas
 
 Q: Indica cuál de las siguientes afirmaciones es cierta:
-A: 2
+A: 1
 un proyecto maven con un empaquetado "pom" debe incluir la etiqueta <parent> en su pom.xml
 un proyecto maven con un empaquetado "pom" no tiene asociada por defecto ninguna goal a la fase test
 el mecanismo reactor de maven permite que un proyectos hijo hereden elementos de la configuración del proyecto padre
 todas las afirmaciones del resto de opciones son falsas
 
 Q: Indica cuál de las siguientes afirmaciones es cierta:
-A: 4
+A: 3
 la etiqueta <modules> en un aggregator pom permite que los módulos indicados hereden su configuración (propiedades, dependencias, y otros elementos)
 todas las afirmaciones del resto de opciones son falsas
 el mecanismo reactor de maven permite que los proyectos hijo hereden elementos de la configuración del proyecto padre
 para establecer una relación de agregación entre proyectos maven, no es necesario usar la etiqueta <parent>
 
 Q: En un plan de un proyecto software:
-A: 1
+A: 0
 Las pruebas unitarias, integración, y sistema, no se realizan siempre en ese orden, dependerá del modelo de proceso aplicado y del horizonte de planificación
 Las pruebas unitarias, integración, y sistema, no se realizan siempre en ese orden, dependerá de si usamos una planificación adaptativa o predictiva
 Las pruebas unitarias, integración, y sistema, se realizan siempre en ese orden
 Todas las afirmaciones del resto de opciones son falsas
 
 Q: Con respecto a las pruebas de aceptación:
-A: 4
+A: 3
 el diseño de las pruebas lo realiza el propio cliente
 tienen como objetivo encontrar defectos porque son pruebas dinámicas
 el código a probar es el mismo que en las pruebas del sistema

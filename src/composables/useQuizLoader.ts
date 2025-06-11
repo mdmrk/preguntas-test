@@ -21,7 +21,7 @@ export class QuizLoader {
           questionText = line.substring(2).trim()
           parsingQuestion = true
         } else if (line.startsWith("A:")) {
-          correctAnswerIndex = parseInt(line.substring(2)) - 1
+          correctAnswerIndex = parseInt(line.substring(2))
           parsingQuestion = false
         } else if (parsingQuestion) {
           questionText += line + "\n"
