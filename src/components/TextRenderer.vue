@@ -29,7 +29,7 @@ const renderedText = computed(() => {
     })
 
     result = result.replace(/```(?:\w+)?\s*([\s\S]*?)\s*```/g, (_, code) => {
-      return `<pre><code>${hljs.highlight(code, { language: "cpp" }).value}</code></pre>`
+      return `<pre><code>${hljs.highlight(deescapeHtml(code), { language: "cpp" }).value}</code></pre>`
     })
 
     result = result.replace(/`([^`]+)`/g, (_, code) => {
@@ -42,6 +42,15 @@ const renderedText = computed(() => {
     return escapeHtml(props.text)
   }
 })
+
+function deescapeHtml(text: string): string {
+  return text
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+}
 
 function escapeHtml(text: string): string {
   return text

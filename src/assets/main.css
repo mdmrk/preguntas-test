@@ -46,3 +46,7 @@ pre > code {
 .nav-button {
   @apply flex items-center justify-center p-2 border border-gray-200 dark:border-gray-700 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer mb-4 bg-white dark:bg-gray-800 dark:[&>img]:filter-(--svg-gray);
 }
+
+.katex > span {
+  @apply text-base;
+}
