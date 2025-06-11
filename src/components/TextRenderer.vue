@@ -21,11 +21,11 @@ const renderedText = computed(() => {
     result = escapeHtml(result)
 
     result = result.replace(/\$\$([^$]+)\$\$/g, (_, math) => {
-      return katex.renderToString(math, { displayMode: true, throwOnError: false })
+      return katex.renderToString(deescapeHtml(math), { displayMode: true, throwOnError: false })
     })
 
     result = result.replace(/\$([^$]+)\$/g, (_, math) => {
-      return katex.renderToString(math, { displayMode: false, throwOnError: false })
+      return katex.renderToString(deescapeHtml(math), { displayMode: false, throwOnError: false })
     })
 
     result = result.replace(/```(?:\w+)?\s*([\s\S]*?)\s*```/g, (_, code) => {
