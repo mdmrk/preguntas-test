@@ -15,6 +15,7 @@ const navigateToQuiz = (quizId: string) => {
 <template>
   <main>
     <nav class="flex flex-col items-center w-full space-y-3">
+      <MainButton @click="navigateToQuiz('redes')" class="gradient-orange">REDES</MainButton>
       <div class="relative w-full flex flex-col items-center">
         <MainButton @click="ada = !ada" class="gradient-red relative z-10">ADA</MainButton>
         <div
