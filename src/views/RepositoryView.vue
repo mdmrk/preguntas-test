@@ -147,6 +147,7 @@
 <script setup lang="ts">
 import TextRenderer from "@/components/TextRenderer.vue"
 import { QuizLoader } from "@/composables/useQuizLoader"
+import type { Question } from "@/types/quiz"
 import "katex/dist/katex.min.css"
 import { computed, onMounted, ref, watch } from "vue"
 import { useRoute } from "vue-router"
@@ -222,7 +223,7 @@ const clearSearch = () => {
   searchQuery.value = ""
 }
 
-const getOriginalQuestionNumber = (question: QuizQuestion) => {
+const getOriginalQuestionNumber = (question: Question) => {
   return questions.value.findIndex((q) => q.id === question.id) + 1
 }
 </script>
