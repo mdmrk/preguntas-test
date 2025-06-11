@@ -3064,8 +3064,8 @@ Los armónicos de mayor orden representan habitualmente señales senoidales de m
 Un medio de transmisión atenúa en la misma proporción a todos los armónicos.
 La velocidad de transmisión es la misma que la velocidad de modulación para ancho de banda telefónico.
  
-Considérese que por un medio de transmisión de ancho de banda igual a 20 Hz se transmite una señal a 20 baudios. Teniendo en cuenta que se emplea modulación QAM con 16 combinaciones ¿Cuántos armónicos se transmitirán como máximo?:
-2
+Q: Considérese que por un medio de transmisión de ancho de banda igual a 20 Hz se transmite una señal a 20 baudios. Teniendo en cuenta que se emplea modulación QAM con 16 combinaciones ¿Cuántos armónicos se transmitirán como máximo?:
+A: 2
 1.
 2.
 3.

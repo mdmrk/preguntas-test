@@ -291,10 +291,6 @@ const correctAnswersPercentage = computed(() => {
   return (correctAnswers.value / answeredQuestions.value) * 100
 })
 
-const isCorrect = computed(() => {
-  return selectedOption.value === currentQuestion.value?.correctAnswer
-})
-
 const selectOption = (optionIndex: number) => {
   if (!showAnswer.value && currentQuestion.value) {
     selectedOption.value = optionIndex

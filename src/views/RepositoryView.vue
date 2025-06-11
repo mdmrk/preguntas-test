@@ -30,12 +30,12 @@
           />
         </div>
         <input
-          v-model="searchQuery"
+          v-model="searchInput"
           type="text"
           placeholder="Buscar..."
           class="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
         />
-        <div v-if="searchQuery" class="absolute inset-y-0 right-0 pr-3 flex items-center">
+        <div v-if="searchInput" class="absolute inset-y-0 right-0 pr-3 flex items-center">
           <button
             @click="clearSearch"
             class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
@@ -59,7 +59,7 @@
 
     <div v-if="!loading && filteredQuestions.length > 0" class="space-y-6">
       <div
-        v-for="(question, index) in filteredQuestions"
+        v-for="question in filteredQuestions"
         :key="question.id"
         class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6"
       >
@@ -73,7 +73,7 @@
 
         <div class="mb-6">
           <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-            <TextRenderer :text="getHighlightedText(question.question)" />
+            <TextRenderer :text="question.question" />
           </h3>
         </div>
 
@@ -110,7 +110,7 @@
                     : 'text-gray-700 dark:text-gray-300'
                 ]"
               >
-                <TextRenderer :text="getHighlightedText(option)" />
+                <TextRenderer :text="option" />
               </span>
             </div>
             <div v-if="optionIndex === question.correctAnswer" class="ml-2 flex-shrink-0">
@@ -148,15 +148,40 @@
 import TextRenderer from "@/components/TextRenderer.vue"
 import { QuizLoader } from "@/composables/useQuizLoader"
 import "katex/dist/katex.min.css"
-import { computed, onMounted, ref } from "vue"
+import { computed, onMounted, ref, watch } from "vue"
 import { useRoute } from "vue-router"
+
+interface QuizQuestion {
+  id: string
+  question: string
+  options: string[]
+  correctAnswer: number
+}
 
 const route = useRoute()
 const quizContent = ref("")
 const loading = ref(true)
+const searchInput = ref("")
 const searchQuery = ref("")
+const DEBOUNCE_DELAY = 600
 
 const quizId = computed(() => route.params.id as string)
+
+const debounce = <T extends unknown[]>(func: (...args: T) => void, delay: number) => {
+  let timeoutId: ReturnType<typeof setTimeout>
+  return (...args: T) => {
+    clearTimeout(timeoutId)
+    timeoutId = setTimeout(() => func(...args), delay)
+  }
+}
+
+const debouncedSearch = debounce((value: string) => {
+  searchQuery.value = value
+}, DEBOUNCE_DELAY)
+
+watch(searchInput, (newValue) => {
+  debouncedSearch(newValue)
+})
 
 onMounted(async () => {
   try {
@@ -193,24 +218,11 @@ const filteredQuestions = computed(() => {
 })
 
 const clearSearch = () => {
+  searchInput.value = ""
   searchQuery.value = ""
 }
 
-const getOriginalQuestionNumber = (question: any) => {
+const getOriginalQuestionNumber = (question: QuizQuestion) => {
   return questions.value.findIndex((q) => q.id === question.id) + 1
-}
-
-const getHighlightedText = (text: string) => {
-  if (!searchQuery.value.trim()) {
-    return text
-  }
-
-  const query = searchQuery.value.trim()
-  const regex = new RegExp(`(${query})`, "gi")
-  return text.replace(regex, '<mark class="bg-yellow-200 dark:bg-yellow-200/50 rounded">$1</mark>')
-}
-
-const highlightSearchTerm = (text: string) => {
-  return getHighlightedText(text)
 }
 </script>
