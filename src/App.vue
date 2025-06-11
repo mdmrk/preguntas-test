@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import HomeButton from "@/components/HomeButton.vue"
+import LastUpdated from "@/components/LastUpdated.vue"
 import ThemeManager from "@/components/ThemeManager.vue"
 import { RouterView } from "vue-router"
 </script>
@@ -10,4 +11,5 @@ import { RouterView } from "vue-router"
     <ThemeManager />
   </header>
   <RouterView />
+  <footer><LastUpdated /></footer>
 </template>

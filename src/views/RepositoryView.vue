@@ -152,13 +152,6 @@ import "katex/dist/katex.min.css"
 import { computed, onMounted, ref, watch } from "vue"
 import { useRoute } from "vue-router"
 
-interface QuizQuestion {
-  id: string
-  question: string
-  options: string[]
-  correctAnswer: number
-}
-
 const route = useRoute()
 const quizContent = ref("")
 const loading = ref(true)

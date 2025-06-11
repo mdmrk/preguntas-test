@@ -58,7 +58,6 @@ interface Emits {
 
 const props = defineProps<Props>()
 const emit = defineEmits<Emits>()
-
 const selectedOption = ref<number | null>(null)
 const answered = ref(false)
 
