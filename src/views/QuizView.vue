@@ -68,9 +68,18 @@
 
       <div v-if="currentQuestion" class="bg-white dark:bg-gray-800 rounded-lg">
         <div class="mb-6">
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-            <TextRenderer :text="currentQuestion.question" />
-          </h3>
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex-1">
+              <TextRenderer :text="currentQuestion.question" />
+            </h3>
+            <button
+              @click="copyQuestionAndAnswers"
+              class="nav-button"
+              title="Copiar pregunta y respuestas"
+            >
+              <img src="@/assets/copy.svg" alt="Copiar" class="w-5 h-5" />
+            </button>
+          </div>
         </div>
 
         <div class="space-y-3 mb-6">
@@ -324,5 +333,30 @@ const restartQuiz = () => {
   selectedOption.value = null
   showAnswer.value = false
   quizFinished.value = false
+}
+
+const copyQuestionAndAnswers = async () => {
+  if (!currentQuestion.value) return
+
+  let textToCopy = `Pregunta ${currentQuestionIndex.value + 1}:\n${currentQuestion.value.question}\n\n`
+
+  currentQuestion.value.options.forEach((option, index) => {
+    const letter = String.fromCharCode(65 + index)
+    const isCorrect = index === currentQuestion.value.correctAnswer
+    textToCopy += `${letter}) ${option}${isCorrect ? " ✓" : ""}\n`
+  })
+
+  try {
+    await navigator.clipboard.writeText(textToCopy)
+    console.log("Question and answers copied to clipboard")
+  } catch (err) {
+    console.error("Failed to copy to clipboard:", err)
+    const textArea = document.createElement("textarea")
+    textArea.value = textToCopy
+    document.body.appendChild(textArea)
+    textArea.select()
+    document.execCommand("copy")
+    document.body.removeChild(textArea)
+  }
 }
 </script>
