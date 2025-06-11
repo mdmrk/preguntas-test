@@ -13,23 +13,32 @@ const router = createRouter({
       }
     },
     {
-      path: "/quiz/:quizId",
+      path: "/quiz/:id",
       name: "quiz",
       component: () => import("@/views/QuizView.vue"),
       props: true,
       meta: {
         title: "Preguntas"
       }
+    },
+    {
+      path: "/repository/:id",
+      name: "repository",
+      component: () => import("@/views/RepositoryView.vue"),
+      props: true,
+      meta: {
+        title: "Repositorio"
+      }
     }
   ]
 })
 
-router.beforeEach((to, from, next) => {
-  const baseTitle = "Preguntas"
+router.beforeEach((to, _, next) => {
+  const baseTitle = to.name === "quiz" ? "Preguntas" : "Repositorio"
 
-  if (to.name === "quiz") {
-    const quizId = to.params.quizId as string
-    const formattedTitle = quizId
+  if (to.name === "quiz" || to.name === "repository") {
+    const id = to.params.id as string
+    const formattedTitle = id
       .split(/[-_]/)
       .map((word, index) => {
         if (index === 0) {
@@ -40,7 +49,7 @@ router.beforeEach((to, from, next) => {
       .join(" ")
     document.title = `${baseTitle} - ${formattedTitle}`
   } else {
-    document.title = baseTitle
+    document.title = "Preguntas Test"
   }
 
   next()

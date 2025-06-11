@@ -19,7 +19,7 @@ export class QuizLoader {
         const line = lines[j]
 
         if (line.startsWith("Q:")) {
-          questionText = line.substring(2).trim()
+          questionText = line.substring(2)
           parsingQuestion = true
         } else if (line.startsWith("A:")) {
           correctAnswerIndex = parseInt(line.substring(2))

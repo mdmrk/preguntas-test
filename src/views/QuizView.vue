@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-2xl mx-auto">
+  <div class="max-w-4xl mx-auto">
     <div v-if="loading" class="flex items-center justify-center py-12">
       <svg
         aria-hidden="true"
@@ -17,56 +17,225 @@
           fill="currentFill"
         />
       </svg>
-      <span class="sr-only">Loading...</span>
+      <span class="sr-only">Cargando...</span>
     </div>
 
-    <div v-else-if="questions.length > 0">
+    <div v-else-if="questions.length > 0" class="space-y-6">
       <div
-        class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg mb-6 p-4"
+        class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6"
       >
-        <div class="flex items-center justify-between mb-3">
-          <div class="text-blue-600 dark:text-blue-400 text-sm font-medium">
-            {{ currentQuestionIndex + 1 }} / {{ questions.length }}
-          </div>
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center space-x-4">
+            <span
+              class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+            >
+              {{ currentQuestionIndex + 1 }} / {{ questions.length }}
+            </span>
 
-          <div
-            v-show="answeredQuestions > 0"
-            class="flex items-center space-x-3 text-sm font-medium"
-          >
-            <div class="text-green-600 dark:text-green-400">{{ correctAnswers }}</div>
-            <div class="text-red-600 dark:text-red-400">{{ failedAnswers }}</div>
-            <div class="text-green-600 dark:text-green-400">
-              {{ correctAnswersPercentage.toFixed(0) }}%
+            <div
+              v-show="answeredQuestions > 0"
+              class="flex items-center space-x-4 text-sm font-medium"
+            >
+              <div class="flex items-center space-x-1">
+                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                <span class="text-green-600 dark:text-green-400">{{ correctAnswers }}</span>
+              </div>
+              <div class="flex items-center space-x-1">
+                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                <span class="text-red-600 dark:text-red-400">{{ failedAnswers }}</span>
+              </div>
+              <span class="text-blue-600 dark:text-blue-400">
+                {{ correctAnswersPercentage.toFixed(0) }}%
+              </span>
             </div>
           </div>
         </div>
 
-        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 flex overflow-hidden">
+        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 flex overflow-hidden">
           <div
-            v-show="answeredQuestions > 0"
+            v-if="answeredQuestions > 0"
             class="bg-green-500 dark:bg-green-400 rounded-l-full"
-            :style="{ width: `${correctAnswersPercentage.toFixed(0)}%` }"
+            :style="{ width: `${(correctAnswers / questions.length) * 100}%` }"
           ></div>
           <div
-            v-show="answeredQuestions > 0"
-            class="bg-red-500 dark:bg-red-400 flex-1 rounded-r-full"
+            v-if="answeredQuestions > 0"
+            class="bg-red-500 dark:bg-red-400"
+            :style="{ width: `${(failedAnswers / questions.length) * 100}%` }"
           ></div>
+          <div class="bg-gray-300 dark:bg-gray-600 flex-1 rounded-r-full"></div>
         </div>
       </div>
 
-      <QuizQuestion
-        v-if="currentQuestion"
-        :key="currentQuestion.id"
-        :question="currentQuestion"
-        @answered="handleAnswered"
-        @next="nextQuestion"
-      />
+      <div v-if="currentQuestion" class="bg-white dark:bg-gray-800 rounded-lg">
+        <div class="mb-6">
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+            <TextRenderer :text="currentQuestion.question" />
+          </h3>
+        </div>
+
+        <div class="space-y-3 mb-6">
+          <div
+            v-for="(option, optionIndex) in currentQuestion.options"
+            :key="optionIndex"
+            class="flex items-center p-4 rounded-lg border"
+            :class="[
+              !showAnswer
+                ? 'cursor-pointer hover:bg-blue-50 hover:border-blue-300 hover:shadow-md dark:hover:bg-blue-900/10 dark:hover:border-blue-600'
+                : 'cursor-default',
+              showAnswer && optionIndex === currentQuestion.correctAnswer
+                ? 'bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-700'
+                : showAnswer &&
+                    selectedOption === optionIndex &&
+                    optionIndex !== currentQuestion.correctAnswer
+                  ? 'bg-red-50 border-red-200 dark:bg-red-900/20 dark:border-red-700'
+                  : 'bg-gray-50 border-gray-200 dark:bg-gray-700 dark:border-gray-600'
+            ]"
+            @click="selectOption(optionIndex)"
+          >
+            <div class="flex items-center w-full">
+              <div
+                class="w-4 h-4 rounded-full border-2 mr-4 flex items-center justify-center"
+                :class="[
+                  showAnswer && optionIndex === currentQuestion.correctAnswer
+                    ? 'border-green-500 bg-green-500'
+                    : showAnswer &&
+                        selectedOption === optionIndex &&
+                        optionIndex !== currentQuestion.correctAnswer
+                      ? 'border-red-500 bg-red-500'
+                      : 'border-gray-300 dark:border-gray-600'
+                ]"
+              >
+                <div
+                  v-if="
+                    showAnswer &&
+                    (optionIndex === currentQuestion.correctAnswer ||
+                      selectedOption === optionIndex)
+                  "
+                  class="w-2 h-2 rounded-full bg-white"
+                ></div>
+              </div>
+              <span
+                class="text-base font-medium flex-1"
+                :class="[
+                  showAnswer && optionIndex === currentQuestion.correctAnswer
+                    ? 'text-green-800 dark:text-green-300'
+                    : showAnswer &&
+                        selectedOption === optionIndex &&
+                        optionIndex !== currentQuestion.correctAnswer
+                      ? 'text-red-800 dark:text-red-300'
+                      : 'text-gray-700 dark:text-gray-300'
+                ]"
+              >
+                <TextRenderer :text="option" />
+              </span>
+              <div
+                v-if="showAnswer && optionIndex === currentQuestion.correctAnswer"
+                class="ml-auto"
+              >
+                <svg
+                  class="w-5 h-5 text-green-600 dark:text-green-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <div
+                v-if="
+                  showAnswer &&
+                  selectedOption === optionIndex &&
+                  optionIndex !== currentQuestion.correctAnswer
+                "
+                class="ml-auto"
+              >
+                <svg
+                  class="w-5 h-5 text-red-600 dark:text-red-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-between items-center">
+          <div class="flex space-x-3">
+            <button
+              v-if="showAnswer && currentQuestionIndex < questions.length - 1"
+              @click="nextQuestion"
+              class="px-4 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-lg"
+            >
+              Siguiente
+            </button>
+
+            <button
+              v-if="showAnswer && currentQuestionIndex === questions.length - 1"
+              @click="finishQuiz"
+              class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium rounded-lg"
+            >
+              Finalizar
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        v-if="quizFinished"
+        class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6"
+      >
+        <div class="text-center">
+          <div class="mb-4">
+            <div class="text-3xl font-bold text-gray-900 dark:text-white">
+              {{ correctAnswersPercentage.toFixed(1) }}%
+            </div>
+            <div class="text-gray-600 dark:text-gray-400">
+              {{ correctAnswers }} de {{ questions.length }} respuestas correctas
+            </div>
+          </div>
+
+          <div class="flex justify-center space-x-4 mb-6">
+            <div class="text-center">
+              <div class="text-2xl font-bold text-green-600 dark:text-green-400">
+                {{ correctAnswers }}
+              </div>
+              <div class="text-sm text-gray-600 dark:text-gray-400">Correctas</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-red-600 dark:text-red-400">
+                {{ failedAnswers }}
+              </div>
+              <div class="text-sm text-gray-600 dark:text-gray-400">Incorrectas</div>
+            </div>
+          </div>
+
+          <button
+            @click="restartQuiz"
+            class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg"
+          >
+            Reintentar Quiz
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div v-else class="text-center py-12">
+      <p class="text-gray-500 dark:text-gray-400">No se encontraron preguntas.</p>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import QuizQuestion from "@/components/QuizQuestion.vue"
+import TextRenderer from "@/components/TextRenderer.vue"
 import { QuizLoader } from "@/composables/useQuizLoader"
 import "katex/dist/katex.min.css"
 import { computed, onMounted, ref } from "vue"
@@ -77,8 +246,11 @@ const quizContent = ref("")
 const loading = ref(true)
 const currentQuestionIndex = ref(0)
 const answers = ref<Array<{ questionId: number; selectedOption: number; isCorrect: boolean }>>([])
+const selectedOption = ref<number | null>(null)
+const showAnswer = ref(false)
+const quizFinished = ref(false)
 
-const quizId = computed(() => route.params.quizId as string)
+const quizId = computed(() => route.params.id as string)
 
 onMounted(async () => {
   try {
@@ -119,15 +291,42 @@ const correctAnswersPercentage = computed(() => {
   return (correctAnswers.value / answeredQuestions.value) * 100
 })
 
-const handleAnswered = (payload: {
-  questionId: number
-  selectedOption: number
-  isCorrect: boolean
-}) => {
-  answers.value.push(payload)
+const isCorrect = computed(() => {
+  return selectedOption.value === currentQuestion.value?.correctAnswer
+})
+
+const selectOption = (optionIndex: number) => {
+  if (!showAnswer.value && currentQuestion.value) {
+    selectedOption.value = optionIndex
+
+    const answerData = {
+      questionId: currentQuestion.value.id,
+      selectedOption: optionIndex,
+      isCorrect: optionIndex === currentQuestion.value.correctAnswer
+    }
+
+    answers.value.push(answerData)
+    showAnswer.value = true
+  }
 }
 
 const nextQuestion = () => {
-  currentQuestionIndex.value++
+  if (currentQuestionIndex.value < questions.value.length - 1) {
+    currentQuestionIndex.value++
+    selectedOption.value = null
+    showAnswer.value = false
+  }
+}
+
+const finishQuiz = () => {
+  quizFinished.value = true
+}
+
+const restartQuiz = () => {
+  currentQuestionIndex.value = 0
+  answers.value = []
+  selectedOption.value = null
+  showAnswer.value = false
+  quizFinished.value = false
 }
 </script>
