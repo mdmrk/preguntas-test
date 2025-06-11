@@ -1,6 +1,6 @@
 <template>
   <button
-    class="w-full h-26 font-black text-7xl text-left overflow-clip pl-4 rounded-4xl cursor-pointer transition-all duration-100 hover:scale-105 hover:shadow-2xl gradient-blue"
+    class="w-full h-26 font-black text-7xl text-left overflow-clip pl-4 rounded-4xl cursor-pointer hover:scale-105 hover:shadow-2xl gradient-blue"
   >
     <div class="translate-y-6.5"><slot /></div>
   </button>

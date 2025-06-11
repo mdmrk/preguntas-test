@@ -19,7 +19,7 @@ const navigateToQuiz = (quizId: string) => {
         <MainButton @click="ada = !ada" class="gradient-red relative z-10">ADA</MainButton>
         <div
           v-show="ada"
-          class="flex flex-col items-center w-full px-2 pb-4 space-y-3 bg-red-900 rounded-b-3xl -mt-8 pt-12"
+          class="flex flex-col items-center w-full px-2 pb-4 space-y-3 bg-red-900 dark:bg-red-950 rounded-b-3xl -mt-8 pt-12"
         >
           <MainButton @click="navigateToQuiz('ada-parcial-1')" class="gradient-red"
             >parcial 1</MainButton
@@ -36,7 +36,7 @@ const navigateToQuiz = (quizId: string) => {
         <MainButton @click="ppss = !ppss" class="gradient-blue relative z-10">PPSS</MainButton>
         <div
           v-show="ppss"
-          class="flex flex-col items-center w-full px-2 pb-4 space-y-3 bg-blue-900 rounded-b-3xl -mt-8 pt-12"
+          class="flex flex-col items-center w-full px-2 pb-4 space-y-3 bg-blue-900 dark:bg-blue-950 rounded-b-3xl -mt-8 pt-12"
         >
           <MainButton @click="navigateToQuiz('ppss-parcial-1')" class="gradient-blue"
             >parcial 1</MainButton

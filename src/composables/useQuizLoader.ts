@@ -4,36 +4,42 @@ export class QuizLoader {
   parseQuizText(text: string): Question[] {
     const chunks = text.split("\n\n")
     const questions: Question[] = []
-
-    let i = 0
     let questionId = 1
 
-    while (i < chunks.length) {
+    for (let i = 0; i < chunks.length; i++) {
       const lines = chunks[i].split("\n").filter(Boolean)
 
-      const questionText = lines[0]
-      const correctAnswerIndex = parseInt(lines[1]) - 1
+      let questionText = ""
+      let correctAnswerIndex = -1
       const options: string[] = []
+      let parsingQuestion = false
 
-      let j = 2
-      while (j < lines.length) {
-        options.push(lines[j])
-        j++
+      for (let j = 0; j < lines.length; j++) {
+        const line = lines[j].trim()
+
+        if (line.startsWith("Q:")) {
+          questionText = line.substring(2).trim()
+          parsingQuestion = true
+        } else if (line.startsWith("A:")) {
+          correctAnswerIndex = parseInt(line.substring(2)) - 1
+          parsingQuestion = false
+        } else if (parsingQuestion) {
+          questionText += " " + line
+        } else if (line.length > 0) {
+          options.push(line)
+        }
       }
 
-      questions.push({
-        id: questionId++,
-        question: questionText,
-        options,
-        correctAnswer: correctAnswerIndex
-      })
-      i++
+      if (questionText && correctAnswerIndex >= 0 && options.length > 0) {
+        questions.push({
+          id: questionId++,
+          question: questionText.trim(),
+          options,
+          correctAnswer: correctAnswerIndex
+        })
+      }
     }
 
     return questions
-  }
-
-  private isNumericLine(line: string): boolean {
-    return /^\d+$/.test(line.trim())
   }
 }

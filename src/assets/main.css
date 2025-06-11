@@ -1,11 +1,13 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-hanken-grotesk: "Hanken Grotesk", sans-serif;
 }
 
 #app {
-  @apply max-w-[720px] w-full min-h-svh mx-auto p-6 font-normal font-hanken-grotesk text-gray-50;
+  @apply max-w-[720px] w-full min-h-svh mx-auto p-6 font-normal font-hanken-grotesk text-black dark:text-gray-50;
 }
 
 body {

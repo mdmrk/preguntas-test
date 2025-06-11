@@ -2,30 +2,40 @@
   <div class="max-w-2xl mx-auto">
     <div v-if="loading" class="flex items-center justify-center py-12">
       <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-400"></div>
-      <span class="ml-3 text-gray-300 font-medium">Cargando...</span>
+      <span class="ml-3 text-gray-600 dark:text-gray-300 font-medium">Cargando...</span>
     </div>
 
-    <div v-if="questions.length > 0">
-      <div class="bg-gray-800 rounded-lg mb-6 text-gray-50">
+    <div v-else-if="questions.length > 0">
+      <div
+        class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg mb-6 p-4"
+      >
         <div class="flex items-center justify-between mb-3">
-          <div class="text-blue-400 text-sm">
+          <div class="text-blue-600 dark:text-blue-400 text-sm font-medium">
             {{ currentQuestionIndex + 1 }} / {{ questions.length }}
           </div>
 
-          <div v-show="answeredQuestions > 0" class="flex items-center space-x-3 text-sm">
-            <div class="text-green-400">{{ correctAnswers }}</div>
-            <div class="text-red-400">{{ failedAnswers }}</div>
-            <div class="text-green-400">{{ correctAnswersPercentage.toFixed(0) }}%</div>
+          <div
+            v-show="answeredQuestions > 0"
+            class="flex items-center space-x-3 text-sm font-medium"
+          >
+            <div class="text-green-600 dark:text-green-400">{{ correctAnswers }}</div>
+            <div class="text-red-600 dark:text-red-400">{{ failedAnswers }}</div>
+            <div class="text-green-600 dark:text-green-400">
+              {{ correctAnswersPercentage.toFixed(0) }}%
+            </div>
           </div>
         </div>
 
-        <div class="w-full bg-gray-700 rounded-full h-2 flex overflow-hidden">
+        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 flex overflow-hidden">
           <div
             v-show="answeredQuestions > 0"
-            class="bg-green-400 rounded-l-full"
+            class="bg-green-500 dark:bg-green-400 rounded-l-full"
             :style="{ width: `${correctAnswersPercentage.toFixed(0)}%` }"
           ></div>
-          <div v-show="answeredQuestions > 0" class="bg-red-400 flex-1 rounded-r-full"></div>
+          <div
+            v-show="answeredQuestions > 0"
+            class="bg-red-500 dark:bg-red-400 flex-1 rounded-r-full"
+          ></div>
         </div>
       </div>
 
