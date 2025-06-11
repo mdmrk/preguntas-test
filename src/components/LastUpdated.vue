@@ -8,9 +8,14 @@ import { onMounted, ref } from "vue"
 const formattedDate = ref<string>("")
 
 onMounted(() => {
-  const buildDate = import.meta.env.PROD
-    ? new Date(import.meta.env.VITE_BUILD_TIME || Date.now())
-    : new Date()
+  let buildDate: Date
+
+  if (import.meta.env.PROD) {
+    const buildTime = import.meta.env.VITE_BUILD_TIME
+    buildDate = buildTime ? new Date(buildTime) : new Date()
+  } else {
+    buildDate = new Date()
+  }
 
   const options: Intl.DateTimeFormatOptions = {
     year: "numeric",
