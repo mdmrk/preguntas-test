@@ -138,12 +138,12 @@
           </div>
         </div>
 
-        <div class="flex justify-between items-center">
+        <div class="flex justify-center items-center">
           <div class="flex space-x-3">
             <button
               v-if="showAnswer && currentQuestionIndex < questions.length - 1"
               @click="nextQuestion"
-              class="px-4 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-lg"
+              class="cursor-pointer px-4 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-lg"
             >
               Siguiente
             </button>
@@ -151,7 +151,7 @@
             <button
               v-if="showAnswer && currentQuestionIndex === questions.length - 1"
               @click="finishQuiz"
-              class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium rounded-lg"
+              class="cursor-pointer px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium rounded-lg"
             >
               Finalizar
             </button>
