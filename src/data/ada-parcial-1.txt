@@ -1,26 +1,26 @@
 Q: ¿Cuál es el objetivo de la etapa de análisis en el Diseño y Análisis de un Algoritmo?
 A: 1
-Determinar el lenguaje y herramientas disponibles para su desarrollo.
-Estimar los recursos que consumirá el algoritmo una vez implementado.
-Estimar la potencia y características del equipo informático necesarios para el correcto funcionamiento del algoritmo.
+O: Determinar el lenguaje y herramientas disponibles para su desarrollo.
+O: Estimar los recursos que consumirá el algoritmo una vez implementado.
+O: Estimar la potencia y características del equipo informático necesarios para el correcto funcionamiento del algoritmo.
 
 Q: ¿Cuál de las siguientes jerarquías de complejidades es la correcta?
 A: 2
-$O(1) \subset O(\lg n) \subset O(\lg \lg n) \subset \ldots$
-$\ldots \subset O(n!) \subset O(2^n) \subset O(n^n)$
-$\ldots \subset O(2^n) \subset O(n!) \subset O(n^n)$
+O: $O(1) \subset O(\lg n) \subset O(\lg \lg n) \subset \ldots$
+O: $\ldots \subset O(n!) \subset O(2^n) \subset O(n^n)$
+O: $\ldots \subset O(2^n) \subset O(n!) \subset O(n^n)$
 
 Q: ¿Cuál de los siguientes algoritmos de ordenación tiene menor complejidad?
 A: 2
-Burbuja
-Inserción directa
-Mergesort
+O: Burbuja
+O: Inserción directa
+O: Mergesort
 
 Q: ¿El tiempo de ejecución de un algoritmo depende de la talla del problema?
 A: 2
-Sí, siempre
-No, nunca
-No necesariamente
+O: Sí, siempre
+O: No, nunca
+O: No necesariamente
 
 Q: Ordena de menor a mayor las siguientes complejidades
 1. $O(1)$
@@ -28,27 +28,27 @@ Q: Ordena de menor a mayor las siguientes complejidades
 3. $O(n \lg n)$
 4. $O(n!)$
 A: 1
-3, 1, 2 y 4
-1, 3, 2 y 4
-1, 3, 4 y 2
+O: 3, 1, 2 y 4
+O: 1, 3, 2 y 4
+O: 1, 3, 4 y 2
 
 Q: El estudio de la complejidad resulta realmente interesante para tamaños grandes de problema por varios motivos:
 A: 2
-Las diferencias reales en tiempo de compilación de algoritmos con diferente coste para tamaños pequeños del problema no suelen ser muy significativas.
-Las diferencias reales en tiempo de ejecución de algoritmos con diferente coste para tamaños grandes del problema no suelen ser muy significativas.
-Ninguna de las anteriores.
+O: Las diferencias reales en tiempo de compilación de algoritmos con diferente coste para tamaños pequeños del problema no suelen ser muy significativas.
+O: Las diferencias reales en tiempo de ejecución de algoritmos con diferente coste para tamaños grandes del problema no suelen ser muy significativas.
+O: Ninguna de las anteriores.
 
 Q: ¿Por que se emplean funciones de coste para expresar el coste de una algoritmo?
 A: 1
-Para poder expresar el coste de los algoritmos con mayor exactitud
-Para que la expresión del coste del algoritmo sea válida para cualquier entrada al mismo
-Para poder expresar el coste de un algoritmo mediante una expresión matemática
+O: Para poder expresar el coste de los algoritmos con mayor exactitud
+O: Para que la expresión del coste del algoritmo sea válida para cualquier entrada al mismo
+O: Para poder expresar el coste de un algoritmo mediante una expresión matemática
 
 Q: El caso base de una ecuación de recurrencia asociada a la complejidad temporal de un algoritmo expresa:
 A: 2
-El coste de dicho algoritmo en el mejor de los casos.
-El coste de dicho algoritmo en el peor de los casos.
-Ninguna de las anteriores.
+O: El coste de dicho algoritmo en el mejor de los casos.
+O: El coste de dicho algoritmo en el peor de los casos.
+O: Ninguna de las anteriores.
 
 Q: La complejidad de la función TB es:
 ```cpp
@@ -67,69 +67,69 @@ var n,i:N;
 fin
 ```
 A: 0
-$\Theta(n)$
-$\Theta(n \cdot \lg n)$
-$\Theta(n^2 \cdot \lg n)$
+O: $\Theta(n)$
+O: $\Theta(n \cdot \lg n)$
+O: $\Theta(n^2 \cdot \lg n)$
 
 Q: Dado el polinomio $f(n)= a_m n^m + a_{m-1} n^{m-1} + \ldots + a_0$, con $a_m \in \mathbb{R}^+$ entonces f pertenece al orden:
 A: 2
-$O(n^m)$.
-$\Omega(n^m)$.
-Las dos respuestas anteriores son correctas.
+O: $O(n^m)$.
+O: $\Omega(n^m)$.
+O: Las dos respuestas anteriores son correctas.
 
 Q: Si $f_1(n) \in O(g_1(n))$ y $f_2(n) \in O(g_2(n))$ entonces:
 A: 1
-$f_1(n) \cdot f_2(n) \in O(\max(g_1(n),g_2(n)))$
-$f_1(n) \cdot f_2(n) \in O(g_1(n) \cdot g_2(n))$
-Ambas son correctas
+O: $f_1(n) \cdot f_2(n) \in O(\max(g_1(n),g_2(n)))$
+O: $f_1(n) \cdot f_2(n) \in O(g_1(n) \cdot g_2(n))$
+O: Ambas son correctas
 
 Q: Si $f_1(n) \in O(g_1(n))$ y $f_2(n) \in O(g_2(n))$ entonces:
 A: 2
-$f_1(n)+f_2(n) \in O(\max(g_1(n),g_2(n)))$
-$f_1(n)+f_2(n) \in O(g_1(n)+g_2(n))$
-Ambas son correctas
+O: $f_1(n)+f_2(n) \in O(\max(g_1(n),g_2(n)))$
+O: $f_1(n)+f_2(n) \in O(g_1(n)+g_2(n))$
+O: Ambas son correctas
 
 Q: Un algoritmo cuya talla es n y que tarda $40^n$ segundos en resolver cualquier instancia tiene una complejidad temporal:
 A: 1
-$\Theta(n^n)$
-$\Theta(4^n)$
-Ninguna de las anteriores
+O: $\Theta(n^n)$
+O: $\Theta(4^n)$
+O: Ninguna de las anteriores
 
 Q: Si dos algoritmos tienen la misma complejidad asintótica:
 A: 0
-No necesitan exactamente el mismo tiempo para su ejecución.
-Necesitan exactamente el mismo tiempo para su ejecución.
-Ninguna de las anteriores
+O: No necesitan exactamente el mismo tiempo para su ejecución.
+O: Necesitan exactamente el mismo tiempo para su ejecución.
+O: Ninguna de las anteriores
 
 Q: Los algoritmos directos de ordenación, respecto de los indirectos:
 A: 0
-Presentan una mayor complejidad temporal y sus tiempos de ejecución absolutos son mayores.
-Presentan una menor complejidad temporal y sus tiempos de ejecución absolutos son menores.
-Presentan una mayor complejidad temporal si bien sus tiempos de ejecución absolutos son menores.
+O: Presentan una mayor complejidad temporal y sus tiempos de ejecución absolutos son mayores.
+O: Presentan una menor complejidad temporal y sus tiempos de ejecución absolutos son menores.
+O: Presentan una mayor complejidad temporal si bien sus tiempos de ejecución absolutos son menores.
 
 Q: La talla o tamaño de un problema depende de:
 A: 2
-Conjunto de valores asociados a la entrada y salida del problema.
-Conjunto de valores asociados a la salida del problema.
-Conjunto de valores asociados a la entrada del problema.
+O: Conjunto de valores asociados a la entrada y salida del problema.
+O: Conjunto de valores asociados a la salida del problema.
+O: Conjunto de valores asociados a la entrada del problema.
 
 Q: En un algoritmo recursivo, la forma de dividir el problema en subproblemas:
 A: 1
-Influye en la complejidad espacial del mismo.
-Influye en su complejidad temporal.
-No influye en ninguna de sus complejidades.
+O: Influye en la complejidad espacial del mismo.
+O: Influye en su complejidad temporal.
+O: No influye en ninguna de sus complejidades.
 
 Q: $f(n) = 5n+3m \cdot n +11$ entonces $f(n)$ pertenece a:
 A: 2
-$O(n \cdot m)$.
-$O(n^m)$.
-Las dos son correctas
+O: $O(n \cdot m)$.
+O: $O(n^m)$.
+O: Las dos son correctas
 
 Q: El sumatorio, desde $i=1$ hasta n, de $i^k$ pertenece a:
 A: 0
-$O(n^{k+1})$
-$O(n^k)$
-Ninguna de las anteriores
+O: $O(n^{k+1})$
+O: $O(n^k)$
+O: Ninguna de las anteriores
 
 Q: La complejidad de la función A2 es:
 ```cpp
@@ -146,64 +146,64 @@ Var r: entero; fvar
 fin
 ```
 A: 1
-$O(\sqrt{n} \cdot a)$
-$O(\sqrt{n} / a)$
-$O(n / \sqrt{a})$
+O: $O(\sqrt{n} \cdot a)$
+O: $O(\sqrt{n} / a)$
+O: $O(n / \sqrt{a})$
 
 Q: Cual de las siguientes definiciones es cierta:
 A: 0
-Las cotas de complejidad se emplean cuando para una misma talla se obtienen diferentes complejidades dependiendo de la entrada al problema.
-Las cotas de complejidad se emplean cuando para diferentes tallas se obtienen diferentes complejidades dependiendo de la entrada al problema.
-Ninguna de las anteriores
+O: Las cotas de complejidad se emplean cuando para una misma talla se obtienen diferentes complejidades dependiendo de la entrada al problema.
+O: Las cotas de complejidad se emplean cuando para diferentes tallas se obtienen diferentes complejidades dependiendo de la entrada al problema.
+O: Ninguna de las anteriores
 
 Q: Cuando para distintas instancias de problema con el mismo tamaño no obtenemos el mismo resultado:
 A: 2
-No es posible calcular la complejidad a priori y debemos ejecutar el programa varias veces con la misma talla y obtener el tiempo medio para hallar la complejidad media.
-No se puede aplicar la técnica de paso de programa, ya que esta técnica es para calcular la complejidad a priori.
-Calculamos el máximo y mínimo coste que nos puede dar el algoritmo.
+O: No es posible calcular la complejidad a priori y debemos ejecutar el programa varias veces con la misma talla y obtener el tiempo medio para hallar la complejidad media.
+O: No se puede aplicar la técnica de paso de programa, ya que esta técnica es para calcular la complejidad a priori.
+O: Calculamos el máximo y mínimo coste que nos puede dar el algoritmo.
 
 Q: $f(n) = 5n+5$ ¿$f(n)$ pertenece a $O(n)$?
 A: 2
-Si. El valor de c es 5 y el valor mínimo de $n_0$ es de 3
-Si. El valor de c es 9 y el valor mínimo de $n_0$ es de 1
-Si. El valor de c es 6 y el valor mínimo de $n_0$ es de 5
+O: Si. El valor de c es 5 y el valor mínimo de $n_0$ es de 3
+O: Si. El valor de c es 9 y el valor mínimo de $n_0$ es de 1
+O: Si. El valor de c es 6 y el valor mínimo de $n_0$ es de 5
 
 Q: $f(n) = 10n+7$ ¿$f(n)$ pertenece a $O(n^2)$?
 A: 1
-Si. Para c = 1 y a partir de un valor de $n_0 = 10$.
-Sí Para cualquier valor de c positivo siempre existe un $n_0$ a partir del que se cumple.
-No.
+O: Si. Para c = 1 y a partir de un valor de $n_0 = 10$.
+O: Sí Para cualquier valor de c positivo siempre existe un $n_0$ a partir del que se cumple.
+O: No.
 
 Q: Si $f(n) \in \Omega(g(n))$ entonces:
 A: 0
-$\exists c, n_0 \in \mathbb{R}^+ : f(n) \geq c \cdot g(n) \forall n \geq n_0$
-$\exists c, n_0 \in \mathbb{R}^+ : f(n) \geq c \cdot g(n) \forall n$
-$\exists c, n_0 \in \mathbb{R}^+ : f(n) \leq c \cdot g(n) \forall n \geq n_0$
+O: $\exists c, n_0 \in \mathbb{R}^+ : f(n) \geq c \cdot g(n) \forall n \geq n_0$
+O: $\exists c, n_0 \in \mathbb{R}^+ : f(n) \geq c \cdot g(n) \forall n$
+O: $\exists c, n_0 \in \mathbb{R}^+ : f(n) \leq c \cdot g(n) \forall n \geq n_0$
 
 Q: El coste asociado a la siguiente ecuación de recurrencia es:
 $$f(n) = \begin{cases} 1 & n \leq 1 \\ n + f(\frac{n}{2}) + f(\frac{n}{2}) & n > 1 \end{cases}$$
 A: 2
-$\Theta(n \lg n^2)$
-$\Theta(n^2 \lg n)$
-$\Theta(n \lg n)$
+O: $\Theta(n \lg n^2)$
+O: $\Theta(n^2 \lg n)$
+O: $\Theta(n \lg n)$
 
 Q: Un algoritmo recursivo basado en el esquema divide y vencerás...
 A: 0
-... será más eficiente cuanto más equitativa sea la división en subproblemas.
-Las demás opciones son verdaderas.
-... nunca tendrá una complejidad exponencial.
+O: ... será más eficiente cuanto más equitativa sea la división en subproblemas.
+O: Las demás opciones son verdaderas.
+O: ... nunca tendrá una complejidad exponencial.
 
 Q: Indicad cuál de estas tres expresiones es falsa.
 A: 1
-$\Theta(n / 2) = \Theta(n)$
-$\Theta(n) \subseteq \Theta(n^2)$
-$\Theta(n) \subseteq \Theta(n)$
+O: $\Theta(n / 2) = \Theta(n)$
+O: $\Theta(n) \subseteq \Theta(n^2)$
+O: $\Theta(n) \subseteq \Theta(n)$
 
 Q: ¿Cuál de estas tres expresiones es falsa?
 A: 2
-$3n^2 + 1 \in O(n^3)$
-$n + n \log(n) \in \Omega(n)$
-$n + n \log(n) \in \Theta(n)$
+O: $3n^2 + 1 \in O(n^3)$
+O: $n + n \log(n) \in \Omega(n)$
+O: $n + n \log(n) \in \Theta(n)$
 
 Q: Indica cuál es la complejidad en el peor caso de la función replace:
 ```cpp
@@ -220,9 +220,9 @@ void replace( vector<int>& v, int c ) {
 }
 ```
 A: 1
-$O(n \log n)$
-$O(n^2)$
-$O(n)$
+O: $O(n \log n)$
+O: $O(n^2)$
+O: $O(n)$
 
 Q: ¿Cuál es la complejidad temporal de la siguiente función recursiva?
 ```cpp
@@ -237,21 +237,21 @@ unsigned desperdicio (unsigned n){
 }
 ```
 A: 0
-$\Theta(n^2)$
-$\Theta(2^n)$
-$\Theta(n^2 \log n)$
+O: $\Theta(n^2)$
+O: $\Theta(2^n)$
+O: $\Theta(n^2 \log n)$
 
 Q: Sea $f(n)$ la solución de la relación de recurrencia $f(n) = 2f(n/2) + 1$; $f(1) = 1$. Indica cual de estas tres expresiones es cierta.
 A: 0
-$f(n) \in \Theta(n)$
-$f(n) \in \Theta(n^2)$
-$f(n) \in \Theta(n \log n)$
+O: $f(n) \in \Theta(n)$
+O: $f(n) \in \Theta(n^2)$
+O: $f(n) \in \Theta(n \log n)$
 
 Q: Considerad estos dos fragmentos: `s=0; for(i=0;i<n;i++) s+=i;` y `s=0; for(i=0;i<n;i++) if (a[i] != 0) s+=i;` y un array `a[i]` de números enteros. Indicad cuál de estas tres afirmaciones es cierta:
 A: 1
-El coste temporal asintótico del primer programa en el caso peor es más alto que en el segundo.
-El coste temporal asintótico, tanto en el caso mejor como en el caso peor, de los dos programas es el mismo.
-El coste temporal asintótico del segundo programa en el caso peor es más alto que en el primero.
+O: El coste temporal asintótico del primer programa en el caso peor es más alto que en el segundo.
+O: El coste temporal asintótico, tanto en el caso mejor como en el caso peor, de los dos programas es el mismo.
+O: El coste temporal asintótico del segundo programa en el caso peor es más alto que en el primero.
 
 Q: Indica cual es la complejidad, en función de n, del fragmento siguiente:
 ```cpp
@@ -261,9 +261,9 @@ for( int i = 0; i < n; i++ )
 		a += a[i][j];
 ```
 A: 0
-$O(n \log n)$
-$O(n)$
-$O(n^2)$
+O: $O(n \log n)$
+O: $O(n)$
+O: $O(n^2)$
 
 Q: Indica cuál es la complejidad en función de n, donde K es una constante (no depende de n), del fragmento siguiente:
 ```cpp
@@ -274,64 +274,64 @@ for( int i = K; i < n - K; i++ ){
 }
 ```
 A: 0
-$O(n)$
-$O(n \log n)$
-$O(n^2)$
+O: $O(n)$
+O: $O(n \log n)$
+O: $O(n^2)$
 
 Q: Pertenece $3n^2 + 3$ a $O(n^3)$?
 A: 2
-Solo para c = 1 y $n_0 = 5$.
-No.
-Sí.
+O: Solo para c = 1 y $n_0 = 5$.
+O: No.
+O: Sí.
 
 Q: La complejidad temporal en el mejor de los casos...
 A: 2
-Las demás opciones son verdaderas.
-... es el tiempo que tarda el algoritmo en resolver la talla más pequeña que se le puede presentar.
-... es una función de la talla que tiene que estar definida para todos los posibles valores de esta.
+O: Las demás opciones son verdaderas.
+O: ... es el tiempo que tarda el algoritmo en resolver la talla más pequeña que se le puede presentar.
+O: ... es una función de la talla que tiene que estar definida para todos los posibles valores de esta.
 
 Q: La versión de Quicksort que utiliza como pivote la mediana del vector...
 A: 2
-... se comporta mejor cuando el vector ya está ordenado.
-... se comporta peor cuando el vector ya está ordenado.
-... El hecho de que el vector estuviera previamente ordenado o no, no influye en la complejidad temporal de este algoritmo.
+O: ... se comporta mejor cuando el vector ya está ordenado.
+O: ... se comporta peor cuando el vector ya está ordenado.
+O: ... El hecho de que el vector estuviera previamente ordenado o no, no influye en la complejidad temporal de este algoritmo.
 
 Q: Dada la siguiente relación de recurrencia, ¿Qué cota es verdadera?
 $$f(n) = \begin{cases} 1 & n = 1 \\ \sqrt{n} + 3f(\frac{n}{3}) & n > 1 \end{cases}$$
 A: 0
-$f(n) \in \Theta(n)$
-$f(n) \in \Theta(n^3)$
-$f(n) \in \Theta(\sqrt{n} \log n)$
+O: $f(n) \in \Theta(n)$
+O: $f(n) \in \Theta(n^3)$
+O: $f(n) \in \Theta(\sqrt{n} \log n)$
 
 Q: Un problema de tamaño $n$ puede transformarse en tiempo $O(n^2)$ en nueve de tamaño $n/3$. Por otro lado, la solución al problema cuando la talla es $1$ requiere un tiempo constante. ¿Cuál de estas clases de coste temporal asintótico es la más ajustada?
 A: 1
-$O(n^2)$
-$O(n^2 \log n)$
-$O(n \log n)$
+O: $O(n^2)$
+O: $O(n^2 \log n)$
+O: $O(n \log n)$
 
 Q: Indica cuál es la complejidad, en función de $n$, del siguiente fragmento de código: `s=0; for(i=0;i<n;i++) for(j=i;j<n;j++) s+=i*j;`
 A: 0
-$\Theta(n^2)$
-$O(n^2)$ pero no $\Omega(n^2)$
-$\Theta(n)$
+O: $\Theta(n^2)$
+O: $O(n^2)$ pero no $\Omega(n^2)$
+O: $\Theta(n)$
 
 Q: Sea $f(n)$ la solución de la relación de recurrencia $f(n) = 2f(n-1)+1$ $f(1) = 1$. Indicad cuál de estas tres expresiones es cierta:
 A: 1
-$f(n) \in \Theta(n)$
-$f(n) \in \Theta(2^n)$
-$f(n) \in \Theta(n^2)$
+O: $f(n) \in \Theta(n)$
+O: $f(n) \in \Theta(2^n)$
+O: $f(n) \in \Theta(n^2)$
 
 Q: Un programa con dos bucles anidados uno dentro del otro, El primero hace $n$ iteraciones aproximadamente y el segundo la mitad, tarda un tiempo
 A: 1
-$O(n \log n)$
-$O(n^2)$
-$O(n \sqrt{n})$
+O: $O(n \log n)$
+O: $O(n^2)$
+O: $O(n \sqrt{n})$
 
 Q: Un problema de tamaño $n$ puede transformarse en tiempo $O(\frac{n}{2})$ en nueve de tamaño $\frac{n}{3}$; por otro lado, la solución al problema cuando la talla es 1 requiere un tiempo constante. ¿Cuál de estas clases de coste temporal asintótico es la más ajustada?
 A: 1
-$O(n \log n)$
-$O(n^2 \log n)$
-$O(n^2)$
+O: $O(n \log n)$
+O: $O(n^2 \log n)$
+O: $O(n^2)$
 
 Q: ¿Cuál es la complejidad temporal de la siguiente función recursiva?
 ```cpp
@@ -347,15 +347,15 @@ return sum;
 }
 ```
 A: 2
-$O(2^n)$
-$O(n^3 \log n)$
-$O(n^3)$
+O: $O(2^n)$
+O: $O(n^3 \log n)$
+O: $O(n^3)$
 
 Q: Los algoritmos de ordenación Quicksort y Mergesort tienen en común ...
 A: 2
-... que se ejecutan en tiempo $O(n)$.
-... que ordenan el vector sin usar espacio adicional.
-... que aplican la estrategia de divide y vencerás.
+O: ... que se ejecutan en tiempo $O(n)$.
+O: ... que ordenan el vector sin usar espacio adicional.
+O: ... que aplican la estrategia de divide y vencerás.
 
 Q: Indica cuál es la complejidad de la función siguiente:
 ```cpp
@@ -369,57 +369,57 @@ unsigned sum( const mat &A ) {    # A es una matriz cuadrada
 }
 ```
 A: 1
-$O(n^2)$
-$O(n)$
-$O(n \log n)$
+O: $O(n^2)$
+O: $O(n)$
+O: $O(n \log n)$
 
 Q: Indicad cuál de estas tres expresiones es falsa.
 A: 2
-$\Theta(n/2) = \Theta(n)$
-$\Theta(n) \subseteq \Theta(n)$
-$\Theta(n) \subseteq \Theta(n^2)$
+O: $\Theta(n/2) = \Theta(n)$
+O: $\Theta(n) \subseteq \Theta(n)$
+O: $\Theta(n) \subseteq \Theta(n^2)$
 
 Q: ¿Cuál de estos tres problemas de optimización no tiene, o no se le conoce, una solución voraz óptima?
 A: 1
-El árbol de cobertura de coste mínimo de un grafo conexo.
-El problema de la mochila discreta o sin fraccionamiento.
-El problema de la mochila continua o con fraccionamiento.
+O: El árbol de cobertura de coste mínimo de un grafo conexo.
+O: El problema de la mochila discreta o sin fraccionamiento.
+O: El problema de la mochila continua o con fraccionamiento.
 
 Q: Los algoritmos de programación dinámica hacen uso ...
 A: 1
-... de que la solución óptima se puede construir añadiendo a la solución el elemento óptimo de los elementos restantes, uno a uno.
-... de que se puede ahorrar cálculos guardando resultados anteriores en un almacén.
-... de una estrategia trivial consistente en examinar todas las soluciones posibles.
+O: ... de que la solución óptima se puede construir añadiendo a la solución el elemento óptimo de los elementos restantes, uno a uno.
+O: ... de que se puede ahorrar cálculos guardando resultados anteriores en un almacén.
+O: ... de una estrategia trivial consistente en examinar todas las soluciones posibles.
 
 Q: Cuando se calculan los coeficientes binomiales usando la recursión $\binom{n}{r} = \binom{n-1}{r} + \binom{n-1}{r-1}$, con $\binom{n}{0} = \binom{n}{n} = 1$, qué problema se da y cómo se puede resolver?
 A: 2
-La recursión puede ser infinita y por tanto es necesario organizarla según el esquema iterativo de programación dinámica.
-Se repiten muchos cálculos y ello se puede evitar haciendo uso de una estrategia voraz.
-Se repiten muchos cálculos y ello se puede evitar usando programación dinámica.
+O: La recursión puede ser infinita y por tanto es necesario organizarla según el esquema iterativo de programación dinámica.
+O: Se repiten muchos cálculos y ello se puede evitar haciendo uso de una estrategia voraz.
+O: Se repiten muchos cálculos y ello se puede evitar usando programación dinámica.
 
 Q: Sea $f(n)$ la solución de la relación de recurrencia $f(n) = 2f(n/2) + n$; $f(1) = 1$. Indicad cuál de estas tres expresiones es cierta.
 A: 2
-$f(n) \in \Theta(n^2)$
-$f(n) \in \Theta(n)$
-$f(n) \in \Theta(n \log n)$
+O: $f(n) \in \Theta(n^2)$
+O: $f(n) \in \Theta(n)$
+O: $f(n) \in \Theta(n \log n)$
 
 Q: Para que la complejidad de un algoritmo presente caso mejor y peor distintos ...
 A: 1
-... es condición necesaria y suficiente que existan instancias distintas del problema con el mismo tamaño.
-... es condición necesaria que existan instancias distintas del problema con el mismo tamaño.
-... es condición suficiente que existan instancias distintas del problema con el mismo tamaño.
+O: ... es condición necesaria y suficiente que existan instancias distintas del problema con el mismo tamaño.
+O: ... es condición necesaria que existan instancias distintas del problema con el mismo tamaño.
+O: ... es condición suficiente que existan instancias distintas del problema con el mismo tamaño.
 
 Q: Indicad cuál de estas tres expresiones es cierta:
 A: 2
-$O(n^2) \subseteq O(2^{\log(n)}) \subset O(2^n)$
-$O(n^2) \subseteq O(2^{\log(n)}) \subseteq O(2^n)$
-$O(2^{\log(n)}) \subseteq O(n^2) \subseteq O(2^n)$
+O: $O(n^2) \subseteq O(2^{\log(n)}) \subset O(2^n)$
+O: $O(n^2) \subseteq O(2^{\log(n)}) \subseteq O(2^n)$
+O: $O(2^{\log(n)}) \subseteq O(n^2) \subseteq O(2^n)$
 
 Q: La complejidad temporal en el mejor de los casos de un algoritmo recursivo...
 A: 1
-... coincide con el valor del caso base de la ecuación de recurrencia que expresa la complejidad temporal del algoritmo.
-Las demás opciones son falsas.
-... siempre coincidirá con la complejidad temporal de las instancias que están en el caso base del algoritmo recursivo.
+O: ... coincide con el valor del caso base de la ecuación de recurrencia que expresa la complejidad temporal del algoritmo.
+O: Las demás opciones son falsas.
+O: ... siempre coincidirá con la complejidad temporal de las instancias que están en el caso base del algoritmo recursivo.
 
 Q: Considerad la función siguiente:
 ```cpp
@@ -438,34 +438,34 @@ int M( int i, int f ) {
 ```
 Si la talla del problema viene dada por $n = f - i + 1$, ¿cuál es el coste temporal asintótico en el supuesto de que $n$ sea una potencia de 2?
 A: 0
-$O(n)$.
-$O(n^2)$.
-$O(n \log(n))$.
+O: $O(n)$.
+O: $O(n^2)$.
+O: $O(n \log(n))$.
 
 Q: El coste temporal asintótico del fragmento `s=0; for(i=0;i<n;i++) for(j=i;j<n;j++) s+=i*j;` y el del fragmento `s=0; for(i=0;i<n;i++) for(j=0;j<n;j++) s+=i*i*j;` son ...
 A: 0
-... iguales.
-... el del segundo, menor que el del primero.
-... el del primero, menor que el del segundo.
+O: ... iguales.
+O: ... el del segundo, menor que el del primero.
+O: ... el del primero, menor que el del segundo.
 
 Q: La versión de Quicksort que utiliza como pivote el elemento del vector que ocupa la primera posición ...
 A: 1
-... se comporta mejor cuando el vector ya está ordenado.
-... se comporta peor cuando el vector ya está ordenado.
-... El hecho de que el vector estuviera previamente ordenado o no, no influye en la complejidad temporal de este algoritmo.
+O: ... se comporta mejor cuando el vector ya está ordenado.
+O: ... se comporta peor cuando el vector ya está ordenado.
+O: ... El hecho de que el vector estuviera previamente ordenado o no, no influye en la complejidad temporal de este algoritmo.
 
 Q: La versión de Quicksort que utiliza como pivote el elemento del vector que ocupa la posición central ...
 A: 0
-... se comporta mejor cuando el vector ya está ordenado.
-... se comporta peor cuando el vector ya está ordenado.
-... no presenta casos mejor y peor distintos para instancias del mismo tamaño.
+O: ... se comporta mejor cuando el vector ya está ordenado.
+O: ... se comporta peor cuando el vector ya está ordenado.
+O: ... no presenta casos mejor y peor distintos para instancias del mismo tamaño.
 
 Q: Dada la siguiente relación de recurrencia, ¿Qué cota es verdadera?
 $$f(n) = \begin{cases} 1 & n = 1 \\ n + 3f(n/3) & n > 1 \end{cases}$$
 A: 0
-$f(n) \in \Theta(n \log n)$
-$f(n) \in \Theta(n^3)$
-$f(n) \in \Theta(n)$
+O: $f(n) \in \Theta(n \log n)$
+O: $f(n) \in \Theta(n^3)$
+O: $f(n) \in \Theta(n)$
 
 Q: Sobre la complejidad temporal de la siguiente función:
 ```cpp
@@ -481,34 +481,34 @@ unsigned desperdicio (unsigned n){
 }
 ```
 A: 0
-Ninguna de las otras dos alternativas es cierta.
-Las complejidades en los casos mejor y peor son distintas.
-El mejor de los casos se da cuando $n \leq 1$ y en tal caso la complejidad es constante.
+O: Ninguna de las otras dos alternativas es cierta.
+O: Las complejidades en los casos mejor y peor son distintas.
+O: El mejor de los casos se da cuando $n \leq 1$ y en tal caso la complejidad es constante.
 
 Q: Con respecto al esquema Divide y vencerás, ¿es cierta la siguiente afirmación? Si la talla se reparte equitativamente entre los subproblemas, entonces la complejidad temporal resultante es una función logarítmica.
 A: 1
-No, nunca, puesto que también hay que añadir el coste de la división en subproblemas y la posterior combinación.
-No tiene porqué, la complejidad temporal no depende únicamente del tamaño resultante de los subproblemas.
-Sí, siempre, en Divide y Vencerás la complejidad temporal depende únicamente del tamaño de los subproblemas.
+O: No, nunca, puesto que también hay que añadir el coste de la división en subproblemas y la posterior combinación.
+O: No tiene porqué, la complejidad temporal no depende únicamente del tamaño resultante de los subproblemas.
+O: Sí, siempre, en Divide y Vencerás la complejidad temporal depende únicamente del tamaño de los subproblemas.
 
 Q: ¿Qué cota se deduce de la siguiente relación de recurrencia?
 $$f(n) = \begin{cases} 1 & n = 1 \\ n + 4f(\frac{n}{2}) & n > 1 \end{cases}$$
 A: 0
-$f(n) \in \Theta(n^2)$
-$f(n) \in \Theta(n)$
-$f(n) \in \Theta(n \log n)$
+O: $f(n) \in \Theta(n^2)$
+O: $f(n) \in \Theta(n)$
+O: $f(n) \in \Theta(n \log n)$
 
 Q: ¿Cuál de estas tres expresiones es falsa?
 A: 2
-$2n^3 - 10n^2 + 1 \in O(n^3)$
-$n + n \sqrt{n} \in \Omega(n)$
-$n + n \sqrt{n} \in \Theta(n)$
+O: $2n^3 - 10n^2 + 1 \in O(n^3)$
+O: $n + n \sqrt{n} \in \Omega(n)$
+O: $n + n \sqrt{n} \in \Theta(n)$
 
 Q: Sea $f(n) = n \log(n) + n$.
 A: 2
-$f(n) \in \Omega(n \log(n))$
-$f(n) \in O(n \log(n))$
-Las otras dos opciones son ciertas
+O: $f(n) \in \Omega(n \log(n))$
+O: $f(n) \in O(n \log(n))$
+O: Las otras dos opciones son ciertas
 
 Q: ¿Cuál es la complejidad temporal de la siguiente función?
 ```cpp
@@ -528,9 +528,9 @@ int ejemplo (vector < int > & v){
 }
 ```
 A: 0
-$\Theta(n \log n)$
-$\Theta(n^2)$
-$\Omega(n)$
+O: $\Theta(n \log n)$
+O: $\Theta(n^2)$
+O: $\Omega(n)$
 
 Q: En cuanto a la complejidad temporal de la siguiente función:
 ```cpp
@@ -550,9 +550,9 @@ int ejemplo (vector < int > & v){
 }
 ```
 A: 0
-Las complejidades en el mejor y en el peor de los casos no coinciden.
-El mejor de los casos se da cuando $n = 0$, su complejidad es constante.
-Esta función no presenta casos mejor y peor puesto que solo puede haber una instancia para cada una de las posibles talla
+O: Las complejidades en el mejor y en el peor de los casos no coinciden.
+O: El mejor de los casos se da cuando $n = 0$, su complejidad es constante.
+O: Esta función no presenta casos mejor y peor puesto que solo puede haber una instancia para cada una de las posibles talla
 
 Q: Indica cuál es la complejidad, en función de $n$, del fragmento siguiente:
 ```cpp
@@ -561,9 +561,9 @@ for( int i = n; i > 0; i /= 2 )
 		a += A[i][j];
 ```
 A: 0
-$O(\log^2(n))$
-$O(n \log(n))$
-$O(n^2)$
+O: $O(\log^2(n))$
+O: $O(n \log(n))$
+O: $O(n^2)$
 
 Q: Indica cuál es la complejidad, en función de $n$, del fragmento siguiente:
 ```cpp
@@ -572,15 +572,15 @@ for( int i = 0; i < n*n; i++ )
 	a += A[(i + j) % n];
 ```
 A: 0
-$O(n^2)$
-$O(n \log(n))$
-$O(n)$
+O: $O(n^2)$
+O: $O(n \log(n))$
+O: $O(n)$
 
 Q: La versión de Quicksort que utiliza como pivote la mediana del vector...
 A: 0
-... no presenta caso mejor y peor distintos para instancias del mismo tamaño.
-... es más eficiente si el vector ya está ordenado.
-... es la versión con mejor complejidad en el mejor de los casos.
+O: ... no presenta caso mejor y peor distintos para instancias del mismo tamaño.
+O: ... es más eficiente si el vector ya está ordenado.
+O: ... es la versión con mejor complejidad en el mejor de los casos.
 
 Q: El siguiente fragmento del algoritmo de ordenación Quicksort reorganiza los elementos del vector para obtener una subsecuencia de elementos menores que el pivote y otra de mayores. Su complejidad temporal, con respecto al tamaño del vector v, que está delimitado por los valores pi y pf, es...
 ```cpp
@@ -600,53 +600,53 @@ swap(v[pi],v[j]);
 ```
 Nota: La función `swap` se realiza en tiempo constante.
 A: 0
-... lineal en cualquier caso.
-... cuadrática en el peor de los casos.
-... lineal en el caso peor y constante en el caso mejor.
+O: ... lineal en cualquier caso.
+O: ... cuadrática en el peor de los casos.
+O: ... lineal en el caso peor y constante en el caso mejor.
 
 Q: Dada la siguiente relación de recurrencia, ¿Qué cota es verdadera?
 $$f(n) = \begin{cases} 1 & n = 1 \\ n + 2f(n-1) & n \geq 1 \end{cases}$$
 A: 0
-$f(n) \in \Omega(2^n)$
-$f(n) \in \Theta(n^2)$
-$f(n) \in \Theta(2^n)$
+O: $f(n) \in \Omega(2^n)$
+O: $f(n) \in \Theta(n^2)$
+O: $f(n) \in \Theta(2^n)$
 
 Q: ¿Cuál es la solución a la siguiente relación de recurrencia?
 $$f(n) = \begin{cases} \Theta(1) & n = 0 \\ \Theta(1) + f(n/3) & n > 0 \end{cases}$$
 A: 0
-$f(n) \in \Theta(\log(n))$.
-$f(n) \in \Theta(n/3)$.
-Ninguna de las otras dos es cierta.
+O: $f(n) \in \Theta(\log(n))$.
+O: $f(n) \in \Theta(n/3)$.
+O: Ninguna de las otras dos es cierta.
 
 Q: De las siguientes expresiones, o bien dos son verdaderas y una es falsa o bien al contrario: dos son falsas y una es verdadera. Marca la que en este sentido es distinta a las otras dos.
 A: 2
-$2n^3 - 10n^2 + 1 \in O(n^3)$
-$n + n\sqrt{n} \in \Omega(n)$
-$n + n\sqrt{n} \in \Theta(n)$
+O: $2n^3 - 10n^2 + 1 \in O(n^3)$
+O: $n + n\sqrt{n} \in \Omega(n)$
+O: $n + n\sqrt{n} \in \Theta(n)$
 
 Q: Si $f \in \Omega(g_1)$ y $f \in \Omega(g_2)$ entonces
 A: 2
-$f \not\in \Omega(\min(g_1, g_2))$
-$f \in \Omega(g_1 \cdot g_2)$
-$f \in \Omega(g_1 + g_2)$
+O: $f \not\in \Omega(\min(g_1, g_2))$
+O: $f \in \Omega(g_1 \cdot g_2)$
+O: $f \in \Omega(g_1 + g_2)$
 
 Q: ¿Cuál de las siguientes relaciones de recurrencia expresa mejor la complejidad espacial es la del algoritmo Mergesort?
 A: 2
-$T(n) = n + T(n - 1)$ para $n > 1$ y $T(n) = 1$ para $n \leq 1$
-$T(n) = n + T(n/2)$ para $n > 1$ y $T(n) = 1$ para $n \leq 1$
-$T(n) = n + 2T(n/2)$ para $n > 1$ y $T(n) = 1$ para $n \leq 1$
+O: $T(n) = n + T(n - 1)$ para $n > 1$ y $T(n) = 1$ para $n \leq 1$
+O: $T(n) = n + T(n/2)$ para $n > 1$ y $T(n) = 1$ para $n \leq 1$
+O: $T(n) = n + 2T(n/2)$ para $n > 1$ y $T(n) = 1$ para $n \leq 1$
 
 Q: De las siguientes expresiones, o bien dos son verdaderas y una es falsa, o bien dos son falsas y una es verdadera. Marca la que (en este sentido) es distinta a las otras dos.
 A: 2
-$\log(n^3) \not\in \Theta(\log_3(n))$
-$\Theta(\log^2(n)) = \Theta(\log^3(n))$
-$\Theta(\log_2(n)) = \Theta(\log_3(n))$
+O: $\log(n^3) \not\in \Theta(\log_3(n))$
+O: $\Theta(\log^2(n)) = \Theta(\log^3(n))$
+O: $\Theta(\log_2(n)) = \Theta(\log_3(n))$
 
 Q: Un problema de tamaño $n$ puede transformarse en tiempo $O(1)$ en siete de tamaño $\frac{n}{7}$; por otro lado, la solución al problema cuando la talla es 1 requiere un tiempo constante. ¿Cuál de estas clases de coste temporal asintótico es la más ajustada?
 A: 2
-$O(n^2)$
-$O(n)$
-$O(n \log n)$
+O: $O(n^2)$
+O: $O(n)$
+O: $O(n \log n)$
 
 Q: Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función?
 ```cpp
@@ -659,9 +659,9 @@ void f(unsigned n){
 }
 ```
 A: 0
-$O(5^{\log n})$
-$O(n^2 \log n)$
-$O(n^2)$
+O: $O(5^{\log n})$
+O: $O(n^2 \log n)$
+O: $O(n^2)$
 
 Q: Se pretende obtener la complejidad temporal en el caso más desfavorable de la siguiente función.
 ```cpp
@@ -681,9 +681,9 @@ int exa(vector<int> &v){
 }
 ```
 A: 0
-$C_s(n)=\sum^{\log(n+1)}_{k=1}(n-n/2^k)\in O(n\log n)$
-$C_s(n)=\sum^{\log n}_{j=1}\sum^{j}_{i=1}(1/2)^i \in O(n\log n)$
-$C_s(n)=\sum^{n/2}_{j=0}(1/2\sum^{n}_{i=j}1) \in O(n\log n)$
+O: $C_s(n)=\sum^{\log(n+1)}_{k=1}(n-n/2^k)\in O(n\log n)$
+O: $C_s(n)=\sum^{\log n}_{j=1}\sum^{j}_{i=1}(1/2)^i \in O(n\log n)$
+O: $C_s(n)=\sum^{n/2}_{j=0}(1/2\sum^{n}_{i=j}1) \in O(n\log n)$
 
 Q: Las siguientes funciones calculan el valor de potencia n-ésima de dos. ¿Cuál es el más eficiente en cuanto a coste temporal?
 ```cpp
@@ -701,27 +701,27 @@ unsigned long pot2_2(unsigned n){
 }
 ```
 A: 2
-La primera, `pot2_1(n)`, es más eficiente que la otra.
-Las dos funciones son equivalentes en cuanto a coste temporal.
-La segunda, `pot2_2(n)`, es más eficiente que la otra.
+O: La primera, `pot2_1(n)`, es más eficiente que la otra.
+O: Las dos funciones son equivalentes en cuanto a coste temporal.
+O: La segunda, `pot2_2(n)`, es más eficiente que la otra.
 
 Q: Tenemos un vector desordenado y queremos obtener los tres elementos más pequeños. ¿Cuál seria la complejidad emporal más ajustada para hacerlo? (sin pérdida de generalidad puedes suponer que en el vector todos los elementos son distintos)
 A: 1
-El logaritmo de la longitud del vector
-Lineal con la longitud del vector
-Cuadrática con la longitud del vector
+O: El logaritmo de la longitud del vector
+O: Lineal con la longitud del vector
+O: Cuadrática con la longitud del vector
 
 Q: Supongamos que una solución recursiva a un problema de optimización muestra estas dos características: por un lado, se basa en obtener soluciones óptimas a problemas parciales más pequeños, y por otro, estos subproblemas se resuelven más de una vez durante el proceso recursivo. Este problema es candidato a tener una solución alternativa basada en
 A: 0
-un algoritmo de programación dinámica.
-un algoritmo voraz.
-un algoritmo del estilo de divide y vencerás.
+O: un algoritmo de programación dinámica.
+O: un algoritmo voraz.
+O: un algoritmo del estilo de divide y vencerás.
 
 Q: Si $f \notin O(g_1)$ y $f \in O(g_2)$ entonces siempre se cumplirá:
 A: 0
-$f \in \Omega(\min(g_1,g_2))$
-$f \in \Omega(g_1 + g_2)$
-$f \notin O(\max(g_1, g_2))$
+O: $f \in \Omega(\min(g_1,g_2))$
+O: $f \in \Omega(g_1 + g_2)$
+O: $f \notin O(\max(g_1, g_2))$
 
 Q: Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función?
 ```cpp
@@ -736,39 +736,39 @@ void f(unsigned n){
 }
 ```
 A: 0
-$\Theta(n^3 \log n)$
-$\Theta(n^3)$
-$\Theta(n^2 \log n)$
+O: $\Theta(n^3 \log n)$
+O: $\Theta(n^3)$
+O: $\Theta(n^2 \log n)$
 
 Q: ¿En qué caso la complejidad temporal del algoritmo de ordenación Quicksort es igual a la complejidad temporal del algoritmo Mergesort?
 A: 0
-En el caso mejor de ambos.
-En el caso peor de ambos.
-Tanto en el caso peor como en el caso mejor de ambos
+O: En el caso mejor de ambos.
+O: En el caso peor de ambos.
+O: Tanto en el caso peor como en el caso mejor de ambos
 
 Q: Di cuál de estos resultados de coste temporal asintótico es falsa:
 A: 1
-La ordenación de un vector usando el algoritmo Quicksort requiere en el peor caso un tiempo en $O(n^2)$
-La ordenación de un vector usando el algoritmo Mergesort requiere en el peor caso un tiempo en $O(n^2)$
-La búsqueda binaria en un vector ordenado requiere en el peor caso un tiempo en $O(\log n)$
+O: La ordenación de un vector usando el algoritmo Quicksort requiere en el peor caso un tiempo en $O(n^2)$
+O: La ordenación de un vector usando el algoritmo Mergesort requiere en el peor caso un tiempo en $O(n^2)$
+O: La búsqueda binaria en un vector ordenado requiere en el peor caso un tiempo en $O(\log n)$
 
 Q: De las siguientes expresiones, o bien dos son verdaderas y una es falsa, o bien dos son falsas y una es verdadera. Marca la que (en este sentido) es distinta a las otras dos.
 A: 1
-$O(n^2) \subset O(2^{\log_2(n)}) \subset O(2^n)$
-$O(2^{\log_2(n)}) \subset O(n^2) \subset O(n!)$
-$O(4^{\log_2(n)}) \subset O(n) \subset O(2^n)$
+O: $O(n^2) \subset O(2^{\log_2(n)}) \subset O(2^n)$
+O: $O(2^{\log_2(n)}) \subset O(n^2) \subset O(n!)$
+O: $O(4^{\log_2(n)}) \subset O(n) \subset O(2^n)$
 
 Q: Tenemos un vector ordenado de tamaño $n_0$ y un vector desordenado de tamaño $n_d$ y queremos obtener un vector ordenado con todos los elementos. ¿Qué será más rápido?
 A: 2
-Depende de si $n_o > n_d$ o no.
-Insertar los elementos del vector desordenado (uno a uno) en el vector ordenado.
-Ordenar el desordenado y luego mezclar las listas.
+O: Depende de si $n_o > n_d$ o no.
+O: Insertar los elementos del vector desordenado (uno a uno) en el vector ordenado.
+O: Ordenar el desordenado y luego mezclar las listas.
 
 Q: La complejidad temporal (o coste temporal asintótico) en el mejor de los casos...
 A: 1
-Las otras dos opciones son ambas verdaderas.
-... es una función de la talla, o tamaño del problema, que tiene que estar definida para todos los posibles valores de ésta
-... es el tiempo que tarda el algoritmo en resolver la talla más pequeña que se le puede presentar.
+O: Las otras dos opciones son ambas verdaderas.
+O: ... es una función de la talla, o tamaño del problema, que tiene que estar definida para todos los posibles valores de ésta
+O: ... es el tiempo que tarda el algoritmo en resolver la talla más pequeña que se le puede presentar.
 
 Q: Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función?
 ```cpp
@@ -783,29 +783,29 @@ void f(unsigned n){
 }
 ```
 A: 2
-$\Theta(n^3)$
-$\Theta(n^2 \log n)$
-$\Theta(n^3 \log n)$
+O: $\Theta(n^3)$
+O: $\Theta(n^2 \log n)$
+O: $\Theta(n^3 \log n)$
 
 Q: Sea la siguiente relacion de recurrencia:
 $$T(n) = \begin{cases} 1 & \text{si } n \leq 1 \\ 8T(\frac{n}{8}) + g(n) & \text{en otro caso}\end{cases}$$
 Si $T(n) \in \Theta(n^2)$, ¿en cuál de estos tres casos nos podemos encontrar?
 A: 1
-$g(n) = n^3$
-$g(n) = n^2$
-$g(n) = n$
+O: $g(n) = n^3$
+O: $g(n) = n^2$
+O: $g(n) = n$
 
 Q: ¿Cuál de los siguientes algoritmos de ordenación necesita un espacio de almacenamiento adicional al vector que se ordena con complejidad $O(n)$?
 A: 0
-Mergesort.
-Quicksort.
-Bubblesort.
+O: Mergesort.
+O: Quicksort.
+O: Bubblesort.
 
 Q: Si $f \notin O(g_1)$ y $f \in O(g_2)$ entonces siempre se cumplirá:
 A: 2
-$f \in \Omega(g_1 + g_2)$
-$f \notin O(\max(g_1, g_2))$
-$f \in \Omega(\min(g_1, g_2))$
+O: $f \in \Omega(g_1 + g_2)$
+O: $f \notin O(\max(g_1, g_2))$
+O: $f \in \Omega(\min(g_1, g_2))$
 
 Q: Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función?
 ```cpp
@@ -817,21 +817,21 @@ void f(unsigned n){
 }
 ```
 A: 2
-$\Theta(n^2 \log n)$
-$\Theta(n^2)$
-$\Theta(n^3)$
+O: $\Theta(n^2 \log n)$
+O: $\Theta(n^2)$
+O: $\Theta(n^3)$
 
 Q: Si $f \notin O(g_1)$ y $f \in O(g_2)$ entonces siempre se cumplirá:
 A: 0
-$f \in \Omega(\min(g_1, g_2))$
-$f \in \Omega(g_1 + g_2)$
-$f \notin \Omega(\max(g_1, g_2))$
+O: $f \in \Omega(\min(g_1, g_2))$
+O: $f \in \Omega(g_1 + g_2)$
+O: $f \notin \Omega(\max(g_1, g_2))$
 
 Q: ¿Qué nos proporciona la media entre el coste temporal asintótico (o complejidad temporal) en el peor caso y el coste temporal asintótico en el mejor caso?
 A: 2
-El coste temporal promedio.
-El coste temporal asintótico en el caso medio.
-En general, nada de interés.
+O: El coste temporal promedio.
+O: El coste temporal asintótico en el caso medio.
+O: En general, nada de interés.
 
 Q: Las siguientes funciones calculan el valor de la potencia n-ésima de dos. ¿Cuál es más eficiente en cuanto a coste temporal?
 ```cpp
@@ -847,9 +847,9 @@ unsigned long pot2_2(unsigned n){
 }
 ```
 A: 1
-La segunda, `pot2_2(n)`, es más eficiente que la otra.
-Las dos funciones son equivalentes en cuanto a coste temporal.
-La primera, `pot2_1(n)`, es más eficiente que la otra.
+O: La segunda, `pot2_2(n)`, es más eficiente que la otra.
+O: Las dos funciones son equivalentes en cuanto a coste temporal.
+O: La primera, `pot2_1(n)`, es más eficiente que la otra.
 
 Q: Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función?
 ```cpp
@@ -862,21 +862,21 @@ void f(unsigned n){
 }
 ```
 A: 2
-$\Theta(n^2)$
-$\Theta(n^2 \log n)$
-$\Theta(5^{\log n})$
+O: $\Theta(n^2)$
+O: $\Theta(n^2 \log n)$
+O: $\Theta(5^{\log n})$
 
 Q: ¿Qué algoritmo es asintóticamente más rápido, el Quicksort o el Mergesort?
 A: 2
-Los dos son igual de rápidos ya que el coste temporal asintótico de ambos es $O(n \log(n))$.
-como su nombre indica, el Quicksort.
-el Mergesort es siempre más rápido o igual (salvo una constante) que el Quicksort.
+O: Los dos son igual de rápidos ya que el coste temporal asintótico de ambos es $O(n \log(n))$.
+O: como su nombre indica, el Quicksort.
+O: el Mergesort es siempre más rápido o igual (salvo una constante) que el Quicksort.
 
 Q: La solución óptima al problema de encontrar el árbol de recubrimiento de coste mínimo para un grafo no dirigido, conexo y ponderado
 A: 1
-... se construye haciendo crecer varios árboles que al final acaban injertados en un único árbol.
-... puede construir un único árbol que va creciendo o bien construir un bosque de árboles que al final se injertan en un único árbol
-... se construye haciendo crecer un único árbol.
+O: ... se construye haciendo crecer varios árboles que al final acaban injertados en un único árbol.
+O: ... puede construir un único árbol que va creciendo o bien construir un bosque de árboles que al final se injertan en un único árbol
+O: ... se construye haciendo crecer un único árbol.
 
 Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva:
 ```cpp
@@ -887,24 +887,24 @@ int f(int x, int y){
 ```
 ¿Cuál es la mejor complejidad espacial que se puede conseguir?
 A: 1
-$O(x)$
-$O(1)$
-$O(x^2)$
+O: $O(x)$
+O: $O(1)$
+O: $O(x^2)$
 
 Q: ¿Cuál de los siguientes pares de problemas son equivalentes en cuanto al tipo de solución (óptima, factible, etc.) aportada por el método voraz?
 A: 2
-La mochila continua y la asignación de tareas.
-El fontanero diligente y el problema del cambio.
-La mochila discreta y la asignación de tareas.
+O: La mochila continua y la asignación de tareas.
+O: El fontanero diligente y el problema del cambio.
+O: La mochila discreta y la asignación de tareas.
 
 Q: De los problemas siguientes, indicad cuál no se puede tratar eficientemente como los otros dos:
 A: 1
-El problema de cortar un tubo de forma que se obtenga el máximo beneficio posible.
-El problema de la mochila sin fraccionamiento y sin restricciones en cuanto al dominio de los pesos de los objetos y de sus valores.
-El problema del cambio, o sea, el de encontrar la manera de entregar una cantidad de dinero usando el mínimo de monedas posibles.
+O: El problema de cortar un tubo de forma que se obtenga el máximo beneficio posible.
+O: El problema de la mochila sin fraccionamiento y sin restricciones en cuanto al dominio de los pesos de los objetos y de sus valores.
+O: El problema del cambio, o sea, el de encontrar la manera de entregar una cantidad de dinero usando el mínimo de monedas posibles.
 
 Q: La eficiencia de los algoritmos voraces se basa en el hecho de que ...
 A: 1
-... antes de tomar una decisión se comprueba si satisface las restricciones del problema.
-... las decisiones tomadas nunca se reconsideran.
-... con antelación, las posibles decisiones se ordenan de mejor a peor.
+O: ... antes de tomar una decisión se comprueba si satisface las restricciones del problema.
+O: ... las decisiones tomadas nunca se reconsideran.
+O: ... con antelación, las posibles decisiones se ordenan de mejor a peor.

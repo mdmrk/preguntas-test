@@ -14,6 +14,8 @@ export class QuizLoader {
       let correctAnswerIndex = -1
       const options: string[] = []
       let parsingQuestion = false
+      let parsingOption = false
+      let currentOptionIndex = -1
 
       for (let j = 0; j < lines.length; j++) {
         const line = lines[j]
@@ -21,13 +23,20 @@ export class QuizLoader {
         if (line.startsWith("Q:")) {
           questionText = line.substring(2)
           parsingQuestion = true
+          parsingOption = false
         } else if (line.startsWith("A:")) {
           correctAnswerIndex = parseInt(line.substring(2))
           parsingQuestion = false
+          parsingOption = false
+        } else if (line.startsWith("O:")) {
+          options.push(line.substring(2))
+          currentOptionIndex = options.length - 1
+          parsingQuestion = false
+          parsingOption = true
         } else if (parsingQuestion) {
           questionText += line + "\n"
-        } else if (line.length > 0) {
-          options.push(line)
+        } else if (parsingOption && currentOptionIndex >= 0) {
+          options[currentOptionIndex] += "\n" + line
         }
       }
 
@@ -35,7 +44,7 @@ export class QuizLoader {
         questions.push({
           id: questionId++,
           question: questionText.trim(),
-          options,
+          options: options.map((option) => option.trim()),
           correctAnswer: correctAnswerIndex
         })
       }
