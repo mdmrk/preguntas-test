@@ -42,11 +42,11 @@ pre > code {
 }
 
 .nav-button {
-  @apply flex items-center justify-center p-2 border border-gray-200 dark:border-gray-700 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer mb-4 bg-white dark:bg-gray-800 dark:[&>svg]:text-gray-200;
+  @apply flex items-center justify-center p-2 border border-gray-200 dark:border-gray-700 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer mb-4 bg-white dark:bg-gray-800 dark:[&>svg]:text-gray-50;
 }
 
 .icon {
-  @apply dark:[&>svg]:text-gray-200;
+  @apply dark:[&>svg]:text-gray-50;
 }
 
 .katex > span {

@@ -56,11 +56,11 @@
         </div>
       </div>
 
-      <div v-if="currentQuestion" class="bg-white dark:bg-gray-800 rounded-lg">
+      <div v-if="currentQuestion">
         <div class="mb-6">
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex-1">
+          <div class="text-base font-semibold text-gray-900 dark:text-white mb-3 flex-1">
             <TextRenderer :text="currentQuestion.question" />
-          </h3>
+          </div>
         </div>
 
         <div class="space-y-3 mb-6">
@@ -143,7 +143,7 @@
             <button
               v-if="showAnswer && currentQuestionIndex < questions.length - 1"
               @click="nextQuestion"
-              class="cursor-pointer px-4 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-lg"
+              class="cursor-pointer px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg"
             >
               Siguiente
             </button>
@@ -151,7 +151,7 @@
             <button
               v-if="showAnswer && currentQuestionIndex === questions.length - 1"
               @click="finishQuiz"
-              class="cursor-pointer px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium rounded-lg"
+              class="cursor-pointer px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg"
             >
               Finalizar
             </button>
@@ -190,7 +190,7 @@
 
           <button
             @click="restartQuiz"
-            class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg"
+            class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg"
           >
             Reintentar Quiz
           </button>
