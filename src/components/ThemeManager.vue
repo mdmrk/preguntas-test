@@ -1,17 +1,15 @@
 <template>
   <button @click="cycleTheme" class="nav-button" :aria-label="`Switch from ${currentTheme} mode`">
-    <img v-if="currentTheme === 'light'" src="@/assets/sun.svg" alt="Light mode" class="w-5 h-5" />
-    <img
-      v-else-if="currentTheme === 'dark'"
-      src="@/assets/moon.svg"
-      alt="Dark mode"
-      class="w-5 h-5"
-    />
-    <img v-else src="@/assets/device.svg" alt="Device mode" class="w-5 h-5" />
+    <SunIcon v-if="currentTheme === 'light'" class="w-5 h-5" />
+    <MoonIcon v-else-if="currentTheme === 'dark'" class="w-5 h-5" />
+    <DeviceIcon v-else class="w-5 h-5" />
   </button>
 </template>
 
 <script setup lang="ts">
+import DeviceIcon from "@/components/icons/DeviceIcon.vue"
+import MoonIcon from "@/components/icons/MoonIcon.vue"
+import SunIcon from "@/components/icons/SunIcon.vue"
 import { onMounted, ref } from "vue"
 
 const currentTheme = ref("device")

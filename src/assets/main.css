@@ -7,8 +7,6 @@
 
 @theme {
   --font-hanken-grotesk: "Hanken Grotesk", sans-serif;
-  --svg-gray: brightness(0) saturate(100%) invert(88%) sepia(5%) saturate(245%) hue-rotate(162deg)
-    brightness(96%) contrast(95%);
 }
 
 #app {
@@ -44,7 +42,11 @@ pre > code {
 }
 
 .nav-button {
-  @apply flex items-center justify-center p-2 border border-gray-200 dark:border-gray-700 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer mb-4 bg-white dark:bg-gray-800 dark:[&>img]:filter-(--svg-gray);
+  @apply flex items-center justify-center p-2 border border-gray-200 dark:border-gray-700 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer mb-4 bg-white dark:bg-gray-800 dark:[&>svg]:text-gray-200;
+}
+
+.icon {
+  @apply dark:[&>svg]:text-gray-200;
 }
 
 .katex > span {

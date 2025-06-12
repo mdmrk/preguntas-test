@@ -8,16 +8,13 @@
       @click.prevent.stop="navigateToRepository"
       class="absolute right-0 top-0 h-full w-16 flex items-center justify-center cursor-pointer transition-all rounded-r-4xl bg-white/10 hover:bg-white/25 border-l border-white/20 z-10"
     >
-      <img
-        src="@/assets/list-check.svg"
-        class="w-6 h-6 filter-(--svg-gray) transition-transform"
-        alt="check"
-      />
+      <ListCheckIcon class="w-5" />
     </div>
     <div class="translate-y-7"><slot /></div>
   </button>
 </template>
 <script setup lang="ts">
+import ListCheckIcon from "@/components/icons/ListCheckIcon.vue"
 import { useRouter } from "vue-router"
 const router = useRouter()
 interface Props {
