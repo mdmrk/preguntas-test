@@ -39,15 +39,20 @@
         <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 flex overflow-hidden">
           <div
             v-if="answeredQuestions > 0"
-            class="bg-green-500 dark:bg-green-400 rounded-l-full"
-            :style="{ width: `${(correctAnswers / questions.length) * 100}%` }"
+            class="bg-green-500 dark:bg-green-400 transition-all duration-300"
+            :class="{ 'rounded-l-full': true, 'rounded-r-full': failedAnswers === 0 }"
+            :style="{ width: `${correctAnswersPercentage}%` }"
           ></div>
           <div
-            v-if="answeredQuestions > 0"
-            class="bg-red-500 dark:bg-red-400"
-            :style="{ width: `${(failedAnswers / questions.length) * 100}%` }"
+            v-if="answeredQuestions > 0 && failedAnswers > 0"
+            class="bg-red-500 dark:bg-red-400 transition-all duration-300"
+            :class="{ 'rounded-r-full': true }"
+            :style="{ width: `${failedAnswersPercentage}%` }"
           ></div>
-          <div class="bg-gray-300 dark:bg-gray-600 flex-1 rounded-r-full"></div>
+          <div
+            v-if="answeredQuestions === 0"
+            class="bg-gray-300 dark:bg-gray-600 flex-1 rounded-full"
+          ></div>
         </div>
       </div>
 
@@ -257,6 +262,11 @@ const failedAnswers = computed(() => {
 const correctAnswersPercentage = computed(() => {
   if (answeredQuestions.value === 0) return 0
   return (correctAnswers.value / answeredQuestions.value) * 100
+})
+
+const failedAnswersPercentage = computed(() => {
+  if (answeredQuestions.value === 0) return 0
+  return (failedAnswers.value / answeredQuestions.value) * 100
 })
 
 const selectOption = (optionIndex: number) => {
