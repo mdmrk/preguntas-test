@@ -946,7 +946,8 @@ O: Siempre es mayor o igual que la mejor solución posible alcanzada.
 O: Asegura un ahorro en la comprobación de todas las soluciones factibles.
 A: 1
 
-Q: ¿Qué cota se deduce de la siguiente relación de recurrencia?$f(n) = \begin{cases} 1 & n = 1 \\ n + 4f(\frac{n}{2}) & n > 1 \end{cases}$
+Q: ¿Qué cota se deduce de la siguiente relación de recurrencia?
+$f(n) = \begin{cases} 1 & n = 1 \\ n + 4f(\frac{n}{2}) & n > 1 \end{cases}$
 O: $f(n) \in \Theta(n^2)$
 O: $f(n) \in \Theta(n)$
 O: $f(n) \in \Theta(n \log n)$
@@ -1660,7 +1661,8 @@ O: No tiene porqué, la complejidad temporal no depende únicamente del tamaño 
 O: Sí, siempre, en Divide y Vencerás la complejidad temporal depende únicamente del tamaño de los subproblemas.
 A: 1
 
-Q: ¿Cuál es la solución a la siguiente relación de recurrencia?$f(n) = \begin{cases} \Theta(1) & n = 0 \\ \Theta(1) + f(n/3) & n > 0 \end{cases}$
+Q: ¿Cuál es la solución a la siguiente relación de recurrencia
+?$f(n) = \begin{cases} \Theta(1) & n = 0 \\ \Theta(1) + f(n/3) & n > 0 \end{cases}$
 O: $f(n) \in \Theta(\log(n))$.
 O: $f(n) \in \Theta(n/3)$.
 O: Ninguna de las otras dos es cierta.
@@ -2541,7 +2543,8 @@ O: $\Theta(n)$
 O: $\Theta(n^2)$
 A: 1
 
-Q: Dada la siguiente relación de recurrencia, ¿Qué cota es verdadera?$f(n) = \begin{cases} 1 & n = 1 \\ n + 2f(n-1) & n \geq 1 \end{cases}$
+Q: Dada la siguiente relación de recurrencia, ¿Qué cota es verdadera?
+$f(n) = \begin{cases} 1 & n = 1 \\ n + 2f(n-1) & n \geq 1 \end{cases}$
 O: $f(n) \in \Omega(2^n)$
 O: $f(n) \in \Theta(n^2)$
 O: $f(n) \in \Theta(2^n)$
