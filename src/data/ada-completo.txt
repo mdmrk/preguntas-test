@@ -3005,9 +3005,9 @@ O: Almacenar esos valores directamente en un heap que inicialmente está vacío 
 A: 0
 
 Q: ¿Cuál de las siguientes jerarquías de complejidades es la correcta?
-O: O(1)⊂O(lg n)⊂O(lg lg n) ⊂ ...
-O: ... ⊂ (n!)⊂O(2^n) ⊂O(n^n)
-O: ... ⊂ (2^n)⊂O(n!) ⊂O(n^n)
+O: $O(1) \subset O(\lg n) \subset O(\lg \lg n) \subset ...$
+O: $... \subset O(n!) \subset O(2^n) \subset O(n^n)$
+O: $... \subset O(2^n) \subset O(n!) \subset O(n^n)$
 A: 2
 
 Q: Considera el algoritmo descrito a continuacion. Si consideramos como medida significativa el numero de movimientos del vector instrucciones 1 y 3 entonces el algoritmo tiene un coste:
