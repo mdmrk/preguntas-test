@@ -12,6 +12,7 @@ export class QuizLoader {
 
       let questionText = ""
       let correctAnswerIndex = -1
+      let image: string | undefined = undefined
       const options: string[] = []
       let parsingQuestion = false
       let parsingOption = false
@@ -20,7 +21,12 @@ export class QuizLoader {
       for (let j = 0; j < lines.length; j++) {
         const line = lines[j]
 
-        if (line.startsWith("Q:")) {
+        if (line.startsWith("O:")) {
+          options.push(line.substring(2))
+          currentOptionIndex = options.length - 1
+          parsingQuestion = false
+          parsingOption = true
+        } else if (line.startsWith("Q:")) {
           questionText = line.substring(2)
           parsingQuestion = true
           parsingOption = false
@@ -28,11 +34,10 @@ export class QuizLoader {
           correctAnswerIndex = parseInt(line.substring(2))
           parsingQuestion = false
           parsingOption = false
-        } else if (line.startsWith("O:")) {
-          options.push(line.substring(2))
-          currentOptionIndex = options.length - 1
+        } else if (line.startsWith("I:")) {
+          image = line.substring(2).trim()
           parsingQuestion = false
-          parsingOption = true
+          parsingOption = false
         } else if (parsingQuestion) {
           questionText += line + "\n"
         } else if (parsingOption && currentOptionIndex >= 0) {
@@ -45,7 +50,8 @@ export class QuizLoader {
           id: questionId++,
           question: questionText.trim(),
           options: options.map((option) => option.trim()),
-          correctAnswer: correctAnswerIndex
+          correctAnswer: correctAnswerIndex,
+          image: image
         })
       }
     }

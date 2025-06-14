@@ -56,107 +56,8 @@
         </div>
       </div>
 
-      <div v-if="currentQuestion">
-        <div class="mb-6">
-          <div class="text-base font-semibold text-gray-900 dark:text-white mb-3 flex-1">
-            <TextRenderer :text="currentQuestion.question" />
-          </div>
-        </div>
-
-        <div class="space-y-3 mb-6">
-          <div
-            v-for="(option, optionIndex) in currentQuestion.options"
-            :key="optionIndex"
-            class="flex items-center p-4 rounded-lg border"
-            :class="[
-              !showAnswer
-                ? 'cursor-pointer hover:bg-blue-50 hover:border-blue-300 hover:shadow-md dark:hover:bg-blue-900/10 dark:hover:border-blue-600'
-                : 'cursor-default',
-              showAnswer && optionIndex === currentQuestion.correctAnswer
-                ? 'bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-700'
-                : showAnswer &&
-                    selectedOption === optionIndex &&
-                    optionIndex !== currentQuestion.correctAnswer
-                  ? 'bg-red-50 border-red-200 dark:bg-red-900/20 dark:border-red-700'
-                  : 'bg-gray-50 border-gray-200 dark:bg-gray-700 dark:border-gray-600'
-            ]"
-            @click="selectOption(optionIndex)"
-          >
-            <div class="flex items-center w-full">
-              <div
-                class="w-4 h-4 rounded-full border-2 mr-4 flex items-center justify-center"
-                :class="[
-                  showAnswer && optionIndex === currentQuestion.correctAnswer
-                    ? 'border-green-500 bg-green-500'
-                    : showAnswer &&
-                        selectedOption === optionIndex &&
-                        optionIndex !== currentQuestion.correctAnswer
-                      ? 'border-red-500 bg-red-500'
-                      : 'border-gray-300 dark:border-gray-600'
-                ]"
-              >
-                <div
-                  v-if="
-                    showAnswer &&
-                    (optionIndex === currentQuestion.correctAnswer ||
-                      selectedOption === optionIndex)
-                  "
-                  class="w-2 h-2 rounded-full bg-white"
-                ></div>
-              </div>
-              <span
-                class="text-base font-medium flex-1"
-                :class="[
-                  showAnswer && optionIndex === currentQuestion.correctAnswer
-                    ? 'text-green-800 dark:text-green-300'
-                    : showAnswer &&
-                        selectedOption === optionIndex &&
-                        optionIndex !== currentQuestion.correctAnswer
-                      ? 'text-red-800 dark:text-red-300'
-                      : 'text-gray-700 dark:text-gray-300'
-                ]"
-              >
-                <TextRenderer :text="option" />
-              </span>
-              <div
-                v-if="showAnswer && optionIndex === currentQuestion.correctAnswer"
-                class="ml-auto"
-              >
-                <CheckIcon class="w-5 text-green-600 dark:text-green-400" />
-              </div>
-              <div
-                v-if="
-                  showAnswer &&
-                  selectedOption === optionIndex &&
-                  optionIndex !== currentQuestion.correctAnswer
-                "
-                class="ml-auto"
-              >
-                <XIcon class="w-5 text-red-600 dark:text-red-400" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex justify-center items-center">
-          <div class="flex space-x-3">
-            <button
-              v-if="showAnswer && currentQuestionIndex < questions.length - 1"
-              @click="nextQuestion"
-              class="cursor-pointer px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg"
-            >
-              Siguiente
-            </button>
-
-            <button
-              v-if="showAnswer && currentQuestionIndex === questions.length - 1"
-              @click="finishQuiz"
-              class="cursor-pointer px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg"
-            >
-              Finalizar
-            </button>
-          </div>
-        </div>
+      <div v-if="currentQuestion && !quizFinished">
+        <QuizQuestion :question="currentQuestion" @answered="handleAnswer" @next="nextQuestion" />
       </div>
 
       <div
@@ -192,7 +93,7 @@
             @click="restartQuiz"
             class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg"
           >
-            Reintentar Quiz
+            Reintentar
           </button>
         </div>
       </div>
@@ -205,10 +106,8 @@
 </template>
 
 <script setup lang="ts">
-import CheckIcon from "@/components/icons/CheckIcon.vue"
 import LoadingSpinnerIcon from "@/components/icons/LoadingSpinnerIcon.vue"
-import XIcon from "@/components/icons/XIcon.vue"
-import TextRenderer from "@/components/TextRenderer.vue"
+import QuizQuestion from "@/components/QuizQuestion.vue"
 import { QuizLoader } from "@/composables/useQuizLoader"
 import "katex/dist/katex.min.css"
 import { computed, onMounted, ref } from "vue"
@@ -219,8 +118,6 @@ const quizContent = ref("")
 const loading = ref(true)
 const currentQuestionIndex = ref(0)
 const answers = ref<Array<{ questionId: number; selectedOption: number; isCorrect: boolean }>>([])
-const selectedOption = ref<number | null>(null)
-const showAnswer = ref(false)
 const quizFinished = ref(false)
 
 const quizId = computed(() => route.params.id as string)
@@ -269,38 +166,25 @@ const failedAnswersPercentage = computed(() => {
   return (failedAnswers.value / answeredQuestions.value) * 100
 })
 
-const selectOption = (optionIndex: number) => {
-  if (!showAnswer.value && currentQuestion.value) {
-    selectedOption.value = optionIndex
-
-    const answerData = {
-      questionId: currentQuestion.value.id,
-      selectedOption: optionIndex,
-      isCorrect: optionIndex === currentQuestion.value.correctAnswer
-    }
-
-    answers.value.push(answerData)
-    showAnswer.value = true
-  }
+const handleAnswer = (answer: {
+  questionId: number
+  selectedOption: number
+  isCorrect: boolean
+}) => {
+  answers.value.push(answer)
 }
 
 const nextQuestion = () => {
   if (currentQuestionIndex.value < questions.value.length - 1) {
     currentQuestionIndex.value++
-    selectedOption.value = null
-    showAnswer.value = false
+  } else {
+    quizFinished.value = true
   }
-}
-
-const finishQuiz = () => {
-  quizFinished.value = true
 }
 
 const restartQuiz = () => {
   currentQuestionIndex.value = 0
   answers.value = []
-  selectedOption.value = null
-  showAnswer.value = false
   quizFinished.value = false
 }
 </script>

@@ -25,53 +25,7 @@
           </span>
         </div>
 
-        <div class="mb-6">
-          <div class="text-base font-semibold text-gray-900 dark:text-white mb-3">
-            <TextRenderer :text="question.question" />
-          </div>
-        </div>
-
-        <div class="space-y-3 mb-4">
-          <div
-            v-for="(option, optionIndex) in question.options"
-            :key="optionIndex"
-            class="flex items-center p-3 rounded-lg border transition-colors"
-            :class="[
-              optionIndex === question.correctAnswer
-                ? 'bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-700'
-                : 'bg-gray-50 border-gray-200 dark:bg-gray-700 dark:border-gray-600'
-            ]"
-          >
-            <div class="flex items-center flex-1 min-w-0">
-              <div
-                class="flex-shrink-0 w-4 h-4 rounded-full border-2 mr-3 flex items-center justify-center"
-                :class="[
-                  optionIndex === question.correctAnswer
-                    ? 'border-green-500 bg-green-500'
-                    : 'border-gray-300 dark:border-gray-600'
-                ]"
-              >
-                <div
-                  v-if="optionIndex === question.correctAnswer"
-                  class="w-2 h-2 rounded-full bg-white"
-                ></div>
-              </div>
-              <span
-                class="text-sm font-medium truncate"
-                :class="[
-                  optionIndex === question.correctAnswer
-                    ? 'text-green-800 dark:text-green-300'
-                    : 'text-gray-700 dark:text-gray-300'
-                ]"
-              >
-                <TextRenderer :text="option" />
-              </span>
-            </div>
-            <div v-if="optionIndex === question.correctAnswer" class="ml-2 flex-shrink-0">
-              <CheckIcon class="text-green-600 dark:text-green-400 w-4" />
-            </div>
-          </div>
-        </div>
+        <QuizQuestion :question="question" :read-only="true" />
       </div>
     </div>
 
@@ -82,9 +36,8 @@
 </template>
 
 <script setup lang="ts">
-import CheckIcon from "@/components/icons/CheckIcon.vue"
 import LoadingSpinnerIcon from "@/components/icons/LoadingSpinnerIcon.vue"
-import TextRenderer from "@/components/TextRenderer.vue"
+import QuizQuestion from "@/components/QuizQuestion.vue"
 import { QuizLoader } from "@/composables/useQuizLoader"
 import type { Question } from "@/types/quiz"
 import "katex/dist/katex.min.css"

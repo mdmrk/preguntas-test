@@ -784,13 +784,6 @@ O: Diseño, Agenda y Transición
 O: Problema, Personal y Proceso
 O: Diseño, Implementación y Feedback
 
-Q: ¿Qué ocurriría si en un proyecto el valor EVA de CPTR supera al valor CPTP?
-A: 1
-O: El proyecto va atrasado
-O: El proyecto va adelantado
-O: Es una situación indeseable
-O: Necesitamos contratar más personal
-
 Q: Somos una empresa desarrolladora de una aplicación que recoge datos de análisis médicos del usuario (tensión arterial, nivel de glucosa, nivel de colesterol, etc.). Si recurrimos a la herramienta gratuita de Facilita 2.0 ...¿qué datos hay que completar o indicar que vamos a recolectar?
 A: 1
 O: Hay que indicar que nos dedicamos al sector de la sanidad, teniendo que indicar después en qué provincia nos situamos para que nos genere los documentos necesarios para situar al pie de nuestra aplicación y así cumplir la LGPD al 100%
@@ -826,33 +819,12 @@ O: Marcan el final de una actividad en proceso de desarrollo
 O: Son resultados del proyecto que se entregan a los clientes
 O: Un hito es comúnmente conocido como welwitschia mirabilis, descubierto en 1922 por Howard Carter, oriundo de Maryland, EEUU
 
-Q: ¿Qué ocurriría si en un proyecto el valor EVA de BCWS supera al valor CPTR?
-A: 0
-O: El proyecto va atrasado
-O: Tenemos que abortar el proyecto, puesto que estamos en la situación "inaceptable"
-O: El proyecto va con margen de tiempo
-O: Nos indica que tenemos que prescindir de personal ya que estamos gastando más de lo previsto
-
-Q: ¿Cuáles son las ventajas de usar la Ley de Parkinson para estimar los costes de un proyecto?
-A: 3
-O: La empresa desarrolladora consigue el contrato
-O: Es preciso si se dispone de los datos adecuados
-O: No realiza presupuestos abultados
-O: Método barato, además la estimación puede ser bastante precisa si se dispone de los expertos adecuados
-
 Q: La gestión de proyectos ...
 A: 0
 O: Tiene como objetivo determinar qué hay que hacer, cómo hay que hacerlo y quién tiene que hacerlo
 O: Está fuertemente condicionada por la implementación del sistema
 O: Está fuertemente condicionada el diseño del sistema
 O: Tiene como objetivo el confeccionar una agenda del proyecto
-
-Q: ¿Qué tarea no podemos realizar en Microsoft Project?
-A: 2
-O: Todas las tareas de estas contestaciones se pueden realizar en Microsoft Project
-O: La planificación detallada de todo el proyecto
-O: La estimación del proyecto
-O: El seguimiento del proyecto
 
 Q: ¿Qué beneficios tiene las metodologías ágiles?
 A: 1
@@ -869,7 +841,6 @@ O: Va atrasada respecto a la agenda
 O: No podemos saber si ha terminado sin conocer su BAC
 
 Q: Tenemos un proyecto con los siguientes datos del modelo EVA. ¿Cuál de las siguientes afirmaciones es falsa?
-```
 +-------+------+------+------+------+
 | Tarea | BCWS | BCWP | ACWP | BAC  |
 +-------+------+------+------+------+
@@ -883,12 +854,18 @@ Q: Tenemos un proyecto con los siguientes datos del modelo EVA. ¿Cuál de las s
 +-------+------+------+------+------+
 | Tarea4| 0    | 0    | 0    | 600  |
 +-------+------+------+------+------+
-```
 A: 0
 O: La tarea 0 va retrasada y consumiendo más de lo previsto
 O: La tarea 1 ha comenzado y está realizada al 50%, va desarrollándose en el tiempo previsto y gastando también lo previsto
 O: La tarea 3 va adelantada y consumiendo menos de lo previsto
 O: La tarea 4 aún no ha comenzado
+
+Q: En la pirámide de Maslow ¿dónde se encuentran la mayoría de jefes de proyecto?
+A: 3
+O: Necesidades de estima
+O: No les afecta esta jerarquía, es solo para empleados
+O: Necesidades de seguridad
+O: Necesidades de autorrealización
 
 Q: La necesidad de ........ es una de las mayores razones para la comunicación en un proyecto.
 A: 2
@@ -1058,3 +1035,272 @@ O: Alto
 O: Medio
 O: Muy alto
 O: Bajo
+
+Q: Analizando los valores EVA de la imagen...¿qué podemos decir de la tarea 4?
+A: 2
+I: gpi001.png
+O: El valor BCWP es erróneo
+O: Debería haber comenzado y no lo ha hecho
+O: El valor ACWP es erróneo
+O: No debería haber comenzado pero sí lo ha hecho
+
+Q: Analizando los valores EVA de la imagen...¿qué podemos decir de la tarea 2?
+I: gpi002.png
+A: 3
+O: Todas son ciertas
+O: Va retrasada
+O: No ha comenzado
+O: Debería haber comenzado
+
+Q: Analizando los valores EVA de la imagen...¿qué podemos decir del proyecto en su conjunto?
+I: gpi003.png
+A: 2
+O: El proyecto va adelantado y su productividad es alta
+O: El proyecto va adelantado y su productividad es baja
+O: El proyecto va atrasado y su productividad es baja
+O: El proyecto va atrasado y su productividad es alta
+
+Q: Analizando los valores EVA de la imagen...¿qué podemos decir de la tarea 1?
+I: gpi004.png
+A: 3
+O: Ha gastado menos de lo previsto
+O: Va adelantada respecto a la agenda
+O: Va atrasada respecto a la agenda
+O: No podemos saber si ha terminado
+
+Q: Analizando los valores EVA de la imagen...¿qué podemos decir de la tarea 3?
+I: gpi005.png
+A: 0
+O: Está gastando menos de lo previsto
+O: Va retrasada
+O: No ha comenzado
+O: Todas son falsas
+
+Q: Tenemos tres actividades: A,B y C. A precede a B. Las holguras son: HT(A)=4,HL(A)=3; HT(B)=2,HL(B)=2;HT(C)=3,HL(C)=3. Si A se retrasa 4 días, ¿qué ocurre con B y C?
+A: 3
+O: La HT de B y C pasa a ser de 1 y 2 días respectivamente
+O: Nada
+O: Ninguna de las anteriores es cierta
+O: B se convierte en crítica
+
+Q: ¿Qué ocurriría si en un proyecto el valor EVA de BCWS supera al valor CPTR?
+A: 0
+O: El proyecto va atrasado
+O: Tenemos que abortar el proyecto, puesto que estamos en la situación "inaceptable"
+O: El proyecto va con margen de tiempo
+O: Nos indica que tenemos que prescindir de personal ya que estamos gastando más de lo previsto
+
+Q: ¿Cuáles son las ventajas de usar la Ley de Parkinson para estimar los costes de un proyecto?
+A: 2
+O: La empresa desarrolladora consigue el contrato
+O: Es preciso si se dispone de los datos adecuados
+O: No realiza presupuestos abultados
+O: Método barato, además la estimación puede ser bastante precisa si se dispone de los expertos adecuados
+
+Q: En el siguiente diagrama Gantt ¿qué modelo de proceso se está siguiendo?
+I: gpi006.png
+A: 3
+O: Desarrollo Rápido de aplicaciones
+O: Cascada
+O: Prototipado
+O: Todos los anteriores
+
+Q: En el análisis EVA, la tarea/proyecto está por debajo de lo presupuestado si:
+A: 1
+O: BCWP < ACWP
+O: BCWP > ACWP
+O: BCWP > ACWS
+O: BCWP < ACWS
+
+Q: El Plan detallado de un proyecto…
+A: 1
+O: Contiene todas las actividades incluidas en el plan general
+O: Todas son falsas
+O: Se hace siempre de dos en dos iteraciones
+O: Solo corresponde a una fase del proyecto
+
+Q: Según la LPI, ¿Cuál de las siguientes figuras tienen un plazo de protección indefinido?
+A: 1
+O: Marcas
+O: Secretos comerciales
+O: Patentes
+O: Derecho de autor
+
+Q: ¿Qué tarea no hemos realizado en Microsoft Project?
+A: 2
+O: La planificación detallada de todo el proyecto
+O: El seguimiento del proyecto
+O: La estimación del proyecto
+O: No hemos realizado ninguna de las anteriores en Microsoft Project
+
+Q: Analizando los valores de los parámetros EVA... ¿Qué podemos decir del proyecto en su conjunto?
+A: 3
+O: El proyecto va adelantado y su productividad es baja
+O: El proyecto va atrasado y su productividad es alta
+O: El proyecto va adelantado y su productividad es alta
+O: El proyecto va atrasado y su productividad es baja
+
+Q: Analizando los valores de los parámetros EVA... ¿Qué podemos decir de la tarea 1?
+A: 0
+O: No podemos saber si ha terminado sin conocer su BAC
+O: Ha gastado menos de lo previsto
+O: Va adelantada respecto a la agenda
+O: Va atrasada respecto a la agenda
+
+Q: Analizando los valores de los parámetros EVA... ¿Qué podemos decir de la tarea 2?
+A: 3
+O: No ha comenzado
+O: Debería haber comenzado
+O: Va retrasada
+O: Todas son ciertas
+
+Q: Analizando los valores de los parámetros EVA... ¿Qué podemos decir de la tarea 3?
+A: 2
+O: No ha comenzado
+O: Va retrasada
+O: Está gastando menos de lo previsto
+O: Todas son falsas
+
+Q: Analizando los valores de los parámetros EVA... ¿Qué podemos decir de la tarea 4?
+A: 3
+O: Debería haber comenzado y no lo ha hecho
+O: El valor BCWP es erróneo
+O: No debería haber comenzado pero sí lo ha hecho
+O: El valor ACWP es erróneo
+
+Q: ¿Qué podemos decir de la tarea 1?
+I: gpi007.png
+A: 3
+O: Ha gastado menos de lo previsto
+O: Va adelantada respecto a la agenda
+O: Va atrasada respecto a la agenda
+O: No podemos saber si ha terminado
+
+Q: ¿Qué podemos decir de la tarea 2?
+I: gpi008.png
+A: 3
+O: No ha comenzado
+O: Debería haber comenzado
+O: Va retrasada
+O: Todas son ciertas
+
+Q: ¿Qué podemos decir de la tarea 3?
+I: gpi009.png
+A: 0
+O: Está gastando menos de lo previsto
+O: Va retrasada
+O: No ha comenzado
+O: Todas son falsas
+
+Q: ¿Qué podemos decir de la tarea 4?
+I: gpi010.png
+A: 2
+O: Debería haber comenzado y no lo ha hecho
+O: El valor BCWP es erróneo
+O: El valor ACWP es erróneo
+O: No debería haber comenzado pero sí lo ha hecho
+
+Q: ¿Qué podemos decir del proyecto en su conjunto?
+I: gpi011.png
+A: 3
+O: El proyecto va adelantado y su productividad es baja
+O: El proyecto va atrasado y su productividad es alta
+O: El proyecto va adelantado y su productividad es alta
+O: El proyecto va atrasado y su productividad es baja
+
+Q: ¿Cuál de las siguientes afirmaciones es cierta?
+A: 2
+O: El conocimiento semántico se adquiere mediante memorización
+O: El conocimiento sintáctico se adquiere mediante experiencia y aprendizaje activo
+O: Ninguna de las anteriores
+O: El nuevo conocimiento semántico puede interferir con conocimiento semántico ya existente
+
+Q: La LOPDGDD no será de aplicación en el caso de
+A: 1
+O: Materias consideradas clasificadas
+O: Todas son ciertas
+O: Datos de personas fallecidas
+O: Datos ya excluidos en el RGPD
+
+Q: ¿Qué podemos decir de una tarea si conocemos los valores BCWS=1200 y BCWP=ACWP?
+A: 2
+O: Todas son ciertas
+O: Va retrasada
+O: Debería haber comenzado
+O: No ha comenzado
+
+Q: ¿Cuál de los siguientes tipos de licencia no es propia del software libre?
+A: 1
+O: Creative Commons
+O: OEM
+O: GPL
+O: BSD
+
+Q: En el modelo UP…
+A: 2
+O: La fase de inicio siempre consta de una única iteración
+O: La fase de Transición suele ser la de mayor duración
+O: Las iteraciones pueden tener duraciones distintas
+O: El número de iteraciones es igual en todas las fases
+
+Q: Tenemos tres actividades: A, B y C. A precede a B. Las holguras totales son: HT(A)=2,HT(B)=4,HT(C)=3. Las holguras libres son HL(A)=3,HL(B)=2,HL(C)=3. Si A se retrasa 2 días. ¿qué les ocurre a B y C?
+A: 2
+O: Nada, ya que no sobrepasamos la holgura total de A
+O: La holgura total de B y C pasa a ser de 2 y 1 días respectivamente
+O: B se convierte en crítica
+O: Las condiciones iniciales no se pueden dar
+
+Q: En el análisis EVA, la tarea/proyecto está por encima de lo presupuesto si:
+A: 2
+O: BCWP>BCWS
+O: BCWP>ACWP
+O: BCWP<ACWP
+O: BCWP-ACWP
+
+Q: Según la LOPDGDD ¿A partir de qué edad puede un menor expresar el consentimiento en términos de protección de datos?
+A: 2
+O: 18 años
+O: 16 años
+O: 14 años
+O: El padre o tutor legal será el que lo haga en su nombre mientras forme parte de la unidad familiar
+
+Q: ¿Cuál es la distribución de tiempo dentro de un equipo de desarrollo?
+A: 1
+O: 30% Trabajando sólo, 20% actividades de gestión, 50% Interactuando con otra gente
+O: 30% Trabajando sólo, 20% actividades no productivas, 50% Interactuando con otra gente
+O: 20% Implementando, 30% Interactuando con otra gente y 50% en actividades de gestión
+O: 20% Trabajando sólo, 30% actividades no productivas, 50% Interactuando con otra gente
+
+Q: En el modelo UP.
+A: 3
+O: Hay una versión por iteración
+O: Tenemos una release por fase
+O: Todas las anteriores son ciertas
+O: Puede haber más de una versión por iteración
+
+Q: Indica cuál de las siguientes afirmaciones sobre dirección de proyectos es incorrecta:
+A: 2
+O: El objetivo principal de la dirección de proyectos es cumplir con los requisitos del proyecto
+O: Los cinco grupos de procesos en la dirección de proyectos son: iniciación, planificación, ejecución, seguimiento y control y cierre
+O: La dirección de proyectos no es la encargada de equilibrar las restricciones contrapuestas del proyecto
+
+Q: Ms Project es...
+A: 1
+O: Una herramienta de desarrollo de proyectos
+O: Una herramienta de seguimiento de proyectos
+O: Una herramienta de modelado de proyectos
+O: Una herramienta de estimación de costes de proyectos
+
+Q: ¿Qué ocurriría si en un proyecto el valor EVA de CPTR supera al valor CPTP?
+A: 1
+O: El proyecto va atrasado
+O: El proyecto va adelantado
+O: Es una situación indeseable
+O: Necesitamos contratar más personal
+
+Q: ¿Qué tarea no podemos realizar en Microsoft Project?
+A: 2
+O: Todas las tareas de estas contestaciones se pueden realizar en Microsoft Project
+O: La planificación detallada de todo el proyecto
+O: La estimación del proyecto
+O: El seguimiento del proyecto
