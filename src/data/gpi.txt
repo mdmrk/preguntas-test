@@ -841,6 +841,7 @@ O: Va atrasada respecto a la agenda
 O: No podemos saber si ha terminado sin conocer su BAC
 
 Q: Tenemos un proyecto con los siguientes datos del modelo EVA. ¿Cuál de las siguientes afirmaciones es falsa?
+```
 +-------+------+------+------+------+
 | Tarea | BCWS | BCWP | ACWP | BAC  |
 +-------+------+------+------+------+
@@ -854,6 +855,7 @@ Q: Tenemos un proyecto con los siguientes datos del modelo EVA. ¿Cuál de las s
 +-------+------+------+------+------+
 | Tarea4| 0    | 0    | 0    | 600  |
 +-------+------+------+------+------+
+```
 A: 0
 O: La tarea 0 va retrasada y consumiendo más de lo previsto
 O: La tarea 1 ha comenzado y está realizada al 50%, va desarrollándose en el tiempo previsto y gastando también lo previsto

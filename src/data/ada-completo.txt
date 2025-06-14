@@ -2065,7 +2065,8 @@ O: La cantidad de espacio en memoria que se necesita para codificar una instanci
 O: El valor máximo que puede tomar una instancia cualquiera de ese problema.
 A: 1
 
-Q: Dada la siguiente función:```cppint exa(string &cad, int pri, int ult) {
+Q: Dada la siguiente función:```cpp
+int exa(string &cad, int pri, int ult) {
 	if(pri >= ult) {
 		return 1;
 	}
@@ -3422,20 +3423,6 @@ Q: En el esquema de ramificación y poda, ¿qué estructura es la más adecuada 
 O: Pila.
 O: Cola de prioridad.
 O: Cola.
-A: 2
-
-Q: Dada la siguiente función: ```cppint exa(string &cad, int pri, int ult) {
-	if(pri >= ult)
-		return 1;
-	else if(cad[pri] == cad[ult])
-		return exa(cad, pri+1, ult-1);
-	else
-		return 0;
-}
-```
-O: $O(n^2)$
-O: $O(\log n)$
-O: $O(n)$
 A: 2
 
 Q: Si $f \in \Omega(g_1)$ y $f \in \Omega(g_2)$ entonces

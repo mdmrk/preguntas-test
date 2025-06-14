@@ -2,68 +2,38 @@
   <div v-show="question.image !== undefined" class="mb-6">
     <img :src="'/quiz/' + question.image" />
   </div>
+
   <div class="mb-6">
     <div class="text-base font-semibold text-gray-900 dark:text-white mb-3 flex-1">
       <TextRenderer :text="question.question" />
     </div>
   </div>
 
-  <div class="space-y-3 mb-6">
+  <div class="space-y-3">
     <div
       v-for="(option, optionIndex) in question.options"
       :key="optionIndex"
-      class="flex items-center p-4 rounded-lg border"
-      :class="[
-        !answered
-          ? 'cursor-pointer hover:bg-blue-50 hover:border-blue-300 hover:shadow-md dark:hover:bg-blue-900/10 dark:hover:border-blue-600'
-          : 'cursor-default',
-        answered && optionIndex === question.correctAnswer
-          ? 'bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-700'
-          : answered && selectedOption === optionIndex && optionIndex !== question.correctAnswer
-            ? 'bg-red-50 border-red-200 dark:bg-red-900/20 dark:border-red-700'
-            : 'bg-gray-50 border-gray-200 dark:bg-gray-700 dark:border-gray-600'
-      ]"
+      class="flex items-center p-4 rounded-lg border transition-all duration-200"
+      :class="getOptionClasses(optionIndex)"
       @click="selectAnswer(optionIndex)"
     >
       <div class="flex items-center w-full">
         <div
           class="w-4 h-4 rounded-full border-2 mr-4 flex items-center justify-center"
-          :class="[
-            answered && optionIndex === question.correctAnswer
-              ? 'border-green-500 bg-green-500'
-              : answered && selectedOption === optionIndex && optionIndex !== question.correctAnswer
-                ? 'border-red-500 bg-red-500'
-                : 'border-gray-300 dark:border-gray-600'
-          ]"
+          :class="getRadioClasses(optionIndex)"
         >
-          <div
-            v-if="
-              answered && (optionIndex === question.correctAnswer || selectedOption === optionIndex)
-            "
-            class="w-2 h-2 rounded-full bg-white"
-          ></div>
+          <div v-if="shouldShowRadioDot(optionIndex)" class="w-2 h-2 rounded-full bg-white" />
         </div>
-        <span
-          class="text-base font-medium flex-1"
-          :class="[
-            answered && optionIndex === question.correctAnswer
-              ? 'text-green-800 dark:text-green-300'
-              : answered && selectedOption === optionIndex && optionIndex !== question.correctAnswer
-                ? 'text-red-800 dark:text-red-300'
-                : 'text-gray-700 dark:text-gray-300'
-          ]"
-        >
+
+        <span class="text-base font-medium flex-1" :class="getTextClasses(optionIndex)">
           <TextRenderer :text="option" />
         </span>
-        <div v-if="answered && optionIndex === question.correctAnswer" class="ml-auto">
+
+        <div v-if="isCorrectOption(optionIndex)" class="ml-auto">
           <CheckIcon class="w-5 text-green-600 dark:text-green-400" />
         </div>
-        <div
-          v-if="
-            answered && selectedOption === optionIndex && optionIndex !== question.correctAnswer
-          "
-          class="ml-auto"
-        >
+
+        <div v-if="isSelectedIncorrectOption(optionIndex)" class="ml-auto">
           <XIcon class="w-5 text-red-600 dark:text-red-400" />
         </div>
       </div>
@@ -81,15 +51,13 @@
     </div>
   </div>
 
-  <div v-if="answered" class="flex justify-center items-center">
-    <div class="flex space-x-3">
-      <button
-        @click="$emit('next')"
-        class="cursor-pointer px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg"
-      >
-        Siguiente
-      </button>
-    </div>
+  <div v-if="answered && !readOnly" class="flex justify-center items-center mt-6">
+    <button
+      @click="$emit('next')"
+      class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg cursor-pointer"
+    >
+      Siguiente
+    </button>
   </div>
 </template>
 
@@ -103,6 +71,7 @@ import XIcon from "./icons/XIcon.vue"
 interface Props {
   question: Question
   readOnly?: boolean
+  answered?: boolean
 }
 
 interface Emits {
@@ -112,17 +81,69 @@ interface Emits {
 
 const props = defineProps<Props>()
 const emit = defineEmits<Emits>()
-const selectedOption = ref<number | null>(null)
-const answered = ref(false)
+const selectedOption = ref<number | null>(props.answered ? props.question.correctAnswer : null)
+const answered = ref(props.answered || false)
 
-const isCorrect = computed(() => {
-  return selectedOption.value === props.question.correctAnswer
-})
+const isCorrect = computed(() => selectedOption.value === props.question.correctAnswer)
+
+const isCorrectOption = (optionIndex: number) =>
+  answered.value && optionIndex === props.question.correctAnswer
+
+const isSelectedIncorrectOption = (optionIndex: number) =>
+  answered.value &&
+  selectedOption.value === optionIndex &&
+  optionIndex !== props.question.correctAnswer
+
+const shouldShowRadioDot = (optionIndex: number) =>
+  answered.value &&
+  (optionIndex === props.question.correctAnswer || selectedOption.value === optionIndex)
+
+const getOptionClasses = (optionIndex: number) => {
+  const baseClasses = answered.value
+    ? "cursor-default"
+    : "cursor-pointer hover:bg-blue-50 hover:border-blue-300 hover:shadow-md dark:hover:bg-blue-900/10 dark:hover:border-blue-600"
+
+  if (isCorrectOption(optionIndex)) {
+    return `${baseClasses} bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-700`
+  }
+
+  if (isSelectedIncorrectOption(optionIndex)) {
+    return `${baseClasses} bg-red-50 border-red-200 dark:bg-red-900/20 dark:border-red-700`
+  }
+
+  return `${baseClasses} bg-gray-50 border-gray-200 dark:bg-gray-700 dark:border-gray-600`
+}
+
+const getRadioClasses = (optionIndex: number) => {
+  if (isCorrectOption(optionIndex)) {
+    return "border-green-500 bg-green-500"
+  }
+
+  if (isSelectedIncorrectOption(optionIndex)) {
+    return "border-red-500 bg-red-500"
+  }
+
+  return "border-gray-300 dark:border-gray-600"
+}
+
+const getTextClasses = (optionIndex: number) => {
+  if (isCorrectOption(optionIndex)) {
+    return "text-green-800 dark:text-green-300"
+  }
+
+  if (isSelectedIncorrectOption(optionIndex)) {
+    return "text-red-800 dark:text-red-300"
+  }
+
+  return "text-gray-700 dark:text-gray-300"
+}
 
 const selectAnswer = (index: number) => {
   if (answered.value || props.readOnly) return
+
   selectedOption.value = index
   answered.value = true
+
   emit("answered", {
     questionId: props.question.id,
     selectedOption: index,
@@ -130,11 +151,10 @@ const selectAnswer = (index: number) => {
   })
 }
 
-watch(
-  () => props.question,
-  () => {
-    selectedOption.value = null
-    answered.value = false
-  }
-)
+const resetQuestion = () => {
+  selectedOption.value = props.answered ? props.question.correctAnswer : null
+  answered.value = props.answered || false
+}
+
+watch(() => props.question, resetQuestion)
 </script>
