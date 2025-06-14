@@ -6,13 +6,13 @@
     <div
       v-if="id !== undefined"
       @click.prevent.stop="navigateToRepository"
-      class="absolute right-0 top-0 h-full w-16 flex items-center justify-center cursor-pointer transition-all rounded-r-4xl bg-white/10 hover:bg-white/25 border-l border-white/20 z-10"
+      class="absolute right-0 top-0 h-full w-16 flex items-center justify-center cursor-pointer rounded-r-4xl bg-white/10 hover:bg-white/25 border-l border-white/20 z-10"
     >
       <ListCheckIcon class="w-5" />
     </div>
     <div
       v-else
-      class="absolute right-0 top-0 h-full w-16 flex items-center justify-center cursor-pointer transition-all rounded-r-4xl z-10"
+      class="absolute right-0 top-0 h-full w-16 flex items-center justify-center cursor-pointer rounded-r-4xl z-10"
     >
       <CaretUpDownIcon class="w-5" />
     </div>

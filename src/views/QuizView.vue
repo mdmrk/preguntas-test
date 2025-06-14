@@ -88,7 +88,7 @@
 
           <button
             @click="restartQuiz"
-            class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors cursor-pointer"
+            class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg cursor-pointer"
           >
             Reintentar
           </button>

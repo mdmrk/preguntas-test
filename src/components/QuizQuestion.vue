@@ -13,7 +13,7 @@
     <div
       v-for="(option, optionIndex) in question.options"
       :key="optionIndex"
-      class="flex items-center p-4 rounded-lg border transition-all duration-200"
+      class="flex items-center p-4 rounded-lg border"
       :class="getOptionClasses(optionIndex)"
       @click="selectAnswer(optionIndex)"
     >
