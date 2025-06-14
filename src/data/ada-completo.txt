@@ -2867,19 +2867,6 @@ O: $\Omega(n)$ y $O(n^2)$
 O: Ninguna de las dos
 A: 1
 
-Q: Indica cuál es la complejidad en función de n, donde K es una constante (no depende de n ), del fragmento siguiente:
-```cpp
-for( int i = K; i < n - K; i++ ){ 
-	A[i] = 0; 
-	for( int j = i - K; j < i + K; j++ ) 
-		A[i] += B[j]; 
-}
-```
-O: O(n)
-O: O(n log n)
-O: O(n^2)
-A: 0
-
 Q: En un problema de optimización, si el dominio de las decisiones es un conjunto infinito,
 O: Es probable que a través de programación dinámica se obtenga un algoritmo eficaz que lo solucione.
 O: Podremos aplicar el esquema vuelta atrás siempre que se trate de un conjunto infinito numerable.
