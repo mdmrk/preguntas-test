@@ -4,16 +4,23 @@
     class="w-full h-26 font-black text-gray-50 text-7xl text-left overflow-clip pl-4 rounded-4xl cursor-pointer hover:scale-105 hover:shadow-2xl gradient-blue relative group"
   >
     <div
-      v-show="id !== undefined"
+      v-if="id !== undefined"
       @click.prevent.stop="navigateToRepository"
       class="absolute right-0 top-0 h-full w-16 flex items-center justify-center cursor-pointer transition-all rounded-r-4xl bg-white/10 hover:bg-white/25 border-l border-white/20 z-10"
     >
       <ListCheckIcon class="w-5" />
     </div>
+    <div
+      v-else
+      class="absolute right-0 top-0 h-full w-16 flex items-center justify-center cursor-pointer transition-all rounded-r-4xl z-10"
+    >
+      <CaretUpDownIcon class="w-5" />
+    </div>
     <div class="translate-y-7"><slot /></div>
   </button>
 </template>
 <script setup lang="ts">
+import CaretUpDownIcon from "@/components/icons/CaretUpDownIcon.vue"
 import ListCheckIcon from "@/components/icons/ListCheckIcon.vue"
 import { useRouter } from "vue-router"
 const router = useRouter()
