@@ -6,37 +6,14 @@
     </div>
 
     <div v-else-if="questions.length > 0" class="mb-6">
-      <div class="relative">
-        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-          <SearchIcon class="w-5 h-5 icon" />
-        </div>
-        <input
-          v-model="searchInput"
-          type="text"
-          placeholder="Buscar..."
-          class="w-full pl-10 pr-4 py-3 border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
-        />
-        <div v-if="searchInput" class="absolute inset-y-0 right-0 pr-3 flex items-center">
-          <button
-            @click="clearSearch"
-            class="text-gray-icon hover:text-gray-600 dark:hover:text-gray-300 cursor-pointer"
-          >
-            <XIcon class="w-5 h-5" />
-          </button>
-        </div>
-      </div>
-
       <div class="mt-3 text-sm text-gray-600 dark:text-gray-400">
-        <span v-if="searchQuery">
-          {{ filteredQuestions.length }} de {{ questions.length }} preguntas encontradas
-        </span>
-        <span v-else> {{ questions.length }} preguntas en total </span>
+        <span> {{ questions.length }} preguntas en total </span>
       </div>
     </div>
 
-    <div v-if="!loading && filteredQuestions.length > 0" class="space-y-6">
+    <div v-if="!loading && questions.length > 0" class="space-y-6">
       <div
-        v-for="question in filteredQuestions"
+        v-for="question in questions"
         :key="question.id"
         class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6"
       >
@@ -98,14 +75,7 @@
       </div>
     </div>
 
-    <div
-      v-else-if="!loading && questions.length > 0 && filteredQuestions.length === 0"
-      class="text-center py-12"
-    >
-      <p class="text-gray-500 dark:text-gray-400">No se encontraron resultados para tu búsqueda.</p>
-    </div>
-
-    <div v-else-if="!loading" class="text-center py-12">
+    <div v-else-if="!loading && questions.length === 0" class="text-center py-12">
       <p class="text-gray-500 dark:text-gray-400">No questions found.</p>
     </div>
   </div>
@@ -114,39 +84,18 @@
 <script setup lang="ts">
 import CheckIcon from "@/components/icons/CheckIcon.vue"
 import LoadingSpinnerIcon from "@/components/icons/LoadingSpinnerIcon.vue"
-import SearchIcon from "@/components/icons/SearchIcon.vue"
-import XIcon from "@/components/icons/XIcon.vue"
 import TextRenderer from "@/components/TextRenderer.vue"
 import { QuizLoader } from "@/composables/useQuizLoader"
 import type { Question } from "@/types/quiz"
 import "katex/dist/katex.min.css"
-import { computed, onMounted, ref, watch } from "vue"
+import { computed, onMounted, ref } from "vue"
 import { useRoute } from "vue-router"
 
 const route = useRoute()
 const quizContent = ref("")
 const loading = ref(true)
-const searchInput = ref("")
-const searchQuery = ref("")
-const DEBOUNCE_DELAY = 600
 
 const quizId = computed(() => route.params.id as string)
-
-const debounce = <T extends unknown[]>(func: (...args: T) => void, delay: number) => {
-  let timeoutId: ReturnType<typeof setTimeout>
-  return (...args: T) => {
-    clearTimeout(timeoutId)
-    timeoutId = setTimeout(() => func(...args), delay)
-  }
-}
-
-const debouncedSearch = debounce((value: string) => {
-  searchQuery.value = value
-}, DEBOUNCE_DELAY)
-
-watch(searchInput, (newValue) => {
-  debouncedSearch(newValue)
-})
 
 onMounted(async () => {
   try {
@@ -165,27 +114,6 @@ const questions = computed(() => {
   if (!quizContent.value) return []
   return loader.parseQuizText(quizContent.value)
 })
-
-const filteredQuestions = computed(() => {
-  if (!searchQuery.value.trim()) {
-    return questions.value
-  }
-
-  const query = searchQuery.value.toLowerCase().trim()
-
-  return questions.value.filter((question) => {
-    const titleMatch = question.question.toLowerCase().includes(query)
-
-    const optionsMatch = question.options.some((option) => option.toLowerCase().includes(query))
-
-    return titleMatch || optionsMatch
-  })
-})
-
-const clearSearch = () => {
-  searchInput.value = ""
-  searchQuery.value = ""
-}
 
 const getOriginalQuestionNumber = (question: Question) => {
   return questions.value.findIndex((q) => q.id === question.id) + 1
