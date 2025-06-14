@@ -2296,7 +2296,7 @@ O: Lineal con la longitud del vector
 O: Cuadrática con la longitud del vector
 A: 1
 
-Q: Una empresa de mensajería tiene n repartidores con distintos tiempos de entrega según el tipo de envío. Se trata de asignar los próximos n envíos, uno a cada repartidor, minimizando el tiempo total de todos los envíos. Para ello se conoce de antemano una tabla de tiempos en la que el valor $t_{ij}$ corresponde al tiempo que emplea el repartidor i en realizar el envío j. De entre las estrategias que se citan, ¿cuál sería la eficiente para resolver el problema?
+Q: Una empresa de mensajería tiene n repartidorefs con distintos tiempos de entrega según el tipo de envío. Se trata de asignar los próximos n envíos, uno a cada repartidor, minimizando el tiempo total de todos los envíos. Para ello se conoce de antemano una tabla de tiempos en la que el valor $t_{ij}$ corresponde al tiempo que emplea el repartidor i en realizar el envío j. De entre las estrategias que se citan, ¿cuál sería la eficiente para resolver el problema?
 O: Algoritmo voraz.
 O: Vuelta atrás.
 O: Ramificación y poda.
@@ -4184,7 +4184,9 @@ O: IV I, II y III conjuntamente
 O: II el árbol es equilibrado
 A: 2
 
-Q: El recorrido en profundidad de un grafo G no dirigido ha producido el árbol que se muestra en el que cada nodo esta numerad siguiendo el orden de visita del recorrido en profundidad```     1
+Q: El recorrido en profundidad de un grafo G no dirigido ha producido el árbol que se muestra en el que cada nodo esta numerad siguiendo el orden de visita del recorrido en profundidad
+```
+     1
     /|\
    2 6 7
   /   
