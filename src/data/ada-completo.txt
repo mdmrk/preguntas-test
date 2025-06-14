@@ -503,16 +503,6 @@ O: Si el árbol es binario de la raíz a las hojas igual que si es un árbol en 
 O: Se construye empezando por la raíz luego por la izquierda y después por la derecha hasta llegar a las hojas si es binario ordenado y de las hojas a la raíz si es binario
 A: 0
 
-Q: ¿Cuál es la complejidad, en función de n, del siguiente fragmento: (suponed que A está definido como `vector<int> A(n)` y `sort()` es la función de ordenación de la librería estándar de C++, que tiene la mejor complejidad, temporal y espacial, posible para un algoritmo de ordenación de propósito general.) ```cppstd::sort(begin(A), end(A));
-int acc = 0;
-for(auto i : A)
-	acc += i;
-```
-O: $\Theta(n \log n)$
-O: $\Theta(n)$
-O: $\Theta(n^2)$
-A: 0
-
 Q: Tratandose de un esquema general para resolver problemas de maximizacion ¿que falta en el hueco? `Solution BB(Problem p) if(????????????)`
 O: `n.pesimistic_b() <= pb`
 O: `n.optimistic_b() >= pb`
@@ -4181,16 +4171,6 @@ O: Calcular la matriz de cierre transitivo
 O: Kruskal es el mas adecuado para lograr este objetivo
 A: 2
 
-Q: ¿Cuál es la complejidad, en función de n, del siguiente fragmento: (suponed que A está definido como `vector<int> A(n)` y `sort()` es la función de ordenación de la librería estándar de C++, que tiene la mejor complejidad, temporal y espacial, posible para un algoritmo de ordenación de propósito general.)```cppstd::sort(begin(A), end(A));
-int acc = 0;
-for (auto i : A)
-	acc += i;
-```
-O: $\Theta(n^2)$
-O: $\Theta(n \log n)$
-O: $\Theta(n)$
-A: 1
-
 Q: Un programa con dos bucles anidados, el primero hace n iteraciones y el segundo la mitad...
 O: $O(n \log(n))$
 O: $O(n\sqrt{n})$
@@ -5407,7 +5387,9 @@ O: $\Theta(n) \subset \Theta(n^2)$
 O: $\Theta(n) \subset O(n)$
 A: 1
 
-Q: ¿Cuál es la complejidad, en función de n, del siguiente fragmento: (suponed que A está definido como `vector<int>A(n)` y `sort()` es la función de ordenación de la librería estándar de C++, que tiene la mejor complejidad, temporal y espacial, posible para un algoritmo de ordenación de propósito general.)```cppstd::sort(begin(A), end(A));
+Q: ¿Cuál es la complejidad, en función de n, del siguiente fragmento: (suponed que A está definido como `vector<int>A(n)` y `sort()` es la función de ordenación de la librería estándar de C++, que tiene la mejor complejidad, temporal y espacial, posible para un algoritmo de ordenación de propósito general.)
+```cpp
+std::sort(begin(A), end(A));
 int acc = 0;
 for ( auto i : A )
 	acc += i;
