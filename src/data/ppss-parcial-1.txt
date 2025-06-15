@@ -6,12 +6,11 @@ O: Se anota como categoría una interfaz
 O: Se anota como categoría una clase que contiene drivers
 
 Q: Dado el siguiente driver para probar metodoSUT():
-```java
-@Test (expected = MiExcepcion.class)
-Public void testC1(){
-	Int resultadoEsperado = 0;
-	Int resultadoReal = metodoSut();
-	AssertEquals(resultadoEsperado, resultadoReal);
+```cpp
+@Test(expected = MiExcepcion.class) Public void testC1() {
+  Int resultadoEsperado = 0;
+  Int resultadoReal = metodoSut();
+  AssertEquals(resultadoEsperado, resultadoReal);
 }
 ```
 A: 2
@@ -75,26 +74,29 @@ O: Si añadimos una factoría local, alteramos el comportamiento de la clase que
 O: Si añadimos una clase factoría no se altera el código de producción
 
 Q: Indica las líneas en las que identificamos las dependencias externas de la SUT calculaConsumo():
-```java
-## paquete ppsss.ejercicio2
-public class GestorLLamadas {
-	private static final double TARIFA_NOCTURNA=10.5;
-	private static final double TARIFA_DIURNA=20.8;
-	
-	public Calendario getCalendario(){
-		Calendario c = new Calendario();
-		return c;
-	}
-	
-	public double calculaConsumo( int minutos){
-		Calendario c = getCalendario();
-		int hora = c.getHoraActual();
-		if(hora < 8 || hora > 20){
-			return minutos * TARIFA_NOCTURNA;
-		}else{
-			return minutos * TARIFA_DIURNA;
-		}
-	}
+```cpp
+##paquete ppsss.ejercicio2 public class GestorLLamadas {
+private
+  static final double TARIFA_NOCTURNA = 10.5;
+private
+  static final double TARIFA_DIURNA = 20.8;
+
+public
+  Calendario getCalendario() {
+    Calendario c = new Calendario();
+    return c;
+  }
+
+public
+  double calculaConsumo(int minutos) {
+    Calendario c = getCalendario();
+    int hora = c.getHoraActual();
+    if (hora < 8 || hora > 20) {
+      return minutos * TARIFA_NOCTURNA;
+    } else {
+      return minutos * TARIFA_DIURNA;
+    }
+  }
 }
 ```
 A: 3
@@ -120,33 +122,31 @@ O: Con un método de caja negra se pueden alcanzar comportamientos del subconjun
 O: Con un método de caja blanca se pueden alcanzar comportamientos del subconjunto 4
 
 Q: Si en el pom.xml de nuestro proyecto añadimos la siguiente propiedad:
-```xml
+```
 <properties>
 	<miPropiedad>misTests</miPropiedad>
 </properties>
 ```
 y la siguiente configuración del plugin maven-surefire-plugin:
-```xml
+```
 <configuration>
 	<groups>${miPropiedad}</groups>
 </configuration>
 ```
 y tiene la siguiente clase para los tests con 3 drivers:
-```java
+```cpp
 class MiClaseTest {
-	@Tag("misTests")
-	@Test void test1() {
-		## aquí vendría el código del test
-	}
-	
-	@Tag("otroTest")
-	@Test void test2() {
-		## aquí vendría el código del test
-	}
-	
-	@Test void test3() {
-		## aquí vendría el código del test
-	}
+  @Tag("misTests") @Test void test1() {
+    ##aquí vendría el código del test
+  }
+
+  @Tag("otroTest") @Test void test2() {
+    ##aquí vendría el código del test
+  }
+
+  @Test void test3() {
+    ##aquí vendría el código del test
+  }
 }
 ```
 Si desde la línea de comandos ejecutamos la orden:
@@ -227,45 +227,51 @@ O: el primer paso es identificar los seams que contiene la SUT
 O: no está permitido modificar la SUT de ninguna forma para realizar pruebas unitarias
 
 Q: Para realizar pruebas unitarias utilizando verificación basada en el comportamiento de la SUT calculaPrecio(), indica los tipos y números de mocks necesarios:
-```java
-public class Ticket {
-	private float precio_final;
-	//getters y setters
+```cpp
+public
+class Ticket {
+private
+  float precio_final;
+  // getters y setters
 }
 ```
-```java
-public class AlquilaCoches {
-	protected Calendario calendario = new Calendario();
+```cpp
+public
+class AlquilaCoches {
+protected
+  Calendario calendario = new Calendario();
 
-	public Ticket calculaPrecio(TipoCoche tipo, LocalDate inicio, int ndias) throws MensajeException {
+public
+  Ticket calculaPrecio(TipoCoche tipo, LocalDate inicio,
+                       int ndias) throws MensajeException {
 
-	Ticket ticket = new Ticket();
-	float precioDia, precioTotal = 0.0f;
-	float porcentaje = 0.25f;
+    Ticket ticket = new Ticket();
+    float precioDia, precioTotal = 0.0f;
+    float porcentaje = 0.25f;
 
-	String observaciones = "";
-	IService servicio = new Servicio();
-	precioDia = servicio.consultaPrecio(tipo);
-	for (int i=0; i<ndias; i++) {
-		LocalDate otroDia = inicio.plusDays((long) i);
-		try {
-			if (calendario.es_festivo(otroDia)) {
-				precioTotal += (1 + porcentaje) * precioDia;
-			} else {
-				precioTotal += (1 - porcentaje) * precioDia;
-			}
-		} catch (CalendarioException ex) {
-			observaciones += "Error en dia: "+otroDia+";";
-		}
-	}
+    String observaciones = "";
+    IService servicio = new Servicio();
+    precioDia = servicio.consultaPrecio(tipo);
+    for (int i = 0; i < ndias; i++) {
+      LocalDate otroDia = inicio.plusDays((long)i);
+      try {
+        if (calendario.es_festivo(otroDia)) {
+          precioTotal += (1 + porcentaje) * precioDia;
+        } else {
+          precioTotal += (1 - porcentaje) * precioDia;
+        }
+      } catch (CalendarioException ex) {
+        observaciones += "Error en dia: " + otroDia + ";";
+      }
+    }
 
-	if (observaciones.length() > 0) {
-		throw new MensajeException(observaciones);
-	}
+    if (observaciones.length() > 0) {
+      throw new MensajeException(observaciones);
+    }
 
-	ticket.setPrecio_final(precioTotal);
-	return ticket;
-	}
+    ticket.setPrecio_final(precioTotal);
+    return ticket;
+  }
 }
 ```
 A: 3
@@ -295,13 +301,13 @@ O: los comandos 4 y 5
 O: los comandos 2, 3, 4 y 5
 
 Q: Dado el siguiente método, que devuelve el sumatorio desde 1 hasta un determinado valor n:
-```java
+```cpp
 int sumatorio(int n) {
-	int suma = 0;
-	for (int i=1; i<= n; i++){
-		suma +=i;
-	}
-	return suma;
+  int suma = 0;
+  for (int i = 1; i <= n; i++) {
+    suma += i;
+  }
+  return suma;
 }
 ```
 Se puede aplicar el método del camino básico
@@ -325,29 +331,33 @@ O: los comandos 1, 4 y 5
 O: los comandos 4 y 5
 
 Q: Para realizar pruebas unitarias utilizando verificación basada en el comportamiento de la SUT compruebaPremio(), indica los tipos y número de mocks necesarios
-```java
-public class Premio {
-	private static final float PROBABILIDAD_PREMIO = 0.1f;
-	public Random generador = new Random(System.currentTimeMillis());
-	public ClienteWebService cliente = new ClienteWebService();
+```cpp
+public
+class Premio {
+private
+  static final float PROBABILIDAD_PREMIO = 0.1f;
+public
+  Random generador = new Random(System.currentTimeMillis());
+public
+  ClienteWebService cliente = new ClienteWebService();
 
-	public String compruebaPremio() {
-		if(generaNumero() < PROBABILIDAD_PREMIO) {
-			try {
-				String premio = cliente.obtenerPremio();
-				return "Premiado con " + premio;
-			} catch(ClienteWebServiceException e) {
-				return "No se ha podido obtener el premio";
-			}
-		} else {
-			return "Sin premio";
-		}
-	}
+public
+  String compruebaPremio() {
+    if (generaNumero() < PROBABILIDAD_PREMIO) {
+      try {
+        String premio = cliente.obtenerPremio();
+        return "Premiado con " + premio;
+      } catch (ClienteWebServiceException e) {
+        return "No se ha podido obtener el premio";
+      }
+    } else {
+      return "Sin premio";
+    }
+  }
 
-	## Genera numero aleatorio entre 0 y 1
-	public float generaNumero() {
-		return generador.nextFloat();
-	}
+  ##Genera numero aleatorio entre 0 y 1 public float generaNumero() {
+    return generador.nextFloat();
+  }
 }
 ```
 A: 1
@@ -387,13 +397,13 @@ O: No se puede obtener si no se conocen las particiones de salida válidas y no 
 O: 3
 
 Q: Indica cuál es la complejidad ciclomática del siguiente código:
-```java
+```cpp
 if (a > b && a < c || c < b)
-	a = b;
+  a = b;
 else if (a < b || c > a)
-	c = a;
+  c = a;
 else
-	b = c;
+  b = c;
 ```
 A: 0
 O: 6

@@ -51,7 +51,7 @@ O: El coste de dicho algoritmo en el peor de los casos.
 O: Ninguna de las anteriores.
 
 Q: La complejidad de la función TB es:
-```cpp
+```
 función TB (A: vector[λ]; iz , de : N) : N
 var n,i:N;
 	n=iz-de+1
@@ -132,7 +132,7 @@ O: $O(n^k)$
 O: Ninguna de las anteriores
 
 Q: La complejidad de la función A2 es:
-```cpp
+```
 Funcion A2 (n, a: entero):entero;
 Var r: entero; fvar
 	si (a² > n) devuelve 0
@@ -207,16 +207,16 @@ O: $n + n \log(n) \in \Theta(n)$
 
 Q: Indica cuál es la complejidad en el peor caso de la función replace:
 ```cpp
-unsigned bound( const vector<int>& v ) {
-	for( unsigned i = 0; i < v.size(); i++ )
-		if( v[i] == '0')
-			return i;
-	return v.size();
+unsigned bound(const vector<int> &v) {
+  for (unsigned i = 0; i < v.size(); i++)
+    if (v[i] == '0')
+      return i;
+  return v.size();
 }
 
-void replace( vector<int>& v, int c ) {
-	for( unsigned i = 0; i < bound(v); i++)
-		v[i] = c;
+void replace(vector<int> &v, int c) {
+  for (unsigned i = 0; i < bound(v); i++)
+    v[i] = c;
 }
 ```
 A: 1
@@ -226,14 +226,14 @@ O: $O(n)$
 
 Q: ¿Cuál es la complejidad temporal de la siguiente función recursiva?
 ```cpp
-unsigned desperdicio (unsigned n){
-	if (n<=1)
-		return 0;
-	unsigned sum = desperdicio(n/2) + desperdicio(n/2);
-	for (unsigned i=1; i<=n-1; i++)
-		for (unsigned j=1; j<=i; j++)
-			sum+=1;
-	return sum;
+unsigned desperdicio(unsigned n) {
+  if (n <= 1)
+    return 0;
+  unsigned sum = desperdicio(n / 2) + desperdicio(n / 2);
+  for (unsigned i = 1; i <= n - 1; i++)
+    for (unsigned j = 1; j <= i; j++)
+      sum += 1;
+  return sum;
 }
 ```
 A: 0
@@ -256,9 +256,9 @@ O: El coste temporal asintótico del segundo programa en el caso peor es más al
 Q: Indica cual es la complejidad, en función de n, del fragmento siguiente:
 ```cpp
 int a = 0;
-for( int i = 0; i < n; i++ )
-	for( int j = i; j > 0; j /= 2 )
-		a += a[i][j];
+for (int i = 0; i < n; i++)
+  for (int j = i; j > 0; j /= 2)
+    a += a[i][j];
 ```
 A: 0
 O: $O(n \log n)$
@@ -267,10 +267,10 @@ O: $O(n^2)$
 
 Q: Indica cuál es la complejidad en función de n, donde K es una constante (no depende de n), del fragmento siguiente:
 ```cpp
-for( int i = K; i < n - K; i++ ){
-	A[i] = 0;
-	for( int j = i - K; j < i + K; j++ )
-		A[i] += B[j];
+for (int i = K; i < n - K; i++) {
+  A[i] = 0;
+  for (int j = i - K; j < i + K; j++)
+    A[i] += B[j];
 }
 ```
 A: 0
@@ -335,15 +335,15 @@ O: $O(n^2)$
 
 Q: ¿Cuál es la complejidad temporal de la siguiente función recursiva?
 ```cpp
-unsigned desperdicio (unsigned n){
-if (n<=1)
-	return 0;
-unsigned sum = desperdicio (n/2) + desperdicio (n/2);
-for (unsigned i=1; i<n-1; i++)
-	for (unsigned j=1; j<=i; j++)
-		for (unsigned k=1; k<=j; k++)
-			sum+=i*j*k;
-return sum;
+unsigned desperdicio(unsigned n) {
+  if (n <= 1)
+    return 0;
+  unsigned sum = desperdicio(n / 2) + desperdicio(n / 2);
+  for (unsigned i = 1; i < n - 1; i++)
+    for (unsigned j = 1; j <= i; j++)
+      for (unsigned k = 1; k <= j; k++)
+        sum += i * j * k;
+  return sum;
 }
 ```
 A: 2
@@ -359,13 +359,13 @@ O: ... que aplican la estrategia de divide y vencerás.
 
 Q: Indica cuál es la complejidad de la función siguiente:
 ```cpp
-unsigned sum( const mat &A ) {    # A es una matriz cuadrada
-	unsigned d = A.n_rows();
-	unsigned a = 0;
-	for( unsigned i = 0; i < d; i++ )
-		for( unsigned j = 0; j < d; j++ )
-			a += A(i,j);
-	return a;
+unsigned sum(const mat &A) {
+#A es una matriz cuadrada unsigned d = A.n_rows();
+  unsigned a = 0;
+  for (unsigned i = 0; i < d; i++)
+    for (unsigned j = 0; j < d; j++)
+      a += A(i, j);
+  return a;
 }
 ```
 A: 1
@@ -423,17 +423,17 @@ O: ... siempre coincidirá con la complejidad temporal de las instancias que est
 
 Q: Considerad la función siguiente:
 ```cpp
-int M( int i, int f ) {
-	if ( i == f )
-		return i;
-	else {
-		e = v[ M( i, (i+f)/2 ) ];
-		f = v[ M( (i+f)/2+1, f ) ];
-		if (e<f)
-			return e;
-		else
-			return f;
-	}
+int M(int i, int f) {
+  if (i == f)
+    return i;
+  else {
+    e = v[M(i, (i + f) / 2)];
+    f = v[M((i + f) / 2 + 1, f)];
+    if (e < f)
+      return e;
+    else
+      return f;
+  }
 }
 ```
 Si la talla del problema viene dada por $n = f - i + 1$, ¿cuál es el coste temporal asintótico en el supuesto de que $n$ sea una potencia de 2?
@@ -469,15 +469,15 @@ O: $f(n) \in \Theta(n)$
 
 Q: Sobre la complejidad temporal de la siguiente función:
 ```cpp
-unsigned desperdicio (unsigned n){
-	if (n<=1)
-		return 0;
-	unsigned sum = desperdicio (n/2) + desperdicio (n/2) + desperdicio (n/2);
-	for (unsigned i=1; i<n-1; i++)
-		for (unsigned j=1; j<=i; j++)
-			for (unsigned k=1; k<=j; k++)
-				sum+=i*j*k;
-	return sum;
+unsigned desperdicio(unsigned n) {
+  if (n <= 1)
+    return 0;
+  unsigned sum = desperdicio(n / 2) + desperdicio(n / 2) + desperdicio(n / 2);
+  for (unsigned i = 1; i < n - 1; i++)
+    for (unsigned j = 1; j <= i; j++)
+      for (unsigned k = 1; k <= j; k++)
+        sum += i * j * k;
+  return sum;
 }
 ```
 A: 0
@@ -512,19 +512,19 @@ O: Las otras dos opciones son ciertas
 
 Q: ¿Cuál es la complejidad temporal de la siguiente función?
 ```cpp
-int ejemplo (vector < int > & v){
-	int n=v.size();
-	int j,i=2;
-	int sum=0;
-	while (n>0 && i<n){
-		j=i;
-		while (v[j] != v[1]){
-			sum+=v[j];
-			j=j/2;
-		}
-		i++;
-	}
-	return sum;
+int ejemplo(vector<int> &v) {
+  int n = v.size();
+  int j, i = 2;
+  int sum = 0;
+  while (n > 0 && i < n) {
+    j = i;
+    while (v[j] != v[1]) {
+      sum += v[j];
+      j = j / 2;
+    }
+    i++;
+  }
+  return sum;
 }
 ```
 A: 0
@@ -534,19 +534,19 @@ O: $\Omega(n)$
 
 Q: En cuanto a la complejidad temporal de la siguiente función:
 ```cpp
-int ejemplo (vector < int > & v){
-	int n=v.size();
-	int j,i=2;
-	int sum=0;
-	while (n>0 && i<n){
-		j=i;
-		while (v[j] != v[1]){
-			sum+=v[j];
-			j=j/2;
-		}
-		i++;
-	}
-	return sum;
+int ejemplo(vector<int> &v) {
+  int n = v.size();
+  int j, i = 2;
+  int sum = 0;
+  while (n > 0 && i < n) {
+    j = i;
+    while (v[j] != v[1]) {
+      sum += v[j];
+      j = j / 2;
+    }
+    i++;
+  }
+  return sum;
 }
 ```
 A: 0
@@ -556,9 +556,9 @@ O: Esta función no presenta casos mejor y peor puesto que solo puede haber una 
 
 Q: Indica cuál es la complejidad, en función de $n$, del fragmento siguiente:
 ```cpp
-for( int i = n; i > 0; i /= 2 )
-	for( int j = n; j > 0; j /= 2 )
-		a += A[i][j];
+for (int i = n; i > 0; i /= 2)
+  for (int j = n; j > 0; j /= 2)
+    a += A[i][j];
 ```
 A: 0
 O: $O(\log^2(n))$
@@ -568,8 +568,8 @@ O: $O(n^2)$
 Q: Indica cuál es la complejidad, en función de $n$, del fragmento siguiente:
 ```cpp
 a = 0;
-for( int i = 0; i < n*n; i++ )
-	a += A[(i + j) % n];
+for (int i = 0; i < n * n; i++)
+  a += A[(i + j) % n];
 ```
 A: 0
 O: $O(n^2)$
@@ -585,18 +585,20 @@ O: ... es la versión con mejor complejidad en el mejor de los casos.
 Q: El siguiente fragmento del algoritmo de ordenación Quicksort reorganiza los elementos del vector para obtener una subsecuencia de elementos menores que el pivote y otra de mayores. Su complejidad temporal, con respecto al tamaño del vector v, que está delimitado por los valores pi y pf, es...
 ```cpp
 x = v[pi];
-i = pi+1;
+i = pi + 1;
 j = pf;
 do {
-	while (i<=pf && v[i] < x) i++;
-	while (v[j] > x ) j--;
-	if (i <= j ) {
-		swap( v[i],v[j] );
-		i++;
-		j--;
-	}
+  while (i <= pf && v[i] < x)
+    i++;
+  while (v[j] > x)
+    j--;
+  if (i <= j) {
+    swap(v[i], v[j]);
+    i++;
+    j--;
+  }
 } while (i < j);
-swap(v[pi],v[j]);
+swap(v[pi], v[j]);
 ```
 Nota: La función `swap` se realiza en tiempo constante.
 A: 0
@@ -650,12 +652,13 @@ O: $O(n \log n)$
 
 Q: Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función?
 ```cpp
-void f(unsigned n){
-	if(n<2)return;
-	for(int i=0;i<pow(n,2);i++)
-		cout<< "*";
-	for(int i=0;i<5;i++)
-		f(n/2);
+void f(unsigned n) {
+  if (n < 2)
+    return;
+  for (int i = 0; i < pow(n, 2); i++)
+    cout << "*";
+  for (int i = 0; i < 5; i++)
+    f(n / 2);
 }
 ```
 A: 0
@@ -665,19 +668,19 @@ O: $O(n^2)$
 
 Q: Se pretende obtener la complejidad temporal en el caso más desfavorable de la siguiente función.
 ```cpp
-int exa(vector<int> &v){
-	int i, sum = 0, n = v.size();
-	if(n>0){
-		int j=n;
-		while(sum<100 and j!=0){
-			j = j /2;
-			sum = 0;
-			for(i = j;i<n;i++)
-				sum += v[i];
-		}
-		return j;
-	}
-	else return -1;
+int exa(vector<int> &v) {
+  int i, sum = 0, n = v.size();
+  if (n > 0) {
+    int j = n;
+    while (sum < 100 and j != 0) {
+      j = j / 2;
+      sum = 0;
+      for (i = j; i < n; i++)
+        sum += v[i];
+    }
+    return j;
+  } else
+    return -1;
 }
 ```
 A: 0
@@ -687,17 +690,23 @@ O: $C_s(n)=\sum^{n/2}_{j=0}(1/2\sum^{n}_{i=j}1) \in O(n\log n)$
 
 Q: Las siguientes funciones calculan el valor de potencia n-ésima de dos. ¿Cuál es el más eficiente en cuanto a coste temporal?
 ```cpp
-unsigned long pot2_1 (unsigned n){
-	if(n==0) return 1;
-	if(n%2==0) return pot2_1(n/2) * pot2_1(n/2);
-	else return 2 * pot2_1(n/2) * pot2_1(n/2);
+unsigned long pot2_1(unsigned n) {
+  if (n == 0)
+    return 1;
+  if (n % 2 == 0)
+    return pot2_1(n / 2) * pot2_1(n / 2);
+  else
+    return 2 * pot2_1(n / 2) * pot2_1(n / 2);
 }
 
-unsigned long pot2_2(unsigned n){
-	if(n==0) return 1;
-	unsigned long aux= pot2_2(n/2);
-	if(n%2==0) return aux * aux;
-	else return 2 * aux * aux;
+unsigned long pot2_2(unsigned n) {
+  if (n == 0)
+    return 1;
+  unsigned long aux = pot2_2(n / 2);
+  if (n % 2 == 0)
+    return aux * aux;
+  else
+    return 2 * aux * aux;
 }
 ```
 A: 2
@@ -725,14 +734,15 @@ O: $f \notin O(\max(g_1, g_2))$
 
 Q: Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función?
 ```cpp
-void f(unsigned n){
-	if(n < 1) return;
-	for(int i = 0; i < n; i++)
-		for(int j = 0; j < n;j++)
-			for(int k = 0; k < n;k++)
-				cout << "*";
-	for(int i = 0;i < 8;i++)
-		f(n / 2);
+void f(unsigned n) {
+  if (n < 1)
+    return;
+  for (int i = 0; i < n; i++)
+    for (int j = 0; j < n; j++)
+      for (int k = 0; k < n; k++)
+        cout << "*";
+  for (int i = 0; i < 8; i++)
+    f(n / 2);
 }
 ```
 A: 0
@@ -772,14 +782,16 @@ O: ... es el tiempo que tarda el algoritmo en resolver la talla más pequeña qu
 
 Q: Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función?
 ```cpp
-void f(unsigned n){
-	if(n < 1) return;
-	for( int i = 0;i < n; i++)
-		for(int j = 0; j < n; j++)
-			for(int k = 0; k < n; k++)
-				cout << "*";
-	for(int i = 0; i < 8; i++)
-		if(n / 2);
+void f(unsigned n) {
+  if (n < 1)
+    return;
+  for (int i = 0; i < n; i++)
+    for (int j = 0; j < n; j++)
+      for (int k = 0; k < n; k++)
+        cout << "*";
+  for (int i = 0; i < 8; i++)
+    if (n / 2)
+      ;
 }
 ```
 A: 2
@@ -809,11 +821,12 @@ O: $f \in \Omega(\min(g_1, g_2))$
 
 Q: Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función?
 ```cpp
-void f(unsigned n){
-	if(n < 2) return;
-	for(int i = 0; i < pow(n,2); i++)
-		cout << "*";
-	f(n - 2);
+void f(unsigned n) {
+  if (n < 2)
+    return;
+  for (int i = 0; i < pow(n, 2); i++)
+    cout << "*";
+  f(n - 2);
 }
 ```
 A: 2
@@ -835,15 +848,19 @@ O: En general, nada de interés.
 
 Q: Las siguientes funciones calculan el valor de la potencia n-ésima de dos. ¿Cuál es más eficiente en cuanto a coste temporal?
 ```cpp
-unsigned long pot2_1(unsigned n){
-	if(n==0) return 1;
-	if(n%2==0)return pot2_1(n/2) * pot2_1(n/2);
-	else return 2 * pot2_1(n/2) * pot2_1(n/2);
+unsigned long pot2_1(unsigned n) {
+  if (n == 0)
+    return 1;
+  if (n % 2 == 0)
+    return pot2_1(n / 2) * pot2_1(n / 2);
+  else
+    return 2 * pot2_1(n / 2) * pot2_1(n / 2);
 }
 
-unsigned long pot2_2(unsigned n){
-	if(n==0) return 1;
-	return 2 * pot2_2(n-1);
+unsigned long pot2_2(unsigned n) {
+  if (n == 0)
+    return 1;
+  return 2 * pot2_2(n - 1);
 }
 ```
 A: 1
@@ -853,12 +870,13 @@ O: La primera, `pot2_1(n)`, es más eficiente que la otra.
 
 Q: Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función?
 ```cpp
-void f(unsigned n){
-	if(n < 2) return;
-	for(int i = 0; i < pow(n,2); i++)
-		cout << "*";
-	for(int i = 0; i < 5; i++)
-		f(n/2);
+void f(unsigned n) {
+  if (n < 2)
+    return;
+  for (int i = 0; i < pow(n, 2); i++)
+    cout << "*";
+  for (int i = 0; i < 5; i++)
+    f(n / 2);
 }
 ```
 A: 2
@@ -880,9 +898,10 @@ O: ... se construye haciendo crecer un único árbol.
 
 Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva:
 ```cpp
-int f(int x, int y){
-	if(x <= y) return 1;
-	return x + f(x-1,y);
+int f(int x, int y) {
+  if (x <= y)
+    return 1;
+  return x + f(x - 1, y);
 }
 ```
 ¿Cuál es la mejor complejidad espacial que se puede conseguir?

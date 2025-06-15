@@ -1,12 +1,12 @@
 Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva:
 ```cpp
 unsigned f(unsigned x, unsigned v[]) {
-	if (x==0)
-		return 0;
-	unsigned m = 0;
-	for (unsigned k = 0; k < x; k++)
-		m = max(m, v[k] + f(x-k, v));
-	return m;
+  if (x == 0)
+    return 0;
+  unsigned m = 0;
+  for (unsigned k = 0; k < x; k++)
+    m = max(m, v[k] + f(x - k, v));
+  return m;
 }
 ```
 ¿Cuál es la mejor estructura para el almacén?
@@ -29,13 +29,13 @@ O: ... el dominio de las decisiones sólo pueden ser conjuntos discretos o discr
 
 Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva:
 ```cpp
-unsigned f( unsigned x, unsigned v[] ) {
-if (x==0)
-	return 0;
-unsigned m = 0;
-for ( unsigned k = 0; k < x; k++ )
-	m = max( m, v[k] + f( x-k, v ) );
-return m;
+unsigned f(unsigned x, unsigned v[]) {
+  if (x == 0)
+    return 0;
+  unsigned m = 0;
+  for (unsigned k = 0; k < x; k++)
+    m = max(m, v[k] + f(x - k, v));
+  return m;
 }
 ```
 ¿Cuál es la mejor complejidad espacial que se puede conseguir?
@@ -100,9 +100,9 @@ O: Habría que replantearse el criterio de selección para comenzar por aquellos
 
 Q: 
 ```cpp
-unsigned f( unsigned y, unsigned x){  # suponemos y >= x
-	if (x==0 || y==x) return 1;
-	return f(y-1, x-1) + f(y-1, x);
+unsigned f(unsigned y, unsigned x) {
+#suponemos y >= x if (x == 0 || y == x) return 1;
+  return f(y - 1, x - 1) + f(y - 1, x);
 }
 ```
 A: 0
@@ -136,9 +136,10 @@ O: ... de que se puede ahorrar cálculos guardando resultados anteriores en un a
 
 Q: Se pretende aplicar la técnica memoización a la siguiente función recursiva:
 ```cpp
-int f( int x, int y ) {
-	if( x <= y ) return 1;
-	return x + f(x-1,y);
+int f(int x, int y) {
+  if (x <= y)
+    return 1;
+  return x + f(x - 1, y);
 }
 ```
 En el caso más desfavorable, ¿qué complejidades temporal y espacial cabe esperar de la función resultante?
@@ -149,9 +150,9 @@ O: Temporal $O(x-y)$ y espacial $O(1)$
 
 Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva:
 ```cpp
-unsigned f(unsigned y, unsigned x) { # suponemos y >= x
-	if (x==0 || y==x) return 1;
-	return f(y-1, x-1) + f(y-1, x);
+unsigned f(unsigned y, unsigned x) {
+#suponemos y >= x if (x == 0 || y == x) return 1;
+  return f(y - 1, x - 1) + f(y - 1, x);
 }
 ```
 ¿Cuál es la mejor estructura para el almacén?
@@ -174,9 +175,10 @@ O: un algoritmo de programación dinámica
 
 Q: 
 ```cpp
-int f(int x, int y){
-	if (x<=y) return 1;
-	return x + f(x-1,y);
+int f(int x, int y) {
+  if (x <= y)
+    return 1;
+  return x + f(x - 1, y);
 }
 ```
 A: 1
@@ -198,9 +200,9 @@ O: El método voraz
 
 Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva:
 ```cpp
-unsigned f(unsigned y, unsigned x) { # suponemos y >= x
-	if (x==0 || y==x) return 1;
-	return f(y-1, x-1) + f(y-1, x);
+unsigned f(unsigned y, unsigned x) {
+#suponemos y >= x if (x == 0 || y == x) return 1;
+  return f(y - 1, x - 1) + f(y - 1, x);
 }
 ```
 ¿Cuál es la mejor complejidad espacial que se puede conseguir?
@@ -251,13 +253,14 @@ O: $T(n) \in \Theta(n!)$
 
 Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva: ¿Cuál es la mejor complejidad espacial que se puede conseguir?
 ```cpp
-float f(unsigned x, int y){
-	if( y < 0 ) return 0;
-	float A = 0.0;
-	if ( v1[y] <= x )
-		A = v2[y] + f( x-v1[y], y-1 );
-	float B = f( x, y-1 );
-	return min(A, 2+B);
+float f(unsigned x, int y) {
+  if (y < 0)
+    return 0;
+  float A = 0.0;
+  if (v1[y] <= x)
+    A = v2[y] + f(x - v1[y], y - 1);
+  float B = f(x, y - 1);
+  return min(A, 2 + B);
 }
 ```
 A: 2
@@ -273,9 +276,10 @@ O: Las otras dos opciones son ciertas
 
 Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva: ¿Cuál es la mejor complejidad espacial que se puede conseguir?
 ```cpp
-int f( int x, int y ) {
-	if( x <= y ) return 1;
-	return x + f(x-1,y);
+int f(int x, int y) {
+  if (x <= y)
+    return 1;
+  return x + f(x - 1, y);
 }
 ```
 A: 2
@@ -316,23 +320,23 @@ O: La mochila discreta sin restricciones adicionales.
 Q: El siguiente programa resuelve el problema de cortar un tubo de longitud n en segmentos de longitud entera entre 1 y n de manera que se maximice el precio de acuerdo con una tabla que da el precio para cada longitud, pero falta un trozo. ¿Qué debería ir en lugar de XXXXXXX?
 ```cpp
 void fill(price r[]) {
-	for (index i=0;i<=n;i++)
-		r[i]=-1;
+  for (index i = 0; i <= n; i++)
+    r[i] = -1;
 }
 
 price cutrod(price p[], r[], length n) {
-	price q;
-	if (r[n]>=0)
-		return r[n];
-	if (n==0)
-		q=0;
-	else {
-		q=-1;
-		for (index i=1;i<=n;i++)
-			q=max(q,p[i]+cutrod(XXXXXXXX));
-	}
-	r[n]=q;
-	return q;
+  price q;
+  if (r[n] >= 0)
+    return r[n];
+  if (n == 0)
+    q = 0;
+  else {
+    q = -1;
+    for (index i = 1; i <= n; i++)
+      q = max(q, p[i] + cutrod(XXXXXXXX));
+  }
+  r[n] = q;
+  return q;
 }
 ```
 A: 2
@@ -342,18 +346,18 @@ O: p, r, n-i
 
 Q: Dadas las siguientes funciones:
 ```cpp
-# Precondición: { 0 <= i < v.size(); i < j <= v.size() }
-unsigned f( const vector<unsigned>&v, unsigned i, unsigned j ) {
-	if ( i == j+1 )
-		return v[i];
-	unsigned sum = 0;
-	for ( unsigned k = 0; k < j - i; k++ )
-		sum += f( v, i, i+k+1 ) + f( v, i+k+1, j );
-	return sum;
+#Precondición : {0 <= i < v.size(); i < j <= v.size() }
+unsigned f(const vector<unsigned> &v, unsigned i, unsigned j) {
+  if (i == j + 1)
+    return v[i];
+  unsigned sum = 0;
+  for (unsigned k = 0; k < j - i; k++)
+    sum += f(v, i, i + k + 1) + f(v, i + k + 1, j);
+  return sum;
 }
 
-unsigned g( const vector<unsigned>& v ) {
-	return f( v, v.begin(), v.end() );
+unsigned g(const vector<unsigned> &v) {
+  return f(v, v.begin(), v.end());
 }
 ```
 Se quiere reducir la complejidad temporal de la función g usando programación dinámica iterativa. ¿cuál sería la complejidad espacial?
@@ -371,23 +375,23 @@ O: El problema de la mochila continua.
 Q: El siguiente programa resuelve el problema de cortar un tubo de longitud n en segmentos de longitud entera entre 1 y n de manera que se maximice el precio de acuerdo con una tabla que da el precio para cada longitud, pero falta un trozo. ¿Qué debería ir en lugar de XXXXXXX?
 ```cpp
 void fill(price m[]) {
-	for (index i=0;i<=n;i++)
-		m[i]=-1;
+  for (index i = 0; i <= n; i++)
+    m[i] = -1;
 }
 
 price cutrod(length n, price m[], price p[]) {
-	price q;
-	if (m[n]>=0)
-		return m[n];
-	if (n==0)
-		q=0;
-	else {
-		q=-1;
-		for (index i=1;i<=n;i++)
-			q=max(q,p[i]+cutrod(XXXXXXXX));
-	}
-	m[n]=q;
-	return q;
+  price q;
+  if (m[n] >= 0)
+    return m[n];
+  if (n == 0)
+    q = 0;
+  else {
+    q = -1;
+    for (index i = 1; i <= n; i++)
+      q = max(q, p[i] + cutrod(XXXXXXXX));
+  }
+  m[n] = q;
+  return q;
 }
 ```
 A: 1
@@ -557,13 +561,14 @@ O: $(m+1) \times (n+1)$
 
 Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva:
 ```cpp
-float f(unsigned x, int y){
-	if( y < 0 ) return 0;
-	float A = 0.0;
-	if ( v1[y] <= x )
-		A = v2[y] + f( x-v1[y], y-1 );
-	float B = f( x, y-1 );
-	return min(A,2+B);
+float f(unsigned x, int y) {
+  if (y < 0)
+    return 0;
+  float A = 0.0;
+  if (v1[y] <= x)
+    A = v2[y] + f(x - v1[y], y - 1);
+  float B = f(x, y - 1);
+  return min(A, 2 + B);
 }
 ```
 ¿Cuál es la mejor complejidad temporal que se puede conseguir?
@@ -574,9 +579,10 @@ O: $O(x \cdot y)$
 
 Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva:
 ```cpp
-int f(int x, int y){
-	if( x <= y ) return 1;
-	return x + f(x-1,y);
+int f(int x, int y) {
+  if (x <= y)
+    return 1;
+  return x + f(x - 1, y);
 }
 ```
 ¿Cuál es la mejor complejidad temporal que se puede conseguir?
@@ -593,9 +599,10 @@ O: ... tiene la restricción de que los valores de los objetos tienen que ser n�
 
 Q: Se pretende aplicar la técnica memoización a la siguiente función recursiva:
 ```cpp
-int f( int x, int y ) {
-	if( x > y ) return 1;
-	return x + f(x,y-2);
+int f(int x, int y) {
+  if (x > y)
+    return 1;
+  return x + f(x, y - 2);
 }
 ```
 En el caso más desfavorable, ¿qué complejidades temporal y espacial cabe esperar de la función resultante?
