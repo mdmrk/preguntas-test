@@ -28,7 +28,7 @@ const renderedText = computed(() => {
       return katex.renderToString(deescapeHtml(math), { displayMode: false, throwOnError: false })
     })
 
-    result = result.replace(/```cpp(?:\w+)?\s*([\s\S]*?)\s*```/g, (_, code) => {
+    result = result.replace(/```(?:\w+)?\s*([\s\S]*?)\s*```/g, (_, code) => {
       return `<pre><code>${hljs.highlight(deescapeHtml(code), { language: "cpp" }).value}</code></pre>`
     })
 
