@@ -118,7 +118,7 @@ inicio
 	finsi
 fin
 Llamada desde el programa principal:
-n:= 0			#Arb es un árbol
+n:= 0			// Arb es un árbol
 Ejercicio(Arb, n)
 ```
 O: n devuelve la suma de los valores de los nodos que no son hojas en el arbol
@@ -160,8 +160,8 @@ A: 0
 
 Q: ¿De qué clase de complejidad es la solución de la siguiente relación de recurrencia? 
 ```
-f(n) = n(n - 1) + f(n - 1)   # si n > 0
-f(0) = 1                      # si n = 0
+f(n) = n(n - 1) + f(n - 1)   // si n > 0
+f(0) = 1                      // si n = 0
 ```
 O: $f(n) \in \Theta(n^2)$
 O: Ninguna de las otras dos opciones es cierta.
@@ -242,7 +242,7 @@ void combinations(const vector<int> &m, const vector<double> &t, double T,
     print_comb(x);
     return;
   }
-#==> Aquí falta código <= =
+  // ==> Aquí falta código <= =
 }
 ```
 ```cpp
@@ -1095,7 +1095,9 @@ A: 0
 Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva:
 ```cpp
 unsigned f(unsigned y, unsigned x) {
-#suponemos y >= x if (x == 0 || y == x) return 1;
+  // suponemos y >= x
+  if (x == 0 || y == x)
+    return 1;
   return f(y - 1, x - 1) + f(y - 1, x);
 }
 ```
@@ -1378,7 +1380,7 @@ A: 2
 Q: Dado el siguiente programa recursivo:
 ```cpp
 int f(int n) {
-#Se asume que n >= 0 if (n == 0) return 1;
+  // Se asume que n >= 0 if (n == 0) return 1;
   return f(n - 1) + f(n - 2);
 }
 ```
@@ -1897,7 +1899,9 @@ A: 2
 Q: 
 ```cpp
 unsigned f(unsigned y, unsigned x) {
-#suponemos y >= x if (x == 0 || y == x) return 1;
+  // suponemos y >= x
+  if (x == 0 || y == x)
+    return 1;
   return f(y - 1, x - 1) + f(y - 1, x);
 }
 ```
@@ -2102,8 +2106,9 @@ A: 2
 Q: 
 ```cpp
 unsigned f(unsigned y,
-           unsigned x) { // suponemos y >= x	if (x == 0 || y == x)
-  return 1;
+           unsigned x) { // suponemos y >= x
+  if (x == 0 || y == x)
+    return 1;
   return f(y - 1, x - 1) + f(y - 1, x);
 }
 ```
@@ -2121,17 +2126,15 @@ A: 1
 Q: Dada la siguiente función:
 ```cpp
 int exa(string &cad, int pri, int ult) {
-	if(pri >= ult) {
-		return 1;
-	}
-	else {
-		if(cad[pri] == cad[ult]) {
-			return exa(cad, pri+1, ult-1);
-		}
-		else {
-			return 0;
-		}
-	}
+  if (pri >= ult) {
+    return 1;
+  } else {
+    if (cad[pri] == cad[ult]) {
+      return exa(cad, pri + 1, ult - 1);
+    } else {
+      return 0;
+    }
+  }
 }
 ```
 ¿Cuál es su complejidad temporal asintótica?
@@ -2666,7 +2669,9 @@ A: 2
 Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva:
 ```cpp
 unsigned f(unsigned y, unsigned x) {
-#suponemos y >= x if (x == 0 || y == x) return 1;
+  // suponemos y >= x
+  if (x == 0 || y == x)
+    return 1;
   return f(y - 1, x - 1) + f(y - 1, x);
 }
 ```
@@ -2762,8 +2767,8 @@ for (i = 2; i<=N; i++) {
 	X=A[i];
 	A[0]=X;
 	j=i-1;
-	while ( X<A[j] ) { # (2)
-		A[j+1]=A[j]; # (3)
+	while ( X<A[j] ) { // (2)
+		A[j+1]=A[j]; // (3)
 		j = j - 1
 	}
 	A[j+1]=X;
@@ -3432,7 +3437,7 @@ int potter(const vector<int> &v, const vector<int> &m, const vector<int> &t,
   for (int c = 0; c <= m[k - 1]; c++) {
     int earnings = 0;
     if (T >= c * t[k - 1])
-#==> Falta una línea <= =
+      // ==> Falta una línea <= =
       max_earnings = max(max_earnings, earnings);
   }
   return max_earnings;
@@ -3882,8 +3887,8 @@ O: ...divide y vencerás.
 A: 2
 
 Q: ¿De qué clase de complejidad es la solución de la siguiente relación de recurrencia?
-```f(n) = n(n-1) + f(n-1) # si n>0
-f(0) = 1 # si n=0
+```f(n) = n(n-1) + f(n-1) // si n>0
+f(0) = 1 // si n=0
 ```
 O: $f(n) \in \Theta(n^3)$
 O: $f(n) \in \Theta(n^2)$
@@ -3965,8 +3970,8 @@ A: 2
 Q: Indica cuál es la complejidad de la función siguiente:
 ```cpp
 unsigned sum(const mat &A) {
-#A es una matriz cuadrada
-unsigned d = A.n_rows();
+  // A es una matriz cuadrada
+  unsigned d = A.n_rows();
   unsigned a = 0;
   for (unsigned i = 0; i < d; i++)
     for (unsigned j = 0; j < d; j++)
@@ -4474,8 +4479,8 @@ for (i = 2; i<=N; i++) {
 	X=A[i];
 	A[0]=X;
 	j=i-1;
-	while ( X<A[j] ) { # (2)
-		A[j+1]=A[j]; # (3) 
+	while ( X<A[j] ) { // (2)
+		A[j+1]=A[j]; // (3) 
 		j = j – 1
 	}
 	A[j+1]=X;
@@ -5721,18 +5726,18 @@ A: 1
 Q: Sea v un vector de N elementos y supongamos que todos los elementos de v son distintos Considera el algoritmo siguiente Si tomamos como medida significativa el numero de comparaciones con elementos del vector(instrucción 2) entonces el algoritmo tiene un coste: 
 ```
 for (i=1; i<N; i++) {
-	X=V[i]; # (1)
+	X=V[i]; // (1)
 	Izq=0;
 	Der=i-1;
 	while (Izq <= Der) {
 		Medio = (Izq+Der)/2;
-		if (X<V[Medio]) # (2)
+		if (X<V[Medio]) // (2)
 			Der=Medio-1;
 		else
 			Izq = Medio +1;
 	}
 	for(j=i-1; j>=Izq; j--) {
-		V[j+1] = V[j]; # (3)
+		V[j+1] = V[j]; // (3)
 	}
 	V[Izq]=X;
 }
