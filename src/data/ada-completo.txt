@@ -60,11 +60,11 @@ A: 2
 Q: Cuál de las siguientes formulaciones expresa mejor el coste temporal asintótico de la siguiente función?
 ```cpp
 int f(int n) {
-  int count = 0;
-  for (int i = n; i > 0; i /= 2)
-    for (int j = 0; j < 2 * i; j++)
-      count += 1;
-  return count;
+int count = 0;
+for (int i = n; i > 0; i /= 2)
+for (int j = 0; j < 2 * i; j++)
+count += 1;
+return count;
 }
 ```
 O: $f(n) = \sum_{i=1}^{\log n} 4n \left( \frac {1}{2} \right)^i$
@@ -94,8 +94,8 @@ Q: Indica cuál es el coste temporal en función de n del problema siguiente
 ```cpp
 s = 0;
 for (i = 0; i < n; i++)
-  for (j = i; j < n; j++)
-    s += n * i * j;
+for (j = i; j < n; j++)
+s += n * i * j;
 ```
 O: Es $\Theta(n)$
 O: Es $O(n^2)$ pero no $\Omega(n^2)$
@@ -148,9 +148,9 @@ A: 1
 Q: ¿Cuál sería la complejidad temporal de la siguiente función tras aplicar programación dinámica?
 ```cpp
 double f(int n, int m) {
-  if (n == 0)
-    return 1;
-  return m * f(n - 1, m) * f(n - 2, m);
+if (n == 0)
+return 1;
+return m * f(n - 1, m) * f(n - 2, m);
 }
 ```
 O: $\Theta(n)$
@@ -177,16 +177,16 @@ A: 2
 Q: Considera el siguiente algoritmo: Nos interesa medir cuantas veces se ejecuta nº 3 entonces el caso mejor se obtiene cuando:
 ```cpp
 Ordena(vector V[N] de enteros) {
-  int i, j, aux;
-  for (i = 1; i < N; i++) {
-    for (j = 0; j < N - i; j++) {
-      if (V[j] > V[j + 1]) { // (2)
-        aux = V[j];
-        V[j] = V[j + 1]; // (3)
-        V[j + 1] = aux;
-      }
-    }
-  }
+int i, j, aux;
+for (i = 1; i < N; i++) {
+for (j = 0; j < N - i; j++) {
+if (V[j] > V[j + 1]) { // (2)
+aux = V[j];
+V[j] = V[j + 1]; // (3)
+V[j + 1] = aux;
+}
+}
+}
 }
 ```
 O: Cuando los datos vienen dispuestos en orden inverso, que se ejecuta del orden de $n^2$ veces
@@ -237,40 +237,40 @@ A: 1
 Q: Se dispone de n clases de objetos. De cada una de ellas se conoce el número máximo de piezas que se puede fabricar, $m_i \in \mathbb{N}$ y el tiempo necesario para su fabricación $t_i \in \mathbb{R}$, $i \in [0..n-1]$. Queremos listar todas las posibilidades de fabricación de objetos teniendo en cuenta que el tiempo total está limitado por $T \in \mathbb{R}$. Para ello hemos hecho el siguiente programa donde faltan unas líneas:
 ```cpp
 void combinations(const vector<int> &m, const vector<double> &t, double T,
-                  size_t k, vector<int> &x) {
-  if (k == m.size()) {
-    print_comb(x);
-    return;
-  }
+size_t k, vector<int> &x) {
+if (k == m.size()) {
+print_comb(x);
+return;
+}
 #==> Aquí falta código <= =
 }
 ```
 ```cpp
 void combinations(const vector<int> &m, const vector<double> &t, double T) {
-  vector<int> x(m.size());
-  combinations(m, t, T, 0, x);
+vector<int> x(m.size());
+combinations(m, t, T, 0, x);
 }
 ```
 ¿Cuales son las líneas que faltan? [suponed que `print_comb()` imprime correctamente la combinación que hay codificada en x]
 O: ```cpp
 for (int j = 0; j <= m[k]; j++) {
-  x[k] = j;
-  if (T >= j * t[k])
-    combinations(m, t, T - j * t[k], k + 1, x);
+x[k] = j;
+if (T >= j * t[k])
+combinations(m, t, T - j * t[k], k + 1, x);
 }
 ```
 O: ```cpp
 for (int j = 0; j < m[k]; j++) {
-  x[k] = j;
-  if (T >= j * t[k])
-    combinations(m, t, T - j * t[k], k + 1, x);
+x[k] = j;
+if (T >= j * t[k])
+combinations(m, t, T - j * t[k], k + 1, x);
 }
 ```
 O: ```cpp
 for (int j = 0; j < m[k]; j++) {
-  x[j] = k;
-  if (T >= j * t[k])
-    combinations(m, t, T - j * t[k], k + 1, x);
+x[j] = k;
+if (T >= j * t[k])
+combinations(m, t, T - j * t[k], k + 1, x);
 }
 ```
 A: 0
@@ -278,13 +278,13 @@ A: 0
 Q: Se pretende mejorar mediante programación dinámica iterativa la siguiente función (v1 y v2 son vectores definidos como variables globales). ¿Cuál es la mejor complejidad espacial que se puede conseguir?
 ```cpp
 float f(unsigned n, int m) {
-  if (m < 0)
-    return 0;
-  float A = 0.0;
-  if (v1[m] <= n)
-    A = v2[m] + f(n - v1[m], m - 1);
-  float B = f(n, m - 1);
-  return A + B;
+if (m < 0)
+return 0;
+float A = 0.0;
+if (v1[m] <= n)
+A = v2[m] + f(n - v1[m], m - 1);
+float B = f(n, m - 1);
+return A + B;
 }
 ```
 O: $O(m \cdot n)$
@@ -345,9 +345,9 @@ A: 2
 Q: Indica cuál es la complejidad, en función de n, del fragmento siguiente:
 ```cpp
 for (int i = 0; i < n; i++) {
-  A[i] = 0;
-  for (int j = 0; j < 2 * n; j++)
-    A[i] += B[j];
+A[i] = 0;
+for (int j = 0; j < 2 * n; j++)
+A[i] += B[j];
 }
 ```
 O: $\Theta(n^2)$
@@ -361,15 +361,15 @@ x = v[pi];
 i = pi + 1;
 j = pf;
 do {
-  while (i <= pf && v[i] < x)
-    i++;
-  while (v[j] > x)
-    j--;
-  if (i <= j) {
-    swap(v[i], v[j]);
-    i++;
-    j--;
-  }
+while (i <= pf && v[i] < x)
+i++;
+while (v[j] > x)
+j--;
+if (i <= j) {
+swap(v[i], v[j]);
+i++;
+j--;
+}
 } while (i < j);
 swap(v[pi], v[j]);
 ```
@@ -424,9 +424,9 @@ A: 0
 Q: Indica cuál es la complejidad en función de n, donde k es una constante (no depende de n), del fragmento siguiente:
 ```cpp
 for (int i = k; i < n - k; i++) {
-  A[i] = 0;
-  for (int j = i - k; j < i + k; j++)
-    A[i] += B[j];
+A[i] = 0;
+for (int j = i - k; j < i + k; j++)
+A[i] += B[j];
 }
 ```
 O: $O(n \cdot \log(n))$
@@ -450,14 +450,14 @@ A: 2
 Q: Sobre la complejidad temporal de la siguiente función:
 ```cpp
 unsigned desperdicio(unsigned n) {
-  if (n <= 1)
-    return 0;
-  unsigned sum = desperdicio(n / 2) + desperdicio(n / 2) + desperdicio(n / 2);
-  for (unsigned i = 1; i < n - 1; i++)
-    for (unsigned j = 1; j <= i; j++)
-      for (unsigned k = 1; k <= j; k++)
-        sum += i * j * k;
-  return sum;
+if (n <= 1)
+return 0;
+unsigned sum = desperdicio(n / 2) + desperdicio(n / 2) + desperdicio(n / 2);
+for (unsigned i = 1; i < n - 1; i++)
+for (unsigned j = 1; j <= i; j++)
+for (unsigned k = 1; k <= j; k++)
+sum += i * j * k;
+return sum;
 }
 ```
 O: Ninguna de las otras dos alternativas es cierta.
@@ -572,14 +572,14 @@ Q: El coste temporal asintótico del programa
 ```cpp
 s = 0;
 for (i = 0; i < n; i++)
-  for (j = i; j < n; j++)
-    s += i * j;
+for (j = i; j < n; j++)
+s += i * j;
 ```
 y del programa
 ```cpp
 s = 0;
 for (i = 0; i < n; i++)
-  for (j = 0; j < n; j++)
+for (j = 0; j < n; j++)
 s += i * i * j
 ```
 O: El del segundo, menor que el primero.
@@ -608,16 +608,16 @@ A: 1
 Q: En cuanto a la complejidad temporal de la siguiente función, ¿qué podemos decir acerca del mejor de los casos?
 ```cpp
 int f(vector<int> &v) {
-  int n = v.size(), i = 2, k = 0;
-  while (i < n) {
-    int j = i;
-    while (v[j] != v[1]) {
-      k++;
-      j = j / 2;
-    }
-    i = i + 2;
-  }
-  return k;
+int n = v.size(), i = 2, k = 0;
+while (i < n) {
+int j = i;
+while (v[j] != v[1]) {
+k++;
+j = j / 2;
+}
+i = i + 2;
+}
+return k;
 }
 ```
 O: Que uno de los mejores casos ocurre cuando v[j] = v[1] ∀j ∈ N y la complejidad es $\Omega(n)$.
@@ -682,14 +682,14 @@ A: 2
 Q: ¿Qué hace la siguiente función?
 ```cpp
 void f(vector<int> &A) {
-  priority_queue<int> pq;
-  for (auto a : A)
-    pq.push(a);
-  A.clear();
-  while (!pq.empty()) {
-    A.push_back(pq.top());
-    pq.pop();
-  }
+priority_queue<int> pq;
+for (auto a : A)
+pq.push(a);
+A.clear();
+while (!pq.empty()) {
+A.push_back(pq.top());
+pq.pop();
+}
 }
 ```
 O: Ordena el vector A
@@ -718,16 +718,16 @@ A: 2
 Q: Dada la siguiente función:
 ```cpp
 int exa(vector<int> &v) {
-  int j, i = 1, n = v.size();
-  if (n > 1)
-    do {
-      int x = v[i];
-      for (j = i; j > 0 && v[j - 1] > x; j--)
-        v[j] = v[j - 1];
-      v[j] = x;
-      i++;
-    } while (i < n);
-  return 0;
+int j, i = 1, n = v.size();
+if (n > 1)
+do {
+int x = v[i];
+for (j = i; j > 0 && v[j - 1] > x; j--)
+v[j] = v[j - 1];
+v[j] = x;
+i++;
+} while (i < n);
+return 0;
 }
 ```
 O: La complejidad temporal en el mejor de los casos es $\Omega(n)$.
@@ -738,14 +738,14 @@ A: 0
 Q: ¿Cuál es la complejidad temporal de la siguiente función recursiva?
 ```cpp
 unsigned desperdicio(unsigned n) {
-  if (n <= 1)
-    return 0;
-  unsigned sum = desperdicio(n / 2) + desperdicio(n / 2);
-  for (unsigned i = 1; i < n - 1; i++)
-    for (unsigned j = 1; j <= i; j++)
-      for (unsigned k = 1; k <= j; k++)
-        sum += i * j * k;
-  return sum;
+if (n <= 1)
+return 0;
+unsigned sum = desperdicio(n / 2) + desperdicio(n / 2);
+for (unsigned i = 1; i < n - 1; i++)
+for (unsigned j = 1; j <= i; j++)
+for (unsigned k = 1; k <= j; k++)
+sum += i * j * k;
+return sum;
 }
 ```
 O: $O(2^n)$
@@ -870,12 +870,12 @@ A: 1
 Q: Considera la función siguiente, donde todos los elementos del vector L son distintos. Considera como medida significativa las asignaciones a max, entonces el numero de asignaciones para el caso mejor y peor son, respectivamente:
 ```cpp
 int maximo(int L[N]) {
-  int i, max;
-  max = L[0];
-  for (i = 1; i < N; i++)
-    if (max < L[i])
-      max = L[i];
-  return (max);
+int i, max;
+max = L[0];
+for (i = 1; i < N; i++)
+if (max < L[i])
+max = L[i];
+return (max);
 }
 ```
 O: 1 cuando el mayor elemento esta en la posición inicial y n cuando los elementos están ordenados ascendentemente
@@ -887,9 +887,9 @@ A: 0
 Q: Queremos aplicar la técnica de memoización a la siguiente función recursiva:
 ```cpp
 double f(double x) {
-  if (x <= 2)
-    return x;
-  return f(sqrt(x - 1)) + f(sqrt(x - 2));
+if (x <= 2)
+return x;
+return f(sqrt(x - 1)) + f(sqrt(x - 2));
 }
 ```
 ¿Cuál sería un buen candidato para el almacén? (La función `sqrt()` obtiene la raíz cuadrada; xMax es el valor de x en la primera llamada.)
@@ -983,15 +983,15 @@ A: 2
 Q: Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función?
 ```cpp
 void f(unsigned n) {
-  if (n < 1)
-    return;
-  for (int i = 0; i < n; i++)
-    for (int j = 0; j < n; j++)
-      for (int k = 0; k < n; k++)
-        cout << "*";
-  for (int i = 0; i < 8; i++)
-    if (n / 2)
-      ;
+if (n < 1)
+return;
+for (int i = 0; i < n; i++)
+for (int j = 0; j < n; j++)
+for (int k = 0; k < n; k++)
+cout << "*";
+for (int i = 0; i < 8; i++)
+if (n / 2)
+;
 }
 ```
 O: $\Theta(n^3)$
@@ -1008,16 +1008,16 @@ A: 1
 Q: En cuanto a la complejidad temporal de la siguiente función, ¿qué podemos decir acerca del mejor de los casos?
 ```cpp
 int f(vector<int> &v) {
-  int n = v.size(), i = 2, k = 0;
-  while (i < n) {
-    int j = i;
-    while (v[j] != v[1]) {
-      k++;
-      j = j / 2;
-    }
-    i = i + 2;
-  }
-  return k;
+int n = v.size(), i = 2, k = 0;
+while (i < n) {
+int j = i;
+while (v[j] != v[1]) {
+k++;
+j = j / 2;
+}
+i = i + 2;
+}
+return k;
 }
 ```
 O: Que el mejor de los casos ocurre cuando el vector tiene 2 elementos o menos y la complejidad es $\Omega(1)$.
@@ -1053,7 +1053,7 @@ Q: Indica cuál es la complejidad, en función de $n$, del fragmento siguiente:
 ```cpp
 a = 0;
 for (int i = 0; i < n * n; i++)
-  a += A[(i + j) % n];
+a += A[(i + j) % n];
 ```
 O: $O(n^2)$
 O: $O(n \log(n))$
@@ -1096,7 +1096,7 @@ Q: Se pretende implementar mediante programación dinámica iterativa la funció
 ```cpp
 unsigned f(unsigned y, unsigned x) {
 #suponemos y >= x if (x == 0 || y == x) return 1;
-  return f(y - 1, x - 1) + f(y - 1, x);
+return f(y - 1, x - 1) + f(y - 1, x);
 }
 ```
 ¿Cuál es la mejor estructura para el almacén?
@@ -1138,11 +1138,11 @@ A: 0
 Q: ¿Cuál de las siguientes formulaciones expresa mejor la complejidad temporal, en función del parámetro n, de la siguiente función? (asumimos que n es potencia exacta de 2)
 ```cpp
 int f(int n) {
-  int k = 0;
-  for (int i = 2; i <= n; i *= 2)
-    for (int j = i; j > 0; j -= 2)
-      k++;
-  return k;
+int k = 0;
+for (int i = 2; i <= n; i *= 2)
+for (int j = i; j > 0; j -= 2)
+k++;
+return k;
 }
 ```
 O: $$\sum_{p=2}^{n/2} \frac{p-1}{2}$$
@@ -1165,12 +1165,12 @@ A: 2
 Q: Se pretende implementar mediante programación dinamica iterativa la función recursiva:
 ```cpp
 unsigned f(unsigned x, unsigned v[]) {
-  if (x == 0)
-    return 0;
-  unsigned m = 0;
-  for (unsigned k = 0; k < x; k++)
-    m = max(m, v[k] + f(x - k, v));
-  return m;
+if (x == 0)
+return 0;
+unsigned m = 0;
+for (unsigned k = 0; k < x; k++)
+m = max(m, v[k] + f(x - k, v));
+return m;
 }
 ```
 ¿Cuál es la mejor estructura para el almacén?
@@ -1295,46 +1295,46 @@ A: 2
 Q: Dada la siguiente función recursiva:
 ```cpp
 unsigned f(unsigned a, unsigned b) {
-  if (a < 3)
-    return a + 2 * b;
-  return f(a - 1, (7 * b) % 10);
+if (a < 3)
+return a + 2 * b;
+return f(a - 1, (7 * b) % 10);
 }
 ```
 donde suponemos que siempre se va a invocar la función con b < 10. Queremos acelerarla aplicando la técnica de programación dinámica iterativa. ¿Cómo quedaría?
 O: ```cpp
 unsigned f(unsigned a, unsigned b) {
-  vector<vector<unsigned>> M(a, vector<unsigned>(10));
-  for (unsigned j = 0; j < 10; j++)
-    for (unsigned i = 0; i <= a; i++)
-      if (i < 3)
-        M[i][j] = i + 2 * j;
-      else
-        M[i][j] = M[i - 1][(7 * j) % 10];
-  return M[a][b];
+vector<vector<unsigned>> M(a, vector<unsigned>(10));
+for (unsigned j = 0; j < 10; j++)
+for (unsigned i = 0; i <= a; i++)
+if (i < 3)
+M[i][j] = i + 2 * j;
+else
+M[i][j] = M[i - 1][(7 * j) % 10];
+return M[a][b];
 }
 ```
 O: ```cpp
 unsigned f(unsigned a, unsigned b) {
-  vector<vector<unsigned>> M(a + 1, vector<unsigned>(10));
-  for (unsigned i = 0; i <= a; i++)
-    for (unsigned j = 0; j < 10; j++)
-      if (i < 3)
-        M[i][j] = i + 2 * j;
-      else
-        M[i][j] = M[i - 1][(7 * j) % 10];
-  return M[a][b];
+vector<vector<unsigned>> M(a + 1, vector<unsigned>(10));
+for (unsigned i = 0; i <= a; i++)
+for (unsigned j = 0; j < 10; j++)
+if (i < 3)
+M[i][j] = i + 2 * j;
+else
+M[i][j] = M[i - 1][(7 * j) % 10];
+return M[a][b];
 }
 ```
 O: ```cpp
 unsigned f(unsigned a, unsigned b) {
-  vector<vector<unsigned>> M(a + 1, vector<unsigned>(10));
-  for (unsigned j = 0; j < 10; j++)
-    for (unsigned i = 0; i <= a; i++)
-      if (i < 3)
-        M[i][j] = i + 2 * j;
-      else
-        M[i][j] = M[i - 1][(7 * j) % 10];
-  return M[a][b];
+vector<vector<unsigned>> M(a + 1, vector<unsigned>(10));
+for (unsigned j = 0; j < 10; j++)
+for (unsigned i = 0; i <= a; i++)
+if (i < 3)
+M[i][j] = i + 2 * j;
+else
+M[i][j] = M[i - 1][(7 * j) % 10];
+return M[a][b];
 }
 ```
 A: 0
@@ -1379,7 +1379,7 @@ Q: Dado el siguiente programa recursivo:
 ```cpp
 int f(int n) {
 #Se asume que n >= 0 if (n == 0) return 1;
-  return f(n - 1) + f(n - 2);
+return f(n - 1) + f(n - 2);
 }
 ```
 si quisiéramos mejorarlo haciendo uso de la técnica de programación dinámica, ¿cuáles serían las complejidades temporal y espacial más ajustadas del algoritmo resultante?
@@ -1427,10 +1427,10 @@ A: 2
 Q: Indica cuál es la complejidad temporal en función de $n$, donde $A$ es un vector de enteros y $k$ es una constante que no depende de $n$, del fragmento siguiente:
 ```cpp
 for (int i = k; i < n - k; i++) {
-  A[i] = 0;
-  for (int j = i - k; j < i + k; j++) {
-    A[i] += B[j];
-  }
+A[i] = 0;
+for (int j = i - k; j < i + k; j++) {
+A[i] += B[j];
+}
 }
 ```
 O: $\Theta(k)$
@@ -1513,9 +1513,9 @@ A: 1
 Q: Indica cuál es la complejidad, en función de n, del fragmento siguiente:
 ```cpp
 for (int i = 0; i < n; i++) {
-  A[i] = 0;
-  for (int j = 0; j < 20; j++)
-    A[i] += B[j];
+A[i] = 0;
+for (int j = 0; j < 20; j++)
+A[i] += B[j];
 }
 ```
 O: $\Theta(n)$
@@ -1534,10 +1534,10 @@ Q: La complejidad del algoritmo es:
 función recursiva(n : entero) : entero;
 var i : entero;
 {
-  if (n <= 1)
-    then recursiva : = 1 else for (i = 1; i <= n; i++) writeln(i);
+if (n <= 1)
+then recursiva : = 1 else for (i = 1; i <= n; i++) writeln(i);
 recursiva:
-  = recursiva(n / 2) + recursiva(n / 2)
+= recursiva(n / 2) + recursiva(n / 2)
 }
 ```
 O: $O(2^n)$
@@ -1580,9 +1580,9 @@ A: 0
 Q: Indica cuál es la complejidad temporal en función de n, donde A es un vector de enteros y k es una constante que no depende de n, del fragmento siguiente:
 ```cpp
 for (int i = k; i < n - k; i++) {
-  A[i] = 0;
-  for (int j = i - k; j < i + k; j++)
-    A[i] += B[j];
+A[i] = 0;
+for (int j = i - k; j < i + k; j++)
+A[i] += B[j];
 }
 ```
 O: $\Theta(k)$
@@ -1617,10 +1617,10 @@ A: 0
 Q: ¿Cuál es el coste temporal asintótico de la siguiente función?
 ```cpp
 void f(int n, int arr[]) {
-  int i = 0, j = 0;
-  for (; i < n; ++i)
-    while (j < n && arr[i] < arr[j])
-      j++;
+int i = 0, j = 0;
+for (; i < n; ++i)
+while (j < n && arr[i] < arr[j])
+j++;
 }
 ```
 O: $O(n)$
@@ -1744,9 +1744,9 @@ A: 2
 Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva: ¿Cuál es la mejor complejidad espacial que se puede conseguir?
 ```cpp
 int f(int x, int y) {
-  if (x <= y)
-    return 1;
-  return x + f(x - 1, y);
+if (x <= y)
+return 1;
+return x + f(x - 1, y);
 }
 ```
 O: $O(x^2)$
@@ -1763,12 +1763,12 @@ A: 1
 Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva:
 ```cpp
 unsigned f(unsigned x, unsigned v[]) {
-  if (x == 0)
-    return 0;
-  unsigned m = 0;
-  for (unsigned k = 0; k < x; k++)
-    m = max(m, v[k] + f(x - k, v));
-  return m;
+if (x == 0)
+return 0;
+unsigned m = 0;
+for (unsigned k = 0; k < x; k++)
+m = max(m, v[k] + f(x - k, v));
+return m;
 }
 ```
 ¿Cuál es la mejor complejidad espacial que se puede conseguir?
@@ -1792,13 +1792,13 @@ A: 1
 Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva: ¿Cuál es la mejor complejidad espacial que se puede conseguir?
 ```cpp
 float f(unsigned x, int y) {
-  if (y < 0)
-    return 0;
-  float A = 0.0;
-  if (v1[y] <= x)
-    A = v2[y] + f(x - v1[y], y - 1);
-  float B = f(x, y - 1);
-  return min(A, 2 + B);
+if (y < 0)
+return 0;
+float A = 0.0;
+if (v1[y] <= x)
+A = v2[y] + f(x - v1[y], y - 1);
+float B = f(x, y - 1);
+return min(A, 2 + B);
 }
 ```
 O: $O(1)$
@@ -1828,10 +1828,10 @@ A: 0
 Q: ¿Cuál es la complejidad temporal en función de n, del siguiente fragmento:
 ```cpp
 for (int i = 0; i < n; i++) {
-  A[i] = 0;
-  for (int j = 0; j < 20; j++) {
-    A[i] += B[j];
-  }
+A[i] = 0;
+for (int j = 0; j < 20; j++) {
+A[i] += B[j];
+}
 }
 ```
 O: $\Theta(n \log n)$
@@ -1850,7 +1850,7 @@ Q: Indica cuál es la complejidad, en función de n, del fragmento siguiente: (s
 sort(begin(A), end(A));
 int acc = 0;
 for (auto i : A)
-  acc += i;
+acc += i;
 ```
 O: $\Theta(n \log n)$
 O: $\Theta(n^2)$
@@ -1897,7 +1897,7 @@ A: 2
 Q: ```cpp
 unsigned f(unsigned y, unsigned x) {
 #suponemos y >= x if (x == 0 || y == x) return 1;
-  return f(y - 1, x - 1) + f(y - 1, x);
+return f(y - 1, x - 1) + f(y - 1, x);
 }
 ```
 O: $O(x-y)$
@@ -2006,9 +2006,9 @@ A: 0
 Q: Queremos aplicar la técnica de memoización a la función recursiva de la imagen. ¿Cuál sería un buen candidato para el almacén? (La función `sqrt()` obtiene la raíz cuadrada; xMax es el valor de x en la primera llamada.)
 ```cpp
 double f(double x) {
-  if (x <= 2)
-    return x;
-  return f(sqrt(x - 1)) + f(sqrt(x - 2));
+if (x <= 2)
+return x;
+return f(sqrt(x - 1)) + f(sqrt(x - 2));
 }
 ```
 O: Ninguna de las otras dos opciones es válida.
@@ -2100,9 +2100,9 @@ A: 2
 
 Q: ```cpp
 unsigned f(unsigned y,
-           unsigned x) { // suponemos y >= x	if (x == 0 || y == x)
-  return 1;
-  return f(y - 1, x - 1) + f(y - 1, x);
+unsigned x) { // suponemos y >= x	if (x == 0 || y == x)
+return 1;
+return f(y - 1, x - 1) + f(y - 1, x);
 }
 ```
 O: $O(y)$
@@ -2117,17 +2117,20 @@ O: El valor máximo que puede tomar una instancia cualquiera de ese problema.
 A: 1
 
 Q: Dada la siguiente función:
-```cpp
+```
+cpp
 int exa(string &cad, int pri, int ult) {
-  if (pri >= ult) {
-    return 1;
-  } else {
-    if (cad[pri] == cad[ult]) {
-      return exa(cad, pri + 1, ult - 1);
-    } else {
-      return 0;
-    }
-  }
+if(pri >= ult) {
+return 1;
+}
+else {
+if(cad[pri] == cad[ult]) {
+return exa(cad, pri+1, ult-1);
+}
+else {
+return 0;
+}
+}
 }
 ```
 ¿Cuál es su complejidad temporal asintótica?
@@ -2177,9 +2180,9 @@ A: 2
 Q: Se pretende aplicar la técnica memoización a la siguiente función recursiva:
 ```cpp
 int f(int x, int y) {
-  if (x > y)
-    return 1;
-  return x + f(x, y - 2);
+if (x > y)
+return 1;
+return x + f(x, y - 2);
 }
 ```
 En el caso más desfavorable, ¿qué complejidades temporal y espacial cabe esperar de la función resultante?
@@ -2302,9 +2305,9 @@ A: 1
 Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva:
 ```cpp
 int f(int x, int y) {
-  if (x <= y)
-    return 1;
-  return x + f(x - 1, y);
+if (x <= y)
+return 1;
+return x + f(x - 1, y);
 }
 ```
 ¿Cuál es la mejor complejidad espacial que se puede conseguir?
@@ -2320,10 +2323,8 @@ O: Cualquiera de las dos anteriores
 A: 2
 
 Q: ¿De qué clase de complejidad es la solución de la siguiente relación de recurrencia?
-```
-f (n) = n(n - 1) +
-f (n - 1) si n > 0
-f (0) = 1 si n = 0
+```cpp
+f(n) = n(n - 1) + f(n - 1) si n > 0 f(0) = 1 si n = 0
 ```
 O: $f(n) \in \Theta(n^2)$
 O: $f(n) \in \Theta(n^3)$
@@ -2412,11 +2413,11 @@ A: 0
 Q: ¿Cuál es la complejidad temporal de la siguiente función?
 ```cpp
 int f(int n) {
-  int k = 0;
-  for (int i = 1; i < n; i *= 2)
-    for (int j = i; j > 0; j -= 2)
-      k++;
-  return k;
+int k = 0;
+for (int i = 1; i < n; i *= 2)
+for (int j = i; j > 0; j -= 2)
+k++;
+return k;
 }
 ```
 O: $\Theta(n^2)$
@@ -2439,9 +2440,9 @@ A: 1
 Q: Con respecto al tamaño del problema, ¿Cuál es el orden de complejidad temporal asintótica de la siguiente función? (asumimos que A es una matriz cuadrada)
 ```cpp
 void traspuesta(vector<vector<int>> A) {
-  for (int i = 1; i < A.size(); i++)
-    for (int j = 0; j < i; j++)
-      swap(A[i][j], A[j][i]);
+for (int i = 1; i < A.size(); i++)
+for (int j = 0; j < i; j++)
+swap(A[i][j], A[j][i]);
 }
 ```
 O: constante
@@ -2470,12 +2471,12 @@ A: 2
 Q: Dado el siguiente código, calcule la complejidad del mismo:
 ```cpp
 int sumaDigitos(int num) {
-  int s;
-  s = num % 10;
-  while (num >= 10) {
-    num = num / 10 s = s + (num % 10);
-  }
-  return (s);
+int s;
+s = num % 10;
+while (num >= 10) {
+num = num / 10 s = s + (num % 10);
+}
+return (s);
 }
 ```
 O: $\Omega(1)$ y $O(\log n)$
@@ -2506,9 +2507,9 @@ A: 1
 Q: ¿Cuál es la complejidad temporal en función de n, del siguiente fragmento:
 ```cpp
 for (int i = 0; i < n; i++) {
-  A[i] = 0;
-  for (int j = 0; j < 20; j++)
-    A[i] += B[j];
+A[i] = 0;
+for (int j = 0; j < 20; j++)
+A[i] += B[j];
 }
 ```
 O: $\Theta(n \log n)$
@@ -2665,7 +2666,7 @@ Q: Se pretende implementar mediante programación dinámica iterativa la funció
 ```cpp
 unsigned f(unsigned y, unsigned x) {
 #suponemos y >= x if (x == 0 || y == x) return 1;
-  return f(y - 1, x - 1) + f(y - 1, x);
+return f(y - 1, x - 1) + f(y - 1, x);
 }
 ```
 ¿Cuál es la mejor complejidad espacial que se puede conseguir?
@@ -2713,9 +2714,9 @@ A: 2
 Q: Queremos aplicar la técnica de memoización a la siguiente función recursiva:
 ```cpp
 double f(double x) {
-  if (x <= 2)
-    return x;
-  return f(sqrt(x - 1)) + f(sqrt(x - 2));
+if (x <= 2)
+return x;
+return f(sqrt(x - 1)) + f(sqrt(x - 2));
 }
 ```
 ¿Cuál sería un buen candidato para el almacén? (La función `sqrt()` obtiene la raíz cuadrada; xMax es el valor de x en la primera llamada.)
@@ -2754,17 +2755,17 @@ O: $\lim_{n \to \infty} g(n) / f(n) = 0$
 O: $g(n) \in O(f(n))$
 A: 1
 
-Q: Sea A un vector de n elementos y supongamos que todos los elementos de A son distintos. Considera el siguiente algoritmo:Nos interesa medir cuantas veces se ejecuta la instrucción nº 3 Entonces el caso mejor se obtiene cuando: ```cpp
-ordena(var A es vector de n enteros);
-variables i, j, x : es entero for (i = 2; i <= N; i++) {
-  X = A[i];
-  A[0] = X;
-  j = i - 1;
-  while (X < A[j]) {
-#(2) A[j + 1] = A[j];
-#(3) j = j - 1
-  }
-  A[j + 1] = X;
+Q: Sea A un vector de n elementos y supongamos que todos los elementos de A son distintos. Considera el siguiente algoritmo:Nos interesa medir cuantas veces se ejecuta la instrucción nº 3 Entonces el caso mejor se obtiene cuando: ```módulo ordena ( var A es vector de n enteros);
+variables i, j, x: es entero
+for (i = 2; i<=N; i++) {
+X=A[i];
+A[0]=X;
+j=i-1;
+while ( X<A[j] ) { # (2)
+A[j+1]=A[j]; # (3)
+j = j - 1
+}
+A[j+1]=X;
 }
 finmódulo
 ```
@@ -2826,9 +2827,9 @@ A: 1
 Q: Indica cuál es la complejidad en función de n, donde k es una constante (no depende de n), del fragmento siguiente:
 ```cpp
 for (int i = k; i < n - k; i++) {
-  A[i] = 0;
-  for (int j = i - k; j < i + k; j++)
-    A[i] += B[j];
+A[i] = 0;
+for (int j = i - k; j < i + k; j++)
+A[i] += B[j];
 }
 ```
 O: $O(n)$
@@ -2861,8 +2862,8 @@ int ejerc6 ( int n ) {
 int i = 1;
 int x = 1;
 while (i <= n) {
-  x = x * potencia(i, i);
-  i = i + 1;
+x = x * potencia(i, i);
+i = i + 1;
 }
 return x;
 }
@@ -2894,9 +2895,9 @@ A: 0
 Q: Se pretende implementar mediante programacion dinamica iterativa la funcion recursiva:
 ```cpp
 unsigned f(unsigned y, unsigned x) { // suponemos y >= x
-  if (x == 0 || y == x)
-    return 1;
-  return f(y - 1, x - 1) + f(y - 1, x);
+if (x == 0 || y == x)
+return 1;
+return f(y - 1, x - 1) + f(y - 1, x);
 }
 ```
 ¿Cual es la mejor complejidad espacial que se puede conseguir?
@@ -2950,20 +2951,20 @@ A: 2
 Q: Considera el algoritmo descrito a continuacion. Si consideramos como medida significativa el numero de movimientos del vector instrucciones 1 y 3 entonces el algoritmo tiene un coste:
 ```cpp
 for (i = 1; i < N; i++) {
-  X = V[i]; // (1)
-  Izq = 0;
-  Der = i - 1;
-  while (Izq <= Der) {
-    Medio = (Izq + Der) / 2;
-    if (X < V[Medio]) // (2)
-      Der = Medio - 1;
-    else
-      Izq = Medio + 1;
-  }
-  for (j = i - 1; j >= Izq; j--) {
-    V[j + 1] = V[j]; // (3)
-  }
-  V[Izq] = X;
+X = V[i]; // (1)
+Izq = 0;
+Der = i - 1;
+while (Izq <= Der) {
+Medio = (Izq + Der) / 2;
+if (X < V[Medio]) // (2)
+Der = Medio - 1;
+else
+Izq = Medio + 1;
+}
+for (j = i - 1; j >= Izq; j--) {
+V[j + 1] = V[j]; // (3)
+}
+V[Izq] = X;
 }
 ```
 O: $\Theta(n^2)$
@@ -3136,18 +3137,18 @@ A: 0
 Q: En cuanto a la complejidad temporal de la siguiente función:
 ```cpp
 int ejemplo(vector<int> &v) {
-  int n = v.size();
-  int j, i = 2;
-  int sum = 0;
-  while (n > 0 && i < n) {
-    j = i;
-    while (v[j] != v[1]) {
-      sum += v[j];
-      j = j / 2;
-    }
-    i++;
-  }
-  return sum;
+int n = v.size();
+int j, i = 2;
+int sum = 0;
+while (n > 0 && i < n) {
+j = i;
+while (v[j] != v[1]) {
+sum += v[j];
+j = j / 2;
+}
+i++;
+}
+return sum;
 }
 ```
 O: Las complejidades en el mejor y en el peor de los casos no coinciden.
@@ -3158,12 +3159,12 @@ A: 0
 Q: Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función?
 ```cpp
 void f(unsigned n) {
-  if (n < 2)
-    return;
-  for (int i = 0; i < pow(n, 2); i++)
-    cout << "*";
-  for (int i = 0; i < 5; i++)
-    f(n / 2);
+if (n < 2)
+return;
+for (int i = 0; i < pow(n, 2); i++)
+cout << "*";
+for (int i = 0; i < 5; i++)
+f(n / 2);
 }
 ```
 O: $O(5^{\log n})$
@@ -3174,13 +3175,13 @@ A: 0
 Q: ¿Cuál es la complejidad temporal de la siguiente función recursiva?
 ```cpp
 unsigned desperdicio(unsigned n) {
-  if (n <= 1)
-    return 0;
-  unsigned sum = desperdicio(n / 2) + desperdicio(n / 2);
-  for (unsigned i = 1; i < n - 1; i++)
-    for (unsigned j = 1; j <= i; j++)
-      sum += i * j;
-  return sum;
+if (n <= 1)
+return 0;
+unsigned sum = desperdicio(n / 2) + desperdicio(n / 2);
+for (unsigned i = 1; i < n - 1; i++)
+for (unsigned j = 1; j <= i; j++)
+sum += i * j;
+return sum;
 }
 ```
 O: $O(2^n)$
@@ -3235,9 +3236,9 @@ A: 2
 
 Q: ```cpp
 int f(int x, int y) {
-  if (x <= y)
-    return 1;
-  return x + f(x - 1, y);
+if (x <= y)
+return 1;
+return x + f(x - 1, y);
 }
 ```
 O: $O(x^2)$
@@ -3331,9 +3332,9 @@ A: 2
 Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva:
 ```cpp
 int f(int x, int y) {
-  if (x <= y)
-    return 1;
-  return x + f(x - 1, y);
+if (x <= y)
+return 1;
+return x + f(x - 1, y);
 }
 ```
 ¿Cuál es la mejor complejidad temporal que se puede conseguir?
@@ -3345,23 +3346,23 @@ A: 1
 Q: Las siguientes funciones calculan el valor de la potencia n-ésima de dos. ¿Cuál es más eficiente en cuanto a coste temporal?
 ```cpp
 unsigned long pot2_1(unsigned n) {
-  if (n == 0)
-    return 1;
-  if (n % 2 == 0)
-    return pot2_1(n / 2) * pot2_1(n / 2);
-  else
-    return 2 * pot2_1(n / 2) * pot2_1(n / 2);
+if (n == 0)
+return 1;
+if (n % 2 == 0)
+return pot2_1(n / 2) * pot2_1(n / 2);
+else
+return 2 * pot2_1(n / 2) * pot2_1(n / 2);
 }
 ```
 ```cpp
 unsigned long pot2_2(unsigned n) {
-  if (n == 0)
-    return 1;
-  unsigned long aux = pot2_2(n / 2);
-  if (n % 2 == 0)
-    return aux * aux;
-  else
-    return 2 * aux * aux;
+if (n == 0)
+return 1;
+unsigned long aux = pot2_2(n / 2);
+if (n % 2 == 0)
+return aux * aux;
+else
+return 2 * aux * aux;
 }
 ```
 O: La primera, `pot2_1(n)`, es más eficiente que la otra.
@@ -3372,9 +3373,9 @@ A: 1
 Q: La función $\Gamma$ de un número semiEntero positivo (un número es semiEntero si al restarle 0.5 es entero) se define como
 ```cpp
 double gamma(double n) {
-  if (n == 0.5)
-    return sqrt(PI);
-  return n * gamma(n - 1);
+if (n == 0.5)
+return sqrt(PI);
+return n * gamma(n - 1);
 }
 ```
 ¿Se puede calcular usando programación dinámica iterativa?
@@ -3422,17 +3423,17 @@ A: 2
 Q: El problema del alfarero (solución discreta con valores y tiempos discretos): Se dispone de n clases de objetos. De cada una de ellas se conoce el número máximo de piezas que se puede fabricar, $m_i \in \mathbb{N}$; El valor de cada pieza terminada, $v_i \in \mathbb{N}$ y el tiempo necesario para su fabricación $t_i \in \mathbb{N}$, $i \in [0..n-1]$. ¿Cual es el valor máximo de los objetos que puede fabricar teniendo en cuenta que el tiempo total está limitado por $T \in \mathbb{N}$? Para ello se escribe la siguiente función siguiendo la técnica de divide y vencerás:
 ```cpp
 int potter(const vector<int> &v, const vector<int> &m, const vector<int> &t,
-           int T, int k) {
-  if (k == 0)
-    return 0;
-  int max_earnings = -1;
-  for (int c = 0; c <= m[k - 1]; c++) {
-    int earnings = 0;
-    if (T >= c * t[k - 1])
+int T, int k) {
+if (k == 0)
+return 0;
+int max_earnings = -1;
+for (int c = 0; c <= m[k - 1]; c++) {
+int earnings = 0;
+if (T >= c * t[k - 1])
 #==> Falta una línea <= =
-      max_earnings = max(max_earnings, earnings);
-  }
-  return max_earnings;
+max_earnings = max(max_earnings, earnings);
+}
+return max_earnings;
 }
 ```
 O: `earnings = c * v[k-1] + potter(v, m, t, k-1, T - c * t[k-1]);`
@@ -3443,12 +3444,12 @@ A: 0
 Q: Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función?
 ```cpp
 void f(unsigned n) {
-  if (n < 2)
-    return;
-  for (int i = 0; i < pow(n, 2); i++)
-    cout << "*";
-  for (int i = 0; i < 5; i++)
-    f(n / 2);
+if (n < 2)
+return;
+for (int i = 0; i < pow(n, 2); i++)
+cout << "*";
+for (int i = 0; i < 5; i++)
+f(n / 2);
 }
 ```
 O: $\Theta(n^2)$
@@ -3534,9 +3535,9 @@ A: 1
 Q: ¿Cuál sería la complejidad temporal de la siguiente función tras aplicar programación dinámica?
 ```cpp
 double f(int n, int m) {
-  if (n <= 1)
-    return 1;
-  return m * f(n - 1, m) * f(n - 2, m);
+if (n <= 1)
+return 1;
+return m * f(n - 1, m) * f(n - 2, m);
 }
 ```
 O: $\Theta(n^2)$
@@ -3559,9 +3560,9 @@ A: 0
 Q: Calcular la complejidad del siguiente fragmento de codigo:
 ```cpp
 for (i = 1; i <= n; i++)
-  for (j = 1; j <= 10000; j++)
-    for (k = n - 1; k <= n; k++)
-      cout << i << j << k << endl;
+for (j = 1; j <= 10000; j++)
+for (k = n - 1; k <= n; k++)
+cout << i << j << k << endl;
 ```
 O: $O(n^2)$
 O: $O(n^3)$
@@ -3583,10 +3584,10 @@ O: Sí, siempre.
 A: 2
 
 Q: La complejidad del siguiente bucle es:
-```cpp
-for (i = 1; i <= N; i++) {
-  if (T[i] == x)
-    Aux = i;
+```
+for (i=1; i<=N; i++) {
+if (T[i] == x)
+Aux=i;
 }
 ```
 O: IV I y II son correctas
@@ -3698,16 +3699,16 @@ A: 2
 Q: Considerad la función siguiente:
 ```cpp
 int M(int i, int f) {
-  if (i == f)
-    return i;
-  else {
-    e = v[M(i, (i + f) / 2)];
-    f = v[M((i + f) / 2 + 1, f)];
-    if (e < f)
-      return e;
-    else
-      return f;
-  }
+if (i == f)
+return i;
+else {
+e = v[M(i, (i + f) / 2)];
+f = v[M((i + f) / 2 + 1, f)];
+if (e < f)
+return e;
+else
+return f;
+}
 }
 ```
 Si la talla del problema viene dada por $n = f - i + 1$, ¿cuál es el coste temporal asintótico en el supuesto de que $n$ sea una potencia de 2?
@@ -3719,15 +3720,15 @@ A: 0
 Q: ¿Qué hace la siguiente función?
 ```cpp
 void f(vector<int> &A) {
-  priority_queue<int> pq;
-  for (int i = A.size() - 1; i >= 0; i--) {
-    pq.push(A[i]);
-  }
-  A.clear();
-  while (!pq.empty()) {
-    A.push_back(pq.top());
-    pq.pop();
-  }
+priority_queue<int> pq;
+for (int i = A.size() - 1; i >= 0; i--) {
+pq.push(A[i]);
+}
+A.clear();
+while (!pq.empty()) {
+A.push_back(pq.top());
+pq.pop();
+}
 }
 ```
 O: Invierte el vector A (el último elemento quedará el primero)
@@ -3758,9 +3759,9 @@ A: 2
 Q: Se pretende aplicar la técnica memoización a la siguiente función recursiva:
 ```cpp
 int f(int x, int y) {
-  if (x <= y)
-    return 1;
-  return x + f(x - 1, y);
+if (x <= y)
+return 1;
+return x + f(x - 1, y);
 }
 ```
 En el caso más desfavorable, ¿qué complejidades temporal y espacial cabe esperar de la función resultante?
@@ -3772,11 +3773,11 @@ A: 0
 Q: Cual es el coste espacial asintotico del siguiente algoritmo:
 ```cpp
 int f(int n) {
-  int a = 1, r = 0;
-  for (int i = 0; i < n; i++) {
-    r = a + r;
-    a = 2 * r;
-  }
+int a = 1, r = 0;
+for (int i = 0; i < n; i++) {
+r = a + r;
+a = 2 * r;
+}
 }
 ```
 O: $O(n)$
@@ -3862,9 +3863,9 @@ A: 0
 Q: Indica cuál es la complejidad, en función de n (n≥0), del fragmento siguiente:
 ```cpp
 int f(int n) {
-  if (n == 0)
-    return n;
-  return f(n / 2) * f(n / 2);
+if (n == 0)
+return n;
+return f(n / 2) * f(n / 2);
 }
 ```
 O: $\Theta(\log n)$
@@ -3879,8 +3880,7 @@ O: ...divide y vencerás.
 A: 2
 
 Q: ¿De qué clase de complejidad es la solución de la siguiente relación de recurrencia?
-```
-(n) = n(n-1) + f(n-1) # si n>0
+```f(n) = n(n-1) + f(n-1) # si n>0
 f(0) = 1 # si n=0
 ```
 O: $f(n) \in \Theta(n^3)$
@@ -3891,18 +3891,18 @@ A: 0
 Q: Se pretende obtener la complejidad temporal en el caso más desfavorable de la siguiente función.
 ```cpp
 int exa(vector<int> &v) {
-  int i, sum = 0, n = v.size();
-  if (n > 0) {
-    int j = n;
-    while (sum < 100 and j != 0) {
-      j = j / 2;
-      sum = 0;
-      for (i = j; i < n; i++)
-        sum += v[i];
-    }
-    return j;
-  } else
-    return -1;
+int i, sum = 0, n = v.size();
+if (n > 0) {
+int j = n;
+while (sum < 100 and j != 0) {
+j = j / 2;
+sum = 0;
+for (i = j; i < n; i++)
+sum += v[i];
+}
+return j;
+} else
+return -1;
 }
 ```
 O: $C_s(n)=\sum^{\log(n+1)}_{k=1}(n-n/2^k)\in O(n\log n)$
@@ -3945,14 +3945,14 @@ A: 0
 Q: ¿Qué hace la siguiente función?
 ```cpp
 void f(vector<int> &A) {
-  priority_queue<int> pq;
-  for (auto i : A)
-    pq.push(A[i]);
-  A.clear();
-  while (!pq.empty()) {
-    A.push_back(pq.top());
-    pq.pop();
-  }
+priority_queue<int> pq;
+for (auto i : A)
+pq.push(A[i]);
+A.clear();
+while (!pq.empty()) {
+A.push_back(pq.top());
+pq.pop();
+}
 }
 ```
 O: Invierte el vector A (el último elemento quedará el primero).
@@ -3964,11 +3964,11 @@ Q: Indica cuál es la complejidad de la función siguiente:
 ```cpp
 unsigned sum(const mat &A) {
 #A es una matriz cuadrada unsigned d = A.n_rows();
-  unsigned a = 0;
-  for (unsigned i = 0; i < d; i++)
-    for (unsigned j = 0; j < d; j++)
-      a += A(i, j);
-  return a;
+unsigned a = 0;
+for (unsigned i = 0; i < d; i++)
+for (unsigned j = 0; j < d; j++)
+a += A(i, j);
+return a;
 }
 ```
 O: $O(n^2)$
@@ -3985,14 +3985,14 @@ A: 2
 Q: Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función?
 ```cpp
 void f(unsigned n) {
-  if (n < 1)
-    return;
-  for (int i = 0; i < n; i++)
-    for (int j = 0; j < n; j++)
-      for (int k = 0; k < n; k++)
-        cout << "*";
-  for (int i = 0; i < 8; i++)
-    f(n / 2);
+if (n < 1)
+return;
+for (int i = 0; i < n; i++)
+for (int j = 0; j < n; j++)
+for (int k = 0; k < n; k++)
+cout << "*";
+for (int i = 0; i < 8; i++)
+f(n / 2);
 }
 ```
 O: $\Theta(n^3 \log n)$
@@ -4141,10 +4141,10 @@ A: 0
 Q: Complejidad de
 ```cpp
 void f(int n, int arr[]) {
-  int i = 0, j = 0;
-  for (; i < n; ++i)
-    while (j < n && arr[i] < arr[j])
-      j++;
+int i = 0, j = 0;
+for (; i < n; ++i)
+while (j < n && arr[i] < arr[j])
+j++;
 }
 ```
 O: $O(n^2)$
@@ -4306,13 +4306,13 @@ A: 2
 Q: ¿Cuál es la complejidad temporal de la siguiente función recursiva?
 ```cpp
 unsigned desperdicio(unsigned n) {
-  if (n <= 1)
-    return 0;
-  unsigned sum = desperdicio(n / 2) + desperdicio(n / 2);
-  for (unsigned i = 1; i <= n - 1; i++)
-    for (unsigned j = 1; j <= i; j++)
-      sum += 1;
-  return sum;
+if (n <= 1)
+return 0;
+unsigned sum = desperdicio(n / 2) + desperdicio(n / 2);
+for (unsigned i = 1; i <= n - 1; i++)
+for (unsigned j = 1; j <= i; j++)
+sum += 1;
+return sum;
 }
 ```
 O: Θ(n^2)
@@ -4464,17 +4464,18 @@ O: Θ(n) ⊆ Θ(n)
 A: 1
 
 Q: ¿Con que algoritmo de ordenación clásico se corresponde el pseudocodigo del siguiente ejemplo?:
-```cpp
-módulo ordena(var A es vector de n enteros);
-variables i, j, x : es entero for (i = 2; i <= N; i++) {
-  X = A[i];
-  A[0] = X;
-  j = i - 1;
-  while (X < A[j]) {
-#(2) A[j + 1] = A[j];
-#(3) j = j – 1
-  }
-  A[j + 1] = X;
+```
+módulo ordena ( var A es vector de n enteros);
+variables i, j, x: es entero
+for (i = 2; i<=N; i++) {
+X=A[i];
+A[0]=X;
+j=i-1;
+while ( X<A[j] ) { # (2)
+A[j+1]=A[j]; # (3)
+j = j – 1
+}
+A[j+1]=X;
 }
 finmódulo
 ```
@@ -4493,11 +4494,11 @@ A: 2
 Q: Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función?
 ```cpp
 void f(unsigned n) {
-  if (n < 2)
-    return;
-  for (int i = 0; i < pow(n, 2); i++)
-    cout << "*";
-  f(n - 2);
+if (n < 2)
+return;
+for (int i = 0; i < pow(n, 2); i++)
+cout << "*";
+f(n - 2);
 }
 ```
 O: $\Theta(n^2 \log n)$
@@ -4526,11 +4527,11 @@ A: 0
 Q: ¿Cuál es el coste temporal asintótico de la siguiente función?
 ```cpp
 int f(int n) {
-  int count = 0;
-  for (int i = n; i > 0; i /= 2)
-    for (int j = 0; j < 2 * i; j++)
-      count += 1;
-  return count;
+int count = 0;
+for (int i = n; i > 0; i /= 2)
+for (int j = 0; j < 2 * i; j++)
+count += 1;
+return count;
 }
 ```
 O: $O(n)$
@@ -4608,16 +4609,16 @@ A: 2
 Q: En cuanto a la complejidad temporal de la siguiente función, ¿cuál de las siguientes formulaciones expresa mejor su complejidad en el peor de los casos?
 ```cpp
 int f(vector<int> &v) {
-  int n = v.size(), i = 2, k = 0;
-  while (i < n) {
-    int j = i;
-    while (v[j] != v[1]) {
-      k++;
-      j = j / 2;
-    }
-    i = i + 2;
-  }
-  return k;
+int n = v.size(), i = 2, k = 0;
+while (i < n) {
+int j = i;
+while (v[j] != v[1]) {
+k++;
+j = j / 2;
+}
+i = i + 2;
+}
+return k;
 }
 ```
 O: $$c_s(n) = \sum_{k=1}^{\lfloor \frac{n-1}{2} \rfloor} \log_2 2k \in O(n \log n)$$
@@ -4716,15 +4717,15 @@ A: 1
 Q: Calcula el numero de veces que se realiza la operación de escritura en la siguiente función siendo n el numero de elementos de la lista:
 ```cpp
 Void imprime(Lista L) {
-  DatosLista x;
-  Lista Aux;
-  Aux = L;
-  while (!L.Vacia()) {
-    x = L.Primero();
-    cout << x;
-    Aux.Resto();
-    Imprime(Aux);
-  }
+DatosLista x;
+Lista Aux;
+Aux = L;
+while (!L.Vacia()) {
+x = L.Primero();
+cout << x;
+Aux.Resto();
+Imprime(Aux);
+}
 }
 ```
 O: n
@@ -4767,12 +4768,12 @@ A: 1
 Q: Se pretende implementar mediante programación dinámica iterativa la siguiente función recursiva:
 ```cpp
 int f(int m, int n, int p, int *v) {
-  if (n < 0)
-    return 0;
-  int aux = 0;
-  if (v[n] <= m)
-    aux = p + f(m - v[n], n - 1, p, v);
-  return aux + f(m, n - 1, p, v);
+if (n < 0)
+return 0;
+int aux = 0;
+if (v[n] <= m)
+aux = p + f(m - v[n], n - 1, p, v);
+return aux + f(m, n - 1, p, v);
 }
 ```
 ¿Cuál sería la complejidad temporal del algoritmo iterativo?
@@ -4808,33 +4809,33 @@ A: 2
 Q: Una empresa tiene M referencias en su stock. Cada referencia $j \in [1,M]$ tiene un peso $p_j$ y un valor $v_j$ y dispone de $n_j$ unidades en su stock. Dispone de un solo camión en el que puede cargar como máximo un peso P. Indicad cuál de las tres funciones siguientes representa una posible solución voraz aproximada al problema de cargar el camión de manera que se transporte un valor máximo.
 O: ```cpp
 int f(const vector<int> &p, const vector<int> &v, const vector<int> &n, int P,
-      int k) {
-  if (k == 0 || P == 0)
-    return 0;
-  int num_objs = min(P / p[k - 1], n[k - 1]);
-  return num_objs * v[k - 1] + f(p, v, n, P - num_objs * p[k - 1], k - 1);
+int k) {
+if (k == 0 || P == 0)
+return 0;
+int num_objs = min(P / p[k - 1], n[k - 1]);
+return num_objs * v[k - 1] + f(p, v, n, P - num_objs * p[k - 1], k - 1);
 }
 ```
 O: ```cpp
 int f(const vector<int> &p, const vector<int> &v, const vector<int> &n, int P,
-      int k) {
-  if (k == 0 || P == 0)
-    return 0;
-  int gain = 0;
-  for (int num_objs = 0; num_objs <= n[k - 1]; num_objs++)
-    gain = max(gain, f(p, v, n, P - num_objs * p[k - 1], k - 1));
-  return gain;
+int k) {
+if (k == 0 || P == 0)
+return 0;
+int gain = 0;
+for (int num_objs = 0; num_objs <= n[k - 1]; num_objs++)
+gain = max(gain, f(p, v, n, P - num_objs * p[k - 1], k - 1));
+return gain;
 }
 ```
 O: ```cpp
 int f(const vector<int> &p, const vector<int> &v, const vector<int> &n, int P,
-      int k) {
-  if (k == 0 || P == 0)
-    return 0;
-  int gain = 0;
-  for (int num_objs = 0; num_objs <= 1; num_objs++)
-    gain = max(gain, f(p, v, n, P - num_objs * p[k - 1], k - 1));
-  return gain;
+int k) {
+if (k == 0 || P == 0)
+return 0;
+int gain = 0;
+for (int num_objs = 0; num_objs <= 1; num_objs++)
+gain = max(gain, f(p, v, n, P - num_objs * p[k - 1], k - 1));
+return gain;
 }
 ```
 A: 0
@@ -4910,13 +4911,13 @@ A: 0
 Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva:
 ```cpp
 float f(unsigned x, int y) {
-  if (y < 0)
-    return 0;
-  float A = 0.0;
-  if (v1[y] <= x)
-    A = v2[y] + f(x - v1[y], y - 1);
-  float B = f(x, y - 1);
-  return min(A, 2 + B);
+if (y < 0)
+return 0;
+float A = 0.0;
+if (v1[y] <= x)
+A = v2[y] + f(x - v1[y], y - 1);
+float B = f(x, y - 1);
+return min(A, 2 + B);
 }
 ```
 ¿Cuál es la mejor complejidad temporal que se puede conseguir?
@@ -4934,11 +4935,11 @@ A: 1
 Q: ¿Cuál de las siguientes formulaciones expresa mejor la complejidad temporal, en función del parámetro n, de la siguiente función? (asumimos que n es potencia exacta de 2)
 ```cpp
 int f(int n) {
-  int k = 0;
-  for (int i = 2; i <= n; i *= 2)
-    for (int j = i; j > 0; j -= 2)
-      k++;
-  return k;
+int k = 0;
+for (int i = 2; i <= n; i *= 2)
+for (int j = i; j > 0; j -= 2)
+k++;
+return k;
 }
 ```
 O: $\sum_{p=2}^{n/2} \frac{(p - 1)}{2}$
@@ -5009,20 +5010,20 @@ A: 1
 Q: De los algoritmos vistos en clase, cual se corresponde con el siguiente:
 ```cpp
 for (i = 1; i <= n; i++) {
-  X = V[i];
-  Izq = 0;
-  Der = i - 1;
-  while (Izq <= Der) {
-    Medio = (Izq + Der) / 2;
-    if (X < V[Medio])
-      Der = Medio - 1;
-    else
-      Izq = Medio + 1;
-  }
-  for (j = i - 1; j >= Izq; j--) {
-    V[j + 1] = V[j];
-  }
-  V[Izq] = X;
+X = V[i];
+Izq = 0;
+Der = i - 1;
+while (Izq <= Der) {
+Medio = (Izq + Der) / 2;
+if (X < V[Medio])
+Der = Medio - 1;
+else
+Izq = Medio + 1;
+}
+for (j = i - 1; j >= Izq; j--) {
+V[j + 1] = V[j];
+}
+V[Izq] = X;
 }
 ```
 O: Ordenación mediante el algoritmo de Quicksort
@@ -5241,11 +5242,11 @@ A: 1
 Q: ¿Cuál de las siguientes formulaciones expresa mejor la complejidad temporal, en función del parámetro n, de la siguiente función? (asumimos que n es potencia exacta de 2)
 ```cpp
 int f(int n) {
-  int k = 0;
-  for (int i = 2; i <= n; i *= 2)
-    for (int j = i; j > 0; j -= 2)
-      k++;
-  return k;
+int k = 0;
+for (int i = 2; i <= n; i *= 2)
+for (int j = i; j > 0; j -= 2)
+k++;
+return k;
 }
 ```
 O: $\sum_{p=1}^{\log n} 2 \cdot (p - 1)$
@@ -5351,12 +5352,12 @@ A: 1
 Q: ¿Qué complejidad tiene la siguiente función?
 ```cpp
 void f(vector<int> &A) {
-  priority_queue<int> pq(begin(A), end(A));
-  A.clear();
-  while (!pq.empty()) {
-    A.push_back(pq.top());
-    pq.pop();
-  }
+priority_queue<int> pq(begin(A), end(A));
+A.clear();
+while (!pq.empty()) {
+A.push_back(pq.top());
+pq.pop();
+}
 }
 ```
 Suponed que la cola de prioridad está implementada como un heap y que n = A.size(). `priority_queue<int> pq(begin(A), end(A))` construye un heap a partir de los datos que hay en el vector A.
@@ -5439,8 +5440,8 @@ Q: Indica cual es la complejidad, en función de n, del fragmento siguiente:
 ```cpp
 int a = 0;
 for (int i = 0; i < n; i++)
-  for (int j = i; j > 0; j /= 2)
-    a += a[i][j];
+for (int j = i; j > 0; j /= 2)
+a += a[i][j];
 ```
 O: O(n log n)
 O: O(n)
@@ -5458,7 +5459,7 @@ Q: ¿Cuál es la complejidad, en función de n, del siguiente fragmento: (supone
 std::sort(begin(A), end(A));
 int acc = 0;
 for (auto i : A)
-  acc += i;
+acc += i;
 ```
 O: $\Theta(n \log n)$
 O: $\Theta(n^2)$
@@ -5493,14 +5494,14 @@ A: 1
 Q: Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función?
 ```cpp
 void f(unsigned n) {
-  if (n < 1)
-    return;
-  for (int i = 0; i < n; i++)
-    for (int j = 0; j < n; j++)
-      for (int k = 0; k < n; k++)
-        cout << "*";
-  for (int i = 0; i < 8; i++)
-    f(n / 2);
+if (n < 1)
+return;
+for (int i = 0; i < n; i++)
+for (int j = 0; j < n; j++)
+for (int k = 0; k < n; k++)
+cout << "*";
+for (int i = 0; i < 8; i++)
+f(n / 2);
 }
 ```
 O: $\Theta(n^2 \log n)$
@@ -5529,8 +5530,8 @@ A: 1
 Q: Indica cuál es la complejidad, en función de $n$, del fragmento siguiente:
 ```cpp
 for (int i = n; i > 0; i /= 2)
-  for (int j = n; j > 0; j /= 2)
-    a += A[i][j];
+for (int j = n; j > 0; j /= 2)
+a += A[i][j];
 ```
 O: $O(\log^2(n))$
 O: $O(n \log(n))$
@@ -5643,42 +5644,42 @@ A: 2
 Q: El problema del alfarero (solución discreta con valores y tiempos continuos): Se dispone de n clases de objetos. De cada una de ellas se conoce el número máximo de piezas que se puede fabricar, $m_i \in \mathbb{N}$; El valor de cada pieza terminada, $v_i \in \mathbb{R}$ y el tiempo necesario para su fabricación $t_i \in \mathbb{R}$, $i \in [0..n-1]$. ¿Cuántos objetos de cada clase hay que fabricar para maximizar la ganancia teniendo en cuenta que el tiempo total está limitado por $T \in \mathbb{R}$? Se pretende resolverlo mediante ramificación y poda. Las siguientes funciones tratan de estimar una ganancia aproximada para la parte del nodo aún sin completar. ¿cuál es la mejor para usarla como parte de la cota optimista?
 O: ```cpp
 double optimistic(const vector<int> &m, const vector<double> &v,
-                  const vector<double> &t, double T, size_t from) {
-  double gain = 0.0;
-  for (size_t i = from; i < m.size() && T > 0; i++) {
-    for (int j = 1; j <= m[i]; j++) {
-      if (t[i] < T) {
-        gain += v[i];
-        T -= t[i];
-      }
-    }
-  }
-  return gain;
+const vector<double> &t, double T, size_t from) {
+double gain = 0.0;
+for (size_t i = from; i < m.size() && T > 0; i++) {
+for (int j = 1; j <= m[i]; j++) {
+if (t[i] < T) {
+gain += v[i];
+T -= t[i];
+}
+}
+}
+return gain;
 }
 ```
 O: ```cpp
 double optimistic(const vector<int> &m, const vector<double> &v,
-                  const vector<double> &t, double T, size_t from) {
-  double gain = 0.0;
-  for (size_t i = from; i < m.size() && T > 0; i++) {
-    for (int j = 1; j <= m[i]; j++) {
-      gain += v[i];
-      T -= t[i];
-    }
-  }
-  return gain;
+const vector<double> &t, double T, size_t from) {
+double gain = 0.0;
+for (size_t i = from; i < m.size() && T > 0; i++) {
+for (int j = 1; j <= m[i]; j++) {
+gain += v[i];
+T -= t[i];
+}
+}
+return gain;
 }
 ```
 O: ```cpp
 double optimistic(const vector<int> &m, const vector<double> &v,
-                  const vector<double> &t, double T, size_t from) {
-  double gain = 0.0;
-  for (size_t i = from; i < m.size() && T > 0; i++) {
-    double num_objs = min(T / t[i], double(m[i]));
-    gain += num_objs * v[i];
-    T -= num_objs * t[i];
-  }
-  return gain;
+const vector<double> &t, double T, size_t from) {
+double gain = 0.0;
+for (size_t i = from; i < m.size() && T > 0; i++) {
+double num_objs = min(T / t[i], double(m[i]));
+gain += num_objs * v[i];
+T -= num_objs * t[i];
+}
+return gain;
 }
 ```
 A: 2
@@ -5692,9 +5693,9 @@ A: 1
 Q: Con respecto al parámetro n, ¿Cuál sería la complejidad temporal de la siguiente función si se aplicara memoización?
 ```cpp
 long f(unsigned n) {
-  if (n <= 1)
-    return 1;
-  return n * f(n - 2);
+if (n <= 1)
+return 1;
+return n * f(n - 2);
 }
 ```
 O: logarítmica
@@ -5715,22 +5716,22 @@ O: No, los nodos hojas son los nodos completados y por lo tanto hay que visitar 
 A: 1
 
 Q: Sea v un vector de N elementos y supongamos que todos los elementos de v son distintos Considera el algoritmo siguiente Si tomamos como medida significativa el numero de comparaciones con elementos del vector(instrucción 2) entonces el algoritmo tiene un coste:
-```cpp
-for (i = 1; i < N; i++) {
-  X = V[i];
-#(1) Izq = 0;
-  Der = i - 1;
-  while (Izq <= Der) {
-    Medio = (Izq + Der) / 2;
-    if (X < V[Medio])
-#(2) Der = Medio - 1;
-      else Izq = Medio + 1;
-  }
-  for (j = i - 1; j >= Izq; j--) {
-    V[j + 1] = V[j];
-#(3)
-  }
-  V[Izq] = X;
+```
+for (i=1; i<N; i++) {
+X=V[i]; # (1)
+Izq=0;
+Der=i-1;
+while (Izq <= Der) {
+Medio = (Izq+Der)/2;
+if (X<V[Medio]) # (2)
+Der=Medio-1;
+else
+Izq = Medio +1;
+}
+for(j=i-1; j>=Izq; j--) {
+V[j+1] = V[j]; # (3)
+}
+V[Izq]=X;
 }
 ```
 O: Θ(n*log(n))
@@ -5749,18 +5750,18 @@ A: 3
 Q: ¿Cuál es la complejidad temporal de la siguiente función?
 ```cpp
 int ejemplo(vector<int> &v) {
-  int n = v.size();
-  int j, i = 2;
-  int sum = 0;
-  while (n > 0 && i < n) {
-    j = i;
-    while (v[j] != v[1]) {
-      sum += v[j];
-      j = j / 2;
-    }
-    i++;
-  }
-  return sum;
+int n = v.size();
+int j, i = 2;
+int sum = 0;
+while (n > 0 && i < n) {
+j = i;
+while (v[j] != v[1]) {
+sum += v[j];
+j = j / 2;
+}
+i++;
+}
+return sum;
 }
 ```
 O: $\Theta(n \log n)$
@@ -5845,14 +5846,14 @@ A: 0
 Q: ¿Cuál es la complejidad temporal asintótica de la función $f$? (en la primera llamada, el parámetro $i$ toma valor $n-1$; el tamaño de los vectores $w$ y $v$ es $n$)
 ```cpp
 float f(vector<float> &w, vector<unsigned> &v, unsigned P, int i) {
-  float S1 = 0, S2;
-  if (i >= 0) {
-    if (w[i] <= P)
-      S1 = v[i] + f(w, v, P - w[i], i - 1);
-    S2 = f(w, v, P, i - 1);
-    return max(S1, S2);
-  }
-  return 0;
+float S1 = 0, S2;
+if (i >= 0) {
+if (w[i] <= P)
+S1 = v[i] + f(w, v, P - w[i], i - 1);
+S2 = f(w, v, P, i - 1);
+return max(S1, S2);
+}
+return 0;
 }
 ```
 O: $\Omega(n)$ y $O(n^2)$
@@ -5863,17 +5864,17 @@ A: 0
 Q: Dada la siguiente función:
 ```cpp
 void f(vector<int> &v) {
-  int i = 1, n = v.size();
-  bool swaped = true;
-  while (swaped) {
-    swaped = false;
-    for (int j = n - 1; j >= i; j--)
-      if (v[j] < v[j - 1]) {
-        swap(v[j], v[j - 1]);
-        swaped = true;
-      }
-    i++;
-  }
+int i = 1, n = v.size();
+bool swaped = true;
+while (swaped) {
+swaped = false;
+for (int j = n - 1; j >= i; j--)
+if (v[j] < v[j - 1]) {
+swap(v[j], v[j - 1]);
+swaped = true;
+}
+i++;
+}
 }
 ```
 De las siguientes afirmaciones, o bien dos son ciertas y una es falsa, o bien al contrario, una es cierta y dos son falsas. Marca la que en este sentido es diferente a las otras dos.
@@ -5904,8 +5905,8 @@ Q: ¿Qué expresión refleja mejor la complejidad asintótica respecto a $n$ del
 ```cpp
 int k = 0;
 for (int a = 1; a < n; a *= 2)
-  for (int b = 0; b < a; b += 1)
-    k++;
+for (int b = 0; b < a; b += 1)
+k++;
 ```
 O: $\sum_{a=1}^{\log n} 2^a$
 O: $\sum_{a=1}^{n-1} \sum_{b=0}^{a-1} 1$
@@ -6016,9 +6017,9 @@ A: 0
 Q: ¿Cuál es la relación de recurrencia asociada a la complejidad temporal de la siguiente función?
 ```cpp
 void f(unsigned n) {
-  if (n == 0)
-    return 1;
-  return 2 * f(n - 1);
+if (n == 0)
+return 1;
+return 2 * f(n - 1);
 }
 ```
 O: $T(n) = 1 + 2 \cdot T(n-1)$; $T(0) = 1$
@@ -6029,12 +6030,12 @@ A: 0
 Q: El siguiente programa resuelve el problema de cortar un tubo de longitud $n$ en segmentos de longitud entera entre 1 y $n$ de manera que se maximice el precio de acuerdo con una tabla $p$ que da el precio para cada longitud, pero falta un trozo. ¿Qué debería ir en lugar de XXXXXXX?
 ```cpp
 int tube_cut(const vector<int> &p, const int n) {
-  if (n == 0)
-    return 0;
-  int q = numeric_limits<int>::lowest();
-  for (int i = 1; i <= n; i++)
-    q = max(q, p[i] + tube_cut(XXXXXXX));
-  return q;
+if (n == 0)
+return 0;
+int q = numeric_limits<int>::lowest();
+for (int i = 1; i <= n; i++)
+q = max(q, p[i] + tube_cut(XXXXXXX));
+return q;
 }
 ```
 O: p,n-1
@@ -6105,13 +6106,13 @@ A: 0
 Q: ¿A qué esquema de entre los estudiados pertenece la siguiente función?
 ```cpp
 void g(vector<unsigned> &v, unsigned j) {
-  if (j == v.size())
-    return;
-  for (unsigned i = j; i < v.size(); i++) {
-    swap(v[j], v[i]);
-    g(v, j + 1);
-    swap(v[j], v[i]);
-  }
+if (j == v.size())
+return;
+for (unsigned i = j; i < v.size(); i++) {
+swap(v[j], v[i]);
+g(v, j + 1);
+swap(v[j], v[i]);
+}
 }
 ```
 O: Programación dinámica
@@ -6140,10 +6141,10 @@ A: 0
 Q: En cuanto al cálculo de la complejidad temporal en función de $n$ de la siguiente función:
 ```cpp
 void f(unsigned n) {
-  if (n > 1) {
-    for (unsigned i = 0; i < 4; i++)
-      f(n / 2);
-  }
+if (n > 1) {
+for (unsigned i = 0; i < 4; i++)
+f(n / 2);
+}
 }
 ```
 De las siguientes afirmaciones, o bien dos son ciertas y una es falsa, o bien al contrario, una es cierta y dos son falsas. Marca la que en este sentido es diferente a las otras dos.
@@ -6197,9 +6198,9 @@ A: 0
 Q: Dado el siguiente programa recursivo:
 ```cpp
 int f(int n) { // Se asume que n >= 0
-  if (n == 0)
-    return 1;
-  return f(n - 1) + f(n - 2);
+if (n == 0)
+return 1;
+return f(n - 1) + f(n - 2);
 }
 ```
 si quisiéramos mejorarlo haciendo uso de la técnica de programación dinámica, ¿cuáles serían las complejidades temporal y espacial más ajustadas del algoritmo resultante?

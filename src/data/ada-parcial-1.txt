@@ -51,20 +51,14 @@ O: El coste de dicho algoritmo en el peor de los casos.
 O: Ninguna de las anteriores.
 
 Q: La complejidad de la función TB es:
-```
-función TB (A: vector[λ]; iz , de : N) : N
-var n,i:N;
-	n=iz-de+1
-	opcion
-		(n < 1) : devuelve ( 0 ) ;
-		(n = 1) : devuelve ( 1 ) ;
-		(n > 1) : si (A[iz] = A[de]) entonces
-				devuelve (TB( A, iz + 1, de - 1 ) + 1);
-			sino
-				devuelve (TB( A, iz + 1, de - 1 )) ;
-			finsi ;
-	fopcion
-fin
+```cpp
+función TB(A : vector[λ]; iz, de : N) : N var n, i : N;
+n = iz - de + 1 opcion(n < 1) : devuelve(0);
+(n = 1) : devuelve(1);
+(n > 1) : si(A[iz] = A[de]) entonces devuelve(TB(A, iz + 1, de - 1) + 1);
+sino devuelve(TB(A, iz + 1, de - 1));
+finsi;
+fopcion fin
 ```
 A: 0
 O: $\Theta(n)$
@@ -132,18 +126,13 @@ O: $O(n^k)$
 O: Ninguna de las anteriores
 
 Q: La complejidad de la función A2 es:
-```
-Funcion A2 (n, a: entero):entero;
-Var r: entero; fvar
-	si (a² > n) devuelve 0
-	sino
-		r:= A2(n, 2a);
-		opción
-			n < a²: devuelve r;
-			n ≥ a² : devuelve r + a;
-		fopción
-	fsi
-fin
+```cpp
+Funcion A2(n, a : entero) : entero;
+Var r : entero;
+fvar si(a² > n) devuelve 0 sino r : = A2(n, 2a);
+opción n < a² : devuelve r;
+n ≥ a² : devuelve r + a;
+fopción fsi fin
 ```
 A: 1
 O: $O(\sqrt{n} \cdot a)$

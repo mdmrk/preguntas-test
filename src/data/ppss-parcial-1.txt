@@ -6,11 +6,12 @@ O: Se anota como categoría una clase que contiene drivers
 A: 2
 
 Q: Dado el siguiente driver para probar metodoSUT():
-```cpp
-@Test(expected = MiExcepcion.class) Public void testC1() {
-  Int resultadoEsperado = 0;
-  Int resultadoReal = metodoSut();
-  AssertEquals(resultadoEsperado, resultadoReal);
+```java
+@Test (expected = MiExcepcion.class)
+Public void testC1(){
+Int resultadoEsperado = 0;
+Int resultadoReal = metodoSut();
+AssertEquals(resultadoEsperado, resultadoReal);
 }
 ```
 O: Error, si el metodoSUT() provoca la excepción MiExecpcion.class
@@ -73,6 +74,33 @@ O: Si añadimos una factoría local, alteramos el comportamiento de la clase que
 O: Si añadimos una clase factoría no se altera el código de producción
 A: 2
 
+Q: Indica las líneas en las que identificamos las dependencias externas de la SUT calculaConsumo():
+```java
+## paquete ppsss.ejercicio2
+public class GestorLLamadas {
+private static final double TARIFA_NOCTURNA=10.5;
+private static final double TARIFA_DIURNA=20.8;
+public Calendario getCalendario(){
+Calendario c = new Calendario();
+return c;
+}
+public double calculaConsumo( int minutos){
+Calendario c = getCalendario();
+int hora = c.getHoraActual();
+if(hora < 8 || hora > 20){
+return minutos * TARIFA_NOCTURNA;
+}else{
+return minutos * TARIFA_DIURNA;
+}
+}
+}
+```
+O: En las líneas 7, 12, y 13
+O: Solo en la línea 13
+O: En las líneas 7 y 12
+O: En las líneas 12 y 13
+A: 3
+
 Q: El comando mvn de Maven
 O: Sirve para ejecutar fases, pero no goals
 O: Sirve para ejecutar goals pero no fases
@@ -88,6 +116,42 @@ O: Con métodos de caja negra y de caja blanca, se pueden alcanzar comportamient
 O: Con un método de caja negra se pueden alcanzar comportamientos del subconjunto 3
 O: Con un método de caja blanca se pueden alcanzar comportamientos del subconjunto 4
 A: 1
+
+Q: Si en el pom.xml de nuestro proyecto añadimos la siguiente propiedad:
+```xml
+<properties>
+<miPropiedad>misTests</miPropiedad>
+</properties>
+```
+y la siguiente configuración del plugin maven-surefire-plugin:
+```xml
+<configuration>
+<groups>${miPropiedad}</groups>
+</configuration>
+```
+y tiene la siguiente clase para los tests con 3 drivers:
+```java
+class MiClaseTest {
+@Tag("misTests")
+@Test void test1() {
+## aquí vendría el código del test
+}
+@Tag("otroTest")
+@Test void test2() {
+## aquí vendría el código del test
+}
+@Test void test3() {
+## aquí vendría el código del test
+}
+}
+```
+Si desde la línea de comandos ejecutamos la orden:
+`mvn test -Dgroups=""`
+O: Se ejecutan los 3 drivers
+O: No se ejecuta ningún driver porque en la orden no se indica ninguna etiqueta
+O: Se ejecuta solo test3()
+O: Se ejecuta solo test1()
+A: 0
 
 Q: Con cuál de los siguientes comandos de Maven no se ejecutarían las pruebas unitarias:
 O: Mvn clean compile surefire:test
@@ -146,13 +210,13 @@ O: En las líneas 11 y 18
 A: 3
 
 Q: Dado el siguiente método, que devuelve el sumatorio desde 1 hasta un determinado valor n:
-```cpp
+```java
 int sumatorio(int n) {
-  int suma = 0;
-  for (int i = 1; i <= n; i++) {
-    suma += i;
-  }
-  return suma;
+int suma = 0;
+for (int i=1; i<= n; i++){
+suma +=i;
+}
+return suma;
 }
 ```
 Se puede aplicar el método del camino básico
@@ -182,13 +246,13 @@ O: 3
 A: 0
 
 Q: Indica cuál es la complejidad ciclomática del siguiente código:
-```cpp
+```java
 if (a > b && a < c || c < b)
-  a = b;
+a = b;
 else if (a < b || c > a)
-  c = a;
+c = a;
 else
-  b = c;
+b = c;
 ```
 O: 6
 O: 4

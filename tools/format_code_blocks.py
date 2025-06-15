@@ -101,50 +101,28 @@ def format_cpp_with_clang(code):
         print(f"Unexpected error: {e}")
         return code
 
-def is_cpp_code(code):
-    """
-    Basic heuristic to detect if code block contains C++ code
-    """
-    cpp_indicators = [
-        r'\b(unsigned|int|char|float|double|bool|void|class|struct|namespace)\b',
-        r'#include\s*[<"]',
-        r'\bstd::\w+',
-        r'\b(cout|cin|endl)\b',
-        r'\b(if|for|while|switch|return)\s*\(',
-        r'\b(public|private|protected)\s*:',
-        r'->\s*\w+',
-        r'::\w+',
-        r'\w+\s*\([^)]*\)\s*\{',  # function definitions
-    ]
-    
-    return any(re.search(pattern, code, re.IGNORECASE) for pattern in cpp_indicators)
+
 
 def format_code_blocks(text):
     """
-    Find and format C++ code blocks using the specified regex
+    Find and format only ```cpp code blocks using clang-format
     """
-    # Regex pattern as provided by user
-    code_block_regex = r'```(?:\w+)?\s*([\s\S]*?)\s*```'
+    # Only match code blocks specifically marked as cpp
+    cpp_code_block_regex = r'```cpp\s*([\s\S]*?)\s*```'
     
     blocks_formatted = 0
     
-    def replace_code_block(match):
+    def replace_cpp_block(match):
         nonlocal blocks_formatted
         code = match.group(1)
         
-        # Check if this looks like C++ code
-        if is_cpp_code(code):
-            print(f"Formatting C++ code block {blocks_formatted + 1}...")
-            formatted_code = format_cpp_with_clang(code)
-            blocks_formatted += 1
-            return f"```cpp\n{formatted_code}\n```"
-        else:
-            # For non-C++ blocks, just clean up whitespace
-            cleaned_code = code.strip()
-            return f"```\n{cleaned_code}\n```"
+        print(f"Formatting C++ code block {blocks_formatted + 1}...")
+        formatted_code = format_cpp_with_clang(code)
+        blocks_formatted += 1
+        return f"```cpp\n{formatted_code}\n```"
     
-    # Apply the regex replacement
-    result = re.sub(code_block_regex, replace_code_block, text, flags=re.MULTILINE)
+    # Apply the regex replacement only to cpp blocks
+    result = re.sub(cpp_code_block_regex, replace_cpp_block, text, flags=re.MULTILINE)
     
     return result, blocks_formatted
 
