@@ -171,13 +171,6 @@ O: Aunque un producto funcione de acuerdo con los requerimientos especificados p
 O: Aunque probemos un código utilizando un conjunto de pruebas eficiente y efectivo y todos los test pasen, no podemos garantizar que el código no presenta ningún defecto
 O: Las pruebas pueden demostrar la ausencia de defectos
 
-Q: Indica cuál de las siguientes afirmaciones es falsa acerca del uso de categorías en jUnit
-A: 1
-O: Se anota como categoría varios drivers de una clase
-O: Se anota como categoría una interfaz
-O: Se anota como categoría un método anotado como @test
-O: Se anota como categoría una clase que contiene drivers
-
 Q: El método de diseño de transición de estados
 A: 2
 O: Requiere que hayamos implementado todas las unidades para poder aplicarlo
@@ -199,19 +192,6 @@ O: el método anotado con @AfterAll se ejecuta n veces
 O: el método anotado con @BeforeAll se ejecuta una vez
 O: el método anotado con @AfterEach se ejecuta n-1 veces
 
-Q: De los siguientes comandos de maven, ¿cuáles no ejecutarán los tests unitarios?
-
-Comando 1: mvn clean surefire:test
-Comando 2: mvn clean test
-Comando 3: mvn test
-Comando 4: mvn clean compile surefire:test
-Comando 5: mvn clean test surefire:test
-A: 3
-O: los comandos 2 y 3
-O: los comandos 1, 2, 4 y 5
-O: los comandos 1, 4 y 5
-O: los comandos 1 y 4
-
 Q: Con el método del camino básico de McCabe:
 A: 1
 O: debemos elegir el conjunto mínimo de caminos para conseguir que todas las sentencias se ejecuten al menos una vez en cada caso de prueba
@@ -226,73 +206,12 @@ O: todas las afirmaciones del resto de opciones son falsas
 O: el primer paso es identificar los seams que contiene la SUT
 O: no está permitido modificar la SUT de ninguna forma para realizar pruebas unitarias
 
-Q: Para realizar pruebas unitarias utilizando verificación basada en el comportamiento de la SUT calculaPrecio(), indica los tipos y números de mocks necesarios:
-```java
-public class Ticket {
-	private float precio_final;
-	//getters y setters
-}
-```
-```java
-public class AlquilaCoches {
-	protected Calendario calendario = new Calendario();
-
-	public Ticket calculaPrecio(TipoCoche tipo, LocalDate inicio, int ndias) throws MensajeException {
-
-	Ticket ticket = new Ticket();
-	float precioDia, precioTotal = 0.0f;
-	float porcentaje = 0.25f;
-
-	String observaciones = "";
-	IService servicio = new Servicio();
-	precioDia = servicio.consultaPrecio(tipo);
-	for (int i=0; i<ndias; i++) {
-		LocalDate otroDia = inicio.plusDays((long) i);
-		try {
-			if (calendario.es_festivo(otroDia)) {
-				precioTotal += (1 + porcentaje) * precioDia;
-			} else {
-				precioTotal += (1 - porcentaje) * precioDia;
-			}
-		} catch (CalendarioException ex) {
-			observaciones += "Error en dia: "+otroDia+";";
-		}
-	}
-
-	if (observaciones.length() > 0) {
-		throw new MensajeException(observaciones);
-	}
-
-	ticket.setPrecio_final(precioTotal);
-	return ticket;
-	}
-}
-```
-A: 3
-O: un PartialMock y dos StrictMock
-O: un StrictControl, un PartialMock y un Mock
-O: un StrictControl, un PartialMock y dos Mock
-O: un StrictMock, un PartialMock y un Mock
-
 Q: ![Diagrama](/data/images/ppss-p1-2.png){width=200 height=200}
 A: 3
 O: En las líneas 14 y 18
 O: Dejo la pregunta en blanco
 O: En las líneas 10 y 14
 O: En las líneas 11 y 18
-
-Q: De los siguientes comandos de maven, ¿cuáles generan el .jar del proyecto?
-
-Comando 1: mvn clean compiler:testCompile package
-Comando 2: mvn clean compile package
-Comando 3: mvn clean test-compile package
-Comando 4: mvn clean verify
-Comando 5: mvn clean compiler:compile verify
-A: 3
-O: todos los comandos
-O: los comandos 1, 2 y 3
-O: los comandos 4 y 5
-O: los comandos 2, 3, 4 y 5
 
 Q: Dado el siguiente método, que devuelve el sumatorio desde 1 hasta un determinado valor n:
 ```java
@@ -311,68 +230,12 @@ O: al contener un bucle cuyo número de iteraciones depende del valor de entrada
 O: con n caminos
 O: con más de 2 caminos
 
-Q: De los siguientes comandos de maven, ¿cuáles no ejecutarán los tests unitarios?
-
-Comando 1: mvn clean surefire:test
-Comando 2: mvn clean test
-Comando 3: mvn test
-Comando 4: mvn clean compile surefire:test
-Comando 5: mvn clean test surefire:test
-A: 0
-O: los comandos 2, 3 y 5
-O: los comandos 1, 2, 4 y 5
-O: los comandos 1, 4 y 5
-O: los comandos 4 y 5
-
-Q: Para realizar pruebas unitarias utilizando verificación basada en el comportamiento de la SUT compruebaPremio(), indica los tipos y número de mocks necesarios
-```java
-public class Premio {
-	private static final float PROBABILIDAD_PREMIO = 0.1f;
-	public Random generador = new Random(System.currentTimeMillis());
-	public ClienteWebService cliente = new ClienteWebService();
-
-	public String compruebaPremio() {
-		if(generaNumero() < PROBABILIDAD_PREMIO) {
-			try {
-				String premio = cliente.obtenerPremio();
-				return "Premiado con " + premio;
-			} catch(ClienteWebServiceException e) {
-				return "No se ha podido obtener el premio";
-			}
-		} else {
-			return "Sin premio";
-		}
-	}
-
-	## Genera numero aleatorio entre 0 y 1
-	public float generaNumero() {
-		return generador.nextFloat();
-	}
-}
-```
-A: 1
-O: un PartialMock y un Mock
-O: un StrictControl, un PartialMock y un Mock
-O: un PartialMock y un StrictMock
-O: un StrictControl y dos StrictMock
-
 Q: Indica cuál de las siguientes afirmaciones es cierta:
 A: 2
 O: si es necesario, se puede alterar temporalmente el código de la SUT para realizar pruebas
 O: si es necesario, refactorizamos la SUT para eliminar sus dependencias externas
 O: un doble reemplaza al código real de una dependencia externa durante las pruebas
 O: un SEAM es un punto de inyección doble
-
-Q: El artefacto maven con las siguientes coordenadas:
-
-ppss.examen:ejemplo:war:1.0-SNAPSHOT
-
-representa el fichero:
-A: 0
-O: $HOME/.m2/repository/ppss/examen/ejemplo/1.0-SNAPSHOT/ejemplo-1.0-SNAPSHOT.war
-O: $HOME/.m2/repository/ppss/examen/ejemplo-1.0-SNAPSHOT.war
-O: $HOME/.m2/repository/ppss/examen/ejemplo/ejemplo-1.0-SNAPSHOT.war
-O: $HOME/.m2/repository/ppss/examen/ejemplo/war/1.0-SNAPSHOT/ejemplo-1.0-SNAPSHOT.war
 
 Q: Si al aplicar el método de caja negra de particiones equivalentes, obtenemos las siguientes particiones de entrada, válidas y no válidas, teniendo en cuenta la siguiente codificación para identificar las particiones "E" denota entrada,"V" denota válida y "nV" denota no válida.
 ```

@@ -74,7 +74,7 @@ class QuizParser:
                     options=[opt.strip() for opt in options],
                     correct_answer_index=correct_answer_index,
                     image=image,
-                    raw_chunk=chunk
+                    raw_chunk=chunk  # Store the original chunk
                 ))
         
         return questions
@@ -149,39 +149,46 @@ class QuizDeduplicator:
     
     @staticmethod
     def reconstruct_quiz_text(questions: List[Question]) -> str:
-        """Reconstruct quiz text from Question objects"""
-        chunks = []
+        """Reconstruct quiz text from Question objects using original formatting"""
+        if not questions:
+            return ""
         
+        chunks = []
         for question in questions:
-            chunk_lines = []
-            
-            # Add question
-            if '\n' in question.question_text:
-                lines = question.question_text.split('\n')
-                chunk_lines.append(f"Q: {lines[0]}")
-                for line in lines[1:]:
-                    chunk_lines.append(line)
+            # Use the original raw_chunk to preserve formatting
+            if question.raw_chunk:
+                chunks.append(question.raw_chunk)
             else:
-                chunk_lines.append(f"Q: {question.question_text}")
-            
-            # Add options
-            for option in question.options:
-                if '\n' in option:
-                    lines = option.split('\n')
-                    chunk_lines.append(f"O: {lines[0]}")
+                # Fallback to reconstruction if raw_chunk is missing
+                chunk_lines = []
+                
+                # Add question
+                if '\n' in question.question_text:
+                    lines = question.question_text.split('\n')
+                    chunk_lines.append(f"Q: {lines[0]}")
                     for line in lines[1:]:
                         chunk_lines.append(line)
                 else:
-                    chunk_lines.append(f"O: {option}")
-            
-            # Add answer
-            chunk_lines.append(f"A: {question.correct_answer_index}")
-            
-            # Add image if present
-            if question.image:
-                chunk_lines.append(f"I: {question.image}")
-            
-            chunks.append('\n'.join(chunk_lines))
+                    chunk_lines.append(f"Q: {question.question_text}")
+                
+                # Add options
+                for option in question.options:
+                    if '\n' in option:
+                        lines = option.split('\n')
+                        chunk_lines.append(f"O: {lines[0]}")
+                        for line in lines[1:]:
+                            chunk_lines.append(line)
+                    else:
+                        chunk_lines.append(f"O: {option}")
+                
+                # Add answer
+                chunk_lines.append(f"A: {question.correct_answer_index}")
+                
+                # Add image if present
+                if question.image:
+                    chunk_lines.append(f"I: {question.image}")
+                
+                chunks.append('\n'.join(chunk_lines))
         
         return '\n\n'.join(chunks)
 

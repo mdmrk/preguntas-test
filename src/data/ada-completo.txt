@@ -1690,19 +1690,6 @@ O: El problema del corte de tubos, que se obtenga el máximo beneficio posible.
 O: El problema del cambio, o sea, el de entregar una cantidad de dinero usando las mínimas monedas.
 A: 1
 
-Q: Indica cuál es la complejidad, en función de n, del fragmento siguiente:
-```cpp
-for (int i = 0; i < n; i++) {
-  A[i] = 0;
-  for (int j = 0; j < 2 * n; j++)
-    A[i] += B[j];
-}
-```
-O: $\Theta(n \log n)$
-O: $\Theta(n^2)$
-O: $\Theta(n)$
-A: 1
-
 Q: De las siguientes tres afirmaciones, una es cierta y dos falsas, o bien una es falsa y dos son ciertas. Marca la que en ese sentido es diferente a las otras dos.
 O: Para que un problema tenga solución mediante programación dinámica es condición necesaria que pueda resolverse mediante divide y vencerás.
 O: Todo problema que tiene solución mediante divide y vencerás también la tendrá mediante programación dinámica.
@@ -1801,19 +1788,6 @@ O: $\Theta{( n^n )}$
 O: $\Theta{( 4^n )}$
 O: Ninguna de las anteriores
 A: 1
-
-Q: ¿Cuál sería la complejidad temporal de la siguiente función tras aplicar programación dinámica? 
-```cpp
-double f(int n, int m) {
-  if (n == 0)
-    return 1;
-  return m * f(n - 1, m) * f(n - 2, m);
-}
-```
-O: $\Theta(n)$
-O: $\Theta(n^2)$
-O: $\Theta(n \cdot m)$
-A: 0
 
 Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva: ¿Cuál es la mejor complejidad espacial que se puede conseguir?
 ```cpp
@@ -1936,12 +1910,6 @@ Q: El uso de funciones de cota en ramificación y poda
 O: Transforma en polinómicas complejidades que antes eran exponenciales.
 O: Puede reducir el número de instancias del problema que pertenecen al caso peor.
 O: Garantiza que el algoritmo va a ser más eficiente ante cualquier instancia del problema.
-A: 1
-
-Q: Si $f \notin O(g_1)$ y $f \in O(g_2)$ entonces siempre se cumplirá:
-O: $f \in \Omega(\min(g_1, g_2))$
-O: $f \notin O(\max(g_1, g_2))$
-O: $f \in \Omega(g_1 + g_2)$
 A: 1
 
 Q: El coste temporal asintótico del fragmento `s=0; for(i=0;i<n;i++) for(j=i;j<n;j++) s+=i*j;` y el del fragmento `s=0; for(i=0;i<n;i++) for(j=0;j<n;j++) s+=i*i*j;`son ...
@@ -2465,12 +2433,6 @@ O: En el esquema de vuelta atrás no se pueden definir estrategias de búsqueda.
 O: Explorar primero los nodos que están más completados.
 A: 1
 
-Q: Uno de estos tres problemas no tiene una solución eficiente que siga el esquema de programación dinámica
-O: El problema de la mochila discreta.
-O: El problema de las torres de Hanoi.
-O: El problema de cortar un tubo de longitud n en segmentos de longitud entera entre 1 y n de manera que se maximice el precio de acuerdo con una tabla que da el precio para cada longitud.
-A: 2
-
 Q: En los algoritmos de Ramificación y poda ...
 O: una cota pesimista es necesariamente un valor insuperable, de no ser así se podría podar el nodo que conduce a la solución óptima.
 O: una cota pesimista es necesariamente un valor alcanzable, de no ser así no está garantizado que se encuentre la solución óptima.
@@ -2678,19 +2640,6 @@ O: Las otras dos opciones son ambas verdaderas.
 O: ...alcanza su máxima eficiencia cuando el problema de tamaño n se divide en "a" problemas de tamaño n/a.
 A: 2
 
-Q: ¿Cuál es la complejidad temporal en función de n, del siguiente fragmento: 
-```cpp
-for (int i = 0; i < n; i++) {
-  A[i] = 0;
-  for (int j = 0; j < 20; j++)
-    A[i] += B[j];
-}
-```
-O: $\Theta(n \log n)$
-O: $\Theta(n)$
-O: $\Theta(n^2)$
-A: 1
-
 Q: De las siguientes expresiones, o bien dos son verdaderas y una es falsa, o bien dos son falsas y una es verdadera. Marca la que (en este sentido) es distinta a las otras dos
 O: $O(2^{\log n}) \subset O(n^2)$
 O: $n + n \log n \in \Omega(n)$
@@ -2757,19 +2706,6 @@ O: Puede ser polinómica con el número de decisiones a tomar.
 O: Suele ser polinómica con el número de alternativas por cada decisión.
 O: Es siempre exponencial con el número de decisiones a tomar.
 A: 0
-
-Q: Indica cuál es la complejidad temporal en función de n, donde A es un vector de enteros y k es una constante que no depende de n, del fragmento siguiente:
-```cpp
-for (int i = k; i < n - k; i++) {
-  A[i] = 0;
-  for (int j = i - k; j < i + k; j++)
-    A[i] += B[j];
-}
-```
-O: $\Theta(k)$
-O: $\Theta(n)$
-O: $\Theta(n^2)$
-A: 1
 
 Q: Sea la siguiente relación de recurrencia:$T(n) = \begin{cases} 1 & \text{si } n \leq 1 \\ 8T(n/8) + g(n) & \text{en otro caso} \end{cases}$Si $T(n) \in \Theta(n^2)$, ¿en cuál de estos tres casos nos podemos encontrar?
 O: $g(n) = n^2$
@@ -3390,12 +3326,6 @@ O: se resuelve el problema usando un algoritmo voraz que añade cada vez al cami
 O: se multiplica n por la distancia de la arista más corta que nos queda por considerar
 A: 1
 
-Q: De las siguientes expresiones, o bien dos son ciertas y una es falsa, o bien al contrario, una es cierta y dos son falsas. Marca la que en este sentido es diferente a las otras dos.
-O: $\sum_{i=1}^{n} \sum_{j=1}^{\log i} 2^j \in O(n^2)$
-O: $\sum_{i=1}^{\log n} \sum_{j=1}^{n} 2^j \in O(n \log n)$
-O: $\sum_{i=1}^{n/2} \sum_{j=1}^{i} 2^j \in O(n \log n)$
-A: 2
-
 Q: Un problema de tamaño $n$ puede transformarse en tiempo $O(1)$ en siete de tamaño $\frac{n}{7}$; por otro lado, la solución al problema cuando la talla es 1 requiere un tiempo constante.¿Cuál de estas clases de coste temporal asintótico es la más ajustada?
 O: $O(n^2)$
 O: $O(n)$
@@ -3569,12 +3499,6 @@ O: tienen el mismo coste temporal asintotico en el caso mejor
 O: tienen el mismo coste temporal en los dos casos
 A: 1
 
-Q: Dado el problema de las torres de Hanoi resuelto mediante divide y vencerás, ¿cuál de las siguientes relaciones de recurrencia expresa mejor su complejidad temporal para el caso general, siendo n el número de discos?
-O: $T(n) = 2T(n - 1) + 1$
-O: $T(n) = T(n - 1) + n$
-O: $T(n) = 2T(n - 1) + n$
-A: 0
-
 Q: De las expresiones siguientes, o bien dos son verdaderas y una es falsa, o bien dos son falsas y una es verdadera. Marca la que (en este sentido) es diferente de las otras dos.
 O: Si $f \in \Theta(g)$ entonces $O(f) = O(g)$.
 O: Si $f \in O(g)$ entonces $g \notin O(f)$.
@@ -3660,23 +3584,6 @@ Q: ¿Se puede resolver mediante ramificación y poda un problema de selección d
 O: No. Las decisiones deben ser todas de la misma naturaleza.
 O: Sí, pero sólo si las decisiones son todas binarias.
 O: Sí, siempre.
-A: 2
-
-Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva:
-```cpp
-unsigned f(unsigned x, unsigned v[]) {
-  if (x == 0)
-    return 0;
-  unsigned m = 0;
-  for (unsigned k = 0; k < x; k++)
-    m = max(m, v[k] + f(x - k, v));
-  return m;
-}
-```
-¿Cuál es la mejor complejidad espacial que se puede conseguir?
-O: $O(1)$
-O: $O(x^2)$
-O: $O(x)$
 A: 2
 
 Q: La complejidad del siguiente bucle es: 
@@ -4423,12 +4330,6 @@ O: Las dos anteriores son correctas
 O: Cuando debamos probar todas las combinaciones posibles para encontrar la solucion de un problema
 A: 3
 
-Q: Dado un problema de minimización resuelto mediante un esquema de ramificación y poda, ¿qué propiedad cumple una cota optimista?
-O: Siempre es mayor o igual que la mejor solución posible alcanzada.
-O: Las otras dos opciones son ambas falsas.
-O: Asegura un ahorro en la comprobación de todas las soluciones factibles.
-A: 1
-
 Q: La mejora que en general aporta la programación dinámica frente a la solución ingenua se consigue gracias al hecho de que...
 O: ...en la solución ingenua se resuelve pocas veces un número relativamente grande de subproblemas distintos.
 O: ...el número de veces que se resuelven los subproblemas no tiene nada que ver con la eficiencia de los problemas resueltos mediante programación dinámica.
@@ -4678,19 +4579,6 @@ O: ... un algoritmo de programación dinámica.
 O: ... un algoritmo del estilo de divide y vencerás.
 A: 1
 
-Q: ¿Cuál sería la complejidad temporal de la siguiente función tras aplicar programación dinámica?
-```cpp
-double f(int n, int m) {
-  if (n <= 1)
-    return 1;
-  return m * f(n - 1, m) * f(n - 2, m);
-}
-```
-O: $\Theta(n \cdot m)$
-O: $\Theta(n)$
-O: $\Theta(n^2)$
-A: 1
-
 Q: La complejidad temporal en el mejor de los casos...
 O: ... es el tiempo que tarda el algoritmo en resolver el problema de tamaño o talla más pequeña que se le puede presentar.
 O: Las dos opciones son ciertas.
@@ -4902,20 +4790,6 @@ O: ... calcula menos veces el valor de la mochila que la correspondiente soluci�
 O: ... tiene la restricción de que los pesos de los objetos tienen que ser números discretos o discretizables.
 O: ... tiene la restricción de que los valores de los objetos tienen que ser números discretos o discretizables.
 A: 1
-
-Q: Se pretende aplicar la técnica memoización a la siguiente función recursiva:
-```cpp
-int f(int x, int y) {
-  if (x <= y)
-    return 1;
-  return x + f(x - 1, y);
-}
-```
-En el caso más desfavorable, ¿qué complejidades temporal y espacial cabe esperar de la función resultante?
-O: $O(x-y)$, tanto temporal como espacial.
-O: Ninguna de las otras dos opciones es correcta
-O: Temporal $O(x-y)$ y espacial $O(1)$
-A: 0
 
 Q: Un fontanero tiene una jornada de Q cuartos de hora (es así como se organiza la agenda) y tiene C clientes. El trabajo del cliente i tarda qi cuartos de hora y el fontanero le cobra un precio pi. Es posible que no pueda atender todos los clientes en la jornada, que nunca puede alargar. Este problema tiene una solución bien conocida que permite elegir qué clientes visitar para que la suma cobrada al final de la jornada sea la máxima. ¿Qué podemos decir de esta solución?
 O: Que la organización de la agenda en cuartos de hora permite obtener una solución de complejidad temporal $\Theta(QC)$ y complejidad espacial $\Theta(Q)$.
@@ -5432,12 +5306,6 @@ O: ...podría ocurrir que se pode el nodo que conduce a la solución óptima.
 O: ...podría ocurrir que se descarten nodos factibles.
 A: 0
 
-Q: El esquema de vuelta atrás...
-O: Garantiza que encuentra la solución óptima a cualquier problema de selección discreta.
-O: Las otras dos opciones son ambas verdaderas.
-O: Se puede aplicar a cualquier tipo de problema aunque el coste temporal es elevado.
-A: 0
-
 Q: Un problema de tamaño n puede transformarse en tiempo $O(n^2)$ en nueve de tamaño n/3, por otro lado la solución al problema cuando la talla es 1 requiere un tiempo constante, ¿cuál de estas clases de coste temporal asintótico es la más ajustada?
 O: $O(n \log n)$
 O: $O(n^2 \log n)$
@@ -5710,19 +5578,6 @@ O: $O(n^2)$
 O: $O(n \sqrt{n})$
 A: 1
 
-Q: Con respecto al tamaño del problema, ¿Cuál es el orden de complejidad temporal asintótica de la siguiente función? (asumimos que A es una matriz cuadrada)
-```cpp
-void traspuesta(vector<vector<int>> A) {
-  for (int i = 1; i < A.size(); i++)
-    for (int j = 0; j < i; j++)
-      swap(A[i][j], A[j][i]);
-}
-```
-O: constante
-O: lineal
-O: cuadrático
-A: 1
-
 Q: La eficiencia de los algoritmos voraces se basa en...
 O: ...el hecho de que las decisiones tomadas no se reconsideran.
 O: ...el hecho de que, con antelación, las posibles decisiones se ordenan de mejor a peor.
@@ -5734,12 +5589,6 @@ O: Una tabla que indique, para cada posición donde se va a cortar, cada uno de 
 O: Un vector de booleanos.
 O: Un par de enteros que indiquen los cortes realizados y el valor acumulado.
 A: 1
-
-Q: Si el coste temporal de un algoritmo es T(n), ¿cuál de las siguientes situaciones es imposible?
-O: $T(n) \in \Omega(n)$ y $T(n) \in \Theta(n^2)$
-O: $T(n) \in \Theta(n)$ y $T(n) \in \Omega(n^2)$
-O: $T(n) \in O(n)$ y $T(n) \in \Theta(n)$
-A: 0
 
 Q: La solución recursiva ingenua a un determinado problema de optimización muestra estas dos características: por un lado, se basa en obtener soluciones óptimas a problemas parciales más pequeños y por otro, estos subproblemas se resuelven más de una vez durante el proceso recursivo. Este problema es candidato a tener una solución alternativa basada en...
 O: Un algoritmo del estilo de divide y vencerás.
@@ -5960,19 +5809,6 @@ O: $2 \cdot T(n/2) + 1$
 O: $2 \cdot T(n-1) + n$
 O: $2 \cdot T(n/2) + 1$
 A: 0
-
-Q: 
-```cpp
-int f(int x, int y) {
-  if (x <= y)
-    return 1;
-  return x + f(x - 1, y);
-}
-```
-O: $O(x)$
-O: $O(x^2)$
-O: $O(1)$
-A: 2
 
 Q: ¿Pertenece $3n^2 + 3$ a $O(n^3)$?
 O: Solo para $c = 1$ y $n_0 = 5$
@@ -6287,12 +6123,6 @@ O: Programación dinámica
 O: Ramificación y poda
 O: Vuelta atrás
 
-Q: Una de estas tres afirmaciones es falsa. ¿Cuál?
-A: 0
-O: Un algoritmo voraz puede no encontrar la solución óptima de un problema de selección discreta.
-O: El esquema de ramificación y poda no garantiza que la complejidad temporal de resolución de un problema de selección discreta no sea exponencial.
-O: Los algoritmos voraces no sirven para resolver problemas de selección discreta.
-
 Q: En general ¿cuál de los siguientes problemas tiene solución eficiente utilizando alguno de los esquemas algorítmicos estudiados durante el curso?
 A: 0
 O: La mochila discreta (0/1) sin restricciones adicionales
@@ -6465,9 +6295,3 @@ A: 0
 O: Una cota optimista
 O: Una cota pesimista
 O: Ninguna de las anteriores
-
-Q: Una de estas tres situaciones no es posible. ¿Cuál es?
-A: 0
-O: $f(n) \in O(n)$ y $f(n) \in \Omega(1)$
-O: $f(n) \in \Omega(n^2)$ y $f(n) \in O(n)$
-O: $f(n) \in O(n)$ y $f(n) \in O(n^2)$

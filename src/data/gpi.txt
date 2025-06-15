@@ -1266,13 +1266,6 @@ O: 16 años
 O: 14 años
 O: El padre o tutor legal será el que lo haga en su nombre mientras forme parte de la unidad familiar
 
-Q: ¿Cuál es la distribución de tiempo dentro de un equipo de desarrollo?
-A: 1
-O: 30% Trabajando sólo, 20% actividades de gestión, 50% Interactuando con otra gente
-O: 30% Trabajando sólo, 20% actividades no productivas, 50% Interactuando con otra gente
-O: 20% Implementando, 30% Interactuando con otra gente y 50% en actividades de gestión
-O: 20% Trabajando sólo, 30% actividades no productivas, 50% Interactuando con otra gente
-
 Q: En el modelo UP.
 A: 3
 O: Hay una versión por iteración
