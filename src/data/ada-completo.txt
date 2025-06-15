@@ -28,7 +28,9 @@ O: El problema del cambio.
 O: La mochila discreta sin restricciones adicionales.
 A: 1
 
-Q: ¿Cuál de estas afirmaciones sobre el algoritmo para calcular x^n es falsa? ```Función potencia ( ent x: entero, ent n: entero): entero
+Q: ¿Cuál de estas afirmaciones sobre el algoritmo para calcular x^n es falsa? 
+```
+Función potencia ( ent x: entero, ent n: entero): entero
 Inicio
 	si n==1 entonces
 		retorna (x);
@@ -100,7 +102,9 @@ O: Es $O(n^2)$ pero no $\Omega(n^2)$
 O: Es $\Theta(n^2)$
 A: 2
 
-Q: Que calcula el siguiente algoritmo:```función Ejercicio (ent A: ÁrbolBinario, ent/sal actual:entero):nada
+Q: Que calcula el siguiente algoritmo:
+```
+función Ejercicio (ent A: ÁrbolBinario, ent/sal actual:entero):nada
 variables		x: entero
 		Izq, Der: ÁrbolBinario
 inicio
@@ -154,7 +158,9 @@ O: $\Theta(n \cdot m)$
 O: $\Theta(n^2)$
 A: 0
 
-Q: ¿De qué clase de complejidad es la solución de la siguiente relación de recurrencia? ```f(n) = n(n - 1) + f(n - 1)   # si n > 0
+Q: ¿De qué clase de complejidad es la solución de la siguiente relación de recurrencia? 
+```
+f(n) = n(n - 1) + f(n - 1)   # si n > 0
 f(0) = 1                      # si n = 0
 ```
 O: $f(n) \in \Theta(n^2)$
@@ -1241,7 +1247,9 @@ O: ... no presenta caso mejor y caso peor para instancias del mismo tamaño.
 O: ... se comporta peor cuando el vector ya está ordenado.
 A: 2
 
-Q: Dado el algoritmo el caso peor el numero de nodos procesados: ```Módulo Ejercicio (ent A es ArbolBinario) devuelve entero
+Q: Dado el algoritmo el caso peor el numero de nodos procesados: 
+```
+Módulo Ejercicio (ent A es ArbolBinario) devuelve entero
 variables
 	Izq, Der es ArbolBinario
 inicio
@@ -2137,7 +2145,9 @@ O: La cantidad de espacio en memoria que se necesita para codificar una instanci
 O: El valor máximo que puede tomar una instancia cualquiera de ese problema.
 A: 1
 
-Q: Dada la siguiente función:```cpp
+Q: Dada la siguiente función:
+```
+cpp
 int exa(string &cad, int pri, int ult) {
 	if(pri >= ult) {
 		return 1;
@@ -3161,7 +3171,9 @@ O: $\Theta(\log n)$
 O: $\Theta(n)$
 A: 2
 
-Q: Resolviendo la ecuación de recurrencia del ejercicio siguiente se obtiene que su función de coste es: ```Función F (ent n: entero): entero
+Q: Resolviendo la ecuación de recurrencia del ejercicio siguiente se obtiene que su función de coste es: 
+```
+Función F (ent n: entero): entero
 variables x, i: entero
 Inicio
 	si (n>=1) entonces
@@ -3238,7 +3250,9 @@ O: $O(n^2)$
 O: $O(n^2 \log n)$
 A: 1
 
-Q: El recorrido en profundidad de un grafo G no dirigido ha producido el arbol que se muestra en la figura, en el que cada nodo esta numerado siguiendo el orden de visita del recorrido en profundidad:```     1
+Q: El recorrido en profundidad de un grafo G no dirigido ha producido el arbol que se muestra en la figura, en el que cada nodo esta numerado siguiendo el orden de visita del recorrido en profundidad:
+```
+     1
    / | \
   2  5  7
  /|  |
@@ -3547,26 +3561,6 @@ O: tienen el mismo coste temporal asintotico en el caso mejor
 O: tienen el mismo coste temporal en los dos casos
 A: 1
 
-Q: El algoritmo que se describe a continuación calcula: ```Módulo Ejercicio (ent A es ArbolBinario) devuelve entero
-variables
-	Izq, Der es ArbolBinario
-inicio
-	si no A.Vacio entonces
-		A.HijoIzq (Izq);
-		A.HijoDer (Der);
-		devolver (ejercicio(izq) + ejercicio(der) + 1)
-	si no
-		devolver (0)
-	finsi
-fin
-```
-O: Cuantos niveles distintos tiene el árbol A
-O: El numero de veces que aparece el hijo izquierdo y el hijo derecho en el árbol A
-O: Ninguna de las anteriores
-O: El grado del árbol A
-O: El nivel en el que se encuentra el (hijo izquierdo + hijo derecho + 1) del árbol A
-A: 2
-
 Q: Dado el problema de las torres de Hanoi resuelto mediante divide y vencerás, ¿cuál de las siguientes relaciones de recurrencia expresa mejor su complejidad temporal para el caso general, siendo n el número de discos?
 O: $T(n) = 2T(n - 1) + 1$
 O: $T(n) = T(n - 1) + n$
@@ -3676,7 +3670,9 @@ O: $O(x^2)$
 O: $O(x)$
 A: 2
 
-Q: La complejidad del siguiente bucle es: ```for (i=1; i<=N; i++) {
+Q: La complejidad del siguiente bucle es: 
+```
+for (i=1; i<=N; i++) {
 	if (T[i] == x)
 		Aux=i;
 }
@@ -3913,7 +3909,9 @@ O: Lo más adecuado sería usar una técnica de ramificación y poda, aunque en 
 O: Una técnica voraz daría una solución óptima.
 A: 2
 
-Q: Considera la función siguiente que es un algoritmo típico de búsquedaSupongamos que x esta en el vector y que todos los elementos son distintos. En este caso, el numero medio de comparaciones con la variable x es: ```Función pertenece (ent L: vector de enteros, ent x:entero):entero
+Q: Considera la función siguiente que es un algoritmo típico de búsquedaSupongamos que x esta en el vector y que todos los elementos son distintos. En este caso, el numero medio de comparaciones con la variable x es: 
+```
+Función pertenece (ent L: vector de enteros, ent x:entero):entero
 variables: i, aux: entero
 Inicio
 	aux← 0
@@ -3968,7 +3966,8 @@ O: ...ramificación y poda.
 O: ...divide y vencerás.
 A: 2
 
-Q: ¿De qué clase de complejidad es la solución de la siguiente relación de recurrencia?```f(n) = n(n-1) + f(n-1) # si n>0
+Q: ¿De qué clase de complejidad es la solución de la siguiente relación de recurrencia?
+```f(n) = n(n-1) + f(n-1) # si n>0
 f(0) = 1 # si n=0
 ```
 O: $f(n) \in \Theta(n^3)$
@@ -4349,7 +4348,9 @@ O: es condicion suficiente que existan instancias distintas del problema con el 
 O: ... es condicion necesaria y suficiente que existan instancias distintas del problema con el mismo tamaño
 A: 0
 
-Q: El recorrido en profundidad de un grafo G no dirigido ha producido el arbol que se muestra en la figura, en el que cada nodo esta numerado siguiendo el orden de visita del recorrido en profundidad: ```    1
+Q: El recorrido en profundidad de un grafo G no dirigido ha producido el arbol que se muestra en la figura, en el que cada nodo esta numerado siguiendo el orden de visita del recorrido en profundidad: 
+```
+    1
    / \
   2   6
  / \   \
@@ -4448,7 +4449,9 @@ O: $n + n \log_2 n \in \Omega(n + n \log_2 n)$
 O: $\Omega(n^2) \subset \Omega(n)$
 A: 0
 
-Q: La complejidad de la función TB es: ```función TB (A: vector[λ]; iz , de : N) : N 
+Q: La complejidad de la función TB es: 
+```
+función TB (A: vector[λ]; iz , de : N) : N 
 var n,i:N; 
 	n=iz-de+1 
 	opcion 
@@ -4552,7 +4555,9 @@ O: Θ(n) ⊆ Θ(n^2)
 O: Θ(n) ⊆ Θ(n)
 A: 1
 
-Q: ¿Con que algoritmo de ordenación clásico se corresponde el pseudocodigo del siguiente ejemplo?: ```módulo ordena ( var A es vector de n enteros);
+Q: ¿Con que algoritmo de ordenación clásico se corresponde el pseudocodigo del siguiente ejemplo?: 
+```
+módulo ordena ( var A es vector de n enteros);
 variables i, j, x: es entero
 for (i = 2; i<=N; i++) {
 	X=A[i];
@@ -4737,7 +4742,9 @@ O: El problema de la mochila discreta.
 O: El problema de la asignación de coste mínimo de n tareas a n trabajadores cuando el coste de asignar la tarea i al trabajador j, $c_{ij}$ está tabulado en una matriz.
 A: 0
 
-Q: El algoritmo que se describe a continuación calcula:```Función Ejercicio (ent A:ArbolBinarioGeneral):entero
+Q: El algoritmo que se describe a continuación calcula:
+```
+Función Ejercicio (ent A:ArbolBinarioGeneral):entero
 variables Izq,Der: ArbolBinarioGeneral
 inicio
 	si NO A.Vacio entonces
@@ -5432,7 +5439,9 @@ O: Las demás son falsas
 O: siempre coincidirá con la complejidad temporal de las instancias que están en el caso base del algoritmo recursivo
 A: 1
 
-Q: Sea un vector de n elementos y supongamos que todos los elementos de a son distintos, considera el siguiente algoritmo. Si consideramos como medida significativa el numero de comparaciones con respecto de los elementos del vector, entonces el algoritmo tiene una complejidad:```función Ordena (ent/sal a:vector): nada
+Q: Sea un vector de n elementos y supongamos que todos los elementos de a son distintos, considera el siguiente algoritmo. Si consideramos como medida significativa el numero de comparaciones con respecto de los elementos del vector, entonces el algoritmo tiene una complejidad:
+```
+función Ordena (ent/sal a:vector): nada
 	variables: i,j,temp: entero
 	inicio
 		para i de 0 a n-2 hacer
@@ -5581,7 +5590,9 @@ O: $O(n)$
 O: $O(1)$
 A: 0
 
-Q: La complejidad de la función A2 es: ```Funcion A2 (n, a: entero):entero; 
+Q: La complejidad de la función A2 es: 
+```
+Funcion A2 (n, a: entero):entero; 
 Var r: entero; fvar 
 	si (a² > n) devuelve 0 
 	sino 
@@ -5838,7 +5849,9 @@ O: Sí, pero esto solo podría ocurrir si se hace uso de cotas pesimistas.
 O: No, los nodos hojas son los nodos completados y por lo tanto hay que visitar al menos uno de ellos para almacenarlo como la mejor solución hasta el momento.
 A: 1
 
-Q: Sea v un vector de N elementos y supongamos que todos los elementos de v son distintos Considera el algoritmo siguiente Si tomamos como medida significativa el numero de comparaciones con elementos del vector(instrucción 2) entonces el algoritmo tiene un coste: ```for (i=1; i<N; i++) {
+Q: Sea v un vector de N elementos y supongamos que todos los elementos de v son distintos Considera el algoritmo siguiente Si tomamos como medida significativa el numero de comparaciones con elementos del vector(instrucción 2) entonces el algoritmo tiene un coste: 
+```
+for (i=1; i<N; i++) {
 	X=V[i]; # (1)
 	Izq=0;
 	Der=i-1;
@@ -5903,7 +5916,9 @@ O: Nunca se vuelve a reconsiderar una decisión ya tomada
 O: Se combinan las soluciones parciales para obtener la solución parcial
 A: 2
 
-Q: Su ecuación de recurrencia es:```Función F (ent n: entero): entero
+Q: Su ecuación de recurrencia es:
+```
+Función F (ent n: entero): entero
 	variables x, i: entero
 	Inicio
 	si (n>=1) entonces
