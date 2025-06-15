@@ -8,9 +8,9 @@ A: 2
 Q: Dado el siguiente driver para probar metodoSUT():
 ```cpp
 @Test(expected = MiExcepcion.class) Public void testC1() {
-Int resultadoEsperado = 0;
-Int resultadoReal = metodoSut();
-AssertEquals(resultadoEsperado, resultadoReal);
+  Int resultadoEsperado = 0;
+  Int resultadoReal = metodoSut();
+  AssertEquals(resultadoEsperado, resultadoReal);
 }
 ```
 O: Error, si el metodoSUT() provoca la excepción MiExecpcion.class
@@ -148,11 +148,11 @@ A: 3
 Q: Dado el siguiente método, que devuelve el sumatorio desde 1 hasta un determinado valor n:
 ```cpp
 int sumatorio(int n) {
-int suma = 0;
-for (int i = 1; i <= n; i++) {
-suma += i;
-}
-return suma;
+  int suma = 0;
+  for (int i = 1; i <= n; i++) {
+    suma += i;
+  }
+  return suma;
 }
 ```
 Se puede aplicar el método del camino básico
@@ -184,11 +184,11 @@ A: 0
 Q: Indica cuál es la complejidad ciclomática del siguiente código:
 ```cpp
 if (a > b && a < c || c < b)
-a = b;
+  a = b;
 else if (a < b || c > a)
-c = a;
+  c = a;
 else
-b = c;
+  b = c;
 ```
 O: 6
 O: 4
