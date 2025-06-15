@@ -3965,7 +3965,8 @@ A: 2
 Q: Indica cuál es la complejidad de la función siguiente:
 ```cpp
 unsigned sum(const mat &A) {
-#A es una matriz cuadrada unsigned d = A.n_rows();
+#A es una matriz cuadrada
+unsigned d = A.n_rows();
   unsigned a = 0;
   for (unsigned i = 0; i < d; i++)
     for (unsigned j = 0; j < d; j++)
