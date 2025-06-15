@@ -3192,7 +3192,6 @@ A: 1
 
 Q: El recorrido en profundidad de un grafo G no dirigido ha producido el arbol que se muestra en la figura, en el que cada nodo esta numerado siguiendo el orden de visita del recorrido en profundidad:
 ```
-
      1
    / | \
   2  5  7
