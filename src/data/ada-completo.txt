@@ -28,15 +28,15 @@ O: El problema del cambio.
 O: La mochila discreta sin restricciones adicionales.
 A: 1
 
-Q: ¿Cuál de estas afirmaciones sobre el algoritmo para calcular x^n es falsa? 
+Q: ¿Cuál de estas afirmaciones sobre el algoritmo para calcular x^n es falsa?
 ```
 Función potencia ( ent x: entero, ent n: entero): entero
 Inicio
-	si n==1 entonces
-		retorna (x);
-	si no
-		retorna (x*potencia(x,n-1));
-	finsi
+si n==1 entonces
+retorna (x);
+si no
+retorna (x*potencia(x,n-1));
+finsi
 fin
 ```
 O: Se utiliza un esquema de divide y venceras para su solucion
@@ -60,11 +60,11 @@ A: 2
 Q: Cuál de las siguientes formulaciones expresa mejor el coste temporal asintótico de la siguiente función?
 ```cpp
 int f(int n) {
-  int count = 0;
-  for (int i = n; i > 0; i /= 2)
-    for (int j = 0; j < 2 * i; j++)
-      count += 1;
-  return count;
+int count = 0;
+for (int i = n; i > 0; i /= 2)
+for (int j = 0; j < 2 * i; j++)
+count += 1;
+return count;
 }
 ```
 O: $f(n) = \sum_{i=1}^{\log n} 4n \left( \frac {1}{2} \right)^i$
@@ -90,12 +90,12 @@ O: $n \log n$
 O: $n \log^2 n$
 A: 1
 
-Q: Indica cuál es el coste temporal en función de n del problema siguiente 
+Q: Indica cuál es el coste temporal en función de n del problema siguiente
 ```cpp
 s = 0;
 for (i = 0; i < n; i++)
-  for (j = i; j < n; j++)
-    s += n * i * j;
+for (j = i; j < n; j++)
+s += n * i * j;
 ```
 O: Es $\Theta(n)$
 O: Es $O(n^2)$ pero no $\Omega(n^2)$
@@ -106,16 +106,16 @@ Q: Que calcula el siguiente algoritmo:
 ```
 función Ejercicio (ent A: ÁrbolBinario, ent/sal actual:entero):nada
 variables		x: entero
-		Izq, Der: ÁrbolBinario
+Izq, Der: ÁrbolBinario
 inicio
-	si A.Vacio entonces
-		A.HijoIzq(Izq)
-		A.HijoDer(Der)
-		A.Raíz(x)
-		actual:=actual + x
-		Ejercicio (Izq, actual)
-		Ejercicio (Der, actual)
-	finsi
+si A.Vacio entonces
+A.HijoIzq(Izq)
+A.HijoDer(Der)
+A.Raíz(x)
+actual:=actual + x
+Ejercicio (Izq, actual)
+Ejercicio (Der, actual)
+finsi
 fin
 Llamada desde el programa principal:
 n:= 0			#Arb es un árbol
@@ -148,9 +148,9 @@ A: 1
 Q: ¿Cuál sería la complejidad temporal de la siguiente función tras aplicar programación dinámica?
 ```cpp
 double f(int n, int m) {
-  if (n == 0)
-    return 1;
-  return m * f(n - 1, m) * f(n - 2, m);
+if (n == 0)
+return 1;
+return m * f(n - 1, m) * f(n - 2, m);
 }
 ```
 O: $\Theta(n)$
@@ -158,7 +158,7 @@ O: $\Theta(n \cdot m)$
 O: $\Theta(n^2)$
 A: 0
 
-Q: ¿De qué clase de complejidad es la solución de la siguiente relación de recurrencia? 
+Q: ¿De qué clase de complejidad es la solución de la siguiente relación de recurrencia?
 ```
 f(n) = n(n - 1) + f(n - 1)   # si n > 0
 f(0) = 1                      # si n = 0
@@ -177,16 +177,16 @@ A: 2
 Q: Considera el siguiente algoritmo: Nos interesa medir cuantas veces se ejecuta nº 3 entonces el caso mejor se obtiene cuando:
 ```cpp
 Ordena(vector V[N] de enteros) {
-  int i, j, aux;
-  for (i = 1; i < N; i++) {
-    for (j = 0; j < N - i; j++) {
-      if (V[j] > V[j + 1]) { // (2)
-        aux = V[j];
-        V[j] = V[j + 1]; // (3)
-        V[j + 1] = aux;
-      }
-    }
-  }
+int i, j, aux;
+for (i = 1; i < N; i++) {
+for (j = 0; j < N - i; j++) {
+if (V[j] > V[j + 1]) { // (2)
+aux = V[j];
+V[j] = V[j + 1]; // (3)
+V[j + 1] = aux;
+}
+}
+}
 }
 ```
 O: Cuando los datos vienen dispuestos en orden inverso, que se ejecuta del orden de $n^2$ veces
@@ -237,40 +237,40 @@ A: 1
 Q: Se dispone de n clases de objetos. De cada una de ellas se conoce el número máximo de piezas que se puede fabricar, $m_i \in \mathbb{N}$ y el tiempo necesario para su fabricación $t_i \in \mathbb{R}$, $i \in [0..n-1]$. Queremos listar todas las posibilidades de fabricación de objetos teniendo en cuenta que el tiempo total está limitado por $T \in \mathbb{R}$. Para ello hemos hecho el siguiente programa donde faltan unas líneas:
 ```cpp
 void combinations(const vector<int> &m, const vector<double> &t, double T,
-                  size_t k, vector<int> &x) {
-  if (k == m.size()) {
-    print_comb(x);
-    return;
-  }
+size_t k, vector<int> &x) {
+if (k == m.size()) {
+print_comb(x);
+return;
+}
 #==> Aquí falta código <= =
 }
 ```
 ```cpp
 void combinations(const vector<int> &m, const vector<double> &t, double T) {
-  vector<int> x(m.size());
-  combinations(m, t, T, 0, x);
+vector<int> x(m.size());
+combinations(m, t, T, 0, x);
 }
 ```
 ¿Cuales son las líneas que faltan? [suponed que `print_comb()` imprime correctamente la combinación que hay codificada en x]
 O: ```cpp
 for (int j = 0; j <= m[k]; j++) {
-  x[k] = j;
-  if (T >= j * t[k])
-    combinations(m, t, T - j * t[k], k + 1, x);
+x[k] = j;
+if (T >= j * t[k])
+combinations(m, t, T - j * t[k], k + 1, x);
 }
 ```
 O: ```cpp
 for (int j = 0; j < m[k]; j++) {
-  x[k] = j;
-  if (T >= j * t[k])
-    combinations(m, t, T - j * t[k], k + 1, x);
+x[k] = j;
+if (T >= j * t[k])
+combinations(m, t, T - j * t[k], k + 1, x);
 }
 ```
 O: ```cpp
 for (int j = 0; j < m[k]; j++) {
-  x[j] = k;
-  if (T >= j * t[k])
-    combinations(m, t, T - j * t[k], k + 1, x);
+x[j] = k;
+if (T >= j * t[k])
+combinations(m, t, T - j * t[k], k + 1, x);
 }
 ```
 A: 0
@@ -278,13 +278,13 @@ A: 0
 Q: Se pretende mejorar mediante programación dinámica iterativa la siguiente función (v1 y v2 son vectores definidos como variables globales). ¿Cuál es la mejor complejidad espacial que se puede conseguir?
 ```cpp
 float f(unsigned n, int m) {
-  if (m < 0)
-    return 0;
-  float A = 0.0;
-  if (v1[m] <= n)
-    A = v2[m] + f(n - v1[m], m - 1);
-  float B = f(n, m - 1);
-  return A + B;
+if (m < 0)
+return 0;
+float A = 0.0;
+if (v1[m] <= n)
+A = v2[m] + f(n - v1[m], m - 1);
+float B = f(n, m - 1);
+return A + B;
 }
 ```
 O: $O(m \cdot n)$
@@ -345,9 +345,9 @@ A: 2
 Q: Indica cuál es la complejidad, en función de n, del fragmento siguiente:
 ```cpp
 for (int i = 0; i < n; i++) {
-  A[i] = 0;
-  for (int j = 0; j < 2 * n; j++)
-    A[i] += B[j];
+A[i] = 0;
+for (int j = 0; j < 2 * n; j++)
+A[i] += B[j];
 }
 ```
 O: $\Theta(n^2)$
@@ -361,15 +361,15 @@ x = v[pi];
 i = pi + 1;
 j = pf;
 do {
-  while (i <= pf && v[i] < x)
-    i++;
-  while (v[j] > x)
-    j--;
-  if (i <= j) {
-    swap(v[i], v[j]);
-    i++;
-    j--;
-  }
+while (i <= pf && v[i] < x)
+i++;
+while (v[j] > x)
+j--;
+if (i <= j) {
+swap(v[i], v[j]);
+i++;
+j--;
+}
 } while (i < j);
 swap(v[pi], v[j]);
 ```
@@ -424,9 +424,9 @@ A: 0
 Q: Indica cuál es la complejidad en función de n, donde k es una constante (no depende de n), del fragmento siguiente:
 ```cpp
 for (int i = k; i < n - k; i++) {
-  A[i] = 0;
-  for (int j = i - k; j < i + k; j++)
-    A[i] += B[j];
+A[i] = 0;
+for (int j = i - k; j < i + k; j++)
+A[i] += B[j];
 }
 ```
 O: $O(n \cdot \log(n))$
@@ -450,14 +450,14 @@ A: 2
 Q: Sobre la complejidad temporal de la siguiente función:
 ```cpp
 unsigned desperdicio(unsigned n) {
-  if (n <= 1)
-    return 0;
-  unsigned sum = desperdicio(n / 2) + desperdicio(n / 2) + desperdicio(n / 2);
-  for (unsigned i = 1; i < n - 1; i++)
-    for (unsigned j = 1; j <= i; j++)
-      for (unsigned k = 1; k <= j; k++)
-        sum += i * j * k;
-  return sum;
+if (n <= 1)
+return 0;
+unsigned sum = desperdicio(n / 2) + desperdicio(n / 2) + desperdicio(n / 2);
+for (unsigned i = 1; i < n - 1; i++)
+for (unsigned j = 1; j <= i; j++)
+for (unsigned k = 1; k <= j; k++)
+sum += i * j * k;
+return sum;
 }
 ```
 O: Ninguna de las otras dos alternativas es cierta.
@@ -568,18 +568,18 @@ O: $T(n) = n + T(n/2)$ para $n > 1$ y $T(n) = 1$ para $n \leq 1$
 O: $T(n) = n + 2T(n/2)$ para $n > 1$ y $T(n) = 1$ para $n \leq 1$
 A: 2
 
-Q: El coste temporal asintótico del programa 
+Q: El coste temporal asintótico del programa
 ```cpp
 s = 0;
 for (i = 0; i < n; i++)
-  for (j = i; j < n; j++)
-    s += i * j;
+for (j = i; j < n; j++)
+s += i * j;
 ```
-y del programa 
+y del programa
 ```cpp
 s = 0;
 for (i = 0; i < n; i++)
-  for (j = 0; j < n; j++)
+for (j = 0; j < n; j++)
 s += i * i * j
 ```
 O: El del segundo, menor que el primero.
@@ -608,16 +608,16 @@ A: 1
 Q: En cuanto a la complejidad temporal de la siguiente función, ¿qué podemos decir acerca del mejor de los casos?
 ```cpp
 int f(vector<int> &v) {
-  int n = v.size(), i = 2, k = 0;
-  while (i < n) {
-    int j = i;
-    while (v[j] != v[1]) {
-      k++;
-      j = j / 2;
-    }
-    i = i + 2;
-  }
-  return k;
+int n = v.size(), i = 2, k = 0;
+while (i < n) {
+int j = i;
+while (v[j] != v[1]) {
+k++;
+j = j / 2;
+}
+i = i + 2;
+}
+return k;
 }
 ```
 O: Que uno de los mejores casos ocurre cuando v[j] = v[1] ∀j ∈ N y la complejidad es $\Omega(n)$.
@@ -682,14 +682,14 @@ A: 2
 Q: ¿Qué hace la siguiente función?
 ```cpp
 void f(vector<int> &A) {
-  priority_queue<int> pq;
-  for (auto a : A)
-    pq.push(a);
-  A.clear();
-  while (!pq.empty()) {
-    A.push_back(pq.top());
-    pq.pop();
-  }
+priority_queue<int> pq;
+for (auto a : A)
+pq.push(a);
+A.clear();
+while (!pq.empty()) {
+A.push_back(pq.top());
+pq.pop();
+}
 }
 ```
 O: Ordena el vector A
@@ -715,19 +715,19 @@ O: ... se comporta peor cuando el vector ya está ordenado.
 O: ... El hecho de que el vector estuviera previamente ordenado o no, no influye en la complejidad temporal de este algoritmo.
 A: 2
 
-Q: Dada la siguiente función: 
+Q: Dada la siguiente función:
 ```cpp
 int exa(vector<int> &v) {
-  int j, i = 1, n = v.size();
-  if (n > 1)
-    do {
-      int x = v[i];
-      for (j = i; j > 0 && v[j - 1] > x; j--)
-        v[j] = v[j - 1];
-      v[j] = x;
-      i++;
-    } while (i < n);
-  return 0;
+int j, i = 1, n = v.size();
+if (n > 1)
+do {
+int x = v[i];
+for (j = i; j > 0 && v[j - 1] > x; j--)
+v[j] = v[j - 1];
+v[j] = x;
+i++;
+} while (i < n);
+return 0;
 }
 ```
 O: La complejidad temporal en el mejor de los casos es $\Omega(n)$.
@@ -738,14 +738,14 @@ A: 0
 Q: ¿Cuál es la complejidad temporal de la siguiente función recursiva?
 ```cpp
 unsigned desperdicio(unsigned n) {
-  if (n <= 1)
-    return 0;
-  unsigned sum = desperdicio(n / 2) + desperdicio(n / 2);
-  for (unsigned i = 1; i < n - 1; i++)
-    for (unsigned j = 1; j <= i; j++)
-      for (unsigned k = 1; k <= j; k++)
-        sum += i * j * k;
-  return sum;
+if (n <= 1)
+return 0;
+unsigned sum = desperdicio(n / 2) + desperdicio(n / 2);
+for (unsigned i = 1; i < n - 1; i++)
+for (unsigned j = 1; j <= i; j++)
+for (unsigned k = 1; k <= j; k++)
+sum += i * j * k;
+return sum;
 }
 ```
 O: $O(2^n)$
@@ -870,12 +870,12 @@ A: 1
 Q: Considera la función siguiente, donde todos los elementos del vector L son distintos. Considera como medida significativa las asignaciones a max, entonces el numero de asignaciones para el caso mejor y peor son, respectivamente:
 ```cpp
 int maximo(int L[N]) {
-  int i, max;
-  max = L[0];
-  for (i = 1; i < N; i++)
-    if (max < L[i])
-      max = L[i];
-  return (max);
+int i, max;
+max = L[0];
+for (i = 1; i < N; i++)
+if (max < L[i])
+max = L[i];
+return (max);
 }
 ```
 O: 1 cuando el mayor elemento esta en la posición inicial y n cuando los elementos están ordenados ascendentemente
@@ -887,9 +887,9 @@ A: 0
 Q: Queremos aplicar la técnica de memoización a la siguiente función recursiva:
 ```cpp
 double f(double x) {
-  if (x <= 2)
-    return x;
-  return f(sqrt(x - 1)) + f(sqrt(x - 2));
+if (x <= 2)
+return x;
+return f(sqrt(x - 1)) + f(sqrt(x - 2));
 }
 ```
 ¿Cuál sería un buen candidato para el almacén? (La función `sqrt()` obtiene la raíz cuadrada; xMax es el valor de x en la primera llamada.)
@@ -983,15 +983,15 @@ A: 2
 Q: Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función?
 ```cpp
 void f(unsigned n) {
-  if (n < 1)
-    return;
-  for (int i = 0; i < n; i++)
-    for (int j = 0; j < n; j++)
-      for (int k = 0; k < n; k++)
-        cout << "*";
-  for (int i = 0; i < 8; i++)
-    if (n / 2)
-      ;
+if (n < 1)
+return;
+for (int i = 0; i < n; i++)
+for (int j = 0; j < n; j++)
+for (int k = 0; k < n; k++)
+cout << "*";
+for (int i = 0; i < 8; i++)
+if (n / 2)
+;
 }
 ```
 O: $\Theta(n^3)$
@@ -1008,16 +1008,16 @@ A: 1
 Q: En cuanto a la complejidad temporal de la siguiente función, ¿qué podemos decir acerca del mejor de los casos?
 ```cpp
 int f(vector<int> &v) {
-  int n = v.size(), i = 2, k = 0;
-  while (i < n) {
-    int j = i;
-    while (v[j] != v[1]) {
-      k++;
-      j = j / 2;
-    }
-    i = i + 2;
-  }
-  return k;
+int n = v.size(), i = 2, k = 0;
+while (i < n) {
+int j = i;
+while (v[j] != v[1]) {
+k++;
+j = j / 2;
+}
+i = i + 2;
+}
+return k;
 }
 ```
 O: Que el mejor de los casos ocurre cuando el vector tiene 2 elementos o menos y la complejidad es $\Omega(1)$.
@@ -1053,7 +1053,7 @@ Q: Indica cuál es la complejidad, en función de $n$, del fragmento siguiente:
 ```cpp
 a = 0;
 for (int i = 0; i < n * n; i++)
-  a += A[(i + j) % n];
+a += A[(i + j) % n];
 ```
 O: $O(n^2)$
 O: $O(n \log(n))$
@@ -1096,7 +1096,7 @@ Q: Se pretende implementar mediante programación dinámica iterativa la funció
 ```cpp
 unsigned f(unsigned y, unsigned x) {
 #suponemos y >= x if (x == 0 || y == x) return 1;
-  return f(y - 1, x - 1) + f(y - 1, x);
+return f(y - 1, x - 1) + f(y - 1, x);
 }
 ```
 ¿Cuál es la mejor estructura para el almacén?
@@ -1138,11 +1138,11 @@ A: 0
 Q: ¿Cuál de las siguientes formulaciones expresa mejor la complejidad temporal, en función del parámetro n, de la siguiente función? (asumimos que n es potencia exacta de 2)
 ```cpp
 int f(int n) {
-  int k = 0;
-  for (int i = 2; i <= n; i *= 2)
-    for (int j = i; j > 0; j -= 2)
-      k++;
-  return k;
+int k = 0;
+for (int i = 2; i <= n; i *= 2)
+for (int j = i; j > 0; j -= 2)
+k++;
+return k;
 }
 ```
 O: $$\sum_{p=2}^{n/2} \frac{p-1}{2}$$
@@ -1165,12 +1165,12 @@ A: 2
 Q: Se pretende implementar mediante programación dinamica iterativa la función recursiva:
 ```cpp
 unsigned f(unsigned x, unsigned v[]) {
-  if (x == 0)
-    return 0;
-  unsigned m = 0;
-  for (unsigned k = 0; k < x; k++)
-    m = max(m, v[k] + f(x - k, v));
-  return m;
+if (x == 0)
+return 0;
+unsigned m = 0;
+for (unsigned k = 0; k < x; k++)
+m = max(m, v[k] + f(x - k, v));
+return m;
 }
 ```
 ¿Cuál es la mejor estructura para el almacén?
@@ -1252,19 +1252,19 @@ O: ... no presenta caso mejor y caso peor para instancias del mismo tamaño.
 O: ... se comporta peor cuando el vector ya está ordenado.
 A: 2
 
-Q: Dado el algoritmo el caso peor el numero de nodos procesados: 
+Q: Dado el algoritmo el caso peor el numero de nodos procesados:
 ```
 Módulo Ejercicio (ent A es ArbolBinario) devuelve entero
 variables
-	Izq, Der es ArbolBinario
+Izq, Der es ArbolBinario
 inicio
-	si no A.Vacio entonces
-		A.HijoIzq (Izq);
-		A.HijoDer (Der);
-		devolver (ejercicio(izq) + ejercicio(der) + 1)
-	si no
-		devolver (0)
-	finsi
+si no A.Vacio entonces
+A.HijoIzq (Izq);
+A.HijoDer (Der);
+devolver (ejercicio(izq) + ejercicio(der) + 1)
+si no
+devolver (0)
+finsi
 fin
 ```
 O: es proporcional al logaritmo siempre
@@ -1295,46 +1295,46 @@ A: 2
 Q: Dada la siguiente función recursiva:
 ```cpp
 unsigned f(unsigned a, unsigned b) {
-  if (a < 3)
-    return a + 2 * b;
-  return f(a - 1, (7 * b) % 10);
+if (a < 3)
+return a + 2 * b;
+return f(a - 1, (7 * b) % 10);
 }
 ```
 donde suponemos que siempre se va a invocar la función con b < 10. Queremos acelerarla aplicando la técnica de programación dinámica iterativa. ¿Cómo quedaría?
 O: ```cpp
 unsigned f(unsigned a, unsigned b) {
-  vector<vector<unsigned>> M(a, vector<unsigned>(10));
-  for (unsigned j = 0; j < 10; j++)
-    for (unsigned i = 0; i <= a; i++)
-      if (i < 3)
-        M[i][j] = i + 2 * j;
-      else
-        M[i][j] = M[i - 1][(7 * j) % 10];
-  return M[a][b];
+vector<vector<unsigned>> M(a, vector<unsigned>(10));
+for (unsigned j = 0; j < 10; j++)
+for (unsigned i = 0; i <= a; i++)
+if (i < 3)
+M[i][j] = i + 2 * j;
+else
+M[i][j] = M[i - 1][(7 * j) % 10];
+return M[a][b];
 }
 ```
 O: ```cpp
 unsigned f(unsigned a, unsigned b) {
-  vector<vector<unsigned>> M(a + 1, vector<unsigned>(10));
-  for (unsigned i = 0; i <= a; i++)
-    for (unsigned j = 0; j < 10; j++)
-      if (i < 3)
-        M[i][j] = i + 2 * j;
-      else
-        M[i][j] = M[i - 1][(7 * j) % 10];
-  return M[a][b];
+vector<vector<unsigned>> M(a + 1, vector<unsigned>(10));
+for (unsigned i = 0; i <= a; i++)
+for (unsigned j = 0; j < 10; j++)
+if (i < 3)
+M[i][j] = i + 2 * j;
+else
+M[i][j] = M[i - 1][(7 * j) % 10];
+return M[a][b];
 }
 ```
 O: ```cpp
 unsigned f(unsigned a, unsigned b) {
-  vector<vector<unsigned>> M(a + 1, vector<unsigned>(10));
-  for (unsigned j = 0; j < 10; j++)
-    for (unsigned i = 0; i <= a; i++)
-      if (i < 3)
-        M[i][j] = i + 2 * j;
-      else
-        M[i][j] = M[i - 1][(7 * j) % 10];
-  return M[a][b];
+vector<vector<unsigned>> M(a + 1, vector<unsigned>(10));
+for (unsigned j = 0; j < 10; j++)
+for (unsigned i = 0; i <= a; i++)
+if (i < 3)
+M[i][j] = i + 2 * j;
+else
+M[i][j] = M[i - 1][(7 * j) % 10];
+return M[a][b];
 }
 ```
 A: 0
@@ -1379,7 +1379,7 @@ Q: Dado el siguiente programa recursivo:
 ```cpp
 int f(int n) {
 #Se asume que n >= 0 if (n == 0) return 1;
-  return f(n - 1) + f(n - 2);
+return f(n - 1) + f(n - 2);
 }
 ```
 si quisiéramos mejorarlo haciendo uso de la técnica de programación dinámica, ¿cuáles serían las complejidades temporal y espacial más ajustadas del algoritmo resultante?
@@ -1427,10 +1427,10 @@ A: 2
 Q: Indica cuál es la complejidad temporal en función de $n$, donde $A$ es un vector de enteros y $k$ es una constante que no depende de $n$, del fragmento siguiente:
 ```cpp
 for (int i = k; i < n - k; i++) {
-  A[i] = 0;
-  for (int j = i - k; j < i + k; j++) {
-    A[i] += B[j];
-  }
+A[i] = 0;
+for (int j = i - k; j < i + k; j++) {
+A[i] += B[j];
+}
 }
 ```
 O: $\Theta(k)$
@@ -1513,9 +1513,9 @@ A: 1
 Q: Indica cuál es la complejidad, en función de n, del fragmento siguiente:
 ```cpp
 for (int i = 0; i < n; i++) {
-  A[i] = 0;
-  for (int j = 0; j < 20; j++)
-    A[i] += B[j];
+A[i] = 0;
+for (int j = 0; j < 20; j++)
+A[i] += B[j];
 }
 ```
 O: $\Theta(n)$
@@ -1534,10 +1534,10 @@ Q: La complejidad del algoritmo es:
 función recursiva(n : entero) : entero;
 var i : entero;
 {
-  if (n <= 1)
-    then recursiva : = 1 else for (i = 1; i <= n; i++) writeln(i);
+if (n <= 1)
+then recursiva : = 1 else for (i = 1; i <= n; i++) writeln(i);
 recursiva:
-  = recursiva(n / 2) + recursiva(n / 2)
+= recursiva(n / 2) + recursiva(n / 2)
 }
 ```
 O: $O(2^n)$
@@ -1577,12 +1577,12 @@ O: ...$O(\log n)$
 O: ...$O(n^2)$
 A: 0
 
-Q: Indica cuál es la complejidad temporal en función de n, donde A es un vector de enteros y k es una constante que no depende de n, del fragmento siguiente: 
+Q: Indica cuál es la complejidad temporal en función de n, donde A es un vector de enteros y k es una constante que no depende de n, del fragmento siguiente:
 ```cpp
 for (int i = k; i < n - k; i++) {
-  A[i] = 0;
-  for (int j = i - k; j < i + k; j++)
-    A[i] += B[j];
+A[i] = 0;
+for (int j = i - k; j < i + k; j++)
+A[i] += B[j];
 }
 ```
 O: $\Theta(k)$
@@ -1617,10 +1617,10 @@ A: 0
 Q: ¿Cuál es el coste temporal asintótico de la siguiente función?
 ```cpp
 void f(int n, int arr[]) {
-  int i = 0, j = 0;
-  for (; i < n; ++i)
-    while (j < n && arr[i] < arr[j])
-      j++;
+int i = 0, j = 0;
+for (; i < n; ++i)
+while (j < n && arr[i] < arr[j])
+j++;
 }
 ```
 O: $O(n)$
@@ -1690,19 +1690,6 @@ O: El problema del corte de tubos, que se obtenga el máximo beneficio posible.
 O: El problema del cambio, o sea, el de entregar una cantidad de dinero usando las mínimas monedas.
 A: 1
 
-Q: Indica cuál es la complejidad, en función de n, del fragmento siguiente:
-```cpp
-for (int i = 0; i < n; i++) {
-  A[i] = 0;
-  for (int j = 0; j < 2 * n; j++)
-    A[i] += B[j];
-}
-```
-O: $\Theta(n \log n)$
-O: $\Theta(n^2)$
-O: $\Theta(n)$
-A: 1
-
 Q: De las siguientes tres afirmaciones, una es cierta y dos falsas, o bien una es falsa y dos son ciertas. Marca la que en ese sentido es diferente a las otras dos.
 O: Para que un problema tenga solución mediante programación dinámica es condición necesaria que pueda resolverse mediante divide y vencerás.
 O: Todo problema que tiene solución mediante divide y vencerás también la tendrá mediante programación dinámica.
@@ -1757,9 +1744,9 @@ A: 2
 Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva: ¿Cuál es la mejor complejidad espacial que se puede conseguir?
 ```cpp
 int f(int x, int y) {
-  if (x <= y)
-    return 1;
-  return x + f(x - 1, y);
+if (x <= y)
+return 1;
+return x + f(x - 1, y);
 }
 ```
 O: $O(x^2)$
@@ -1776,12 +1763,12 @@ A: 1
 Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva:
 ```cpp
 unsigned f(unsigned x, unsigned v[]) {
-  if (x == 0)
-    return 0;
-  unsigned m = 0;
-  for (unsigned k = 0; k < x; k++)
-    m = max(m, v[k] + f(x - k, v));
-  return m;
+if (x == 0)
+return 0;
+unsigned m = 0;
+for (unsigned k = 0; k < x; k++)
+m = max(m, v[k] + f(x - k, v));
+return m;
 }
 ```
 ¿Cuál es la mejor complejidad espacial que se puede conseguir?
@@ -1802,29 +1789,16 @@ O: $\Theta{( 4^n )}$
 O: Ninguna de las anteriores
 A: 1
 
-Q: ¿Cuál sería la complejidad temporal de la siguiente función tras aplicar programación dinámica? 
-```cpp
-double f(int n, int m) {
-  if (n == 0)
-    return 1;
-  return m * f(n - 1, m) * f(n - 2, m);
-}
-```
-O: $\Theta(n)$
-O: $\Theta(n^2)$
-O: $\Theta(n \cdot m)$
-A: 0
-
 Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva: ¿Cuál es la mejor complejidad espacial que se puede conseguir?
 ```cpp
 float f(unsigned x, int y) {
-  if (y < 0)
-    return 0;
-  float A = 0.0;
-  if (v1[y] <= x)
-    A = v2[y] + f(x - v1[y], y - 1);
-  float B = f(x, y - 1);
-  return min(A, 2 + B);
+if (y < 0)
+return 0;
+float A = 0.0;
+if (v1[y] <= x)
+A = v2[y] + f(x - v1[y], y - 1);
+float B = f(x, y - 1);
+return min(A, 2 + B);
 }
 ```
 O: $O(1)$
@@ -1854,10 +1828,10 @@ A: 0
 Q: ¿Cuál es la complejidad temporal en función de n, del siguiente fragmento:
 ```cpp
 for (int i = 0; i < n; i++) {
-  A[i] = 0;
-  for (int j = 0; j < 20; j++) {
-    A[i] += B[j];
-  }
+A[i] = 0;
+for (int j = 0; j < 20; j++) {
+A[i] += B[j];
+}
 }
 ```
 O: $\Theta(n \log n)$
@@ -1876,7 +1850,7 @@ Q: Indica cuál es la complejidad, en función de n, del fragmento siguiente: (s
 sort(begin(A), end(A));
 int acc = 0;
 for (auto i : A)
-  acc += i;
+acc += i;
 ```
 O: $\Theta(n \log n)$
 O: $\Theta(n^2)$
@@ -1920,11 +1894,10 @@ O: `vector<double> A`
 O: Ninguna de las dos otras opciones son verdaderas
 A: 2
 
-Q: 
-```cpp
+Q: ```cpp
 unsigned f(unsigned y, unsigned x) {
 #suponemos y >= x if (x == 0 || y == x) return 1;
-  return f(y - 1, x - 1) + f(y - 1, x);
+return f(y - 1, x - 1) + f(y - 1, x);
 }
 ```
 O: $O(x-y)$
@@ -1936,12 +1909,6 @@ Q: El uso de funciones de cota en ramificación y poda
 O: Transforma en polinómicas complejidades que antes eran exponenciales.
 O: Puede reducir el número de instancias del problema que pertenecen al caso peor.
 O: Garantiza que el algoritmo va a ser más eficiente ante cualquier instancia del problema.
-A: 1
-
-Q: Si $f \notin O(g_1)$ y $f \in O(g_2)$ entonces siempre se cumplirá:
-O: $f \in \Omega(\min(g_1, g_2))$
-O: $f \notin O(\max(g_1, g_2))$
-O: $f \in \Omega(g_1 + g_2)$
 A: 1
 
 Q: El coste temporal asintótico del fragmento `s=0; for(i=0;i<n;i++) for(j=i;j<n;j++) s+=i*j;` y el del fragmento `s=0; for(i=0;i<n;i++) for(j=0;j<n;j++) s+=i*i*j;`son ...
@@ -2039,9 +2006,9 @@ A: 0
 Q: Queremos aplicar la técnica de memoización a la función recursiva de la imagen. ¿Cuál sería un buen candidato para el almacén? (La función `sqrt()` obtiene la raíz cuadrada; xMax es el valor de x en la primera llamada.)
 ```cpp
 double f(double x) {
-  if (x <= 2)
-    return x;
-  return f(sqrt(x - 1)) + f(sqrt(x - 2));
+if (x <= 2)
+return x;
+return f(sqrt(x - 1)) + f(sqrt(x - 2));
 }
 ```
 O: Ninguna de las otras dos opciones es válida.
@@ -2131,12 +2098,11 @@ O: Sí, siempre que el dominio de las decisiones sea discreto o discretizable y 
 O: Es condición necesaria que el dominio de las decisiones sea discreto o discretizable y que el número de decisiones a tomar esté acotado.
 A: 2
 
-Q: 
-```cpp
+Q: ```cpp
 unsigned f(unsigned y,
-           unsigned x) { // suponemos y >= x	if (x == 0 || y == x)
-  return 1;
-  return f(y - 1, x - 1) + f(y - 1, x);
+unsigned x) { // suponemos y >= x	if (x == 0 || y == x)
+return 1;
+return f(y - 1, x - 1) + f(y - 1, x);
 }
 ```
 O: $O(y)$
@@ -2153,15 +2119,15 @@ A: 1
 Q: Dada la siguiente función:
 ```cpp
 int exa(string &cad, int pri, int ult) {
-  if (pri >= ult) {
-    return 1;
-  } else {
-    if (cad[pri] == cad[ult]) {
-      return exa(cad, pri + 1, ult - 1);
-    } else {
-      return 0;
-    }
-  }
+if (pri >= ult) {
+return 1;
+} else {
+if (cad[pri] == cad[ult]) {
+return exa(cad, pri + 1, ult - 1);
+} else {
+return 0;
+}
+}
 }
 ```
 ¿Cuál es su complejidad temporal asintótica?
@@ -2211,9 +2177,9 @@ A: 2
 Q: Se pretende aplicar la técnica memoización a la siguiente función recursiva:
 ```cpp
 int f(int x, int y) {
-  if (x > y)
-    return 1;
-  return x + f(x, y - 2);
+if (x > y)
+return 1;
+return x + f(x, y - 2);
 }
 ```
 En el caso más desfavorable, ¿qué complejidades temporal y espacial cabe esperar de la función resultante?
@@ -2258,9 +2224,9 @@ O: Sí, el que tiene mejor cota pesimista.
 O: Sí, el que tiene mejor cota optimista.
 A: 0
 
-Q: Ordena de menor a mayor las siguientes complejidades 	1. O(1) 	2. O(n^2) 
-	3. O(nlgn) 
-	4. O(n!)
+Q: Ordena de menor a mayor las siguientes complejidades 	1. O(1) 	2. O(n^2)
+3. O(nlgn)
+4. O(n!)
 O: 3, 1, 2 y 4
 O: 1, 3, 2 y 4
 O: 1, 3, 4 y 2
@@ -2336,9 +2302,9 @@ A: 1
 Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva:
 ```cpp
 int f(int x, int y) {
-  if (x <= y)
-    return 1;
-  return x + f(x - 1, y);
+if (x <= y)
+return 1;
+return x + f(x - 1, y);
 }
 ```
 ¿Cuál es la mejor complejidad espacial que se puede conseguir?
@@ -2356,8 +2322,8 @@ A: 2
 Q: ¿De qué clase de complejidad es la solución de la siguiente relación de recurrencia?
 ```
 f (n) = n(n - 1) +
-			f (n - 1) si n > 0
-			f (0) = 1 si n = 0
+f (n - 1) si n > 0
+f (0) = 1 si n = 0
 ```
 O: $f(n) \in \Theta(n^2)$
 O: $f(n) \in \Theta(n^3)$
@@ -2446,11 +2412,11 @@ A: 0
 Q: ¿Cuál es la complejidad temporal de la siguiente función?
 ```cpp
 int f(int n) {
-  int k = 0;
-  for (int i = 1; i < n; i *= 2)
-    for (int j = i; j > 0; j -= 2)
-      k++;
-  return k;
+int k = 0;
+for (int i = 1; i < n; i *= 2)
+for (int j = i; j > 0; j -= 2)
+k++;
+return k;
 }
 ```
 O: $\Theta(n^2)$
@@ -2464,12 +2430,6 @@ O: En el esquema de vuelta atrás no se pueden definir estrategias de búsqueda.
 O: Explorar primero los nodos que están más completados.
 A: 1
 
-Q: Uno de estos tres problemas no tiene una solución eficiente que siga el esquema de programación dinámica
-O: El problema de la mochila discreta.
-O: El problema de las torres de Hanoi.
-O: El problema de cortar un tubo de longitud n en segmentos de longitud entera entre 1 y n de manera que se maximice el precio de acuerdo con una tabla que da el precio para cada longitud.
-A: 2
-
 Q: En los algoritmos de Ramificación y poda ...
 O: una cota pesimista es necesariamente un valor insuperable, de no ser así se podría podar el nodo que conduce a la solución óptima.
 O: una cota pesimista es necesariamente un valor alcanzable, de no ser así no está garantizado que se encuentre la solución óptima.
@@ -2479,9 +2439,9 @@ A: 1
 Q: Con respecto al tamaño del problema, ¿Cuál es el orden de complejidad temporal asintótica de la siguiente función? (asumimos que A es una matriz cuadrada)
 ```cpp
 void traspuesta(vector<vector<int>> A) {
-  for (int i = 1; i < A.size(); i++)
-    for (int j = 0; j < i; j++)
-      swap(A[i][j], A[j][i]);
+for (int i = 1; i < A.size(); i++)
+for (int j = 0; j < i; j++)
+swap(A[i][j], A[j][i]);
 }
 ```
 O: constante
@@ -2510,12 +2470,12 @@ A: 2
 Q: Dado el siguiente código, calcule la complejidad del mismo:
 ```cpp
 int sumaDigitos(int num) {
-  int s;
-  s = num % 10;
-  while (num >= 10) {
-    num = num / 10 s = s + (num % 10);
-  }
-  return (s);
+int s;
+s = num % 10;
+while (num >= 10) {
+num = num / 10 s = s + (num % 10);
+}
+return (s);
 }
 ```
 O: $\Omega(1)$ y $O(\log n)$
@@ -2546,9 +2506,9 @@ A: 1
 Q: ¿Cuál es la complejidad temporal en función de n, del siguiente fragmento:
 ```cpp
 for (int i = 0; i < n; i++) {
-  A[i] = 0;
-  for (int j = 0; j < 20; j++)
-    A[i] += B[j];
+A[i] = 0;
+for (int j = 0; j < 20; j++)
+A[i] += B[j];
 }
 ```
 O: $\Theta(n \log n)$
@@ -2677,19 +2637,6 @@ O: Las otras dos opciones son ambas verdaderas.
 O: ...alcanza su máxima eficiencia cuando el problema de tamaño n se divide en "a" problemas de tamaño n/a.
 A: 2
 
-Q: ¿Cuál es la complejidad temporal en función de n, del siguiente fragmento: 
-```cpp
-for (int i = 0; i < n; i++) {
-  A[i] = 0;
-  for (int j = 0; j < 20; j++)
-    A[i] += B[j];
-}
-```
-O: $\Theta(n \log n)$
-O: $\Theta(n)$
-O: $\Theta(n^2)$
-A: 1
-
 Q: De las siguientes expresiones, o bien dos son verdaderas y una es falsa, o bien dos son falsas y una es verdadera. Marca la que (en este sentido) es distinta a las otras dos
 O: $O(2^{\log n}) \subset O(n^2)$
 O: $n + n \log n \in \Omega(n)$
@@ -2718,7 +2665,7 @@ Q: Se pretende implementar mediante programación dinámica iterativa la funció
 ```cpp
 unsigned f(unsigned y, unsigned x) {
 #suponemos y >= x if (x == 0 || y == x) return 1;
-  return f(y - 1, x - 1) + f(y - 1, x);
+return f(y - 1, x - 1) + f(y - 1, x);
 }
 ```
 ¿Cuál es la mejor complejidad espacial que se puede conseguir?
@@ -2757,31 +2704,18 @@ O: Suele ser polinómica con el número de alternativas por cada decisión.
 O: Es siempre exponencial con el número de decisiones a tomar.
 A: 0
 
-Q: Indica cuál es la complejidad temporal en función de n, donde A es un vector de enteros y k es una constante que no depende de n, del fragmento siguiente:
-```cpp
-for (int i = k; i < n - k; i++) {
-  A[i] = 0;
-  for (int j = i - k; j < i + k; j++)
-    A[i] += B[j];
-}
-```
-O: $\Theta(k)$
-O: $\Theta(n)$
-O: $\Theta(n^2)$
-A: 1
-
 Q: Sea la siguiente relación de recurrencia:$T(n) = \begin{cases} 1 & \text{si } n \leq 1 \\ 8T(n/8) + g(n) & \text{en otro caso} \end{cases}$Si $T(n) \in \Theta(n^2)$, ¿en cuál de estos tres casos nos podemos encontrar?
 O: $g(n) = n^2$
 O: $g(n) = n$
 O: $g(n) = n^3$
 A: 2
 
-Q: Queremos aplicar la técnica de memoización a la siguiente función recursiva: 
+Q: Queremos aplicar la técnica de memoización a la siguiente función recursiva:
 ```cpp
 double f(double x) {
-  if (x <= 2)
-    return x;
-  return f(sqrt(x - 1)) + f(sqrt(x - 2));
+if (x <= 2)
+return x;
+return f(sqrt(x - 1)) + f(sqrt(x - 2));
 }
 ```
 ¿Cuál sería un buen candidato para el almacén? (La función `sqrt()` obtiene la raíz cuadrada; xMax es el valor de x en la primera llamada.)
@@ -2823,14 +2757,14 @@ A: 1
 Q: Sea A un vector de n elementos y supongamos que todos los elementos de A son distintos. Considera el siguiente algoritmo:Nos interesa medir cuantas veces se ejecuta la instrucción nº 3 Entonces el caso mejor se obtiene cuando: ```cpp
 ordena(var A es vector de n enteros);
 variables i, j, x : es entero for (i = 2; i <= N; i++) {
-  X = A[i];
-  A[0] = X;
-  j = i - 1;
-  while (X < A[j]) {
+X = A[i];
+A[0] = X;
+j = i - 1;
+while (X < A[j]) {
 #(2) A[j + 1] = A[j];
 #(3) j = j - 1
-  }
-  A[j + 1] = X;
+}
+A[j + 1] = X;
 }
 finmódulo
 ```
@@ -2892,9 +2826,9 @@ A: 1
 Q: Indica cuál es la complejidad en función de n, donde k es una constante (no depende de n), del fragmento siguiente:
 ```cpp
 for (int i = k; i < n - k; i++) {
-  A[i] = 0;
-  for (int j = i - k; j < i + k; j++)
-    A[i] += B[j];
+A[i] = 0;
+for (int j = i - k; j < i + k; j++)
+A[i] += B[j];
 }
 ```
 O: $O(n)$
@@ -2924,11 +2858,11 @@ Q: Cual seria la función de coste del algoritmo siguiente considera que la medi
 ```cpp
 {Q} ={n=N, N> 1)
 int ejerc6 ( int n ) {
-	int i = 1;
+int i = 1;
 int x = 1;
 while (i <= n) {
-  x = x * potencia(i, i);
-  i = i + 1;
+x = x * potencia(i, i);
+i = i + 1;
 }
 return x;
 }
@@ -2960,9 +2894,9 @@ A: 0
 Q: Se pretende implementar mediante programacion dinamica iterativa la funcion recursiva:
 ```cpp
 unsigned f(unsigned y, unsigned x) { // suponemos y >= x
-  if (x == 0 || y == x)
-    return 1;
-  return f(y - 1, x - 1) + f(y - 1, x);
+if (x == 0 || y == x)
+return 1;
+return f(y - 1, x - 1) + f(y - 1, x);
 }
 ```
 ¿Cual es la mejor complejidad espacial que se puede conseguir?
@@ -3016,20 +2950,20 @@ A: 2
 Q: Considera el algoritmo descrito a continuacion. Si consideramos como medida significativa el numero de movimientos del vector instrucciones 1 y 3 entonces el algoritmo tiene un coste:
 ```cpp
 for (i = 1; i < N; i++) {
-  X = V[i]; // (1)
-  Izq = 0;
-  Der = i - 1;
-  while (Izq <= Der) {
-    Medio = (Izq + Der) / 2;
-    if (X < V[Medio]) // (2)
-      Der = Medio - 1;
-    else
-      Izq = Medio + 1;
-  }
-  for (j = i - 1; j >= Izq; j--) {
-    V[j + 1] = V[j]; // (3)
-  }
-  V[Izq] = X;
+X = V[i]; // (1)
+Izq = 0;
+Der = i - 1;
+while (Izq <= Der) {
+Medio = (Izq + Der) / 2;
+if (X < V[Medio]) // (2)
+Der = Medio - 1;
+else
+Izq = Medio + 1;
+}
+for (j = i - 1; j >= Izq; j--) {
+V[j + 1] = V[j]; // (3)
+}
+V[Izq] = X;
 }
 ```
 O: $\Theta(n^2)$
@@ -3174,22 +3108,22 @@ O: $\Theta(\log n)$
 O: $\Theta(n)$
 A: 2
 
-Q: Resolviendo la ecuación de recurrencia del ejercicio siguiente se obtiene que su función de coste es: 
+Q: Resolviendo la ecuación de recurrencia del ejercicio siguiente se obtiene que su función de coste es:
 ```
 Función F (ent n: entero): entero
 variables x, i: entero
 Inicio
-	si (n>=1) entonces
-		retorna 1
-	si no
-		para i de 1 a n hacer
-			x← 1
-			mientras x<n hacer
-				x← x*2
-			finmientras
-		finpara
-		retorna F(n/2)+F(n/2)
-	finsi
+si (n>=1) entonces
+retorna 1
+si no
+para i de 1 a n hacer
+x← 1
+mientras x<n hacer
+x← x*2
+finmientras
+finpara
+retorna F(n/2)+F(n/2)
+finsi
 fin
 ```
 O: O(n*log^2 n)
@@ -3202,18 +3136,18 @@ A: 0
 Q: En cuanto a la complejidad temporal de la siguiente función:
 ```cpp
 int ejemplo(vector<int> &v) {
-  int n = v.size();
-  int j, i = 2;
-  int sum = 0;
-  while (n > 0 && i < n) {
-    j = i;
-    while (v[j] != v[1]) {
-      sum += v[j];
-      j = j / 2;
-    }
-    i++;
-  }
-  return sum;
+int n = v.size();
+int j, i = 2;
+int sum = 0;
+while (n > 0 && i < n) {
+j = i;
+while (v[j] != v[1]) {
+sum += v[j];
+j = j / 2;
+}
+i++;
+}
+return sum;
 }
 ```
 O: Las complejidades en el mejor y en el peor de los casos no coinciden.
@@ -3224,12 +3158,12 @@ A: 0
 Q: Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función?
 ```cpp
 void f(unsigned n) {
-  if (n < 2)
-    return;
-  for (int i = 0; i < pow(n, 2); i++)
-    cout << "*";
-  for (int i = 0; i < 5; i++)
-    f(n / 2);
+if (n < 2)
+return;
+for (int i = 0; i < pow(n, 2); i++)
+cout << "*";
+for (int i = 0; i < 5; i++)
+f(n / 2);
 }
 ```
 O: $O(5^{\log n})$
@@ -3240,13 +3174,13 @@ A: 0
 Q: ¿Cuál es la complejidad temporal de la siguiente función recursiva?
 ```cpp
 unsigned desperdicio(unsigned n) {
-  if (n <= 1)
-    return 0;
-  unsigned sum = desperdicio(n / 2) + desperdicio(n / 2);
-  for (unsigned i = 1; i < n - 1; i++)
-    for (unsigned j = 1; j <= i; j++)
-      sum += i * j;
-  return sum;
+if (n <= 1)
+return 0;
+unsigned sum = desperdicio(n / 2) + desperdicio(n / 2);
+for (unsigned i = 1; i < n - 1; i++)
+for (unsigned j = 1; j <= i; j++)
+sum += i * j;
+return sum;
 }
 ```
 O: $O(2^n)$
@@ -3257,9 +3191,9 @@ A: 1
 Q: El recorrido en profundidad de un grafo G no dirigido ha producido el arbol que se muestra en la figura, en el que cada nodo esta numerado siguiendo el orden de visita del recorrido en profundidad:
 ```
 1
-   / | \
-  2  5  7
- /|  |
+/ | \
+2  5  7
+/|  |
 3 4  6
 ```
 O: Los nodos 1 y 2 pueden ser adyacentes al nodo 4
@@ -3299,12 +3233,11 @@ O: $f(n) \in O(n^2)$
 O: $f(n) \in O(n \log n)$
 A: 2
 
-Q: 
-```cpp
+Q: ```cpp
 int f(int x, int y) {
-  if (x <= y)
-    return 1;
-  return x + f(x - 1, y);
+if (x <= y)
+return 1;
+return x + f(x - 1, y);
 }
 ```
 O: $O(x^2)$
@@ -3389,12 +3322,6 @@ O: se resuelve el problema usando un algoritmo voraz que añade cada vez al cami
 O: se multiplica n por la distancia de la arista más corta que nos queda por considerar
 A: 1
 
-Q: De las siguientes expresiones, o bien dos son ciertas y una es falsa, o bien al contrario, una es cierta y dos son falsas. Marca la que en este sentido es diferente a las otras dos.
-O: $\sum_{i=1}^{n} \sum_{j=1}^{\log i} 2^j \in O(n^2)$
-O: $\sum_{i=1}^{\log n} \sum_{j=1}^{n} 2^j \in O(n \log n)$
-O: $\sum_{i=1}^{n/2} \sum_{j=1}^{i} 2^j \in O(n \log n)$
-A: 2
-
 Q: Un problema de tamaño $n$ puede transformarse en tiempo $O(1)$ en siete de tamaño $\frac{n}{7}$; por otro lado, la solución al problema cuando la talla es 1 requiere un tiempo constante.¿Cuál de estas clases de coste temporal asintótico es la más ajustada?
 O: $O(n^2)$
 O: $O(n)$
@@ -3404,9 +3331,9 @@ A: 2
 Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva:
 ```cpp
 int f(int x, int y) {
-  if (x <= y)
-    return 1;
-  return x + f(x - 1, y);
+if (x <= y)
+return 1;
+return x + f(x - 1, y);
 }
 ```
 ¿Cuál es la mejor complejidad temporal que se puede conseguir?
@@ -3418,23 +3345,23 @@ A: 1
 Q: Las siguientes funciones calculan el valor de la potencia n-ésima de dos. ¿Cuál es más eficiente en cuanto a coste temporal?
 ```cpp
 unsigned long pot2_1(unsigned n) {
-  if (n == 0)
-    return 1;
-  if (n % 2 == 0)
-    return pot2_1(n / 2) * pot2_1(n / 2);
-  else
-    return 2 * pot2_1(n / 2) * pot2_1(n / 2);
+if (n == 0)
+return 1;
+if (n % 2 == 0)
+return pot2_1(n / 2) * pot2_1(n / 2);
+else
+return 2 * pot2_1(n / 2) * pot2_1(n / 2);
 }
 ```
 ```cpp
 unsigned long pot2_2(unsigned n) {
-  if (n == 0)
-    return 1;
-  unsigned long aux = pot2_2(n / 2);
-  if (n % 2 == 0)
-    return aux * aux;
-  else
-    return 2 * aux * aux;
+if (n == 0)
+return 1;
+unsigned long aux = pot2_2(n / 2);
+if (n % 2 == 0)
+return aux * aux;
+else
+return 2 * aux * aux;
 }
 ```
 O: La primera, `pot2_1(n)`, es más eficiente que la otra.
@@ -3442,12 +3369,12 @@ O: La segunda, `pot2_2(n)`, es más eficiente que la otra.
 O: Las dos funciones son equivalentes en cuanto a coste temporal.
 A: 1
 
-Q: La función $\Gamma$ de un número semiEntero positivo (un número es semiEntero si al restarle 0.5 es entero) se define como 
+Q: La función $\Gamma$ de un número semiEntero positivo (un número es semiEntero si al restarle 0.5 es entero) se define como
 ```cpp
 double gamma(double n) {
-  if (n == 0.5)
-    return sqrt(PI);
-  return n * gamma(n - 1);
+if (n == 0.5)
+return sqrt(PI);
+return n * gamma(n - 1);
 }
 ```
 ¿Se puede calcular usando programación dinámica iterativa?
@@ -3495,17 +3422,17 @@ A: 2
 Q: El problema del alfarero (solución discreta con valores y tiempos discretos): Se dispone de n clases de objetos. De cada una de ellas se conoce el número máximo de piezas que se puede fabricar, $m_i \in \mathbb{N}$; El valor de cada pieza terminada, $v_i \in \mathbb{N}$ y el tiempo necesario para su fabricación $t_i \in \mathbb{N}$, $i \in [0..n-1]$. ¿Cual es el valor máximo de los objetos que puede fabricar teniendo en cuenta que el tiempo total está limitado por $T \in \mathbb{N}$? Para ello se escribe la siguiente función siguiendo la técnica de divide y vencerás:
 ```cpp
 int potter(const vector<int> &v, const vector<int> &m, const vector<int> &t,
-           int T, int k) {
-  if (k == 0)
-    return 0;
-  int max_earnings = -1;
-  for (int c = 0; c <= m[k - 1]; c++) {
-    int earnings = 0;
-    if (T >= c * t[k - 1])
+int T, int k) {
+if (k == 0)
+return 0;
+int max_earnings = -1;
+for (int c = 0; c <= m[k - 1]; c++) {
+int earnings = 0;
+if (T >= c * t[k - 1])
 #==> Falta una línea <= =
-      max_earnings = max(max_earnings, earnings);
-  }
-  return max_earnings;
+max_earnings = max(max_earnings, earnings);
+}
+return max_earnings;
 }
 ```
 O: `earnings = c * v[k-1] + potter(v, m, t, k-1, T - c * t[k-1]);`
@@ -3516,12 +3443,12 @@ A: 0
 Q: Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función?
 ```cpp
 void f(unsigned n) {
-  if (n < 2)
-    return;
-  for (int i = 0; i < pow(n, 2); i++)
-    cout << "*";
-  for (int i = 0; i < 5; i++)
-    f(n / 2);
+if (n < 2)
+return;
+for (int i = 0; i < pow(n, 2); i++)
+cout << "*";
+for (int i = 0; i < 5; i++)
+f(n / 2);
 }
 ```
 O: $\Theta(n^2)$
@@ -3568,12 +3495,6 @@ O: tienen el mismo coste temporal asintotico en el caso mejor
 O: tienen el mismo coste temporal en los dos casos
 A: 1
 
-Q: Dado el problema de las torres de Hanoi resuelto mediante divide y vencerás, ¿cuál de las siguientes relaciones de recurrencia expresa mejor su complejidad temporal para el caso general, siendo n el número de discos?
-O: $T(n) = 2T(n - 1) + 1$
-O: $T(n) = T(n - 1) + n$
-O: $T(n) = 2T(n - 1) + n$
-A: 0
-
 Q: De las expresiones siguientes, o bien dos son verdaderas y una es falsa, o bien dos son falsas y una es verdadera. Marca la que (en este sentido) es diferente de las otras dos.
 O: Si $f \in \Theta(g)$ entonces $O(f) = O(g)$.
 O: Si $f \in O(g)$ entonces $g \notin O(f)$.
@@ -3613,9 +3534,9 @@ A: 1
 Q: ¿Cuál sería la complejidad temporal de la siguiente función tras aplicar programación dinámica?
 ```cpp
 double f(int n, int m) {
-  if (n <= 1)
-    return 1;
-  return m * f(n - 1, m) * f(n - 2, m);
+if (n <= 1)
+return 1;
+return m * f(n - 1, m) * f(n - 2, m);
 }
 ```
 O: $\Theta(n^2)$
@@ -3638,9 +3559,9 @@ A: 0
 Q: Calcular la complejidad del siguiente fragmento de codigo:
 ```cpp
 for (i = 1; i <= n; i++)
-  for (j = 1; j <= 10000; j++)
-    for (k = n - 1; k <= n; k++)
-      cout << i << j << k << endl;
+for (j = 1; j <= 10000; j++)
+for (k = n - 1; k <= n; k++)
+cout << i << j << k << endl;
 ```
 O: $O(n^2)$
 O: $O(n^3)$
@@ -3661,28 +3582,11 @@ O: Sí, pero sólo si las decisiones son todas binarias.
 O: Sí, siempre.
 A: 2
 
-Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva:
-```cpp
-unsigned f(unsigned x, unsigned v[]) {
-  if (x == 0)
-    return 0;
-  unsigned m = 0;
-  for (unsigned k = 0; k < x; k++)
-    m = max(m, v[k] + f(x - k, v));
-  return m;
-}
-```
-¿Cuál es la mejor complejidad espacial que se puede conseguir?
-O: $O(1)$
-O: $O(x^2)$
-O: $O(x)$
-A: 2
-
-Q: La complejidad del siguiente bucle es: 
+Q: La complejidad del siguiente bucle es:
 ```cpp
 for (i = 1; i <= N; i++) {
-  if (T[i] == x)
-    Aux = i;
+if (T[i] == x)
+Aux = i;
 }
 ```
 O: IV I y II son correctas
@@ -3794,16 +3698,16 @@ A: 2
 Q: Considerad la función siguiente:
 ```cpp
 int M(int i, int f) {
-  if (i == f)
-    return i;
-  else {
-    e = v[M(i, (i + f) / 2)];
-    f = v[M((i + f) / 2 + 1, f)];
-    if (e < f)
-      return e;
-    else
-      return f;
-  }
+if (i == f)
+return i;
+else {
+e = v[M(i, (i + f) / 2)];
+f = v[M((i + f) / 2 + 1, f)];
+if (e < f)
+return e;
+else
+return f;
+}
 }
 ```
 Si la talla del problema viene dada por $n = f - i + 1$, ¿cuál es el coste temporal asintótico en el supuesto de que $n$ sea una potencia de 2?
@@ -3815,15 +3719,15 @@ A: 0
 Q: ¿Qué hace la siguiente función?
 ```cpp
 void f(vector<int> &A) {
-  priority_queue<int> pq;
-  for (int i = A.size() - 1; i >= 0; i--) {
-    pq.push(A[i]);
-  }
-  A.clear();
-  while (!pq.empty()) {
-    A.push_back(pq.top());
-    pq.pop();
-  }
+priority_queue<int> pq;
+for (int i = A.size() - 1; i >= 0; i--) {
+pq.push(A[i]);
+}
+A.clear();
+while (!pq.empty()) {
+A.push_back(pq.top());
+pq.pop();
+}
 }
 ```
 O: Invierte el vector A (el último elemento quedará el primero)
@@ -3854,9 +3758,9 @@ A: 2
 Q: Se pretende aplicar la técnica memoización a la siguiente función recursiva:
 ```cpp
 int f(int x, int y) {
-  if (x <= y)
-    return 1;
-  return x + f(x - 1, y);
+if (x <= y)
+return 1;
+return x + f(x - 1, y);
 }
 ```
 En el caso más desfavorable, ¿qué complejidades temporal y espacial cabe esperar de la función resultante?
@@ -3868,11 +3772,11 @@ A: 0
 Q: Cual es el coste espacial asintotico del siguiente algoritmo:
 ```cpp
 int f(int n) {
-  int a = 1, r = 0;
-  for (int i = 0; i < n; i++) {
-    r = a + r;
-    a = 2 * r;
-  }
+int a = 1, r = 0;
+for (int i = 0; i < n; i++) {
+r = a + r;
+a = 2 * r;
+}
 }
 ```
 O: $O(n)$
@@ -3917,17 +3821,17 @@ O: Lo más adecuado sería usar una técnica de ramificación y poda, aunque en 
 O: Una técnica voraz daría una solución óptima.
 A: 2
 
-Q: Considera la función siguiente que es un algoritmo típico de búsquedaSupongamos que x esta en el vector y que todos los elementos son distintos. En este caso, el numero medio de comparaciones con la variable x es: 
+Q: Considera la función siguiente que es un algoritmo típico de búsquedaSupongamos que x esta en el vector y que todos los elementos son distintos. En este caso, el numero medio de comparaciones con la variable x es:
 ```
 Función pertenece (ent L: vector de enteros, ent x:entero):entero
 variables: i, aux: entero
 Inicio
-	aux← 0
-	para i de 0 a n-1 hacer
-		si L[i]==x entonces
-			aux← i
-		finsi
-	finpara
+aux← 0
+para i de 0 a n-1 hacer
+si L[i]==x entonces
+aux← i
+finsi
+finpara
 retorna aux
 Fin
 ```
@@ -3958,9 +3862,9 @@ A: 0
 Q: Indica cuál es la complejidad, en función de n (n≥0), del fragmento siguiente:
 ```cpp
 int f(int n) {
-  if (n == 0)
-    return n;
-  return f(n / 2) * f(n / 2);
+if (n == 0)
+return n;
+return f(n / 2) * f(n / 2);
 }
 ```
 O: $\Theta(\log n)$
@@ -3987,18 +3891,18 @@ A: 0
 Q: Se pretende obtener la complejidad temporal en el caso más desfavorable de la siguiente función.
 ```cpp
 int exa(vector<int> &v) {
-  int i, sum = 0, n = v.size();
-  if (n > 0) {
-    int j = n;
-    while (sum < 100 and j != 0) {
-      j = j / 2;
-      sum = 0;
-      for (i = j; i < n; i++)
-        sum += v[i];
-    }
-    return j;
-  } else
-    return -1;
+int i, sum = 0, n = v.size();
+if (n > 0) {
+int j = n;
+while (sum < 100 and j != 0) {
+j = j / 2;
+sum = 0;
+for (i = j; i < n; i++)
+sum += v[i];
+}
+return j;
+} else
+return -1;
 }
 ```
 O: $C_s(n)=\sum^{\log(n+1)}_{k=1}(n-n/2^k)\in O(n\log n)$
@@ -4038,17 +3942,17 @@ O: Para reducir la complejidad temporal en la toma de cada decisión de $O(n^2)$
 O: Porque si no se hace no es posible garantizar que la toma de decisiones siga un criterio voraz
 A: 0
 
-Q: ¿Qué hace la siguiente función? 
+Q: ¿Qué hace la siguiente función?
 ```cpp
 void f(vector<int> &A) {
-  priority_queue<int> pq;
-  for (auto i : A)
-    pq.push(A[i]);
-  A.clear();
-  while (!pq.empty()) {
-    A.push_back(pq.top());
-    pq.pop();
-  }
+priority_queue<int> pq;
+for (auto i : A)
+pq.push(A[i]);
+A.clear();
+while (!pq.empty()) {
+A.push_back(pq.top());
+pq.pop();
+}
 }
 ```
 O: Invierte el vector A (el último elemento quedará el primero).
@@ -4060,11 +3964,11 @@ Q: Indica cuál es la complejidad de la función siguiente:
 ```cpp
 unsigned sum(const mat &A) {
 #A es una matriz cuadrada unsigned d = A.n_rows();
-  unsigned a = 0;
-  for (unsigned i = 0; i < d; i++)
-    for (unsigned j = 0; j < d; j++)
-      a += A(i, j);
-  return a;
+unsigned a = 0;
+for (unsigned i = 0; i < d; i++)
+for (unsigned j = 0; j < d; j++)
+a += A(i, j);
+return a;
 }
 ```
 O: $O(n^2)$
@@ -4081,14 +3985,14 @@ A: 2
 Q: Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función?
 ```cpp
 void f(unsigned n) {
-  if (n < 1)
-    return;
-  for (int i = 0; i < n; i++)
-    for (int j = 0; j < n; j++)
-      for (int k = 0; k < n; k++)
-        cout << "*";
-  for (int i = 0; i < 8; i++)
-    f(n / 2);
+if (n < 1)
+return;
+for (int i = 0; i < n; i++)
+for (int j = 0; j < n; j++)
+for (int k = 0; k < n; k++)
+cout << "*";
+for (int i = 0; i < 8; i++)
+f(n / 2);
 }
 ```
 O: $\Theta(n^3 \log n)$
@@ -4196,10 +4100,10 @@ A: 2
 Q: El recorrido en profundidad de un grafo G no dirigido ha producido el árbol que se muestra en el que cada nodo esta numerad siguiendo el orden de visita del recorrido en profundidad
 ```
 1
-    /|\
-   2 6 7
-  /   
- 3   
+/|\
+2 6 7
+/
+3
 / \
 4 5
 ```
@@ -4234,13 +4138,13 @@ O: No, ya que no cumple el teorema de reducción.
 O: Sí, pero a costa de una complejidad temporal prohibitiva.
 A: 0
 
-Q: Complejidad de 
+Q: Complejidad de
 ```cpp
 void f(int n, int arr[]) {
-  int i = 0, j = 0;
-  for (; i < n; ++i)
-    while (j < n && arr[i] < arr[j])
-      j++;
+int i = 0, j = 0;
+for (; i < n; ++i)
+while (j < n && arr[i] < arr[j])
+j++;
 }
 ```
 O: $O(n^2)$
@@ -4358,15 +4262,15 @@ O: es condicion suficiente que existan instancias distintas del problema con el 
 O: ... es condicion necesaria y suficiente que existan instancias distintas del problema con el mismo tamaño
 A: 0
 
-Q: El recorrido en profundidad de un grafo G no dirigido ha producido el arbol que se muestra en la figura, en el que cada nodo esta numerado siguiendo el orden de visita del recorrido en profundidad: 
+Q: El recorrido en profundidad de un grafo G no dirigido ha producido el arbol que se muestra en la figura, en el que cada nodo esta numerado siguiendo el orden de visita del recorrido en profundidad:
 ```
 1
-   / \
-  2   6
- / \   \
+/ \
+2   6
+/ \   \
 3   4   7
-   /
-  5
+/
+5
 ```
 O: El nodo 2 puede ser adyacente al nodo 5, y el nodo 4 puede ser adyacente al nodo 1
 O: El nodo 6 y 7 no son adyacentes y el nodo 5 y el nodo 7 si lo son
@@ -4402,13 +4306,13 @@ A: 2
 Q: ¿Cuál es la complejidad temporal de la siguiente función recursiva?
 ```cpp
 unsigned desperdicio(unsigned n) {
-  if (n <= 1)
-    return 0;
-  unsigned sum = desperdicio(n / 2) + desperdicio(n / 2);
-  for (unsigned i = 1; i <= n - 1; i++)
-    for (unsigned j = 1; j <= i; j++)
-      sum += 1;
-  return sum;
+if (n <= 1)
+return 0;
+unsigned sum = desperdicio(n / 2) + desperdicio(n / 2);
+for (unsigned i = 1; i <= n - 1; i++)
+for (unsigned j = 1; j <= i; j++)
+sum += 1;
+return sum;
 }
 ```
 O: Θ(n^2)
@@ -4422,12 +4326,6 @@ O: Ninguna de las anteriores son correctas
 O: Las dos anteriores son correctas
 O: Cuando debamos probar todas las combinaciones posibles para encontrar la solucion de un problema
 A: 3
-
-Q: Dado un problema de minimización resuelto mediante un esquema de ramificación y poda, ¿qué propiedad cumple una cota optimista?
-O: Siempre es mayor o igual que la mejor solución posible alcanzada.
-O: Las otras dos opciones son ambas falsas.
-O: Asegura un ahorro en la comprobación de todas las soluciones factibles.
-A: 1
 
 Q: La mejora que en general aporta la programación dinámica frente a la solución ingenua se consigue gracias al hecho de que...
 O: ...en la solución ingenua se resuelve pocas veces un número relativamente grande de subproblemas distintos.
@@ -4459,20 +4357,20 @@ O: $n + n \log_2 n \in \Omega(n + n \log_2 n)$
 O: $\Omega(n^2) \subset \Omega(n)$
 A: 0
 
-Q: La complejidad de la función TB es: 
+Q: La complejidad de la función TB es:
 ```
-función TB (A: vector[λ]; iz , de : N) : N 
-var n,i:N; 
-	n=iz-de+1 
-	opcion 
-		(n < 1) : devuelve ( 0 ) ; 
-		(n = 1) : devuelve ( 1 ) ; 
-		(n > 1) : si (A[iz] = A[de]) entonces 
-				devuelve (TB( A, iz + 1, de - 1 ) + 1); 
-			sino 
-				devuelve (TB( A, iz + 1, de - 1 )) ; 
-			finsi ; 
-	fopcion 
+función TB (A: vector[λ]; iz , de : N) : N
+var n,i:N;
+n=iz-de+1
+opcion
+(n < 1) : devuelve ( 0 ) ;
+(n = 1) : devuelve ( 1 ) ;
+(n > 1) : si (A[iz] = A[de]) entonces
+devuelve (TB( A, iz + 1, de - 1 ) + 1);
+sino
+devuelve (TB( A, iz + 1, de - 1 )) ;
+finsi ;
+fopcion
 fin
 ```
 O: Θ (n)
@@ -4565,18 +4463,18 @@ O: Θ(n) ⊆ Θ(n^2)
 O: Θ(n) ⊆ Θ(n)
 A: 1
 
-Q: ¿Con que algoritmo de ordenación clásico se corresponde el pseudocodigo del siguiente ejemplo?: 
+Q: ¿Con que algoritmo de ordenación clásico se corresponde el pseudocodigo del siguiente ejemplo?:
 ```cpp
 módulo ordena(var A es vector de n enteros);
 variables i, j, x : es entero for (i = 2; i <= N; i++) {
-  X = A[i];
-  A[0] = X;
-  j = i - 1;
-  while (X < A[j]) {
+X = A[i];
+A[0] = X;
+j = i - 1;
+while (X < A[j]) {
 #(2) A[j + 1] = A[j];
 #(3) j = j – 1
-  }
-  A[j + 1] = X;
+}
+A[j + 1] = X;
 }
 finmódulo
 ```
@@ -4595,11 +4493,11 @@ A: 2
 Q: Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función?
 ```cpp
 void f(unsigned n) {
-  if (n < 2)
-    return;
-  for (int i = 0; i < pow(n, 2); i++)
-    cout << "*";
-  f(n - 2);
+if (n < 2)
+return;
+for (int i = 0; i < pow(n, 2); i++)
+cout << "*";
+f(n - 2);
 }
 ```
 O: $\Theta(n^2 \log n)$
@@ -4628,11 +4526,11 @@ A: 0
 Q: ¿Cuál es el coste temporal asintótico de la siguiente función?
 ```cpp
 int f(int n) {
-  int count = 0;
-  for (int i = n; i > 0; i /= 2)
-    for (int j = 0; j < 2 * i; j++)
-      count += 1;
-  return count;
+int count = 0;
+for (int i = n; i > 0; i /= 2)
+for (int j = 0; j < 2 * i; j++)
+count += 1;
+return count;
 }
 ```
 O: $O(n)$
@@ -4677,19 +4575,6 @@ O: ... un algoritmo de programación dinámica.
 O: ... un algoritmo del estilo de divide y vencerás.
 A: 1
 
-Q: ¿Cuál sería la complejidad temporal de la siguiente función tras aplicar programación dinámica?
-```cpp
-double f(int n, int m) {
-  if (n <= 1)
-    return 1;
-  return m * f(n - 1, m) * f(n - 2, m);
-}
-```
-O: $\Theta(n \cdot m)$
-O: $\Theta(n)$
-O: $\Theta(n^2)$
-A: 1
-
 Q: La complejidad temporal en el mejor de los casos...
 O: ... es el tiempo que tarda el algoritmo en resolver el problema de tamaño o talla más pequeña que se le puede presentar.
 O: Las dos opciones son ciertas.
@@ -4723,16 +4608,16 @@ A: 2
 Q: En cuanto a la complejidad temporal de la siguiente función, ¿cuál de las siguientes formulaciones expresa mejor su complejidad en el peor de los casos?
 ```cpp
 int f(vector<int> &v) {
-  int n = v.size(), i = 2, k = 0;
-  while (i < n) {
-    int j = i;
-    while (v[j] != v[1]) {
-      k++;
-      j = j / 2;
-    }
-    i = i + 2;
-  }
-  return k;
+int n = v.size(), i = 2, k = 0;
+while (i < n) {
+int j = i;
+while (v[j] != v[1]) {
+k++;
+j = j / 2;
+}
+i = i + 2;
+}
+return k;
 }
 ```
 O: $$c_s(n) = \sum_{k=1}^{\lfloor \frac{n-1}{2} \rfloor} \log_2 2k \in O(n \log n)$$
@@ -4757,12 +4642,12 @@ Q: El algoritmo que se describe a continuación calcula:
 Función Ejercicio (ent A:ArbolBinarioGeneral):entero
 variables Izq,Der: ArbolBinarioGeneral
 inicio
-	si NO A.Vacio entonces
-		A.HijoIzq(Izq); A.HijoDer(Der);
-		retorna(ejercicio(izq)+ejercicio(der)+1)
-	si no
-		retorna (0)
-	finsi
+si NO A.Vacio entonces
+A.HijoIzq(Izq); A.HijoDer(Der);
+retorna(ejercicio(izq)+ejercicio(der)+1)
+si no
+retorna (0)
+finsi
 fin
 ```
 O: El nivel en el que se encuentra (hijo izquierdo + hijo derecho + 1) del árbol A
@@ -4831,15 +4716,15 @@ A: 1
 Q: Calcula el numero de veces que se realiza la operación de escritura en la siguiente función siendo n el numero de elementos de la lista:
 ```cpp
 Void imprime(Lista L) {
-  DatosLista x;
-  Lista Aux;
-  Aux = L;
-  while (!L.Vacia()) {
-    x = L.Primero();
-    cout << x;
-    Aux.Resto();
-    Imprime(Aux);
-  }
+DatosLista x;
+Lista Aux;
+Aux = L;
+while (!L.Vacia()) {
+x = L.Primero();
+cout << x;
+Aux.Resto();
+Imprime(Aux);
+}
 }
 ```
 O: n
@@ -4882,12 +4767,12 @@ A: 1
 Q: Se pretende implementar mediante programación dinámica iterativa la siguiente función recursiva:
 ```cpp
 int f(int m, int n, int p, int *v) {
-  if (n < 0)
-    return 0;
-  int aux = 0;
-  if (v[n] <= m)
-    aux = p + f(m - v[n], n - 1, p, v);
-  return aux + f(m, n - 1, p, v);
+if (n < 0)
+return 0;
+int aux = 0;
+if (v[n] <= m)
+aux = p + f(m - v[n], n - 1, p, v);
+return aux + f(m, n - 1, p, v);
 }
 ```
 ¿Cuál sería la complejidad temporal del algoritmo iterativo?
@@ -4901,20 +4786,6 @@ O: ... calcula menos veces el valor de la mochila que la correspondiente soluci�
 O: ... tiene la restricción de que los pesos de los objetos tienen que ser números discretos o discretizables.
 O: ... tiene la restricción de que los valores de los objetos tienen que ser números discretos o discretizables.
 A: 1
-
-Q: Se pretende aplicar la técnica memoización a la siguiente función recursiva:
-```cpp
-int f(int x, int y) {
-  if (x <= y)
-    return 1;
-  return x + f(x - 1, y);
-}
-```
-En el caso más desfavorable, ¿qué complejidades temporal y espacial cabe esperar de la función resultante?
-O: $O(x-y)$, tanto temporal como espacial.
-O: Ninguna de las otras dos opciones es correcta
-O: Temporal $O(x-y)$ y espacial $O(1)$
-A: 0
 
 Q: Un fontanero tiene una jornada de Q cuartos de hora (es así como se organiza la agenda) y tiene C clientes. El trabajo del cliente i tarda qi cuartos de hora y el fontanero le cobra un precio pi. Es posible que no pueda atender todos los clientes en la jornada, que nunca puede alargar. Este problema tiene una solución bien conocida que permite elegir qué clientes visitar para que la suma cobrada al final de la jornada sea la máxima. ¿Qué podemos decir de esta solución?
 O: Que la organización de la agenda en cuartos de hora permite obtener una solución de complejidad temporal $\Theta(QC)$ y complejidad espacial $\Theta(Q)$.
@@ -4937,33 +4808,33 @@ A: 2
 Q: Una empresa tiene M referencias en su stock. Cada referencia $j \in [1,M]$ tiene un peso $p_j$ y un valor $v_j$ y dispone de $n_j$ unidades en su stock. Dispone de un solo camión en el que puede cargar como máximo un peso P. Indicad cuál de las tres funciones siguientes representa una posible solución voraz aproximada al problema de cargar el camión de manera que se transporte un valor máximo.
 O: ```cpp
 int f(const vector<int> &p, const vector<int> &v, const vector<int> &n, int P,
-      int k) {
-  if (k == 0 || P == 0)
-    return 0;
-  int num_objs = min(P / p[k - 1], n[k - 1]);
-  return num_objs * v[k - 1] + f(p, v, n, P - num_objs * p[k - 1], k - 1);
+int k) {
+if (k == 0 || P == 0)
+return 0;
+int num_objs = min(P / p[k - 1], n[k - 1]);
+return num_objs * v[k - 1] + f(p, v, n, P - num_objs * p[k - 1], k - 1);
 }
 ```
 O: ```cpp
 int f(const vector<int> &p, const vector<int> &v, const vector<int> &n, int P,
-      int k) {
-  if (k == 0 || P == 0)
-    return 0;
-  int gain = 0;
-  for (int num_objs = 0; num_objs <= n[k - 1]; num_objs++)
-    gain = max(gain, f(p, v, n, P - num_objs * p[k - 1], k - 1));
-  return gain;
+int k) {
+if (k == 0 || P == 0)
+return 0;
+int gain = 0;
+for (int num_objs = 0; num_objs <= n[k - 1]; num_objs++)
+gain = max(gain, f(p, v, n, P - num_objs * p[k - 1], k - 1));
+return gain;
 }
 ```
 O: ```cpp
 int f(const vector<int> &p, const vector<int> &v, const vector<int> &n, int P,
-      int k) {
-  if (k == 0 || P == 0)
-    return 0;
-  int gain = 0;
-  for (int num_objs = 0; num_objs <= 1; num_objs++)
-    gain = max(gain, f(p, v, n, P - num_objs * p[k - 1], k - 1));
-  return gain;
+int k) {
+if (k == 0 || P == 0)
+return 0;
+int gain = 0;
+for (int num_objs = 0; num_objs <= 1; num_objs++)
+gain = max(gain, f(p, v, n, P - num_objs * p[k - 1], k - 1));
+return gain;
 }
 ```
 A: 0
@@ -5039,13 +4910,13 @@ A: 0
 Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva:
 ```cpp
 float f(unsigned x, int y) {
-  if (y < 0)
-    return 0;
-  float A = 0.0;
-  if (v1[y] <= x)
-    A = v2[y] + f(x - v1[y], y - 1);
-  float B = f(x, y - 1);
-  return min(A, 2 + B);
+if (y < 0)
+return 0;
+float A = 0.0;
+if (v1[y] <= x)
+A = v2[y] + f(x - v1[y], y - 1);
+float B = f(x, y - 1);
+return min(A, 2 + B);
 }
 ```
 ¿Cuál es la mejor complejidad temporal que se puede conseguir?
@@ -5063,11 +4934,11 @@ A: 1
 Q: ¿Cuál de las siguientes formulaciones expresa mejor la complejidad temporal, en función del parámetro n, de la siguiente función? (asumimos que n es potencia exacta de 2)
 ```cpp
 int f(int n) {
-  int k = 0;
-  for (int i = 2; i <= n; i *= 2)
-    for (int j = i; j > 0; j -= 2)
-      k++;
-  return k;
+int k = 0;
+for (int i = 2; i <= n; i *= 2)
+for (int j = i; j > 0; j -= 2)
+k++;
+return k;
 }
 ```
 O: $\sum_{p=2}^{n/2} \frac{(p - 1)}{2}$
@@ -5138,20 +5009,20 @@ A: 1
 Q: De los algoritmos vistos en clase, cual se corresponde con el siguiente:
 ```cpp
 for (i = 1; i <= n; i++) {
-  X = V[i];
-  Izq = 0;
-  Der = i - 1;
-  while (Izq <= Der) {
-    Medio = (Izq + Der) / 2;
-    if (X < V[Medio])
-      Der = Medio - 1;
-    else
-      Izq = Medio + 1;
-  }
-  for (j = i - 1; j >= Izq; j--) {
-    V[j + 1] = V[j];
-  }
-  V[Izq] = X;
+X = V[i];
+Izq = 0;
+Der = i - 1;
+while (Izq <= Der) {
+Medio = (Izq + Der) / 2;
+if (X < V[Medio])
+Der = Medio - 1;
+else
+Izq = Medio + 1;
+}
+for (j = i - 1; j >= Izq; j--) {
+V[j + 1] = V[j];
+}
+V[Izq] = X;
 }
 ```
 O: Ordenación mediante el algoritmo de Quicksort
@@ -5370,11 +5241,11 @@ A: 1
 Q: ¿Cuál de las siguientes formulaciones expresa mejor la complejidad temporal, en función del parámetro n, de la siguiente función? (asumimos que n es potencia exacta de 2)
 ```cpp
 int f(int n) {
-  int k = 0;
-  for (int i = 2; i <= n; i *= 2)
-    for (int j = i; j > 0; j -= 2)
-      k++;
-  return k;
+int k = 0;
+for (int i = 2; i <= n; i *= 2)
+for (int j = i; j > 0; j -= 2)
+k++;
+return k;
 }
 ```
 O: $\sum_{p=1}^{\log n} 2 \cdot (p - 1)$
@@ -5431,12 +5302,6 @@ O: ...podría ocurrir que se pode el nodo que conduce a la solución óptima.
 O: ...podría ocurrir que se descarten nodos factibles.
 A: 0
 
-Q: El esquema de vuelta atrás...
-O: Garantiza que encuentra la solución óptima a cualquier problema de selección discreta.
-O: Las otras dos opciones son ambas verdaderas.
-O: Se puede aplicar a cualquier tipo de problema aunque el coste temporal es elevado.
-A: 0
-
 Q: Un problema de tamaño n puede transformarse en tiempo $O(n^2)$ en nueve de tamaño n/3, por otro lado la solución al problema cuando la talla es 1 requiere un tiempo constante, ¿cuál de estas clases de coste temporal asintótico es la más ajustada?
 O: $O(n \log n)$
 O: $O(n^2 \log n)$
@@ -5458,18 +5323,18 @@ A: 1
 Q: Sea un vector de n elementos y supongamos que todos los elementos de a son distintos, considera el siguiente algoritmo. Si consideramos como medida significativa el numero de comparaciones con respecto de los elementos del vector, entonces el algoritmo tiene una complejidad:
 ```
 función Ordena (ent/sal a:vector): nada
-	variables: i,j,temp: entero
-	inicio
-		para i de 0 a n-2 hacer
-			para j de n-1 a i+1 incr-1 hacer
-				si a[j-1]>a[j] entonces
-					temp← a[j]
-					a[j]← a[j-1]
-					a[j-1]← temp
-				finsi
-			finpara
-		finpara
-	fin
+variables: i,j,temp: entero
+inicio
+para i de 0 a n-2 hacer
+para j de n-1 a i+1 incr-1 hacer
+si a[j-1]>a[j] entonces
+temp← a[j]
+a[j]← a[j-1]
+a[j-1]← temp
+finsi
+finpara
+finpara
+fin
 ```
 O: $\Omega(n)$ y $O(n^2)$
 O: $\Theta(n^2)$
@@ -5486,12 +5351,12 @@ A: 1
 Q: ¿Qué complejidad tiene la siguiente función?
 ```cpp
 void f(vector<int> &A) {
-  priority_queue<int> pq(begin(A), end(A));
-  A.clear();
-  while (!pq.empty()) {
-    A.push_back(pq.top());
-    pq.pop();
-  }
+priority_queue<int> pq(begin(A), end(A));
+A.clear();
+while (!pq.empty()) {
+A.push_back(pq.top());
+pq.pop();
+}
 }
 ```
 Suponed que la cola de prioridad está implementada como un heap y que n = A.size(). `priority_queue<int> pq(begin(A), end(A))` construye un heap a partir de los datos que hay en el vector A.
@@ -5574,8 +5439,8 @@ Q: Indica cual es la complejidad, en función de n, del fragmento siguiente:
 ```cpp
 int a = 0;
 for (int i = 0; i < n; i++)
-  for (int j = i; j > 0; j /= 2)
-    a += a[i][j];
+for (int j = i; j > 0; j /= 2)
+a += a[i][j];
 ```
 O: O(n log n)
 O: O(n)
@@ -5593,7 +5458,7 @@ Q: ¿Cuál es la complejidad, en función de n, del siguiente fragmento: (supone
 std::sort(begin(A), end(A));
 int acc = 0;
 for (auto i : A)
-  acc += i;
+acc += i;
 ```
 O: $\Theta(n \log n)$
 O: $\Theta(n^2)$
@@ -5606,18 +5471,18 @@ O: $O(n)$
 O: $O(1)$
 A: 0
 
-Q: La complejidad de la función A2 es: 
+Q: La complejidad de la función A2 es:
 ```
-Funcion A2 (n, a: entero):entero; 
-Var r: entero; fvar 
-	si (a² > n) devuelve 0 
-	sino 
-		r:= A2(n, 2a); 
-		opción 
-			n < a²: devuelve r; 
-			n ≥ a² : devuelve r + a; 
-		fopción 
-	fsi 
+Funcion A2 (n, a: entero):entero;
+Var r: entero; fvar
+si (a² > n) devuelve 0
+sino
+r:= A2(n, 2a);
+opción
+n < a²: devuelve r;
+n ≥ a² : devuelve r + a;
+fopción
+fsi
 fin
 ```
 O: $O(\sqrt{n} · a)$
@@ -5628,14 +5493,14 @@ A: 1
 Q: Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función?
 ```cpp
 void f(unsigned n) {
-  if (n < 1)
-    return;
-  for (int i = 0; i < n; i++)
-    for (int j = 0; j < n; j++)
-      for (int k = 0; k < n; k++)
-        cout << "*";
-  for (int i = 0; i < 8; i++)
-    f(n / 2);
+if (n < 1)
+return;
+for (int i = 0; i < n; i++)
+for (int j = 0; j < n; j++)
+for (int k = 0; k < n; k++)
+cout << "*";
+for (int i = 0; i < 8; i++)
+f(n / 2);
 }
 ```
 O: $\Theta(n^2 \log n)$
@@ -5664,8 +5529,8 @@ A: 1
 Q: Indica cuál es la complejidad, en función de $n$, del fragmento siguiente:
 ```cpp
 for (int i = n; i > 0; i /= 2)
-  for (int j = n; j > 0; j /= 2)
-    a += A[i][j];
+for (int j = n; j > 0; j /= 2)
+a += A[i][j];
 ```
 O: $O(\log^2(n))$
 O: $O(n \log(n))$
@@ -5709,19 +5574,6 @@ O: $O(n^2)$
 O: $O(n \sqrt{n})$
 A: 1
 
-Q: Con respecto al tamaño del problema, ¿Cuál es el orden de complejidad temporal asintótica de la siguiente función? (asumimos que A es una matriz cuadrada)
-```cpp
-void traspuesta(vector<vector<int>> A) {
-  for (int i = 1; i < A.size(); i++)
-    for (int j = 0; j < i; j++)
-      swap(A[i][j], A[j][i]);
-}
-```
-O: constante
-O: lineal
-O: cuadrático
-A: 1
-
 Q: La eficiencia de los algoritmos voraces se basa en...
 O: ...el hecho de que las decisiones tomadas no se reconsideran.
 O: ...el hecho de que, con antelación, las posibles decisiones se ordenan de mejor a peor.
@@ -5733,12 +5585,6 @@ O: Una tabla que indique, para cada posición donde se va a cortar, cada uno de 
 O: Un vector de booleanos.
 O: Un par de enteros que indiquen los cortes realizados y el valor acumulado.
 A: 1
-
-Q: Si el coste temporal de un algoritmo es T(n), ¿cuál de las siguientes situaciones es imposible?
-O: $T(n) \in \Omega(n)$ y $T(n) \in \Theta(n^2)$
-O: $T(n) \in \Theta(n)$ y $T(n) \in \Omega(n^2)$
-O: $T(n) \in O(n)$ y $T(n) \in \Theta(n)$
-A: 0
 
 Q: La solución recursiva ingenua a un determinado problema de optimización muestra estas dos características: por un lado, se basa en obtener soluciones óptimas a problemas parciales más pequeños y por otro, estos subproblemas se resuelven más de una vez durante el proceso recursivo. Este problema es candidato a tener una solución alternativa basada en...
 O: Un algoritmo del estilo de divide y vencerás.
@@ -5797,42 +5643,42 @@ A: 2
 Q: El problema del alfarero (solución discreta con valores y tiempos continuos): Se dispone de n clases de objetos. De cada una de ellas se conoce el número máximo de piezas que se puede fabricar, $m_i \in \mathbb{N}$; El valor de cada pieza terminada, $v_i \in \mathbb{R}$ y el tiempo necesario para su fabricación $t_i \in \mathbb{R}$, $i \in [0..n-1]$. ¿Cuántos objetos de cada clase hay que fabricar para maximizar la ganancia teniendo en cuenta que el tiempo total está limitado por $T \in \mathbb{R}$? Se pretende resolverlo mediante ramificación y poda. Las siguientes funciones tratan de estimar una ganancia aproximada para la parte del nodo aún sin completar. ¿cuál es la mejor para usarla como parte de la cota optimista?
 O: ```cpp
 double optimistic(const vector<int> &m, const vector<double> &v,
-                  const vector<double> &t, double T, size_t from) {
-  double gain = 0.0;
-  for (size_t i = from; i < m.size() && T > 0; i++) {
-    for (int j = 1; j <= m[i]; j++) {
-      if (t[i] < T) {
-        gain += v[i];
-        T -= t[i];
-      }
-    }
-  }
-  return gain;
+const vector<double> &t, double T, size_t from) {
+double gain = 0.0;
+for (size_t i = from; i < m.size() && T > 0; i++) {
+for (int j = 1; j <= m[i]; j++) {
+if (t[i] < T) {
+gain += v[i];
+T -= t[i];
+}
+}
+}
+return gain;
 }
 ```
 O: ```cpp
 double optimistic(const vector<int> &m, const vector<double> &v,
-                  const vector<double> &t, double T, size_t from) {
-  double gain = 0.0;
-  for (size_t i = from; i < m.size() && T > 0; i++) {
-    for (int j = 1; j <= m[i]; j++) {
-      gain += v[i];
-      T -= t[i];
-    }
-  }
-  return gain;
+const vector<double> &t, double T, size_t from) {
+double gain = 0.0;
+for (size_t i = from; i < m.size() && T > 0; i++) {
+for (int j = 1; j <= m[i]; j++) {
+gain += v[i];
+T -= t[i];
+}
+}
+return gain;
 }
 ```
 O: ```cpp
 double optimistic(const vector<int> &m, const vector<double> &v,
-                  const vector<double> &t, double T, size_t from) {
-  double gain = 0.0;
-  for (size_t i = from; i < m.size() && T > 0; i++) {
-    double num_objs = min(T / t[i], double(m[i]));
-    gain += num_objs * v[i];
-    T -= num_objs * t[i];
-  }
-  return gain;
+const vector<double> &t, double T, size_t from) {
+double gain = 0.0;
+for (size_t i = from; i < m.size() && T > 0; i++) {
+double num_objs = min(T / t[i], double(m[i]));
+gain += num_objs * v[i];
+T -= num_objs * t[i];
+}
+return gain;
 }
 ```
 A: 2
@@ -5846,9 +5692,9 @@ A: 1
 Q: Con respecto al parámetro n, ¿Cuál sería la complejidad temporal de la siguiente función si se aplicara memoización?
 ```cpp
 long f(unsigned n) {
-  if (n <= 1)
-    return 1;
-  return n * f(n - 2);
+if (n <= 1)
+return 1;
+return n * f(n - 2);
 }
 ```
 O: logarítmica
@@ -5868,24 +5714,24 @@ O: Sí, pero esto solo podría ocurrir si se hace uso de cotas pesimistas.
 O: No, los nodos hojas son los nodos completados y por lo tanto hay que visitar al menos uno de ellos para almacenarlo como la mejor solución hasta el momento.
 A: 1
 
-Q: Sea v un vector de N elementos y supongamos que todos los elementos de v son distintos Considera el algoritmo siguiente Si tomamos como medida significativa el numero de comparaciones con elementos del vector(instrucción 2) entonces el algoritmo tiene un coste: 
+Q: Sea v un vector de N elementos y supongamos que todos los elementos de v son distintos Considera el algoritmo siguiente Si tomamos como medida significativa el numero de comparaciones con elementos del vector(instrucción 2) entonces el algoritmo tiene un coste:
 ```cpp
 for (i = 1; i < N; i++) {
-  X = V[i];
+X = V[i];
 #(1) Izq = 0;
-  Der = i - 1;
-  while (Izq <= Der) {
-    Medio = (Izq + Der) / 2;
-    if (X < V[Medio])
+Der = i - 1;
+while (Izq <= Der) {
+Medio = (Izq + Der) / 2;
+if (X < V[Medio])
 #(2) Der = Medio - 1;
-    else
-      Izq = Medio + 1;
-  }
-  for (j = i - 1; j >= Izq; j--) {
-    V[j + 1] = V[j];
+else
+Izq = Medio + 1;
+}
+for (j = i - 1; j >= Izq; j--) {
+V[j + 1] = V[j];
 #(3)
-  }
-  V[Izq] = X;
+}
+V[Izq] = X;
 }
 ```
 O: Θ(n*log(n))
@@ -5904,18 +5750,18 @@ A: 3
 Q: ¿Cuál es la complejidad temporal de la siguiente función?
 ```cpp
 int ejemplo(vector<int> &v) {
-  int n = v.size();
-  int j, i = 2;
-  int sum = 0;
-  while (n > 0 && i < n) {
-    j = i;
-    while (v[j] != v[1]) {
-      sum += v[j];
-      j = j / 2;
-    }
-    i++;
-  }
-  return sum;
+int n = v.size();
+int j, i = 2;
+int sum = 0;
+while (n > 0 && i < n) {
+j = i;
+while (v[j] != v[1]) {
+sum += v[j];
+j = j / 2;
+}
+i++;
+}
+return sum;
 }
 ```
 O: $\Theta(n \log n)$
@@ -5939,19 +5785,19 @@ A: 2
 Q: Su ecuación de recurrencia es:
 ```
 Función F (ent n: entero): entero
-	variables x, i: entero
-	Inicio
-	si (n>=1) entonces
-		retorna 1
-	si no
-		para i de 1 a n hacer
-			x← 1
-			mientras x<n hacer
-				x← x*2
-			finmientras
-		finpara
-		retorna F(n/2)+F(n/2)
-	finsi
+variables x, i: entero
+Inicio
+si (n>=1) entonces
+retorna 1
+si no
+para i de 1 a n hacer
+x← 1
+mientras x<n hacer
+x← x*2
+finmientras
+finpara
+retorna F(n/2)+F(n/2)
+finsi
 fin
 ```
 O: $2 \cdot T(n/2) + n \cdot \log n$
@@ -5961,19 +5807,6 @@ O: $2 \cdot T(n-1) + n$
 O: $2 \cdot T(n/2) + 1$
 A: 0
 
-Q: 
-```cpp
-int f(int x, int y) {
-  if (x <= y)
-    return 1;
-  return x + f(x - 1, y);
-}
-```
-O: $O(x)$
-O: $O(x^2)$
-O: $O(1)$
-A: 2
-
 Q: ¿Pertenece $3n^2 + 3$ a $O(n^3)$?
 O: Solo para $c = 1$ y $n_0 = 5$
 O: Sí
@@ -5981,110 +5814,110 @@ O: No
 A: 1
 
 Q: ¿De qué clase de complejidad es la solución de la siguiente relación de recurrencia? $f(n) = \begin{cases} 1 + f(n/b) & \text{si } n > 1 \\ 1 & \text{si } n = 1 \end{cases}$, con $b \in \mathbb{N}$, $b > 1$
-A: 0
 O: Depende del valor de $b$
 O: $f(n) \in \Theta(\log n)$
 O: $f(n) \in \Theta(n)$
+A: 0
 
 Q: El uso de funciones de cota en ramificación y poda...
-A: 0
 O: ...transforma en polinómicas complejidades que antes eran exponenciales
 O: ...puede reducir el número de instancias del problema que pertenecen al caso peor
 O: ...garantiza que el algoritmo va a ser más eficiente ante cualquier instancia del problema
+A: 0
 
 Q: Si un problema de optimización lo es para una función que toma valores continuos...
-A: 0
 O: Divide y vencerás puede resultar más eficiente que la programación dinámica iterativa en cuanto al uso de memoria
 O: La programación dinámica iterativa siempre es mucho más eficiente que divide y vencerás en cuanto al uso de memoria
 O: El uso de memoria de la programación dinámica iterativa y de divide y vencerás es el mismo independientemente de si el dominio es discreto o continuo
+A: 0
 
 Q: La solución voraz al problema de la mochila con objetos no fraccionables:
-A: 0
 O: Siempre encuentra la solución óptima al problema
 O: No siempre encuentra la solución óptima al problema, pero sí una muy buena aproximación, a partir de la cual se puede obtener el óptimo en tiempo constante
 O: No siempre encuentra la solución óptima al problema, pero puede emplearse como cota pesimista en algoritmos de búsqueda y enumeración
+A: 0
 
 Q: El algoritmo de ordenación Quicksort divide el problema en dos subproblemas. ¿Cuál es la complejidad temporal asintótica de realizar esa división?
-A: 0
 O: $O(\log n)$
 O: $O(n)$
 O: $O(n \log n)$
+A: 0
 
 Q: ¿Cuál es la complejidad temporal asintótica de la función $f$? (en la primera llamada, el parámetro $i$ toma valor $n-1$; el tamaño de los vectores $w$ y $v$ es $n$)
 ```cpp
 float f(vector<float> &w, vector<unsigned> &v, unsigned P, int i) {
-  float S1 = 0, S2;
-  if (i >= 0) {
-    if (w[i] <= P)
-      S1 = v[i] + f(w, v, P - w[i], i - 1);
-    S2 = f(w, v, P, i - 1);
-    return max(S1, S2);
-  }
-  return 0;
+float S1 = 0, S2;
+if (i >= 0) {
+if (w[i] <= P)
+S1 = v[i] + f(w, v, P - w[i], i - 1);
+S2 = f(w, v, P, i - 1);
+return max(S1, S2);
+}
+return 0;
 }
 ```
-A: 0
 O: $\Omega(n)$ y $O(n^2)$
 O: $\Omega(n)$ y $O(2^n)$
 O: $\Theta(2^n)$
+A: 0
 
 Q: Dada la siguiente función:
 ```cpp
 void f(vector<int> &v) {
-  int i = 1, n = v.size();
-  bool swaped = true;
-  while (swaped) {
-    swaped = false;
-    for (int j = n - 1; j >= i; j--)
-      if (v[j] < v[j - 1]) {
-        swap(v[j], v[j - 1]);
-        swaped = true;
-      }
-    i++;
-  }
+int i = 1, n = v.size();
+bool swaped = true;
+while (swaped) {
+swaped = false;
+for (int j = n - 1; j >= i; j--)
+if (v[j] < v[j - 1]) {
+swap(v[j], v[j - 1]);
+swaped = true;
+}
+i++;
+}
 }
 ```
 De las siguientes afirmaciones, o bien dos son ciertas y una es falsa, o bien al contrario, una es cierta y dos son falsas. Marca la que en este sentido es diferente a las otras dos.
-A: 0
 O: El peor de los casos ocurre cuando el primer elemento del vector es estrictamente mayor que los restantes sin importar el orden de los demás
 O: La complejidad temporal en el peor de los casos viene dada por la expresión $\sum_{i=1}^{n}(n-i)$
 O: La complejidad temporal en el mejor de los casos ocurre cuando el vector está vacío
+A: 0
 
 Q: Disponemos de dos algoritmos que queremos comparar. Hemos calculado la función de complejidad del algoritmo A contando operaciones elementales, y del algoritmo B contando pasos de programa. ¿Podemos comparar ambas funciones para decidir qué algoritmo es mejor?
-A: 0
 O: No, porque al contar operaciones elementales, podríamos obtener una complejidad asintótica mayor que si contamos pasos de programa.
 O: Sí, pero solo podremos comparar sus clases de notación asintótica
 O: Sí, ambos métodos son totalmente equivalentes. El mejor algoritmo será aquel con la menor función
+A: 0
 
 Q: Tenemos un vector ordenado y queremos comprobar si contiene un elemento dado. ¿Cuál sería la complejidad temporal más ajustada para hacerlo?
-A: 0
 O: El tamaño del vector
 O: El logaritmo del tamaño del vector
 O: Constante con el tamaño del vector
+A: 0
 
 Q: En la resolución mediante ramificación y poda del problema del camino de coste mínimo, obtenemos para un nodo determinado, una cota pesimista parcial estrictamente menor que su cota optimista. ¿Qué quiere decir esto?
-A: 0
 O: Que el nodo debe expandirse
 O: Que el nodo no debe expandirse
 O: Que hay un error en alguna de las dos cotas
+A: 0
 
 Q: ¿Qué expresión refleja mejor la complejidad asintótica respecto a $n$ del siguiente fragmento de código?
 ```cpp
 int k = 0;
 for (int a = 1; a < n; a *= 2)
-  for (int b = 0; b < a; b += 1)
-    k++;
+for (int b = 0; b < a; b += 1)
+k++;
 ```
-A: 0
 O: $\sum_{a=1}^{\log n} 2^a$
 O: $\sum_{a=1}^{n-1} \sum_{b=0}^{a-1} 1$
 O: $\sum_{a=1}^{n-1} \frac{n}{2}$
+A: 0
 
 Q: ¿Se puede reducir el coste temporal de un algoritmo recursivo almacenando los resultados devueltos por las llamadas recursivas?
-A: 0
 O: No, ello no reduce el coste temporal ya que las llamadas recursivas se deben realizar de cualquier manera
 O: No, solo se puede reducir el coste convirtiendo el algoritmo recursivo en iterativo
 O: Sí, si se repiten llamadas a la función con los mismos argumentos
+A: 0
 
 Q: Resolviendo el problema de la composición de funciones mediante Ramificación y Poda, declaramos el nodo y la cola de prioridad como sigue:
 ```cpp
@@ -6092,382 +5925,370 @@ using Node = tuple<short, int>;
 priority_queue<Node> pq;
 ```
 Cada nodo contiene, en este orden, el número de veces que se ha aplicado una función y el resultado obtenido. ¿Qué se puede afirmar sobre el orden en el que se extraen los nodos de la cola de prioridad?
-A: 0
 O: No podemos afirmar nada, pues no hemos definido ningún criterio para la ordenación de la cola
 O: Que se extraerán en un orden que permite encontrar pronto la solución óptima
 O: Que se extraerán en un orden que dificulta encontrar pronto la solución óptima
+A: 0
 
 Q: Dada la versión general del problema del camino de coste mínimo, ¿cuál de las estrategias siguientes proveería de una cota optimista para ramificación y poda?
-A: 0
 O: Suponer que solo nos vamos a mover en tres direcciones (como en el caso restringido).
 O: Suponer que ya no se van a realizar más movimientos.
 O: Las otras dos estrategias son ambas válidas.
+A: 0
 
 Q: Queremos utilizar el algoritmo heapsort para ordenar un vector de manera descendente (de mayor a menor). ¿Cómo serían las complejidades temporales asintóticas de construir el heap en estos dos supuestos: (1) el vector que recibe está ordenado ascendente; (2) el vector que recibe está ordenado descendente?
-A: 0
 O: Iguales
 O: La del primer supuesto mayor que la del segundo
 O: La del segundo supuesto mayor que la del primero
+A: 0
 
 Q: Queremos resolver el problema general del camino de coste mínimo. Supón que estamos usando una función $f$ como cota optimista y funciona correctamente. ¿Qué pasaría si, en el fuente, multiplicamos esta función por $1,1$. Marca la falsa.
-A: 0
 O: Podría perderse la solución óptima pero la que obtendríamos no se alejaría mucho de ella
 O: El programa terminaría más rápido
 O: Seguiría funcionando bien pero sería más lento
+A: 0
 
 Q: Si $f \in \Omega(g_1)$ y $f \in \Omega(g_2)$ entonces siempre se cumplirá: de las siguientes conclusiones, o bien dos son ciertas y una es falsa, o bien al contrario, una es cierta y dos son falsas. Marca la que en este sentido es diferente a las otras dos.
-A: 0
 O: $f \in \Omega(\min(g_1, g_2))$
 O: $f \in \Omega(g_1 \cdot g_2)$
 O: $f \in \Omega(g_1 + g_2)$
+A: 0
 
 Q: ¿Qué estructura de datos se suele utilizar para almacenar el árbol de búsqueda completo en un algoritmo de ramificación y poda?
-A: 0
 O: Una cola de prioridad
 O: Ninguna, no se almacena
 O: Un árbol cuya aridad depende del problema
+A: 0
 
 Q: En clase vimos una demostración que justificaba que el esquema voraz es adecuado para resolver el problema de la mochila continua (con fraccionamiento). Entre otros posibles motivos ¿Por qué esa misma demostración no sirve para el problema de la mochila discreta seleccionando objetos de la misma manera?
-A: 0
 O: Las otras dos opciones son ambas ciertas.
 O: Porque no hay garantía de que la solución esté formada por una secuencia compuesta únicamente de unos y, a continuación, otra secuencia compuesta únicamente de ceros
 O: Porque no hay garantía de que la mochila se llene
+A: 0
 
 Q: Dada la solución por programación dinámica recursiva de la versión restringida del problema del camino de coste mínimo, en general, ¿cuántas veces se llega al caso base de la recursión (la casilla inicial)?
-A: 0
 O: Solo una
 O: Un valor que es $O(2^n)$, donde $n$ es el tamaño del mapa
 O: Un valor que es $O(n)$, donde $n$ es el tamaño del mapa
+A: 0
 
 Q: ¿Garantiza la estrategia de divide y vencerás una solución de complejidad temporal polinómica a cualquier problema?
-A: 0
 O: No, la complejidad temporal puede ser incluso peor que cualquier función polinómica
 O: Sí, en cualquier caso
 O: Sí, pero siempre que la complejidad temporal conjunta de las operaciones de descomposición del problema y la combinación de las soluciones sea polinómica
+A: 0
 
 Q: ¿Cuál de estas estrategias para calcular el $n$-ésimo elemento de la serie de Fibonacci ($f(n) = f(n-1) + f(n-2)$, $f(1) = f(2) = 1$) es más eficiente?
-A: 0
 O: La estrategia divide y vencerás
 O: Para este problema, las dos estrategias citadas serían similares en cuanto a eficiencia
 O: Programación dinámica
+A: 0
 
 Q: Queremos resolver la versión general del problema del camino de coste mínimo por ramificación y poda. Para ello se usa una estrategia que consiste en priorizar las expansiones de los nodos que contienen un camino explorado de menor coste. ¿Qué podemos decir del algoritmo resultante?
-A: 0
 O: Que la primera hoja a la que se llegue es la solución del problema y por lo tanto ya no será necesario explorar más nodos de la lista de nodos vivos, aunque no esté vacía.
 O: Que el recorrido en el árbol de búsqueda será equivalente a un recorrido por niveles, por lo que no es necesario utilizar una cola de prioridad.
 O: Las otras dos opciones son ambas ciertas.
+A: 0
 
 Q: Si comparamos la cota pesimista y la optimista de un mismo nodo. ¿Qué podríamos saber?
-A: 0
 O: Si el nodo debe ser descartado
 O: El intervalo en el que se encuentra la mejor solución que se puede obtener con ese nodo
 O: Si el nodo es prometedor
+A: 0
 
 Q: Cuando se usa un algoritmo voraz para abordar la resolución de un problema de optimización por selección discreta (es decir, un problema para el cual la solución consiste en encontrar un subconjunto del conjunto de elementos que optimiza una determinada función), ¿cuál de estas tres cosas es imposible que ocurra?
-A: 0
 O: Que se reconsidere la decisión ya tomada anteriormente respecto a la selección de un elemento a la vista de la decisión que se debe tomar en un instante
 O: Que el algoritmo no encuentre ninguna solución
 O: Que la solución no sea la óptima
+A: 0
 
 Q: ¿Qué tienen en común el algoritmo que obtiene el $k$-ésimo elemento más pequeño de un vector (estudiado en clase) y el algoritmo de ordenación Quicksort?
-A: 0
 O: La combinación de las soluciones a los subproblemas
 O: La división del problema en subproblemas
 O: El número de llamadas recursivas que se hacen
+A: 0
 
 Q: Cuando se resuelve el problema de la mochila discreta usando la estrategia de vuelta atrás, ¿puede ocurrir que se tarde menos en encontrar la solución óptima si se prueba primero a meter cada objeto antes de no meterlo?
-A: 0
 O: Sí, pero solo si se usan cotas optimistas para podar el árbol de búsqueda
 O: Sí, tanto si se usan cotas optimistas para podar el árbol de búsqueda como si no
 O: No, ya que en cualquier caso se deben explorar todas las soluciones factibles
+A: 0
 
 Q: ¿Cuál es la relación de recurrencia asociada a la complejidad temporal de la siguiente función?
 ```cpp
 void f(unsigned n) {
-  if (n == 0)
-    return 1;
-  return 2 * f(n - 1);
+if (n == 0)
+return 1;
+return 2 * f(n - 1);
 }
 ```
-A: 0
 O: $T(n) = 1 + 2 \cdot T(n-1)$; $T(0) = 1$
 O: $T(n) = 2 \cdot T(n-1)$; $T(0) = 1$
 O: $T(n) = 1 + T(n-1)$; $T(0) = 1$
+A: 0
 
 Q: El siguiente programa resuelve el problema de cortar un tubo de longitud $n$ en segmentos de longitud entera entre 1 y $n$ de manera que se maximice el precio de acuerdo con una tabla $p$ que da el precio para cada longitud, pero falta un trozo. ¿Qué debería ir en lugar de XXXXXXX?
 ```cpp
 int tube_cut(const vector<int> &p, const int n) {
-  if (n == 0)
-    return 0;
-  int q = numeric_limits<int>::lowest();
-  for (int i = 1; i <= n; i++)
-    q = max(q, p[i] + tube_cut(XXXXXXX));
-  return q;
+if (n == 0)
+return 0;
+int q = numeric_limits<int>::lowest();
+for (int i = 1; i <= n; i++)
+q = max(q, p[i] + tube_cut(XXXXXXX));
+return q;
 }
 ```
-A: 0
 O: p,n-1
 O: p,n-i
 O: p,i
+A: 0
 
 Q: Usando la técnica de programación dinámica con ahorro de memoria ¿podría acelerarse el programa usando tres vectores en vez de dos?
-A: 0
 O: Sí, pero sería a expensas de usar más memoria
 O: Sí, pero la complejidad temporal seguiría siendo la misma
 O: No
+A: 0
 
 Q: En un problema de minimización mediante Vuelta Atrás, empleamos una cota optimista que es mucho mayor que la mejor solución que podría alcanzarse desde un nodo determinado. Como consecuencia:
-A: 0
 O: Es posible que no encontremos el óptimo
 O: El programa será más lento que con otra cota optimista
 O: Dicha decisión tendrá un impacto mínimo en el tiempo de ejecución del programa, puesto que es más importante elegir una buena cota pesimista inicial
+A: 0
 
 Q: Un problema tiene subestructura óptima cuando...
-A: 0
 O: ...su solución se puede construir eficientemente a partir de soluciones de subproblemas suyos
 O: ...es posible escribir una solución voraz para el problema
 O: ...es posible dividir su tamaño de forma equitativa para construir cada uno de los subproblemas
+A: 0
 
 Q: En el esquema de vuelta atrás, el orden en el que se van asignando los distintos valores a las componentes del vector que contendrá la solución...
-A: 0
 O: ...es irrelevante si no se utilizan mecanismos de poda basados en la mejor solución hasta el momento
 O: ...puede ser relevante si se utilizan mecanismos de poda basados en estimaciones optimistas
 O: Las otras dos opciones son ambas ciertas
+A: 0
 
 Q: En la solución de ramificación y poda del problema del camino de coste mínimo, ¿para qué puede resultar útil la técnica de poda con memoria?
-A: 0
 O: Para obtener cotas pesimistas
 O: Para evitar la formación de ciclos
 O: Para ambas cosas
+A: 0
 
 Q: En un algoritmo de ramificación y poda se puede usar una cota optimista para estimar el coste restante desde el nodo actual hasta el objetivo. ¿Qué propiedad debe cumplir esta cota para asegurar que siempre se encontrará la solución óptima?
-A: 0
 O: Nunca sobreestimar el coste real
 O: Debe disminuir a medida que se acerca al objetivo
 O: Las dos anteriores son ciertas
+A: 0
 
 Q: ¿Cuál es la mejor complejidad temporal y espacial, en función de $n$, que se puede obtener en la solución de programación dinámica para el problema (visto en clase) de cortar un tubo de longitud $n$ en segmentos de longitud entera entre 1 y $n$ de manera que se maximice el precio de acuerdo con una tabla que da el precio para cada longitud?
-A: 0
 O: Temporal $\Theta(n^2)$ y espacial $\Theta(n)$
 O: Temporal y espacial $\Theta(n)$
 O: Temporal y espacial $\Theta(n^2)$
+A: 0
 
 Q: En un algoritmo de ramificación y poda, el orden escogido para priorizar los nodos en la lista de nodos vivos...
-A: 0
 O: ...nunca afecta al tiempo necesario para encontrar la solución óptima
 O: ...determina la complejidad temporal en el peor de los casos del algoritmo
 O: ...puede influir en el número de nodos que se descartan sin llegar a expandirlos
+A: 0
 
 Q: Queremos resolver la versión general del problema del camino de coste mínimo mediante ramificación y poda. Para obtener la cota optimista de un nodo cualquiera procedemos así: calculamos el número de casillas que quedan, por la diagonal derecha–abajo, hasta llegar a una pared del mapa. A ese valor le sumamos el número de casillas que podrían quedar desde esa pared hasta la salida utilizando únicamente movimientos del tipo abajo o derecha, según corresponda (distancia de Chebishev). ¿Qué podemos decir acerca de la cota optimista que se obtendría?
-A: 0
 O: Que solo será una cota optimista válida si se asegura que todas las casillas tengan un coste mínimo de 1.
 O: Que solo será una cota optimista válida si se asegura que todas las casillas tengan un coste mínimo de 0.
 O: Que solo será una cota optimista válida si las casillas contienen valores reales mayores que 0.0.
+A: 0
 
 Q: ¿Cuál de los siguientes algoritmos de ordenación funciona más rápido para ordenar vectores muy grandes que ya están casi ordenados?
-A: 0
 O: Quicksort empleando el primer elemento como pivote
 O: Heapsort
 O: Ambos por igual
+A: 0
 
 Q: ¿A qué esquema de entre los estudiados pertenece la siguiente función?
 ```cpp
 void g(vector<unsigned> &v, unsigned j) {
-  if (j == v.size())
-    return;
-  for (unsigned i = j; i < v.size(); i++) {
-    swap(v[j], v[i]);
-    g(v, j + 1);
-    swap(v[j], v[i]);
-  }
+if (j == v.size())
+return;
+for (unsigned i = j; i < v.size(); i++) {
+swap(v[j], v[i]);
+g(v, j + 1);
+swap(v[j], v[i]);
+}
 }
 ```
-A: 0
 O: Programación dinámica
 O: Ramificación y poda
 O: Vuelta atrás
-
-Q: Una de estas tres afirmaciones es falsa. ¿Cuál?
 A: 0
-O: Un algoritmo voraz puede no encontrar la solución óptima de un problema de selección discreta.
-O: El esquema de ramificación y poda no garantiza que la complejidad temporal de resolución de un problema de selección discreta no sea exponencial.
-O: Los algoritmos voraces no sirven para resolver problemas de selección discreta.
 
 Q: En general ¿cuál de los siguientes problemas tiene solución eficiente utilizando alguno de los esquemas algorítmicos estudiados durante el curso?
-A: 0
 O: La mochila discreta (0/1) sin restricciones adicionales
 O: La mochila discreta (0/1) con pesos discretos
 O: La mochila discreta (0/1) con valores discretos
+A: 0
 
 Q: Si $f(n) \in \Theta(2^n)$, ¿podemos decir siempre que $f(n) \in O(n!)$?
-A: 0
 O: Sí, ya que $2^n \in O(n!)$
 O: Sí, ya que $2^n \in \Omega(n!)$
 O: No, ya que $2^n \notin O(n!)$
+A: 0
 
 Q: Dada la versión general del problema del camino de coste mínimo, ¿cuál de las estrategias siguientes proveería de una cota optimista para ramificación y poda?
-A: 0
 O: Tomar la dificultad del camino parcial (hasta el nodo en cuestión) y sumarle la dificultad del camino que, desde el nodo en cuestión, se completa siguiendo un algoritmo voraz que solo toma los movimientos de la versión restringida
 O: Tomar la dificultad del camino parcial (hasta el nodo en cuestión) y nada más
 O: Las otras dos estrategias son ambas válidas.
+A: 0
 
 Q: En cuanto al cálculo de la complejidad temporal en función de $n$ de la siguiente función:
 ```cpp
 void f(unsigned n) {
-  if (n > 1) {
-    for (unsigned i = 0; i < 4; i++)
-      f(n / 2);
-  }
+if (n > 1) {
+for (unsigned i = 0; i < 4; i++)
+f(n / 2);
+}
 }
 ```
 De las siguientes afirmaciones, o bien dos son ciertas y una es falsa, o bien al contrario, una es cierta y dos son falsas. Marca la que en este sentido es diferente a las otras dos.
-A: 0
 O: El tamaño del problema viene dado por el valor que toma $n$
 O: El mejor de los casos ocurre cuando $n = 0$ y su complejidad temporal está en $\Omega(1)$
 O: La complejidad temporal asintótica está en $\Theta(n^2)$
+A: 0
 
 Q: Dada la versión general del problema mcp, en cuanto al valor de una cota pesimista de un nodo cualquiera... de las siguientes afirmaciones, o bien dos son ciertas y una es falsa, o bien al contrario, una es cierta y dos son falsas. Marca la que en este sentido es diferente a las otras dos.
-A: 0
 O: ...debe corresponder con la dificultad de un camino completado, es decir, que comienza en $(0,0)$ y termina en $(n-1,m-1)$
 O: ...debe ser inferior al de una cota optimista de cualquier otro nodo
 O: ...debe ser superior al de una cota optimista de cualquier otro nodo
+A: 0
 
 Q: Sobre estas dos alternativas para la programación dinámica: recursiva con memoización, e iterativa, podemos afirmar lo siguiente:
-A: 0
 O: Ambas calculan siempre todos los valores del almacén
 O: Según el problema, la iterativa puede calcular menos valores del almacén que la recursiva
 O: Según el problema, la recursiva puede calcular menos valores del almacén que la iterativa
+A: 0
 
 Q: De las siguientes tres afirmaciones, una es cierta y dos falsas, o bien una es falsa y dos son ciertas. Marca la que en ese sentido es diferente a las otras dos.
-A: 0
 O: El problema de la mochila continua no se puede resolver de forma análoga a como se resuelve el problema de la mochila discreta
 O: El problema de la mochila continua no se puede resolver mediante la técnica de ramificación y poda pues se podría producir un número infinito de ramas
 O: El problema de la mochila discreta no se puede resolver mediante la técnica de divide y vencerás
+A: 0
 
 Q: ¿Cuál de las siguiente técnicas NO resuelve la versión general del problema del camino de coste mínimo? (según lo visto en clase)
-A: 0
 O: Ramificación y poda
 O: Programación dinámica
 O: Vuelta atrás
+A: 0
 
 Q: Dados dos vectores ordenados de $n$ elementos, ¿cuál es el coste del mejor algoritmo que se puede escribir para obtener un vector ordenado que contenga todos los elementos de los dos vectores?
-A: 0
 O: $\Theta(\log n)$
 O: $\Theta(n)$
 O: $\Theta(n^2)$
+A: 0
 
 Q: Queremos resolver un problema parecido la versión restringida del problema del camino de coste mínimo pero ahora permitimos (además) movimientos de dos pasos en las mismas direcciones. ¿Cómo se podría resolver este problema?
-A: 0
 O: Usando programación dinámica, de una forma muy parecida al original
 O: Ya no se podría resolver usando programación dinámica y habría que recurrir a la vuelta atrás
 O: No se puede resolver ni usando programación dinámica ni vuelta atrás
+A: 0
 
 Q: Entre dos algoritmos para solucionar el mismo problema, siempre debemos elegir:
-A: 0
 O: Aquel con menor complejidad asintótica en el mejor caso
 O: Aquel con menor complejidad asintótica en el peor caso
 O: Si conocemos la talla máxima del problema que pretendemos resolver, es posible que un algoritmo con mayor complejidad asintótica se comporte mejor para nuestro problema
+A: 0
 
 Q: Dado el siguiente programa recursivo:
 ```cpp
 int f(int n) { // Se asume que n >= 0
-  if (n == 0)
-    return 1;
-  return f(n - 1) + f(n - 2);
+if (n == 0)
+return 1;
+return f(n - 1) + f(n - 2);
 }
 ```
 si quisiéramos mejorarlo haciendo uso de la técnica de programación dinámica, ¿cuáles serían las complejidades temporal y espacial más ajustadas del algoritmo resultante?
-A: 0
 O: Respectivamente, $O(n)$ y $O(1)$
 O: Ambas complejidades serían $O(1)$
 O: Ambas complejidades serían $O(n)$
+A: 0
 
 Q: El algoritmo de ordenación Mergesort divide el problema en dos subproblemas. ¿Cuál es la complejidad temporal asintótica de realizar esa división?
-A: 0
 O: $O(\log n)$
 O: $O(n)$
 O: $O(1)$
+A: 0
 
 Q: Dada la versión restringida del problema mcp resuelto mediante programación dinámica iterativa, ¿cuál es la complejidad temporal del fragmento de código que cumplimenta únicamente las celdas del almacén que corresponden a su contorno (caso base)? (suponiendo que el caso base corresponde a los casos $n = 0$ o $m = 0$)
-A: 0
 O: $\Theta(m)$
 O: $\Theta(\max\{n, m\})$
 O: $\Theta(\min\{n, m\})$
+A: 0
 
 Q: Queremos resolver la versión restringida del problema del camino de coste mínimo usando una técnica de vuelta atrás.
-A: 0
 O: Eso no se puede hacer, ese problema no se puede resolver usando vuelta atrás
 O: La técnica de vuelta atrás se podría aplicar, pero siempre sería más lento que si usamos programación dinámica
 O: La técnica de vuelta atrás se podría aplicar, incluso en algunos raros casos podría ir más rápido que usando programación dinámica
+A: 0
 
 Q: Dada la versión restringida del problema mcp, queremos listar todos los caminos posibles (sean o no los óptimos). ¿qué técnica deberíamos utilizar?
-A: 0
 O: Memoización
 O: Divide y vencerás
 O: Programación dinámica iterativa
+A: 0
 
 Q: Dada la versión general del problema mcp ¿cuál es la mejor complejidad temporal (de entre las indicadas) con la que podría obtenerse una cota pesimista para el nodo inicial del árbol de búsqueda?
-A: 0
 O: $\Omega(n + m)$
 O: $\Omega(nm)$
 O: $\Omega(1)$
+A: 0
 
 Q: Decid cuál de estas tres es la cota pesimista más ajustada al valor óptimo de la mochila discreta:
-A: 0
 O: El valor de la mochila continua correspondiente
 O: El valor de la mochila discreta que se obtiene usando un algoritmo voraz basado en el valor específico de los objetos
 O: El valor de una mochila que contiene todos los objetos restantes aunque se pase del peso máximo permitido
+A: 0
 
 Q: Si en el problema del camino de coste mínimo, estudiado en prácticas, permitiéramos casillas con coste 0, ¿cuál de las siguientes distancias sería una cota optimista válida si se la sumamos al coste del camino actual? $(i,j)$ es la posición actual y $(n,m)$ el número de filas y columnas, respectivamente, del mapa.
-A: 0
 O: $\max(n-1-i, m-1-j)$
 O: $(n-1-i) + (m-1-j)$
 O: Ninguna de las anteriores
+A: 0
 
 Q: Si el coste espacial de un algoritmo viene dado por la recurrencia $T(n) = n + T(n/2)$ siendo $T(0) = 1$, donde $n$ es el tamaño del problema, ¿a qué clase de complejidad pertenece?
-A: 0
 O: $O(n)$
 O: $O(n \log n)$
 O: $O(n^2)$
+A: 0
 
 Q: Indica cuál de las siguientes afirmaciones es cierta:
-A: 0
 O: Si un esquema de ramificación y poda encuentra la solución óptima a un problema, un esquema de vuelta atrás también la encuentra siempre.
 O: Si un esquema de ramificación y poda encuentra la solución óptima a un problema, un esquema de vuelta atrás podría no encontrarla.
 O: Si un esquema de ramificación y poda encuentra la solución óptima a un problema, un esquema de vuelta atrás siempre es más ineficiente.
+A: 0
 
 Q: En un algoritmo de ramificación y poda, si la lista de nodos vivos no está ordenada de forma apropiada...
-A: 0
 O: ...podría ocurrir que se descarten nodos factibles
 O: ...podría ocurrir que se pode el nodo que conduce a la solución óptima
 O: ...podría ocurrir que se exploren nodos de forma innecesaria
+A: 0
 
 Q: Para resolver el problema del árbol de recubrimiento mínimo en un grafo con pesos no negativos, ¿qué algoritmo es más eficiente en términos de complejidad temporal si el grafo es denso? (tiene muchos arcos con respecto a los vértices)
-A: 0
 O: Algoritmo de Kruskal
 O: Algoritmo de Prim
 O: Da igual
+A: 0
 
 Q: ¿Qué se necesita para realizar la poda basada en la mejor solución hasta el momento?
-A: 0
 O: Un almacén donde se guarda el mejor valor con el que se llega a cada nodo del árbol de búsqueda
 O: Una manera de calcular una cota optimista para cada nodo, además de la propia mejor solución hasta el momento
 O: Una manera de calcular una cota optimista para cada nodo y una manera de calcular una cota pesimista del mismo nodo, además de la propia mejor solución hasta el momento
+A: 0
 
 Q: Estamos ante un nodo del árbol de búsqueda de ramificación y poda y hemos decidido no explorarlo. ¿Qué podría haber ocurrido?
-A: 0
 O: Que sus cotas, optimista y pesimista, han coincidido en el mismo valor
 O: Que su cota pesimista no mejora la mejor solución encontrada hasta el momento
 O: Podría haber ocurrido cualquiera de las otras dos alternativas
+A: 0
 
 Q: En la resolución mediante ramificación y poda del problema del camino de coste mínimo, ordenamos ascendentemente las casillas del mapa por coste. Dado un nodo parcial (o nodo incompleto), sumamos al coste del camino que llevamos hasta el momento, la suma de las $k$ casillas con menor coste, siendo $k = \max(n-1-i, m-1-j)$. $(i,j)$ es la posición actual y $(n,m)$ el número de filas y columnas del mapa. El valor obtenido es:
-A: 0
 O: Una cota optimista
 O: Una cota pesimista
 O: Ninguna de las anteriores
-
-Q: Una de estas tres situaciones no es posible. ¿Cuál es?
 A: 0
-O: $f(n) \in O(n)$ y $f(n) \in \Omega(1)$
-O: $f(n) \in \Omega(n^2)$ y $f(n) \in O(n)$
-O: $f(n) \in O(n)$ y $f(n) \in O(n^2)$
