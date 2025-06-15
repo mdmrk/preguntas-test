@@ -1,52 +1,52 @@
 Q: Indica cuál de las siguientes afirmaciones es falsa acerca del uso de categorías en jUnit
+A: 2
 O: Se anota como categoría un método anotado como @test
 O: Se anota como categoría varios drivers de una clase
 O: Se anota como categoría una interfaz
 O: Se anota como categoría una clase que contiene drivers
-A: 2
 
 Q: Dado el siguiente driver para probar metodoSUT():
 ```java
 @Test (expected = MiExcepcion.class)
 Public void testC1(){
-Int resultadoEsperado = 0;
-Int resultadoReal = metodoSut();
-AssertEquals(resultadoEsperado, resultadoReal);
+	Int resultadoEsperado = 0;
+	Int resultadoReal = metodoSut();
+	AssertEquals(resultadoEsperado, resultadoReal);
 }
 ```
+A: 2
 O: Error, si el metodoSUT() provoca la excepción MiExecpcion.class
 O: Passed, si el metodoSUT() provoca la excepción MiExecpcion.class
 O: Passed, si el metodoSUT() devuelve 0
 O: Failed, si el metodoSUT() provoca la excepción MiExecpcion.class
-A: 2
 
 Q: Indica cuál de las siguientes afirmaciones es cierta con respecto a estos 3 tipos de objeto que podemos crear una librería EasyMock: NiceMock, mock y StrictMock
+A: 2
 O: Con los tipos Mock y NiceMock se lanza un AssertionError si no hemos programado las expect.. de algún método
 O: Con los tres tipos se verifica si todas las llamadas esperadas a métodos realizadas por el doble realizan con los argumentos especificados
 O: Con los tres tipos siempre hay que invocar al método replay() de la librería.
 O: Con los tipos Mock y StrictMock se verifica el orden en el que se realizan las invocaciones al doble
-A: 2
 
 Q: Con respecto al método de caja negra de particiones equivalente, indica cuál de las siguientes afirmaciones es cierta:
+A: 1
 O: Todas las entradas y salidas se corresponden con parámetros de la SUT
 O: Dos elementos de la misma partición de entrada no se pueden corresponder con dos elementos de particiones de salida diferentes
 O: Las particiones pueden compartir elementos para mantener algunos datos de prueba redundantes
 O: Se deben probar todas las posibles combinaciones de las particiones
-A: 1
 
 Q: Cualquier librería que sea requerida en el proceso de construcción de un proyecto Maven
+A: 2
 O: si no se encuentra en un repositorio remoto, se busca en el repositorio local
 O: si se encuentra en un repositorio remoto, se descarga en el directorio target
 O: todas las afirmaciones anteriores son falsas
 O: si no se encuentra en un repositorio remoto, se busca en el directorio .m2
-A: 2
 
 Q: Utilizando un método de caja negra de particiones equivalentes si tenemos una entrada asociada a un tipo enumerado con 3 valores, indica cuál de las siguientes afirmaciones es falsa
+A: 3
 O: Podemos tener dos particiones válidas de dicha entrada
 O: Podemos tener una sola partición válida de dicha entrada
 O: Podemos tener tres particiones válidas de dicha entrada
 O: Podemos tener tres particiones no válidas de dicha entrada
-A: 3
 
 Q: Si al aplicar el método de caja negra de particiones equivalentes obtendremos las siguientes particiones de entrada, válidas y no válidas, teniendo en cuenta la siguiente codificación para identificar las particiones "E" denota entrada,"V" denota válida y "nV" denota no válida.
 ```
@@ -54,184 +54,325 @@ Entrada 1 : "E1V1, E1V2, E1nV1"
 Entrada 2 : "E2V1, E2nV1, E2nV2"
 ```
 Indica cuál es la cardinalidad del conjunto de casos de prueba eficiente y efectivo al aplicar dicho método:
+A: 1
 O: 4
 O: 5
 O: No se puede obtener si no se conocen las particiones de salida válidas y no válidas.
 O: 6
-A: 1
 
 Q: En un método de diseño de pruebas basado en el flujo de control del código, un camino imposible detectado
+A: 0
 O: No se asocia a ningún caso de prueba
 O: Se asocia a un caso de prueba con un resultado esperado desconocido
 O: Se asocia a un caso de prueba con valores de entrada desconocidos
 O: Todas las afirmaciones del resto de opciones son falsas
-A: 0
 
 Q: Cuando refactorizamos la SUT para poder inyectar el doble:
+A: 2
 O: Añadimos un método setter estamos obligando a cualquier código cliente de la SUT a conocer dicha dependencia antes de invocarla
 O: Si añadimos un parámetro a la SUT estamos obligados a declarar la dependencia como un atributo de la clase que contiene la SUT
 O: Si añadimos una factoría local, alteramos el comportamiento de la clase que contiene la SUT
 O: Si añadimos una clase factoría no se altera el código de producción
-A: 2
 
 Q: Indica las líneas en las que identificamos las dependencias externas de la SUT calculaConsumo():
 ```java
 ## paquete ppsss.ejercicio2
 public class GestorLLamadas {
-private static final double TARIFA_NOCTURNA=10.5;
-private static final double TARIFA_DIURNA=20.8;
-public Calendario getCalendario(){
-Calendario c = new Calendario();
-return c;
-}
-public double calculaConsumo( int minutos){
-Calendario c = getCalendario();
-int hora = c.getHoraActual();
-if(hora < 8 || hora > 20){
-return minutos * TARIFA_NOCTURNA;
-}else{
-return minutos * TARIFA_DIURNA;
-}
-}
+	private static final double TARIFA_NOCTURNA=10.5;
+	private static final double TARIFA_DIURNA=20.8;
+	
+	public Calendario getCalendario(){
+		Calendario c = new Calendario();
+		return c;
+	}
+	
+	public double calculaConsumo( int minutos){
+		Calendario c = getCalendario();
+		int hora = c.getHoraActual();
+		if(hora < 8 || hora > 20){
+			return minutos * TARIFA_NOCTURNA;
+		}else{
+			return minutos * TARIFA_DIURNA;
+		}
+	}
 }
 ```
+A: 3
 O: En las líneas 7, 12, y 13
 O: Solo en la línea 13
 O: En las líneas 7 y 12
 O: En las líneas 12 y 13
-A: 3
 
 Q: El comando mvn de Maven
+A: 2
 O: Sirve para ejecutar fases, pero no goals
 O: Sirve para ejecutar goals pero no fases
 O: Se ejecuta desde el directorio donde se encuentra el fichero de configuración del proyecto Maven
 O: Se ejecuta desde el directorio src para compilar los ficheros fuentes y desde el directorio test para compilar los ficheros con las pruebas
-A: 2
 
 Q: Dado el siguiente diagrama de Venn que hemos trabajado en clase:
 ![Diagrama](/data/images/ppss-p1-1.png){width=200 height=200}
 Indica cuál de las siguientes afirmaciones es cierta:
+A: 1
 O: Un tester debe intentar que el subconjunto 7 sea lo más grande posible
 O: Con métodos de caja negra y de caja blanca, se pueden alcanzar comportamientos de los subconjuntos 1 y 2
 O: Con un método de caja negra se pueden alcanzar comportamientos del subconjunto 3
 O: Con un método de caja blanca se pueden alcanzar comportamientos del subconjunto 4
-A: 1
 
 Q: Si en el pom.xml de nuestro proyecto añadimos la siguiente propiedad:
 ```xml
 <properties>
-<miPropiedad>misTests</miPropiedad>
+	<miPropiedad>misTests</miPropiedad>
 </properties>
 ```
 y la siguiente configuración del plugin maven-surefire-plugin:
 ```xml
 <configuration>
-<groups>${miPropiedad}</groups>
+	<groups>${miPropiedad}</groups>
 </configuration>
 ```
 y tiene la siguiente clase para los tests con 3 drivers:
 ```java
 class MiClaseTest {
-@Tag("misTests")
-@Test void test1() {
-## aquí vendría el código del test
-}
-@Tag("otroTest")
-@Test void test2() {
-## aquí vendría el código del test
-}
-@Test void test3() {
-## aquí vendría el código del test
-}
+	@Tag("misTests")
+	@Test void test1() {
+		## aquí vendría el código del test
+	}
+	
+	@Tag("otroTest")
+	@Test void test2() {
+		## aquí vendría el código del test
+	}
+	
+	@Test void test3() {
+		## aquí vendría el código del test
+	}
 }
 ```
 Si desde la línea de comandos ejecutamos la orden:
 `mvn test -Dgroups=""`
+A: 0
 O: Se ejecutan los 3 drivers
 O: No se ejecuta ningún driver porque en la orden no se indica ninguna etiqueta
 O: Se ejecuta solo test3()
 O: Se ejecuta solo test1()
-A: 0
 
 Q: Con cuál de los siguientes comandos de Maven no se ejecutarían las pruebas unitarias:
+A: 0
 O: Mvn clean compile surefire:test
 O: Mvn test
 O: Mvn clean test-compile surefire:test
 O: Mvn test-compile surefire:test
-A: 0
 
 Q: Indica cuál de las siguientes afirmaciones es falsa:
+A: 3
 O: Durante el proceso de desarrollo de un producto, cuanto antes se detecte un defecto menos costoso será repararlo
 O: Aunque un producto funcione de acuerdo con los requerimientos especificados puede que no satisfaga las expectativas del cliente
 O: Aunque probemos un código utilizando un conjunto de pruebas eficiente y efectivo y todos los test pasen, no podemos garantizar que el código no presenta ningún defecto
 O: Las pruebas pueden demostrar la ausencia de defectos
-A: 3
+
+Q: Indica cuál de las siguientes afirmaciones es falsa acerca del uso de categorías en jUnit
+A: 1
+O: Se anota como categoría varios drivers de una clase
+O: Se anota como categoría una interfaz
+O: Se anota como categoría un método anotado como @test
+O: Se anota como categoría una clase que contiene drivers
 
 Q: El método de diseño de transición de estados
+A: 2
 O: Requiere que hayamos implementado todas las unidades para poder aplicarlo
 O: Al igual que el método del camino básico se aplica en pruebas dinámicas
 O: Es un método funcional y por lo tanto lo podemos aplicar en cualquier nivel de pruebas
 O: Representa las transiciones a partir de entradas y acciones
-A: 2
 
 Q: Indica cuál de las siguientes afirmaciones es falsa con respecto al uso de un objeto de tipo IMocksControl:
+A: 2
 O: no permite el uso de partial mock
 O: permite chequear el orden de invocaciones entre varios dobles
 O: no permite el uso de verify()
 O: permite chequear el orden de las invocaciones de un doble
-A: 2
 
 Q: Al ejecutar una clase de test que contiene n drivers:
+A: 2
 O: el método anotado con @BeforeEach se ejecuta n-1 veces
 O: el método anotado con @AfterAll se ejecuta n veces
 O: el método anotado con @BeforeAll se ejecuta una vez
 O: el método anotado con @AfterEach se ejecuta n-1 veces
-A: 2
+
+Q: De los siguientes comandos de maven, ¿cuáles no ejecutarán los tests unitarios?
+
+Comando 1: mvn clean surefire:test
+Comando 2: mvn clean test
+Comando 3: mvn test
+Comando 4: mvn clean compile surefire:test
+Comando 5: mvn clean test surefire:test
+A: 3
+O: los comandos 2 y 3
+O: los comandos 1, 2, 4 y 5
+O: los comandos 1, 4 y 5
+O: los comandos 1 y 4
 
 Q: Con el método del camino básico de McCabe:
+A: 1
 O: debemos elegir el conjunto mínimo de caminos para conseguir que todas las sentencias se ejecuten al menos una vez en cada caso de prueba
 O: todas las afirmaciones del resto de opciones son falsas
 O: debemos elegir el conjunto mínimo de caminos para conseguir ejecutar todas las condiciones al menos una vez en cada caso de prueba
 O: debemos elegir todos los caminos del grafo
-A: 1
 
 Q: Para realizar pruebas de una SUT que contiene dependencias externas,
+A: 2
 O: usaremos una verificación basada en el estado para pruebas unitarias, y una verificación basada en el comportamiento para pruebas de integración
 O: todas las afirmaciones del resto de opciones son falsas
 O: el primer paso es identificar los seams que contiene la SUT
 O: no está permitido modificar la SUT de ninguna forma para realizar pruebas unitarias
-A: 2
+
+Q: Para realizar pruebas unitarias utilizando verificación basada en el comportamiento de la SUT calculaPrecio(), indica los tipos y números de mocks necesarios:
+```java
+public class Ticket {
+	private float precio_final;
+	//getters y setters
+}
+```
+```java
+public class AlquilaCoches {
+	protected Calendario calendario = new Calendario();
+
+	public Ticket calculaPrecio(TipoCoche tipo, LocalDate inicio, int ndias) throws MensajeException {
+
+	Ticket ticket = new Ticket();
+	float precioDia, precioTotal = 0.0f;
+	float porcentaje = 0.25f;
+
+	String observaciones = "";
+	IService servicio = new Servicio();
+	precioDia = servicio.consultaPrecio(tipo);
+	for (int i=0; i<ndias; i++) {
+		LocalDate otroDia = inicio.plusDays((long) i);
+		try {
+			if (calendario.es_festivo(otroDia)) {
+				precioTotal += (1 + porcentaje) * precioDia;
+			} else {
+				precioTotal += (1 - porcentaje) * precioDia;
+			}
+		} catch (CalendarioException ex) {
+			observaciones += "Error en dia: "+otroDia+";";
+		}
+	}
+
+	if (observaciones.length() > 0) {
+		throw new MensajeException(observaciones);
+	}
+
+	ticket.setPrecio_final(precioTotal);
+	return ticket;
+	}
+}
+```
+A: 3
+O: un PartialMock y dos StrictMock
+O: un StrictControl, un PartialMock y un Mock
+O: un StrictControl, un PartialMock y dos Mock
+O: un StrictMock, un PartialMock y un Mock
 
 Q: ![Diagrama](/data/images/ppss-p1-2.png){width=200 height=200}
+A: 3
 O: En las líneas 14 y 18
 O: Dejo la pregunta en blanco
 O: En las líneas 10 y 14
 O: En las líneas 11 y 18
+
+Q: De los siguientes comandos de maven, ¿cuáles generan el .jar del proyecto?
+
+Comando 1: mvn clean compiler:testCompile package
+Comando 2: mvn clean compile package
+Comando 3: mvn clean test-compile package
+Comando 4: mvn clean verify
+Comando 5: mvn clean compiler:compile verify
 A: 3
+O: todos los comandos
+O: los comandos 1, 2 y 3
+O: los comandos 4 y 5
+O: los comandos 2, 3, 4 y 5
 
 Q: Dado el siguiente método, que devuelve el sumatorio desde 1 hasta un determinado valor n:
 ```java
 int sumatorio(int n) {
-int suma = 0;
-for (int i=1; i<= n; i++){
-suma +=i;
-}
-return suma;
+	int suma = 0;
+	for (int i=1; i<= n; i++){
+		suma +=i;
+	}
+	return suma;
 }
 ```
 Se puede aplicar el método del camino básico
+A: 0
 O: con uno o 2 caminos
 O: al contener un bucle cuyo número de iteraciones depende del valor de entrada n, no podemos saber el número de caminos
 O: con n caminos
 O: con más de 2 caminos
+
+Q: De los siguientes comandos de maven, ¿cuáles no ejecutarán los tests unitarios?
+
+Comando 1: mvn clean surefire:test
+Comando 2: mvn clean test
+Comando 3: mvn test
+Comando 4: mvn clean compile surefire:test
+Comando 5: mvn clean test surefire:test
 A: 0
+O: los comandos 2, 3 y 5
+O: los comandos 1, 2, 4 y 5
+O: los comandos 1, 4 y 5
+O: los comandos 4 y 5
+
+Q: Para realizar pruebas unitarias utilizando verificación basada en el comportamiento de la SUT compruebaPremio(), indica los tipos y número de mocks necesarios
+```java
+public class Premio {
+	private static final float PROBABILIDAD_PREMIO = 0.1f;
+	public Random generador = new Random(System.currentTimeMillis());
+	public ClienteWebService cliente = new ClienteWebService();
+
+	public String compruebaPremio() {
+		if(generaNumero() < PROBABILIDAD_PREMIO) {
+			try {
+				String premio = cliente.obtenerPremio();
+				return "Premiado con " + premio;
+			} catch(ClienteWebServiceException e) {
+				return "No se ha podido obtener el premio";
+			}
+		} else {
+			return "Sin premio";
+		}
+	}
+
+	## Genera numero aleatorio entre 0 y 1
+	public float generaNumero() {
+		return generador.nextFloat();
+	}
+}
+```
+A: 1
+O: un PartialMock y un Mock
+O: un StrictControl, un PartialMock y un Mock
+O: un PartialMock y un StrictMock
+O: un StrictControl y dos StrictMock
 
 Q: Indica cuál de las siguientes afirmaciones es cierta:
+A: 2
 O: si es necesario, se puede alterar temporalmente el código de la SUT para realizar pruebas
 O: si es necesario, refactorizamos la SUT para eliminar sus dependencias externas
 O: un doble reemplaza al código real de una dependencia externa durante las pruebas
 O: un SEAM es un punto de inyección doble
-A: 2
+
+Q: El artefacto maven con las siguientes coordenadas:
+
+ppss.examen:ejemplo:war:1.0-SNAPSHOT
+
+representa el fichero:
+A: 0
+O: $HOME/.m2/repository/ppss/examen/ejemplo/1.0-SNAPSHOT/ejemplo-1.0-SNAPSHOT.war
+O: $HOME/.m2/repository/ppss/examen/ejemplo-1.0-SNAPSHOT.war
+O: $HOME/.m2/repository/ppss/examen/ejemplo/ejemplo-1.0-SNAPSHOT.war
+O: $HOME/.m2/repository/ppss/examen/ejemplo/war/1.0-SNAPSHOT/ejemplo-1.0-SNAPSHOT.war
 
 Q: Si al aplicar el método de caja negra de particiones equivalentes, obtenemos las siguientes particiones de entrada, válidas y no válidas, teniendo en cuenta la siguiente codificación para identificar las particiones "E" denota entrada,"V" denota válida y "nV" denota no válida.
 ```
@@ -239,58 +380,58 @@ Entrada 1 : "E1V1, E1nV1"
 Entrada 2 : "E2V1, E2nV1, E2nV2"
 ```
 Indica cuál es la cardinalidad del conjunto de casos de prueba eficiente y efectivo al aplicar dicho método:
+A: 0
 O: 4
 O: 5
 O: No se puede obtener si no se conocen las particiones de salida válidas y no válidas.
 O: 3
-A: 0
 
 Q: Indica cuál es la complejidad ciclomática del siguiente código:
 ```java
 if (a > b && a < c || c < b)
-a = b;
+	a = b;
 else if (a < b || c > a)
-c = a;
+	c = a;
 else
-b = c;
+	b = c;
 ```
+A: 0
 O: 6
 O: 4
 O: 3
 O: 5
-A: 0
 
 Q: Indica cuál de las siguientes afirmaciones es cierta:
+A: 3
 O: los defectos del software que no han sido detectados con las pruebas unitarias, serán detectados con las pruebas de integración
 O: con pruebas de integración no se pueden detectar errores en las unidades a integrar
 O: las pruebas unitarias son dinámicas y las pruebas de integración son estáticas
 O: todas las afirmaciones del resto de opciones son falsas
-A: 3
 
 Q: Indica cuál de las siguientes afirmaciones es cierta:
+A: 1
 O: un proyecto maven con un empaquetado "pom" debe incluir la etiqueta <parent> en su pom.xml
 O: un proyecto maven con un empaquetado "pom" no tiene asociada por defecto ninguna goal a la fase test
 O: el mecanismo reactor de maven permite que un proyectos hijo hereden elementos de la configuración del proyecto padre
 O: todas las afirmaciones del resto de opciones son falsas
-A: 1
 
 Q: Indica cuál de las siguientes afirmaciones es cierta:
+A: 3
 O: la etiqueta <modules> en un aggregator pom permite que los módulos indicados hereden su configuración (propiedades, dependencias, y otros elementos)
 O: todas las afirmaciones del resto de opciones son falsas
 O: el mecanismo reactor de maven permite que los proyectos hijo hereden elementos de la configuración del proyecto padre
 O: para establecer una relación de agregación entre proyectos maven, no es necesario usar la etiqueta <parent>
-A: 3
 
 Q: En un plan de un proyecto software:
+A: 0
 O: Las pruebas unitarias, integración, y sistema, no se realizan siempre en ese orden, dependerá del modelo de proceso aplicado y del horizonte de planificación
 O: Las pruebas unitarias, integración, y sistema, no se realizan siempre en ese orden, dependerá de si usamos una planificación adaptativa o predictiva
 O: Las pruebas unitarias, integración, y sistema, se realizan siempre en ese orden
 O: Todas las afirmaciones del resto de opciones son falsas
-A: 0
 
 Q: Con respecto a las pruebas de aceptación:
+A: 3
 O: el diseño de las pruebas lo realiza el propio cliente
 O: tienen como objetivo encontrar defectos porque son pruebas dinámicas
 O: el código a probar es el mismo que en las pruebas del sistema
 O: todas las afirmaciones del resto de opciones son falsas
-A: 3

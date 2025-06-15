@@ -3288,6 +3288,13 @@ O: La amplitud de cada armónico depende de los datos de la señal.
 O: El número de armónicos de la señal es el doble del ancho de banda del medio físico.
 A: 2
 
+Q: La fragmentación en un protocolo del nivel n se produce cuando,
+O: La SDU del nivel n+1 no cabe dentro de la PDU del nivel n.
+O: La SDU del nivel n no cabe dentro de la PDU del nivel n.
+O: La SDU del nivel n+1 no cabe dentro de la PDU del nivel n-1.
+O: La SDU del nivel n no cabe dentro de la PDU del nivel n+1.
+A: 1
+
 Q: Considérese que un protocolo de nivel de enlace emplea parada y espera con numeración de datos pero no de confirmaciones. Si se pierde la primera trama de datos, ¿cuál de las siguientes afirmaciones es correcta?
 O: Únicamente llegará al nivel de red del receptor la segunda trama de datos.
 O: Al nivel de red del receptor le pueden llegar tramas de datos duplicadas.
@@ -4644,6 +4651,13 @@ O: La comunicación entre entidades no adyacentes, en el mismo dispositivo, es g
 O: Los elementos de un nivel que dialogan con otros elementos del mismo nivel son las denominadas entidades.
 O: Una arquitectura de red se puede definir como el conjunto de capas y protocolos que constituyen un sistema de comunicaciones.
 A: 1
+
+Q: La técnica de modulación QAM se caracteriza por:
+O: Emplear valores diferentes de amplitud de la señal portadora para identificar grupos de bits.
+O: Emplear valores diferentes de fase de la señal portadora para identificar grupos de bits.
+O: Emplear valores diferentes de fase y amplitud de la señal portadora para identificar grupos de bits.
+O: Emplear más ancho de banda en la señal modulada que la modulación FSK.
+A: 2
 
 Q: En relación a los dispositivos para la interconexión de redes se puede afirmar que:
 O: Un encaminador puede conectar redes con distinta arquitectura de red.
@@ -7413,6 +7427,13 @@ O: CSMA/CD.
 O: WEP.
 A: 0
 
+Q: Si en una red IP se detecta una situación de congestionamiento, ¿ qué solución se puede aplicar para que la red no quede bloqueada ?
+O: Activar el bit Don't Fragment en todos los paquetes IP que cursa la red.
+O: Reducir el flujo de entrada de paquetes a la red.
+O: Utilizar un control de errores basado en CRC.
+O: Limitar el tamaño de los paquetes IP, reduciendo el MTU.
+A: 2
+
 Q: La fragmentación de una SDU procedente del nivel n+1 en una arquitectura de red OSI se realiza,
 O: Añadiendo a cada fragmento de la SDU una PCI del nivel n+1.
 O: Añadiendo a cada fragmento de la SDU una ICI del nivel n.
@@ -8237,6 +8258,13 @@ O: Autenticar a las estaciones que se asocian a un AP.
 O: Evitar colisiones entre estaciones asociadas a un AP.
 O: Confirmar la transmisión correcta de paquetes en una red Wi-Fi.
 A: 2
+
+Q: Indica la normativa de redes LAN inalámbricas que proporciona más número de canales (frecuencias) diferentes para establecer la comunicación:
+O: IEEE 802.11b.
+O: IEEE 802.11g.
+O: IEEE 802.11n.
+O: Todas las normativas de redes LAN inalámbricas emplean el mismo número de canales.
+A: 1
 
 Q: ¿ Con qué tipo de modulación se conseguirá una mayor velocidad de transmisión en un medio físico que tiene un determinado ancho de banda ?
 O: Modulación ASK.
