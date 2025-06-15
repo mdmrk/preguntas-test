@@ -2119,8 +2119,7 @@ O: El valor máximo que puede tomar una instancia cualquiera de ese problema.
 A: 1
 
 Q: Dada la siguiente función:
-```
-cpp
+```cpp
 int exa(string &cad, int pri, int ult) {
 	if(pri >= ult) {
 		return 1;
@@ -3193,6 +3192,7 @@ A: 1
 
 Q: El recorrido en profundidad de un grafo G no dirigido ha producido el arbol que se muestra en la figura, en el que cada nodo esta numerado siguiendo el orden de visita del recorrido en profundidad:
 ```
+
      1
    / | \
   2  5  7
