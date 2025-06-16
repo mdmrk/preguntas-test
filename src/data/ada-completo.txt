@@ -1699,10 +1699,10 @@ O: Todo problema que tiene solución mediante ramificación y poda también la t
 A: 2
 
 Q: Suponiendo la implementación mas eficiente para cada TAD, establecer el coste en el borrado del elemento menor en una lista ordenada, una lista desordenada un árbol binario ordenado y un montículo de mínimos respectivamente.
-O: O(1),O(n),O(n),O(log n)
-O: O(1),O(n),O(log n),O(1)
-O: O(log n),O(n),O(n),O(1)
-O: O(n),O(1),O(log n),O(log n)
+O: $O(1)$, $O(n)$, $O(n)$, $O(\log n)$
+O: $O(1)$, $O(n)$, $O(\log n)$, $O(1)$
+O: $O(\log n)$, $O(n)$, $O(n)$, $O(1)$
+O: $O(n)$, $O(1)$, $O(\log n)$, $O(\log n)$
 A: 0
 
 Q: La versión de Quicksort que utiliza como pivote el elemento del vector que ocupa la posición central ...
