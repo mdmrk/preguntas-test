@@ -1,8 +1,8 @@
 import type { Question } from "@/types/quiz"
-import { shuffle } from "@/utils"
+import { shuffle as sh } from "@/utils"
 
 export class QuizLoader {
-  parseQuizText(text: string): Question[] {
+  parseQuizText(text: string, shuffle: boolean = true): Question[] {
     const chunks = text.split("\n\n")
     const questions: Question[] = []
     let questionId = 1
@@ -56,6 +56,6 @@ export class QuizLoader {
       }
     }
 
-    return shuffle(questions)
+    return shuffle ? sh(questions) : questions
   }
 }

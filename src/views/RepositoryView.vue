@@ -61,7 +61,7 @@ const loader = new QuizLoader()
 
 const questions = computed(() => {
   if (!quizContent.value) return []
-  return loader.parseQuizText(quizContent.value)
+  return loader.parseQuizText(quizContent.value, false)
 })
 
 const questionCountText = computed(() => {
