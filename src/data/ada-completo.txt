@@ -4285,7 +4285,9 @@ O: Para maximizar el numero de ficheros en DVD utilizaría un esquema backtracki
 O: Para maximizar el numero de ficheros en DVD utilizaría un esquema de ramificación y poda
 A: 0
 
-Q: La siguiente relación de recurrencia expresa la complejidad de un algoritmo recursivo, donde g(n) es una función polinómica:$T(n) = \begin{cases} 1 & \text{si } n \leq 1 \\ 2T(n/2) + g(n) & \text{en otro caso} \end{cases}$Di cuál de las siguientes afirmaciones es falsa:
+Q: La siguiente relación de recurrencia expresa la complejidad de un algoritmo recursivo, donde g(n) es una función polinómica:
+$T(n) = \begin{cases} 1 & \text{si } n \leq 1 \\ 2T(n/2) + g(n) & \text{en otro caso} \end{cases}$
+Di cuál de las siguientes afirmaciones es falsa:
 O: Si $g(n) \in O(1)$ la relación de recurrencia representa la complejidad temporal del algoritmo de búsqueda dicotómica.
 O: Si $g(n) \in O(n^2)$ la relación de recurrencia representa la complejidad temporal del algoritmo de búsqueda por inserción.
 O: Si $g(n) \in O(n)$ la relación de recurrencia representa la complejidad temporal del algoritmo de ordenación mergesort.
