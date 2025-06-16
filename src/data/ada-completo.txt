@@ -2103,20 +2103,6 @@ O: Sí, siempre que el dominio de las decisiones sea discreto o discretizable y 
 O: Es condición necesaria que el dominio de las decisiones sea discreto o discretizable y que el número de decisiones a tomar esté acotado.
 A: 2
 
-Q: 
-```cpp
-unsigned f(unsigned y,
-           unsigned x) { // suponemos y >= x
-  if (x == 0 || y == x)
-    return 1;
-  return f(y - 1, x - 1) + f(y - 1, x);
-}
-```
-O: $O(y)$
-O: $O(x-y)$
-O: $O(x)$
-A: 1
-
 Q: ¿Qué se entiende por tamaño del problema?
 O: El número de parámetros que componen el problema.
 O: La cantidad de espacio en memoria que se necesita para codificar una instancia de ese problema.
@@ -6203,20 +6189,6 @@ O: Aquel con menor complejidad asintótica en el mejor caso
 O: Aquel con menor complejidad asintótica en el peor caso
 O: Si conocemos la talla máxima del problema que pretendemos resolver, es posible que un algoritmo con mayor complejidad asintótica se comporte mejor para nuestro problema
 
-Q: Dado el siguiente programa recursivo:
-```cpp
-int f(int n) { // Se asume que n >= 0
-  if (n == 0)
-    return 1;
-  return f(n - 1) + f(n - 2);
-}
-```
-si quisiéramos mejorarlo haciendo uso de la técnica de programación dinámica, ¿cuáles serían las complejidades temporal y espacial más ajustadas del algoritmo resultante?
-A: 0
-O: Respectivamente, $O(n)$ y $O(1)$
-O: Ambas complejidades serían $O(1)$
-O: Ambas complejidades serían $O(n)$
-
 Q: El algoritmo de ordenación Mergesort divide el problema en dos subproblemas. ¿Cuál es la complejidad temporal asintótica de realizar esa división?
 A: 0
 O: $O(\log n)$
@@ -6300,3 +6272,290 @@ A: 0
 O: Una cota optimista
 O: Una cota pesimista
 O: Ninguna de las anteriores
+
+Q: Sobre el esquema de programación dinámica, dos afirmaciones son verdaderas y una falsa, o viceversa. Señala la que difiere de las otras dos.
+O: Es recomendable, aunque no imprescindible, que el problema cumpla con la condición de estructura óptima.
+O: Solo se refiere a la conversión de un algoritmo recursivo en iterativo para mejorar su eficiencia.
+O: Se apoya en el esquema de divide y vencerás, siendo una mejora de éste en términos de eficiencia.
+A: 2
+
+Q: Dada la versión restringida del problema del laberinto resuelto mediante programación dinámica iterativa comenzando en la entrada al laberinto. ¿Qué representa el contenido de cada casilla $(i,j)$ del almacén?
+O: La longitud del camino más corto que llega a esa casilla desde el origen.
+O: La longitud del camino más corto desde esa casilla hasta el destino pero solo si la casilla forma parte del camino óptimo.
+O: La longitud del camino más corto desde esa casilla hasta el destino.
+A: 0
+
+Q: Respecto a la estrategia de ramificación y poda...
+O: La principal diferencia con la de vuelta atrás es el uso de estrategias Least Cost.
+O: Las otras dos afirmaciones son ciertas.
+O: Siempre produce algoritmos más eficientes que la de vuelta atrás.
+A: 0
+
+Q: Respecto a los algoritmos de vuelta atrás, ¿cuál de las siguientes afirmaciones es correcta?
+O: Siempre hallan la mejor solución, aunque requieren mucho tiempo al explorar todas las posibilidades.
+O: Las otras dos afirmaciones son falsas.
+O: Siempre encuentran una solución, aunque no siempre sea óptima.
+A: 2
+
+Q: En cuanto al problema del cambio, que consiste en formar una suma $M$ con el mínimo número de monedas posibles, extraídas (con repetición) de un conjunto $C$:
+O: Es posible diseñar una solución voraz que siempre encuentra el valor óptimo.
+O: Las otras dos opciones son correctas.
+O: Es posible diseñar una solución voraz basada en el esquema divide y vencerás que siempre encuentra el valor óptimo.
+A: 0
+
+Q: Decid cuál de estas tres afirmaciones es cierta
+O: El valor óptimo de la mochila continua es una cota superior del valor óptimo de la mochila discreta correspondiente
+O: las otras dos afirmaciones son falsas
+O: El valor óptimo de la mochila discreta es una cota superior del valor óptimo de la mochila continua correspondiente
+A: 0
+
+Q: Di cuál de estos resultados de coste temporal asintótico es falsa:
+O: La ordenación de un vector usando el algoritmo Mergesort requiere en el peor caso un tiempo en $\Omega(n^2)$.
+O: La búsqueda binaria en un vector ordenado requiere en el peor caso un tiempo en $O(\log n)$.
+O: La ordenación de un vector usando el algoritmo Quicksort requiere en el peor caso un tiempo en $\Omega(n^2)$.
+A: 0
+
+Q: Cuál es el coste temporal asintótico de la siguiente función?
+```cpp
+int f(int n) {
+  int count = 0;
+  for (int i = n; i > 0; i -= 2)
+    for (int j = i; j > 0; j /= 2)
+      count += 1;
+  return count;
+}
+```
+O: $O(n \log n)$
+O: $O(\log^2 n)$
+O: $O(n)$
+A: 1
+
+Q: En el algoritmo de Kruskal, ¿qué se selecciona en cada paso?
+O: La arista de menor peso que conecta un vértice visitado con otro sin visitar
+O: La arista de menor peso que no forma ciclos
+O: El vértice con menor grado en el grafo
+A: 1
+
+Q: ¿Cuál es la complejidad temporal de la aproximación voraz a la solución de la versión restringida del problema del laberinto?
+O: Las otras dos opciones son ambas ciertas
+O: $O(\max\{n,m\})$
+O: $O(n+m)$
+A: 1
+
+Q: Estamos resolviendo el problema del laberinto mediante un algoritmo de búsqueda y enumeración. Supongamos que el mejor camino de salida encontrado hasta el momento es de longitud 100. Más adelante, tenemos que decidir acerca de un nodo $n$ del que hemos obtenido una cota optimista que ha resultado ser 80 y una pesimista con valor 90. ¿Cuál de las siguientes afirmaciones es siempre cierta?
+O: Algo está mal pues la cota optimista recién calculada no puede ser inferior a 100
+O: El nodo $n$ podría formar parte de la solución y además, tenemos la certeza de que su cota pesimista es la mejor encontrada hasta el momento
+O: Algo está mal pues la cota pesimista recién calculada no puede ser inferior a 100
+A: 1
+
+Q: La solución voraz del problema de la mochila continua, es decir, con objetos fraccionables, tiene una complejidad temporal asintótica de:
+O: $O(n)$
+O: $O(n \log n)$
+O: $O(\log n)$
+A: 1
+
+Q: Al resolver el problema del "Viajante de comercio" mediante vuelta atrás, ¿cuál de estas cotas optimistas se espera que pode mejor el árbol de búsqueda?
+O: Se multiplica $k$ por la distancia de la arista más corta que nos queda por considerar, donde $k$ es el número de saltos que nos quedan por dar.
+O: Se resuelve el resto del problema usando un algoritmo voraz que añade cada vez al camino el vértice más cercano al último añadido.
+O: Se ordenan las aristas restantes de menor a mayor distancia y se calcula la suma de las $k$ aristas más cortas, donde $k$ es el número de saltos que nos quedan por dar.
+A: 2
+
+Q: ¿Cuál es el propósito principal de un Heap en el algoritmo de ordenación HeapSort?
+O: Lograr una ordenación parcial del vector, es decir, que algunos elementos queden en la posición correcta pero otros no.
+O: Facilitar la inserción eficiente de elementos en el nuevo vector ordenado.
+O: Permitir la extracción repetida del elemento máximo o mínimo de manera eficiente
+A: 0
+
+Q: Dado el siguiente programa recursivo:
+```cpp
+int f(unsigned n) {
+  if (n == 0 || n == 1)
+    return n;
+  return f(n - 1) + f(n - 2);
+}
+```
+si quisiéramos reescribirlo para usar programación dinámica ¿cuál la complejidad espacial más ajustada del algoritmo?
+O: $O(n^2)$
+O: $O(n)$
+O: $O(1)$
+A: 2
+
+Q: Dada la versión general del problema del laberinto $m \times n$, la distancia de Manhattan entre las casillas $(i,j)$ y $(m,n)$ viene dada por la suma del número de movimientos del tipo horizontal $(n - j)$ y los del tipo vertical que quedan hasta llegar al extremo derecho del laberinto $(m - i)$. ¿Para qué puede resultar útil esta distancia? ($d_{manhattan}(i,j) = n - j + m - i$)
+O: Para obtener cotas pesimistas
+O: Ninguna de las otras dos opciones es válida
+O: Para obtener cotas optimistas
+A: 2
+
+Q: Sea $g(n) = \sum_{j=0}^{\log_2 n} n4^j$. Suponiendo $n \to \infty$, di cuál de las siguientes afirmaciones es cierta:
+O: $g(n) \in \Omega(n^2)$
+O: $g(n) \in \Theta(n^2)$
+O: $g(n) \in O(n^2 \log n^2)$
+A: 2
+
+Q: Sobre el problema del "Viajante de comercio" resuelto mediante vuelta atrás, dos afirmaciones son verdaderas y una falsa, o viceversa. Señala la que difiere de las otras dos.
+O: El cálculo incremental del recorrido y el uso de cotas (pesimistas y optimistas) reducen notablemente la complejidad temporal en el peor caso.
+O: Las otras dos afirmaciones son falsas.
+O: Aún con una implementación sin cotas, es un problema con complejidad temporal abordable.
+A: 1
+
+Q: En un problema de minimización mediante ramificación y poda:
+O: La cota pesimista parcial de un nodo tiene que ser siempre menor o igual que la mejor solución en curso.
+O: Ninguna de las otras dos opciones es correcta.
+O: La cota pesimista parcial de un nodo tiene que ser siempre mayor o igual que la cota pesimista del nodo inicial.
+A: 1
+
+Q: Cuál de las siguientes formulaciones expresa mejor el coste temporal asintótico de la siguiente función?
+```cpp
+int f(int n) {
+  int count = 0;
+  for (int i = n; i > 0; i /= 2)
+    for (int j = 0; j < 2 * i; j++)
+      count += 1;
+  return count;
+}
+```
+O: $f(n) = \sum_{i=0,j=0}^{n/2^{2+1}} 1$
+O: Ninguna de las otras dos opciones es correcta
+O: $f(n) = \sum_{i=1}^{\log n} 4n \left(\frac{1}{2}\right)^i$
+A: 1
+
+Q: Asumiendo un modelo de computación en el que los números enteros pueden ser arbitrariamente grandes ¿Cuál es la complejidad temporal asintótica de la siguiente función (en función del tamaño del problema)?
+```cpp
+unsigned factorial(unsigned n) {
+  if (n == 0 || n == 1)
+    return 1;
+  else
+    return n * factorial(n - 1);
+}
+```
+O: $\Theta(n)$
+O: $\Theta(\log n)$
+O: Ninguna de las otras dos opciones es cierta
+A: 0
+
+Q: Estamos resolviendo el problema del laberinto mediante un algoritmo de búsqueda y enumeración. Supongamos que nos encontramos en un nodo interno $n$ situado en un nivel del árbol de estados posibles. ¿Qué podemos decir acerca del valor de $x$?
+O: Es una cota optimista de $n$
+O: Por sí solo, $x$ no es cota, ni optimista ni pesimista
+O: Es una cota pesimista de $n$
+A: 1
+
+Q: Disponemos de dos funciones de coste $f(n)$ y $g(n)$ tal que $f \in O(g)$. ¿Puede existir un valor $x$ para el que $f(x) > g(x)$?
+O: Sí, y además es posible que el valor $n_0$ tal que $\forall_{n \geq n_0} f(n) \leq g(n)$ no exista.
+O: No, no puede existir ese valor $x$.
+O: Sí, pero también existirá un valor $n_0$ tal que $\forall_{n \geq n_0} f(n) \leq g(n)$.
+A: 1
+
+Q: La búsqueda binaria puede considerarse una instancia del esquema:
+O: Programación dinámica.
+O: Algoritmo voraz.
+O: Divide y vencerás.
+A: 2
+
+Q: Dada la siguiente función:
+```cpp
+int exa(string &cad, int pri, int ult) {
+  if (pri >= ult)
+    return 1;
+  else if (cad[pri] == cad[ult])
+    return exa(cad, pri + 1, ult - 1);
+  else
+    return 0;
+}
+```
+¿Cuál es su complejidad temporal asintótica en función de $n = ult - pri + 1$?
+O: $O(n^2)$
+O: $O(n)$
+O: $O(\log n)$
+A: 1
+
+Q: En la resolución del problema de la función compuesta mínima mediante vuelta atrás, ¿qué ocurriría si no se limitara la profundidad del árbol de llamadas recursivas con valor máximo $M$?
+O: Se podría conseguir que el programa siempre encontrara solución poniendo un 1 en el vector solución antes que un 0.
+O: Salvo en casos muy raros, el programa nunca acabaría.
+O: El programa acabaría encontrando la solución óptima, pero a costa de una complejidad temporal prohibitiva.
+A: 2
+
+Q: Si un algoritmo de ramificación y poda utiliza una cola de prioridad con un criterio inadecuado, ¿qué ocurriría muy probablemente?
+O: Seguirá siendo más eficiente que la vuelta atrás gracias al uso de la cola de prioridad.
+O: Las otras dos opciones son correctas.
+O: Aumentará considerablemente el número de instancias que están en el caso peor.
+A: 2
+
+Q: Estamos resolviendo el problema del laberinto (versión general) mediante ramificación y poda empleando una estrategia dirigida de priorización de nodos basada en una cola de prioridad. Recuerda que cada iteración del bucle principal consiste en extraer el nodo de máxima prioridad de la cola, expandirlo, y para cada nodo expandible, añadirlo a la cola si es factible, actualizar la solución en curso con la cota pesimista, y añadirlo a la cola si es prometedor. La mejor complejidad asintótica que se puede conseguir para una iteración del bucle principal es:
+O: $O(\log n)$, siendo $n$ el número de nodos en la cola.
+O: $O(n)$, siendo $n$ el número de nodos en la cola.
+O: $O(1)$.
+A: 0
+
+Q: Respecto a los algoritmos voraces, ¿cuál de las siguientes afirmaciones es correcta?
+O: Siempre hallan la mejor solución, aunque requieren mucho tiempo al explorar todas las posibilidades.
+O: Las otras dos afirmaciones son falsas.
+O: Siempre encuentran una solución, aunque no siempre sea óptima.
+A: 1
+
+Q: Con respecto a la versión general (sin restricciones adicionales) del problema de la mochila sin fraccionamiento, de las siguientes afirmaciones dos son verdaderas y una es falsa, o viceversa. Señala la que difiere de las otras dos.
+O: ... no se conoce ninguna reducción en subproblemas que cumpla el teorema de reducción
+O: ... tiene una solución eficiente utilizando programación dinámica
+O: ... cumple la propiedad de subestructura óptima y por lo tanto se puede plantear una solución de divide y vencerás
+A: 2
+
+Q: Si el coste temporal de un algoritmo es $T(n)$, ¿cuál de las siguientes situaciones es imposible?
+O: $T(n) \in \Omega(n)$ y $T(n) \in \Theta(n^2)$
+O: $T(n) \in \Theta(n)$ y $T(n) \in \Omega(n^2)$
+O: $T(n) \in O(n)$ y $T(n) \in \Theta(n)$
+A: 1
+
+Q: Indica cuál de estos criterios para ordenar la lista de nodos vivos permite resolver más rápido el problema de la función compuesta mínima:
+O: Búsqueda en profundidad.
+O: Ambos criterios son válidos y no afectan al tiempo de ejecución.
+O: Búsqueda en anchura.
+A: 2
+
+Q: Indica cuál de estas posibles cotas pesimistas para el problema del laberinto (versión general) sería la más ajustada:
+O: La longitud del camino actual.
+O: La longitud del camino actual más la de su continuación hasta el final del mapa mediante un algoritmo de programación dinámica que sólo considera movimientos hacia E, SE o S.
+O: La longitud del camino actual más la de su continuación hasta el final del mapa mediante un algoritmo voraz que sólo considera movimientos hacia E, SE o S.
+A: 0
+
+Q: Dada la versión restringida del problema del laberinto $m \times n$, estamos interesados, no solo en obtener la longitud del camino de salida más corto; también nos interesa la longitud del camino más corto entre el origen y cualquier casilla accesible del laberinto ¿Con qué complejidad temporal, en función de $n$ y $m$, podría obtenerse?
+O: Ninguna de las otras dos opciones es correcta.
+O: $\Theta(3^{m+n})$
+O: $\Theta(m \cdot n)$
+A: 2
+
+Q: En un algoritmo de ramificación y poda, conforme se va completando un nodo, ¿qué ocurre con sus cotas?
+O: Su cota optimista debería aproximarse a la mejor solución que puede obtenerse a partir de ese nodo.
+O: Las otras dos afirmaciones son ciertas.
+O: Su cota pesimista debería aproximarse a la mejor solución que puede obtenerse a partir de ese nodo.
+A: 0
+
+Q: En un algoritmo de vuelta atrás, ¿se podrían priorizar las expansiones de los nodos con mejor cota optimista de manera que el algoritmo siga siendo de vuelta atrás?
+O: Sí, pero a costa de aumentar considerablemente su complejidad temporal
+O: Sí, basta con cambiar la estrategia del búsqueda
+O: No, ya no sería de vuelta atrás
+A: 2
+
+Q: Asumiendo un modelo de computación en el que el número de bits utilizados para representar enteros está acotado, ¿cuál es la complejidad temporal asintótica de la siguiente función (en función del tamaño del problema)?
+```cpp
+unsigned factorial(unsigned n) {
+  if (n == 0 || n == 1)
+    return 1;
+  else
+    return n * factorial(n - 1);
+}
+```
+O: $\Theta(n)$
+O: $\Theta(\log n)$
+O: En este caso no tiene sentido hablar de complejidad temporal asintótica
+A: 2
+
+Q: En la resolución del problema de corte de tubos mediante programación dinámica:
+O: La programación dinámica recursiva (memoización), dependiendo de la instancia del problema, puede resolver menos subproblemas que la programación dinámica iterativa.
+O: La programación dinámica recursiva (memoización) y la programación dinámica iterativa siempre resuelven los mismos subproblemas.
+O: La programación dinámica recursiva (memoización) siempre resuelve menos subproblemas que la programación dinámica iterativa.
+A: 1
+
+Q: En la resolución del problema del laberinto (versión general), el uso de una cota pesimista parcial sirve para:
+O: Descartar nodos cuando se llega a una posición del mapa mediante un camino más largo que el mejor camino para llegar a esa posición.
+O: Mejorar la solución en curso antes de llegar a una hoja.
+O: Evitar ciclos.
+A: 0
