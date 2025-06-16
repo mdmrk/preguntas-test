@@ -753,7 +753,8 @@ O: $O(n^3 \log n)$
 O: $O(n^3)$
 A: 2
 
-Q: La siguiente relación de recurrencia expresa la complejidad de un algoritmo recursivo, donde $g(n)$ es una función polinómica: $T(n) = \begin{cases} 1 & \text{si } n \leq 1 \\ 2T(n/2)+g(n) & \text{en otro caso} \end{cases}$ Di cuál de las siguientes afirmaciones es cierta:
+Q: La siguiente relación de recurrencia expresa la complejidad de un algoritmo recursivo, donde $g(n)$ es una función polinómica:
+$T(n) = \begin{cases} 1 & \text{si } n \leq 1 \\ 2T(n/2)+g(n) & \text{en otro caso} \end{cases}$ Di cuál de las siguientes afirmaciones es cierta:
 O: Si $g(n) \in O(n)$ la relación de recurrencia representa la complejidad temporal del algoritmo de ordenación Mergesort.
 O: Si $g(n) \in O(n^2)$ la relación de recurrencia representa la complejidad temporal del algoritmo de ordenación mediante inserción binaria.
 O: Si $g(n) \in O(1)$ la relación de recurrencia representa la complejidad temporal del algoritmo de búsqueda dicotómica.
@@ -2375,7 +2376,8 @@ O: Puede haber problemas para los que la complejidad será exponencial o peor; n
 O: La complejidad temporal en el peor caso será $O(n^2)$ ya que se toman n decisiones binarias.
 A: 1
 
-Q: Dadas las siguientes ecuaciones de recurrencia. Determinar el orden al que pertenece cada una de ellas: $T_1(n)=2T_1(n-1)+c_1$; $T_2(n)=T_2(n-1)+c_2$, $T_3(n)=T_3(n/2)+c_3$ y $T_4(n)=T_4(n+1)+n+c_4$
+Q: Dadas las siguientes ecuaciones de recurrencia. Determinar el orden al que pertenece cada una de ellas:
+$T_1(n)=2T_1(n-1)+c_1$; $T_2(n)=T_2(n-1)+c_2$, $T_3(n)=T_3(n/2)+c_3$ y $T_4(n)=T_4(n+1)+n+c_4$
 O: $T_1(n) \in O(2^n)$, $T_2(n) \in O(n)$, $T_3(n) \in O(\log n)$, $T_4(n) \in O(n^2)$
 O: $T_1(n) \in O(n)$, $T_2(n) \in O(n)$, $T_3(n) \in O(\log n)$, $T_4(n) \in O(n^2)$
 O: $T_1(n) \in O(\log n)$, $T_2(n) \in O(n)$, $T_3(n) \in O(\log n)$, $T_4(n) \in O(n^2)$
@@ -2544,7 +2546,8 @@ O: El orden en el que se exploran las soluciones parciales no es relevante; por 
 O: Lo más adecuado sería usar una técnica de ramificación y poda ya que es muy importante el orden en el que se exploran las soluciones parciales.
 A: 1
 
-Q: Sea la siguiente relación de recurrencia: $T(n) = 1$ si $n \leq 1$; $2T(n/2) + g(n)$ en otro caso. Si $T(n) \in O(n)$, ¿en cuál de estos tres casos nos podemos encontrar?
+Q: Sea la siguiente relación de recurrencia:
+$T(n) = 1$ si $n \leq 1$; $2T(n/2) + g(n)$ en otro caso. Si $T(n) \in O(n)$, ¿en cuál de estos tres casos nos podemos encontrar?
 O: $g(n) = \log n$
 O: $g(n) = n^2$
 O: Las otras dos opciones son ambas ciertas.
@@ -2580,7 +2583,8 @@ O: Sí, porque la mejor solución iterativa posible de programación dinámica p
 O: No, nunca.
 A: 1
 
-Q: El elemento n-ésimo de la serie tribonacci, $T(n)$, se define como sigue: $T(n) = T(n - 3) + T(n - 2) + T(n - 1)$ para $n > 3$; $T(0) = 0$; $T(1) = 1$ y $T(2) = 1$. ¿Cuál de estas afirmaciones es falsa?
+Q: El elemento n-ésimo de la serie tribonacci, $T(n)$, se define como sigue:
+$T(n) = T(n - 3) + T(n - 2) + T(n - 1)$ para $n > 3$; $T(0) = 0$; $T(1) = 1$ y $T(2) = 1$. ¿Cuál de estas afirmaciones es falsa?
 O: Una implementación ingenua de la función $T(n)$, la cual llamaría a $T(n - 1)$, $T(n - 2)$ y $T(n - 3)$ tendría una complejidad prohibitiva por la repetición de cálculos que se produciría.
 O: Es posible una implementación de programación dinámica iterativa con complejidad $\Theta(n)$.
 O: El problema no tiene una solución de programación dinámica iterativa pero se puede resolver añadiendo memoización al cálculo recursivo ingenuo en el que el cálculo de $T(n)$ comporta realizar las llamadas a $T(n - 1)$, $T(n - 2)$ y $T(n - 3)$.
@@ -2610,7 +2614,8 @@ O: Para reducir la complejidad temporal en la toma de cada decision de $O(n)$ a 
 O: Para reducir la complejidad temporal en la toma de cada decision: de $O(n^2)$ a $O(n \log n)$, donde n es el numero de objetos a considerar.
 A: 1
 
-Q: Sea la siguiente relación de recurrencia: $T(n) = 1$ si $n \leq 1$; $2T(n/2) + g(n)$ en otro caso. Si $T(n) \in O(n^2)$, ¿en cuál de los casos nos podemos encontrar?
+Q: Sea la siguiente relación de recurrencia:
+$T(n) = 1$ si $n \leq 1$; $2T(n/2) + g(n)$ en otro caso. Si $T(n) \in O(n^2)$, ¿en cuál de los casos nos podemos encontrar?
 O: $g(n) = 1$
 O: $g(n) = n^2$
 O: $g(n) = n$
@@ -3803,7 +3808,8 @@ O: posee mas de 20 vertices y siempre es conexo
 O: posee mas de 20 vertices
 A: 3
 
-Q: Estudiad la relación de recurrencia: $T(n) = \begin{cases} 1 & \text{si } n \leq 1 \\ pT(n/q) + g(n) & \text{en otro caso} \end{cases}$ (donde p y q son enteros mayores que 1). Di cuál de los siguientes esquemas algorítmicos produce de manera natural relaciones de recurrencia así.
+Q: Estudiad la relación de recurrencia:
+$T(n) = \begin{cases} 1 & \text{si } n \leq 1 \\ pT(n/q) + g(n) & \text{en otro caso} \end{cases}$ (donde p y q son enteros mayores que 1). Di cuál de los siguientes esquemas algorítmicos produce de manera natural relaciones de recurrencia así.
 O: Divide y vencerás.
 O: Programación dinámica.
 O: Ramificación y poda.
@@ -5407,7 +5413,8 @@ O: ... será más eficiente cuanto más equitativa sea la división en subproble
 O: ... nunca tendrá una complejidad exponencial.
 A: 1
 
-Q: Dadas las siguiente ecuaciones de recurrencia determinar el orden al que pertenecen cada una de ellas: $T_1(n)=2T_1(n/2)+c_1$, $T_2(n)=T_2(n-1) + n + c_2$, $T_3(n) = cT_3(n-1)+c_3$, $T_4(n) = T_4(n-1)+c_4$
+Q: Dadas las siguiente ecuaciones de recurrencia determinar el orden al que pertenecen cada una de ellas:
+$T_1(n)=2T_1(n/2)+c_1$, $T_2(n)=T_2(n-1) + n + c_2$, $T_3(n) = cT_3(n-1)+c_3$, $T_4(n) = T_4(n-1)+c_4$
 O: $T_1(n) \in O(n)$, $T_2(n) \in O(n^2)$, $T_3(n) \in O(c^n)$ y $T_4(n) \in O(n)$
 O: $T_1(n) \in O(n)$, $T_2(n) \in O(n)$, $T_3(n) \in O(n^2)$ y $T_4(n) \in O(n^2)$
 O: $T_1(n) \in O(\log n)$, $T_2(n) \in O(2^n)$, $T_3(n) \in O(c^n)$ y $T_4(n) \in O(n)$
@@ -5505,7 +5512,8 @@ O: ... es condición suficiente que existan instancias distintas del problema co
 O: ... es condición necesaria que existan instancia distintas del problema con el mismo tamaño
 A: 2
 
-Q: El coste asociado a la siguiente ecuación de recurrencia es: $f(n) = \begin{cases} 1 & n \leq 1 \\ n + f(\frac{n}{2}) + f(\frac{n}{2}) & n > 1 \end{cases}$
+Q: El coste asociado a la siguiente ecuación de recurrencia es:
+$f(n) = \begin{cases} 1 & n \leq 1 \\ n + f(\frac{n}{2}) + f(\frac{n}{2}) & n > 1 \end{cases}$
 O: Θ(n lg n^2)
 O: Θ(n^2 lg n)
 O: Θ(n lg n)
