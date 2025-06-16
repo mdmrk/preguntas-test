@@ -1673,8 +1673,7 @@ O: No tiene porqué, la complejidad temporal no depende únicamente del tamaño 
 O: Sí, siempre, en Divide y Vencerás la complejidad temporal depende únicamente del tamaño de los subproblemas.
 A: 1
 
-Q: ¿Cuál es la solución a la siguiente relación de recurrencia
-?
+Q: ¿Cuál es la solución a la siguiente relación de recurrencia?
 $f(n) = \begin{cases} \Theta(1) & n = 0 \\ \Theta(1) + f(n/3) & n > 0 \end{cases}$
 O: $f(n) \in \Theta(\log(n))$.
 O: $f(n) \in \Theta(n/3)$.
