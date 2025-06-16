@@ -66,7 +66,7 @@ const questions = computed(() => {
 
 const questionCountText = computed(() => {
   const count = questions.value.length
-  return `${count} pregunta${count === 1 ? "" : "s"} únicas en total`
+  return `${count} preguntas únicas en total`
 })
 
 const loadQuizData = async () => {

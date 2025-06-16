@@ -4862,12 +4862,6 @@ O: Warshall Algoritmo voraz, Prim programación dinámica, Floyd algoritmo voraz
 O: Warshall: programación dinámica, Prim algoritmo voraz, Floyd programación dinámica
 A: 3
 
-Q: ¿Cual es la mejor complejidad espacial que se puede conseguir
-O: $O(1)$
-O: $O(y^2)$
-O: $O(y)$
-A: 2
-
 Q: La versión de Quicksort que utiliza como pivote el elemento del vector que ocupa la posición central...
 O: ...no presenta caso mejor y peor para instancias del mismo tamaño.
 O: ...se comporta peor cuando el vector ya está ordenado.
