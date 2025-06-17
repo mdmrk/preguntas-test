@@ -50,5 +50,5 @@ pre > code {
 }
 
 .katex > span {
-  @apply text-lg leading-1;
+  @apply text-lg;
 }
