@@ -41,10 +41,6 @@ export default defineConfig({
         manualChunks(id) {
           if (id.includes("src/data/") && id.includes(".txt")) {
             const fileName = id.split("/").pop()?.replace(".txt", "")
-            if (fileName?.includes("ada")) return "quiz-ada"
-            if (fileName?.includes("gpi")) return "quiz-gpi"
-            if (fileName?.includes("ppss")) return "quiz-ppss"
-            if (fileName?.includes("redes")) return "quiz-redes"
             return `quiz-${fileName}`
           }
 
