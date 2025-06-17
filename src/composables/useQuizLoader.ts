@@ -17,6 +17,7 @@ export class QuizLoader {
       let parsingQuestion = false
       let parsingOption = false
       let currentOptionIndex = -1
+      let tags: string[] = []
 
       for (let j = 0; j < lines.length; j++) {
         const line = lines[j]
@@ -38,6 +39,10 @@ export class QuizLoader {
           image = line.substring(2).trim()
           parsingQuestion = false
           parsingOption = false
+        } else if (line.startsWith("C:")) {
+          tags = line.substring(2).trim().split(";")
+          parsingQuestion = false
+          parsingOption = false
         } else if (parsingQuestion) {
           questionText += line + "\n"
         } else if (parsingOption && currentOptionIndex >= 0) {
@@ -51,7 +56,8 @@ export class QuizLoader {
           question: questionText.trim(),
           options: options.map((option) => option.trim()),
           correctAnswer: correctAnswerIndex,
-          image: image
+          tags,
+          image
         })
       }
     }

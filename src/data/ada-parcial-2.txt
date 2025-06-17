@@ -230,7 +230,7 @@ O: Es posible evitar hacer la evaluación exhaustiva "de fuerza bruta" guardando
 O: Hace una evaluación exhaustiva "de fuerza bruta" de todas las posibles maneras de cortar el tubo consume un tiempo $\Theta(2^n)$
 
 Q: ¿Cuál de estas estrategias para calcular el $n$-ésimo elemento de la serie de Fibonacci
-$$f(n) = f(n - 1) + f(n - 2),\ f(1) = f(2) = 1$$
+$f(n) = f(n - 1) + f(n - 2),\ f(1) = f(2) = 1$
 es más eficiente?
 A: 0
 O: Programación dinámica
@@ -244,7 +244,7 @@ O: ... una cota superior para el valor óptimo.
 O: ... una cota inferior para el valor óptimo, pero que nunca coincide con este.
 
 Q: Dada la suma de la recurrencia:
-$$T(n) = \begin{cases} 1 & n = 0 \\ \sum_{k=0}^{n-1} T(k) & n > 0 \end{cases}$$
+$T(n) = \begin{cases} 1 & n = 0 \\ \sum_{k=0}^{n-1} T(k) & n > 0 \end{cases}$
 ¿cuál de las siguientes afirmaciones es cierta?
 A: 1
 O: $T(n) \in \Theta(n^2)$
@@ -287,7 +287,7 @@ O: $O(x^2)$
 O: $O(x)$
 O: $O(1)$
 
-Q: Cuando se calculan los coeficientes binomiales usando la recursión $${n \choose r} = {n-1 \choose r} + {n-1 \choose r-1}$$, con $${n \choose 0} = {n \choose n} = 1$$, qué problemas se da y cómo se puede resolver?
+Q: Cuando se calculan los coeficientes binomiales usando la recursión ${n \choose r} = {n-1 \choose r} + {n-1 \choose r-1}$, con ${n \choose 0} = {n \choose n} = 1$, qué problemas se da y cómo se puede resolver?
 A: 1
 O: Se repiten muchos cálculos y ello se puede evitar haciendo uso de una estrategia voraz.
 O: Se repiten muchos cálculos y ello se puede evitar usando programación dinámica.
@@ -436,7 +436,7 @@ O: $\Theta(n \log n)$
 O: $\Theta(n^2)$
 
 Q: La serie de números de Fibonacci se define de la siguiente forma:
-$$fib(n) = \begin{cases} 1 & n \leq 1 \\ fib(n-1) + fib(n-2) & n > 1 \end{cases}$$
+$fib(n) = \begin{cases} 1 & n \leq 1 \\ fib(n-1) + fib(n-2) & n > 1 \end{cases}$
 Para implementar esta función podemos emplear:
 A: 2
 O: Divide y vencerás
@@ -444,7 +444,7 @@ O: Programación dinámica
 O: Cualquiera de las dos anteriores
 
 Q: La serie de números de Fibonacci se define de la siguiente forma:
-$$fib(n) = \begin{cases} 1 & n \leq 1 \\ fib(n-1) + fib(n-2) & n > 1 \end{cases}$$
+$fib(n) = \begin{cases} 1 & n \leq 1 \\ fib(n-1) + fib(n-2) & n > 1 \end{cases}$
 ¿Qué implementación de entre las siguientes supone el menor coste?
 A: 1
 O: Divide y vencerás

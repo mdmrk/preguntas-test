@@ -170,7 +170,7 @@ O: $\exists c, n_0 \in \mathbb{R}^+ : f(n) \geq c \cdot g(n) \forall n$
 O: $\exists c, n_0 \in \mathbb{R}^+ : f(n) \leq c \cdot g(n) \forall n \geq n_0$
 
 Q: El coste asociado a la siguiente ecuación de recurrencia es:
-$$f(n) = \begin{cases} 1 & n \leq 1 \\ n + f(\frac{n}{2}) + f(\frac{n}{2}) & n > 1 \end{cases}$$
+$f(n) = \begin{cases} 1 & n \leq 1 \\ n + f(\frac{n}{2}) + f(\frac{n}{2}) & n > 1 \end{cases}$
 A: 2
 O: $\Theta(n \lg n^2)$
 O: $\Theta(n^2 \lg n)$
@@ -286,7 +286,7 @@ O: ... se comporta peor cuando el vector ya está ordenado.
 O: ... El hecho de que el vector estuviera previamente ordenado o no, no influye en la complejidad temporal de este algoritmo.
 
 Q: Dada la siguiente relación de recurrencia, ¿Qué cota es verdadera?
-$$f(n) = \begin{cases} 1 & n = 1 \\ \sqrt{n} + 3f(\frac{n}{3}) & n > 1 \end{cases}$$
+$f(n) = \begin{cases} 1 & n = 1 \\ \sqrt{n} + 3f(\frac{n}{3}) & n > 1 \end{cases}$
 A: 0
 O: $f(n) \in \Theta(n)$
 O: $f(n) \in \Theta(n^3)$
@@ -450,7 +450,7 @@ O: ... se comporta peor cuando el vector ya está ordenado.
 O: ... no presenta casos mejor y peor distintos para instancias del mismo tamaño.
 
 Q: Dada la siguiente relación de recurrencia, ¿Qué cota es verdadera?
-$$f(n) = \begin{cases} 1 & n = 1 \\ n + 3f(n/3) & n > 1 \end{cases}$$
+$f(n) = \begin{cases} 1 & n = 1 \\ n + 3f(n/3) & n > 1 \end{cases}$
 A: 0
 O: $f(n) \in \Theta(n \log n)$
 O: $f(n) \in \Theta(n^3)$
@@ -481,7 +481,7 @@ O: No tiene porqué, la complejidad temporal no depende únicamente del tamaño 
 O: Sí, siempre, en Divide y Vencerás la complejidad temporal depende únicamente del tamaño de los subproblemas.
 
 Q: ¿Qué cota se deduce de la siguiente relación de recurrencia?
-$$f(n) = \begin{cases} 1 & n = 1 \\ n + 4f(\frac{n}{2}) & n > 1 \end{cases}$$
+$f(n) = \begin{cases} 1 & n = 1 \\ n + 4f(\frac{n}{2}) & n > 1 \end{cases}$
 A: 0
 O: $f(n) \in \Theta(n^2)$
 O: $f(n) \in \Theta(n)$
@@ -596,14 +596,14 @@ O: ... cuadrática en el peor de los casos.
 O: ... lineal en el caso peor y constante en el caso mejor.
 
 Q: Dada la siguiente relación de recurrencia, ¿Qué cota es verdadera?
-$$f(n) = \begin{cases} 1 & n = 1 \\ n + 2f(n-1) & n \geq 1 \end{cases}$$
+$f(n) = \begin{cases} 1 & n = 1 \\ n + 2f(n-1) & n \geq 1 \end{cases}$
 A: 0
 O: $f(n) \in \Omega(2^n)$
 O: $f(n) \in \Theta(n^2)$
 O: $f(n) \in \Theta(2^n)$
 
 Q: ¿Cuál es la solución a la siguiente relación de recurrencia?
-$$f(n) = \begin{cases} \Theta(1) & n = 0 \\ \Theta(1) + f(n/3) & n > 0 \end{cases}$$
+$f(n) = \begin{cases} \Theta(1) & n = 0 \\ \Theta(1) + f(n/3) & n > 0 \end{cases}$
 A: 0
 O: $f(n) \in \Theta(\log(n))$.
 O: $f(n) \in \Theta(n/3)$.
@@ -789,7 +789,7 @@ O: $\Theta(n^2 \log n)$
 O: $\Theta(n^3 \log n)$
 
 Q: Sea la siguiente relacion de recurrencia:
-$$T(n) = \begin{cases} 1 & \text{si } n \leq 1 \\ 8T(\frac{n}{8}) + g(n) & \text{en otro caso}\end{cases}$$
+$T(n) = \begin{cases} 1 & \text{si } n \leq 1 \\ 8T(\frac{n}{8}) + g(n) & \text{en otro caso}\end{cases}$
 Si $T(n) \in \Theta(n^2)$, ¿en cuál de estos tres casos nos podemos encontrar?
 A: 1
 O: $g(n) = n^3$
