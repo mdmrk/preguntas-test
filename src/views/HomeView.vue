@@ -19,6 +19,8 @@ const ppss = ref(false)
           <MainButton id="ada-parcial-1" class="gradient-red">parcial 1</MainButton>
           <MainButton id="ada-parcial-2" class="gradient-red">parcial 2</MainButton>
           <MainButton id="ada-completo" class="gradient-red">completo</MainButton>
+          <MainButton id="ada-2024" class="gradient-red">2024</MainButton>
+          <MainButton id="ada-2025" class="gradient-red">2025</MainButton>
         </div>
       </div>
       <div class="relative w-full flex flex-col items-center">
