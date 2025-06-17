@@ -95,7 +95,7 @@ const availableTags = computed(() => {
   questions.value.forEach((question) => {
     question.tags.forEach((tag) => tags.add(tag))
   })
-  return Array.from(tags).sort()
+  return Array.from(tags).sort().reverse()
 })
 
 const filteredQuestions = computed(() => {
