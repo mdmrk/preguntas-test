@@ -4,7 +4,7 @@
   </div>
 
   <div class="mb-6">
-    <div class="text-base font-semibold text-gray-900 dark:text-white mb-3 flex-1">
+    <div class="text-base font-semibold mb-3 flex-1">
       <TextRenderer :text="question.question" />
     </div>
   </div>
@@ -135,7 +135,7 @@ const getTextClasses = (optionIndex: number) => {
     return "text-red-800 dark:text-red-300"
   }
 
-  return "text-gray-700 dark:text-gray-300"
+  return "text-gray-900 dark:text-gray-50"
 }
 
 const selectAnswer = (index: number) => {

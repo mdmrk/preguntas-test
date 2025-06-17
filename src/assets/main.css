@@ -7,7 +7,7 @@
 }
 
 #app {
-  @apply max-w-[720px] w-full min-h-svh mx-auto p-6 font-normal font-hanken-grotesk text-black dark:text-gray-50;
+  @apply max-w-[720px] w-full min-h-svh mx-auto p-6 font-normal font-hanken-grotesk text-gray-900 dark:text-gray-50;
 }
 
 body {
