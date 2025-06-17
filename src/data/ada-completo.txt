@@ -6496,20 +6496,19 @@ C: Junio 2025
 
 Q: Se pretende obtener la complejidad temporal en el caso más desfavorable de la siguiente función.
 ```cpp
-int exa (vector <int>& v) {
-  int i,sum=0, n=v.size();
-  
-  if (n>0){
-    int j=n;
-    while (j>0 && sum<100){
-      j=j/2;
-      sum=0;
-      for (i=j;i<n;i++)
-        sum+=v[i];
+int exa(vector<int> &v) {
+  int i, sum = 0, n = v.size();
+  if (n > 0) {
+    int j = n;
+    while (j > 0 && sum < 100) {
+      j = j / 2;
+      sum = 0;
+      for (i = j; i < n; i++)
+        sum += v[i];
     }
     return j;
-  }
-  else return -1;
+  } else
+    return -1;
 }
 ```
 ¿Cuál de las siguientes formulaciones expresa dicho coste?
