@@ -19,17 +19,37 @@ const getSystemPreference = () => {
   return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
 }
 
+const loadHighlightTheme = (isDark: boolean) => {
+  const existingLink = document.querySelector("link[data-highlight-theme]")
+  if (existingLink) {
+    existingLink.remove()
+  }
+
+  const link = document.createElement("link")
+  link.rel = "stylesheet"
+  link.setAttribute("data-highlight-theme", "true")
+  link.href = isDark
+    ? "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
+    : "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/intellij-light.min.css"
+
+  document.head.appendChild(link)
+}
+
 const applyTheme = (theme: string) => {
   let actualTheme = theme
   if (theme === "device") {
     actualTheme = getSystemPreference()
   }
 
-  if (actualTheme === "dark") {
+  const isDark = actualTheme === "dark"
+
+  if (isDark) {
     document.documentElement.classList.add("dark")
   } else {
     document.documentElement.classList.remove("dark")
   }
+
+  loadHighlightTheme(isDark)
 
   if (theme === "device") {
     localStorage.removeItem("theme")
