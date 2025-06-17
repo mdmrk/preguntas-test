@@ -6,13 +6,20 @@
     </div>
     <template v-else-if="questions.length > 0">
       <div
-        class="mb-6 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg"
+        class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 mb-6"
       >
-        <h2 class="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-2">Repositorio</h2>
-        <p class="text-sm text-blue-700 dark:text-blue-300">{{ questionCountText }}</p>
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center space-x-4">
+            <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Repositorio</h2>
+            <span class="text-sm font-medium text-gray-600 dark:text-gray-400">
+              {{ questionCountText }}
+            </span>
+          </div>
+        </div>
+
         <div
           v-if="availableTags.length > 0"
-          class="mt-4 pt-3 border-t border-blue-200 dark:border-blue-700"
+          class="pt-4 border-t border-gray-200 dark:border-gray-700"
         >
           <div class="flex flex-wrap gap-2">
             <label v-for="tag in availableTags" :key="tag" class="cursor-pointer">
@@ -22,7 +29,7 @@
                   'inline-flex items-center px-3 py-1 rounded-full text-sm font-medium',
                   selectedTags.includes(tag)
                     ? 'bg-blue-600 text-white'
-                    : 'bg-blue-100 text-blue-700 hover:bg-blue-200 dark:bg-blue-800 dark:text-blue-200 dark:hover:bg-blue-700'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600'
                 ]"
               >
                 {{ tag }}
@@ -31,12 +38,13 @@
           </div>
         </div>
       </div>
+
       <div class="space-y-6">
         <div
           v-for="question in questions"
           v-show="isQuestionVisible(question)"
           :key="question.id"
-          class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6"
+          class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4"
         >
           <div class="flex items-center justify-between mb-4">
             <span

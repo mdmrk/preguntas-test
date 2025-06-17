@@ -7,7 +7,7 @@
 
     <template v-else-if="questions.length > 0">
       <div
-        class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 mb-6"
+        class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 mb-6"
       >
         <div class="flex items-center justify-between mb-4">
           <div class="flex items-center space-x-4">
