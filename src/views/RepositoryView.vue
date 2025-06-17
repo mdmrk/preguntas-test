@@ -19,7 +19,7 @@
               <input type="checkbox" :value="tag" v-model="selectedTags" class="sr-only" />
               <span
                 :class="[
-                  'inline-flex items-center px-3 py-1 rounded-full text-sm font-medium transition-colors',
+                  'inline-flex items-center px-3 py-1 rounded-full text-sm font-medium',
                   selectedTags.includes(tag)
                     ? 'bg-blue-600 text-white'
                     : 'bg-blue-100 text-blue-700 hover:bg-blue-200 dark:bg-blue-800 dark:text-blue-200 dark:hover:bg-blue-700'
@@ -33,7 +33,8 @@
       </div>
       <div class="space-y-6">
         <div
-          v-for="question in filteredQuestions"
+          v-for="question in questions"
+          v-show="isQuestionVisible(question)"
           :key="question.id"
           class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6"
         >
@@ -81,7 +82,6 @@ const route = useRoute()
 const quizContent = ref("")
 const loading = ref(true)
 const selectedTags = ref<string[]>([])
-
 const quizId = computed(() => route.params.id as string)
 const loader = new QuizLoader()
 
@@ -97,6 +97,13 @@ const availableTags = computed(() => {
   })
   return Array.from(tags).sort().reverse()
 })
+
+const isQuestionVisible = (question: Question): boolean => {
+  if (selectedTags.value.length === 0) {
+    return true
+  }
+  return selectedTags.value.some((tag) => question.tags.includes(tag))
+}
 
 const filteredQuestions = computed(() => {
   if (selectedTags.value.length === 0) {
