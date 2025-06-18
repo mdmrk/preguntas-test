@@ -1,4 +1,7 @@
 import re
+import sys
+from pathlib import Path
+
 
 def parse_quiz_data(text):
     """
@@ -89,9 +92,13 @@ def format_questions(questions):
     return '\n'.join(formatted)
 
 def main():
+    script_dir = Path(__file__).parent.absolute()
+    data_dir = script_dir / ".." / "src" / "data"
+    name = data_dir / sys.argv[1]
+    o = data_dir / "formatted.txt"
     # Read the input file
     try:
-        with open('dca.txt', 'r', encoding='utf-8') as file:
+        with open(name, 'r', encoding='utf-8') as file:
             content = file.read()
     except FileNotFoundError:
         print("File 'dca.txt' not found. Please make sure the file exists.")
@@ -99,7 +106,7 @@ def main():
     except UnicodeDecodeError:
         # Try with different encoding if UTF-8 fails
         try:
-            with open('dca.txt', 'r', encoding='latin-1') as file:
+            with open(name, 'r', encoding='latin-1') as file:
                 content = file.read()
         except:
             print("Could not read file with UTF-8 or Latin-1 encoding.")
@@ -114,7 +121,7 @@ def main():
     formatted_output = format_questions(questions)
     
     # Save to output file
-    with open('formatted_quiz.txt', 'w', encoding='utf-8') as file:
+    with open(o, 'w', encoding='utf-8') as file:
         file.write(formatted_output)
     
     print("Formatted quiz saved to 'formatted_quiz.txt'")
