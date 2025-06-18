@@ -34,6 +34,8 @@ const ppss = ref(false)
         </div>
       </div>
       <MainButton id="gpi" class="gradient-green">GPI</MainButton>
+      <MainButton id="hada" class="gradient-indigo">HADA</MainButton>
+      <MainButton id="dca" class="gradient-teal">DCA</MainButton>
     </nav>
   </main>
 </template>

@@ -1,0 +1,3519 @@
+Q: Para comenzar a usar autoconf es: (no seguro)
+A: 1
+O: Aconsejable usar autoscan
+O: Imprescindible usar autoscan
+O: Innecesario usar autoscan
+O: Obligatorio usar autoreconf
+
+Q: En la programación por contrato las precondiciones:
+A: 3
+O: Se aplican solo a métodos de una clase
+O: Se aplican solo a funciones independientes de cualquier clase
+O: Se aplican tanto a métodos de una clase como a funciones independientes de cualquier clase
+O: Se aplican en el constructor de una clase
+
+Q: En un lenguaje con soporte para la programación por contrato, las precondiciones y postcondiciones:
+A: 4
+O: Se invocan cuando el programador lo indica en métodos de una clase
+O: Se invocan primero las postcondiciones, luego las precondiciones y finalmente el código del método
+O: Se aplican en el constructor de una clase
+O: Se invocan primero las precondiciones, luego el código del método y al final las postcondiciones
+
+Q: Git es un SCVS:
+A: 4
+O: Evolucion de BitKeeper
+O: Evolucion de Mercurial
+O: Evolucion de Monotone
+O: Influenciado por BitKeeper
+
+Q: Las autotools se componen de:
+A: 4
+O: Solo Autoconf
+O: Solo Automake
+O: Solo Autoconf y Automake
+O: Ninguna de las anteriores
+
+Q: La herramienta cmake:
+A: 3
+O: Permite tener solo un fichero CMakeList.txt en el directorio raíz del proyecto y ninguno en subdirectorios del mismo
+O: No permite tener un fichero CMakeList.txt en cada subdirectorio del proyecto
+O: Nos permite tener un fichero CMakeList.txt en cada subdirectorio del proyecto
+O: Nos obliga a tener un fichero CMakeList.txt en cada subdirectorio del proyecto
+
+Q: Gettext:
+A: 4
+O: Traduce automáticamente todas las cadenas de nuestra aplicación
+O: Necesita que las cadenas estén marcadas de forma distinta según el lenguaje al que se traducirán
+O: Lleva a cabo la traducción palabra a palabra de una frase
+O: Solo traduce las cadenas marcadas de algún modo en nuestra aplicación
+
+Q: La configuración de un proyecto software se hace:
+A: 3
+O: En función de los resultados tras una primera compilación
+O: De forma distinta para cada máquina donde vayamos a compilarlo
+O: Realizando unos test y chequeos antes de proceder a la compilación
+O: De forma manual para cada máquina donde lo vayamos a compilar
+
+Q: Un proyecto configurado con Autotools:
+A: 3
+O: Solo se puede compilar en una máquina que tenga instalada el compilador con el que se configuró
+O: Necesita que esté instalado autoconf en la maquina donde se va compilar
+O: No se necesita que esté instalado autoconf en la máquina donde se va a compilar
+O: Debe compilarse en la misma máquina donde se ha configurado
+
+Q: Unas herramientas como Autotools:
+A: 4
+O: Solo se pueden emplear en proyectos en lenguaje C
+O: Solo se pueden emplear en proyectos en lenguaje C++
+O: Solo se pueden emplear en proyectos en lenguaje ObjectiveC
+O: Ninguna de las anteriores
+
+Q: Un proyecto configurado con autotools puede constar de:
+A: 3
+O: Un único archivo llamado Makefile.am y varios config.h.in
+O: Un archivo llamado autoconf.am
+O: Un archivo llamado configure.ac y varios Makefile.am
+O: Un archivo llamado Makefile.am y otro configure.ac
+
+Q: Lo que conocemos como Cmake:
+A: 1
+O: Se compone de varias herramientas
+O: Está formado solo por la aplicación cmake
+O: Está formado por las aplicaciones cmake y ctest
+O: Está formado por las aplicaciones cdash y cmake
+
+Q: En el paso de test, el concepto Branch Coverage
+A: 3
+O: Se refiere a la cantidad de ramas empleadas en el controlador de versiones usado
+O: Se refiere si estamos testeando la rama master
+O: Se refiere la cantidad de ramas del código empleadas
+O: Se refiere si estamos testeando la rama trunk
+
+Q: En los Test de datos: (no seguro)
+A: 1
+O: Usamos datos reales y sintéticos
+O: Usamos solo datos sintéticos que hacen falta
+O: Usamos solo datos reales que son los que verdaderamente empleará la aplicación
+O: Nos dedicamos a comprobar los datos con los que trabaja la aplicación
+
+Q: El paso de tests…
+A: 1
+O: Sirve para mostrar los fallos de nuestro proyecto
+O: Sirve para mostrar la ausencia de fallos de nuestro proyecto
+O: Sirve para mostrarnos las partes de nuestro poryecto que deben ser mejoradas
+O: No sirven para nada
+
+Q: En el GlassBox Testing:
+A: 3
+O: Tenemos acceso a parte del código a testear
+O: Tenemos acceso sólo al código del programa principal a testear
+O: Tenemos acceso a todo el código a testear
+O: Tenemos acceso a un módulo del código a testear
+
+Q: Una etiqueta de versión:
+A: 4
+O: Siempre ha de seguir el formato X.Y.Z.
+O: Siempre ha de seguir el formato W.X.Y.Z.
+O: Siempre ha de seguir el formato YYYY.MM.DD.
+O: Ninguna de las anteriores
+
+Q: Mercurial es un SCV:
+A: 3
+O: Centralizado pero con capacidades de uno distribuidom
+O: Descentralizado pero solo en sus versiones más recientes
+O: Descentralizado
+O: Ninguna de las anteriores
+
+Q: Las mejoras en tiempo de recompilación con ccache:
+A: 4
+O: Solo se observan si usamos un Makefile
+O: Solo se observan si usamos un Makefile recursivo
+O: Solo se observan si usamos un Makefile creado por cmake
+O: Ninguna de las anteriores
+
+Q: En un sistema de seguimiento de fallos:
+A: 3
+O: Sólo podemos dar de alta informes de fallos
+O: Sólo podemos dar de alta peticiones de nuevas características
+O: Podemos dar de alta peticiones de nuevas características además de informes de fallos
+O: Todas las anteriores son válidas
+
+Q: En un sistema de seguimiento de fallos respecto a los tipos de error:
+A: 2
+O: No es importante acotarlos
+O: Es bueno acotarlos para facilitar el trabajo del reportador de un fallo
+O: Es bueno permitir al usuario que invente sus propias categorías de error
+O: Todas las anteriores son válidas
+
+Q: Autoconf + Automake:
+A: 2
+O: Es portable directamente a Windows.
+O: Es portable a Windows bajo Cygwin
+O: No funciona en Windows
+O: Ninguna de las anteriores
+
+Q: La cantidad de líneas de código a escribir:
+A: 1
+O: Puede ser un factor a tener en cuenta al estructurar un equipo de desarrollo
+O: Nunca puede ser un factor a tener en cuenta al estructurar un equipo de desarrollo
+O: Síempre será un factor a tener en cuenta al estructurar un equipo de desarrollo
+O: Ninguna de las anteriores
+
+Q: La herramienta distcc:
+A: 3
+O: Tiene en cuenta de forma automática diferencias de arquitectura al compilan
+O: Sólo puede usarse con compiladores GCC
+O: Está pensada para ser usada con compíladores GCC
+O: Todas las anteriores son válidas
+
+Q: I18N y L10N:
+A: 4
+O: Son lo mismo si el lenguaje original empleado en el código es igual al lenguaje destino
+O: L10N es una versión simlpíficada de I18N
+O: I18N es una versión simplificada L10N
+O: Ninguna de las anteriores
+
+Q: El empaquetado DEB: (no seguro)
+A: 4
+O: Permíte ejecutar acciones antes de instalar pero no después
+O: Permíte ejecutar acciones después de instalar pero no antes
+O: No permite ejecutar acciones ni antes ni después de instalar
+O: Ninguna de las anteriores
+
+Q: Git puede: (no seguro)
+A: 3
+O: Trabajar con sus propios repositorios y los de cualquier otro SCV
+O: Trabajar solo con sus propios repositorios
+O: Trabajar con sus propios repositorios y ios de algunos otros SCV
+O: Todas las anteriores son ciertas
+
+Q: En el paso de tests un fixture: (no seguro)
+A: 1
+O: No es necesario en ninguna circunstancia
+O: Síempre es necesario
+O: Sólo es necesario si reservamos memoria dinámica
+O: Ninguna de las anteriores
+
+Q: En el diseño por contrato en lenguaje D los invariantes: (no seguro)
+A: 1
+O: Se deben cumplír en métodos con todo tipo de visibilidad
+O: Se deben cumplir en métodos con visibilidad publíc
+O: Se deben cumplir en métodos con visibilidad private
+O: Ninguna de las anteriores
+
+Q: En el diseño por contrato para poder usar post-candiciones:
+A: 3
+O: Es obligatorio usar pre-condiciones
+O: Es obligatorio usar invariantes
+O: Es opcional usar pre-condiciones
+O: Todas las anteriores son validas
+
+Q: Dado un cambio a realizar en el código, la ortogonalidad del sistema: (no seguro)
+A: 1
+O: Es inversamente proporcional al número de líneas de código implicadas
+O: Es inversamente proporcional al número de programadores implicados para hacerlas
+O: Es directamente proporcional al número de programadores implicados para hacerlas
+O: Ninguna de las anteriores
+
+Q: Un sistema de empaquetado basado en TAR+GZ:
+A: 3
+O: Es igual de eficaz que uno basado en RPM
+O: Es igual de eficaz que uno basado en DEB
+O: Es menos eficaz que DEB o RPM por determinados motivos
+O: Ninguna. de las anteriores
+
+Q: Los tests de caja negra:
+A: 4
+O: Miden solo el porcentaje de instrucciones testeadas
+O: Miden solo el porcentaje de ramas del código usadas
+O: Miden ambos porcentajes anteriores
+O: Ninguna de las anteriores
+
+Q: La biblioteca Gettext:
+A: 2
+O: Solo permite disponer de un idioma destino
+O: Permite tener tantos idiomas destino como sea necesario
+O: Requiere escribir los mensajes originales en inglés
+O: Requiere escribir los mensajes originales codificados en UTF-8
+
+Q: Autoconf necesita a Automake:
+A: 3
+O: Obligatoriamente siempre
+O: Obligatoriamente si desarrollamos en lenguaje C
+O: Opcionalmente
+O: Ninguna de las anteriores
+
+Q: Las etiquetas de versión:
+A: 4
+O: Solo aportan información al usuario del software
+O: Solo aportan información al creador del software
+O: No aportan información importante ni al usuario ni al creador del software
+O: Ninguna de las anteriores
+
+Q: La herramienta distcc:
+A: 2
+O: Usa un solo ejecutable distcc
+O: Emplea dos ejecutables:: distcc y distccd
+O: En realidad,, distcc y distccd son el mismo programa lanzado con opciones distintas
+O: Necesita de make para funcionar
+
+Q: Los archivos DEB: (no seguro)
+A: 2
+O: Sólo pueden ser manipulados por dpkg
+O: Se pueden manipular por TAR
+O: Se pueden manipular por RAR
+O: Ninguna de las anteriores
+
+Q: La herramienta make:
+A: 2
+O: Sólo puede lanzar trabajos de forma secuencial
+O: Puede lanzar más trabajos en paralelo que procesadores o núcleos tiene la máquina en la que se ejecuta
+O: Puede lanzar tantos trabajos en paralelo como procesadores o núcleos tenga la máquina en la que se ejecuta
+O: No puede ejecutarse de manera recursiva
+
+Q: La herramienta dh_make:
+A: 3
+O: Crea un paquete debian a partir de un directorio
+O: Crea un paquete debian a partir de un TGZ
+O: Debianiza un código fuente a partir de un TGZ
+O: Instala un paquete DEB
+
+Q: La herramienta distcc:
+A: 1
+O: Funciona entre máquinas conectadas en red
+O: Sólo funciona entre máquinas de la misma red
+O: No funciona si no hay conexión a la red para la compilación
+O: Dispone de un tope de máquinas a usar para compilar
+
+Q: La herramienta distcc en modo bombeo:
+A: 3
+O: Hace lo mismo que ccache
+O: Hace lo mismo que en modo sencillo
+O: Consigue tiempos de compilación mejores
+O: Necesita de ccache para funcionar completamente
+
+Q: Los sistemas de empaquetado como DEB o RPM :
+A: 3
+O: Sólo permiten instalar software fácilmente
+O: Sólo permiten desinstalar software fácilmente
+O: Tienen en cuenta dependencias entre paquetes a la hora de instalar uno
+O: Ninguna de las anteriores
+
+Q: En el desarrollo de un proyecto software, la etiqueta de versión:
+A: 4
+O: Sólo se emplea en el código entregado al usuario final del mismo
+O: Siempre tiene el formato X.Y.Z
+O: Sólo tiene sentido para los desarrolladores del proyecto
+O: Es útil tanto a desarrolladores como a usuarios del proyecto
+
+Q: La herramienta ccache:
+A: 3
+O: No hace uso de varios núcleos del procesador
+O: Siempre hace uso de varios núcleos del procesador
+O: Opcionalmente hace uso de varios núcleos del procesador
+O: Puede hacer uso de hasta 2 núcleos de proceso, pero no más
+
+Q: En el desarrollo de un proyecto software, la rama trunk o master:
+A: 2
+O: Siempre contendrá una versión estable del proyecto
+O: Puede contener una versión estable del proyecto
+O: Nunca contendrá una versión estable del proyecto
+O: No se emplea nada más que en ocasiones
+
+Q: La herramienta ccache:
+A: 2
+O: No sobrecarga nada en el proceso de compilación
+O: Añade una sobrecarga mínima al proceso de compilación
+O: Almacena sus datos en la cache del disco duro
+O: Almacena sus datos en memoria virtual
+
+Q: La herramienta distcc :
+A: 3
+O: No hace uso de varios núcleos del procesador
+O: Siempre hace uso de varios núcleos del procesador
+O: Opcionalmente hace uso de varios núcleos del procesador
+O: Puede hacer uso de hasta 3 núcleos de proceso, pero no más
+
+Q: En el desarrollo de un proyecto software, las ramas trunk y master:
+A: 2
+O: Son ramas especiales del SCV empleado en el proyecto
+O: Son la misma rama del proyecto, pero con diferente nombre
+O: Nunca podrán existir simultáneamente
+O: Se emplean indistintamente en un mismo proyecto
+
+Q: En un sistema de bugtracking:
+A: 1
+O: Es útil acotar los tipos de errores a reportar
+O: No debemos acotar los tipos de errores, pues se pueden quedar sin reportar fallos
+O: No debemos dejar que el usuario reporte un “whishlist” como un error
+O: Un desarrollador no puede cerrar un fallo si el reportador del mismo no lo permite
+
+Q: La herramienta tar:
+A: 4
+O: Comprime automáticamente con gzip
+O: Comprime automáticamente con bzip2
+O: Comprime automáticamente con xz
+O: Ninguna de las anteriores
+
+Q: En el desarrollo de un proyecto software, las ramas de desarrollo...: (no seguro)
+A: 2
+O: Sólo contienen código de la siguiente versión estable
+O: Pueden contener código de corrección de fallos de una versión estable anterior
+O: Nunca introducen fallos en el código nuevo
+O: Ninguna de las anteriores
+
+Q: Para medir la ortogonalidad de un sistema…:
+A: 3
+O: Vemos cuanta gente hay asignada a cada parte del proyecto
+O: Vemos cuanta gente permanece en su puesto cuando no hay cambios
+O: Vemos a cuanta gente afecta un cambio hecho al proyecto
+O: Ninguna de las anteriores
+
+Q: El formato de un paquete DEB :
+A: 3
+O: Es desconocido
+O: Es el de un archivo TAR
+O: Es el de un archivo AR
+O: Es el de un archivo TAR.GZ
+
+Q: Un sistema ortogonal se consigue…: (no seguro)
+A: 3
+O: Siempre, sin hacer nada especial
+O: Separando las distintas capas que lo componen
+O: Eliminando las capas necesarias que lo componen
+O: Ninguna de las anteriores
+
+Q: La herramienta make cuando se ejecuta sin parámetros…:
+A: 1
+O: Trata de obtener el primer objetivo del fichero Makefile
+O: Trata de obtener siempre el objetivo ALL del fichero Makefile
+O: Trata de obtener siempre el objetivo all del fichero Makefile
+O: Ninguna de las anteriores
+
+Q: Indica a qué paradigma hace referencia la siguiente definición:: "Jerarquía de autoridad similar al CC. Útil en la producción de un software similar a uno existente.":
+A: 1
+O: Paradigma cerrado
+O: Paradigma aleatorio
+O: Paradigma abierto
+O: Paradigma sincronizado
+
+Q: Indica a qué paradigma hace referencia la siguiente definición:: "El equipo se estructura de manera libre en función de la iniciativa individual de los miembros. Útil cuando se requiere innovación.":
+A: 2
+O: Paradigma cerrado
+O: Paradigma aleatorio
+O: Paradigma abierto
+O: Paradigma sincronizado
+
+Q: Indica a qué paradigma hace referencia la siguiente definición:: "Debe haber muy buena comunicación.. Son adecuados para resolver problemas complejos, pero pueden no ser tan eficientes como otros equipos.": (no seguro)
+A: 3
+O: Paradigma cerrado
+O: Paradigma aleatorio
+O: Paradigma abierto
+O: Paradigma sincronizado
+
+Q: Indica a qué paradigma hace referencia la siguiente definición: "Las partes del problema nos sirven para organizar los miembros del equipo, los cuales suelen trabajar en estas partes del problema destacando la poca comunicación entre ellos.
+A: 4
+O: Paradigma cerrado
+O: Paradigma aleatorio
+O: Paradigma abierto
+O: Paradigma sincronizado
+
+Q: El dictador benevolente de por vida...:
+A: 1
+O: Es importante que sea el originador del proyecto software
+O: Es imprescindible que sea el originador del proyecto software
+O: No son los encargados de velar por el proyecto que tutelan, simplemente cobran los beneficios del mismo
+O: Ninguna de las anteriores
+
+Q: La rama master o trunk es cutting Edge significa...:
+A: 3
+O: Los cambios no se pueden guardar
+O: No es necesario una rama estable con este tipo de rama
+O: Tiene las últimas modificaciones de nuestro software
+O: Ninguna de las anteriores
+
+Q: Indica cual es un a característica de ccache:
+A: 4
+O: Mantiene estadísticas de aciertos/fallos
+O: Gestión automática del tamaño de la cache
+O: Puede cachear compilaciones con warnings
+O: Todas son correctas
+
+Q: Cmake respecto a los out-of-source-builds:
+A: 2
+O: No los permite
+O: Los hace opcionales
+O: Los permite si todo el código está en una única carpeta
+O: Los hace obligatorios
+
+Q: Un sistema de empaquetado basado en TAR+BZIP2:
+A: 2
+O: Es igual de eficaz que uno basado en DEB
+O: Es menos eficaz que DEB o RPM por determinados motivos
+O: Ninguna de las anteriores
+O: Es igual de eficaz que uno basado en RPM
+
+Q: Plataformas para alojar código como Github o Gitlab:
+A: 4
+O: Necesitan de un sistema de bugtracking externo
+O: Por su naturaleza no necesitan de sistemas de bugtracking
+O: Ninguna de las anteriores
+O: Disponen de su propio sistema de bugtracking
+
+Q: Boost::Test forma parte de:
+A: 2
+O: Todas las anteriores son válidas
+O: De un proyecto externo a C++
+O: La biblioteca STL de C++
+O: La biblioteca estándard de C++
+
+Q: En el soporte de i18n estudiado:
+A: 1
+O: Gettext es una biblioteca externa
+O: Gettext forma parte del lenguaje empleado
+O: Ninguna de las anteriores
+O: Gettext es la única solución existente hoy en dia
+
+Q: Make puede lanzar trabajos en paralelo:
+A: 2
+O: Tantos como núcleos de proceso tengamos
+O: Tantos como queramos
+O: Tantos como núcleos de proceso tengamos menos uno
+O: Solo si tenemos mas de un núcleo de proceso
+
+Q: En el lenguaje D podemos tener invariantes de:
+A: 1
+O: Clase
+O: Clase y bucles
+O: Bucles pero no de clase
+O: D no soporta invariantes de ningún tipo
+
+Q: ¿Qué define a un equipo de desarrollo eficiente?
+A: 3
+O: Cada miembro conoce sus tareas y se evita la sensación de interferencias.
+O: La carga de trabajo está repartida equitativamente.
+O: Hay una mínima interferencia entre tareas y los roles están bien definidos.
+O: Los equipos están jerarquizados según su capacidad.
+
+Q: ¿Qué factor reduce la ortogonalidad de un sistema?
+A: 1
+O: Un mayor número de programadores implicados en cada cambio.
+O: Un diseño modular y bien definido.
+O: Una correcta separación entre infraestructura y aplicación.
+O: La guía del programador pragmático.
+
+Q: ¿Qué tarea realiza un bibliotecario de software en un equipo quirúrgico?
+A: 2
+O: Coordina las actividades de análisis y desarrollo.
+O: Cataloga e indexa módulos u objetos reutilizables.
+O: Reemplaza al ingeniero en jefe en caso necesario.
+O: Proporciona soporte técnico a los programadores.
+
+Q: ¿Cuál es una característica clave de la estructura descentralizada democrática (DD)?
+A: 3
+O: Hay un jefe definido con responsabilidades específicas.
+O: La comunicación es mayormente vertical.
+O: Las decisiones se toman por consenso.
+O: Tiene jerarquías claras entre los miembros.
+
+Q: En la estructura centralizada controlada (CC), ¿quién se encarga de la solución de problemas a alto nivel?
+A: 2
+O: Los subgrupos de trabajo.
+O: El jefe de equipo.
+O: Los ingenieros técnicos.
+O: El equipo en pleno a través de consenso.
+
+Q: ¿Qué caracteriza al paradigma cerrado en la organización de equipos?
+A: 4
+O: Permite innovación, pero tiene problemas con el rendimiento ordenado.
+O: Se estructura libremente según la iniciativa de los miembros.
+O: Mezcla controles jerárquicos con innovación individual.
+O: Posee una jerarquía de autoridad similar al equipo centralizado controlado.
+
+Q: ¿Qué paradigma es más adecuado para problemas complejos pero puede no ser tan eficiente?
+A: 3
+O: Paradigma cerrado.
+O: Paradigma sincronizado.
+O: Paradigma abierto.
+O: Paradigma aleatorio.
+
+Q: ¿Cuál es un punto débil del paradigma sincronizado?
+A: 2
+O: La poca modularidad permitida por el problema.
+O: La escasa comunicación entre los miembros del equipo.
+O: La falta de innovación en los enfoques.
+O: La estructura jerárquica rígida.
+
+Q: ¿Qué factor es importante considerar al estructurar un equipo de desarrollo?
+A: 1
+O: Grado de dificultad del problema.
+O: Experiencia del programador principal.
+O: Autonomía de los integrantes.
+O: Velocidad de entrega del prototipo inicial.
+
+Q: ¿Qué nivel de modularidad es preferible al estructurar un equipo?
+A: 3
+O: Baja, para permitir una integración constante.
+O: Media, para equilibrar comunicación y autonomía.
+O: Alta, para dividir tareas de forma eficiente.
+O: No es relevante en la mayoría de los casos.
+
+Q: ¿Qué característica es esencial en un Dictador Benevolente de Por Vida (BDFL)?
+A: 4
+O: Liderar múltiples proyectos simultáneamente.
+O: Tener experiencia en la gestión empresarial.
+O: Ser conocido en la comunidad de software propietario.
+O: Ser el originador del proyecto software.
+
+Q: ¿Qué decisión puede tomar un BDFL?
+A: 1
+O: Delegar funciones y tomar decisiones finales cuando sea necesario.
+O: Abandonar el proyecto sin notificación previa.
+O: Asumir el control total del proyecto sin delegar tareas.
+O: Redefinir los principios del proyecto en cada iteración.
+
+Q: ¿Quién es el creador del núcleo Linux y un ejemplo de BDFL?
+A: 3
+O: Guido van Rossum.
+O: Mark Shuttleworth.
+O: Linus Torvalds.
+O: Larry Wall.
+
+Q: ¿Qué paradigma puede presentar problemas cuando se requiere un rendimiento ordenado?
+A: 2
+O: Paradigma sincronizado.
+O: Paradigma aleatorio.
+O: Paradigma cerrado.
+O: Paradigma abierto.
+
+Q: ¿Qué tipo de comunicación es clave en el paradigma abierto?
+A: 1
+O: Muy buena comunicación entre los miembros del equipo.
+O: Comunicación mínima entre subgrupos.
+O: Comunicación vertical definida por jerarquías.
+O: Comunicación sólo en las etapas iniciales del proyecto.
+
+Q: ¿Qué factor influye en la calidad y fiabilidad de un proyecto?
+A: 4
+O: La cantidad de líneas de código.
+O: La estructura del equipo de desarrollo.
+O: La modularidad del problema.
+O: Todos los anteriores.
+
+Q: ¿Qué determina el grado de comunicación requerido en un proyecto?
+A: 2
+O: La experiencia del jefe de equipo.
+O: La naturaleza del problema a resolver.
+O: El número de subgrupos involucrados.
+O: La fecha de entrega del proyecto.
+
+Q: ¿Cuál es un desafío al trabajar en un equipo grande con muchos integrantes?
+A: 3
+O: Aumenta la velocidad de desarrollo.
+O: Reduce la necesidad de modularidad.
+O: Complica la coordinación y comunicación entre miembros.
+O: Hace que los plazos de entrega sean más flexibles.
+
+Q: ¿Qué es fundamental para estructurar un equipo según el ámbito de vida del proyecto?
+A: 1
+O: La duración estimada del equipo en relación al proyecto.
+O: El tamaño del equipo asignado.
+O: La cantidad de tareas simultáneas.
+O: La modularidad del problema.
+
+Q: ¿Qué ocurre si el problema permite un bajo nivel de modularidad?
+A: 2
+O: Es más fácil dividir las tareas entre los miembros.
+O: La solución requiere más comunicación y coordinación.
+O: Los equipos pequeños son más efectivos.
+O: Se puede evitar la necesidad de subgrupos.
+
+Q: ¿Qué aspecto puede influir en la elección de un BDFL?
+A: 3
+O: Su historial académico.
+O: La cantidad de proyectos en los que ha trabajado.
+O: Su personalidad y relación con el equipo.
+O: El tamaño del equipo que lidera.
+
+Q: ¿Qué BDFL es conocido por crear Python?
+A: 2
+O: Mark Shuttleworth.
+O: Guido van Rossum.
+O: Linus Torvalds.
+O: Jeremy Soller.
+
+Q: ¿Qué distingue al BDFL de Mark Shuttleworth?
+A: 1
+O: Se autodenomina "dictador benevolente de por vida".
+O: Es el creador de Linux.
+O: Lidera exclusivamente proyectos de código abierto.
+O: Se centra en software propietario.
+
+Q: ¿Qué rol puede desempeñar un BDFL en un proyecto?
+A: 4
+O: Garantizar la innovación en el equipo.
+O: Delegar todas las responsabilidades técnicas.
+O: Supervisar solo la logística del proyecto.
+O: Asegurar que se sigan los principios del proyecto.
+
+Q: ¿Qué característica de un BDFL puede variar según el proyecto?
+A: 1
+O: Su nivel de implicación en las decisiones diarias.
+O: Su habilidad técnica en todos los aspectos del proyecto.
+O: Su experiencia previa en proyectos similares.
+O: Su capacidad para delegar funciones.
+
+Q: ¿Qué se requiere antes de instalar una aplicación?
+A: 3
+O: Identificar sus dependencias principales.
+O: Generar un entorno virtual para su despliegue.
+O: Desarrollarla en un estado instalable y usable.
+O: Revisar las herramientas de compilación.
+
+Q: ¿Qué es necesario para trabajar en equipo de forma eficiente?
+A: 2
+O: Crear ramas independientes por desarrollador.
+O: Seguir normas comunes conocidas por todos.
+O: Mantener comunicación externa limitada.
+O: Evitar la automatización de tareas repetitivas.
+
+Q: ¿Qué problema puede surgir si una parte del equipo no funciona bien?
+A: 1
+O: El rendimiento de todo el equipo puede verse afectado.
+O: Se incrementa la duplicación de tareas.
+O: Los subequipos tienden a trabajar de forma aislada.
+O: Se reducen los errores en el código.
+
+Q: ¿Qué beneficio tiene automatizar acciones en un equipo de desarrollo?
+A: 4
+O: Reduce la comunicación necesaria entre subgrupos.
+O: Facilita la creación de nuevas ramas de desarrollo.
+O: Evita la necesidad de análisis inicial.
+O: Asegura la consistencia del trabajo desarrollado.
+
+Q: ¿Qué deben evitar los equipos de desarrollo para trabajar eficientemente?
+A: 3
+O: Revisar el código de manera simultánea.
+O: Usar etiquetas de versión basadas en números.
+O: Repeticiones o duplicados de documentación, código y fallos.
+O: Desarrollar subproyectos independientes.
+
+Q: ¿Qué representa la rama master en un proyecto de software?
+A: 2
+O: Un entorno seguro para probar nuevas características.
+O: La línea principal de desarrollo antes de ser distribuida.
+O: Un registro de cambios realizados en subproyectos.
+O: Un área de pruebas para usuarios finales.
+
+Q: ¿Qué responsabilidad tiene el gestor de la rama master?
+A: 1
+O: Decidir qué elementos se aceptan en ella.
+O: Realizar depuraciones y optimizaciones de código.
+O: Desarrollar exclusivamente nuevas características.
+O: Asegurar que todas las versiones sean estables.
+
+Q: ¿Qué puede contener la rama master en un momento dado?
+A: 4
+O: Solo código estable y funcional.
+O: Versiones finales listas para usuarios.
+O: Modificaciones solo revisadas previamente.
+O: Código que no funciona del todo bien o contiene errores.
+
+Q: ¿Cómo actúa el gestor de la rama master según Linus Torvalds?
+A: 2
+O: Desarrolla nuevas funcionalidades.
+O: Se comporta más como un integrador que como un desarrollador.
+O: Supervisa únicamente las versiones estables.
+O: Define las fechas de lanzamiento de nuevas versiones.
+
+Q: ¿Qué sucede tras publicar una nueva versión estable (p.e. v1.0.0)?
+A: 3
+O: La rama estable se congela y no se realizan cambios.
+O: La rama master se elimina para comenzar de nuevo.
+O: Se crean nuevas propuestas y se corrigen fallos en ambas ramas.
+O: Se fusionan las ramas estable y master automáticamente.
+
+Q: ¿Qué utilidad tienen las etiquetas de versión para los usuarios?
+A: 1
+O: Identificar qué versión exacta están utilizando.
+O: Determinar el estado de la rama master.
+O: Conocer qué desarrollador trabajó en el proyecto.
+O: Revisar los cambios internos del código.
+
+Q: ¿Qué representa el número menor (B) en una etiqueta A.B.C?
+A: 4
+O: Cambios importantes en la estructura del código.
+O: Un incremento en el número de compilación.
+O: La inclusión de correcciones de fallos menores.
+O: Si es par, indica una versión estable; si es impar, una versión inestable.
+
+Q: ¿Qué indica un incremento en el número mayor (A) de una versión?
+A: 1
+O: Cambios significativos en el software.
+O: Correcciones menores en el código.
+O: Optimización en el rendimiento del sistema.
+O: Inclusión de nuevas etiquetas de desarrollo.
+
+Q: ¿Qué sucede si el número micro (C) aumenta en una rama estable?
+A: 2
+O: Se agregan nuevas funcionalidades experimentales.
+O: Representa correcciones de fallos.
+O: Indica el inicio de una nueva rama de desarrollo.
+O: Cambia la jerarquía de las etiquetas de versión.
+
+Q: ¿Qué proyecto se caracteriza por usar 3 dígitos en sus etiquetas de versión?
+A: 3
+O: LibrePCB.
+O: Firefox.
+O: Núcleo Linux.
+O: Rust.
+
+Q: ¿Qué cambio realizó Linus Torvalds en el número mayor del núcleo Linux en 2015?
+A: 2
+O: Cambió de "1.x.y" a "2.x.y".
+O: Cambió de "3.x.y" a "4.x.y".
+O: Introdujo el concepto de números micro (C).
+O: Eliminó el uso de números menores (B).
+
+Q: ¿Qué ocurre durante la "ventana temporal" en el desarrollo del núcleo Linux?
+A: 3
+O: Se lanza una nueva versión estable del código.
+O: Se corrigen los errores detectados en las versiones RC.
+O: Se añaden nuevas características al código.
+O: Se detiene el desarrollo de nuevas funcionalidades.
+
+Q: ¿Cuántas versiones "Release Candidate" (RC) suelen publicarse en el núcleo Linux?
+A: 4
+O: 3
+O: 5
+O: 6
+O: 7
+
+Q: ¿Qué características comparten Firefox y Rust en sus modelos de versiones?
+A: 1
+O: Publican nuevas versiones estables cada pocas semanas.
+O: No incluyen versiones beta ni nightly.
+O: Solo trabajan con ramas estables.
+O: Siguen un modelo de etiquetas de 4 dígitos.
+
+Q: ¿Qué ofrece Rustup en el contexto del lenguaje Rust?
+A: 2
+O: Una herramienta de depuración avanzada.
+O: La posibilidad de elegir la versión de Rust a usar.
+O: La gestión de ramas estables en proyectos grandes.
+O: Un entorno gráfico para edición de código.
+
+Q: ¿Qué es normal durante la fase de desarrollo de un proyecto?
+A: 4
+O: Realizar pruebas exclusivamente sobre el código final.
+O: Publicar una versión estable antes de la depuración.
+O: Optimizar el código para el menor uso de memoria.
+O: Encontrar fallos y llevar a cabo procesos de depuración.
+
+Q: ¿Qué se busca al compilar y enlazar un proyecto para su distribución final?
+A: 2
+O: Hacerlo compatible con múltiples lenguajes de programación.
+O: Mejorar la velocidad y/o reducir el consumo de memoria.
+O: Añadir soporte para depuración avanzada.
+O: Optimizar exclusivamente el diseño del código fuente.
+
+Q: ¿Qué requieren los depuradores para funcionar a nivel de código fuente?
+A: 3
+O: Una estructura modular en el proyecto.
+O: Que el proyecto esté completamente terminado.
+O: Opciones especiales de compilación y enlace.
+O: Acceso a las versiones nightly del proyecto.
+
+Q: ¿Qué herramienta se menciona para simplificar configuraciones en proyectos?
+A: 4
+O: Rustup.
+O: Git.
+O: LibrePCB.
+O: CMake.
+
+Q: ¿Qué diferencia una versión de depuración de una versión release?
+A: 1
+O: La versión de depuración está diseñada para detectar y corregir errores.
+O: La versión release consume más memoria pero es más rápida.
+O: Las versiones release incluyen herramientas avanzadas de desarrollo.
+O: Las versiones de depuración no requieren compilación previa.
+
+Q: ¿Qué recomienda el temario sobre los equipos de desarrollo prácticos?
+A: 2
+O: Dejar los detalles menores para una etapa posterior.
+O: Evitar repeticiones y duplicaciones de código o fallos.
+O: Trabajar de manera independiente para mayor eficiencia.
+O: Usar etiquetas de versión con números par para todos los proyectos.
+
+Q: ¿Qué sucede si la comunicación entre subequipos no es fluida?
+A: 1
+O: Afecta negativamente al funcionamiento general del equipo.
+O: Mejora la independencia de los desarrolladores.
+O: Aumenta la velocidad de implementación.
+O: Reduce la duplicación de tareas.
+
+Q: ¿Por qué es importante seguir normas comunes dentro del equipo?
+A: 4
+O: Para mantener jerarquías claras.
+O: Para reducir la cantidad de ramas en el proyecto.
+O: Para limitar las discusiones durante el desarrollo.
+O: Para facilitar la colaboración y asegurar consistencia.
+
+Q: ¿Qué tipo de comunicación debe tener un equipo hacia el exterior?
+A: 3
+O: Totalmente abierta y sin restricciones.
+O: Limitada a los subequipos responsables.
+O: Unificada en términos, formatos y documentos.
+O: Exclusiva para la gestión de fallos detectados.
+
+Q: ¿Cómo se puede simular el avance de ramas en una práctica individual?
+A: 2
+O: Con software de modelado de flujos de trabajo.
+O: Creando subdirectorios que contengan el código de cada versión.
+O: Generando reportes manuales de los cambios realizados.
+O: Fusionando ramas automáticamente al final de la práctica.
+
+Q: ¿Qué es un sistema de Bugtracking?
+A: 3
+O: Una herramienta para automatizar la codificación de proyectos.
+O: Un sistema de control de versiones integrado en el desarrollo.
+O: Una aplicación para registrar y gestionar fallos, mejoras y añadidos.
+O: Una base de datos que almacena solo errores críticos.
+
+Q: ¿Qué componente clave utiliza un sistema de Bugtracking para registrar la información?
+A: 2
+O: Un archivo de texto con anotaciones manuales.
+O: Una base de datos que guarda toda la información relacionada con los fallos.
+O: Un gestor de tareas basado en inteligencia artificial.
+O: Un sistema de logs conectado al servidor principal.
+
+Q: ¿Qué pueden incluir los avisos de fallo registrados en un sistema de Bugtracking?
+A: 4
+O: Solo los detalles sobre cómo reproducir el fallo.
+O: La descripción del problema y el responsable del error.
+O: Únicamente la gravedad y el estado del fallo.
+O: La gravedad, pasos para reproducirlo, usuarios y estado actual del fallo.
+
+Q: ¿Qué ventaja tiene un sistema de Bugtracking integrado con el control de versiones?
+A: 1
+O: Facilita la conexión entre errores y cambios en el código fuente.
+O: Reduce la cantidad de fallos reportados por los usuarios.
+O: Elimina la necesidad de etiquetar versiones.
+O: Permite evitar errores en tiempo de ejecución.
+
+Q: ¿Por qué es importante automatizar el tratamiento de avisos de fallos?
+A: 3
+O: Para mantener el control de las versiones estables del software.
+O: Para evitar errores relacionados con cambios en el código fuente.
+O: Para evitar que los avisos se pierdan, ignoren o queden sin atender.
+O: Para integrar los informes de fallos con los sistemas de análisis estático.
+
+Q: ¿Qué tipo de error es "minor" según el sistema Debian?
+A: 2
+O: Un fallo que afecta a todo el sistema operativo.
+O: Un problema trivial que no afecta a la utilidad del paquete.
+O: Un fallo severo que requiere atención inmediata.
+O: Un error de diseño mayor que es difícil de solucionar.
+
+Q: ¿Qué tipo de error incluye peticiones de características nuevas en el sistema Debian?
+A: 3
+O: Critical.
+O: Grave.
+O: Wishlist.
+O: Normal.
+
+Q: ¿Qué define un error "critical" en el sistema Debian?
+A: 4
+O: Un problema menor en la usabilidad del paquete.
+O: Una violación de la política interna de desarrollo.
+O: Un fallo que afecta a la estabilidad de un módulo del sistema.
+O: Un error que causa fallos graves en software no relacionado o pérdida de datos.
+
+Q: ¿Qué es un error "serious" según Debian?
+A: 3
+O: Un problema que causa agujeros de seguridad críticos.
+O: Un fallo que solo afecta al usuario que lo reporta.
+O: Una violación severa de la política que impide la publicación del paquete.
+O: Un error menor que no requiere atención inmediata.
+
+Q: ¿Por qué es importante limitar la cantidad de tipos de errores para los usuarios?
+A: 1
+O: Para facilitar la elección al reportar fallos y evitar confusión.
+O: Para reducir la cantidad de errores reportados.
+O: Para mejorar la comunicación interna en el equipo de desarrollo.
+O: Para aumentar la velocidad de resolución de problemas.
+
+Q: ¿Cuál es uno de los principales usos de las aplicaciones de Bugtracking?
+A: 3
+O: Optimizar el rendimiento del código fuente.
+O: Fusionar ramas de desarrollo de manera automática.
+O: Almacenar y gestionar los avisos de error de los usuarios.
+O: Facilitar la creación de nuevas etiquetas de versión.
+
+Q: ¿Qué sucede si un error se cierra con "WONTFIX"?
+A: 4
+O: Se corrige automáticamente en la próxima versión.
+O: Se convierte en un nuevo tipo de error "grave".
+O: Se prioriza para su análisis en el futuro.
+O: Puede generar insatisfacción en los usuarios que lo reportaron.
+
+Q: ¿Qué permite conocer el estado de tratamiento de un error en un sistema de Bugtracking?
+A: 2
+O: La cantidad de usuarios afectados por el problema.
+O: El progreso en la resolución de errores en un instante dado.
+O: Los cambios realizados en la rama master.
+O: La eficiencia de los desarrolladores en el último ciclo.
+
+Q: ¿Qué ventaja tienen los sistemas de Bugtracking integrados en plataformas como GitHub o GitLab?
+A: 1
+O: Combinan la gestión de bugs con el control de código fuente en un solo flujo.
+O: Aumentan la cantidad de errores reportados.
+O: Evitan la necesidad de etiquetar versiones.
+O: Reducen la comunicación entre desarrolladores y usuarios.
+
+Q: ¿Qué se debe evitar al usar un sistema de Bugtracking?
+A: 3
+O: Reportar errores que no sean críticos.
+O: Asignar un solo tipo de error a todos los problemas.
+O: Dejar sin atender o cerrar fallos sin explicación adecuada.
+O: Documentar errores menores en versiones estables.
+
+Q: ¿Qué herramienta de Bugtracking fue desarrollada originalmente por Mozilla?
+A: 2
+O: Jira.
+O: Bugzilla.
+O: Trac.
+O: Redmine.
+
+Q: ¿Qué característica destaca de Trac como sistema de Bugtracking?
+A: 4
+O: Es exclusivo para proyectos comerciales.
+O: Funciona únicamente en sistemas Linux.
+O: Carece de integración con el control de versiones.
+O: Es utilizado por proyectos como el sistema operativo Haiku.
+
+Q: ¿Qué herramienta de Bugtracking permite una personalización avanzada y es ampliamente utilizada en empresas?
+A: 3
+O: Bugzilla.
+O: Redmine.
+O: Jira.
+O: Trac.
+
+Q: ¿Qué relación tienen los repositorios como GitHub con los sistemas de Bugtracking?
+A: 2
+O: Separan completamente la gestión de errores del control de código.
+O: Integran la gestión de bugs directamente como "issues".
+O: Eliminan la necesidad de bases de datos para fallos.
+O: No permiten registrar mejoras o solicitudes de características.
+
+Q: ¿Qué sistemas de Bugtracking destacan por ser integrados en repositorios modernos?
+A: 3
+O: Bugzilla y Jira.
+O: Trac y Redmine.
+O: GitHub y GitLab.
+O: Haiku y BeOS.
+
+Q: ¿Qué es una ventaja destacada de Bugzilla?
+A: 3
+O: Es una herramienta comercial ampliamente utilizada.
+O: Ofrece una interfaz simplificada para usuarios no técnicos.
+O: Es utilizada en proyectos de código abierto como Linux Kernel, Gnome y KDE.
+O: Se integra exclusivamente con plataformas de pago.
+
+Q: ¿Qué proyecto ha utilizado Trac como su sistema de gestión de fallos?
+A: 4
+O: Mozilla Firefox.
+O: Linux Kernel.
+O: LibrePCB.
+O: Haiku, el sucesor de BeOS.
+
+Q: ¿Qué diferencia notable tiene Trac frente a Jira?
+A: 1
+O: Trac es más popular entre proyectos de código abierto.
+O: Trac está diseñado exclusivamente para grandes empresas.
+O: Jira no permite la gestión de bugs en paralelo con el desarrollo.
+O: Jira carece de integración con sistemas de control de versiones.
+
+Q: ¿Qué herramienta de Bugtracking es conocida por su flexibilidad y facilidad de uso en equipos grandes?
+A: 2
+O: Bugzilla.
+O: Jira.
+O: Redmine.
+O: Trac.
+
+Q: ¿Qué se menciona como una desventaja potencial de Bugzilla?
+A: 3
+O: No permite la integración con control de versiones.
+O: Es exclusivamente para desarrolladores avanzados.
+O: Puede ser complicado de instalar y configurar.
+O: No admite múltiples tipos de errores en un mismo proyecto.
+
+Q: ¿Qué beneficio tiene integrar el Bugtracking con repositorios como GitHub?
+A: 2
+O: Facilita la creación de ramas estables directamente desde los errores reportados.
+O: Permite gestionar bugs y código fuente en el mismo flujo de trabajo.
+O: Reduce los errores reportados por usuarios externos.
+O: Automatiza completamente la resolución de fallos en el código.
+
+Q: ¿Qué nombre reciben los bugs en sistemas como GitHub y GitLab?
+A: 3
+O: Issues críticos.
+O: Tareas pendientes.
+O: Issues.
+O: Reportes abiertos.
+
+Q: ¿Qué herramienta de Bugtracking tiene una base de usuarios más enfocada en proyectos corporativos?
+A: 4
+O: Trac.
+O: Redmine.
+O: Bugzilla.
+O: Jira.
+
+Q: ¿Qué aspecto facilita el uso de plataformas como GitHub en la gestión de errores?
+A: 1
+O: Los bugs se registran directamente como "issues" en el mismo repositorio.
+O: Los errores se corrigen automáticamente al detectar duplicados.
+O: Las versiones de desarrollo y estable se sincronizan automáticamente.
+O: No requiere la participación de usuarios externos en el proceso de pruebas.
+
+Q: ¿Qué característica tienen los sistemas integrados como GitLab?
+A: 2
+O: Carecen de herramientas para gestionar "issues".
+O: Permiten vincular errores con commits específicos.
+O: Se limitan a reportar errores críticos.
+O: No admiten solicitudes de características o mejoras.
+
+Q: ¿Qué se propone en una práctica grupal relacionada con Bugzilla?
+A: 4
+O: Diseñar un nuevo sistema de seguimiento de fallos.
+O: Comparar Bugzilla con GitHub.
+O: Simular errores en proyectos basados en Trac.
+O: Resumir los trucos publicados por Andre Klapper.
+
+Q: ¿Qué aspecto se debe comparar entre GitHub y GitLab en una práctica grupal?
+A: 3
+O: La cantidad de usuarios soportados por cada sistema.
+O: Los lenguajes de programación compatibles.
+O: Las ventajas e inconvenientes de la gestión de bugs en cada plataforma.
+O: La complejidad de instalación en entornos locales.
+
+Q: ¿Qué funcionalidad debe tener un Local Bug Tracker (LBT) creado en una práctica individual?
+A: 1
+O: Permitir crear, seguir, cerrar y reabrir avisos de fallos.
+O: Ofrecer una base de datos persistente en disco.
+O: Integrarse directamente con GitHub o GitLab.
+O: Reportar errores automáticamente en sistemas remotos.
+
+Q: ¿Qué característica adicional se sugiere añadir a un LBT desarrollado en prácticas?
+A: 4
+O: Permitir análisis de código estático integrado.
+O: Soporte para la asignación automática de errores.
+O: Integración completa con sistemas de control de versiones.
+O: Algo inspirado en las funcionalidades de GitHub o GitLab.
+
+Q: ¿Qué tipo de usuarios se sugiere implementar en un LBT?
+A: 2
+O: Solo usuarios normales con acceso limitado.
+O: Usuarios normales y administradores con diferentes permisos.
+O: Exclusivamente administradores con control total.
+O: Usuarios externos con acceso a configuraciones avanzadas.
+
+Q: ¿Por qué es importante facilitar la instalación del software a los usuarios?
+A: 3
+O: Para reducir los costos de desarrollo.
+O: Para evitar errores de implementación.
+O: Para aumentar la probabilidad de uso del software.
+O: Para garantizar compatibilidad con sistemas antiguos.
+
+Q: ¿Qué problema pueden presentar los instaladores tradicionales de Windows?
+A: 4
+O: Son exclusivos para aplicaciones de 32 bits.
+O: No permiten la instalación de múltiples programas a la vez.
+O: Restringen la instalación en sistemas basados en Unix.
+O: No gestionan dependencias ni evitan la sobreescritura de archivos.
+
+Q: ¿Qué es el formato TAR y para qué fue diseñado originalmente?
+A: 1
+O: Un formato para empaquetar archivos en cintas magnéticas.
+O: Un sistema para comprimir datos en sistemas Unix.
+O: Una herramienta para gestionar dependencias en software.
+O: Un estándar para compilar aplicaciones en Linux.
+
+Q: ¿Qué extensión utiliza un archivo TAR comprimido con gzip?
+A: 2
+O: .tar.bz
+O: .tar.gz o .tgz
+O: .tar.xz o .txz
+O: .tar
+
+Q: ¿Qué limitación tiene el formato TAR para la distribución eficiente de software?
+A: 3
+O: Solo es compatible con sistemas Unix.
+O: No admite compresión de datos.
+O: No gestiona dependencias ni acciones de instalación.
+O: Requiere herramientas externas para empaquetar múltiples archivos.
+
+Q: ¿Qué estructura interna tiene un archivo en formato DEB?
+A: 3
+O: Contiene un único archivo comprimido.
+O: Incluye exclusivamente los binarios del programa.
+O: Contiene "debian-binary", "control.tar.gz" y "data.tar".
+O: Solo almacena metainformación del paquete.
+
+Q: ¿Qué información incluye el archivo "control.tar.gz" dentro de un paquete DEB?
+A: 2
+O: Los binarios necesarios para ejecutar el programa.
+O: La metainformación del paquete.
+O: Las dependencias de software externo.
+O: Las instrucciones para compilar el código fuente.
+
+Q: ¿Qué herramienta se utiliza para construir un archivo DEB a partir de un proyecto?
+A: 4
+O: tar
+O: alien
+O: apt-get
+O: dpkg
+
+Q: ¿Qué utilidad tiene la aplicación dh_make en el empaquetado DEB?
+A: 1
+O: Prepara el empaquetado para un archivo de origen.
+O: Realiza automáticamente las dependencias del paquete.
+O: Genera las claves de firma del paquete.
+O: Convierte archivos .rpm a .deb.
+
+Q: ¿Qué archivo dentro del directorio "debian" contiene el historial de cambios del paquete?
+A: 3
+O: control
+O: rules
+O: changelog
+O: copyright
+
+Q: ¿Qué distribuciones suelen utilizar el formato RPM?
+A: 2
+O: Debian y Ubuntu.
+O: Red Hat, Fedora y SuSE.
+O: Arch Linux y Manjaro.
+O: Gentoo y Slackware.
+
+Q: ¿Qué herramienta permite convertir entre formatos de paquetes como DEB y RPM?
+A: 1
+O: alien
+O: dpkg
+O: apt
+O: tar
+
+Q: ¿Qué comando convierte un archivo .deb a .rpm utilizando alien?
+A: 3
+O: alien -t
+O: alien -d
+O: alien -r
+O: alien -x
+
+Q: ¿Qué opción de alien intenta convertir los scripts de instalación/desinstalación?
+A: 2
+O: -r
+O: -c
+O: -d
+O: -t
+
+Q: ¿Qué ventaja ofrece alien en la distribución de software?
+A: 4
+O: Genera paquetes .deb automáticamente.
+O: Permite gestionar dependencias de manera nativa.
+O: Simplifica el desarrollo de binarios multiplataforma.
+O: Facilita la conversión de paquetes entre formatos como DEB, RPM y TGZ.
+
+Q: ¿Qué pasos básicos se realizan al "debianizar" un proyecto?
+A: 2
+O: Crear un archivo TAR y compilarlo directamente.
+O: Preparar un archivo DEB con dh_make, añadir scripts y convertir a otros formatos.
+O: Generar un archivo RPM y convertirlo a TGZ con alien.
+O: Diseñar un script Makefile e integrarlo con dpkg.
+
+Q: ¿Qué se busca al añadir scripts pre|post al empaquetado de un proyecto?
+A: 3
+O: Reducir el tamaño del paquete generado.
+O: Aumentar la compatibilidad con sistemas antiguos.
+O: Ejecutar acciones específicas durante la instalación/desinstalación.
+O: Crear versiones alternativas del mismo paquete.
+
+Q: ¿Qué sistemas modernos de paquetería se mencionan como alternativas a DEB y RPM?
+A: 4
+O: Snap y Alien.
+O: AppImage y dpkg.
+O: Flatpak y dh_make.
+O: Flatpak, Snap, AppImage y Nix.
+
+Q: ¿Qué ventaja ofrece Flatpak respecto a sistemas tradicionales como DEB?
+A: 1
+O: Permite ejecutar aplicaciones en entornos aislados (sandboxing).
+O: Optimiza la velocidad de instalación en sistemas Unix.
+O: Reduce el uso de dependencias externas.
+O: Es compatible exclusivamente con sistemas Red Hat.
+
+Q: ¿Qué característica destaca de AppImage como formato de distribución?
+A: 2
+O: Solo es compatible con sistemas Debian.
+O: No requiere instalación, las aplicaciones son portátiles.
+O: Facilita la integración con sistemas de control de versiones.
+O: Automatiza la gestión de dependencias.
+
+Q: ¿Qué se recomienda hacer en el trabajo en grupo relacionado con sistemas de paquetes?
+A: 3
+O: Crear un archivo TGZ a partir de un proyecto en C++.
+O: Desarrollar scripts para convertir paquetes RPM a DEB.
+O: Descargar código fuente, generar un DEB y convertirlo a RPM y TGZ.
+O: Diseñar un entorno virtual para probar paquetes convertidos.
+
+Q: ¿Qué herramienta se utiliza en las prácticas para instalar un paquete DEB generado?
+A: 4
+O: alien
+O: dpkg-buildpackage
+O: dh_make
+O: dpkg
+
+Q: ¿Qué contenido debe incluir un archivo tgz para entregar una práctica?
+A: 1
+O: El archivo DEB generado y otros relacionados con el proyecto.
+O: Solo el changelog del proyecto.
+O: El código fuente en formato TAR sin compilar.
+O: Una descripción del sistema de paquetería utilizado.
+
+Q: ¿Qué actividad opcional se sugiere en las prácticas individuales?
+A: 2
+O: Crear una herramienta de conversión de formatos DEB a RPM.
+O: Utilizar scripts pre|post incluidos en el directorio debian.
+O: Convertir automáticamente un paquete Flatpak a Snap.
+O: Generar binarios compatibles con múltiples arquitecturas.
+
+Q: ¿Qué herramienta facilita la creación de una nueva entrada en el archivo changelog?
+A: 4
+O: dpkg
+O: alien
+O: apt-get
+O: dch
+
+Q: ¿Qué tipo de archivo es data.tar dentro de un paquete DEB?
+A: 2
+O: Un archivo que contiene solo los scripts de instalación.
+O: Un archivo que contiene los binarios y archivos a instalar.
+O: Un archivo con la descripción detallada del paquete.
+O: Un archivo comprimido con las dependencias externas del software.
+
+Q: ¿Qué indica la opción -p al usar el comando mkdir en la creación de paquetes?
+A: 3
+O: Asigna permisos a los directorios creados.
+O: Crea múltiples archivos comprimidos en paralelo.
+O: Crea directorios intermedios si no existen.
+O: Prepara el directorio para empaquetar directamente.
+
+Q: ¿Qué propósito tiene el archivo rules dentro del directorio debian?
+A: 1
+O: Contiene las instrucciones para construir el paquete DEB.
+O: Guarda información sobre las dependencias del paquete.
+O: Sirve para documentar las modificaciones realizadas.
+O: Especifica los scripts de instalación/desinstalación.
+
+Q: ¿Qué comando se utiliza para compilar un paquete DEB sin firmar los cambios?
+A: 4
+O: alien -c
+O: fakeroot tar
+O: dpkg -i
+O: dpkg-buildpackage -rfakeroot -us -uc
+
+Q: ¿Qué archivo dentro del directorio debian se utiliza para declarar dependencias del paquete?
+A: 3
+O: changelog
+O: rules
+O: control
+O: copyright
+
+Q: ¿Cuál es una diferencia principal entre DEB y RPM?
+A: 2
+O: DEB no admite scripts de instalación/desinstalación.
+O: RPM es utilizado principalmente en distribuciones como Red Hat y Fedora.
+O: DEB requiere conversiones adicionales para sistemas basados en Ubuntu.
+O: RPM permite ejecutar aplicaciones sin instalación previa.
+
+Q: ¿Qué aspecto destaca de Snap frente a DEB y RPM?
+A: 1
+O: Proporciona un entorno de ejecución aislado (sandbox).
+O: Optimiza el uso de memoria en aplicaciones grandes.
+O: Está diseñado exclusivamente para servidores.
+O: Reduce el tiempo de compilación del software.
+
+Q: ¿Qué diferencia tiene Flatpak respecto a sistemas como AppImage?
+A: 4
+O: Flatpak es exclusivo para sistemas Debian.
+O: AppImage gestiona automáticamente las dependencias.
+O: Flatpak no admite aplicaciones portátiles.
+O: Flatpak utiliza un entorno aislado y centralizado para aplicaciones.
+
+Q: ¿Qué ventaja aporta Nix Package Manager en comparación con sistemas tradicionales?
+A: 3
+O: Simplifica la creación de paquetes para distribuciones basadas en RPM.
+O: Integra la gestión de bugs con el empaquetado de software.
+O: Permite gestionar versiones y configuraciones aisladas del sistema.
+O: Facilita la conversión de paquetes entre formatos.
+
+Q: ¿Qué característica de AppImage lo hace único entre los sistemas de paquetería?
+A: 2
+O: Automatiza la creación de paquetes multiplataforma.
+O: No requiere instalación, las aplicaciones son portátiles.
+O: Es compatible exclusivamente con sistemas Linux basados en RPM.
+O: Proporciona un entorno de ejecución seguro para cada aplicación.
+
+Q: ¿Qué se debe hacer al modificar archivos en el directorio debian de un paquete?
+A: 4
+O: Instalar directamente el paquete con dpkg -i.
+O: Comprimir los archivos en un nuevo TGZ.
+O: Generar un changelog automático con alien.
+O: Crear una nueva entrada en el archivo changelog y regenerar el paquete.
+
+Q: ¿Qué herramienta se menciona como clave para convertir paquetes en las prácticas grupales?
+A: 3
+O: dpkg-buildpackage
+O: dh_make
+O: alien
+O: fakeroot
+
+Q: ¿Qué se debe incluir en un archivo postinst en un paquete DEB?
+A: 2
+O: La configuración inicial del paquete antes de la instalación.
+O: Acciones a realizar después de instalar el paquete.
+O: Dependencias necesarias para ejecutar el software.
+O: Información sobre los archivos binarios del paquete.
+
+Q: ¿Qué sistema de paquetería es adecuado para probar aplicaciones portátiles sin instalación?
+A: 1
+O: AppImage
+O: RPM
+O: DEB
+O: Flatpak
+
+Q: ¿Qué ventaja tiene convertir un paquete DEB a RPM usando alien?
+A: 3
+O: Se eliminan automáticamente dependencias innecesarias.
+O: Se optimiza la estructura del paquete para sistemas Debian.
+O: Se facilita el uso del software en distribuciones basadas en Red Hat.
+O: El paquete generado se integra automáticamente con apt-get.
+
+Q: ¿Qué opción debe usarse con alien para convertir un archivo .deb a .tgz?
+A: 1
+O: -t
+O: -r
+O: -d
+O: -c
+
+Q: ¿Qué información se puede obtener con el comando dpkg -I sobre un paquete DEB?
+A: 2
+O: Permisos y propietario del archivo.
+O: Detalles del paquete, como descripción, versión y dependencias.
+O: Historial de cambios realizados en el paquete.
+O: El tiempo estimado de instalación.
+
+Q: ¿Qué archivo dentro de un paquete DEB almacena las instrucciones para la desinstalación del software?
+A: 4
+O: control
+O: rules
+O: changelog
+O: postrm
+
+Q: ¿Qué comando se utiliza para instalar un paquete DEB generado manualmente?
+A: 3
+O: alien -d
+O: fakeroot dpkg -b
+O: dpkg -i
+O: apt-get install
+
+Q: ¿Qué se debe hacer si se modifica el contenido del archivo control dentro del directorio debian?
+A: 4
+O: Ejecutar directamente el paquete con dpkg -i.
+O: Comprimir los archivos modificados en un nuevo TAR.
+O: Convertir el paquete a formato RPM con alien.
+O: Regenerar el archivo DEB con dpkg-buildpackage.
+
+Q: ¿Qué utilidad tiene la herramienta fakeroot al generar un paquete DEB?
+A: 2
+O: Evita la necesidad de compilar el código fuente.
+O: Simula permisos de superusuario para empaquetar el software.
+O: Genera scripts de instalación y desinstalación automáticamente.
+O: Configura dependencias necesarias para el paquete.
+
+Q: ¿Qué herramienta permite automatizar la creación de una nueva entrada en el changelog?
+A: 3
+O: alien
+O: dpkg
+O: dch
+O: apt-get
+
+Q: ¿Qué opción de dpkg-buildpackage evita la firma del paquete generado?
+A: 4
+O: -rfakeroot
+O: -d
+O: -uc
+O: -us
+
+Q: ¿Qué indica la extensión .ex en los archivos del directorio debian generados por dh_make?
+A: 1
+O: Que son ejemplos que deben ser adaptados antes de usarse.
+O: Que contienen las dependencias externas del paquete.
+O: Que son binarios generados durante la compilación.
+O: Que representan archivos listos para la instalación.
+
+Q: ¿Qué archivo generado por dh_make contiene la licencia del software empaquetado?
+A: 2
+O: control
+O: copyright
+O: rules
+O: postinst
+
+Q: ¿Qué comando convierte un archivo .rpm a .deb utilizando alien?
+A: 3
+O: alien -t
+O: alien -c
+O: alien -d
+O: alien -r
+
+Q: ¿Qué característica hace destacar a Flatpak frente a otros sistemas de paquetería?
+A: 2
+O: Su enfoque en aplicaciones corporativas.
+O: El aislamiento (sandbox) de las aplicaciones.
+O: La portabilidad sin necesidad de instalación.
+O: La optimización para sistemas basados en Ubuntu.
+
+Q: ¿Qué sistema de paquetería permite ejecutar aplicaciones sin necesidad de instalación?
+A: 3
+O: Snap
+O: Flatpak
+O: AppImage
+O: RPM
+
+Q: ¿Qué tipo de dependencias maneja Nix Package Manager para evitar conflictos?
+A: 4
+O: Dependencias generales.
+O: Dependencias solo para sistemas Debian.
+O: Dependencias externas a los binarios.
+O: Dependencias aisladas para cada configuración.
+
+Q: ¿Qué característica destaca de Snap como sistema de paquetería?
+A: 1
+O: Permite actualizaciones automáticas en segundo plano.
+O: Elimina la necesidad de scripts pre/post.
+O: Facilita la conversión de formatos de paquetes.
+O: Es compatible con distribuciones basadas en Red Hat.
+
+Q: ¿Qué se recomienda hacer con los archivos de scripts pre/post generados por dh_make?
+A: 4
+O: Eliminarlos para evitar conflictos.
+O: Usarlos sin modificaciones en el paquete final.
+O: Comprimirlos directamente en el paquete TGZ.
+O: Modificarlos según las necesidades específicas del proyecto.
+
+Q: ¿Qué sistema de paquetería se menciona como especialmente útil para aplicaciones portátiles?
+A: 3
+O: RPM
+O: Snap
+O: AppImage
+O: DEB
+
+Q: ¿Qué práctica opcional se sugiere al trabajar con sistemas de paquetes?
+A: 2
+O: Automatizar la conversión de paquetes DEB a Snap.
+O: Usar scripts pre/postinst en el empaquetado.
+O: Implementar Nix Package Manager en un proyecto.
+O: Desarrollar una aplicación Flatpak desde cero.
+
+Q: ¿Qué ventaja tiene convertir un paquete a TGZ después de empaquetarlo en DEB?
+A: 1
+O: Permite usar el software en sistemas más antiguos.
+O: Optimiza el tamaño del paquete para servidores.
+O: Asegura compatibilidad con Snap y Flatpak.
+O: Automatiza la creación de versiones adicionales.
+
+Q: ¿Qué sistema de paquetería es conocido por su enfoque en la portabilidad y simplicidad?
+A: 3
+O: DEB
+O: Flatpak
+O: AppImage
+O: RPM
+
+Q: ¿Qué herramienta simplifica el proceso de compilación en proyectos grandes teniendo en cuenta las marcas de tiempo?
+A: 3
+O: Ccache
+O: Distcc
+O: Make
+O: Sccache
+
+Q: ¿Qué sucede si se usa la opción -k al ejecutar Make?
+A: 2
+O: Finaliza inmediatamente ante cualquier error.
+O: Continúa la ejecución incluso si hay errores.
+O: Genera un archivo de log con los errores detectados.
+O: Limpia los archivos intermedios antes de compilar.
+
+Q: ¿Qué representa el objetivo clean en un Makefile?
+A: 4
+O: Compila los archivos fuente en paralelo.
+O: Instala los binarios generados por la compilación.
+O: Ejecuta el programa principal del proyecto.
+O: Borra los archivos intermedios generados en la compilación.
+
+Q: ¿Qué extensión debe tener un archivo que contiene un Makefile?
+A: 3
+O: .mk
+O: .make
+O: No tiene una extensión obligatoria.
+O: .conf
+
+Q: ¿Qué significa el símbolo # en un Makefile?
+A: 1
+O: Indica el comienzo de un comentario.
+O: Define una dependencia no satisfecha.
+O: Separa objetivos de sus dependencias.
+O: Marca una línea de error en el archivo.
+
+Q: ¿Qué representa la variable $@ en un Makefile?
+A: 4
+O: La lista de dependencias más recientes.
+O: La ruta al directorio principal del proyecto.
+O: Todas las dependencias del objetivo actual.
+O: El nombre del objetivo actual.
+
+Q: ¿Qué representa la variable especial $^ en un Makefile?
+A: 3
+O: El último objetivo ejecutado.
+O: La lista de ficheros limpios.
+O: La lista completa de dependencias.
+O: Las dependencias más jóvenes que el objetivo actual.
+
+Q: ¿Cómo se define un objetivo que no genera un archivo (p.ej., clean) en un Makefile?
+A: 2
+O: Usando el prefijo special:
+O: Declarando el objetivo como .PHONY.
+O: Añadiendo una línea vacía al final.
+
+Q: ¿Qué opción de Make permite ejecutar compilaciones en paralelo?
+A: 1
+O: -j
+O: -k
+O: -c
+O: -f
+
+Q: ¿Cuál es el propósito del objetivo install en un Makefile estándar?
+A: 4
+O: Compilar todos los archivos del proyecto.
+O: Eliminar archivos intermedios generados.
+O: Crear un archivo comprimido con la distribución.
+O: Instalar el resultado del proyecto en el sistema.
+
+Q: ¿Qué tarea realiza ccache en el proceso de compilación?
+A: 1
+O: Cachea los resultados de compilaciones previas para evitar recompilaciones innecesarias.
+O: Divide la compilación en módulos ejecutados en paralelo.
+O: Transfiere los archivos fuente a un servidor remoto.
+O: Reduce el tamaño de los binarios generados.
+
+Q: ¿Dónde guarda ccache los resultados de las compilaciones previas?
+A: 3
+O: En el directorio de compilación actual.
+O: En la carpeta del proyecto principal.
+O: En el directorio ~/.ccache/.
+O: En un archivo temporal en /tmp.
+
+Q: ¿Qué lenguajes de programación soporta ccache actualmente?
+A: 4
+O: Solo C y C++.
+O: C, Python y Go.
+O: C++ y Rust.
+O: C, C++, Objective-C y Objective-C++.
+
+Q: ¿Qué comando permite borrar toda la caché de ccache?
+A: 2
+O: ccache -p
+O: ccache -C
+O: ccache -s
+O: ccache -d
+
+Q: ¿Qué ventaja tiene el modo directo de ccache sobre otros modos?
+A: 3
+O: Permite compilar proyectos en paralelo.
+O: Reduce las dependencias del compilador.
+O: Es el más rápido porque no ejecuta el preprocesador.
+O: Soporta múltiples compiladores simultáneamente.
+
+Q: ¿Qué permite hacer distcc en proyectos de gran volumen?
+A: 3
+O: Crear un solo binario optimizado para múltiples arquitecturas.
+O: Dividir el código en varios módulos independientes.
+O: Distribuir la compilación entre varias máquinas conectadas en red.
+O: Reducir el tamaño de los binarios generados.
+
+Q: ¿Qué comando inicia el servidor de distcc en un equipo remoto?
+A: 4
+O: distcc --client
+O: distcc start
+O: distcc -p
+O: distccd --daemon
+
+Q: ¿Qué variable de entorno se utiliza para indicar los servidores disponibles en distcc?
+A: 2
+O: DISTCC_NODES
+O: DISTCC_HOSTS
+O: CCACHE_SERVERS
+O: MAKE_HOSTS
+
+Q: ¿Qué diferencia hay entre los modos sencillo y bombeo de distcc?
+A: 1
+O: En el modo bombeo, el preprocesador se ejecuta de forma remota.
+O: En el modo sencillo, se excluyen las cabeceras estándar.
+O: El modo sencillo es más rápido que el bombeo.
+O: El modo bombeo no soporta archivos #include.
+
+Q: ¿Qué herramienta puede usarse junto con distcc para optimizar aún más el tiempo de compilación?
+A: 4
+O: Make con la opción -k.
+O: Mold para enlazar archivos en paralelo.
+O: GNU Parallel.
+O: Ccache.
+
+Q: ¿Qué problema principal busca resolver mold durante el proceso de enlace?
+A: 2
+O: Reducir el tamaño del binario final.
+O: Paralelizar el proceso de enlace.
+O: Aumentar la velocidad de compilación.
+O: Comprimir los binarios generados.
+
+Q: ¿Qué comando permite compilar usando distcc y ccache al mismo tiempo?
+A: 4
+O: make -j CC=distcc ccache
+O: ccache distcc
+O: distcc ccache gcc
+O: export CCACHE_PREFIX="distcc"
+
+Q: ¿Qué función tiene GNU Parallel en el contexto de compilaciones?
+A: 3
+O: Gestionar dependencias de los archivos fuente.
+O: Cachear compilaciones intermedias.
+O: Ejecutar múltiples tareas en paralelo.
+O: Distribuir la compilación entre varios servidores.
+
+Q: ¿Qué herramienta permite compilar proyectos escritos en múltiples lenguajes como Rust y C++?
+A: 2
+O: Ccache.
+O: Sccache.
+O: Distcc.
+O: Mold.
+
+Q: ¿Qué tecnología de Clang permite optimizar el enlace en grandes proyectos?
+A: 1
+O: ThinLTO.
+O: GNU Parallel.
+O: Multimake.
+O: Prelinked Caches.
+
+Q: ¿Qué problema podría surgir al usar Make con la opción -j para ejecutar trabajos en paralelo?
+A: 3
+O: Se reducen los tiempos de compilación totales.
+O: Las dependencias no se satisfacen correctamente en paralelo.
+O: Se producen fallos de compilación si las dependencias no están bien especificadas.
+O: Los archivos generados se sobrescriben en directorios distintos.
+
+Q: ¿Qué variable en distcc define el orden de preferencia de los servidores?
+A: 4
+O: DISTCC_ORDER
+O: DISTCC_PRIORITY
+O: HOSTS_DISTCC
+O: DISTCC_HOSTS
+
+Q: ¿Qué efecto tiene aumentar los valores de -jN en Make?
+A: 2
+O: Incrementa la calidad de los binarios generados.
+O: Permite que más trabajos se ejecuten en paralelo, reduciendo tiempos.
+O: Genera múltiples versiones del mismo binario en distintos directorios.
+O: Altera las dependencias entre los módulos.
+
+Q: ¿Qué comando de ccache permite consultar las estadísticas de la caché?
+A: 3
+O: ccache -C
+O: ccache -p
+O: ccache -s
+O: ccache -v
+
+Q: ¿Qué archivo en distcc almacena la configuración local del cliente?
+A: 1
+O: $HOME/.distcc/hosts
+O: /etc/default/distcc
+O: $HOME/.ccache/config
+O: /usr/local/distcc/settings
+
+Q: ¿Qué ventaja tiene Sccache frente a Ccache?
+A: 4
+O: Es más rápida en el modo directo.
+O: Cachea exclusivamente compilaciones en C y C++.
+O: Reduce los tiempos de enlace de los binarios.
+O: Soporta múltiples lenguajes y compiladores además de C/C++.
+
+Q: ¿Qué diferencia principal existe entre mold y ld como enlazadores?
+A: 3
+O: Mold genera binarios más pequeños.
+O: Ld soporta más lenguajes de programación.
+O: Mold permite paralelizar el proceso de enlace.
+O: Ld incluye soporte integrado para distcc.
+
+Q: ¿Qué herramienta se utiliza para compilar código distribuido en múltiples máquinas?
+A: 2
+O: Sccache.
+O: Distcc.
+O: GNU Parallel.
+O: Mold.
+
+Q: ¿Qué optimización clave aporta ThinLTO en Clang?
+A: 4
+O: Genera binarios más pequeños al omitir depuradores.
+O: Cachea compilaciones previas para evitar redundancias.
+O: Divide el código en módulos optimizados para enlace rápido.
+O: Permite optimizaciones entre módulos en tiempo de enlace.
+
+Q: ¿Qué herramienta combina características de ccache y distcc para la compilación distribuida?
+A: 1
+O: Distcc con ccache como prefijo.
+O: Mold con opciones de caching.
+O: Sccache en modo preprocesador.
+O: Make con distcc integrado.
+
+Q: ¿Qué ventaja tiene GNU Parallel al ejecutarse con proyectos grandes?
+A: 3
+O: Reduce el tiempo de compilación en máquinas individuales.
+O: Gestiona dependencias automáticamente.
+O: Ejecuta múltiples trabajos en paralelo distribuidos en varias máquinas.
+O: Permite compilar binarios en sistemas basados en ARM.
+
+Q: ¿Qué herramienta podría usarse como alternativa a distcc para compilación distribuida?
+A: 2
+O: Mold.
+O: IceCream.
+O: ThinLTO.
+O: Sccache.
+
+Q: ¿Qué tecnología de Clang es adecuada para reducir los tiempos de enlace en proyectos modulares?
+A: 1
+O: ThinLTO.
+O: GNU Parallel.
+O: Multithreaded Linking.
+O: Preprocessed Caches.
+
+Q: ¿Qué característica destaca de mold frente a otros enlazadores?
+A: 4
+O: Genera binarios más pequeños.
+O: Es compatible exclusivamente con sistemas Unix.
+O: Soporta más lenguajes de programación.
+O: Permite paralelizar el proceso de enlace.
+
+Q: ¿Qué combinación permite aprovechar tanto la cache de compilaciones como la distribución entre servidores?
+A: 1
+O: Usar ccache como prefijo para distcc.
+O: Compilar con mold y GNU Parallel.
+O: Ejecutar distcc en modo bombeo.
+O: Configurar ThinLTO junto con Sccache.
+
+Q: ¿Qué se sugiere hacer con Make en las prácticas individuales?
+A: 2
+O: Convertir un proyecto en un paquete DEB.
+O: Probar con diferentes valores de -jN para observar mejoras de rendimiento.
+O: Utilizar Mold para enlazar módulos en paralelo.
+O: Cachear compilaciones previas con distcc.
+
+Q: ¿Qué herramienta se recomienda configurar en las prácticas para distribuir compilaciones entre dos máquinas?
+A: 3
+O: GNU Parallel.
+O: Sccache.
+O: Distcc.
+O: Mold.
+
+Q: ¿Qué archivo debe generarse y entregarse en las prácticas del tema 5?
+A: 4
+O: Un paquete binario compilado.
+O: Un Makefile con varias dependencias.
+O: Un archivo comprimido con los binarios generados.
+O: Un archivo TGZ con un reporte detallado de tiempos y resultados.
+
+Q: ¿Qué configuración debe evitarse al combinar distcc con ccache?
+A: 2
+O: Definir ccache como prefijo para distcc.
+O: Usar el modo bombeo de distcc.
+O: Ejecutar distcc con configuraciones manuales.
+O: Cachear compilaciones previas con warnings.
+
+Q: ¿Qué práctica opcional se menciona para probar mold como enlazador?
+A: 1
+O: Probar tiempos de enlace con mold en comparación con ld o gold.
+O: Configurar mold junto con distcc para proyectos distribuidos.
+O: Utilizar mold exclusivamente con proyectos en C++.
+O: Comparar mold con ThinLTO en Clang.
+
+Q: ¿Qué limitación tiene ccache respecto a las opciones de compilación?
+A: 3
+O: No soporta proyectos escritos en múltiples lenguajes.
+O: Sólo funciona en sistemas basados en Unix.
+O: No cachea compilaciones con opciones específicas no soportadas.
+O: No permite integrarse con distcc o sccache.
+
+Q: ¿Qué problema puede surgir al usar distcc con compiladores diferentes en los servidores?
+A: 2
+O: Los archivos fuente se sobrescriben en los servidores más rápidos.
+O: Se pueden generar errores debido a diferencias en el ABI entre versiones de compiladores.
+O: La configuración de los servidores se sobrescribe al compilar en paralelo.
+O: Distcc se bloquea al manejar múltiples solicitudes.
+
+Q: ¿Por qué no es recomendable usar el modo bombeo de distcc junto con ccache?
+A: 4
+O: Reduce la compatibilidad con sistemas distribuidos.
+O: Incrementa los tiempos de preprocesamiento.
+O: No permite aprovechar las ventajas del modo directo.
+O: Duplica el trabajo del preprocesador, afectando la eficiencia.
+
+Q: ¿Qué sucede si las dependencias no están correctamente definidas en un Makefile?
+A: 3
+O: La compilación genera errores críticos.
+O: Los binarios se generan pero con errores de enlace.
+O: Se producen fallos al compilar en paralelo con -j.
+O: Los tiempos de compilación se incrementan de forma lineal.
+
+Q: ¿Qué herramienta podría dar problemas si no se configura correctamente en sistemas heterogéneos?
+A: 1
+O: Distcc.
+O: Mold.
+O: Ccache.
+O: Sccache.
+
+Q: ¿Qué combinación de herramientas permite reducir tiempos tanto de compilación como de enlace?
+A: 3
+O: Ccache y ThinLTO.
+O: Sccache y GNU Parallel.
+O: Mold y distcc.
+O: Distcc y ld.
+
+Q: ¿Qué comando exporta ccache como prefijo para distcc?
+A: 2
+O: distcc-prefix=ccache
+O: export CCACHE_PREFIX="distcc"
+O: ccache-distcc export
+O: export DISTCC_PREFIX="ccache"
+
+Q: ¿Qué opción de distcc permite especificar los servidores de compilación disponibles?
+A: 4
+O: -p
+O: -C
+O: --hosts
+O: Configurar la variable DISTCC_HOSTS.
+
+Q: ¿Qué tecnología combina el uso de múltiples compiladores y herramientas de enlace como mold?
+A: 3
+O: Sccache.
+O: Distcc.
+O: GNU Parallel.
+O: ThinLTO.
+
+Q: ¿Qué problema resuelve mold que no puede ser abordado por ccache?
+A: 2
+O: Cachear compilaciones intermedias.
+O: Reducir los tiempos de enlace en proyectos grandes.
+O: Dividir la compilación en múltiples nodos.
+O: Ejecutar procesos de preprocesamiento más rápidos.
+
+Q: ¿Cómo se configura el número de trabajos paralelos en distcc al usar Make?
+A: 3
+O: A través de la variable DISTCC_WORKERS.
+O: Usando la opción -k en Make.
+O: Con la opción -jN, donde N es el doble de núcleos disponibles en la red.
+O: Configurando los hosts en $HOME/.distcc/settings.
+
+Q: ¿Qué comando limpia completamente la caché de compilaciones de ccache?
+A: 2
+O: ccache -s
+O: ccache -C
+O: distcc clean-cache
+O: ccache --reset
+
+Q: ¿Qué archivo es importante actualizar al cambiar configuraciones de distcc?
+A: 4
+O: /etc/distcc/daemon.conf
+O: /usr/local/distcc/hosts
+O: /etc/default/make.conf
+O: $HOME/.distcc/hosts
+
+Q: ¿Qué ventaja tiene usar sccache en proyectos con múltiples lenguajes?
+A: 1
+O: Soporta más lenguajes y compiladores que ccache.
+O: Permite optimizaciones exclusivas para C y C++.
+O: Es compatible solo con proyectos distribuidos.
+O: Integra enlaces rápidos con mold y ThinLTO.
+
+Q: ¿Qué parámetro de Make permite comprobar si las dependencias están correctamente configuradas antes de compilar?
+A: 3
+O: -jN
+O: -C
+O: -n
+O: -k
+
+Q: ¿Qué sucede si se utilizan servidores con distintas versiones de compilador en distcc?
+A: 3
+O: El rendimiento de distcc mejora por la diversidad de versiones.
+O: Los binarios generados son incompatibles con el sistema local.
+O: Puede haber problemas de ABI, especialmente en C++.
+O: La caché de compilaciones se corrompe.
+
+Q: ¿Qué configuración mejora el rendimiento al usar distcc con ccache?
+A: 1
+O: Usar ccache como prefijo para distcc.
+O: Configurar el modo bombeo en distcc.
+O: Evitar el uso de archivos #include en el proyecto.
+O: Ejecutar ccache y distcc como procesos independientes.
+
+Q: ¿Qué herramienta permite verificar las estadísticas de compilaciones distribuidas en distcc?
+A: 2
+O: ccache -s
+O: distccmon-text
+O: distcc -C
+O: distcc-stats
+
+Q: ¿Qué problema resuelve GNU Parallel en el contexto de compilaciones grandes?
+A: 4
+O: Cachea compilaciones para evitar redundancias.
+O: Gestiona dependencias de manera automática.
+O: Ejecuta múltiples compiladores distribuidos en red.
+O: Permite ejecutar tareas independientes en paralelo.
+
+Q: ¿Qué tecnología reduce drásticamente los tiempos de enlace en grandes proyectos?
+A: 3
+O: Distcc.
+O: Ccache.
+O: Mold.
+O: ThinLTO.
+
+Q: ¿Qué se recomienda probar al usar Make con la opción -jN?
+A: 4
+O: Ajustar N al número de dependencias definidas.
+O: Configurar N como el triple de los núcleos disponibles.
+O: Usar N como la suma de CPUs locales y remotas.
+O: Incrementar N hasta observar un punto sin mejora sustancial.
+
+Q: ¿Qué práctica individual se sugiere para ccache?
+A: 2
+O: Probar con proyectos escritos en múltiples lenguajes.
+O: Comparar tiempos de compilación con y sin ccache.
+O: Usar ccache para cachear procesos de enlace.
+O: Configurar ccache con servidores remotos.
+
+Q: ¿Qué ajuste es esencial al configurar distcc con múltiples servidores?
+A: 1
+O: Ordenar los servidores en DISTCC_HOSTS por velocidad o cercanía.
+O: Limitar el número de CPUs usadas por cada servidor.
+O: Usar exclusivamente compiladores distintos en cada servidor.
+O: Configurar un solo servidor como principal para todas las tareas.
+
+Q: ¿Qué archivo debe entregarse al finalizar las prácticas individuales del tema?
+A: 3
+O: Un paquete .deb con los resultados generados.
+O: Un archivo comprimido con los binarios finales.
+O: Un TGZ con un reporte detallado de tiempos y configuraciones.
+O: Un archivo PDF con capturas de pantalla del proceso.
+
+Q: ¿Qué parámetro se recomienda ajustar al observar fallos al compilar en paralelo con Make?
+A: 2
+O: Incrementar N en -jN.
+O: Revisar las dependencias en el Makefile.
+O: Reducir los núcleos asignados en distcc.
+O: Cachear dependencias no resueltas con ccache.
+
+Q: ¿Qué modo de ccache es el más rápido en términos de rendimiento?
+A: 3
+O: Modo preprocesador.
+O: Modo dependencias.
+O: Modo directo.
+O: Modo caché distribuida.
+
+Q: ¿Qué comando de distcc permite iniciar el servidor para aceptar compilaciones?
+A: 2
+O: distcc start
+O: distccd --daemon
+O: distcc-server enable
+O: distcc init
+
+Q: ¿Qué diferencia principal tiene ThinLTO frente a GNU Parallel?
+A: 4
+O: ThinLTO cachea compilaciones previas para reutilizarlas.
+O: GNU Parallel distribuye tareas entre servidores remotos.
+O: ThinLTO permite trabajar con múltiples lenguajes de programación.
+O: ThinLTO optimiza el enlace entre módulos.
+
+Q: ¿Qué se debe incluir en la variable DISTCC_HOSTS al configurarla?
+A: 1
+O: Las IPs o nombres de los servidores en orden de preferencia.
+O: Las rutas absolutas a los compiladores remotos.
+O: Los nombres de los binarios generados en el servidor.
+O: Los lenguajes soportados por cada servidor.
+
+Q: ¿Qué problema puede resolverse al usar mold como enlazador?
+A: 2
+O: Reducir el tamaño de los binarios.
+O: Disminuir drásticamente los tiempos de enlace.
+O: Facilitar la distribución de compilaciones en red.
+O: Cachear los binarios para proyectos grandes.
+
+Q: ¿Qué herramienta desarrollada por Mozilla es una alternativa a ccache?
+A: 4
+O: Distcc.
+O: Mold.
+O: GNU Parallel.
+O: Sccache.
+
+Q: ¿Qué comando permite listar los servidores configurados para distcc?
+A: 3
+O: distcc -list
+O: distcc config
+O: distccmon-text
+O: ccache -s
+
+Q: ¿Qué problema puede surgir al usar distcc con diferentes configuraciones de compilador?
+A: 2
+O: Los binarios generados son más grandes de lo esperado.
+O: El ABI puede no ser compatible entre máquinas.
+O: Distcc no puede distribuir los archivos correctamente.
+O: El preprocesador se ejecuta de forma redundante.
+
+Q: ¿Qué ventaja aporta mold frente a enlazadores tradicionales como ld?
+A: 4
+O: Reduce el tamaño de los binarios generados.
+O: Es compatible con proyectos basados en C y Rust.
+O: Facilita la cache distribuida entre servidores.
+O: Paraleliza el proceso de enlace.
+
+Q: ¿Qué archivo permite configurar distcc para ser ejecutado automáticamente en el inicio del sistema?
+A: 3
+O: $HOME/.distcc/config
+O: /usr/local/bin/distcc-init.conf
+O: /etc/default/distcc
+O: /var/log/distcc/startup.conf
+
+Q: ¿Qué características debe tener un sistema de configuración automática de proyectos?
+A: 4
+O: Generar binarios directamente sin dependencias.
+O: Permitir configuraciones exclusivas para un sistema operativo.
+O: Requerir siempre la instalación de Autotools en el sistema objetivo.
+O: Adaptar el proceso de compilación según los resultados de tests previos.
+
+Q: ¿Qué ventaja aporta la portabilidad en un proyecto de software?
+A: 3
+O: Facilita el uso de recursos de hardware avanzado.
+O: Incrementa la velocidad de compilación en paralelo.
+O: Permite construir el proyecto en distintos sistemas operativos.
+O: Optimiza el tamaño de los binarios generados.
+
+Q: ¿Qué herramientas principales componen Autotools?
+A: 2
+O: Autoconf y Ninja.
+O: Autoconf, Automake y Libtool.
+O: Make y CPack.
+O: CMake, Autoconf y Meson.
+
+Q: ¿Qué herramienta permite generar proyectos/soluciones compatibles con Visual Studio y XCode?
+A: 4
+O: Autotools.
+O: Automake.
+O: Libtool.
+O: CMake.
+
+Q: ¿Qué backend utiliza Meson por defecto para construir proyectos?
+A: 3
+O: CMake.
+O: Make.
+O: Ninja.
+O: Autotools.
+
+Q: ¿Qué archivo sirve como entrada para generar el script configure en Autoconf?
+A: 2
+O: Makefile.am
+O: configure.ac
+O: Makefile.in
+O: config.h
+
+Q: ¿Qué formato tienen los comentarios en un archivo configure.ac?
+A: 1
+O: # o dnl.
+O: //.
+O: /* */.
+O: Solo #.
+
+Q: ¿Qué macro de Autoconf define el compilador de C++ que se usará en el proyecto?
+A: 3
+O: AC_DEFINE.
+O: AC_CONFIG_FILES.
+O: AC_PROG_CXX.
+O: AC_PROG_CC.
+
+Q: ¿Qué hace la macro AC_CHECK_FILE(file, act-found, act-not-found) en Autoconf?
+A: 4
+O: Define variables de salida basadas en un archivo específico.
+O: Verifica si un archivo es ejecutable.
+O: Genera el archivo de configuración del proyecto.
+O: Comprueba si un archivo existe y ejecuta acciones según el resultado.
+
+Q: ¿Qué genera Autoconf al ejecutar la macro AC_OUTPUT?
+A: 2
+O: Archivos binarios del proyecto.
+O: Los ficheros definidos en AC_CONFIG_FILES.
+O: Los ficheros Makefile.am.
+O: Configuraciones para Visual Studio.
+
+Q: ¿Qué archivo utiliza Automake como entrada para generar Makefile.in?
+A: 3
+O: Makefile.
+O: Makefile.conf.
+O: Makefile.am.
+O: config.h.
+
+Q: ¿Qué archivo debe crearse obligatoriamente en un proyecto gestionado con Automake al estilo GNU?
+A: 4
+O: Makefile.am.
+O: configure.ac.
+O: config.h.
+O: NEWS, README, AUTHORS y ChangeLog.
+
+Q: ¿Qué macro permite activar Automake desde un archivo configure.ac?
+A: 1
+O: AM_INIT_AUTOMAKE.
+O: AC_CONFIG_AUTOMAKE.
+O: AUTOMAKE_INIT.
+O: AM_CONFIG_FILES.
+
+Q: ¿Qué hace el objetivo distcheck generado por Automake?
+A: 3
+O: Limpia todos los archivos intermedios del proyecto.
+O: Genera binarios optimizados para distribución.
+O: Comprueba que el proyecto puede distribuirse y compilarse correctamente.
+O: Exporta las dependencias de la configuración.
+
+Q: ¿Qué formato puede tener un archivo Makefile.am con múltiples subdirectorios?
+A: 4
+O: dirs_SOURCE = src app gui.
+O: SUBDIR_OBJECTS = src gui.
+O: src_PROGRAMS = [archivos fuente].
+O: SUBDIRS = src app gui.
+
+Q: ¿Qué archivo principal define la configuración de un proyecto en CMake?
+A: 3
+O: Makefile.in.
+O: CMakeFile.am.
+O: CMakeLists.txt.
+O: configure.ac.
+
+Q: ¿Qué comando permite generar los Makefiles en un proyecto basado en CMake?
+A: 4
+O: cmake-run.
+O: autoconf.
+O: configure.
+O: cmake ..
+
+Q: ¿Qué ventaja tiene un "out-source build" en CMake?
+A: 2
+O: Permite cachear configuraciones previas.
+O: Evita modificar los directorios de código fuente durante la compilación.
+O: Genera binarios optimizados por defecto.
+O: Simplifica la distribución del proyecto en plataformas embebidas.
+
+Q: ¿Qué comando de CMake permite crear un gráfico de dependencias en formato Graphviz?
+A: 1
+O: cmake --graphviz.
+O: cmake --depgraph.
+O: cmake-graph.
+O: cmake-dependencies.
+
+Q: ¿Qué opción de CMake permite seleccionar el generador que se usará para construir el proyecto?
+A: 3
+O: -C.
+O: -S.
+O: -G.
+O: --generator.
+
+Q: ¿Qué archivo principal configura un proyecto en Meson?
+A: 2
+O: Makefile.am.
+O: meson.build.
+O: configure.ac.
+O: CMakeLists.txt.
+
+Q: ¿Qué comando compila un proyecto en Meson usando Ninja?
+A: 4
+O: meson build && make.
+O: ninja run.
+O: meson compile.
+O: ninja -C build.
+
+Q: ¿Qué característica hace destacar a Meson frente a otras herramientas como Autotools?
+A: 2
+O: Su integración con Libtool.
+O: Su simplicidad y rapidez en la construcción.
+O: La capacidad de trabajar solo con Makefiles.
+O: Su exclusividad para sistemas basados en Unix.
+
+Q: ¿Qué tarea se solicita en las prácticas individuales sobre CMake y Autotools?
+A: 3
+O: Crear un proyecto solo con Makefiles manuales.
+O: Configurar Ninja para proyectos multiplataforma.
+O: Configurar una práctica con versiones recursivas y no recursivas.
+O: Comparar el rendimiento de Meson y Autotools.
+
+Q: ¿Qué comando permite añadir un objetivo de distribución en un proyecto con CMake?
+A: 1
+O: add_custom_target.
+O: add_dist_target.
+O: add_distribution.
+O: add_package.
+
+Q: ¿Qué macro de Autoconf permite comprobar si un compilador soporta una característica específica?
+A: 4
+O: AC_CONFIG_HEADER.
+O: AC_DEFINE.
+O: AC_CHECK_FILE.
+O: AC_TRY_COMPILE.
+
+Q: ¿Qué hace la macro AC_CHECK_LIB(lib, func, act-found, act-not-found)?
+A: 3
+O: Busca un archivo específico dentro de una biblioteca.
+O: Define automáticamente una variable de entorno.
+O: Verifica si una biblioteca contiene una función específica.
+O: Genera un archivo Makefile con la función detectada.
+
+Q: ¿Qué archivos genera Automake para cada subdirectorio de un proyecto?
+A: 2
+O: Makefile.am.
+O: Makefile.in.
+O: configure.ac.
+O: Makefile.
+
+Q: ¿Qué objetivo en Automake genera un archivo comprimido con el código fuente para distribución?
+A: 4
+O: distclean.
+O: package.
+O: clean.
+O: dist.
+
+Q: ¿Qué herramienta de Autotools permite actualizar automáticamente un configure.ac a la última versión de Autoconf?
+A: 3
+O: autoscan.
+O: autoreconf.
+O: autoupdate.
+O: aclocal.
+
+Q: ¿Qué archivo genera CMake para definir configuraciones específicas del proyecto?
+A: 4
+O: Makefile.in.
+O: meson.build.
+O: CMakeConfig.txt.
+O: config.h.
+
+Q: ¿Qué comando permite realizar compilaciones "out-of-source" con CMake?
+A: 2
+O: cmake-build.
+O: cmake ...
+O: cmake-out.
+O: cmake-o.
+
+Q: ¿Qué variable en CMake controla si el proyecto se compila en modo Debug o Release?
+A: 3
+O: CMAKE_DEBUG_MODE.
+O: CMAKE_VAR_DEBUG.
+O: CMAKE_BUILD_TYPE.
+O: CMAKE_RELEASE_MODE.
+
+Q: ¿Qué ventaja tiene el uso de la opción find_package en CMake?
+A: 1
+O: Permite localizar automáticamente bibliotecas y sus dependencias.
+O: Define configuraciones de compilación cruzada.
+O: Genera proyectos compatibles con IDEs como Eclipse.
+O: Integra herramientas externas como Ninja.
+
+Q: ¿Qué permite la macro add_subdirectory(dirname) en CMake?
+A: 3
+O: Dividir un proyecto en múltiples configuraciones.
+O: Generar un gráfico de dependencias en el subdirectorio.
+O: Construir proyectos con múltiples CMakeLists.txt en subdirectorios.
+O: Configurar objetivos de instalación específicos.
+
+Q: ¿Qué característica hace que CMake sea más sencillo que Autotools para configurar proyectos?
+A: 2
+O: Su integración con Ninja.
+O: Usa un solo archivo (CMakeLists.txt) en lugar de múltiples archivos.
+O: Genera scripts de configuración sin dependencias externas.
+O: Es compatible exclusivamente con sistemas modernos.
+
+Q: ¿Qué formato tienen las plantillas de configuración de Automake?
+A: 3
+O: Makefile.am.
+O: Makefile.
+O: Makefile.in.
+O: CMakeLists.txt.
+
+Q: ¿Qué herramienta es más adecuada para proyectos modernos multiplataforma?
+A: 1
+O: CMake.
+O: Autotools.
+O: Meson.
+O: Make.
+
+Q: ¿Qué hace más eficiente a Ninja frente a Make?
+A: 4
+O: Su soporte para configuraciones dinámicas.
+O: Genera objetivos con menos pasos intermedios.
+O: Su capacidad para trabajar con múltiples lenguajes.
+O: Maneja dependencias de manera más rápida y eficiente.
+
+Q: ¿Qué diferencia clave tiene Meson frente a CMake?
+A: 2
+O: Permite configuraciones in-source por defecto.
+O: Detecta automáticamente cambios en los archivos de configuración.
+O: Soporta un número mayor de lenguajes de programación.
+O: Usa configuraciones recursivas exclusivamente.
+
+Q: ¿Qué comando de CMake permite crear un archivo distribuible como .tgz?
+A: 3
+O: cmake-dist.
+O: cmake-distribution.
+O: cpack.
+O: add_custom_target.
+
+Q: ¿Qué archivo no debe incluirse en la entrega de las prácticas individuales?
+A: 2
+O: CMakeLists.txt.
+O: Archivos de compilación intermedia (.o, ejecutables).
+O: configure.ac.
+O: Archivos comprimidos .tgz.
+
+Q: ¿Qué se solicita en las prácticas individuales sobre Automake y CMake?
+A: 4
+O: Configurar proyectos con CMake y Ninja.
+O: Comparar Autotools con Meson en tiempos de configuración.
+O: Crear proyectos recursivos con Ninja y Autotools.
+O: Crear versiones recursivas y no recursivas para ambos sistemas.
+
+Q: ¿Qué herramienta debe usarse para crear una distribución de código en un proyecto con Automake?
+A: 4
+O: make-distribution.
+O: autoreconf.
+O: aclocal-dist.
+O: make dist.
+
+Q: ¿Qué backend puede usarse en Meson además de Ninja?
+A: 3
+O: Autotools.
+O: Libtool.
+O: Visual Studio.
+O: Eclipse CDT.
+
+Q: ¿Qué comando de Autotools ejecuta todas las herramientas necesarias en el orden correcto?
+A: 3
+O: autoupdate.
+O: autoscan.
+O: autoreconf.
+O: aclocal.
+
+Q: ¿Qué función tiene la opción -E en CMake?
+A: 4
+O: Optimiza las configuraciones de compilación cruzada.
+O: Genera gráficos de dependencias más detallados.
+O: Define configuraciones específicas para Debug y Release.
+O: Ejecuta comandos en el "modo comando" de CMake.
+
+Q: ¿Qué objetivo se debe usar para limpiar un proyecto en Automake?
+A: 2
+O: distclean.
+O: clean.
+O: autoclean.
+O: autoreconf-clean.
+
+Q: ¿Qué característica hace destacar a CPack en comparación con otras herramientas de distribución?
+A: 1
+O: Permite empaquetar proyectos multiplataforma con múltiples formatos.
+O: Es compatible exclusivamente con Make.
+O: Genera configuraciones automáticas para IDEs.
+O: Integra herramientas como Ninja y Autotools.
+
+Q: ¿Qué problema podría surgir al usar un Automake recursivo en proyectos grandes?
+A: 3
+O: Los Makefiles se vuelven incompatibles entre subdirectorios.
+O: Los tiempos de enlace se incrementan.
+O: El proceso es más lento debido a llamadas redundantes en subdirectorios.
+O: No permite la integración con configuraciones previas.
+
+Q: ¿Qué objetivo principal tiene el proceso de testing en software?
+A: 2
+O: Garantizar que el software no tiene errores.
+O: Demostrar la existencia de fallos en el software.
+O: Asegurar que el código es eficiente.
+O: Verificar que el software cumple los requisitos de usuario.
+
+Q: ¿Qué significa "Test early. Test often. Test automatically"?
+A: 4
+O: Realizar tests exhaustivos solo al finalizar el proyecto.
+O: Testear manualmente las partes críticas del software.
+O: Evitar automatizar el proceso de testing para mantener control humano.
+O: Integrar tests en cada fase del desarrollo y automatizarlos para garantizar su efectividad.
+
+Q: ¿Qué es un "Test Suite"?
+A: 1
+O: Conjunto de entradas diseñadas para testear el software.
+O: Herramienta de testeo que asegura la cobertura total de código.
+O: Un plan que define los objetivos de los tests.
+O: Un conjunto de informes generados por los tests.
+
+Q: ¿Qué se entiende por "BlackBox Testing"?
+A: 3
+O: Acceso al código fuente para identificar fallos.
+O: Crear tests basados en la estructura interna del código.
+O: Tests creados basándose en la especificación del software sin acceso al código.
+O: Medir la cobertura de las instrucciones del software.
+
+Q: ¿Qué tipo de test evalúa la interacción entre diferentes módulos de software?
+A: 2
+O: Tests unitarios.
+O: Tests de integración.
+O: Tests de sistema.
+O: Tests de regresión.
+
+Q: ¿Qué característica define un test de regresión?
+A: 3
+O: Detectar errores en el diseño de interfaces de usuario.
+O: Evaluar el rendimiento del software en condiciones extremas.
+O: Verificar que los cambios no afectan negativamente al código existente.
+O: Analizar el comportamiento del software con datos aleatorios.
+
+Q: ¿Cuándo se recomienda realizar tests en un proyecto de software?
+A: 2
+O: Al finalizar el desarrollo del software.
+O: De manera automática y continua durante el desarrollo.
+O: Antes de la entrega final al cliente.
+O: Solo cuando se detecten errores en producción.
+
+Q: ¿Qué mide la "Instruction Coverage" en un test?
+A: 1
+O: El porcentaje de instrucciones ejecutadas durante el test.
+O: La eficiencia de los algoritmos probados.
+O: El tiempo necesario para ejecutar un test suite.
+O: El porcentaje de especificaciones testeadas.
+
+Q: ¿Qué tipo de tests se centran en probar todo el sistema en su conjunto?
+A: 4
+O: Tests unitarios.
+O: Tests de integración.
+O: Tests de interfaz de usuario.
+O: Tests de sistema.
+
+Q: ¿Qué significa "Use saboteurs to Test Your Testing"?
+A: 4
+O: Incorporar fallos intencionales en el software para probar la capacidad de recuperación.
+O: Usar herramientas externas para evaluar los tests.
+O: Crear tests redundantes para asegurar la estabilidad.
+O: Diseñar tests para detectar fallos en los propios tests.
+
+Q: ¿Qué es un "Test Driver"?
+A: 3
+O: Una herramienta para medir la cobertura de tests.
+O: Una biblioteca que facilita el diseño de tests.
+O: Un programa que automatiza la ejecución y validación de tests.
+O: Un método para integrar herramientas de testing con CMake.
+
+Q: ¿Qué se entiende por "Test Fixture"?
+A: 4
+O: Un conjunto de datos de prueba para tests.
+O: Un reporte generado por los tests automáticos.
+O: El entorno de ejecución de los tests.
+O: El contexto necesario para ejecutar un test y restaurar el estado original tras su ejecución.
+
+Q: ¿Cuál es la función principal del "Test Runner" en xUnit?
+A: 2
+O: Garantizar la cobertura total del código testeado.
+O: Ejecutar los tests y proporcionar los resultados.
+O: Generar casos de prueba automáticos.
+O: Integrar diferentes frameworks de testing.
+
+Q: ¿Qué herramienta de testing tiene su origen en SUnit de Smalltalk?
+A: 3
+O: Boost.Test.
+O: Catch2.
+O: JUnit.
+O: GLib.Test.
+
+Q: ¿Qué herramienta de testing se distribuye como una única cabecera en C++?
+A: 4
+O: Boost.Test.
+O: JUnit.
+O: GLib.Test.
+O: Catch2.
+
+Q: ¿Qué característica tiene Catch2 que lo hace fácil de integrar en proyectos?
+A: 3
+O: Su capacidad para generar informes detallados.
+O: Su compatibilidad con múltiples lenguajes de programación.
+O: No requiere enlazar con bibliotecas externas.
+O: Proporciona soporte para pruebas de integración.
+
+Q: ¿Qué comando se utiliza para ejecutar un test creado con Boost.Test?
+A: 4
+O: boost-test.
+O: test-run.
+O: catch2-run.
+O: El nombre del ejecutable del test, p.ej., ./test-suite.
+
+Q: ¿Qué marco de testing incorpora GLib para proyectos en C?
+A: 1
+O: GLib.Test.
+O: Catch2.
+O: Boost.Test.
+O: cppunit.
+
+Q: ¿Cómo se integran los tests en CMake?
+A: 4
+O: Con un módulo adicional llamado GLib.Test.
+O: Usando un archivo Makefile personalizado.
+O: Creando test suites manualmente en el código.
+O: Usando enable_testing() y definiendo tests con add_test(...).
+
+Q: ¿Qué marco de testing en C++ es parte de las bibliotecas Boost?
+A: 2
+O: Catch2.
+O: Boost.Test.
+O: JUnit.
+O: cppunit.
+
+Q: ¿Qué se mide al usar fuzz testing en software?
+A: 4
+O: Cobertura de especificaciones.
+O: Resistencia frente a cambios en el código fuente.
+O: Eficiencia de los algoritmos de testeo.
+O: Comportamiento del software ante entradas inesperadas o aleatorias.
+
+Q: ¿Qué herramienta se usa con CMake para gestionar tests automáticamente?
+A: 3
+O: JUnit.
+O: Boost.Test.
+O: CTest.
+O: cppunit.
+
+Q: ¿Qué opción de Autotools permite definir programas de testeo?
+A: 2
+O: test_PROGRAMS.
+O: check_PROGRAMS.
+O: test_AUTO.
+O: check_AUTO.
+
+Q: ¿Qué lenguaje incorpora pruebas de integración sin necesidad de bibliotecas externas?
+A: 3
+O: C.
+O: C++.
+O: Rust.
+O: Java.
+
+Q: ¿Qué herramienta de testing es compatible con libgit2 para pruebas?
+A: 1
+O: clar.
+O: cppunit.
+O: GLib.Test.
+O: Boost.Test.
+
+Q: ¿Qué herramienta adicional de CMake permite integrar el paso de tests en el flujo de trabajo?
+A: 3
+O: Autotools.
+O: Meson.
+O: CTest.
+O: GLib.Test.
+
+Q: ¿Qué función en CMakeLists.txt habilita la ejecución de tests?
+A: 2
+O: add_test().
+O: enable_testing().
+O: configure_tests().
+O: run_tests().
+
+Q: ¿Qué variable en Automake se utiliza para definir los ejecutables de test?
+A: 3
+O: test_PROGRAMS.
+O: run_PROGRAMS.
+O: check_PROGRAMS.
+O: exec_TESTS.
+
+Q: ¿Qué ventaja tiene convertir los tests en un objetivo de make?
+A: 4
+O: Mejora la cobertura del código testeado.
+O: Permite integrar múltiples herramientas de testeo.
+O: Facilita la creación de reportes detallados.
+O: Automatiza el proceso de ejecutar tests con un simple comando.
+
+Q: ¿Qué marco de testeo tiene ejemplos de integración con herramientas como clar y Yarn?
+A: 1
+O: C++.
+O: Python.
+O: Smalltalk.
+O: Rust.
+
+Q: ¿Qué marco de testing es adecuado para trabajar con fuzz testing?
+A: 4
+O: Catch2.
+O: Boost.Test.
+O: cppunit.
+O: libFuzzer.
+
+Q: ¿Qué lenguaje moderno incorpora tests unitarios directamente en su sintaxis?
+A: 3
+O: C.
+O: JavaScript.
+O: Zig.
+O: C++.
+
+Q: ¿Qué herramienta permite usar las funcionalidades de git en aplicaciones y soporta un marco de tests llamado clar?
+A: 2
+O: Yarn.
+O: libgit2.
+O: GLib.Test.
+O: cppunit.
+
+Q: ¿Qué mide el "Branch Coverage" en los tests?
+A: 3
+O: El porcentaje de errores detectados en un programa.
+O: La cobertura de las especificaciones iniciales del proyecto.
+O: El porcentaje de caminos condicionales ejecutados en el código.
+O: La cantidad de recursos utilizados por los tests.
+
+Q: ¿Qué marco de testing basado en Boost incluye herramientas para integración y pruebas unitarias?
+A: 2
+O: Catch2.
+O: Boost.Test.
+O: GLib.Test.
+O: CTest.
+
+Q: ¿Qué framework de tests se usa en C++ y se distribuye como una única cabecera?
+A: 1
+O: Catch2.
+O: Boost.Test.
+O: JUnit.
+O: cppunit.
+
+Q: ¿Qué comando en CMake permite ejecutar los tests definidos en un proyecto?
+A: 3
+O: run_tests.
+O: add_tests.
+O: make test.
+O: enable_testing.
+
+Q: ¿Qué herramienta permite crear casos de prueba y suites con Autotools?
+A: 4
+O: Ninja.
+O: Catch2.
+O: GLib.Test.
+O: Automake.
+
+Q: ¿Qué medida garantiza que las pruebas cubran todas las instrucciones del código?
+A: 2
+O: Test Suite Analysis.
+O: Instruction Coverage.
+O: Regression Testing.
+O: Specification Coverage.
+
+Q: ¿Qué lenguaje incluye tests unitarios y de integración como funcionalidad estándar?
+A: 3
+O: C.
+O: Java.
+O: Rust.
+O: Zig.
+
+Q: ¿Qué marco de testeo para C++ se integra fácilmente con CMake mediante add_test?
+A: 2
+O: cppunit.
+O: Catch2.
+O: GLib.Test.
+O: Boost.Test.
+
+Q: ¿Qué comando en GLib.Test permite añadir funciones de prueba?
+A: 4
+O: create_test.
+O: add_case.
+O: configure_test.
+O: Test.add_func().
+
+Q: ¿Qué significa "Fixture" en el contexto de los tests?
+A: 3
+O: Un test diseñado para medir la cobertura del código.
+O: Una herramienta para ejecutar pruebas en paralelo.
+O: El contexto necesario para ejecutar y restaurar el estado original tras los tests.
+O: Una biblioteca externa para pruebas de integración.
+
+Q: ¿Qué marco de testeo incluye soporte para BDD en C++?
+A: 1
+O: Catch2.
+O: Boost.Test.
+O: cppunit.
+O: GLib.Test.
+
+Q: ¿Qué objetivo tiene el fuzz testing en el desarrollo de software?
+A: 4
+O: Identificar cuellos de botella en el rendimiento del código.
+O: Asegurar la cobertura de todas las instrucciones del código.
+O: Analizar el comportamiento del software frente a entradas esperadas.
+O: Evaluar cómo responde el software ante entradas inesperadas o aleatorias.
+
+Q: ¿Qué herramienta permite gestionar el proceso de testing en un flujo CI/CD junto con CTest?
+A: 2
+O: Yarn.
+O: CDash.
+O: Catch2.
+O: GLib.Test.
+
+Q: ¿Qué framework de testing es ampliamente utilizado en el ecosistema Java?
+A: 3
+O: Catch2.
+O: Boost.Test.
+O: JUnit.
+O: GLib.Test.
+
+Q: ¿Qué marco de pruebas en C puede integrarse directamente con Autotools y CMake?
+A: 4
+O: Boost.Test.
+O: cppunit.
+O: Catch2.
+O: GLib.Test.
+
+Q: ¿Qué función específica de Boost.Test facilita el uso de fixtures en pruebas?
+A: 2
+O: BOOST_AUTO_TEST_CASE.
+O: BOOST_FIXTURE_TEST_CASE.
+O: BOOST_AUTO_FIXTURE.
+O: BOOST_SETUP_TEST.
+
+Q: ¿Qué marco de testing en C++ es compatible con herramientas externas como fuzz testing?
+A: 1
+O: Catch2.
+O: GLib.Test.
+O: JUnit.
+O: cppunit.
+
+Q: ¿Qué es el Diseño por Contrato (DbC)?
+A: 3
+O: Una metodología para diseñar interfaces gráficas.
+O: Un sistema para validar entradas y salidas de programas.
+O: Una metodología de diseño de software que aplica conceptos de contratos de negocios.
+O: Un enfoque orientado exclusivamente a depurar errores en tiempo de ejecución.
+
+Q: ¿Qué elementos forman parte de un contrato en DbC?
+A: 4
+O: Precondiciones y excepciones.
+O: Postcondiciones e invariantes de bucles.
+O: Invariantes de bucles y estados finales.
+O: Precondiciones, postcondiciones e invariantes.
+
+Q: ¿Quién debe garantizar que las precondiciones de un método se cumplen?
+A: 2
+O: El método que las define.
+O: El cliente que llama al método.
+O: El compilador del lenguaje usado.
+O: Ninguno, son automáticas.
+
+Q: ¿Qué ocurre si una postcondición no se cumple?
+A: 3
+O: El fallo es del cliente que llamó al método.
+O: El error debe corregirse en tiempo de compilación.
+O: Es responsabilidad del método que la definió.
+O: No se genera ningún error, ya que es opcional.
+
+Q: ¿Qué son las invariantes de clase?
+A: 4
+O: Condiciones que se cumplen antes de ejecutar un método específico.
+O: Condiciones que deben cumplir los datos de entrada de un método.
+O: Propiedades asociadas a variables estáticas de una clase.
+O: Propiedades lógicas que deben cumplirse antes y después de ejecutar cualquier método de una clase.
+
+Q: ¿Qué lenguaje introdujo el término Diseño por Contrato?
+A: 1
+O: Eiffel.
+O: D.
+O: Vala.
+O: Spark.
+
+Q: ¿Qué constructos ofrece Eiffel para implementar contratos?
+A: 4
+O: requires, assert, loop.
+O: check, assume, prove.
+O: validate, confirm, state.
+O: require, ensure, invariant.
+
+Q: ¿Qué soporte para DbC ofrece el Lenguaje D?
+A: 2
+O: Exclusivamente precondiciones.
+O: Precondiciones, postcondiciones e invariantes.
+O: Solo invariantes.
+O: Solo contratos en métodos abstractos.
+
+Q: ¿Qué funcionalidad no está disponible en Vala para DbC?
+A: 3
+O: Precondiciones.
+O: Postcondiciones.
+O: Invariantes de clase.
+O: Asserts en métodos.
+
+Q: ¿Cómo se define una precondición en el Lenguaje D usando la sintaxis nueva?
+A: 2
+O: assert(condition)
+O: in (condition)
+O: requires (condition)
+O: precondition (condition)
+
+Q: ¿Qué verifica una precondición en un método?
+A: 1
+O: Que las condiciones de entrada sean válidas.
+O: Que el resultado final sea correcto.
+O: Que las invariantes de clase se cumplan.
+O: Que se gestione correctamente una excepción.
+
+Q: ¿Qué asegura una postcondición?
+A: 4
+O: Que los parámetros de entrada cumplan ciertos valores.
+O: Que se invoquen otros métodos auxiliares.
+O: Que el cliente valide los resultados.
+O: Que los resultados de un método cumplan ciertas propiedades.
+
+Q: ¿Qué característica distingue a las invariantes de clase de otros elementos del contrato?
+A: 3
+O: Solo se evalúan al terminar la ejecución de un método.
+O: Son aplicables únicamente a métodos estáticos.
+O: Se evalúan antes y después de ejecutar cualquier método de la clase.
+O: No dependen de las precondiciones definidas.
+
+Q: ¿Qué función tiene el constructo requires en Vala?
+A: 1
+O: Define una precondición.
+O: Define una postcondición.
+O: Lanza una excepción.
+O: Valida una invariante.
+
+Q: ¿Qué variable especial se usa en las postcondiciones de Vala para referirse al resultado del método?
+A: 4
+O: value.
+O: assert.
+O: post.
+O: result.
+
+Q: ¿Qué ocurre si se viola una precondición durante la ejecución?
+A: 2
+O: Se ignora automáticamente.
+O: Se lanza una excepción o error en tiempo de ejecución.
+O: El compilador lo detecta en tiempo de compilación.
+O: Se corrige automáticamente si es posible.
+
+Q: ¿Qué constructo en C puede usarse para emular DbC?
+A: 3
+O: ensure.
+O: requires.
+O: assert.
+O: validate.
+
+Q: ¿Cómo puede un programador verificar invariantes en un lenguaje que no soporta DbC?
+A: 1
+O: Llamando a un método privado de la clase antes y después de ejecutar métodos públicos.
+O: Usando excepciones para capturar errores en tiempo de ejecución.
+O: Definiendo un método global que valide todas las clases.
+O: Solo es posible en lenguajes con soporte nativo para DbC.
+
+Q: ¿Qué tipo de condición valida el siguiente código en Eiffel?```invariant \n\tvalid_day: 1 <= day and day <= 31```
+A: 4
+O: Una precondición.
+O: Una postcondición.
+O: Una excepción personalizada.
+O: Una invariante de clase.
+
+Q: ¿Qué utilidad tienen las precondiciones en la depuración?
+A: 2
+O: Facilitan el manejo de excepciones.
+O: Ayudan a identificar errores en el cliente que llama al método.
+O: Garantizan que el programa siempre finaliza correctamente.
+O: Mejoran la cobertura de las pruebas unitarias.
+
+Q: ¿Qué compilador de D está basado en LLVM?
+A: 3
+O: DMD.
+O: GDC.
+O: LDC.
+O: CLangD.
+
+Q: ¿Qué herramienta se usa para compilar código en Vala?
+A: 4
+O: gcc.
+O: clang.
+O: vala-compile.
+O: valac.
+
+Q: ¿Qué constructo en D permite validar invariantes de clase?
+A: 2
+O: require.
+O: invariant.
+O: assert.
+O: check.
+
+Q: ¿Cómo se define una invariante en un lenguaje sin soporte nativo para DbC?
+A: 3
+O: Usando macros predefinidas.
+O: Dependiendo del lenguaje, es imposible.
+O: Mediante un método privado que valide los atributos de clase.
+O: Solo en métodos públicos.
+
+Q: ¿Qué acción debería tomar un programador si encuentra una violación de postcondición?
+A: 4
+O: Revisar las entradas del cliente que llamó al método.
+O: Ignorar el error si no afecta a otros métodos.
+O: Deshabilitar temporalmente las postcondiciones.
+O: Corregir el método que definió la postcondición.
+
+Q: ¿Qué es un "locale"?
+A: 2
+O: Un archivo binario que define configuraciones regionales.
+O: Una serie de parámetros culturales sobre idioma, moneda, formato de fecha, etc.
+O: Una herramienta que permite traducciones en tiempo de ejecución.
+O: Un conjunto de bibliotecas para configurar cadenas internacionales.
+
+Q: ¿Qué diferencia principal existe entre internacionalización (I18N) y localización (L10N)?
+A: 3
+O: I18N es la traducción de cadenas de texto, mientras que L10N es su validación.
+O: I18N solo afecta a idiomas, y L10N a configuraciones de moneda.
+O: I18N es preparar un proyecto para soportar múltiples idiomas, y L10N adaptarlo a un idioma específico.
+O: I18N incluye la validación de configuraciones regionales.
+
+Q: ¿Qué estándar se utiliza para codificar el idioma en un locale?
+A: 1
+O: ISO-639.
+O: ISO-3166.
+O: ISO-15924.
+O: UTF-8.
+
+Q: ¿Cuál es el locale por defecto en los sistemas GNU/Linux?
+A: 4
+O: en_US.utf8.
+O: C.UTF-8.
+O: POSIX.UTF-8.
+O: C.
+
+Q: ¿Qué comando muestra los locales disponibles en el sistema?
+A: 3
+O: localectl.
+O: locale-gen.
+O: locale -a.
+O: gettext-locale.
+
+Q: ¿Qué herramienta se utiliza para extraer cadenas traducibles de un proyecto?
+A: 2
+O: msgfmt.
+O: xgettext.
+O: locale-gen.
+O: poedit.
+
+Q: ¿Qué extensión tiene un archivo de plantilla para traducciones con Gettext?
+A: 3
+O: .po.
+O: .mo.
+O: .pot.
+O: .potx.
+
+Q: ¿Qué comando permite inicializar un archivo de traducción basado en una plantilla?
+A: 1
+O: msginit.
+O: msgfmt.
+O: gettext-init.
+O: po-create.
+
+Q: ¿Qué extensión tiene el archivo compilado que almacena las traducciones?
+A: 4
+O: .po.
+O: .pot.
+O: .potx.
+O: .mo.
+
+Q: ¿Qué comando compila los archivos de traducción a un formato más eficiente para el sistema?
+A: 3
+O: xgettext.
+O: msgmerge.
+O: msgfmt.
+O: gettext-compile.
+
+Q: ¿Dónde se deben instalar los archivos .mo para que sean accesibles por el sistema?
+A: 2
+O: /etc/locale.d/idioma/.
+O: /usr/share/locale/idioma/LC_MESSAGES/.
+O: /usr/local/share/locale/idioma/.
+O: /var/lib/locale/idioma/.
+
+Q: ¿Qué constante de configuración en Vala define el directorio de locales en modo desarrollo?
+A: 1
+O: Config.DEVELOPMENT_MODE.
+O: Config.LOCALE_DEV_DIR.
+O: Config.LANG_DIR.
+O: Config.I18N_DEV.
+
+Q: ¿Qué función inicializa Gettext en código Vala?
+A: 4
+O: Intl.gettext_init.
+O: Intl.locale_config.
+O: Intl.load_locale.
+O: Intl.bindtextdomain.
+
+Q: ¿Qué macro se usa habitualmente para marcar cadenas traducibles?
+A: 2
+O: gettext(x).
+O: _x.
+O: _.
+O: translate(x).
+
+Q: ¿Qué comando actualiza un archivo .po con cambios en una plantilla .pot?
+A: 3
+O: msgfmt.
+O: msginit.
+O: msgmerge.
+O: gettext-update.
+
+Q: ¿Qué es un archivo .po?
+A: 3
+O: Un archivo binario de traducciones.
+O: Un script de configuración para locales.
+O: Un archivo de texto con cadenas traducibles.
+O: Un contenedor de configuraciones de locales.
+
+Q: ¿Cuál de las siguientes es una herramienta especializada para editar archivos .po?
+A: 4
+O: vim.
+O: emacs.
+O: notepad++.
+O: poedit.
+
+Q: ¿Qué significa "POT-Creation-Date" en un archivo .po?
+A: 1
+O: La fecha en que se generó el archivo de plantilla.
+O: La última fecha de traducción realizada.
+O: El identificador de la versión del proyecto.
+O: El formato MIME del archivo.
+
+Q: ¿Qué herramienta permite editar traducciones en línea?
+A: 2
+O: poedit-cli.
+O: Virtaal.
+O: gettext-web.
+O: msgfmt-online.
+
+Q: ¿Qué comando extrae todas las cadenas, incluso no marcadas como traducibles?
+A: 3
+O: msgfmt -c.
+O: msgmerge -s.
+O: xgettext -a.
+O: gettext --all.
+
+Q: ¿Qué hace la función bind_textdomain_codeset?
+A: 4
+O: Vincula el locale con la configuración regional.
+O: Define el directorio donde se encuentran los archivos .po.
+O: Configura las variables de entorno para el idioma.
+O: Establece la codificación de los mensajes traducidos.
+
+Q: ¿Qué idioma es representado por el locale es_MX?
+A: 1
+O: Español de México.
+O: Español de España.
+O: Catalán de Valencia.
+O: Castellano genérico.
+
+Q: ¿Qué sucede si falta un archivo .mo para un idioma?
+A: 2
+O: La aplicación lanza una excepción y detiene su ejecución.
+O: Se usan las cadenas del idioma original (fallback).
+O: Se generan automáticamente cadenas vacías.
+O: La aplicación falla al inicializar gettext.
+
+Q: ¿Qué archivo debe editarse en un sistema GNU/Linux para añadir nuevos locales?
+A: 1
+O: /etc/locale.gen.
+O: /etc/locale.conf.
+O: /etc/locale.d/.
+O: /etc/default/locale.
+
+Q: ¿Qué archivo almacena los locales disponibles en una sesión de usuario?
+A: 3
+O: /var/lib/locale.db.
+O: /usr/share/locale.conf.
+O: ~/.bashrc (o archivo equivalente).
+O: /etc/environment.
+
+Q: ¿Qué es un Sistema de Control de Versiones (SCV)?
+A: 4
+O: Un software que permite conocer las modificaciones hechas a un proyecto.
+O: Un sistema para mantener únicamente las últimas versiones de los archivos.
+O: Una herramienta exclusiva para revertir cambios recientes.
+O: Ninguna de las anteriores.
+
+Q: ¿Cuál es una función principal de un SCV?
+A: 3
+O: Restringir los cambios en un proyecto a un único desarrollador.
+O: Mantener siempre la última versión disponible sin posibilidad de revertir cambios.
+O: Gestionar automáticamente los cambios realizados en uno o varios ficheros de un proyecto.
+O: Sustituir las copias de seguridad en proyectos colaborativos.
+
+Q: ¿Qué nos permite hacer un SCV además de gestionar cambios?
+A: 2
+O: Limitar el acceso al histórico del proyecto.
+O: Restaurar cualquier archivo del proyecto a un estado anterior, no necesariamente el último.
+O: Evitar que múltiples programadores trabajen en un mismo proyecto.
+O: Aislar cambios sin compartirlos con otros desarrolladores.
+
+Q: ¿Qué es un repositorio en un SCV?
+A: 1
+O: La copia maestra donde se guardan todas las versiones de los archivos de un proyecto.
+O: Un directorio local que contiene solo las copias de trabajo.
+O: Una copia remota de los archivos modificados que aún no se han comprometido.
+O: Un sistema exclusivo para archivos ejecutables en proyectos de software.
+
+Q: ¿Qué diferencia a un SCV centralizado de uno distribuido?
+A: 2
+O: Los SCV centralizados permiten que todos los usuarios tengan su propio repositorio.
+O: En un SCV distribuido, cada usuario tiene su propio repositorio local que puede sincronizar con un repositorio central.
+O: Los SCV centralizados funcionan solo con un equipo administrativo que maneja las copias de trabajo.
+O: Ninguna de las anteriores.
+
+Q: ¿Qué es un “Commit” en un SCV?
+A: 4
+O: Una acción que actualiza automáticamente todos los archivos locales con los cambios remotos.
+O: El proceso de clonar un repositorio central en la máquina local.
+O: Un registro automático de los cambios realizado sin intervención del programador.
+O: La acción de guardar cambios en la copia local del repositorio junto con un mensaje descriptivo.
+
+Q: ¿Qué acción permite trasladar los contenidos de la copia local de un repositorio al repositorio maestro?
+A: 3
+O: Clone
+O: Commit
+O: Push
+O: Fetch
+
+Q: ¿Qué se entiende por conflicto en un SCV?
+A: 2
+O: La situación en la que un archivo no se encuentra bajo control de versiones.
+O: La situación en la que dos desarrolladores realizan cambios en la misma región de un fichero, generando discrepancias.
+O: Un error del sistema al realizar un commit simultáneo desde varios usuarios.
+O: Una falla en el repositorio remoto durante una operación de pull.
+
+Q: ¿Qué es una rama en un SCV?
+A: 3
+O: Un método para guardar copias de seguridad de los archivos.
+O: Un conjunto de cambios descartados de un proyecto.
+O: Una línea de evolución del software que puede incluir desarrollos paralelos.
+O: Un repositorio separado para almacenar versiones estables del proyecto.
+
+Q: ¿Qué representa el término master o main en un SCV?
+A: 1
+O: Una rama principal donde se suelen mantener las versiones estables del software.
+O: Un repositorio local exclusivo de un usuario.
+O: Un archivo de configuración general de un proyecto.
+O: Una rama de corto recorrido creada para probar características experimentales.
+
+Q: ¿Qué tipo de ramas se suelen emplear para trabajar en una característica o corregir un fallo específico?
+A: 4
+O: Ramas de largo recorrido.
+O: Ramas principales como trunk o master.
+O: Ramas para mantener versiones propuestas (next, proposed).
+O: Ramas puntuales o Topic Branches.
+
+Q: ¿Qué herramienta de integración produce una historia más lineal en Git?
+A: 3
+O: Merge
+O: Cherry-pick
+O: Rebase
+O: Bisect
+
+Q: ¿Qué comando permite clonar un repositorio en Git?
+A: 2
+O: git init
+O: git clone
+O: git pull
+O: git branch
+
+Q: ¿Dónde se guarda la configuración global de Git para un usuario?
+A: 3
+O: En .git/config.
+O: En el directorio de trabajo del proyecto.
+O: En el archivo ~/.gitconfig o ~/.config/git/config.
+O: En el archivo README.md del proyecto.
+
+Q: ¿Qué hace el comando git stash?
+A: 4
+O: Crea una copia de seguridad del repositorio remoto.
+O: Deshace los cambios realizados en la copia local de trabajo.
+O: Realiza un commit de los archivos seleccionados.
+O: Guarda temporalmente los cambios en la copia de trabajo para permitir operaciones como un pull.
+
+Q: ¿Qué acción se realiza con git bisect?
+A: 1
+O: Localizar el commit que introdujo un error mediante búsqueda binaria.
+O: Fusionar dos ramas manteniendo los cambios de ambas.
+O: Crear una rama a partir de un commit específico.
+O: Volver a una versión anterior del proyecto.
+
+Q: ¿Qué permite hacer el comando git cherry-pick?
+A: 3
+O: Aplicar múltiples commits de una rama en otra.
+O: Restaurar un archivo eliminado en la copia de trabajo.
+O: Aplicar un commit específico de una rama en otra rama.
+O: Volver a un estado anterior del proyecto sin modificar el historial.
+
+Q: ¿Qué son los “hooks” en Git?
+A: 4
+O: Archivos que almacenan la configuración global del repositorio.
+O: Copias de seguridad automáticas generadas por Git.
+O: Historias alternativas creadas durante un proceso de merge.
+O: Guiones que se ejecutan antes o después de acciones como commit o push.
+
+Q: ¿Qué comando se emplea para eliminar archivos no versionados en Git?
+A: 2
+O: git reset
+O: git clean
+O: git stash
+O: git rm
+
+Q: ¿Qué acción realiza el comando git gc?
+A: 4
+O: Limpia los archivos temporales creados por el sistema operativo.
+O: Elimina archivos no rastreados de la copia de trabajo.
+O: Restaura la configuración predeterminada del repositorio.
+O: Optimiza y realiza tareas de mantenimiento en el repositorio.
+
+Q: ¿Qué es un “bare repository” en Git?
+A: 2
+O: Un repositorio que almacena solo las versiones más recientes de los archivos.
+O: Un repositorio sin copia de trabajo, que contiene únicamente metadatos.
+O: Una rama principal utilizada para fusiones complejas.
+O: Un repositorio remoto sincronizado con varios desarrolladores.
+
+Q: ¿Qué herramienta gráfica NO pertenece a Git por defecto?
+A: 4
+O: gitk
+O: git gui
+O: tig
+O: mercurial-gui
+
+Q: ¿Qué subdirectorio contiene la información de control de versiones en Mercurial?
+A: 3
+O: .git
+O: .svn
+O: .hg
+O: .bzr
+
+Q: ¿Dónde se guarda la configuración global de usuario en Mercurial?
+A: 2
+O: En el archivo .hg/config dentro del proyecto.
+O: En el archivo ~/.hgrc.
+O: En el archivo ~/.config/hg/config.
+O: En el archivo README.md.
+
+Q: ¿Qué comando en Mercurial permite clonar un repositorio?
+A: 1
+O: hg clone
+O: hg pull
+O: hg branch
+O: hg commit
+
+Q: ¿Qué diferencia a Mercurial de Git respecto a la gestión de cambios?
+A: 4
+O: Mercurial usa blobs y trees en lugar de files y manifests.
+O: Git no permite manejar varias ramas simultáneamente, pero Mercurial sí.
+O: Mercurial no genera claves SHA-1 para los cambios realizados en un proyecto.
+O: Mercurial no necesita usar un índice (stage) para registrar los cambios.
+
+Q: ¿Cómo se añaden extensiones en Mercurial?
+A: 3
+O: Usando el comando hg install.
+O: Copiando los archivos de extensión al subdirectorio .hg/extensions.
+O: Editando el archivo de configuración y añadiendo la ruta de la extensión.
+O: Con el comando hg addextension.
+
+Q: ¿Qué comando permite ver las extensiones disponibles en Mercurial?
+A: 2
+O: hg extensions
+O: hg help extensions
+O: hg config extensions
+O: hg list extensions
+
+Q: ¿Qué archivo se edita para añadir un nuevo repositorio remoto en Mercurial?
+A: 4
+O: .hg/extensions
+O: .hgrc/config
+O: .hg/hooks
+O: .hg/hgrc
+
+Q: ¿Qué herramienta gráfica es recomendada para trabajar con Mercurial?
+A: 3
+O: gitk
+O: bazaar explorer
+O: tortoisehg
+O: mercurial-viewer
+
+Q: ¿Qué sistema de control de versiones es el predecesor de Bazaar?
+A: 2
+O: CVS
+O: GNU Arch
+O: Subversion
+O: Mercurial
+
+Q: ¿Qué directorio contiene la información de control de versiones en un proyecto gestionado por Bazaar?
+A: 4
+O: .git
+O: .hg
+O: .svn
+O: .bzr
+
+Q: ¿Qué herramienta gráfica es recomendada para trabajar con Bazaar?
+A: 3
+O: git gui
+O: tortoisebzr
+O: bazaar explorer
+O: mercurial-viewer
+
+Q: ¿Qué comando permite inicializar un repositorio en Bazaar?
+A: 1
+O: bzr init
+O: bzr branch
+O: bzr commit
+O: bzr create
+
+Q: ¿Qué comando permite ver el historial de cambios en Bazaar?
+A: 2
+O: bzr history
+O: bzr log
+O: bzr changes
+O: bzr list
+
+Q: ¿Qué característica especial permite a Bazaar trabajar con Unity3D?
+A: 4
+O: Es compatible con archivos binarios del motor Unity3D.
+O: Proporciona un plugin específico para Unity3D.
+O: Automatiza la integración con los entornos de Unity3D.
+O: Permite configurar Bazaar como herramienta de control de versiones en Unity3D.
+
+Q: ¿Qué ventaja destaca de Bazaar frente a otros SCV?
+A: 3
+O: Usa SHA-256 para identificar cambios.
+O: Ofrece un sistema de ramas único y simplificado.
+O: Es fácil de usar y tiene un flujo de trabajo intuitivo.
+O: Solo permite trabajar en repositorios locales, evitando conflictos.
+
+Q: ¿Qué archivo se utiliza para modificar la configuración global en Bazaar?
+A: 2
+O: .bzr/extensions
+O: bazaar.conf en $HOME/.bazaar
+O: .bzr/hooks
+O: global-config.bzr
+
+Q: ¿Qué comando en Bazaar permite fusionar cambios de una rama en otra?
+A: 4
+O: bzr combine
+O: bzr push
+O: bzr apply
+O: bzr merge
+
+Q: ¿Qué similitudes comparten Git, Mercurial y Bazaar?
+A: 1
+O: Los tres son sistemas de control de versiones distribuidos.
+O: Los tres usan índices para registrar los cambios antes de un commit.
+O: Los tres dependen de un repositorio centralizado para funcionar.
+O: Ninguno de ellos soporta la creación de ramas.
+
+Q: ¿Qué diferencia clave hay entre Git y Mercurial en cuanto a la gestión de cambios?
+A: 4
+O: Mercurial usa SHA-256, mientras que Git usa SHA-1.
+O: Git no soporta extensiones, pero Mercurial sí.
+O: Git organiza el historial como un árbol, mientras que Mercurial lo trata como un grafo.
+O: Mercurial no requiere usar un índice (stage) antes de un commit, mientras que Git sí.
+
+Q: ¿Qué característica especial destaca de Bazaar frente a Git y Mercurial?
+A: 3
+O: Es más rápido que Git y Mercurial.
+O: Ofrece compatibilidad total con proyectos gestionados por Mercurial.
+O: Es más fácil de usar y tiene un flujo de trabajo más sencillo.
+O: Implementa un sistema híbrido centralizado y distribuido.
+
+Q: ¿Qué característica define a CVS?
+A: 2
+O: Es un sistema de control de versiones distribuido.
+O: Es un sistema de control de versiones centralizado.
+O: Fue diseñado para reemplazar a Git.
+O: Usa SHA-256 como método de identificación.
+
+Q: ¿Qué SCV es el sucesor de Arch?
+A: 3
+O: Subversion
+O: Darcs
+O: Bazaar
+O: Monotone
+
+Q: ¿Cuál de las siguientes opciones es un SCV centralizado?
+A: 1
+O: Subversion
+O: Git
+O: Mercurial
+O: Monotone
+
+Q: ¿Qué es una “topic branch”?
+A: 3
+O: Una rama que contiene las versiones estables de un proyecto.
+O: Una rama que incluye todas las propuestas de cambios realizadas por varios desarrolladores.
+O: Una rama puntual creada para trabajar en un único aspecto, como una característica o corrección específica.
+O: Una rama experimental para probar integraciones avanzadas.
+
+Q: ¿Qué prefijo suelen usar los desarrolladores para indicar que una rama es de trabajo en progreso (Work in Progress)?
+A: 4
+O: tip/
+O: iss/
+O: hotfix/
+O: wip/
+
+Q: ¿Qué diferencia clave hay entre merge y rebase en Git?
+A: 1
+O: El merge combina los cambios de dos ramas y preserva el historial completo, mientras que el rebase reescribe el historial para obtener una línea más lineal.
+O: El rebase es más rápido que el merge, pero no permite resolver conflictos.
+O: El merge descarta los commits antiguos, mientras que el rebase los mantiene en paralelo.
+O: El rebase solo funciona en repositorios centralizados.
+
+Q: ¿Qué son los submódulos en Git?
+A: 2
+O: Una característica para trabajar con múltiples ramas en paralelo.
+O: Una forma de incluir otro repositorio Git como parte de un proyecto actual.
+O: Una alternativa a las herramientas gráficas para manejar ramas.
+O: Un método para restaurar archivos borrados accidentalmente.
+
+Q: ¿Qué herramienta complementa a Git ofreciendo una forma más sencilla de manejar comandos complejos?
+A: 4
+O: TortoiseGit
+O: Git GUI
+O: Gitk
+O: Git-Town
+
+Q: ¿Qué diferencia clave tiene Breezy con otros SCV?
+A: 3
+O: Es un SCV centralizado exclusivo para sistemas Unix.
+O: No soporta operaciones de merge o rebase.
+O: Es una reimplementación de Bazaar con soporte adicional para funcionalidades modernas.
+O: Funciona exclusivamente como cliente de Git.
+
+Q: ¿Qué es Tailor en el contexto de los SCV?
+A: 4
+O: Un comando avanzado de Git para ajustar ramas.
+O: Un sistema de control de versiones distribuido diseñado para proyectos pequeños.
+O: Una extensión de Mercurial para manejar submódulos.
+O: Una herramienta que permite migrar proyectos entre diferentes sistemas de control de versiones.
+
+Q: ¿Qué permite hacer git-annex?
+A: 2
+O: Sincronizar ramas locales con remotas automáticamente.
+O: Almacenar grandes archivos en repositorios Git sin comprometer el rendimiento.
+O: Gestionar extensiones de terceros en Git.
+O: Realizar operaciones avanzadas con submódulos.
