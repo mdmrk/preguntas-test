@@ -629,13 +629,6 @@ O: Obtendré los 15 primeros commits del repositorio.
 O: Obtendré los 15 últimos commits del repositorio.
 O: Obtendré hasta 15 ramas.
 
-Q: El control aspnet menú:
-A: 4
-O: No puede tener elementos anidados.
-O: Está compuesto de elementos listItem
-O: Debe llevar la propiedad autopostback=true
-O: Ninguna de las opciones es correcta
-
 Q: Las funciones lambda:
 A: 1
 O: Permiten especificar los tipos de datos de los parámetros.
@@ -649,13 +642,6 @@ O: Sirve para incluir opciones de seguridad, estado, memoria, etc.
 O: Está basado en XML
 O: Todas las opciones ofrecidas son correctas.
 O: Sirve para definir la cadena de conexión a la BBDD.
-
-Q: Un biblioteca en .NET Framework:
-A: 1
-O: Debemos añadir una referencia a los proyectos en los que lo estén empleando.
-O: Produce un ejecutable, no una DLL.
-O: Se añade automáticamente una referencia a los proyectos en los que lo estén empleando.
-O: Si es de tipo dinámico, se añade automáticamente una referencia a los proyectos en los que lo estén empleando. Si es de tipo estático, debemos añadir manualmente una referencia a los proyectos en los que lo estén empleando.
 
 Q: El AJAX toolkit incluye:
 A: 3
