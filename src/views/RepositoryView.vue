@@ -62,7 +62,7 @@
               </span>
             </div>
           </div>
-          <QuizQuestion :question="question" :answered="true" :readOnly="true" />
+          <TestQuestion :question="question" :answered="true" :readOnly="true" />
         </div>
       </div>
     </template>
@@ -79,23 +79,23 @@
 </template>
 <script setup lang="ts">
 import LoadingSpinnerIcon from "@/components/icons/LoadingSpinnerIcon.vue"
-import QuizQuestion from "@/components/QuizQuestion.vue"
-import { QuizLoader } from "@/composables/useQuizLoader"
-import type { Question } from "@/types/quiz"
+import TestQuestion from "@/components/TestQuestion.vue"
+import { TestLoader } from "@/composables/useTestLoader"
+import type { Question } from "@/types/test"
 import "katex/dist/katex.min.css"
 import { computed, onMounted, ref } from "vue"
 import { useRoute } from "vue-router"
 
 const route = useRoute()
-const quizContent = ref("")
+const testContent = ref("")
 const loading = ref(true)
 const selectedTags = ref<string[]>([])
-const quizId = computed(() => route.params.id as string)
-const loader = new QuizLoader()
+const testId = computed(() => route.params.id as string)
+const loader = new TestLoader()
 
 const questions = computed(() => {
-  if (!quizContent.value) return []
-  return loader.parseQuizText(quizContent.value, false)
+  if (!testContent.value) return []
+  return loader.parseTestText(testContent.value, false)
 })
 
 const availableTags = computed(() => {
@@ -135,16 +135,16 @@ const getQuestionNumber = (question: Question) => {
   return questions.value.findIndex((q) => q.id === question.id) + 1
 }
 
-const loadQuizData = async () => {
+const loadTestData = async () => {
   try {
-    const module = await import(`@/data/${quizId.value}.txt?raw`)
-    quizContent.value = module.default
+    const module = await import(`@/data/${testId.value}.txt?raw`)
+    testContent.value = module.default
   } catch (error) {
-    console.error("Failed to load quiz:", error)
+    console.error("Failed to load test:", error)
   } finally {
     loading.value = false
   }
 }
 
-onMounted(loadQuizData)
+onMounted(loadTestData)
 </script>

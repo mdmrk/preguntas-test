@@ -50,15 +50,15 @@
         </div>
       </div>
 
-      <QuizQuestion
-        v-if="currentQuestion && !quizFinished"
+      <TestQuestion
+        v-if="currentQuestion && !testFinished"
         :question="currentQuestion"
         @answered="handleAnswer"
         @next="nextQuestion"
       />
 
       <div
-        v-if="quizFinished"
+        v-if="testFinished"
         class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6"
       >
         <div class="text-center">
@@ -87,7 +87,7 @@
           </div>
 
           <button
-            @click="restartQuiz"
+            @click="restartTest"
             class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg cursor-pointer"
           >
             Reintentar
@@ -104,8 +104,8 @@
 
 <script setup lang="ts">
 import LoadingSpinnerIcon from "@/components/icons/LoadingSpinnerIcon.vue"
-import QuizQuestion from "@/components/QuizQuestion.vue"
-import { QuizLoader } from "@/composables/useQuizLoader"
+import TestQuestion from "@/components/TestQuestion.vue"
+import { TestLoader } from "@/composables/useTestLoader"
 import "katex/dist/katex.min.css"
 import { computed, onMounted, ref } from "vue"
 import { useRoute } from "vue-router"
@@ -117,18 +117,18 @@ interface Answer {
 }
 
 const route = useRoute()
-const quizContent = ref("")
+const testContent = ref("")
 const loading = ref(true)
 const currentQuestionIndex = ref(0)
 const answers = ref<Answer[]>([])
-const quizFinished = ref(false)
+const testFinished = ref(false)
 
-const quizId = computed(() => route.params.id as string)
-const loader = new QuizLoader()
+const testId = computed(() => route.params.id as string)
+const loader = new TestLoader()
 
 const questions = computed(() => {
-  if (!quizContent.value) return []
-  return loader.parseQuizText(quizContent.value)
+  if (!testContent.value) return []
+  return loader.parseTestText(testContent.value)
 })
 
 const currentQuestion = computed(() => questions.value[currentQuestionIndex.value] || null)
@@ -166,26 +166,26 @@ const nextQuestion = () => {
   if (currentQuestionIndex.value < questions.value.length - 1) {
     currentQuestionIndex.value++
   } else {
-    quizFinished.value = true
+    testFinished.value = true
   }
 }
 
-const restartQuiz = () => {
+const restartTest = () => {
   currentQuestionIndex.value = 0
   answers.value = []
-  quizFinished.value = false
+  testFinished.value = false
 }
 
-const loadQuizData = async () => {
+const loadTestData = async () => {
   try {
-    const module = await import(`@/data/${quizId.value}.txt?raw`)
-    quizContent.value = module.default
+    const module = await import(`@/data/${testId.value}.txt?raw`)
+    testContent.value = module.default
   } catch (error) {
-    console.error("Failed to load quiz:", error)
+    console.error("Failed to load test:", error)
   } finally {
     loading.value = false
   }
 }
 
-onMounted(loadQuizData)
+onMounted(loadTestData)
 </script>

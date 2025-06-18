@@ -41,7 +41,7 @@ export default defineConfig({
         manualChunks(id) {
           if (id.includes("src/data/") && id.includes(".txt")) {
             const fileName = id.split("/").pop()?.replace(".txt", "")
-            return `quiz-${fileName}`
+            return `test-${fileName}`
           }
 
           if (id.includes("src/components/icons/")) {
@@ -78,7 +78,7 @@ export default defineConfig({
         chunkFileNames: (chunkInfo) => {
           const facadeModuleId = chunkInfo.facadeModuleId
           if (facadeModuleId?.includes("src/data/")) {
-            return "assets/quiz-data/[name]-[hash].js"
+            return "assets/test-data/[name]-[hash].js"
           }
           if (facadeModuleId?.includes("src/components/icons/")) {
             return "assets/icons/[name]-[hash].js"
@@ -92,7 +92,7 @@ export default defineConfig({
           const name = assetInfo.name || ""
           if (/\.(png|jpe?g|svg|gif|webp)$/i.test(name)) {
             if (name.includes("gpi")) {
-              return "assets/quiz-images/[name]-[hash].[ext]"
+              return "assets/test-images/[name]-[hash].[ext]"
             }
             return "assets/img/[name]-[hash].[ext]"
           }

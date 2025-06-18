@@ -8,19 +8,19 @@ import itertools
 
 @dataclass
 class Question:
-    """Represents a quiz question"""
+    """Represents a test question"""
     question_text: str
     options: List[str]
     correct_answer_index: int
     image: Optional[str] = None
     raw_chunk: str = ""  # Store original text for reconstruction
 
-class QuizParser:
-    """Parser for quiz text files"""
+class TestParser:
+    """Parser for test text files"""
     
     @staticmethod
-    def parse_quiz_text(text: str) -> List[Question]:
-        """Parse quiz text into Question objects"""
+    def parse_test_text(text: str) -> List[Question]:
+        """Parse test text into Question objects"""
         chunks = text.split("\n\n")
         questions = []
         
@@ -79,8 +79,8 @@ class QuizParser:
         
         return questions
 
-class QuizDeduplicator:
-    """Remove duplicate questions from quiz files"""
+class TestDeduplicator:
+    """Remove duplicate questions from test files"""
     
     @staticmethod
     def normalize_text(text: str) -> str:
@@ -97,12 +97,12 @@ class QuizDeduplicator:
         (regardless of order).
         """
         # Compare normalized question texts
-        if QuizDeduplicator.normalize_text(q1.question_text) != QuizDeduplicator.normalize_text(q2.question_text):
+        if TestDeduplicator.normalize_text(q1.question_text) != TestDeduplicator.normalize_text(q2.question_text):
             return False
         
         # Compare option sets (order doesn't matter)
-        options1_normalized = {QuizDeduplicator.normalize_text(opt) for opt in q1.options}
-        options2_normalized = {QuizDeduplicator.normalize_text(opt) for opt in q2.options}
+        options1_normalized = {TestDeduplicator.normalize_text(opt) for opt in q1.options}
+        options2_normalized = {TestDeduplicator.normalize_text(opt) for opt in q2.options}
         
         return options1_normalized == options2_normalized
     
@@ -116,7 +116,7 @@ class QuizDeduplicator:
         
         for i in range(len(questions)):
             for j in range(i + 1, len(questions)):
-                if QuizDeduplicator.questions_are_duplicate(questions[i], questions[j]):
+                if TestDeduplicator.questions_are_duplicate(questions[i], questions[j]):
                     duplicates.append((i, j))
         
         return duplicates
@@ -131,7 +131,7 @@ class QuizDeduplicator:
             return [], 0
         
         # Find all duplicate pairs
-        duplicate_pairs = QuizDeduplicator.find_duplicates(questions)
+        duplicate_pairs = TestDeduplicator.find_duplicates(questions)
         
         # Get indices of questions to remove (keep first occurrence)
         indices_to_remove = set()
@@ -148,8 +148,8 @@ class QuizDeduplicator:
         return unique_questions, num_removed
     
     @staticmethod
-    def reconstruct_quiz_text(questions: List[Question]) -> str:
-        """Reconstruct quiz text from Question objects using original formatting"""
+    def reconstruct_test_text(questions: List[Question]) -> str:
+        """Reconstruct test text from Question objects using original formatting"""
         if not questions:
             return ""
         
@@ -194,7 +194,7 @@ class QuizDeduplicator:
 
 def process_file(file_path: Path) -> Tuple[int, int]:
     """
-    Process a single quiz file to remove duplicates.
+    Process a single test file to remove duplicates.
     Returns (original_count, final_count).
     """
     try:
@@ -203,19 +203,19 @@ def process_file(file_path: Path) -> Tuple[int, int]:
             text = f.read()
         
         # Parse questions
-        questions = QuizParser.parse_quiz_text(text)
+        questions = TestParser.parse_test_text(text)
         original_count = len(questions)
         
         if original_count == 0:
             return 0, 0
         
         # Remove duplicates
-        unique_questions, num_removed = QuizDeduplicator.remove_duplicates(questions)
+        unique_questions, num_removed = TestDeduplicator.remove_duplicates(questions)
         final_count = len(unique_questions)
         
         if num_removed > 0:
             # Reconstruct and write the file
-            new_text = QuizDeduplicator.reconstruct_quiz_text(unique_questions)
+            new_text = TestDeduplicator.reconstruct_test_text(unique_questions)
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(new_text)
             
@@ -279,7 +279,7 @@ def main():
     script_dir = Path(__file__).parent.absolute()
     data_dir = script_dir / ".." / "src" / "data"
     
-    print(f"Processing all quiz files in: {data_dir.resolve()}")
+    print(f"Processing all test files in: {data_dir.resolve()}")
     print("Removing duplicate questions (accounting for shuffled options)...")
     process_directory(data_dir)
 

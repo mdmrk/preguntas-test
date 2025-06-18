@@ -1,6 +1,6 @@
 <template>
   <button
-    @click="navigateToQuiz"
+    @click="navigateToTest"
     class="w-full h-26 font-black text-gray-50 text-7xl text-left overflow-clip pl-4 rounded-4xl cursor-pointer hover:scale-105 hover:shadow-2xl relative group"
   >
     <div
@@ -28,9 +28,9 @@ interface Props {
   id?: string
 }
 const props = defineProps<Props>()
-const navigateToQuiz = () => {
+const navigateToTest = () => {
   if (props.id) {
-    router.push(`/quiz/${props.id}`)
+    router.push(`/test/${props.id}`)
   }
 }
 const navigateToRepository = () => {

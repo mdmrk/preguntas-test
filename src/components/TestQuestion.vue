@@ -1,6 +1,6 @@
 <template>
   <div v-show="question.image !== undefined" class="mb-6">
-    <img :src="'/quiz/' + question.image" />
+    <img :src="'/test/' + question.image" />
   </div>
 
   <div class="mb-6">
@@ -62,7 +62,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Question } from "@/types/quiz"
+import type { Question } from "@/types/test"
 import { computed, ref, watch } from "vue"
 import TextRenderer from "./TextRenderer.vue"
 import CheckIcon from "./icons/CheckIcon.vue"

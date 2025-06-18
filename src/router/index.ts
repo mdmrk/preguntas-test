@@ -13,9 +13,9 @@ const router = createRouter({
       }
     },
     {
-      path: "/quiz/:id",
-      name: "quiz",
-      component: () => import("@/views/QuizView.vue"),
+      path: "/test/:id",
+      name: "test",
+      component: () => import("@/views/TestView.vue"),
       props: true,
       meta: {
         title: "Preguntas"
@@ -34,9 +34,9 @@ const router = createRouter({
 })
 
 router.beforeEach((to, _, next) => {
-  const baseTitle = to.name === "quiz" ? "Preguntas" : "Repositorio"
+  const baseTitle = to.name === "test" ? "Preguntas" : "Repositorio"
 
-  if (to.name === "quiz" || to.name === "repository") {
+  if (to.name === "test" || to.name === "repository") {
     const id = to.params.id as string
     const formattedTitle = id
       .split(/[-_]/)
