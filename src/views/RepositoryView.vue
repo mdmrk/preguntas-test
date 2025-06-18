@@ -8,7 +8,7 @@
       <div
         class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 mb-6"
       >
-        <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center justify-between">
           <div class="flex items-center space-x-4">
             <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Repositorio</h2>
             <span class="text-sm font-medium text-gray-600 dark:text-gray-400">
@@ -19,7 +19,7 @@
 
         <div
           v-if="availableTags.length > 0"
-          class="pt-4 border-t border-gray-200 dark:border-gray-700"
+          class="pt-4 border-t border-gray-200 dark:border-gray-700 mt-4"
         >
           <div class="flex flex-wrap gap-2">
             <label v-for="tag in availableTags" :key="tag" class="cursor-pointer">
