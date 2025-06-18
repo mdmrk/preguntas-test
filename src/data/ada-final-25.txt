@@ -23,14 +23,14 @@ Q: Respecto a los algoritmos de vuelta atrás, ¿cuál de las siguientes afirmac
 O: Siempre hallan la mejor solución, aunque requieren mucho tiempo al explorar todas las posibilidades.
 O: Las otras dos afirmaciones son falsas.
 O: Siempre encuentran una solución, aunque no siempre sea óptima.
-A: 2
+A: 0
 C: Junio 2025
 
 Q: En cuanto al problema del cambio, que consiste en formar una suma $M$ con el mínimo número de monedas posibles, extraídas (con repetición) de un conjunto $C$:
 O: Es posible diseñar una solución voraz que siempre encuentra el valor óptimo.
 O: Las otras dos opciones son correctas.
 O: Es posible diseñar una solución voraz basada en el esquema divide y vencerás que siempre encuentra el valor óptimo.
-A: 0
+A: 2
 C: Junio 2025
 
 Q: Decid cuál de estas tres afirmaciones es cierta
@@ -60,7 +60,7 @@ int f(int n) {
 O: $O(n \log n)$
 O: $O(\log^2 n)$
 O: $O(n)$
-A: 1
+A: 0
 C: Junio 2025
 
 Q: En el algoritmo de Kruskal, ¿qué se selecciona en cada paso?
@@ -74,7 +74,7 @@ Q: ¿Cuál es la complejidad temporal de la aproximación voraz a la solución d
 O: Las otras dos opciones son ambas ciertas
 O: $O(\max\{n,m\})$
 O: $O(n+m)$
-A: 1
+A: 0
 C: Junio 2025
 
 Q: Estamos resolviendo el problema del laberinto mediante un algoritmo de búsqueda y enumeración. Supongamos que el mejor camino de salida encontrado hasta el momento es de longitud 100. Más adelante, tenemos que decidir acerca de un nodo $n$ del que hemos obtenido una cota optimista que ha resultado ser 80 y una pesimista con valor 90. ¿Cuál de las siguientes afirmaciones es siempre cierta?
@@ -102,7 +102,7 @@ Q: ¿Cuál es el propósito principal de un Heap en el algoritmo de ordenación 
 O: Lograr una ordenación parcial del vector, es decir, que algunos elementos queden en la posición correcta pero otros no.
 O: Facilitar la inserción eficiente de elementos en el nuevo vector ordenado.
 O: Permitir la extracción repetida del elemento máximo o mínimo de manera eficiente
-A: 0
+A: 2
 C: Junio 2025
 
 Q: Dado el siguiente programa recursivo:
@@ -124,7 +124,7 @@ Q: Dada la versión general del problema del laberinto $m \times n$, la distanci
 O: Para obtener cotas pesimistas
 O: Ninguna de las otras dos opciones es válida
 O: Para obtener cotas optimistas
-A: 2
+A: 1
 C: Junio 2025
 
 Q: Se pretende obtener la complejidad temporal en el caso más desfavorable de la siguiente función.
@@ -148,14 +148,14 @@ int exa(vector<int> &v) {
 O: Las otras dos opciones son ciertas
 O: $c_s(n) = \sum_{k=1}^{\log n+1} (n - n/2^k) \in O(n \log n)$
 O: $c_s(n) = n \sum_{j=1}^{\log n} \sum_{i=1}^{j} (1/2)^i \in O(n \log n)$
-A: 1
+A: 0
 C: Junio 2025
 
 Q: Sea $g(n) = \sum_{j=0}^{\log_2 n} n4^j$. Suponiendo $n \to \infty$, di cuál de las siguientes afirmaciones es cierta:
 O: $g(n) \in \Omega(n^2)$
 O: $g(n) \in \Theta(n^2)$
 O: $g(n) \in O(n^2 \log n^2)$
-A: 2
+A: 0
 C: Junio 2025
 
 Q: Sobre el problema del "Viajante de comercio" resuelto mediante vuelta atrás, dos afirmaciones son verdaderas y una falsa, o viceversa. Señala la que difiere de las otras dos.
@@ -185,7 +185,7 @@ int f(int n) {
 O: $f(n) = \sum_{i=0,j=0}^{n/2^{2+1}} 1$
 O: Ninguna de las otras dos opciones es correcta
 O: $f(n) = \sum_{i=1}^{\log n} 4n \left(\frac{1}{2}\right)^i$
-A: 1
+A: 2
 C: Junio 2025
 
 Q: Asumiendo un modelo de computación en el que los números enteros pueden ser arbitrariamente grandes ¿Cuál es la complejidad temporal asintótica de la siguiente función (en función del tamaño del problema)?
@@ -200,21 +200,21 @@ unsigned factorial(unsigned n) {
 O: $\Theta(n)$
 O: $\Theta(\log n)$
 O: Ninguna de las otras dos opciones es cierta
-A: 0
+A: 2
 C: Junio 2025
 
 Q: Estamos resolviendo el problema del laberinto mediante un algoritmo de búsqueda y enumeración. Supongamos que nos encontramos en un nodo interno $n$ situado en un nivel del árbol de estados posibles. ¿Qué podemos decir acerca del valor de $x$?
 O: Es una cota optimista de $n$
 O: Por sí solo, $x$ no es cota, ni optimista ni pesimista
 O: Es una cota pesimista de $n$
-A: 1
+A: 0
 C: Junio 2025
 
 Q: Disponemos de dos funciones de coste $f(n)$ y $g(n)$ tal que $f \in O(g)$. ¿Puede existir un valor $x$ para el que $f(x) > g(x)$?
 O: Sí, y además es posible que el valor $n_0$ tal que $\forall_{n \geq n_0} f(n) \leq g(n)$ no exista.
 O: No, no puede existir ese valor $x$.
 O: Sí, pero también existirá un valor $n_0$ tal que $\forall_{n \geq n_0} f(n) \leq g(n)$.
-A: 1
+A: 0
 C: Junio 2025
 
 Q: La búsqueda binaria puede considerarse una instancia del esquema:
@@ -246,7 +246,7 @@ Q: En la resolución del problema de la función compuesta mínima mediante vuel
 O: Se podría conseguir que el programa siempre encontrara solución poniendo un 1 en el vector solución antes que un 0.
 O: Salvo en casos muy raros, el programa nunca acabaría.
 O: El programa acabaría encontrando la solución óptima, pero a costa de una complejidad temporal prohibitiva.
-A: 2
+A: 1
 C: Junio 2025
 
 Q: Si un algoritmo de ramificación y poda utiliza una cola de prioridad con un criterio inadecuado, ¿qué ocurriría muy probablemente?
@@ -274,7 +274,7 @@ Q: Con respecto a la versión general (sin restricciones adicionales) del proble
 O: ... no se conoce ninguna reducción en subproblemas que cumpla el teorema de reducción
 O: ... tiene una solución eficiente utilizando programación dinámica
 O: ... cumple la propiedad de subestructura óptima y por lo tanto se puede plantear una solución de divide y vencerás
-A: 2
+A: 1
 C: Junio 2025
 
 Q: Si el coste temporal de un algoritmo es $T(n)$, ¿cuál de las siguientes situaciones es imposible?
@@ -295,7 +295,7 @@ Q: Indica cuál de estas posibles cotas pesimistas para el problema del laberint
 O: La longitud del camino actual.
 O: La longitud del camino actual más la de su continuación hasta el final del mapa mediante un algoritmo de programación dinámica que sólo considera movimientos hacia E, SE o S.
 O: La longitud del camino actual más la de su continuación hasta el final del mapa mediante un algoritmo voraz que sólo considera movimientos hacia E, SE o S.
-A: 0
+A: 1
 C: Junio 2025
 
 Q: Dada la versión restringida del problema del laberinto $m \times n$, estamos interesados, no solo en obtener la longitud del camino de salida más corto; también nos interesa la longitud del camino más corto entre el origen y cualquier casilla accesible del laberinto ¿Con qué complejidad temporal, en función de $n$ y $m$, podría obtenerse?
@@ -309,7 +309,7 @@ Q: En un algoritmo de ramificación y poda, conforme se va completando un nodo, 
 O: Su cota optimista debería aproximarse a la mejor solución que puede obtenerse a partir de ese nodo.
 O: Las otras dos afirmaciones son ciertas.
 O: Su cota pesimista debería aproximarse a la mejor solución que puede obtenerse a partir de ese nodo.
-A: 0
+A: 1
 C: Junio 2025
 
 Q: En un algoritmo de vuelta atrás, ¿se podrían priorizar las expansiones de los nodos con mejor cota optimista de manera que el algoritmo siga siendo de vuelta atrás?
@@ -345,5 +345,5 @@ Q: En la resolución del problema del laberinto (versión general), el uso de un
 O: Descartar nodos cuando se llega a una posición del mapa mediante un camino más largo que el mejor camino para llegar a esa posición.
 O: Mejorar la solución en curso antes de llegar a una hoja.
 O: Evitar ciclos.
-A: 0
+A: 1
 C: Junio 2025
