@@ -62,7 +62,12 @@
               </span>
             </div>
           </div>
-          <TestQuestion :question="question" :answered="true" :readOnly="true" />
+          <TestQuestion
+            :question="question"
+            :answered="true"
+            :readOnly="true"
+            :shuffleAnswers="false"
+          />
         </div>
       </div>
     </template>

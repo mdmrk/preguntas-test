@@ -11,29 +11,29 @@
 
   <div class="space-y-3">
     <div
-      v-for="(option, optionIndex) in question.options"
-      :key="optionIndex"
+      v-for="(option, shuffledIndex) in shuffledOptions"
+      :key="shuffledIndex"
       class="flex items-center p-4 rounded-lg border"
-      :class="getOptionClasses(optionIndex)"
-      @click="selectAnswer(optionIndex)"
+      :class="getOptionClasses(shuffledIndex)"
+      @click="selectAnswer(shuffledIndex)"
     >
       <div class="flex items-center w-full">
         <div
           class="w-4 h-4 rounded-full border-2 mr-4 flex items-center justify-center"
-          :class="getRadioClasses(optionIndex)"
+          :class="getRadioClasses(shuffledIndex)"
         >
-          <div v-if="shouldShowRadioDot(optionIndex)" class="w-2 h-2 rounded-full bg-white" />
+          <div v-if="shouldShowRadioDot(shuffledIndex)" class="w-2 h-2 rounded-full bg-white" />
         </div>
 
-        <span class="text-base font-medium flex-1" :class="getTextClasses(optionIndex)">
+        <span class="text-base font-medium flex-1" :class="getTextClasses(shuffledIndex)">
           <TextRenderer :text="option" />
         </span>
 
-        <div v-if="isCorrectOption(optionIndex)" class="ml-auto">
+        <div v-if="isCorrectOption(shuffledIndex)" class="ml-auto">
           <CheckIcon class="w-5 text-green-600 dark:text-green-400" />
         </div>
 
-        <div v-if="isSelectedIncorrectOption(optionIndex)" class="ml-auto">
+        <div v-if="isSelectedIncorrectOption(shuffledIndex)" class="ml-auto">
           <XIcon class="w-5 text-red-600 dark:text-red-400" />
         </div>
       </div>
@@ -63,6 +63,7 @@
 
 <script setup lang="ts">
 import type { Question } from "@/types/test"
+import { shuffle } from "@/utils"
 import { computed, ref, watch } from "vue"
 import TextRenderer from "./TextRenderer.vue"
 import CheckIcon from "./icons/CheckIcon.vue"
@@ -72,6 +73,7 @@ interface Props {
   question: Question
   readOnly?: boolean
   answered?: boolean
+  shuffleAnswers?: boolean
 }
 
 interface Emits {
@@ -79,82 +81,126 @@ interface Emits {
   (e: "next"): void
 }
 
-const props = defineProps<Props>()
+const props = withDefaults(defineProps<Props>(), {
+  shuffleAnswers: true
+})
+
 const emit = defineEmits<Emits>()
-const selectedOption = ref<number | null>(props.answered ? props.question.correctAnswer : null)
+
+const optionIndices = computed(() => props.question.options.map((_, index) => index))
+
+const shuffledIndices = computed(() =>
+  props.shuffleAnswers ? shuffle(optionIndices.value) : optionIndices.value
+)
+
+const shuffledOptions = computed(() =>
+  shuffledIndices.value.map((originalIndex) => props.question.options[originalIndex])
+)
+
+const originalToShuffledIndex = computed(() => {
+  const mapping: Record<number, number> = {}
+  shuffledIndices.value.forEach((originalIndex, shuffledIndex) => {
+    mapping[originalIndex] = shuffledIndex
+  })
+  return mapping
+})
+
+const shuffledToOriginalIndex = computed(() => {
+  const mapping: Record<number, number> = {}
+  shuffledIndices.value.forEach((originalIndex, shuffledIndex) => {
+    mapping[shuffledIndex] = originalIndex
+  })
+  return mapping
+})
+
+const getInitialSelectedOption = () => {
+  if (props.answered) {
+    return originalToShuffledIndex.value[props.question.correctAnswer] ?? null
+  }
+  return null
+}
+
+const selectedOption = ref<number | null>(getInitialSelectedOption())
 const answered = ref(props.answered || false)
 
-const isCorrect = computed(() => selectedOption.value === props.question.correctAnswer)
+const isCorrect = computed(() => {
+  if (selectedOption.value === null) return false
+  const originalIndex = shuffledToOriginalIndex.value[selectedOption.value]
+  return originalIndex === props.question.correctAnswer
+})
 
-const isCorrectOption = (optionIndex: number) =>
-  answered.value && optionIndex === props.question.correctAnswer
+const isCorrectOption = (shuffledIndex: number) => {
+  if (!answered.value) return false
+  const originalIndex = shuffledToOriginalIndex.value[shuffledIndex]
+  return originalIndex === props.question.correctAnswer
+}
 
-const isSelectedIncorrectOption = (optionIndex: number) =>
-  answered.value &&
-  selectedOption.value === optionIndex &&
-  optionIndex !== props.question.correctAnswer
+const isSelectedIncorrectOption = (shuffledIndex: number) =>
+  answered.value && selectedOption.value === shuffledIndex && !isCorrectOption(shuffledIndex)
 
-const shouldShowRadioDot = (optionIndex: number) =>
-  answered.value &&
-  (optionIndex === props.question.correctAnswer || selectedOption.value === optionIndex)
+const shouldShowRadioDot = (shuffledIndex: number) =>
+  answered.value && (isCorrectOption(shuffledIndex) || selectedOption.value === shuffledIndex)
 
-const getOptionClasses = (optionIndex: number) => {
+const getOptionClasses = (shuffledIndex: number) => {
   const baseClasses = answered.value
     ? "cursor-default"
     : "cursor-pointer hover:bg-blue-50 hover:border-blue-300 hover:shadow-md dark:hover:bg-blue-900/10 dark:hover:border-blue-600"
 
-  if (isCorrectOption(optionIndex)) {
+  if (isCorrectOption(shuffledIndex)) {
     return `${baseClasses} bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-700`
   }
 
-  if (isSelectedIncorrectOption(optionIndex)) {
+  if (isSelectedIncorrectOption(shuffledIndex)) {
     return `${baseClasses} bg-red-50 border-red-200 dark:bg-red-900/20 dark:border-red-700`
   }
 
   return `${baseClasses} bg-gray-50 border-gray-200 dark:bg-gray-700 dark:border-gray-600`
 }
 
-const getRadioClasses = (optionIndex: number) => {
-  if (isCorrectOption(optionIndex)) {
+const getRadioClasses = (shuffledIndex: number) => {
+  if (isCorrectOption(shuffledIndex)) {
     return "border-green-500 bg-green-500"
   }
 
-  if (isSelectedIncorrectOption(optionIndex)) {
+  if (isSelectedIncorrectOption(shuffledIndex)) {
     return "border-red-500 bg-red-500"
   }
 
   return "border-gray-300 dark:border-gray-600"
 }
 
-const getTextClasses = (optionIndex: number) => {
-  if (isCorrectOption(optionIndex)) {
+const getTextClasses = (shuffledIndex: number) => {
+  if (isCorrectOption(shuffledIndex)) {
     return "text-green-800 dark:text-green-300"
   }
 
-  if (isSelectedIncorrectOption(optionIndex)) {
+  if (isSelectedIncorrectOption(shuffledIndex)) {
     return "text-red-800 dark:text-red-300"
   }
 
   return "text-gray-900 dark:text-gray-50"
 }
 
-const selectAnswer = (index: number) => {
+const selectAnswer = (shuffledIndex: number) => {
   if (answered.value || props.readOnly) return
 
-  selectedOption.value = index
+  selectedOption.value = shuffledIndex
   answered.value = true
+
+  const originalIndex = shuffledToOriginalIndex.value[shuffledIndex]
 
   emit("answered", {
     questionId: props.question.id,
-    selectedOption: index,
+    selectedOption: originalIndex,
     isCorrect: isCorrect.value
   })
 }
 
 const resetQuestion = () => {
-  selectedOption.value = props.answered ? props.question.correctAnswer : null
+  selectedOption.value = getInitialSelectedOption()
   answered.value = props.answered || false
 }
 
 watch(() => props.question, resetQuestion)
+watch(() => props.answered, resetQuestion)
 </script>
