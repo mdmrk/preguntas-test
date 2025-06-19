@@ -9,11 +9,11 @@ C: Julio 2023
 Q: ¿Cuál de las siguientes formulaciones expresa mejor la complejidad temporal, en función del parámetro $n$, de la siguiente función? (asumimos que $n$ es potencia exacta de 2)
 ```cpp
 int f(int n) {
-    int k=0;
-    for (int i = 2; i <= n; i+=2)
-        for (int j=n; j >0; j-=2)
-            k++;
-    return k;
+  int k = 0;
+  for (int i = 2; i <= n; i += 2)
+    for (int j = n; j > 0; j -= 2)
+      k++;
+  return k;
 }
 ```
 O: $\sum_{p=2}^{n/2} \frac{p-1}{2}$
@@ -67,8 +67,9 @@ C: Julio 2023
 Q: Dado el siguiente programa recursivo:
 ```cpp
 int f(int n) {
-  // Se asume que n >= 0 
-  if (n == 0) return 1;
+  // Se asume que n >= 0
+  if (n == 0)
+    return 1;
   return f(n - 1) + f(n - 2);
 }
 ```
