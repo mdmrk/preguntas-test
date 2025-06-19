@@ -21,6 +21,7 @@ const ppss = ref(false)
           <MainButton id="ada-final" class="gradient-red">final</MainButton>
           <MainButton id="ada-final-25" class="gradient-red">final 25</MainButton>
           <MainButton id="ada-final-24" class="gradient-red">final 24</MainButton>
+          <MainButton id="ada-final-23" class="gradient-red">final 23</MainButton>
         </div>
       </div>
       <div class="relative w-full flex flex-col items-center">
