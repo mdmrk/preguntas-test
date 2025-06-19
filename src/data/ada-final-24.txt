@@ -105,7 +105,7 @@ void f(vector<int> &v) {
 }
 ```
 De las siguientes afirmaciones, o bien dos son ciertas y una es falsa, o bien al contrario, una es cierta y dos son falsas. Marca la que en este sentido es diferente a las otras dos.
-A: 0
+A: 2
 C: Junio 2024
 O: El peor de los casos ocurre cuando el primer elemento del vector es estrictamente mayor que los restantes sin importar el orden de los demás
 O: La complejidad temporal en el peor de los casos viene dada por la expresión $\sum_{i=1}^{n}(n-i)$
@@ -207,7 +207,7 @@ O: Porque no hay garantía de que la solución esté formada por una secuencia c
 O: Porque no hay garantía de que la mochila se llene
 
 Q: Dada la solución por programación dinámica recursiva de la versión restringida del problema del camino de coste mínimo, en general, ¿cuántas veces se llega al caso base de la recursión (la casilla inicial)?
-A: 1
+A: 0
 C: Junio 2024
 O: Solo una
 O: Un valor que es $O(2^n)$, donde $n$ es el tamaño del mapa
@@ -221,7 +221,7 @@ O: Sí, en cualquier caso
 O: Sí, pero siempre que la complejidad temporal conjunta de las operaciones de descomposición del problema y la combinación de las soluciones sea polinómica
 
 Q: ¿Cuál de estas estrategias para calcular el $n$-ésimo elemento de la serie de Fibonacci ($f(n) = f(n-1) + f(n-2)$, $f(1) = f(2) = 1$) es más eficiente?
-A: 0
+A: 2
 C: Junio 2024
 O: La estrategia divide y vencerás
 O: Para este problema, las dos estrategias citadas serían similares en cuanto a eficiencia
@@ -294,14 +294,14 @@ O: p,n-i
 O: p,i
 
 Q: Usando la técnica de programación dinámica con ahorro de memoria ¿podría acelerarse el programa usando tres vectores en vez de dos?
-A: 1
+A: 2
 C: Junio 2024
 O: Sí, pero sería a expensas de usar más memoria
 O: Sí, pero la complejidad temporal seguiría siendo la misma
 O: No
 
 Q: En un problema de minimización mediante Vuelta Atrás, empleamos una cota optimista que es mucho mayor que la mejor solución que podría alcanzarse desde un nodo determinado. Como consecuencia:
-A: 1
+A: 0
 C: Junio 2024
 O: Es posible que no encontremos el óptimo
 O: El programa será más lento que con otra cota optimista
@@ -322,7 +322,7 @@ O: ...puede ser relevante si se utilizan mecanismos de poda basados en estimacio
 O: Las otras dos opciones son ambas ciertas
 
 Q: En la solución de ramificación y poda del problema del camino de coste mínimo, ¿para qué puede resultar útil la técnica de poda con memoria?
-A: 2
+A: 1
 C: Junio 2024;Julio 2024
 O: Para obtener cotas pesimistas
 O: Para evitar la formación de ciclos
@@ -357,7 +357,7 @@ O: Que solo será una cota optimista válida si se asegura que todas las casilla
 O: Que solo será una cota optimista válida si las casillas contienen valores reales mayores que 0.0.
 
 Q: ¿Cuál de los siguientes algoritmos de ordenación funciona más rápido para ordenar vectores muy grandes que ya están casi ordenados?
-A: 1
+A: 0
 C: Junio 2024
 O: Quicksort empleando el primer elemento como pivote
 O: Heapsort
