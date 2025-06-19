@@ -2524,7 +2524,7 @@ O: $\Theta(n^2)$
 A: 1
 
 Q: Dada la siguiente relación de recurrencia, ¿Qué cota es verdadera?
-$f(n) = \begin{cases} 1 & n = 1 \\ n + 2f(n-1) & n \geq 1 \end{cases}$
+$$f(n) = \begin{cases} 1 & n = 1 \\ n + 2f(n-1) & n \geq 1 \end{cases}$$
 O: $f(n) \in \Omega(2^n)$
 O: $f(n) \in \Theta(n^2)$
 O: $f(n) \in \Theta(2^n)$
@@ -6716,7 +6716,7 @@ A: 1
 C: Junio 2025
 
 Q: Dada la siguiente relación de recurrencia, ¿Qué cota es verdadera?
-$f(n) = \begin{cases} 1 & n = 1 \\ n^2 + 2f(n/4) & n > 1 \end{cases}$
+$$f(n) = \begin{cases} 1 & n = 1 \\ n^2 + 2f(n/4) & n > 1 \end{cases}$$
 O: $f(n) \in \Theta(n^2)$
 O: $f(n) \in \Theta(n^2 \log n)$
 O: $f(n) \in \Theta(n^3)$

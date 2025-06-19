@@ -1,5 +1,5 @@
 Q: Dada la siguiente relación de recurrencia, ¿Qué cota es verdadera?
-$f(n) = \begin{cases} 1 & n = 1 \\ n^2 + 2f(n/4) & n > 1 \end{cases}$
+$$f(n) = \begin{cases} 1 & n = 1 \\ n^2 + 2f(n/4) & n > 1 \end{cases}$$
 O: $f(n) \in \Theta(n^2)$
 O: $f(n) \in \Theta(n^2 \log n)$
 O: $f(n) \in \Theta(n^3)$
