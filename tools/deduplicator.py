@@ -47,6 +47,9 @@ class TestParser:
                     current_option_index = len(options) - 1
                     parsing_question = False
                     parsing_option = True
+                if line.startswith("C:"):
+                    parsing_question = False
+                    parsing_option = False
                 elif line.startswith("Q:"):
                     question_text = line[2:].strip()
                     parsing_question = True

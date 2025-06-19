@@ -1,0 +1,278 @@
+Q: Dada la siguiente relación de recurrencia, ¿Qué cota es verdadera?
+$f(n) = \begin{cases} 1 & n = 1 \\ n^2 + 2f(n/4) & n > 1 \end{cases}$
+O: $f(n) \in \Theta(n^2)$
+O: $f(n) \in \Theta(n^2 \log n)$
+O: $f(n) \in \Theta(n^3)$
+A: 0
+C: Julio 2023
+
+Q: ¿Cuál de las siguientes formulaciones expresa mejor la complejidad temporal, en función del parámetro $n$, de la siguiente función? (asumimos que $n$ es potencia exacta de 2)
+```cpp
+int f(int n) {
+    int k=0;
+    for (int i = 2; i <= n; i+=2)
+        for (int j=n; j >0; j-=2)
+            k++;
+    return k;
+}
+```
+O: $\sum_{p=2}^{n/2} \frac{p-1}{2}$
+O: $\sum_{p=1}^{\log n} 2^{p-1}$
+O: $\sum_{p=1}^{\log n} \frac{n}{2}$
+A: 2
+C: Julio 2023
+
+Q: ¿Cuál de las siguientes afirmaciones es cierta sobre la complejidad temporal, en el caso peor, de los algoritmos de vuelta atrás y ramificación y poda aplicados a la versión general del problema de la mochila?
+O: Ambos algoritmos tienen la misma complejidad temporal.
+O: El algoritmo de vuelta atrás tiene una complejidad temporal peor que el de ramificación y poda.
+O: El algoritmo de ramificación y poda tiene una complejidad temporal peor que el de vuelta atrás.
+A: 0
+C: Julio 2023
+
+Q: Una empresa de transportes dispone de $M$ vehículos para repartir $N$ paquetes, todos al mismo destino. Cada paquete $i$ tiene un peso $P_i$ y se tiene que entregar antes de que transcurra un tiempo $T_{P_i}$. Por otro lado, cada vehículo $j$ puede transportar una carga máxima $C_j$, tarda un tiempo $T_j$ para llegar al destino y consume una cantidad $L_j$ de litros de combustible, independientemente de la carga que transporta. Imaginad un algoritmo de vuelta atrás que obtenga la manera en que se tienen que transportar los objetos (en qué vehículo $j$ tiene que ir cada objeto $i$) para que el consumo sea el mínimo. ¿Cuál sería una buena cota pesimista?
+O: La solución voraz del problema de cargar cada paquete en el camión de menor consumo donde cada paquete llega a tiempo, sin tener en cuenta si el camión se sobrecarga o no.
+O: La solución voraz del problema de cargar cada paquete en el camión de menor consumo donde cada paquete llega a tiempo, sin sobrecargar ningún camión.
+O: Ninguna de las otras dos opciones es correcta.
+A: 1
+C: Julio 2023
+
+Q: Las siguientes afirmaciones se refieren a un nodo cualquiera del árbol de búsqueda de ramificación y poda en un problema de maximización. De ellas, o bien dos son ciertas y una es falsa, o bien una es cierta y dos son falsas. Marca la que es diferente a las otras dos.
+O: Si su cota pesimista es menor que el mejor valor encontrado hasta el momento, entonces el nodo no podrá mejorar dicho valor.
+O: Si su cota optimista es menor que el mejor valor encontrado hasta el momento, entonces el nodo no podrá mejorar dicho valor.
+O: Su cota optimista es un valor que podría llegar a alcanzarse.
+A: 0
+C: Julio 2023
+
+Q: Debemos calcular $A^n$, donde $A$ una matriz de $m \times m$ elementos. ¿Existe una solución que evite realizar $n - 1$ multiplicaciones de coste $m^3$?
+O: No, la única manera de calcular $A^n$ es iterativamente, $A^n = AA^{n-1}$ y se deben realizar $n - 1$ multiplicaciones.
+O: Sí, existe una solución más eficiente del estilo "divide y vencerás", que usa un espacio $\Theta(m^3 \log n)$.
+O: Sí, existe una solución más eficiente del estilo "divide y vencerás", que usa un espacio $\Theta(m^3 n)$.
+A: 1
+C: Julio 2023
+
+Q: Sean dos funciones de coste $f : \mathbb{N} \to \mathbb{R}^+$ y $g : \mathbb{N} \to \mathbb{R}^+$ tales que $f \in O(g)$. De las siguientes situaciones, o bien dos pueden suceder y la otra no, o bien dos no pueden suceder y la otra sí. Indica la que es diferente de las otras dos.
+O: $\lim_{n \to \infty} \frac{g(n)}{f(n)} = \infty$
+O: $\lim_{n \to \infty} \frac{g(n)}{f(n)} = k, k \in \mathbb{R}^+, k \neq 0$
+O: $\lim_{n \to \infty} \frac{g(n)}{f(n)} = 0$
+A: 1
+C: Julio 2023
+
+Q: Una de las siguientes afirmaciones es cierta. Di cuál.
+O: $\Theta(2^n) \neq \Theta(3^n)$
+O: $O(2^n) \subset O(n^2)$
+O: $\Omega(2^n) \subset \Omega(n!)$
+A: 0
+C: Julio 2023
+
+Q: Dado el siguiente programa recursivo:
+```cpp
+int f(int n) {
+  // Se asume que n >= 0 
+  if (n == 0) return 1;
+  return f(n - 1) + f(n - 2);
+}
+```
+si quisiéramos mejorarlo haciendo uso de la técnica de programación dinámica, ¿cuáles serían las complejidades temporal y espacial más ajustadas del algoritmo resultante?
+O: Respectivamente, $O(n)$ y $O(1)$
+O: Ambas complejidades serían $O(1)$
+O: Ambas complejidades serían $O(n)$
+A: 0
+C: Julio 2023
+
+Q: Una de estas tres afirmaciones es falsa. ¿Cuál?
+O: Un algoritmo voraz puede no encontrar la solución óptima de un problema de selección discreta.
+O: El esquema de ramificación y poda no garantiza que la complejidad temporal de resolución de un problema de selección discreta no sea exponencial.
+O: Los algoritmos voraces no sirven para resolver problemas de selección discreta.
+A: 2
+C: Julio 2023
+
+Q: ¿Qué tienen en común el algoritmo que obtiene el k-ésimo elemento más pequeño de un vector (estudiado en clase) y el algoritmo de ordenación Quicksort?
+O: El número de llamadas recursivas que se hacen.
+O: La combinación de las soluciones a los subproblemas.
+O: La división del problema en subproblemas.
+A: 2
+C: Julio 2023
+
+Q: Una de estas tres situaciones no es posible. ¿Cuál es?
+O: $f(n) \in O(n)$ y $f(n) \in \Omega(1)$
+O: $f(n) \in \Omega(n^2)$ y $f(n) \in O(n)$
+O: $f(n) \in O(n)$ y $f(n) \in O(n^2)$
+A: 1
+C: Julio 2023
+
+Q: ¿De qué clase de complejidad es la solución de la siguiente relación de recurrencia? 
+$f(n) = \begin{cases} 1 + f(n/b) & \text{si } n > 1 \\ 1 & \text{si } n = 1 \end{cases}$, con $b \in \mathbb{N}$, $b > 1$
+O: Depende del valor de $b$
+O: $f(n) \in \Theta(\log n)$
+O: $f(n) \in \Theta(n)$
+A: 1
+C: Julio 2023: 0
+C: Julio 2023
+
+Q: De las siguientes igualdades, o bien dos son ciertas y una es falsa, o bien una es cierta y dos son falsas. Marca la que es diferente a las otras dos.
+O: $\Theta(n) = O(n) \cup \Omega(n)$
+O: $\Theta(n) = O(n) \cap \Omega(n)$
+O: $O(n) = O(n) \cap \Theta(n)$
+A: 2
+C: Julio 2023
+
+Q: ¿Cuál es la condición base para terminar la recursión en la implementación por divide y vencerás del problema restringido del laberinto?
+O: Llegar al inicio del laberinto (fila 0 columna 0) o al final del laberinto (fila $m - 1$, columna $n - 1$), según cómo se establezca la recursión.
+O: Llegar a una celda con valor 0 en el laberinto.
+O: Las otras dos opciones son ambas ciertas.
+A: 2
+C: Julio 2023
+
+Q: En la implementación naive de la versión restringida del problema del laberinto, en el caso de que las tres direcciones sean posibles ¿qué hay que hacer con las longitudes de los caminos obtenidos con las llamadas recursivas?
+O: Elegir la más grande y sumarle uno.
+O: Elegir la más pequeña y sumarle uno.
+O: Elegir la más cercana y sumarle uno.
+A: 1
+C: Julio 2023
+
+Q: ¿Qué estructuras de datos utilizaste en la implementación naive de la versión restringida del problema del laberinto? (excluyendo el laberinto)
+O: Una cola de prioridad.
+O: Una matriz bidimensional.
+O: Ninguna de las otras dos opciones es cierta.
+A: 2
+C: Julio 2023
+
+Q: ¿En qué parte de los algoritmos que hacen uso de la memoización se realiza la verificación de si un subproblema ha sido ya resuelto?
+O: Al inicio del algoritmo.
+O: Antes de realizar la llamada recursiva.
+O: Después de realizar la llamada recursiva.
+A: 0
+C: Julio 2023
+
+Q: Queremos conocer el camino de mínima longitud en el problema restringido del laberinto usando un algoritmo de programación dinámica con la técnica de complejidad espacial mejorada (con dos vectores). ¿Cómo se puede obtener?
+O: Ninguna de las otras dos opciones es válida.
+O: Recorriendo el primer vector, empezando por la casilla de salida y buscando los resultados de los subproblemas accesibles a partir de ella.
+O: Recorriendo el primer vector, empezando por la casilla de entrada y buscando los resultados de los subproblemas accesibles a partir de ella.
+A: 0
+C: Julio 2023
+
+Q: ¿Qué estrategia es mejor en los algoritmos voraces para resolver el problema restringido del laberinto?
+O: Elegir siempre la dirección hacia la salida más cercana que no esté bloqueada.
+O: Elegir la dirección con menos obstáculos en cada paso.
+O: Elegir aleatoriamente una dirección en cada paso.
+A: 0
+C: Julio 2023
+
+Q: ¿Qué estrategia se sigue para realizar la exploración del laberinto con la técnica de vuelta atrás?
+O: Realizar una búsqueda en profundidad siguiendo un orden predefinido de movimientos.
+O: Utilizar una búsqueda en amplitud para explorar todas las posibles soluciones en paralelo.
+O: Realizar una búsqueda heurística utilizando una función de evaluación para guiar la exploración hacia la solución óptima.
+A: 0
+C: Julio 2023
+
+Q: En la aplicación al problema general del laberinto del algoritmo de ramificación y poda utilizando una cola de prioridad, ¿qué función cumple la cola de prioridad en el proceso de exploración del laberinto?
+O: Ordenar los caminos explorados en función de un criterio de evaluación para seleccionar el siguiente camino a explorar.
+O: Almacenar todos los caminos explorados para su posterior análisis y comparación.
+O: Realizar una búsqueda en amplitud de todos los caminos posibles antes de tomar una decisión.
+A: 0
+C: Julio 2023
+
+Q: Si estamos procesando la casilla $(i,j)$ y la casilla de salida del laberinto es la $(m,n)$, ¿cuál de las siguientes opciones será una buena cota pesimista al camino que queda por recorrer?
+O: $\max(|m - i|, |n - j|)$
+O: $|m - i| + |n - j|$
+O: Ninguna de las otras dos opciones es cierta.
+A: 2
+C: Julio 2023
+
+Q: Decid cuál de estas tres afirmaciones sobre el problema de la mochila sin división de los objetos y con pesos discretos es cierta.
+O: El algoritmo de programación dinámica iterativa que lo resuelve calcula el mismo número de subproblemas que un algoritmo de programación dinámica recursiva (del tipo "divide y vencerás" que gestiona un almacén de memoización).
+O: El algoritmo de programación dinámica iterativa que lo resuelve precisa como mucho un espacio del orden de $\Theta(n)$ donde $n$ es el número de objetos.
+O: El algoritmo de programación dinámica iterativa que lo resuelve precisa como mucho un espacio del orden de $\Theta(P)$ donde $P$ es el peso máximo de la mochila.
+A: 2
+C: Julio 2023
+
+Q: ¿Qué estructura de datos es la más eficiente en la programación dinámica iterativa para almacenar los subproblemas resueltos del problema de la mochila sin división de los objetos y con pesos discretos?
+O: Una cola de prioridad.
+O: Una matriz unidimensional.
+O: Un árbol binario.
+A: 1
+C: Julio 2023
+
+Q: ¿Tiene sentido usar el método de ramificación y poda para encontrar la solución (o una solución) de un problema que no es de optimización?
+O: No, porque al no ser un problema de optimización, no es posible usar cotas optimistas y pesimistas.
+O: No, porque al no ser un problema de optimización, no tiene sentido usar ramificación y poda: se debe usar el método vuelta atrás.
+O: Sí, porque se puede usar alguna propiedad de las soluciones parciales para ordenar la búsqueda y reducir el tiempo de cómputo, al evitar visitar partes del espacio de soluciones.
+A: 2
+C: Julio 2023
+
+Q: ¿Cuál de los siguientes tres problemas de optimización posee una solución voraz exacta?
+O: El problema del cambio (formar una suma entera $M$ con el número mínimo de monedas tomadas (con repetición) de un conjunto donde existe una cantidad suficientemente grande de monedas con cada posible valor facial, asumiendo que existen siempre monedas de valor facial unidad y que los contenedores de monedas están previamente ordenados por valor facial.
+O: El problema de determinar cómo usar la mínima longitud de línea telefónica para conectar las $n$ casas de una isla.
+O: El problema de unir las $n$ casas de una isla con la mínima longitud de línea telefónica, pero formando un ciclo; es decir, de manera que todas las casas están unidas únicamente a otras dos casas de la isla, ni una más ni una menos.
+A: 1
+C: Julio 2023
+
+Q: En el caso más favorable, ¿cuál es la complejidad temporal que se puede conseguir con una solución de ramificación y poda para el problema del laberinto?
+O: $\Omega(m \cdot n)$
+O: $\Omega(\max(m,n))$
+O: $\Omega(\min(m,n))$
+A: 1
+C: Julio 2023
+
+Q: Se pretende resolver la versión general del problema del laberinto mediante un algoritmo de búsqueda y enumeración. Para reducir los nodos visitados, utilizamos un almacén de resultados parciales obtenido mediante la técnica de programación dinámica iterativa aplicándola a la versión restringida del mismo problema. El almacén se rellena hacia atrás comenzando en la casilla de salida del laberinto. ¿de qué poda se trata?
+O: De una poda basada en la cota optimista.
+O: De una poda basada en la cota pesimista.
+O: Ninguna de las otras dos opciones es cierta.
+A: 1
+C: Julio 2023
+
+Q: Dada la versión restringida del problema del laberinto, ¿se podría obtener el camino de salida de longitud mínima haciendo uso únicamente de la versión naive de programación dinámica sin ningún tipo de procesamiento posterior?
+O: No, el camino solo puede obtenerse a través del almacén de una versión iterativa o con memoización, en un proceso posterior.
+O: Sí, cada vez que se resuelve un subproblema hay que tomar el camino que corresponde a la mejor alternativa de las tres posibles y añadirle las coordenadas del subproblema que se está resolviendo.
+O: Sí, el mejor camino puede construirse de forma incremental, paso a paso, añadiendo la siguiente casilla a visitar que corresponde con la mejor alternativa de las tres posibles.
+A: 1
+C: Julio 2023
+
+Q: Las siguientes afirmaciones se refieren a un nodo cualquiera del árbol de búsqueda de ramificación y poda en un problema de minimización. De ellas, o bien dos son ciertas y una es falsa, o bien una es cierta y dos son falsas. Marca la que es diferente a las otras dos.
+O: El nodo no es prometedor si su cota pesimista es menor que su cota optimista.
+O: El nodo no es prometedor si su cota pesimista es mayor que su cota optimista.
+O: El nodo no es prometedor si su cota optimista es mayor que la mejor cota pesimista encontrada hasta el momento.
+A: 0
+C: Julio 2023
+
+Q: Se pretende resolver la versión general del problema del laberinto. ¿Resultaría útil disponer de un almacén de resultados parciales obtenido mediante la técnica de programación dinámica iterativa aplicándola a la versión restringida del mismo problema?
+O: Las otras dos opciones son ambas ciertas.
+O: Probablemente sí, rellenando un almacén hacia delante desde la casilla de entrada al laberinto.
+O: Probablemente sí, rellenando un almacén hacia atrás comenzando en la casilla de salida del laberinto.
+A: 0
+C: Julio 2023
+
+Q: Se pretende resolver la versión general del problema del laberinto mediante un algoritmo de búsqueda y enumeración. Para reducir los nodos visitados, utilizamos una matriz de enteros donde se almacena la longitud del mejor camino encontrado hasta el momento que llega a cada casilla del laberinto. ¿de qué poda se trata?
+O: De una poda basada en la cota optimista.
+O: De una poda basada en la cota pesimista.
+O: Ninguna de las otras dos opciones es cierta.
+A: 2
+C: Julio 2023
+
+Q: Se pretende resolver la versión general del problema del laberinto mediante un algoritmo de búsqueda y enumeración. Para agilizar la búsqueda, hemos pensado utilizar una matriz en la que cada casilla $(i,j)$ se inicializa con la solución de la versión restringida del problema asumiendo que el origen del laberinto es $(i,j)$. ¿Qué utilidad puede tener esta matriz?
+O: Ninguna, en todo caso habría que inicializar cada casilla $(i,j)$ con la solución de la versión restringida del problema asumiendo que el origen del laberinto es $(0,0)$ y el destino $(i,j)$.
+O: A priori poca, ya que cada vez que un nodo visita una casilla $(i,j)$ habría que actualizar la matriz, lo que perjudicaría la eficiencia del algoritmo resultante.
+O: Puede resultar eficaz para ajustar la mejor cota pesimista encontrada hasta el momento y además, no es imprescindible actualizar la matriz durante todo el proceso de búsqueda.
+A: 2
+C: Julio 2023
+
+Q: Con la técnica de programación dinámica aplicada a la versión restringida del problema del laberinto...
+O: ...no solo puede obtenerse el camino de salida más corto, también puede obtenerse, sin incrementar la complejidad temporal, el camino más corto desde el origen hasta cualquier casilla accesible del laberinto.
+O: ...puede obtenerse el camino más corto desde cualquier casilla accesible hasta la salida si es que existe.
+O: Las otras dos opciones son ambas ciertas.
+A: 2
+C: Julio 2023
+
+Q: Dada la versión restringida del problema del laberinto, ¿se puede modificar la solución de programación dinámica con complejidad espacial reducida para obtener también un camino de salida de longitud mínima?
+O: No.
+O: Sí, pero a costa de aumentar la complejidad espacial del almacén.
+O: Sí, añadiendo un vector de movimientos.
+A: 0
+C: Julio 2023
+
+Q: El problema de la moneda consiste en formar una suma $M$ con el número mínimo de monedas tomadas (con repetición) de un conjunto donde hay una cantidad suficientemente grande de monedas con cada posible valor facial. Asumiremos que los contenedores de monedas están previamente ordenados por valor facial. ¿Cuál de estas afirmaciones sobre el algoritmo voraz obvio es falsa?
+O: Dependiendo de cuáles sean los valores faciales y la suma, puede ser que el algoritmo voraz no encuentre ninguna solución.
+O: Dependiendo de cuáles sean los valores faciales y la suma, puede ser que el algoritmo voraz no encuentre la solución que menos monedas usa.
+O: Tiene una complejidad temporal $\Theta(M)$.
+A: 2
+C: Julio 2023
