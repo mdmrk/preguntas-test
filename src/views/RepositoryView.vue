@@ -108,7 +108,31 @@ const availableTags = computed(() => {
   questions.value.forEach((question) => {
     question.tags.forEach((tag) => tags.add(tag))
   })
-  return Array.from(tags).sort().reverse()
+
+  const monthMapping = {
+    Enero: 0,
+    Febrero: 1,
+    Marzo: 2,
+    Abril: 3,
+    Mayo: 4,
+    Junio: 5,
+    Julio: 6,
+    Agosto: 7,
+    Septiembre: 8,
+    Octubre: 9,
+    Noviembre: 10,
+    Diciembre: 11
+  }
+
+  return Array.from(tags).sort((a, b) => {
+    const [monthA, yearA] = a.split(" ")
+    const [monthB, yearB] = b.split(" ")
+
+    const dateA = new Date(parseInt(yearA), monthMapping[monthA] || 0)
+    const dateB = new Date(parseInt(yearB), monthMapping[monthB] || 0)
+
+    return dateB.getTime() - dateA.getTime()
+  })
 })
 
 const isQuestionVisible = (question: Question): boolean => {
