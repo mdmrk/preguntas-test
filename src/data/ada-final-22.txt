@@ -294,7 +294,6 @@ double met_naive(vector<int> &M, const vector<double> &d,
       }
     }
   }
-
   M[n] = best_gw;
   return best_traffic;
 }
