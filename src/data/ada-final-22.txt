@@ -281,7 +281,6 @@ double met_naive(vector<int> &M, const vector<double> &d,
                  const vector<double> &c, int n, int m) {
   double best_traffic;
   int best_gw;
-
   if (m == 1) {
     tie(best_gw, best_traffic) = ogw(d, c, 0, n);
   } else {
