@@ -109,7 +109,7 @@ const availableTags = computed(() => {
     question.tags.forEach((tag) => tags.add(tag))
   })
 
-  const monthMapping = {
+  const monthMapping: Record<string, number> = {
     Enero: 0,
     Febrero: 1,
     Marzo: 2,
