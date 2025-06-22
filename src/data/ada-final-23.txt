@@ -6,110 +6,6 @@ O: $f(n) \in \Theta(n^3)$
 A: 0
 C: Julio 2023
 
-Q: ¿Cuál de las siguientes formulaciones expresa mejor la complejidad temporal, en función del parámetro $n$, de la siguiente función? (asumimos que $n$ es potencia exacta de 2)
-```cpp
-int f(int n) {
-  int k = 0;
-  for (int i = 2; i <= n; i += 2)
-    for (int j = n; j > 0; j -= 2)
-      k++;
-  return k;
-}
-```
-O: $\sum_{p=2}^{n/2} \frac{p-1}{2}$
-O: $\sum_{p=1}^{\log n} 2^{p-1}$
-O: $\sum_{p=1}^{\log n} \frac{n}{2}$
-A: 2
-C: Julio 2023
-
-Q: ¿Cuál de las siguientes afirmaciones es cierta sobre la complejidad temporal, en el caso peor, de los algoritmos de vuelta atrás y ramificación y poda aplicados a la versión general del problema de la mochila?
-O: Ambos algoritmos tienen la misma complejidad temporal.
-O: El algoritmo de vuelta atrás tiene una complejidad temporal peor que el de ramificación y poda.
-O: El algoritmo de ramificación y poda tiene una complejidad temporal peor que el de vuelta atrás.
-A: 0
-C: Julio 2023
-
-Q: Una empresa de transportes dispone de $M$ vehículos para repartir $N$ paquetes, todos al mismo destino. Cada paquete $i$ tiene un peso $P_i$ y se tiene que entregar antes de que transcurra un tiempo $T_{P_i}$. Por otro lado, cada vehículo $j$ puede transportar una carga máxima $C_j$, tarda un tiempo $T_j$ para llegar al destino y consume una cantidad $L_j$ de litros de combustible, independientemente de la carga que transporta. Imaginad un algoritmo de vuelta atrás que obtenga la manera en que se tienen que transportar los objetos (en qué vehículo $j$ tiene que ir cada objeto $i$) para que el consumo sea el mínimo. ¿Cuál sería una buena cota pesimista?
-O: La solución voraz del problema de cargar cada paquete en el camión de menor consumo donde cada paquete llega a tiempo, sin tener en cuenta si el camión se sobrecarga o no.
-O: La solución voraz del problema de cargar cada paquete en el camión de menor consumo donde cada paquete llega a tiempo, sin sobrecargar ningún camión.
-O: Ninguna de las otras dos opciones es correcta.
-A: 1
-C: Julio 2023
-
-Q: Las siguientes afirmaciones se refieren a un nodo cualquiera del árbol de búsqueda de ramificación y poda en un problema de maximización. De ellas, o bien dos son ciertas y una es falsa, o bien una es cierta y dos son falsas. Marca la que es diferente a las otras dos.
-O: Si su cota pesimista es menor que el mejor valor encontrado hasta el momento, entonces el nodo no podrá mejorar dicho valor.
-O: Si su cota optimista es menor que el mejor valor encontrado hasta el momento, entonces el nodo no podrá mejorar dicho valor.
-O: Su cota optimista es un valor que podría llegar a alcanzarse.
-A: 0
-C: Julio 2023
-
-Q: Debemos calcular $A^n$, donde $A$ una matriz de $m \times m$ elementos. ¿Existe una solución que evite realizar $n - 1$ multiplicaciones de coste $m^3$?
-O: No, la única manera de calcular $A^n$ es iterativamente, $A^n = AA^{n-1}$ y se deben realizar $n - 1$ multiplicaciones.
-O: Sí, existe una solución más eficiente del estilo "divide y vencerás", que usa un espacio $\Theta(m^3 \log n)$.
-O: Sí, existe una solución más eficiente del estilo "divide y vencerás", que usa un espacio $\Theta(m^3 n)$.
-A: 1
-C: Julio 2023
-
-Q: Sean dos funciones de coste $f : \mathbb{N} \to \mathbb{R}^+$ y $g : \mathbb{N} \to \mathbb{R}^+$ tales que $f \in O(g)$. De las siguientes situaciones, o bien dos pueden suceder y la otra no, o bien dos no pueden suceder y la otra sí. Indica la que es diferente de las otras dos.
-O: $\lim_{n \to \infty} \frac{g(n)}{f(n)} = \infty$
-O: $\lim_{n \to \infty} \frac{g(n)}{f(n)} = k, k \in \mathbb{R}^+, k \neq 0$
-O: $\lim_{n \to \infty} \frac{g(n)}{f(n)} = 0$
-A: 1
-C: Julio 2023
-
-Q: Una de las siguientes afirmaciones es cierta. Di cuál.
-O: $\Theta(2^n) \neq \Theta(3^n)$
-O: $O(2^n) \subset O(n^2)$
-O: $\Omega(2^n) \subset \Omega(n!)$
-A: 0
-C: Julio 2023
-
-Q: Dado el siguiente programa recursivo:
-```cpp
-int f(int n) {
-  // Se asume que n >= 0
-  if (n == 0)
-    return 1;
-  return f(n - 1) + f(n - 2);
-}
-```
-si quisiéramos mejorarlo haciendo uso de la técnica de programación dinámica, ¿cuáles serían las complejidades temporal y espacial más ajustadas del algoritmo resultante?
-O: Respectivamente, $O(n)$ y $O(1)$
-O: Ambas complejidades serían $O(1)$
-O: Ambas complejidades serían $O(n)$
-A: 0
-C: Julio 2023
-
-Q: Una de estas tres afirmaciones es falsa. ¿Cuál?
-O: Un algoritmo voraz puede no encontrar la solución óptima de un problema de selección discreta.
-O: El esquema de ramificación y poda no garantiza que la complejidad temporal de resolución de un problema de selección discreta no sea exponencial.
-O: Los algoritmos voraces no sirven para resolver problemas de selección discreta.
-A: 2
-C: Julio 2023
-
-Q: ¿Qué tienen en común el algoritmo que obtiene el k-ésimo elemento más pequeño de un vector (estudiado en clase) y el algoritmo de ordenación Quicksort?
-O: El número de llamadas recursivas que se hacen.
-O: La combinación de las soluciones a los subproblemas.
-O: La división del problema en subproblemas.
-A: 2
-C: Julio 2023
-
-Q: Una de estas tres situaciones no es posible. ¿Cuál es?
-O: $f(n) \in O(n)$ y $f(n) \in \Omega(1)$
-O: $f(n) \in \Omega(n^2)$ y $f(n) \in O(n)$
-O: $f(n) \in O(n)$ y $f(n) \in O(n^2)$
-A: 1
-C: Julio 2023
-
-Q: ¿De qué clase de complejidad es la solución de la siguiente relación de recurrencia? 
-$f(n) = \begin{cases} 1 + f(n/b) & \text{si } n > 1 \\ 1 & \text{si } n = 1 \end{cases}$, con $b \in \mathbb{N}$, $b > 1$
-O: Depende del valor de $b$
-O: $f(n) \in \Theta(\log n)$
-O: $f(n) \in \Theta(n)$
-A: 1
-C: Julio 2023: 0
-C: Julio 2023
-
 Q: De las siguientes igualdades, o bien dos son ciertas y una es falsa, o bien una es cierta y dos son falsas. Marca la que es diferente a las otras dos.
 O: $\Theta(n) = O(n) \cup \Omega(n)$
 O: $\Theta(n) = O(n) \cap \Omega(n)$
@@ -194,6 +90,60 @@ O: Un árbol binario.
 A: 1
 C: Julio 2023
 
+Q: Di cuál de estas tres afirmaciones sobre las soluciones basadas en algoritmos de búsqueda y enumeración (vuelta atrás, ramificación y poda) para el problema de la mochila sin división de los objetos es cierta.
+O: No requieren que los pesos sean discretos o discretizables.
+O: Requieren que los pesos sean discretos o discretizables para definir los niveles del árbol de búsqueda.
+O: Deben visitar obligatoriamente todas las soluciones factibles para determinar cuál es la solución óptima.
+A: 0
+C: Julio 2023
+
+Q: ¿Cuál de estos tres algoritmos de ordenación de vectores tiene una complejidad temporal en el caso peor que es cuadrática con la longitud del vector?
+O: Quicksort
+O: Mergesort
+O: Heapsort
+A: 0
+C: Julio 2023
+
+Q: ¿Cuál de estos tres algoritmos de ordenación de vectores tiene la peor complejidad temporal en el caso mejor?
+O: Mergesort
+O: Ordenación por inserción.
+O: Quicksort.
+A: 1
+C: Julio 2023
+
+Q: Indica cuál de estos tres algoritmos necesita espacio adicional para ordenar el vector.
+O: Heapsort
+O: Quicksort
+O: Mergesort
+A: 2
+C: Julio 2023
+
+Q: Indica para cuál de estos tres algoritmos de ordenación el coste temporal asintótico en el caso peor es peor que el coste temporal asintótico en el caso mejor.
+O: Heapsort
+O: Quicksort
+O: Mergesort
+A: 1
+C: Julio 2023
+
+Q: ¿Cuál es la complejidad temporal (en función de n) del fragmento siguiente de C++?
+```cpp
+for (int i = n; i > 0; i/=2)
+  for (int j = 0; j < n; j++)
+    cout << '*';
+```
+O: $\Theta(n \log n)$
+O: $\Theta(n^2)$
+O: $\Theta(n)$
+A: 0
+C: Julio 2023
+
+Q: El algoritmo de ordenación por selección y heapsort son similares en que obtienen el máximo de los n elementos, lo ponen al final, y después hacen lo mismo con n − 1 elementos, así hasta que sólo les queda un elemento. Di cuál de estas afirmaciones es cierta:
+O: Por ello, la complejidad temporal asintótica en el caso peor de heapsort y del algoritmo de ordenación por inserción es la misma.
+O: La complejidad temporal asintótica en el caso peor del algoritmo de ordenación por selección es peor porque, al contrario que heapsort, debe realizar necesariamente k operaciones para determinar cuál es el máximo de los primeros k elementos del vector.
+O: La complejidad temporal asintótica en el caso mejor del algoritmo de ordenación por selección es mejor que la de heapsort porque la gestión la estructura de heap lo encarece.
+A: 1
+C: Julio 2023
+
 Q: ¿Tiene sentido usar el método de ramificación y poda para encontrar la solución (o una solución) de un problema que no es de optimización?
 O: No, porque al no ser un problema de optimización, no es posible usar cotas optimistas y pesimistas.
 O: No, porque al no ser un problema de optimización, no tiene sentido usar ramificación y poda: se debe usar el método vuelta atrás.
@@ -229,6 +179,20 @@ O: Sí, el mejor camino puede construirse de forma incremental, paso a paso, añ
 A: 1
 C: Julio 2023
 
+Q: Para resolver la versión general del problema del laberinto mediante vuelta atrás, utilizamos el estimador que aparece en el listado. ¿Serviría como cota optimista para cualquier nodo del árbol de búsqueda?
+```cpp
+using Maze = vector<vector<bool>>;
+using Point = tuple<size_t, size_t>;
+size_t estimator(const Maze &maze, const Point &p) {
+  return max(maze.size() - get<0>(p), maze[0].size() - get<1>(p)) - 1;
+}
+```
+O: No, puesto que no sería una cota optimista válida para todos los nodos.
+O: Sí, el estimador por sí solo ya representaría una buena cota optimista.
+O: Sí, pero para mejorar la poda habría que sumarle la longitud del camino que representa cada nodo.
+A: 2
+C: Julio 2023
+
 Q: Las siguientes afirmaciones se refieren a un nodo cualquiera del árbol de búsqueda de ramificación y poda en un problema de minimización. De ellas, o bien dos son ciertas y una es falsa, o bien una es cierta y dos son falsas. Marca la que es diferente a las otras dos.
 O: El nodo no es prometedor si su cota pesimista es menor que su cota optimista.
 O: El nodo no es prometedor si su cota pesimista es mayor que su cota optimista.
@@ -241,6 +205,22 @@ O: Las otras dos opciones son ambas ciertas.
 O: Probablemente sí, rellenando un almacén hacia delante desde la casilla de entrada al laberinto.
 O: Probablemente sí, rellenando un almacén hacia atrás comenzando en la casilla de salida del laberinto.
 A: 0
+C: Julio 2023
+
+Q: ¿Cuál de las siguientes formulaciones expresa mejor la complejidad temporal, en función del parámetro $n$, de la siguiente función? (asumimos que $n$ es potencia exacta de 2)
+```cpp
+int f(int n) {
+  int k = 0;
+  for (int i = 2; i <= n; i += 2)
+    for (int j = n; j > 0; j -= 2)
+      k++;
+  return k;
+}
+```
+O: $\sum_{p=2}^{n/2} \frac{p-1}{2}$
+O: $\sum_{p=1}^{\log n} 2^{p-1}$
+O: $\sum_{p=1}^{\log n} \frac{n}{2}$
+A: 2
 C: Julio 2023
 
 Q: Se pretende resolver la versión general del problema del laberinto mediante un algoritmo de búsqueda y enumeración. Para reducir los nodos visitados, utilizamos una matriz de enteros donde se almacena la longitud del mejor camino encontrado hasta el momento que llega a cada casilla del laberinto. ¿de qué poda se trata?
@@ -276,4 +256,46 @@ O: Dependiendo de cuáles sean los valores faciales y la suma, puede ser que el 
 O: Dependiendo de cuáles sean los valores faciales y la suma, puede ser que el algoritmo voraz no encuentre la solución que menos monedas usa.
 O: Tiene una complejidad temporal $\Theta(M)$.
 A: 2
+C: Julio 2023
+
+Q: ¿Cuál de las siguientes afirmaciones es cierta sobre la complejidad temporal, en el caso peor, de los algoritmos de vuelta atrás y ramificación y poda aplicados a la versión general del problema de la mochila?
+O: Ambos algoritmos tienen la misma complejidad temporal.
+O: El algoritmo de vuelta atrás tiene una complejidad temporal peor que el de ramificación y poda.
+O: El algoritmo de ramificación y poda tiene una complejidad temporal peor que el de vuelta atrás.
+A: 0
+C: Julio 2023
+
+Q: Una empresa de transportes dispone de $M$ vehículos para repartir $N$ paquetes, todos al mismo destino. Cada paquete $i$ tiene un peso $P_i$ y se tiene que entregar antes de que transcurra un tiempo $T_{P_i}$. Por otro lado, cada vehículo $j$ puede transportar una carga máxima $C_j$, tarda un tiempo $T_j$ para llegar al destino y consume una cantidad $L_j$ de litros de combustible, independientemente de la carga que transporta. Imaginad un algoritmo de vuelta atrás que obtenga la manera en que se tienen que transportar los objetos (en qué vehículo $j$ tiene que ir cada objeto $i$) para que el consumo sea el mínimo. ¿Cuál sería una buena cota pesimista?
+O: La solución voraz del problema de cargar cada paquete en el camión de menor consumo donde cada paquete llega a tiempo, sin tener en cuenta si el camión se sobrecarga o no.
+O: La solución voraz del problema de cargar cada paquete en el camión de menor consumo donde cada paquete llega a tiempo, sin sobrecargar ningún camión.
+O: Ninguna de las otras dos opciones es correcta.
+A: 1
+C: Julio 2023
+
+Q: Las siguientes afirmaciones se refieren a un nodo cualquiera del árbol de búsqueda de ramificación y poda en un problema de maximización. De ellas, o bien dos son ciertas y una es falsa, o bien una es cierta y dos son falsas. Marca la que es diferente a las otras dos.
+O: Si su cota pesimista es menor que el mejor valor encontrado hasta el momento, entonces el nodo no podrá mejorar dicho valor.
+O: Si su cota optimista es menor que el mejor valor encontrado hasta el momento, entonces el nodo no podrá mejorar dicho valor.
+O: Su cota optimista es un valor que podría llegar a alcanzarse.
+A: 0
+C: Julio 2023
+
+Q: Debemos calcular $A^n$, donde $A$ una matriz de $m \times m$ elementos. ¿Existe una solución que evite realizar $n - 1$ multiplicaciones de coste $m^3$?
+O: No, la única manera de calcular $A^n$ es iterativamente, $A^n = AA^{n-1}$ y se deben realizar $n - 1$ multiplicaciones.
+O: Sí, existe una solución más eficiente del estilo "divide y vencerás", que usa un espacio $\Theta(m^3 \log n)$.
+O: Sí, existe una solución más eficiente del estilo "divide y vencerás", que usa un espacio $\Theta(m^3 n)$.
+A: 1
+C: Julio 2023
+
+Q: Sean dos funciones de coste $f : \mathbb{N} \to \mathbb{R}^+$ y $g : \mathbb{N} \to \mathbb{R}^+$ tales que $f \in O(g)$. De las siguientes situaciones, o bien dos pueden suceder y la otra no, o bien dos no pueden suceder y la otra sí. Indica la que es diferente de las otras dos.
+O: $\lim_{n \to \infty} \frac{g(n)}{f(n)} = \infty$
+O: $\lim_{n \to \infty} \frac{g(n)}{f(n)} = k, k \in \mathbb{R}^+, k \neq 0$
+O: $\lim_{n \to \infty} \frac{g(n)}{f(n)} = 0$
+A: 1
+C: Julio 2023
+
+Q: Una de las siguientes afirmaciones es cierta. Di cuál.
+O: $\Theta(2^n) \neq \Theta(3^n)$
+O: $O(2^n) \subset O(n^2)$
+O: $\Omega(2^n) \subset \Omega(n!)$
+A: 0
 C: Julio 2023
