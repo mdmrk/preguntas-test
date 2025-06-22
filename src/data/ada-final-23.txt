@@ -369,12 +369,10 @@ Q: ¿Qué inconveniente presenta la siguiente función?
 ```cpp
 void maze(const Maze &maze, vector<vector<bool>> &visited, Point &currentPoint,
           size_t currentLength, size_t &currentBestLength) {
-
   if (currentPoint == maze.exit()) {
     currentBestLength = min(currentBestLength, currentLength);
     return;
   }
-
   for (auto step : allSteps) {
     Point next = currentPoint.next(step);
     if (maze.is_valid(next) && !visited[next.x()][next.y()] &&
