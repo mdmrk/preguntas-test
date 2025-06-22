@@ -13,6 +13,7 @@ class Question:
     options: List[str]
     correct_answer_index: int
     image: Optional[str] = None
+    categories: Optional[str] = None  # Categories separated by semicolons
     raw_chunk: str = ""  # Store original text for reconstruction
 
 class TestParser:
@@ -35,6 +36,7 @@ class TestParser:
             question_text = ""
             correct_answer_index = -1
             image = None
+            categories = None
             options = []
             
             parsing_question = False
@@ -47,7 +49,8 @@ class TestParser:
                     current_option_index = len(options) - 1
                     parsing_question = False
                     parsing_option = True
-                if line.startswith("C:"):
+                elif line.startswith("C:"):
+                    categories = line[2:].strip()
                     parsing_question = False
                     parsing_option = False
                 elif line.startswith("Q:"):
@@ -77,6 +80,7 @@ class TestParser:
                     options=[opt.strip() for opt in options],
                     correct_answer_index=correct_answer_index,
                     image=image,
+                    categories=categories,
                     raw_chunk=chunk  # Store the original chunk
                 ))
         
@@ -110,6 +114,36 @@ class TestDeduplicator:
         return options1_normalized == options2_normalized
     
     @staticmethod
+    def merge_categories(cat1: Optional[str], cat2: Optional[str]) -> Optional[str]:
+        """
+        Merge two category strings, removing duplicates and maintaining order.
+        Categories are separated by semicolons.
+        
+        If one question has categories and the other doesn't, preserves the categories.
+        """
+        if not cat1 and not cat2:
+            return None
+        if not cat1:  # First has no categories, second has categories
+            return cat2
+        if not cat2:  # First has categories, second has no categories
+            return cat1
+        
+        # Split categories by semicolon and normalize
+        cats1 = [cat.strip() for cat in cat1.split(';') if cat.strip()]
+        cats2 = [cat.strip() for cat in cat2.split(';') if cat.strip()]
+        
+        # Merge while preserving order and removing duplicates
+        merged = []
+        seen = set()
+        
+        for cat in cats1 + cats2:
+            if cat.lower() not in seen:
+                merged.append(cat)
+                seen.add(cat.lower())
+        
+        return ';'.join(merged) if merged else None
+    
+    @staticmethod
     def find_duplicates(questions: List[Question]) -> List[Tuple[int, int]]:
         """
         Find all pairs of duplicate questions.
@@ -127,7 +161,7 @@ class TestDeduplicator:
     @staticmethod
     def remove_duplicates(questions: List[Question]) -> Tuple[List[Question], int]:
         """
-        Remove duplicate questions, keeping the first occurrence of each.
+        Remove duplicate questions, keeping the first occurrence and merging categories.
         Returns (unique_questions, num_removed).
         """
         if not questions:
@@ -136,16 +170,55 @@ class TestDeduplicator:
         # Find all duplicate pairs
         duplicate_pairs = TestDeduplicator.find_duplicates(questions)
         
-        # Get indices of questions to remove (keep first occurrence)
-        indices_to_remove = set()
-        for _, second_index in duplicate_pairs:
-            indices_to_remove.add(second_index)
+        if not duplicate_pairs:
+            return questions, 0
         
-        # Keep questions that are not marked for removal
+        # Create a mapping of which questions are duplicates of which
+        duplicate_groups = {}
+        indices_to_remove = set()
+        
+        for first_idx, second_idx in duplicate_pairs:
+            # Find the group leader (lowest index in the group)
+            if first_idx in duplicate_groups:
+                leader = duplicate_groups[first_idx]
+            else:
+                leader = first_idx
+                duplicate_groups[first_idx] = first_idx
+            
+            # Add the second question to the same group
+            duplicate_groups[second_idx] = leader
+            indices_to_remove.add(second_idx)
+        
+        # Merge categories for each group
+        category_merges = {}
+        for idx, leader in duplicate_groups.items():
+            if leader not in category_merges:
+                category_merges[leader] = questions[leader].categories
+            
+            if idx != leader:
+                category_merges[leader] = TestDeduplicator.merge_categories(
+                    category_merges[leader], 
+                    questions[idx].categories
+                )
+        
+        # Create the result list
         unique_questions = []
         for i, question in enumerate(questions):
             if i not in indices_to_remove:
-                unique_questions.append(question)
+                # If this question had duplicates, use the merged categories
+                if i in category_merges:
+                    # Create a new question with merged categories
+                    merged_question = Question(
+                        question_text=question.question_text,
+                        options=question.options,
+                        correct_answer_index=question.correct_answer_index,
+                        image=question.image,
+                        categories=category_merges[i],
+                        raw_chunk=question.raw_chunk
+                    )
+                    unique_questions.append(merged_question)
+                else:
+                    unique_questions.append(question)
         
         num_removed = len(indices_to_remove)
         return unique_questions, num_removed
@@ -158,40 +231,40 @@ class TestDeduplicator:
         
         chunks = []
         for question in questions:
-            # Use the original raw_chunk to preserve formatting
-            if question.raw_chunk:
-                chunks.append(question.raw_chunk)
+            # Reconstruct the chunk with proper formatting
+            chunk_lines = []
+            
+            # Add question
+            if '\n' in question.question_text:
+                lines = question.question_text.split('\n')
+                chunk_lines.append(f"Q: {lines[0]}")
+                for line in lines[1:]:
+                    chunk_lines.append(line)
             else:
-                # Fallback to reconstruction if raw_chunk is missing
-                chunk_lines = []
-                
-                # Add question
-                if '\n' in question.question_text:
-                    lines = question.question_text.split('\n')
-                    chunk_lines.append(f"Q: {lines[0]}")
+                chunk_lines.append(f"Q: {question.question_text}")
+            
+            # Add answer
+            chunk_lines.append(f"A: {question.correct_answer_index}")
+            
+            # Add categories if present
+            if question.categories:
+                chunk_lines.append(f"C: {question.categories}")
+            
+            # Add options
+            for option in question.options:
+                if '\n' in option:
+                    lines = option.split('\n')
+                    chunk_lines.append(f"O: {lines[0]}")
                     for line in lines[1:]:
                         chunk_lines.append(line)
                 else:
-                    chunk_lines.append(f"Q: {question.question_text}")
-                
-                # Add options
-                for option in question.options:
-                    if '\n' in option:
-                        lines = option.split('\n')
-                        chunk_lines.append(f"O: {lines[0]}")
-                        for line in lines[1:]:
-                            chunk_lines.append(line)
-                    else:
-                        chunk_lines.append(f"O: {option}")
-                
-                # Add answer
-                chunk_lines.append(f"A: {question.correct_answer_index}")
-                
-                # Add image if present
-                if question.image:
-                    chunk_lines.append(f"I: {question.image}")
-                
-                chunks.append('\n'.join(chunk_lines))
+                    chunk_lines.append(f"O: {option}")
+            
+            # Add image if present
+            if question.image:
+                chunk_lines.append(f"I: {question.image}")
+            
+            chunks.append('\n'.join(chunk_lines))
         
         return '\n\n'.join(chunks)
 
@@ -212,7 +285,7 @@ def process_file(file_path: Path) -> Tuple[int, int]:
         if original_count == 0:
             return 0, 0
         
-        # Remove duplicates
+        # Remove duplicates and merge categories
         unique_questions, num_removed = TestDeduplicator.remove_duplicates(questions)
         final_count = len(unique_questions)
         
@@ -222,7 +295,7 @@ def process_file(file_path: Path) -> Tuple[int, int]:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(new_text)
             
-            print(f"  ✅ Removed {num_removed} duplicate(s): {original_count} → {final_count}")
+            print(f"  ✅ Merged {num_removed} duplicate(s): {original_count} → {final_count}")
         else:
             print(f"  ⚪ No duplicates found ({original_count} questions)")
         
@@ -271,7 +344,7 @@ def process_directory(input_dir: Path) -> None:
     print(f"SUMMARY:")
     print(f"Files processed: {processed_files}/{len(files)}")
     print(f"Total questions: {total_original} → {total_final}")
-    print(f"Total duplicates removed: {total_removed}")
+    print(f"Total duplicates merged: {total_removed}")
     if total_original > 0:
         percentage = (total_removed / total_original) * 100
         print(f"Reduction: {percentage:.1f}%")
@@ -283,7 +356,7 @@ def main():
     data_dir = script_dir / ".." / "src" / "data"
     
     print(f"Processing all test files in: {data_dir.resolve()}")
-    print("Removing duplicate questions (accounting for shuffled options)...")
+    print("Merging duplicate questions and combining categories...")
     process_directory(data_dir)
 
 if __name__ == "__main__":

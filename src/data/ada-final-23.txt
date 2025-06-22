@@ -127,7 +127,7 @@ C: Julio 2023
 
 Q: ¿Cuál es la complejidad temporal (en función de n) del fragmento siguiente de C++?
 ```cpp
-for (int i = n; i > 0; i/=2)
+for (int i = n; i > 0; i /= 2)
   for (int j = 0; j < n; j++)
     cout << '*';
 ```
@@ -299,3 +299,350 @@ O: $O(2^n) \subset O(n^2)$
 O: $\Omega(2^n) \subset \Omega(n!)$
 A: 0
 C: Julio 2023
+
+Q: La distancia de Manhattan $(d)$ entre dos puntos $(x_1, y_1)$ y $(x_2, y_2)$ viene dada por la expresión $d = |x_1 - x_2| + |y_1 - y_2|$. ¿Podría utilizarse como cota optimista para resolver la versión general de problema del laberinto?
+A: 0
+C: Junio 2023
+O: No, puesto que incumple la condición para ser una cota optimista correcta.
+O: Sí, pero hay otros estimadores que se suelen comportar mejor ante este problema.
+O: Sí, y además tiene la ventaja de que se puede calcular con complejidad temporal constante.
+
+Q: Dada la versión general del problema del laberinto, se pretende resolver mediante vuelta atrás haciendo uso de un mecanismo de poda basado en la mejor solución encontrada hasta el momento. ¿Cuándo se podaría un nodo?
+A: 0
+C: Junio 2023
+O: Cuando el valor de su cota optimista supere al valor de la mejor cota pesimista encontrada hasta el momento.
+O: Cuando el valor de su cota pesimista supere al valor de su cota optimista.
+O: Cuando el valor de su cota optimista supere al valor de su cota pesimista.
+
+Q: Sea el vector $v = \{1, 3, 2, 7, 4, 6, 8\}$ cuyos elementos están dispuestos formando un montículo de mínimos. Posteriormente añadimos en la última posición del vector un elemento nuevo con valor 5. ¿Qué operación hay que hacer para que el vector siga representando un montículo de mínimos?
+A: 0
+C: Junio 2023
+O: Intercambiar el 7 con el 5.
+O: Intercambiar el 8 con el 5.
+O: No hay que hacer nada pues el vector $v = \{1, 3, 2, 7, 4, 6, 8, 5\}$ también es un montículo de mínimos.
+
+Q: Se dispone de un conjunto de $n$ valores numéricos dispuestos en forma de montículo y se desea obtener el valor de la suma de todos los que al menos tienen un hijo (es decir, no son nodos hoja). ¿Cuál es la complejidad temporal del mejor algoritmo que se puede escribir?
+A: 0
+C: Junio 2023
+O: $O(n)$
+O: $O(\log n)$
+O: $O(n \log n)$
+
+Q: ¿De qué clase de complejidad es la solución de la siguiente relación de recurrencia?
+$f(n) = n(n-1) + f(n-1)$ si $n > 0$
+$f(0) = 1$ si $n = 0$
+A: 1
+C: Junio 2023
+O: $f(n) \in \Theta(n^2)$
+O: $f(n) \in \Theta(n^3)$
+O: Ninguna de las otras dos opciones es cierta.
+
+Q: Indica cuál es la complejidad temporal en función de $n$, donde $A$ es un vector de enteros y $k$ es una constante que no depende de $n$, del fragmento siguiente:
+```cpp
+for (int i = k; i < n - k; i++) {
+  A[i] = 0;
+  for (int j = i - k; j < i + k; j++)
+    A[i] += B[j];
+}
+```
+A: 2
+C: Junio 2023
+O: $\Theta(k)$
+O: $\Theta(n^2)$
+O: $\Theta(n)$
+
+Q: Con respecto a la técnica poda con memoria, solo una de las siguientes afirmaciones es cierta. ¿Cuál es?
+A: 2
+C: Junio 2023
+O: No resulta eficaz para resolver la versión general del problema del laberinto mediante ramificación y poda.
+O: No se puede aplicar para resolver la versión restringida del problema del laberinto.
+O: En una solución de vuelta atrás para la versión general del problema del laberinto, sirve también para descartar ciclos.
+
+Q: Se pretende resolver la versión general del problema del laberinto mediante ramificación y poda. Para obtener la cota optimista de un nodo cualquiera procedemos así: calculamos el menor número de casillas que quedan, por la diagonal o derecha-abajo, hasta llegar a una pared del laberinto. A ese valor le sumamos el número de casillas que podrían quedar desde esa pared hasta la salida utilizando únicamente movimientos del tipo abajo o derecha, según corresponda. ¿Qué podemos decir acerca de la cota optimista que se obtendría?
+A: 2
+C: Junio 2023
+O: Que no cumple la condición para ser una cota optimista correcta.
+O: Que no sería eficiente con respecto a otras cotas optimistas, ya que su cálculo requiere una complejidad temporal que no es constante.
+O: Que es una cota optimista correcta y además puede obtenerse con complejidad temporal constante.
+
+Q: ¿Qué inconveniente presenta la siguiente función?
+```cpp
+void maze(const Maze &maze, vector<vector<bool>> &visited, Point &currentPoint,
+          size_t currentLength, size_t &currentBestLength) {
+
+  if (currentPoint == maze.exit()) {
+    currentBestLength = min(currentBestLength, currentLength);
+    return;
+  }
+
+  for (auto step : allSteps) {
+    Point next = currentPoint.next(step);
+    if (maze.is_valid(next) && !visited[next.x()][next.y()] &&
+        currentLength < currentBestLength) {
+      visited[next.x()][next.y()] = true;
+      maze(maze, visited, next, currentLength + 1, bestLength);
+      visited[next.x()][next.y()] = false;
+    }
+  }
+  return;
+}
+```
+A: 2
+C: Junio 2023
+O: Que no detecta todos los subproblemas repetidos que pueden aparecer.
+O: Que la poda basada en la mejor solución hasta el momento se puede mejorar fácilmente.
+O: Las otras dos opciones son ambas ciertas.
+
+Q: Con los valores numéricos almacenados en un fichero, queremos construir un heap (montículo). ¿cuál es la forma más eficiente de proceder?
+A: 0
+C: Junio 2023
+O: Almacenar esos valores en un vector y después, reorganizar sus elementos para que estén dispuestos en forma de heap.
+O: Almacenar esos valores directamente en un heap que inicialmente está vacío y va creciendo por cada uno de los valores insertados.
+O: Ambas formas de proceder son equivalentes en cuanto a eficiencia.
+
+Q: Se dispone de un conjunto de $n$ valores numéricos dispuestos en un vector sin orden preestablecido. Se desea escribir una función que reciba ese vector y un valor $k$ $(n/2 \leq k \leq n)$ y que devuelva los $k$ valores más pequeños dispuestos en otro vector de manera ordenada. ¿Cuál es la complejidad temporal del mejor algoritmo que se puede escribir?
+A: 1
+C: Junio 2023
+O: $O(kn)$
+O: Ninguna de las otras dos opciones es cierta.
+O: $O(k \log n)$
+
+Q: Se pretende resolver la versión general del problema del laberinto mediante ramificación y poda y para ello se usa una estrategia que consiste en priorizar las expansiones de los nodos que contienen un camino explorado más corto. ¿Qué podemos decir del algoritmo resultante?
+A: 2
+C: Junio 2023
+O: Que la primera hoja a la que se llegue es la solución del problema y por lo tanto, ya no será necesario explorar más nodos de la lista de nodos vivos, aunque no esté vacía.
+O: Que el recorrido en el árbol de búsqueda será equivalente a un recorrido por niveles, por lo que no es necesario utilizar una cola de prioridad.
+O: Las otras dos opciones son ambas ciertas.
+
+Q: Dada la versión restringida del problema del laberinto, estamos interesados en obtener, para cada casilla accesible del laberinto, el camino más corto entre el origen y esa casilla. ¿Qué esquema es el más apropiado en este caso?
+A: 0
+C: Junio 2023
+O: La versión iterativa de programación dinámica.
+O: Memoización.
+O: Ambas técnicas resultan equivalentes.
+
+Q: Dada la versión general del problema del laberinto ¿Qué ocurre si la cota optimista de un nodo resulta ser el valor que se obtiene de una solución factible pero que no es la mejor en el subárbol generado por ese nodo?
+A: 1
+C: Junio 2023
+O: Nada especial, las cotas optimistas se corresponden con soluciones factibles que no tienen por qué ser las mejores.
+O: Que el algoritmo sería incorrecto pues podría descartarse el nodo que conduce a la solución óptima.
+O: Que el algoritmo sería más lento pues se explorarían más nodos de los necesarios.
+
+Q: Con respecto a los algoritmos estudiados durante el curso que encuentran el árbol de recubrimiento de mínimo coste, de las afirmaciones siguientes, o bien dos son verdaderas y una es falsa, o bien dos son falsas y una es verdadera. Marca la que (en este sentido) es diferente de las otras dos.
+A: 0
+C: Junio 2023
+O: El algoritmo de Kruskal va construyendo un bosque de árboles que va uniendo hasta que acaba con un árbol de recubrimiento de coste mínimo.
+O: El algoritmo de Prim se puede acelerar notablemente si los vértices se organizan en una estructura union-find.
+O: La complejidad temporal del algoritmo de Prim es cúbica con respecto al número de vértices del grafo.
+
+Q: ¿Cuál es la complejidad, en función de $n$, del siguiente fragmento:
+(suponed que A está definido como `vector<int>&A(n)` y `sort()` es la función de ordenación de la librería estándar de C++, que tiene la mejor complejidad, temporal y espacial, posible para un algoritmo de ordenación de propósito general)
+```cpp
+std::sort(begin(A), end(A));
+int acc = 0;
+for (auto i : A)
+  acc += i;
+```
+A: 0
+C: Junio 2023
+O: $\Theta(n \log n)$
+O: $\Theta(n^2)$
+O: $\Theta(n)$
+
+Q: Una empresa de transportes dispone de $M$ vehículos para repartir $N$ paquetes, todos al mismo destino. Cada paquete $i$ tiene un peso $P_i$ y se tiene que entregar antes de que transcurra un tiempo $T_P_i$. Por otro lado, cada vehículo $j$ puede transportar una carga máxima $C_j$, tarda un tiempo $T_j$ para llegar al destino y consume una cantidad $L_j$ de litros de combustible, independientemente de la carga que transporte. Imaginad un algoritmo de vuelta atrás que obtenga la manera en que se tienen que transportar los objetos (en qué vehículo $j$ tiene que ir cada objeto $i$) para que el consumo sea el mínimo. ¿Cuál sería una buena cota optimista?
+A: 2
+C: Junio 2023
+O: La solución voraz del problema de cargar cada paquete en el camión de menor consumo donde cada paquete llega a tiempo, sin tener en cuenta si el camión se sobrecarga o no.
+O: La solución voraz del problema de cargar cada paquete en el camión de menor consumo, sin sobrecargarlo, sin tener en cuenta si el paquete llega a tiempo o no.
+O: Ambas son cotas optimistas válidas.
+
+Q: ¿Qué hace la siguiente función?
+```cpp
+void f(vector<int> &A) {
+  priority_queue<int> pq;
+  for (auto i : A)
+    pq.push(A[i]);
+  A.clear();
+  while (!pq.empty()) {
+    A.push_back(pq.top());
+    pq.pop();
+  }
+}
+```
+A: 2
+C: Junio 2023
+O: Invierte el vector A (el último elemento quedará el primero).
+O: Nada, deja el vector A como estaba.
+O: Ordena el vector A.
+
+Q: Dada la versión restringida del problema del laberinto, si solo se desea conocer la longitud del camino de salida más corto, ¿cuál es la mejor complejidad temporal y espacial que se puede conseguir si se aplica programación dinámica?
+A: 0
+C: Junio 2023
+O: Temporal $\Theta(mn)$ y espacial $\Theta(\min[n, m])$
+O: Ninguna de las otras dos opciones es cierta.
+O: Temporal $\Theta(mn)$ y espacial $\Theta(mn)$
+
+Q: Queremos aplicar la técnica de memoización a la siguiente función recursiva:
+```cpp
+double f(double x) {
+  if (x <= 2)
+    return x;
+  return f(sqrt(x - 1)) + f(sqrt(x - 2));
+}
+```
+¿Cuál sería un buen candidato para el almacén?
+(La función `sqrt()` obtiene la raíz cuadrada; xMax es el valor de x en la primera llamada.)
+A: 2
+C: Junio 2023
+O: `vector<vector<double>> M(xMax+1,vector<double>(xMax+1))`
+O: `vector<double> M(xMax+1)`
+O: Ninguna de las otras dos opciones es válida.
+
+Q: Dada la versión general del problema del laberinto, tratamos de completar un nodo cualquiera del árbol de búsqueda con el camino que, en caso de existir, obtendríamos asumiendo solo los tres movimientos de la versión restringida. ¿Qué obtendríamos en el caso de completar el nodo?
+A: 1
+C: Junio 2023
+O: Una cota optimista para ese nodo.
+O: Un nodo hoja del subárbol generado por aquel nodo.
+O: Nada de interés, puesto que el camino resultante no contemplaría todos los movimientos permitidos.
+
+Q: Dada la versión restringida del problema del laberinto, ¿se podría modificar la solución naïve de divide y vencerás para que obtenga el número total de caminos diferentes, de cualquier longitud, que conducen a la salida desde el origen?
+A: 2
+C: Junio 2023
+O: No se puede, ya que no se trataría de un problema de optimización.
+O: No se puede, puesto que se trata de un nuevo problema que no cumple las condiciones de aplicación de divide y vencerás.
+O: Sí, pero puesto que se trata de un nuevo problema, hay que cambiar la recurrencia matemática inicial.
+
+Q: ¿Qué obtenemos con la siguiente declaración de C++: `priority_queue<nodo> pq;`?
+A: 0
+C: Junio 2023
+O: Un heap o montículo de máximos.
+O: Un heap o montículo de mínimos.
+O: Un heap o montículo sin orden establecido ya que no se ha definido la función de comparación.
+
+Q: Estamos resolviendo la versión restringida del problema del laberinto. Ya hemos obtenido el almacén de resultados parciales. ¿Con qué complejidad temporal podemos obtener un camino de salida de longitud mínima si es que existe?
+A: 0
+C: Junio 2023
+O: $\Theta(m + n)$
+O: $\Omega(\min(n, m))$ y $O(mn)$
+O: $\Theta(mn)$
+
+Q: Se pretende resolver la versión general del problema del laberinto mediante un algoritmo de búsqueda y enumeración. Para reducir el número de nodos explorados, ¿qué mecanismo de los relacionados garantiza encontrar la solución y resulta a priori más eficaz?
+A: 2
+C: Junio 2023
+O: Usar una matriz de booleanos para descartar caminos que llegan a una casilla ya visitada. Cada casilla $(i, j)$ de la matriz se inicializa con el valor false.
+O: Usar una matriz de enteros donde se almacena la longitud del mejor camino encontrado hasta el momento que llega a cada casilla del laberinto. Cada casilla $(i, j)$ de la matriz se inicializa con el valor infinito.
+O: Usar una matriz de enteros donde se almacena la longitud del mejor camino encontrado hasta el momento que llega a cada casilla del laberinto. Cada casilla $(i, j)$ de la matriz se inicializa con la solución de programación dinámica para la versión restringida del problema asumiendo que el destino es $(i, j)$.
+
+Q: ¿Cuál es la característica principal de un algoritmo voraz aplicado al problema del laberinto?
+A: 1
+C: Junio 2023
+O: Explora exhaustivamente todas las posibles soluciones del laberinto.
+O: Toma decisiones locales óptimas en cada paso sin considerar el panorama general.
+O: Utiliza una estrategia basada en estimaciones heurísticas para encontrar la solución óptima.
+
+Q: Un fontanero tiene una jornada de $Q$ cuartos de hora (es así como se organiza la agenda) y tiene $C$ clientes. El trabajo del cliente $i$ tarda $q_i$ cuartos de hora y el fontanero le cobra un precio $p_i$. Es posible que no pueda atender todos los clientes en la jornada, que nunca puede alargarse. Este problema tiene una solución bien conocida que permite elegir qué clientes visitar para que la suma cobrada al final de la jornada sea la máxima. ¿Qué podemos decir de esta solución?
+A: 1
+C: Junio 2023
+O: Que se ha de implementar forzosamente con un algoritmo de búsqueda y enumeración como el de vuelta atrás.
+O: Que la organización de la agenda en cuartos de hora permite obtener una solución de complejidad temporal $\Theta(QC)$ y complejidad espacial $O(Q)$.
+O: Que no se puede implementar con una solución de "divide y vencerás" con memoización.
+
+Q: Dada la versión restringida del problema del laberinto, ¿cuál de las estrategias siguientes proveería de una cota optimista para ramificación y poda?
+A: 1
+C: Junio 2023
+O: Suponer que en adelante todas las casillas del laberinto son accesibles.
+O: Las otras dos estrategias son ambas válidas.
+O: Suponer que ya no se van a realizar más movimientos.
+
+Q: De las siguientes expresiones, o bien dos son ciertas y una es falsa, o bien al contrario, una es cierta y dos son falsas. Marca la que en este sentido es diferente a las otras dos.
+A: 1
+C: Junio 2023
+O: $\sum_{i=1}^{n/2} \sum_{j=1}^{i} 2^j \in O(n \log n)$
+O: $\sum_{i=1}^{n} \sum_{j=1}^{\log i} 2^j \in O(n^2)$
+O: $\sum_{i=1}^{\log n} \sum_{j=1}^{n} 2^j \in O(n \log n)$
+
+Q: En cuanto a la posibilidad de aplicar la técnica de programación dinámica iterativa para resolver un problema:
+A: 0
+C: Junio 2023
+O: Se debe conocer de antemano todos los posibles subproblemas y además, se debe disponer de una ordenación entre todos ellos según tamaño.
+O: No necesariamente ha de conocerse de antemano todos los posibles subproblemas pero sí debe saberse, dados dos de ellos cualesquiera, cuál es más pequeño.
+O: Se debe conocer de antemano todos los posibles subproblemas pero no necesariamente se debe disponer de una ordenación entre todos ellos según tamaño.
+
+Q: ¿Cuál de los siguientes enfoques es más eficiente para resolver la versión restringida del problema del laberinto?
+A: 1
+C: Junio 2023
+O: Enfoque voraz.
+O: Enfoque de programación dinámica.
+O: Enfoque de vuelta atrás.
+
+Q: ¿Cuál es el coste de monticulizar (heapify) un vector de tamaño $N$?
+A: 1
+C: Junio 2023
+O: $O(N \log N)$ y $\Omega(N)$
+O: $\Theta(N)$
+O: $O(N)$ y $\Omega(1)$
+
+Q: Para resolver la versión general del problema de la mochila con $n$ objetos y carga máxima $W$, hemos escrito un algoritmo de divide y vencerás que, sucesivamente, divide el problema en dos subproblemas; cada uno de ellos toma la mitad de los objetos y la mitad de la carga máxima de la mochila. El caso base ocurre cuando solo hay un objeto que se añade a la solución si cabe en la fracción de carga máxima que corresponda a ese subproblema, y si no cabe se descarta. Asumiendo que $n$ y $W$ son potencias exactas de 2, ¿qué podemos decir de esta solución?
+A: 0
+C: Junio 2023
+O: Que con los resultados de los subproblemas no siempre se puede componer la solución del problema original.
+O: Que no cumple el teorema de reducción.
+O: Que, aunque con los resultados de los subproblemas se puede componer la solución del problema original, esta formulación no mejora la solución estudiada en clase.
+
+Q: ¿Cómo se utiliza la cola de prioridad en el algoritmo de ramificación y poda para resolver el problema del laberinto?
+A: 1
+C: Junio 2023
+O: Se agregan los nodos a la cola de prioridad en orden aleatorio para explorar todas las posibilidades.
+O: Los nodos se agregan a la cola de prioridad según una estimación heurística para priorizar los caminos más prometedores.
+O: Los nodos se extraen de la cola de prioridad según se vayan obteniendo.
+
+Q: En un algoritmo de búsqueda y enumeración, ¿qué podemos decir acerca de la heurística que se utiliza para determinar si un nodo debe expandirse o no?
+A: 1
+C: Junio 2023
+O: Que puede equivocarse, por eso se le llama heurística.
+O: Que también puede usarse como estrategia de búsqueda.
+O: Las otras dos opciones son ambas ciertas.
+
+Q: Dados dos nodos cualesquiera del árbol de búsqueda de ramificación y poda, en general, ¿se puede saber con certeza cuál está más cerca de la solución óptima del problema a resolver?
+A: 2
+C: Junio 2023
+O: Sí, el que tiene mejor cota optimista.
+O: Sí, el que tiene mejor cota pesimista.
+O: Sí, pero solo si ambos nodos son hoja.
+
+Q: El problema de la moneda consiste a formar una suma $M$ con el número mínimo de monedas tomadas (con repetición) de un conjunto $C$ donde hay una cantidad suficientemente grande de monedas con cada posible valor facial $C = \{c_1, c_2, \ldots, c_{|C|}\}$, con $c_1 = 1$. ¿Cuál de estas afirmaciones sobre un algoritmo recursivo de la forma:
+$n_{opt}(M) = 1 + \min_{1 \leq i \leq |C|} n_{opt}(M - c_i); n_{opt}(0) = 0; n_{opt}(x) = \infty$ para $x < 0$
+es falsa?
+A: 0
+C: Junio 2023
+O: Dependiendo de cuáles sean los valores faciales y la suma, puede ser que el algoritmo recursivo no encuentre solución.
+O: Tiene un coste temporal prohibitivo, ya que puede calcular $n_{opt}(x)$ para el mismo valor de $x$ más de una vez.
+O: Encuentra siempre la solución óptima.
+
+Q: Se pretende resolver el problema del viajante de comercio (travelling salesman problem) mediante el esquema de vuelta atrás. ¿Cuál de los siguientes valores se espera que se comporte mejor como cota optimista para un nodo?
+A: 0
+C: Junio 2023
+O: La suma de los pesos de las $k$ aristas restantes más cortas, donde $k$ es el número de ciudades que quedan por visitar.
+O: El valor que se obtiene de multiplicar $k$ por el peso de la arista más corta de entre las restantes, donde $k$ es el número de ciudades que quedan por visitar.
+O: La suma de los pesos de las aristas que completan la solución paso a paso visitando el vértice más cercano al último visitado.
+
+Q: Dada la solución naïve de la versión restringida del problema del laberinto, en general, ¿cuántas veces se llega al caso base de la recursión?
+A: 1
+C: Junio 2023
+O: Solo una.
+O: Un valor que puede crecer exponencialmente con el tamaño del laberinto.
+O: Un valor que a lo sumo es $n \cdot m$.
+
+Q: ¿Cuál es la complejidad temporal en función de $n$, del siguiente fragmento:
+```cpp
+for (int i = 0; i < n; i++) {
+  A[i] = 0;
+  for (int j = 0; j < 20; j++)
+    A[i] += B[j];
+}
+```
+A: 2
+C: Junio 2023
+O: $\Theta(n \log n)$
+O: $\Theta(n^2)$
+O: $\Theta(n)$
