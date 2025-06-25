@@ -4,1566 +4,1566 @@ O: Centralizado.
 O: Distribuído.
 O: Centralizado en unos casos, distribuído en otros.
 O: Ninguna de las anteriores.
-
+,
 Q: La operación commit de Git:
 A: 2
 O: Taslada los datos del repositorio local a la copia maestra del mismo.
 O: Traslada los cambios hechos en la copia de rabajo al repositorio local.
 O: Traslada los cambios hechos en la copia de trabajo a un repositorio remoto.
 O: Clona repositorios.
-
+,
 Q: La operación branch de Git:
 A: 3
 O: Es la única que podemos usar para crear ramas.
 O: Es la única que podemos usar para cambiar de rama.
 O: Es la única que podemos usar para renombrar una rama.
 O: Ninguna de las anteriores.
-
+,
 Q: Para guardar una copia temporal de tu directorio de trabajo:
 A: 3
 O: Utilizamos la operación Git bisect
 O: Utilizamos la operación Git clone
 O: Utilizamos la operación Git stash
 O: No se puede realizar una copia, el directorio de trabajo es único
-
+,
 Q: Git guarda toda la meta-información de un proyecto en:
 A: 3
 O: Una base de datos relacional
 O: Un directorio único para cada usuario
 O: En un directorio único por proyecto
 O: En un archivo de configuración
-
+,
 Q: Trabajando con Git si dos programadores modifican el mismo archivo:
 A: 1
 O: No tiene por qué producirse un conflicto
 O: Siempre se producirá un conflicto
 O: Git no permite modificar simultáneamente en un mismo archivo
 O: Ninguna de las anteriores
-
+,
 Q: En Git la clave “SHA-1” está asociada a:
 A: 4
 O: Cada copia del repositorio
 O: Cada usuario que puede hacer commits en el proyecto
 O: Un conjunto de commits
 O: Cada commit
-
+,
 Q: En un sistema de control de versiones centralizado la operación “push”:
 A: 1
 O: No existe
 O: Hace el mismo papel que en uno distribuido
 O: Es equivalente a pull
 O: Es equivalente a rebase
-
+,
 Q: Si en Git quisiéramos deshacer un commit sin perder la parte de la historia del proyecto donde aparece este commit:
 A: 2
 O: No podemos
 O: Usaremos la orden git revert
 O: Usaremos la orden git reset
 O: Usaremos la orden git rewind
-
+,
 Q: Para modificar un mensaje de un commit:
 A: 2
 O: Un mensaje de un commit no se puede modificar
 O: Utilizamos la opción -amend para modificar el último commit
 O: Debemos de hacer un checkout del archivo y luego usamos -amend
 O: Ninguna de las anteriores
-
+,
 Q: La operación checkout de Git:
 A: 2
 O: Sirve para cambiarse de una rama a otra con la opción -b
 O: La podemos usar para cambiar de rama
 O: Sirve únicamente para actualizar la copia de trabajo con la versión del repositorio local
 O: Ninguna de las anteriores
-
+,
 Q: C# es un lenguaje
 A: 2
 O: débilmente tipado
 O: fuertemente tipado
 O: no tiene tipos
 O: ninguna de las anteriores
-
+,
 Q: En C# el tipo ArrayList
 A: 2
 O: permite almacenar elementos de tipo string
 O: todos los elementos almacenados en un ArrayList son tratados como objetos
 O: todos los elementos deben ser del mismo tipo
 O: ninguna de las anteriores
-
+,
 Q: En la arquitectura de capas propuesta
 A: 3
 O: Las entidades de negocio siempre acceden directamente a las BBDD
 O: Las entidades de negocio solo en algunas ocasiones acceden directamente a las BBDD
 O: Las entidades de negocio no acceden directamente a las BBDD nunca
 O: Ninguna de las anteriores
-
+,
 Q: Las tareas CRUD son llevadas a cabo por:
 A: 3
 O: La interfaz de usuario
 O: La lógica de negocio
 O: El componente de acceso a datos
 O: Ninguna de las anteriores
-
+,
 Q: Las librerías dinámicas:
 A: 4
 O: No hay que compilarlas
 O: Deben llevar el prefijo lib y la extensión .a
 O: Hacen crecer el ejecutable final
 O: Ninguna de las anteriores
-
+,
 Q: en ASP.net...
 A: 2
 O: una aplicación Web está formada por un conjunto de páginas web
 O: una aplicación web solo existe en una localización que ha sido publicada por IIS como un Directorio Virtual
 O: todo lo que requiera la aplicación web debe localizarse en el cliente
 O: Todas son ciertas
-
+,
 Q: Las páginas maestras
 A: 1
 O: me permiten crear una plantilla común para todas las páginas de la aplicación web
 O: pueden ejecutarse sobre cualquier navegador html
 O: deben contener controles de usuario
 O: ninguna de las anteriores
-
+,
 Q: En asp
 A: 3
 O: no es posible trabajar con cookies
 O: podemos crear una cookie como instancia de la clase Cookie
 O: podemos crear una cookie como instancia de la clase HttpCookie
 O: podemos crear una cookie como instancia de la clase AspCookie
-
+,
 Q: En asp la clase que representa un Email se llama
 A: 3
 O: Email
 O: SmtpClient
 O: MailMessage
 O: Mail
-
+,
 Q: El objeto Response
 A: 1
 O: Lo utiliza el servidor para enviar información al cliente
 O: b. Lo utiliza el cliente para enviar información del servidor
 O: Este objeto se utiliza para leer las cookies creadas en el cliente
 O: Ninguna de las anteriores
-
+,
 Q: El atributo runat = “server”
 A: 2
 O: Se declara en los controles que requieren procesamiento en el cliente
 O: Se declara en los controles que requieren procesamiento en el servidor
 O: Tiene asociado una hoja de estilo CSS
 O: Optimiza el SEO del sitio web
-
+,
 Q: En el acceso conectado, recuperamos una fila de una consulta
 A: 3
 O: Con el método nextRow de la clase Row
 O: Con el método anotherRow de la clase DataReader
 O: Con el método Read de la clase DataReader
 O: Con el método Read de la clase DataRow
-
+,
 Q: En el acceso conectado, la cadena de conexión se pasa como parámetro
 A: 4
 O: Al constructor de la clase SqlCommand
 O: Al constructor de la clase SqlDataReader
 O: Al constructor de la clase ExecuteReader
 O: Al constructor de la clase SqlConnection
-
+,
 Q: La propiedad que indica si un control de validación es correcto se llama
 A: 3
 O: causesValidation
 O: isOK
 O: isValid
 O: isCorrect
-
+,
 Q: En el objeto Application
 A: 1
 O: Mantengo el contador de visitas del sitio web
 O: Mantengo el nombre de usuario
 O: Las dos anteriores son verdaderas
 O: Ninguna de las anteriores
-
+,
 Q: En el objeto Session
 A: 2
 O: Mantengo el contador de visitas del sitio web
 O: Mantengo el nombre del usuario
 O: Las dos anteriores son verdaderas
 O: Ninguna de las anteriores
-
+,
 Q: La información guardada en la sesión
 A: 2
 O: Perdura entre diferentes sesiones del mismo usuario
 O: Perdura solo durante la sesión actual del usuario
 O: Perdura hasta que el usuario la borre
 O: Ninguna de las anteriores
-
+,
 Q: En el acceso desconectado la clase que está entre nuestra aplicación y la conexión de las BBDD se llama:
 A: 3
 O: DataReader
 O: DataSet
 O: DataAdapter
 O: Command
-
+,
 Q: Los objetos de la clase DataColumn
 A: 3
 O: Contiene datos de nuestra aplicación
 O: Esa clase no existe
 O: Contienen información sobre una columna
 O: Ninguna de las anteriores
-
+,
 Q: La concurrencia en el método desconectado de ADO.net
 A: 4
 O: Se gestiona bloqueando las filas hasta que el usuario las libere
 O: Se gestiona con la estrategia Lastwin
 O: Debemos escribir el código necesario para gestionarla
 O: Se guarda una copia del dataset original y se compara la BBDD para ver si ha sido modificada
-
+,
 Q: En .NET cada lenguaje de programación define sus propios tipos de datos
 A: 1
 O: cierto
 O: falso
 O: solo coinciden los tipos de datos de C# y F#
 O: ninguna de las anteriores
-
+,
 Q: Un directorio virtual
 A: 4
 O: debe ser implementado en la clase derivada
 O: debe heredar de una interfaz
 O: debe ser implementado y sobrescrito en la clase derivada
 O: se identifica por un alias que representa la localización física en el servidor
-
+,
 Q: El término code behind
 A: 2
 O: hace referencia a código asp
 O: hace referencia a código C#
 O: hace referencia a código asp y C#
 O: ninguna de las anteriores
-
+,
 Q: Las Entidades de Negocio:
 A: 3
 O: *Pueden ser representadas con DataSets
 O: *Tienen asociado un CAD que les proporciona el acceso y mapeo de datos
 O: Las dos con * son correctas
 O: Ninguna de las anteriores son correctas
-
+,
 Q: En la programación dirigida por eventos, la cola de eventos:
 A: 2
 O: Es necesaria.
 O: No es necesaria.
 O: Depende del lenguaje de programación usado.
 O: Ninguna de las anteriores.
-
+,
 Q: En C#:
 A: 2
 O: Es correcta la expresion float a = 3,5;
 O: Es necesario inicializar las variables
 O: La conversion implicita tiene perdida de informacion
-
+,
 Q: En C#:
 A: 1
 O: Existe un recolector de basura
 O: Debemos destruir las variables manualmente
 O: Microsoft dice que esta basado en Java
-
+,
 Q: En C#:
 A: 3
 O: No se pueden manejar excepciones
 O: Se puede hacer un try sin catch
 O: El bloque finally se ejecuta siempre
-
+,
 Q: En C#:
 A: 3
 O: No se puede hacer casting
 O: Con la conversion implicita perdemos datos
 O: Con la conversion explicita perdemos datos
-
+,
 Q: En el modelo de capas:
 A: 1
 O: La Interfaz llama al EN
 O: El CAD llama al EN
 O: El EN llama a la Interfaz
-
+,
 Q: Donde se guarda la aplicacion WEB:
 A: 2
 O: En una Carpeta
 O: En un Directorio Virtual
 O: En LocalHost
-
+,
 Q: RAD son las siglas de:
 A: 1
 O: Rapido Desarrollo de Aplicaciones
 O: Rapido Analisis y Desarrollo
 O: Rapido Diseño de Aplicaciones
-
+,
 Q: Al establecer la etiqueta runat = "server":
 A: 3
 O: EI formulario no debe ser procesado en el servidor
 O: EI formulario lo envia el servidor
 O: EI formulario se debe procesar en el servidor
-
+,
 Q: Un proyecto WEB:
 A: 1
 O: Sirve para aplicaciones web avanzadas
 O: Sirve para paginas web sencillas
 O: No podemos referenciar DLLs
-
+,
 Q: Las paginas maestras:
 A: 3
 O: Solo puede haber 1 pagina maestra
 O: Proporcionan seguridad a la pagina
 O: Proporcionan coherencia a la pagina
-
+,
 Q: En las master pages (paginas maestras):
 A: 1
 O: Definimos el contenido comun y los contenedores de contenido
 O: Hacemos referencia a otras paginas maestras
 O: Creamos el contenido de los contenedores
-
+,
 Q: El enlace entre el mensaje del evento y el mensaje especifico se lleva a cabo mediante:
 A: 2
 O: Emisor de eventos
 O: Delegado de eventos
 O: Receptor de eventos
-
+,
 Q: Los delegados son:
 A: 1
 O: Puntero a funcion
 O: Puntero a mensaje
 O: Puntero a destino
-
+,
 Q: Un Boton es de tipo:
 A: 3
 O: No Postback
 O: Evento de cache
 O: Evento de envio
-
+,
 Q: Un Textbox es de tipo:
 A: 3
 O: Evento de cache
 O: No Postback
 O: Ambas son Correctas
-
+,
 Q: Se puede transformar No Postback a Postback:
 A: 2
 O: Los eventos No Postback ya son Postback
 O: Asignando AutoPostback = true
 O: Asignando PostBack = true
-
+,
 Q: Se puede generar estilo de web sin usar archivo CSS:
 A: 1
 O: Si, con codigo inline
 O: No, tiene que existir este archivo
 O: Ninguna de las anteriores
-
+,
 Q: Con el comando Response.Redirect():
 A: 1
 O: Podemos enviar parametros dentro de la web
 O: Solo podemos acceder a paginas en el directorio raiz
 O: Ninguna de las anteriores
-
+,
 Q: Para leer parametros en la Web usamos:
 A: 2
 O: Commander
 O: Request
 O: Application
-
+,
 Q: Un menu estatico es aquel que:
 A: 3
 O: Son estaticas las porciones especificadas
 O: El control del menu es variable
 O: El control del menu esta expandido completamente
-
+,
 Q: Un menu dinamico es aquel que:
 A: 1
 O: Son estaticas las porciones especificadas
 O: Toda la estructura es siempre visible
 O: El control del menu esta espandido completamente
-
+,
 Q: Con RequiredFieldValidator Validamos:
 A: 2
 O: La cadena sea numerica
 O: La cadena no sea vacia
 O: La cadena sea alfabetica
-
+,
 Q: Los controladores de validacion pueden ser:
 A: 3
 O: Estaticos
 O: Dinamicos
 O: Los dos
-
+,
 Q: En los controladores de validacion (marcar la falsa):
 A: 1
 O: No se puede controlar un rango de datos
 O: Se puede controlar una expresion
 O: Podemos definir nuestro propio control
-
+,
 Q: En el objeto sesion:
 A: 3
 O: Al acabar el timeout se cierra sesion
 O: Al cerrar el navegador se borran los datos
 O: Ambas son correctas
-
+,
 Q: Para cerrar sesion usamos:
 A: 1
 O: Session.Abandon
 O: Session.Remove
 O: Session.Close
-
+,
 Q: Cuales estan implementados como colecciones o conjuntos de pares nombre-valor:
 A: 3
 O: Session
 O: Application
 O: Ambas
-
+,
 Q: Si queremos asignar variables para todos los usuarios usaremos:
 A: 2
 O: Session
 O: Application
 O: Ambas
-
+,
 Q: Las variables application pueden ser bloqueadas:
 A: 1
 O: Si
 O: No
 O: Depende del criterio a seguir
-
+,
 Q: El archivo Global.asax:
 A: 3
 O: Contiene etiquetas HTML
 O: Contiene etiquetas XML
 O: No contiene etiquetas ASP.NET
-
+,
 Q: Los cambios en Global.asax:
 A: 1
 O: Requieren reinicio de aplicacion
 O: Requieren compilacion de aplicacion
 O: Se ejecutan con normalidad
-
+,
 Q: En el entorno conectado usaremos:
 A: 2
 O: Dataset
 O: Datareader
 O: Dataconect
-
+,
 Q: En el entorno desconectado usaremos:
 A: 1
 O: Dataset
 O: Datareader
 O: Dataconect
-
+,
 Q: Los Objetos Connection y Command:
 A: 1
 O: Tienen prefijo
 O: No tienen prefijo
 O: Tienen prefijo, como dataset
-
+,
 Q: El archivo web.config:
 A: 3
 O: Basado en ASP.NET
 O: Basado en HTML
 O: Basado en XML
-
+,
 Q: Para realizar un SELECT:
 A: 3
 O: ExecuteNonQuery
 O: ExecuteCommand
 O: ExecuteReader
-
+,
 Q: Con DataAdapter:
 A: 2
 O: Debemos gestionar en todo momento la apertura y cierre de la BBDD
 O: La gestion por abrir y cerrar la BBDD es automatica
 O: La gestion por abrir y cerrar la BBDD es automatica utilizando CommandBuilder
-
+,
 Q: Con DataAdapter:
 A: 3
 O: Debemos gestionar en todo momento la apertura y cierre de la BBDD
 O: La gestion por insertar, borrar y actualizar la BBDD es automatica
 O: La gestion por insertar, borrar y actualizar la BBDD es automatica utilizando CommandBuilder
-
+,
 Q: GridView:
 A: 3
 O: Con asistente
 O: Con codigo
 O: Los dos
-
+,
 Q: La concurrencia pesimista es:
 A: 1
 O: Cuando una fila es leida, esta queda bloqueada para su lectura para cualquier otro que la demande hasta que aquel que la posee la libere.
 O: Las filas estan disponibles para su lectura en todo momento, estas pueden ser leidas por distintos usuarios al mismo tiempo.
 O: Esta tecnica implica que no existe control. El ultimo cambio en escribirse es el que permanece.
-
+,
 Q: La concurrencia last win es:
 A: 3
 O: Cuando una fila es leida, esta queda bloqueada para su lectura para cualquier otro que la demande hasta que aquel que la posee la libere.
 O: Las filas estan disponibles para su lectura en todo momento, estas pueden ser leidas por distintos usuarios al mismo tiempo.
 O: Esta tecnica implica que no existe control. El ultimo cambio en escribirse es el que permanece.
-
+,
 Q: La concurrencia positiva es:
 A: 2
 O: Cuando una fila es leida, esta queda bloqueada para su lectura para cualquier otro que la demande hasta que aquel que la posee la libere.
 O: Las filas estan disponibles para su lectura en todo momento, estas pueden ser leidas por distintos usuarios al mismo tiempo.
 O: Esta tecnica implica que no existe control. El ultimo cambio en escribirse es el que permanece.
-
+,
 Q: Cuando tenemos que hacer un acceso complicado usaremos:
 A: 3
 O: DataReader
 O: DataAdapter
 O: DataSet
-
+,
 Q: Si trabajamos con mas de una BBDD usaremos:
 A: 1
 O: DataSet
 O: DataReader
 O: DataAdapter
-
+,
 Q: En las Cookies:
 A: 2
 O: Los datos se borran siempre cuando el usuario cierra la ventana del navegador
 O: Las cookies no se pierden cuando se cierra el navegador (a no ser que el usuario las borre)
 O: Una cookie se representa por la clase Cookie
-
+,
 Q: En las Cookies:
 A: 3
 O: Los datos se borran siempre cuando el usuario cierra la ventana del navegador
 O: Las cookies no se pueden borrar con fechas ya expiradas
 O: Una cookie se representa por la clase HttpCookie
-
+,
 Q: La extension de los controles de usuario es:
 A: 2
 O: aspx
 O: ascx
 O: asdx
-
+,
 Q: En Git la operación pull equivale a:
 A: 1
 O: Fetch+merge
 O: Merge
 O: Push
 O: Rebase
-
+,
 Q: Con HTML
 A: 1
 O: podemos implementar páginas estáticas
 O: podemos implementar páginas dinámicas
 O: podemos implementar páginas dinámicas y responsive
 O: es un lenguaje orientado a objetos
-
+,
 Q: La etiqueta HEAD en HTML contiene
 A: 2
 O: el contenido de una página HTML
 O: scripts y metainformación del documento
 O: es dónde se definen los eventos
 O: Esta etiqueta no existe
-
+,
 Q: Las hojas de estilo CSS externas se incluyen
 A: 3
 O: en el elemento body de la página
 O: en cada elemento HTML al que queramos aplicar estilo
 O: en el elemento head de la página
 O: en el elemento form de la página
-
+,
 Q: EI método get para enviar datos (en form)
 A: 2
 O: envia los datos en el cuerpo de la página
 O: envía los datos en la URL
 O: es muy seguro para el envío de datos
 O: permite enviar una gran cantidad de datos
-
+,
 Q: EI atributo runat=server
 A: 2
 O: Puede tomar también el valor runat=client
 O: Indica que se procesa en el servidor el código
 O: Solo se incluye en los formularios aspnet
 O: Solo se incluye en los controles aspnet
-
+,
 Q: Para maquetar una web
 A: 2
 O: debemos usar el elemento table
 O: usaremos divs o/y etiquetas de organización + CSS
 O: debemos usar divs y CSS
 O: debemos usar etiquetas de organización
-
+,
 Q: EI código de interfaz de ASPNET
 A: 2
 O: es igual al HTML
 O: la estructura es HTML pero las etiquetas no
 O: incluye siempre una directiva @Master
 O: se ejecuta en el cliente
-
+,
 Q: Para pasar parámetros cuando navego a otra página ASPNET
 A: 2
 O: uso el método form
 O: uso el método redirect
 O: uso el método get
 O: no se pueden pasar parámetros
-
+,
 Q: Los manejadores de eventos en ASPNET
 A: 2
 O: siguen la signatura de EventArgs
 O: siguen la signatura del delegado EventHandler
 O: tienen tres parámetros: this, args y data
 O: se conectan con los eventos en el main
-
+,
 Q: Las páginas maestras en ASPNET
 A: 1
 O: sirven para definir un layout comun
 O: son ejecutables
 O: no se pueden reutilizar
 O: incluyen la directiva @Page
-
+,
 Q: Los eventos en ASPNET
 A: 4
 O: se originan en el servidor
 O: se originan en el cliente y se procesan en el cliente
 O: se procesan en el cliente
 O: se originan en el cliente y se procesan en el servidor
-
+,
 Q: Los formularios en HTML
 A: 3
 O: tienen eventos click
 O: se recargan automáticamente
 O: envian datos a otra página
 O: tienen tres métodos de envio de datos
-
+,
 Q: Los fomularios en ASPNET
 A: 2
 O: envian datos en el cuerpo de la página
 O: son páginas web
 O: incluyen un elemento runat=client
 O: podemos tener varios en una misma página
-
+,
 Q: ¿A qué método se invoca en el control Data Adapter para cargar el dataset generado?
 A: 1
 O: Fill()
 O: ExecuteQuery()
 O: Read()
-
+,
 Q: ¿Cuál es el tipo del cual heredan todos los tipos de dato de la plataforma .NET?
 A: 1
 O: System.Object
 O: System.Type
 O: System.Class
 O: System.ValueType
-
+,
 Q: ASP.NET es un:
 A: 1
 O: Tecnología de secuencias de comandos del lado del servidor
 O: Tecnología de secuencias de comandos del lado del cliente
 O: Lenguaje de programación
 O: Lenguaje de programación de base de datos igual que SQL.
-
+,
 Q: ¿Cuando una página .aspx es solicitada por el servidor web, el resultado será renderizado al browseren el siguiente formato?
 A: 1
 O: HTML
 O: XML
 O: WML
 O: JSP
-
+,
 Q: ¿Cuál es la palabra reservada para crear una instancia de una clase?
 A: 2
 O: CreateObject
 O: New
 O: Create
 O: Ninguna de las opciones es correcta.
-
+,
 Q: ¿Cuál es el bloque que utiliza .NET para proveer administración estructurada de excepciones?
 A: 3
 O: If/Else
 O: OnError/Goto
 O: Try/Catch/Finally
 O: Throw
-
+,
 Q: Si se desea definir un comportamiento para un conjunto de clases no necesariamente relacionadas entre sí, la mejor opción sería:
 A: 2
 O: Definir una jerarquía de herencia entre las clases
 O: Definir una interfaz
 O: Relacionar las clases mediante una asociación bi-direccional
 O: Encapsular el comportamiento en una clase agregada
-
+,
 Q: ¿Cómo hacer que un cuadro de texto acepte contraseñas?
 A: 2
 O: Establezca la propiedad Modo en Contraseña
 O: Establezca la propiedad TextMode en Contraseña
 O: Tienes que agregar el control Password ASP.NET
-
+,
 Q: Los controles de validacion:
 A: 1
 O: si permiten validar expresiones regulares
 O: solo permiten validar entradas numéricas
 O: no permiten validar expresiones regulares
 O: solo permiten validar entradas de texto
-
+,
 Q: Las aplicaciones de ASP.NET:
 A: 4
 O: solo se pueden desarrollar en J#
 O: solo se pueden desarrollar en VB.NET
 O: solo se pueden desarrollar en C#
 O: ninguna de las anteriores
-
+,
 Q: Para saber quién hizo commit en un fichero ejecuto:
 A: 4
 O: git merge fichero
 O: git commit fichero
 O: git branch fichero
 O: git blame fichero
-
+,
 Q: Una solución (en VisualStudio):
 A: 3
 O: Puede contener sólo dos proyectos siendo uno de ellos proyecto de libreria.
 O: Sólo se puede crear para aplicaciones Web.
 O: Puede contener un conjunto de proyectos.
 O: Ninguna de las anteriores.
-
+,
 Q: En una aplicación de consola C# el enlace entre un evento y su controlador
 A: 3
 O: se implementa mediante un delegado
 O: se realiza automáticamente
 O: se implementa mediante un delegado que es un puntero a función
 O: se implementa mediante un puntero a función
-
+,
 Q: El control gridView
 A: 2
 O: es un control de navegación
 O: es un control para mostrar datos
 O: es un control para mostrar usuarios
 O: sólo se usa con comandos select
-
+,
 Q: En una aplicación de 3 capas
 A: 2
 O: La lógica de negocio (EN) realizará las operaciones de la BD
 O: Habrá una clase CAD por cada clase EN
 O: Los CAD llamarán a los EN
 O: La interfaz llamará a los CAD
-
+,
 Q: ¿Por qué deberíamos usar AJAX?
 A: 4
 O: En la capa CAD para la gestión de acceso a los repositorios de datos
 O: Cuando necesitemos trabajar en modo desconectado con una base de datos
 O: Cuando sea necesario tener un diseño y estética en la página web
 O: Cuando sean necesarias actualizaciones parciales de la página mostrando sólo las partes que han cambiado
-
+,
 Q: EI siguiente código de ADO.NET: SqlConnection c= new SqlConnection(s); c.Open(); SqlCommand com= new SqlCommand(' 'Insert Into Cliente (usuario,contrasenya,dni) VALUES (' '+ cl.Usuario + ' ',cl.contrasenya + + cl.DNI+' ')',c); com.ExecuteReader(); c.Close();
 A: 1
 O: Es incorrecto, utiliza un método de acceso conectado
 O: Es correcto, utiliza un método de acceso desconectado
 O: Es correcto, utiliza un método de acceso conectado
 O: Es incorrecto, utiliza un método de acceso desconectado
-
+,
 Q: En el acceso conectado a la BBDD de ADO.net, el código: String s= ConfigurationManager.ConnectionStrings["bdExamenConnectionString"].ToString(); SqlConnection c= new SqlConnection(s); c.Open(); SqlCommand com= new SqlCommand(' 'Insert Into Cliente (usuario,contrasenya,dni) VALUES (' '+ cl.Usuario + ',cl.contrasenya + ",' + cl.DNI+' ')',c); com.ExecuteReader(); c.Close();
 A: 1
 O: Es incorrecto, se está usando un método para recuperar datos
 O: Es correcto, recuperamos la cadena de conexión del web.xml y se obtiene el número de registros afectados en la base de datos.
 O: Es correcto, recuperamos la cadena de conexión del web.config y se actualiza la base de datos
 O: Es incorrecto, para insertar el usuario en la base datos se usaría el método ExecuteCommand
-
+,
 Q: En el acceso conectado a la BBDD de ADO.net, el código: String s= ConfigurationManager.ConnectionStrings["bdExamenConnectionString"].ToString(); SqlConnection c= new SqlConnection(s); c.Open(); SqlCommand com= new SqlCommand(' 'Insert Into Cliente (usuario,contrasenya,dni) VALUES (' '+ cl.Usuario + ',cl.contrasenya + ",' + cl.DNI+' ')',c); com.ExecuteNonQuery(); c.Close(); REVISADA
 A: 1
 O: Es correcto, recuperamos la cadena de conexión del web.config e insertamos un usuario
 O: Es correcto, recuperamos la cadena de conexión del web.xml y se actualiza la base de datos
 O: Es incorrecto, para insertar el usuario en la base datos se usaría el método ExecuteCommand
 O: Es incorrecto, para recuperar la cadena de conexion del web.config se usaria el objeto webconfig
-
+,
 Q: ¿Qué ocurre si intento lanzar un evento que no tiene un manejador asociado?
 A: 4
 O: No ocurre nada, simplemente no sucede ninguna acción posterior
 O: No se puede dar tal caso: todos los eventos tienen un manejador de eventos asociado por defecto
 O: No se puede, se produce una excepción 'EventWithoutHandler'
 O: No se puede, el evento es nulo en tal caso
-
+,
 Q: En una aplicación ASP.NET toda la computación se realiza:
 A: 1
 O: En el servidor y en el cliente
 O: En el servidor
 O: Ninguna
 O: En el cliente
-
+,
 Q: ¿Qué significa el siguiente mensaje al ejecutar el comando git status? On branch master; Changes not staged for commit: (use "git add ... to update what Will be commited) (use "git checkout -- to discard changes in working directory) modified: foo.cs
 A: 4
 O: Tengo todos mis cambios en foo.cs al dia en el repositorio local, faltaría enviarlos al repositorio remoto
 O: Tengo conflictos sin resolver en el archivo foo.cs que debo solucionar para actualizar la historia del repositorio
 O: Tengo todos mis cambios en foo.cs al dia en el repositorio local y en el remoto
 O: Tengo algunos cambios en el archivo foo.cs sin invluir en el repositorio local, que debo añadirlos al área de preparación o bien deshacer los cambios
-
+,
 Q: EI archivo Global.asax:
 A: 1
 O: Ninguna de las respuestas ofrecidas es correctas
 O: Permite realizar cambios en él sin necesidad de reiniciar la aplicación
 O: Puede contener etiquetas HTM pero no ASP.NET
 O: Permite escribir cualquier tipo de código de aplicación
-
+,
 Q: Respecto al modelo de tres capas, ¿cuál de las siguientes afirmaciones es correcta?
 A: 2
 O: La gestión de eventos lo realiza los EN
 O: Cada EN puede llamar a su CAD
 O: Por cada CAD tiene que existir una tabla en la base de datos
 O: EI GridView tiene que obtener los datos directamente de los CAD
-
+,
 Q: En mi página web tengo un asp:label que inicializo a una cadena vacía en el Page_Load únicamente si isPostBack es false. Adicionalmente, tengo un botón asociado a un evento que concatena una letra "a" al componente asp:label anterior. Si al lanzar la página, pulso tres veces el botón, ¿qué veré en el componente asp:Label?
 A: 2
 O: Nada
 O: "aaa"
 O: "aa"
 O: "aa"
-
+,
 Q: El siguiente código en una página de contenido: <%@  Page  Language="C#"  MasterPageFile="esqueleto.master"   AutoEventWireup="true" CodeBehind="WebForm.aspx.cs"  Inherits="WebApplication.Webform" %>
 A: 4
 O: Es correcto. la propiedad MasterPageFile indica el lenguaje en el que está programada la maestra llamada esqueleto.master
 O: Es incorrecto, la propiedad MasterPageFile debería llamarse Master e indicaría que está asociado a una página maestra llamada esqueleto.master
 O: Es incorrecto, la propiedad MasterPageFile debería llamarse MasterPage e indicaría que está asociado a una página maestra llamada esqueleto.master
 O: Es correcto, la propiedad MasterPageFile indica que está asociado a una página maestra de nombre esqueleto.master
-
+,
 Q: EI motor AJAX hace que la interacción del usuario con la aplicación:
 A: 4
 O: Sea independiente del servidor con el que trabajamos
 O: Sea asíncrona en unas ocasiones y síncronas en otras
 O: Ninguna
 O: Sea asíncrona
-
+,
 Q: Indica qué afirmación es FALSA:
 A: 1
 O: Las bibliotecas dinámicas ocupan menos espacio en memoria
 O: Las bibliotecas estáticas tienen un mejor rendimiento
 O: Las bibliotecas estáticas se enlazan en tiempo de compilación
 O: Las bibliotecas dinámicas permiten cambiar funcionalidad de una aplicación sin recompilar
-
+,
 Q: Respecto a los parámetros de la cadena de conexión a la base de datos, indica qué afirmación es correcta
 A: 2
 O: EI parámetro Connection Timeout define el tiempo de espera mínimo que debe esperar una conexión para intentar conectar con éxito con el servidor SQL
 O: EI parámetro DataSource indica el nombre del servidor SQL
 O: EI parámetro AttachDBFileName especifica el nombre del servidor, la cadena de conexión y el tiempo de espera máximo para establecer la conexión
 O: EI parámetro integrated security recibe como parámetro un valor entero
-
+,
 Q: Asumiendo un entorno desconectado con un gridview vinculado a un DataSet por código. Si quiero borrar un usuario de la base de datos con un id específico ¿Dónde comprobaría la condición del id?
 A: 1
 O: Iterando por el vector Rows de DataTable y haciendo Delete sobre la/s fila/s en las que coincide el id
 O: En la cadena SQL del constructor de SqlDataAdaqpter, para luego hacer delete en la/s fila/s recuperadas
 O: Se puede hacer tanto en el constructor de SqlDataAdapter o iterando por el vector Rows del DataTable
 O: No es necesario comprobar. Se puede borrar la fila utilizando la sentencia Rows[id].Remove() del DataTable directamente.
-
+,
 Q: ¿Que es el área de staging?
 A: 4
 O: Es el repositorio donde git almacena las versiones del fuente
 O: Es el área de trabajo
 O: Es el área previo donde se indexa y formatean los ficheros antes de la ejecución del commit y que además permite la compresión de los datos para enviarlos al repositorio remoto
 O: Es el repositorio donde se indexa y formatean los ficheros antes de la ejecución del commit
-
+,
 Q: EI siguiente código de clase librería llamada operaciones.cs: namespace calculadora{Class Operaciones{ public static double suma(double suml, double sum2) (...)}}
 A: 2
 O: Es incorrecto ya que no se puede definir un método estático en una librería
 O: Todas son incorrectas
 O: Es correcto: la llamada desde otro proyecto enlazado se realizará mediante la siguiente instrucción: Operaciones.Suma(23.8, 22,1);
 O: Es correcto, la llamada desde otro proyecto enlazado se realizará mediante la siguiente instrucción: double resultado= new Operaciones.suma (23.8, 22,1);
-
+,
 Q: Respecto al tema de la programación dirigida por eventos, ¿cuál de las siguientes afirmaciones es falsa?
 A: 1
 O: Un delegado es un puntero a una función
 O: por defecto, los manejadores de evento devuelven void
 O: Un callback es un puntero a una fucnión
 O: Un delegado es un tipo de dato que representa referencias a métodos
-
+,
 Q: En github, para añadir un hito:
 A: 4
 O: Los hitos deben ir asociados a un pull request
 O: No se pueden añadir hitos en github
 O: Un hito debe ir asociado a una tarea
 O: Debo hacerlo desde la pestaña issues
-
+,
 Q: En la programación dirigida por eventos, el siguiente código: if(b < minBateria) bateriaMinimoexcedido (this, new BateriaMinimoExcedidoArgs (b))
 A: 3
 O: Es Incorrecto. Faltaría lanzar el evento si el porcentaje de batería está por encima del mínimo
 O: Es correcto. Si el porcentaje de batería está por debajo del mínimo y el manejador del evento ha sido establecido, 10 lanzamos.
 O: Es incorrecto. Si el porcentaje de batería está por debajo del mínimo, lanzamos el evento. Le faltaría comprobar que hay manejadores asociados al evento bateriaMinimoExcedido asi: (bateriaMinExcedido != null)
 O: Es correcto. Si el porcentaje de batería está por encima del mínimo y el manejador del evento ha sido establecido, 10 lanzamos.
-
+,
 Q: En git, ¿Cómo puedo crear la rama "rama_examen" y moverme a ella en el mismo paso?
 A: 1
 O: git checkout -b rama_examen
 O: git branch rama_examen
 O: git checkout rama_examen
 O: git checkout -d rama_examen
-
+,
 Q: Con git, ¿cómo puedo recuperar un único fichero desde un servidor remoto (rama master) a mi repositorio local?
 A: 3
 O: git fetch origin/master -- <fichero>
 O: git pull + git checkout origin/master -- <fichero>
 O: git fetch + git checkout origin/master -- <fichero>
 O: git pull origin/master -- <fichero>
-
+,
 Q: En el entorno desconectado de ADO.NET
 A: 4
 O: Utilizamos DataReader para leer los objetos de una tabla.
 O: Utilizaremos el método Fill del objeto SqlDataReader, para insertar los datos en el DataSet
 O: Siempre utilizaremos el objeto DataTable
 O: Utilizaremos el método Fill del objeto SqlDataAdapter, para insertar los datos en el DataSet.
-
+,
 Q: El siguiente código del cuerpo de una página aspx:  <body><form id=”form1”<div></div><form></body>
 A: 1
 O: Ninguna de las opciones es correcta
 O: Es incorrecto, la etiqueta form debe ser asp:form
 O: Es correcto, una página sólo puede tener un form
 O: Es incorrecto, la etiqueta form debe ser webform
-
+,
 Q: En la ejecución diferida de código...
 A: 3
 O: Sólo se puede implentar en lenguaje C
 O: El dispatcher dispara los eventos
 O: Tiene su origen el el concepto de callback
 O: Para utilizarla necesitamos la biblioteca <stdlib.h>
-
+,
 Q: En una aplicación de compra-venta, tengo una relación "pedidos" de muchos-a-muchos entre Usuario y Producto. Si en esta aplicación, implementada por capas, quiero recuperar de la base de datos todos los productos que me ha pedido un determinado usuario, ¿qué clase debería implementar este método?
 A: 2
 O: CADUsuario
 O: CADProducto
 O: CADPedido
 O: Podría ir tanto en CADUsuario como en CADProducto (pero no en ambas).
-
+,
 Q: En la ejecución diferida del código...
 A: 3
 O: Para utilizarla necesitamos la biblioteca <stdlib.h>.
 O: EI dispatcher dispara los eventos.
 O: Tiene su origen en el concepto callback
 O: Sólo se puede implementar en lenguaje C.
-
+,
 Q: Dentro del evento rowUpdatingEvent de un Gridview, el siguiente código: GridViewRow fila = GridView1.Rows[e.RowsIndex]; ENProducto p = new ENProducto(); p.nombre =; p.descripcion =; DataSet modificado = p.UpdateProducto(); GridView1.DataSource = modificado; GridView1.EditIndex=-1 GridView1.DataBind();
 A: 4
 O: Es incorrecto, recuperamos la cadena de conexión del web.config pero no se actualiza el origen de datos.
 O: Es correcto, se actualiza el GridView con métodos de acceso conectado.
 O: Es incorrecto, este evento se produce al seleccionar una fila.
 O: Es correcto, se actualiza el GridView con métodos de acceso desconectado.
-
+,
 Q: Dentro del evento rowUpdatingEvent de un Gridview, el siguiente código: GridViewRow fila = GridView1.Rows[e.RowsIndex]; ENProducto p = new ENProducto(); p.nombre = fila.Cells[0].text; p.descripcion = fila.Cells[1].text; DataSet modificado = p.UpdateProducto(); GridView1.DataSource = modificado; GridView1.EditIndex=-1; REVISADA
 A: 4
 O: Es correcto, se actualiza el GridView con métodos de acceso conectado.
 O: Es correcto, se actualiza el GridView con métodos de acceso desconectado.
 O: Es incorrecto, recuperamos la cadena de conexión del web.config pero no se actualiza el origen de datos.
 O: Es incorrecto, no se está mostrando el resultado en el GridView
-
+,
 Q: EI código en C#:  public event cinturonQuitado;
 A: 1
 O: Es incorrecto.
 O: Es correcto, sirve para definir un manejador llamado cinturonQuitado.
 O: Es correcto, sirve para definir un evento Ilamado cinturonQuitado
 O: Es correcto, sirve para definir un delegado llamado cinturonQuitado
-
+,
 Q: Una rama local en Git:
 A: 2
 O: No se puede llamar igual que una remota
 O: Puede estar en modo detached-head
 O: Ninguna de las anteriores.
 O: Se puede llamar igual que otra local
-
+,
 Q: Un biblioteca en .NET Framework:
 A: 1
 O: Debemos añadir una referencia a los proyectos en los que lo estén empleando.
 O: Si es de tipo dinámico, se añade automáticamente una referencia a los proyectos en los que lo estén empleando. Si es de tipo estático, debemos añadir manualmente una referencia a los proyectos en los que lo estén empleando.
 O: Se añade automáticamente una referencia a los proyectos en los que lo estén empleando.
 O: Produce un ejecutable, no una DLL.
-
+,
 Q: El control aspnet menú:
 A: 1
 O: Ninguna de las opciones es correcta
 O: No puede tener elementos anidados.
 O: Debe llevar la propiedad autopostback=true
 O: Está compuesto de elementos listItem
-
+,
 Q: En una aplicación de tres capas:
 A: 3
 O: Habrá una clase CAD compartida por todas las clases EN
 O: La capa MVC llamará a la IU.
 O: La capa IU llamará a los EN.
 O: La capa EN llamará a la capa IU.
-
+,
 Q: El evento con la signatura protected void Page_Load(object sender, EventArgs e):
 A: 3
 O: Es incorrecto, la signatura del evento es protected void Page_Loading(object sender, EventArgs e)
 O: Se invoca solo si la propiedad AutoEventWireup es false
 O: Se invoca solo si la propiedad AutoEventWireup es true
 O: Es incorrecto, la signatura del evento es protected void Page_Load(object sender)
-
+,
 Q: El evento con la signatura protected void Page_Load(object sender, EventArgs e): REVISADA
 A: 1
 O: Se invoca cuando se carga la página independientemente de si se pulsa un botón o no.
 O: Es incorrecto, la signatura del evento es protected void Page_Load (object sender)
 O: Es incorrecto, la signatura del evento es protected void Page_Load (button sender, EventArgs e)
 O: Se invoca sólo si se pulsa un botón en la web y se lanza un evento.
-
+,
 Q: El control UpdatePanel de AJAX: Seleccione una:
 A: 1
 O: Todas las respuestas ofrecidas son correctas.
 O: Requiere el control ScriptManager.
 O: Permite refrescar únicamente una parte concreta de la página.
 O: Puede ser activado mediante eventos producidos fuera del panel.
-
+,
 Q: En una aplicación de una tienda online, en la vista administrador tengo una opción para mostrar todos los usuarios:
 A: 2
 O: Llamare al CADUsuario al pulsar la opción correspondiente.
 O: Lo mas eficiente es mostrar los usuarios en un control de datos.
 O: Utilizaré el método conectado
 O: Llamare al CADUsuario en el evento PageLoad.
-
+,
 Q: En el entorno conectado de ADO.NET, con respecto a los datos recuperados de la base de datos en una consulta:
 A: 2
 O: Todos los registros se disponen en un array de tipo Row[] .
 O: Se leen registro a registro.
 O: Todos los registros se disponen en un array de tipo DataReader[]
 O: Todos los registros se disponen en un objeto DataTable.
-
+,
 Q: En el entorno desconectado de ADO.NET, con respecto a los datos recuperados de la base de datos en una consulta:
 A: 4
 O: Todos los registros se disponen en un array de tipo Row[] .
 O: Se leen registro a registro.
 O: Todos los registros se disponen en un array de tipo DataReader[]
 O: Todos los registros se disponen en un objeto DataTable.
-
+,
 Q: En ASP.net
 A: 4
 O: por defecto todos los eventos son de tipo no-postback
 O: ninguna opción ofrecida es correcta
 O: los eventos postback se quedan en una cola en el cliente hasta que se realiza el envio al servidor
 O: la propiedad autopostback sirve para convertir un evento cached en postback
-
+,
 Q: En visualStudio:
 A: 2
 O: Para utilizar una biblioteca debo crear un proyecto de tipo librería
 O: Los proyectos de librería pueden crearse de manera independiente
 O: Los proyectos de librería siempre llevan asociados un proyecto de consola o interfaz grafica.
 O: Las bibliotecas se enlazan al poner el ejecutable en marcha
-
+,
 Q: En C#, invocamos a un evento de la siguiente manera:
 A: 2
 O: mievento e= new mievento(mieventoArgs);
 O: mievento(this, new mieventoArgs(value));
 O: mievento(mieventoArgs);
-
+,
 Q: El componente encargado de llevar a cabo la persistencia de las aplicaciones se llama:
 A: 3
 O: Componente de lógica de negocio
 O: Componente de interfaz de usuario
 O: Componente de acceso a datos
 O: Ninguna de las opciones ofrecidas es correcta
-
+,
 Q: En el acceso conectado a la BBDD de ADO.net, el código: String s ConfigurationManager.ConnectionStrings("bdExanenConnectionString”).ToString(); SqlConnection c = new SqlConnection(s); c.Open(): SqlCommand com = new SqlCommand (‘ ‘ Insert Into Cliente(usuario,contrasenya,dni) VALUES ( ‘ ‘ + cl.Usuario + ‘ ‘, ...... com.ExecuteNonQuery(); c.Close();
 A: 3
 O: Es incorrecto, para recuperar la cadena de conexión del web.config se usuaria el objeto WebConfig
 O: Es incorrecto, para insertar el usuario en la base de datos se usaría el método ExecuteCommand.
 O: Es correcto, recuperamos la cadena de conexión del web.config e insertamos un usuario.
 O: Es correcto, recuperamos la cadena de conexión del web.xml y se actualiza la base de datos
-
+,
 Q: NET nos permite trabajar con:
 A: 3
 O: BBDD SQL solo en aplicaciones web
 O: sólo BBDD SQL en aplicaciones web y de consola/escritorio
 O: Ninguna opción ofrecida es correcta
 O: solo con BBDD Access en aplicaciones de consola/escritorio
-
+,
 Q: El archivo .gitignore:
 A: 4
 O: Le dice a git que directorios debe rastrear.
 O: Le dice a git que archivos no debe ignorar
 O: Le dice a git que archivos debe incluir bajo el control de versiones.
 O: Ninguna de las anteriores.
-
+,
 Q: Una pagina aspnet es valida....
 A: 2
 O: Si el servidor dice que es valida
 O: Si todos sus controles de validación son validos
 O: Si al menos uno de sus controles de validación es valido
 O: Ninguna opción ofrecida es correcta
-
+,
 Q: En el acceso desconectado la información pasa
 A: 3
 O: a un DataRow desde un DataTable
 O: a un DataSet desde un DataTable
 O: a un DataSet desde un DataAdapter
 O: a un DataTable desde un SQLCommand
-
+,
 Q: ¿Cómo puedo con git automatizar la búsqueda de un cambio que ha provocado errores en mi proyecto?
 A: 3
 O: git test
 O: git blame
 O: git bisect
 O: git log
-
+,
 Q: La etiqueta form en aspnet:
 A: 2
 O: Puede declararse varias veces en una pagina aspnet
 O: Debe ser única en una pagina aspnet
 O: Debe llevar el atributo action indicando la pagina aspnet destino
 O: No debe utilizarse en aspnet
-
+,
 Q: Dado el siguiente código ubicado en la capa CAD, indica la afirmación verdadera: public Dataset ListarClientes() { DataSet bdvirtual = new DataSet(); SqlConnection c = new SqlConnection(s); SqlDataReader dr = new SqlDataReader(“select * from Cliente”, c); da.Fill (bdvirtual, "cliente"); return bdvirtual;
 A: 3
 O: Es correcto, se realiza un listado con método desconectado.
 O: Es incorrecto, en el entorno desconectado no debo crear el objeto SqlConnection.
 O: Es incorrecto, hay objetos que no pertenecen al entorno desconectado.
 O: Es correcto, este código devuelve un DataSet con todos los clientes
-
+,
 Q: Para utilizar el AjaxControl Toolkit:
 A: 3
 O: Debo usar el control updatePanel.
 O: Debo instalar un motor AJAX en el navegador.
 O: Debo añadir una librería a visualStudio.
 O: Ninguna opción es correcta
-
+,
 Q: En ADO.net el objeto DataReader:
 A: 4
 O: Se utiliza para ejecutar sentencias SQL en el modo conectado.
 O: Se utiliza para ejecutar sentencias SQL en el modo desconectado
 O: Utiliza el método Readline para leer el conjunto de resultados.
 O: Es la mejor elección para acceso a datos simple, por su buen rendimiento.
-
+,
 Q: La propiedad Page.IsPostBack de asp.net:
 A: 1
 O: Nos devuelve un valor que indica si la página se está cargando como respuesta a un valor por el cliente o es la primera vez que se obtiene acceso a ella.
 O: Ninguna opción ofrecida es correcta
 O: Se utiliza en el método manejador del evento Page init
 O: Devuelve true solo la primera vez que se carga la pagina
-
+,
 Q: El control de validación RegularExpressionValidator de ASP.NET:
 A: 4
 O: Obliga al usuario a introducir un valor
 O: Compara el valor del control a validar con el de otro control
 O: Valida que el numero introducido este dentro de un rango definido
 O: Valida que el valor introducido por el usuario siga un patrón definido por el desarrollador
-
+,
 Q: En C# un evento:
 A: 4
 O: Ninguna de las opciones ofrecidas es correcta.
 O: Sólo puede estar conectado con métodos de una clase.
 O: Sólo puede tener conectado un manejador.
 O: Puede tener conectados varios manejadores.
-
+,
 Q: Respecto el componente SlideShowExtender, del Ajax Control Toolkit, indica que afirmación es cierta
 A: 2
 O: El servicio web sólo puede contender una función que devuelva una conjunto Slide.
 O: Utiliza un servicio web con extensión asmx.
 O: Se pueden cargar hasta un maximo de 30 imágenes
 O: No es necesario incorporar el componente ScriptManager.
-
+,
 Q: Dado el siguiente código ubicado en el evento Page_Load, indica la afirmación verdadera:  If(!Page.IsPostBack) { d = enl.listarClientesD(); GridView1.DataSource = d; }
 A: 3
 O: Es incorrecto, la propiedad IsPostBack nunca será false.
 O: Es correcto, este código asigna un DataSet a un GridView.
 O: Es incorrecto, los datos no se han enlazado.
 O: Ninguna de las respuestas ofrecidas es correcta
-
+,
 Q: Dado el siguiente código ubicado en el evento Page_Load para mostrar datos en un gridView, indica la afirmación verdadera:  If(!Page.IsPostBack) { d = enl.listarClientesD(); GridView1.DataSource = d; } REVISADA
 A: 4
 O: Es incorrecto, la propiedad IsPostBack nunca será false.
 O: Es correcto en caso de que listarClientesD() devuelva un dataset, este codigo asigna un DataSet a un GridView y lo muestra
 O: Es correcto en caso de que listarClientesD() devuelva un datareader, este codigo asigna un DataReader a un GridView y lo muestra
 O: Es incorrecto, los datos no se han enlazado.
-
+,
 Q: En el entorno conectado de ADO.NET, ¿cómo podemos saber si una modificación ha sido correctamente aplicada?
 A: 2
 O: El código no ha lanzado ninguna excepción.
 O: Ninguna de las respuestas ofrecidas es correcta.
 O: El método ExecuteQuery asociado devuelve true.
 O: El método ExecuteNonQuery asociado devuelve true.
-
+,
 Q: En C#, quiero añadir un atributo a una clase cuyo valor pueda modificarse únicamente en el constructor y que no pueda leerse desde el exterior. Para ello usaré:
 A: 4
 O: public int Value {public get; private set; }
 O: private int Value { get; set;}
 O: private const int value;
 O: private readonly int value;
-
+,
 Q: Con el acceso desconectado
 A: 1
 O: podemos atender mas peticiones simultaneas
 O: podemos atender menos peticiones simultaneas
 O: podemos atender las mismas peticiones simultáneas que con el acceso conectado
 O: el acceso desconectado solo esta disponible en la version professional de NET
-
+,
 Q: ¿Dónde es más apropiado almacenar la cadena de conexión para una base de datos en ASP.NET?
 A: 4
 O: Como atributo estático en cada CAD.
 O: Como atributo constante en cada CAD.
 O: Como atributo estático y constante en cada CAD.
 O: En el archivo web.config
-
+,
 Q: En el acceso conectado a la BBDD de ADO.net, el código: String s ConfigurationManager.ConnectionStrings["bdExamenConnectionString"].Tostring(); SqlConnection c = newSqlConnection(s); SqlCommand com = new SqlCommand(“Select * from cliente”, c); Com.ExecuteNonQuery(); c.Close();
 A: 2
 O: Es correcto, recuperamos la cadena de conexión del web.xml y se obtiene el número de usuarios guardados en la base de datos
 O: Es incorrecto, no se está usando un método para consultar datos
 O: Es correcto, recuperamos la cadena de conexión del web.config y se obtienen los usuarios guardados en la base de datos.
 O: Es incorrecto, para consultar los usuarios en la base de datos se usaría el método ExecuteCommand
-
+,
 Q: En el siguiente codigo de ADO.net, el código: String s ConfigurationManager.ConnectionStrings["bdExamenConnectionString"]; SqlConnection c = new SqlConnection(s); c.Open(); SqlCommand com = new SqlCommand(“Select * from cliente”, c); Com.ExecuteReader(); c.Close(); REVISADA
 A: 4
 O: Es correcto, utiliza un metodo del acceso conectado
 O: Es correcto, utiliza un metodo del acceso desconectado
 O: Es incorrecto, la conexion no se abre correctamente
 O: Es incorrecto, no se está obteniendo correctamente la cadena de conexion
-
+,
 Q: En mi página web tengo un asp:Label que inicializo a cadena vacía en el Page.Load. Adicionalmente, tengo un botón asociado a un evento que concatena una letra "a" al componente asp:Label anterior. Si al lanzar la página, pulso tres veces el botón, ¿qué veré en el componente asp:Label?:
 A: 2
 O: "aa"
 O: "aaa"
 O: Nada
 O: "a"
-
+,
 Q: En git, al fusionar ramas si recibo el error Error: Entry ‘ ‘ not uptodate. Cannot merge. (Changes in working directory)
 A: 3
 O: Hay que ejecutar git merge --abort para deshacer el merge.
 O: Significa que hay cambios que entran en conflicto con otros desarrolladores.
 O: Significa que hay diferencias entre el directorio de trabajo y el staging area.
 O: Significa que hay diferencias entre el directorio de trabajo y el repositorio.
-
+,
 Q: Si ejecuto el comando git log -15:
 A: 3
 O: Borraré los 15 últimos commits de la historia.
 O: Obtendré los 15 primeros commits del repositorio.
 O: Obtendré los 15 últimos commits del repositorio.
 O: Obtendré hasta 15 ramas.
-
+,
 Q: Las funciones lambda:
 A: 1
 O: Permiten especificar los tipos de datos de los parámetros.
 O: Ninguna de las opciones ofrecidas es correcta
 O: No pueden definirse con delegados
 O: Se definen única y exclusivamente con el operador lambda.
-
+,
 Q: En una aplicación ASP.NET, el archivo de configuración:
 A: 3
 O: Sirve para incluir opciones de seguridad, estado, memoria, etc.
 O: Está basado en XML
 O: Todas las opciones ofrecidas son correctas.
 O: Sirve para definir la cadena de conexión a la BBDD.
-
+,
 Q: El AJAX toolkit incluye:
 A: 3
 O: Controles AJAX especiales de acceso a datos
 O: solo un nuevo control que se lama SlideshowPanel para refinar el control asp:image.
 O: Controles adicionales y extensores de controles para incluir nuevos comportamientos o propiedades a los ya existentes
 O: Los mismos controles de validación pero implementados con AJAX
-
+,
 Q: En ADO.net acceso conectado a BBDD
 A: 1
 O: Ninguna de las opciones ofrecidas es correcta
 O: Para ejecutar una sentencia insert debemos utilizar el método ExecuteReader del objetoCommand
 O: Necesitamos utilizar el objeto DataAdapter para ejecutar el comando SQL
 O: Siempre hay que realizar una select
-
+,
 Q: Si se emite un evento sin tener código conectado:
 A: 4
 O: No pasa nada, pero solo en C#
 O: No pasa nada si es la primera vez.
 O: Tendremos un error de ejecución desde la segunda vez que ocurra
 O: Ninguna de las opciones ofrecidas es correcta.
-
+,
 Q: En git... ¿cómo puedo obtener un archivo tal y como se encontraba en una versión determinada del proyecto?:
 A: 4
 O: git show HEAD~3:file.html < myversion.html
 O: git generatefile HEAD~3
 O: No es posible realizar esta acción en git.
 O: git checkout HEAD~3 --file.html
-
+,
 Q: En una aplicacion de consola de C# la conexión de los eventos con los manejadores:
 A: 2
 O: debe realizarse siempre en el constructor
 O: ninguna de las opciones ofrecidas es correcta
 O: debe realizarse siempre en el main
 O: no es obligatoria su conexión
-
+,
 Q: En el acceso conectado de ADO.NET, la cadena de conexión se pasa como parámetro
 A: 4
 O: al constructor de la clase SqlCommand
 O: al constructor de la clase ExecuteReader
 O: al constructor de la clase SqlDataReader
 O: al constructor de la clase SqlConnection
-
+,
 Q: En mi web ASP.NET quiero añadir en una etiqueta un saludo al azar desde el evento Page_Load. ¿Qué diferencias hay entre usar la etiqueta label de HTML o el componente asp:Label?
 A: 2
 O: Ambos son posibles pero la etiqueta de HTML es más eficiente al ser tecnología de cliente.
 O: Sólo es posible con el asp:Label.
 O: Solo es posible con la etiqueta label de HTML
 O: Ambos son posibles pero el componente asp:Label es más eficiente al ser tecnología de servidor.
-
+,
 Q: En .NET , el control AJAX ScriptManager:
 A: 3
 O: Se ejecuta en el cliente
 O: Se ejecuta en el servidor
 O: Se ejecuta parte en el servidor y parte en el cliente
 O: Todas las anteriores son correctas
-
+,
 Q: El código en C#: public event cinturonQuitado;
 A: 1
 O: Es incorrecto.
 O: Es correcto, sirve para definir un delegado llamado cinturonQuitado
 O: Es correcto, sirve para definir un evento llamado cinturonQuitado
 O: Es correcto, sirve para definir un manejador llamado cinturonQuitado.
-
+,
 Q: En un Git Flow típico, cuando encuentro un bug:
 A: 1
 O: Abro una rama nueva para corregirlo. Puedo hacer varios commits en esta nueva rama pero solo se fusiona con la rama principal al solucionar el bug
 O: Abro una rama nueva para corregirlo. Puedo hacer varios commits en esa nueva rama pero cada uno se fusiona con la rama principal inmediatamente.
 O: Se corrige en la rama principal directamente.
 O: Abro una rama nueva para corregirlo. Sólo puedo hacer un único commit para solucionar el bug, que se fusiona después con la rama principal.
-
+,
 Q: En mi repositorio local he creado una etiqueta con el comando git tag v1.8. Si quiero compartir esta etiqueta con el servidor remoto necesito ejecutar:
 A: 3
 O: git fetch origin -t.
 O: git push origin -t v1.8
 O: git push origin --tags
 O: git pull origin v1.8.
-
+,
 Q: En el acceso conectado de ADO.NET , recuperamos una fila de una consulta
 A: 4
 O: con el método Read de la clase DataRow.
 O: con el método nextRow de la clase Row
 O: con el metodo anotherRow de la clase DataReader
 O: con el método Read de la clase DataReader.
-
+,
 Q: La plataforma .NET ofrece:
 A: 1
 O: Un entorno de ejecución de código gestionado.
 O: Un entorno de ejecución de código nativo.
 O: Un entorno de ejecución de código nativo y gestionado.
 O: Un entorno de ejecución de código no gestionado.
-
+,
 Q: La plataforma VisualStudio:
 A: 2
 O: Funciona en cualquier sistema operativo.
 O: Funciona solo en Windows.
 O: Funciona solo en Linux.
 O: Funciona solo en Mac OS.
-
+,
 Q: El CLR significa:
 A: 1
 O: Common Language Runtime
 O: Common Language Repository
 O: Common Language Reader
 O: Common Language Reflection
-
+,
 Q: En C# las entradas y salidas de datos se realizan mediante:
 A: 1
 O: La clase Console.
 O: La clase System.
 O: La clase System.IO.
 O: La clase System.InputOutput.
-
+,
 Q: ArrayList representa:
 A: 1
 O: Un array de objetos que puede crecer dinámicamente.
 O: Un array de objetos que no puede crecer dinámicamente.
 O: Representa una colección de objetos tipo FIFO.
 O: Representa una colección de objetos tipo LIFO.
-
+,
 Q: Hashtable representa:
 A: 4
 O: Una colección de objetos tipo FIFO.
 O: Una colección de objetos tipo LIFO.
 O: Un array de objetos que puede crecer dinámicamente.
 O: Una colección pares clave/valor organizados por el valor hash code de la clave.
-
+,
 Q: Queue representa:
 A: 1
 O: Una colección de objetos tipo FIFO.
 O: Una colección de objetos tipo LIFO.
 O: Un array de objetos que puede crecer dinámicamente.
 O: Una colección pares clave/valor organizados por el valor hash code de la clave.
-
+,
 Q: Stack representa:
 A: 1
 O: Una colección de objetos tipo LIFO.
 O: Una colección de objetos tipo FIFO.
 O: Un array de objetos que puede crecer dinámicamente.
 O: Una colección pares clave/valor organizados por el valor hash code de la clave.
-
+,
 Q: El componente encargado de llevar a cabo la persistencia de la aplicación se llama:
 A: 2
 O: Componente de interfaz de usuario
 O: Componente de acceso a datos
 O: Componente de lógica de negocio
 O: No contesto(equivalente a no marcar ninguna)
-
+,
 Q: Dependiendo del tipo de BBDD utilizada en ADO.net
 A: 2
 O: sólo en el acceso conectado el prefijo cambiará dependiendo del tipo de BBDD
 O: ninguna de las opciones ofrecidas es correctas
 O: todos los objetos llevarán un prefijo diferente (Sql,OleDb..)
 O: el objeto DataSet y el objeto DataReader no llevan prefijo
-
+,
 Q: EI control de validación RangeValidator de asp.net:
 A: 2
 O: Realiza la validación en el servidor
 O: Ninguna de las anteriores
 O: Compara el valor del control a validar con el de otro control
 O: Valida que el número introducido esté dentro de un rango definido
-
+,
 Q: En una aplicación de consola C# para comprobar que un evento tiene asociado al menos un controlador
 A: 1
 O: se tiene que comprobar antes de lanzar el eventos
 O: se tiene que comprobar en el main
 O: no es necesario comprobarlo
 O: se realiza automáticamente
-
+,
 Q: Los SCV, según la forma de almacenar los contenidos, se clasifican en:
 A: 1
 O: Centralizados y distribuidos
 O: Centralizados y colaborativos
 O: Distribuidos y exclusivos
 O: Centralizados y exclusivos
-
+,
 Q: En el acceso desconectado a la BBDD de ADO.net, el código: DataSet bdv = new DataSet(); SqlConnection c = new SqlConnection(s);SqlDataAdapter da = new SqlDataAdapter("select * from Cliente"); da.Fill(bdv, c);
 A: 3
 O: Es correcto, estamos actualizando la bbdd
 O: Es correcto, rellenamos el dataset local
 O: Es incorrecto
 O: Ninguna de las anteriores
-
+,
 Q: En el modo desconectado, dado el sifguiente método ubicado en la capa CAD,  indica cuál es la afirmación verdadera: public DataSet InsertarCliente(ENCliente cli) {    SqlConnection c= new SqlConnection(s);   c.Open();   SqlCommand com= new SqlCommand(' 'Insert Into Cliente (usuario,contrasenya,dni) VALUES (' '+ cli.Usuario + ' ',cli.contrasenya + '',' + cli.DNI+' ')',c); Dataset ds= new DataSet(); da.Fill(ds,"Cliente"): SqlCommandBuilder cbuilder =new SqlCommandBuilder(da);  return ds; c.Close();
 A: 1
 O: Es incorrecto, este método no inserta un cliente
 O: Es incorrecto, no debe devolver nada
 O: Es correcto, este método inserta un nuevo cliente y devuelve un DataSet
 O: Es incorrecto, se debe especificar una sentencia Update
-
+,
 Q: En C# el enlace entre un evento y su controlador
 A: 1
 O: las dos con * son ciertas
 O: *se implementa mediante un delegado
 O: se realiza automáticamente
 O: *se implementa mediante un puntero a función
-
+,
 Q: En una aplicación ASP.NET, si tenemos la operación de borrado siguiente: SqlConnection c = new SqlConnection(s); c.Open(); string sql = "Delete from usuarios where activo=false" SqlCommand com = new SqlCommand(sql, c);
 A: 2
 O: Mediante el método ExecuteNonQuery de la siguiente manera sql.ExecuteNonQuery(com);
 O: Mediante el método ExecuteNonQuery de la siguiente manera com.ExecuteNonQuery();
 O: Mediante el método ExecuteNonQuery de la siguiente manera sql.ExecuteNonQuery();
 O: Mediante el método ExecuteNonQuery de la siguiente manera com.ExecuteNonQuery(sql);
-
+,
 Q: En una aplicación ASP.NET, si tenemos la operación de actualización siguiente: SqlConnection c = new SqlConnection(s); c.Open(); string sql = "Update  from usuarios where activo=false" SqlCommand com = new SqlCommand(sql, c); REVISADA
 A: 2
 O: Mediante el método ExecuteQuery de la siguiente manera sql.ExecuteQuery();
 O: Mediante el método ExecuteNonQuery de la siguiente manera com.ExecuteNonQuery();
 O: Mediante el método ExecuteNonQuery de la siguiente manera com.ExecuteNonQuery(sql,c);
 O: Mediante el método ExecuteNonQuery de la siguiente manera sql.ExecuteNonQuery(com);
-
+,
 Q: La validacion de un correo electronico es:
 A: 1
 O: \S+@\S+\.\S+
 O: \w+@\w+\.\w+
 O: \D+@\D+\.\D+
-
+,
 Q: En una aplicación de consola C# para comprobar que un evento tiene asociado al menos un controlador
 A: 3
 O: se realiza automáticamente
 O: no es necesario comprobarlo
 O: se tiene que comprobar antes de lanzar el evento
 O: se tiene que comprobar en el main
-
+,
 Q: El control de validación RangeValidator de asp.net:
 A: 1
 O: Ninguna es correcta
 O: Compara el valor del control a validar con el de otro control
 O: Sólo valida que el número introducido esté dentro de un rango definido
 O: Realiza la validación en el servidor
-
+,
 Q: En un modelo de tres capas, la interfaz y gestión de eventos se realizará por:
 A: 2
 O: La capa EN.
 O: La capa IU.
 O: La capa MVC.
 O: La capa CAD.
-
+,
 Q: Utilizando AJAX, en el navegador:
 A: 3
 O: Se utiliza un objeto XmlHttpRequest y C
 O: Se utiliza un objeto HttpRequest y JavaScript
 O: Se utiliza un objeto XmlHttpRequest y JavaScript
 O: Todas las respuestas ofrecidas son incorrectas
-
+,
 Q: En el entorno desconectado de ADO.NET, los conflictos cuando varios usuarios modifican los mismos registros a la vez se gestionan: REVISADA
 A: 3
 O: Aplicando una concurrencia pesimista donde se bloquean las filas cada vez que se accede a ellas.
 O: Aplicando una concurrencia positiva y se bloquean las filas cada vez que se accede a ellas.
 O: Aplicando una concurrencia positiva, de forma que se produce un error cuando se intenta modificar una fila ya modificada.
 O: Manteniendo el último cambio que se escribió.
-
+,
 Q: En el entorno desconectado,¿Cómo podemos saber si una modificacion ha sido correctamente aplicada?: REVISADA
 A: 4
 O: El código no ha lanzado ninguna excepción
 O: El método Update de DataAdapter devuelve true
 O: Ninguna es correcta
 O: El método ExecuteNonQuery asociado devuelve el número de filas adectadas
-
+,
 Q: Asumiendo un entorno desconectado con un gridview vinculado a un DataSet por código. Si quiero actualizar un usuario de la base de datos con un id específico ¿cómo accedería a ese usuario en concreto? REVISADA
 A: 1
 O: Iterando por el vector Rows de DataTable y haciendo Update sobre la/s fila/s en las que coincide el id
 O: En la cadena SQL del constructor de SqlDataAdaqpter, para luego hacer Update en la/s fila/s recuperadas
 O: Se puede hacer tanto en el constructor de SqlDataAdapter o iterando por el vector Rows del DataTable
 O: No es necesario comprobar nada
-
+,
 Q: En el entorno desconectado de ADO.NET: REVISADA
 A: 4
 O: En la concurrencia pesimista, el objeto DataSet mantiene dos versiones de las filas que leímos
 O: La concurrencia positiva permite leer cualquier fila en cualquier momento y modificarla sin ningún problema.
 O: La concurrencia pesimista permite leer cualquier fila en cualquier momento y devolvería error en caso de que la fila haya sido modificada tras su lectura si queremos actualizarla.
 O: La concurrencia positiva permite leer cualquier fila en cualquier momento y devolvería error en caso de que la fila haya sido modificada tras su lectura si queremos actualizarla.
-
+,
 Q: En el acceso conectado a la BBDD de ADO.net, el código del método "public bool readUsuario(ENUsuario en)": String s = ConfigurationManager.ConnectionStrings["bdExamenConnectionStringt']. ToString ( ) ; Sq1Connection conn = new Sq1Connection (s) ; conn.Open(); string comando = "SELECT * FROM Usuarios WHERE nif=' " + en.niftJsuario +"'": SqICommand com = new SgICommand (comando, conn) ; Sg1DataReader dr = com. ExecuteReader ( ) ; en.nifUsuario = dr["nif"].ToString() ; en. nombreUsuario = dr["nombre"] .ToString() ; en.edadUsuario = int. Parse (dr ["edad"] .ToString ( ) ) ; dr. Close ( ) ; c. Close(); Seleccione una: REVISADA
 A: 2
 O: Es incorrecto, para leer el usuario utilizaríamos el método Executecommand.
 O: Es incorrecto, se produce una excepción.
 O: A y B son correctas.
 O: Es correcto, recuperamos la cadena de conexión del web.config y leemos el usuario con el nif pasado como parámetro.
-
+,
 Q: El objeto DataReader en un entorno conectado: REVISADA
 A: 1
 O: Para recuperar los datos mediante un DataReader, creamos una instancia del objeto Command y a continuacion creamos el DataReader llamando al método ExecuteReader
 O: Para recuperar los datos mediante un DataReader, creamos una instancia del objeto Command y a continuacion crearemos el DataReader llamando al metodo Read
 O: El metodo Read permite acceder tanto al registro siguiente como al registro anterior
 O: Los datos obtenidos son de lectura y escritura
-
+,
 Q: En una aplicacion aspnet si utilizamos el modelo de 3 capas REVISADA
 A: 1
 O: Ninguna es correcta
 O: Cada capa debe tener una referencia a la otra capa
 O: La BBDD debe ir en la carpeta de los CAD
 O: Cada capa debe ir en una carpeta diferente
-
+,
 Q: En una aplicacion dividida en 3 capas, los CAD pueden: REVISADA
 A: 3
 O: Solo pueden tener los metodos CRUD de acceso a BBDD
 O: *Invocar a procedimientos almacenados
 O: Las dos con * son ciertas
 O: *Controlar la seguridad y autorizacion
-
+,
 Q: Queremos desarrollar una función que envíe un email a un cliente cada vez que se realice una nueva compra, con la factura. ¿Cuáles de estos objetos utilizaremos en nuestra función?: REVISADA
 A: 2
 O: SmtpClient, MailMessage, MailAttach.
 O: SmtpClient, MailMessage, MailAddress.
 O: SmtpClient.
 O: SendEmail, SmtpClient, MailMessage.
-
+,
 Q: El delegado EventHandler tiene la siguiente signatura en C#: REVISADA
 A: 1
 O: delegate void EventHandler(object sender, EventArgs e);
 O: delegate void EventHandler(object sender, object e);
 O: delegate int EventHandler(object sender, EventArgs e);
 O: delegate object EventHandler(object sender, EventArgs e);
-
+,
 Q: Cuando estamos utilizando el comando bisect de Git. ¿con qué comando se indica el último estado bueno conocido, en el que el código funcionaba correctamente?: REVISADA
 A: 2
 O: git bisect start
 O: git bisect good
 O: git bisect SHA-I
 O: git bisect ok
-
+,
 Q: Después de inicializar un repositorio Git nuevo y crear un archivo llamado git-file.html, cuál de los siguientes comandos no funcionará si lo ejecutamos? REVISADA
 A: 4
 O: git add .
 O: git status
 O: git add git-file.html
 O: git commit —m "git web file added"
-
+,
 Q: ¿Qué es Git? REVISADA
 A: 3
 O: Un lenguaje de programación que se utilizó para crear Linux
 O: Un alias para Github
 O: Un sistema de control de versiones
 O: Una plataforma de repositorio remoto
-
+,
 Q: La siguiente sentencia: "Git añade de forma automatica los archivos que vamos creando al repositorio e inmediatamente empieza a monitorizarlos" es: REVISADA
 A: 2
 O: Depende. Si se inicializa el repositorio con el comando "git init" y se crea un archivo .gitignore, entonces la respuesta es Verdadera.

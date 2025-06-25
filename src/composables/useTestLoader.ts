@@ -3,7 +3,7 @@ import { shuffle as sh } from "@/utils"
 
 export class TestLoader {
   parseTestText(text: string, shuffle: boolean = true): Question[] {
-    const chunks = text.split("\n\n")
+    const chunks = text.split(/^,$/m)
     const questions: Question[] = []
     let questionId = 1
 

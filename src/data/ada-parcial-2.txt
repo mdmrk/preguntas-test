@@ -14,19 +14,19 @@ A: 1
 O: `int A`
 O: `int A[]`
 O: `int A[][]`
-
+,
 Q: La solución óptima al problema de encontrar el árbol de recubrimiento de coste mínimo para un grafo no dirigido, conexo y ponderado ...
 A: 1
 O: ... se construye haciendo crecer un único árbol.
 O: ... puede construir un único árbol que va creciendo o bien construir un bosque de árboles que al final se injertan en un único árbol
 O: ... se construye haciendo crecer varios árboles que al final acaban injertados en un único árbol.
-
+,
 Q: En el método voraz ...
 A: 0
 O: ... es habitual preparar los datos para disminuir el coste temporal de la función que determina cuál es la siguiente decisión a tomar.
 O: ... siempre se encuentra solución pero puede que no sea la óptima.
 O: ... el dominio de las decisiones sólo pueden ser conjuntos discretos o discretizables.
-
+,
 Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva:
 ```cpp
 unsigned f(unsigned x, unsigned v[]) {
@@ -43,61 +43,61 @@ A: 2
 O: $O(1)$
 O: $O(x^2)$
 O: $O(x)$
-
+,
 Q: La eficiencia de los algoritmos voraces se basa en el hecho de que...
 A: 2
 O: ... con antelación, las posibles decisiones se ordenan de mejor a peor
 O: ... antes de tomar una decisión de comprueba si satisface las restricciones del problema
 O: ... las decisiones tomadas nunca se reconsideran
-
+,
 Q: En la solución al problema de la mochila continua, ¿por qué es conveniente la ordenación previa de los objetos?
 A: 1
 O: Porque si no se hace no es posible garantizar que la toma de decisiones siga un criterio voraz
 O: Para reducir la complejidad temporal en la toma de cada decisión de $O(n)$ a $O(1)$, donde n es el numero de objetos a considerar
 O: Para reducir la complejidad temporal en la toma de cada decisión de $O(n^2)$ a $O(n\log n)$, donde n es el numero de objetos a considerar
-
+,
 Q: Si ante un problema de decisión existe un criterio de selección voraz entonces...
 A: 1
 O: la solución óptima está garantizada
 O: Ninguna de las otras dos es cierta
 O: al menos una solución factible está garantizada
-
+,
 Q: ¿Cuál de estos tres problemas de optimización no tiene, o no se le conoce, un solución voraz óptima?
 A: 2
 O: El árbol de cobertura de coste mínimo de un grafo conexo
 O: El problema de la mochila continua o con fraccionamiento
 O: El problema de la mochila discreta o sin fraccionamiento
-
+,
 Q: ¿Cuál de los siguientes pares de problemas son equivalente en cuanto al tipo de solución(óptima, factible, etc) aportada por el método voraz?
 A: 0
 O: La mochila discreta y la asignación de tareas
 O: El fontanero diligente y el problema del cambio
 O: La mochila continua y la asignación de tareas
-
+,
 Q: De los problemas siguientes, indicad cuál no se puede tratar eficientemente como los otros dos:
 A: 0
 O: El problema de la mochila sin fraccionamiento y sin restricciones en cuanto al dominio de los pesos de los objetos y de sus valores
 O: El problema de cortar un tubo de forma que se obtenga el máximo beneficio posible
 O: El problema del cambio, o sea, el de encontrar la manera de entregar una cantidad de dinero usando el mínimo de monedas posibles
-
+,
 Q: Supongamos que una solución recursiva a un problema de optimización muestra estas dos características: por un lado, se basa en obtener soluciones óptimas a problemas parciales más pequeños, y por otro, estos subproblemas se resuelven más de una vez durante el proceso recursivo. Este problema es candidato a tener una solución alternativa basada en ...
 A: 1
 O: ... un algoritmo del estilo de divide y vencerás.
 O: ... un algoritmo de programación dinámica.
 O: ... un algoritmo voraz.
-
+,
 Q: La mejora que en general aporta la programación dinámica frente a la solución ingenua se consigue gracias al hecho de que ...
 A: 2
 O: El número de veces que se resuelven los subproblemas no tiene nada que ver con la eficiencia de los problemas resueltos mediante programación dinámica
 O: ... en la solución ingenua se resuelve pocas veces un número relativamente grande de subproblemas distintos.
 O: ... en la solución ingenua se resuelve muchas veces un número relativamente pequeño de subproblemas distintos.
-
+,
 Q: ¿Cómo se vería afectada la solución voraz al problema de la asignación de tareas en el caso de que se incorporaran restricciones que contemplen que ciertas tareas no pueden ser adjudicadas a ciertos trabajadores?
 A: 0
 O: La solución factible ya no estaría garantizada, es decir, pudiera ser que el algoritmo no llegue a solución alguna.
 O: Ya no se garantizaría la solución óptima pero sí una factible.
 O: Habría que replantearse el criterio de selección para comenzar por aquellos trabajadores con más restricciones en cuanto a las tareas que no pueden realizar para asegurar, al menos, una solución factible.
-
+,
 Q: 
 ```cpp
 unsigned f(unsigned y, unsigned x) {
@@ -109,31 +109,31 @@ A: 0
 O: $O(x-y)$
 O: $O(y)$
 O: $O(x)$
-
+,
 Q: ¿Cuál de estas tres estrategias voraces obtiene un mejor valor para la mochila discreta?
 A: 0
 O: Meter primero los elementos de mayor valor específico o valor por unidad de peso
 O: Meter primero los elementos de menor peso
 O: Meter primero los elementos de mayor valor
-
+,
 Q: El problema de encontrar el árbol de recubrimiento de coste mínimo para un grafo dirigido y ponderado...
 A: 1
 O: sólo se puede resolver con una estrategia voraz si existe una arista para cualquier par de vértices del grafo
 O: ... se puede resolver siempre con una estrategia voraz
 O: ... no se puede resolver en general con una estrategia voraz
-
+,
 Q: Un algoritmo recursivo basado en el esquema divide y vencerás...
 A: 1
 O: Las demás opciones son verdaderas
 O: ... será más eficiente cuanto más equitativa sea la división en subproblemas
 O: ... nunca tendrá una complejidad exponencial
-
+,
 Q: Los algoritmos de programación dinámica hacen uso...
 A: 2
 O: ... de que la solución óptima se puede construir añadiendo a la solución el elemento óptimo de los elementos restantes, uno a uno.
 O: ... de una estrategia trivial consistente en examinar todas las soluciones posibles
 O: ... de que se puede ahorrar cálculos guardando resultados anteriores en un almacén
-
+,
 Q: Se pretende aplicar la técnica memoización a la siguiente función recursiva:
 ```cpp
 int f(int x, int y) {
@@ -147,7 +147,7 @@ A: 0
 O: $O(x-y)$, tanto temporal como espacial.
 O: Ninguna de las otras dos opciones es correcta
 O: Temporal $O(x-y)$ y espacial $O(1)$
-
+,
 Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva:
 ```cpp
 unsigned f(unsigned y, unsigned x) {
@@ -160,19 +160,19 @@ A: 1
 O: `int A[]`
 O: `int A`
 O: `int A[][]`
-
+,
 Q: Dado un problema de optimización, el método voraz...
 A: 2
 O: Siempre obtiene una solución óptima
 O: Siempre obtiene una solución factible
 O: garantiza la solución óptima sólo para determinados problemas
-
+,
 Q: Un informático quiere subir a una montaña y para ello decide que tras cada paso, el siguiente debe tomarlo en la dirección de máxima pendiente hacia arriba. Además, entenderá que ha alcanzado la cima cuando llegue a un punto en el que no haya ninguna dirección que sea cuesta arriba. ¿qué tipo de algoritmo está usando nuestro informático?
 A: 1
 O: un algoritmo divide y vencerás.
 O: un algoritmo voraz.
 O: un algoritmo de programación dinámica
-
+,
 Q: 
 ```cpp
 int f(int x, int y) {
@@ -185,19 +185,19 @@ A: 1
 O: $O(x^2)$
 O: $O(1)$
 O: $O(x)$
-
+,
 Q: ¿Qué mecanismo se usa para acelerar el algoritmo de Prim?
 A: 2
 O: El TAD "Union-find"
 O: Mantener una lista de los arcos ordenados según su peso.
 O: Mantener para cada vértice el vértice origen de la arista más corta hasta él.
-
+,
 Q: Cuando la descomposición de los problemas da lugar a subproblemas de tamaño similar, ¿qué esquema promete ser más apropiado?
 A: 0
 O: Programación dinámica
 O: Divide y vencerás, siempre que se garantice que los problema no son del mismo tamaño
 O: El método voraz
-
+,
 Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva:
 ```cpp
 unsigned f(unsigned y, unsigned x) {
@@ -210,25 +210,25 @@ A: 2
 O: $O(y^2)$
 O: $O(1)$
 O: $O(y)$
-
+,
 Q: La solución de programación dinámica iterativa del problema de la mochila discreta...
 A: 2
 O: ... tiene un coste temporal asintótico exponencial con respecto al número de objetos
 O: ... calcula menos veces el valor de la mochila que la correspondiente solución de programación dinámica recursiva
 O: ... tiene la restricción de que los valores tienen que ser enteros positivos
-
+,
 Q: ¿Cuál de los siguientes pares de problemas son equivalentes en cuanto al tipo de solución(óptima, factible, etc) aportada por el método voraz?
 A: 0
 O: El fontanero diligente y mochila continua
 O: El fontanero diligente y el problema del cambio
 O: El fontanero diligente y asignación de tareas
-
+,
 Q: Un tubo de n centímetros de largo se puede cortar en segmentos de 1 centímetro, 2 centímetros, etc... Existe una lista de los precios a los que se venden los segmentos de cada longitud. Una de las maneras de cortar el tubo es la que más ingresos nos producirá. Di cuál de estas tres afirmaciones es FALSA.
 A: 0
 O: Hacer una evaluación exhaustiva "de fuerza bruta" de todas las posibles maneras de cortar el tubo consume un tiempo $\Theta(n!)$
 O: Es posible evitar hacer la evaluación exhaustiva "de fuerza bruta" guardando, para cada posible longitud j < n el precio más elevado posible que se puede obtener dividiendo el tubo correspondiente
 O: Hace una evaluación exhaustiva "de fuerza bruta" de todas las posibles maneras de cortar el tubo consume un tiempo $\Theta(2^n)$
-
+,
 Q: ¿Cuál de estas estrategias para calcular el $n$-ésimo elemento de la serie de Fibonacci
 $f(n) = f(n - 1) + f(n - 2),\ f(1) = f(2) = 1$
 es más eficiente?
@@ -236,13 +236,13 @@ A: 0
 O: Programación dinámica
 O: La estrategia voraz
 O: Las dos estrategias citadas serían similares en cuanto a la eficiencia
-
+,
 Q: El valor que se obtiene con el método voraz para el problema de la mochila discreta es ...
 A: 0
 O: ... una cota inferior para el valor óptimo que a veces puede ser igual a este.
 O: ... una cota superior para el valor óptimo.
 O: ... una cota inferior para el valor óptimo, pero que nunca coincide con este.
-
+,
 Q: Dada la suma de la recurrencia:
 $T(n) = \begin{cases} 1 & n = 0 \\ \sum_{k=0}^{n-1} T(k) & n > 0 \end{cases}$
 ¿cuál de las siguientes afirmaciones es cierta?
@@ -250,7 +250,7 @@ A: 1
 O: $T(n) \in \Theta(n^2)$
 O: $T(n) \in \Theta(2^n)$
 O: $T(n) \in \Theta(n!)$
-
+,
 Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva: ¿Cuál es la mejor complejidad espacial que se puede conseguir?
 ```cpp
 float f(unsigned x, int y) {
@@ -267,13 +267,13 @@ A: 2
 O: $O(1)$
 O: $O(y^2)$
 O: $O(y)$
-
+,
 Q: La programación dinámica...
 A: 2
 O: En algunos casos se puede utilizar para resolver problemas de optimización con dominios continuos pero probablemente pierda su eficacia ya que puede disminuir drásticamente el número de subproblemas repetidos
 O: Normalmente se usa para resolver problemas de optimización con dominios discretizables puesto que las tablas se han de indexar con este tipo de valores
 O: Las otras dos opciones son ciertas
-
+,
 Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva: ¿Cuál es la mejor complejidad espacial que se puede conseguir?
 ```cpp
 int f(int x, int y) {
@@ -286,37 +286,37 @@ A: 2
 O: $O(x^2)$
 O: $O(x)$
 O: $O(1)$
-
+,
 Q: Cuando se calculan los coeficientes binomiales usando la recursión ${n \choose r} = {n-1 \choose r} + {n-1 \choose r-1}$, con ${n \choose 0} = {n \choose n} = 1$, qué problemas se da y cómo se puede resolver?
 A: 1
 O: Se repiten muchos cálculos y ello se puede evitar haciendo uso de una estrategia voraz.
 O: Se repiten muchos cálculos y ello se puede evitar usando programación dinámica.
 O: La recursión puede ser infinita y por tanto es necesario organizarla según el esquema iterativo de programación dinámica.
-
+,
 Q: Si un problema de optimización lo es para una función que toma valores continuos...
 A: 1
 O: La programación dinámica iterativa siempre es mucho más eficiente que la programación dinámica iterativa en cuanto al uso de memoria.
 O: La programación dinámica recursiva puede resultar mucho más eficiente que la programación dinámica iterativa en cuanto al uso de memoria.
 O: El uso de memoria de la programación dinámica iterativa y de la programación dinámica recursiva es el mismo independientemente de si el dominio es discreto o continuo.
-
+,
 Q: La mejor solución que se conoce para el problema de la mochila continua sigue el esquema ...
 A: 2
 O: ...divide y vencerás.
 O: ...ramificación y poda.
 O: ...voraz.
-
+,
 Q: Uno de estos tres problemas no tiene una solución eficiente que siga el esquema de programación dinámica
 A: 1
 O: El problema de la mochila discreta.
 O: El problema de las torres de Hanoi.
 O: El problema de cortar un tubo de longitud n en segmentos de longitud entera entre 1 y n de manera que se maximice el precio de acuerdo con una tabla que da el precio para cada longitud.
-
+,
 Q: ¿Cuál de estos problemas tiene una solución eficiente utilizando programación dinámica?
 A: 1
 O: El problema de la asignación de tareas.
 O: El problema del cambio.
 O: La mochila discreta sin restricciones adicionales.
-
+,
 Q: El siguiente programa resuelve el problema de cortar un tubo de longitud n en segmentos de longitud entera entre 1 y n de manera que se maximice el precio de acuerdo con una tabla que da el precio para cada longitud, pero falta un trozo. ¿Qué debería ir en lugar de XXXXXXX?
 ```cpp
 void fill(price r[]) {
@@ -343,7 +343,7 @@ A: 2
 O: p, r-1, n
 O: p, r, n-r[n]
 O: p, r, n-i
-
+,
 Q: Dadas las siguientes funciones:
 ```cpp
 #Precondición : {0 <= i < v.size(); i < j <= v.size() }
@@ -365,13 +365,13 @@ A: 1
 O: cúbica
 O: cuadrática
 O: exponencial
-
+,
 Q: Uno de estos tres problemas no tiene una solución trivial y eficiente que siga el esquema voraz.
 A: 0
 O: El problema del cambio.
 O: El problema de la mochila discreta sin limitación en la carga máxima de la mochila.
 O: El problema de la mochila continua.
-
+,
 Q: El siguiente programa resuelve el problema de cortar un tubo de longitud n en segmentos de longitud entera entre 1 y n de manera que se maximice el precio de acuerdo con una tabla que da el precio para cada longitud, pero falta un trozo. ¿Qué debería ir en lugar de XXXXXXX?
 ```cpp
 void fill(price m[]) {
@@ -398,43 +398,43 @@ A: 1
 O: n-m[n],m,p
 O: n-i,m,p
 O: n,m[n]-1,p
-
+,
 Q: Decid cuál de estas tres es la cota pesimista más ajustada al valor óptimo de la mochila discreta:
 A: 2
 O: El valor de una mochila que contiene todos los objetos restantes aunque se pase del peso máximo permitido.
 O: El valor de la mochila continua correspondiente.
 O: El valor de la mochila discreta que se obtiene usando un algoritmo voraz basado en el valor específico de los objetos.
-
+,
 Q: ¿Qué esquema algorítmico utiliza el algoritmos de ordenación Quicksort?
 A: 0
 O: Divide y Vencerás
 O: Programación Dinámica
 O: Backtracking
-
+,
 Q: Ante un problema que presenta una solución recursiva siempre podemos aplicar:
 A: 0
 O: Divide y vencerás
 O: Programación dinámica
 O: Cualquiera de las dos anteriores
-
+,
 Q: En cuál de los siguientes casos no se puede aplicar el esquema Divide y Vencerás:
 A: 2
 O: Cuando los subproblemas son de tamaños muy diferentes
 O: Cuando el problema no cumple el principio de optimalidad
 O: Se puede aplicar en ambos casos
-
+,
 Q: Dado el algoritmo de búsqueda binaria, supongamos que, en vez de dividir la lista de elementos en dos mitades del mismo tamaño, la dividamos en dos partes de tamaños 1/3 y 2/3. El coste de este algoritmo:
 A: 1
 O: Es el mismo que el del original
 O: Es mayor que el del original
 O: Es menor que el del original
-
+,
 Q: Si n es el número de elementos del vector, el coste del algoritmo Mergesort es:
 A: 1
 O: $O(n^2)$ y $\Omega(n \log n)$
 O: $\Theta(n \log n)$
 O: $\Theta(n^2)$
-
+,
 Q: La serie de números de Fibonacci se define de la siguiente forma:
 $fib(n) = \begin{cases} 1 & n \leq 1 \\ fib(n-1) + fib(n-2) & n > 1 \end{cases}$
 Para implementar esta función podemos emplear:
@@ -442,7 +442,7 @@ A: 2
 O: Divide y vencerás
 O: Programación dinámica
 O: Cualquiera de las dos anteriores
-
+,
 Q: La serie de números de Fibonacci se define de la siguiente forma:
 $fib(n) = \begin{cases} 1 & n \leq 1 \\ fib(n-1) + fib(n-2) & n > 1 \end{cases}$
 ¿Qué implementación de entre las siguientes supone el menor coste?
@@ -450,115 +450,115 @@ A: 1
 O: Divide y vencerás
 O: Programación dinámica
 O: Cualquiera de las dos anteriores
-
+,
 Q: El problema de la mochila, ¿puede solucionarse de forma óptima empleando la estrategia de divide y vencerás?:
 A: 1
 O: Sólo para el caso de la mochila con fraccionamiento
 O: Sólo para el caso de la mochila sin fraccionamiento
 O: Si, se puede aplicar para ambos casos.
-
+,
 Q: Para que un problema de optimización se pueda resolver mediante PD es necesario que:
 A: 0
 O: Cumpla el principio de optimalidad
 O: Cumpla el teorema de reducción
 O: Cumpla los dos anteriores
-
+,
 Q: Dada una solución recursiva a un problema ¿Cómo podemos evitar la resolución de los mismos subproblemas muchas veces?
 A: 1
 O: Resolver los subproblemas de mayor a menor y guardar su resultado en una tabla, inicializándola con los problemas pequeños.
 O: Resolver los subproblemas de menor a mayor y guardar su resultado en una tabla, inicializándola con los problemas pequeños.
 O: Resolver los subproblemas de mayor a menor y guardar su resultado en una tabla, inicializándola con los problemas más grandes.
-
+,
 Q: Si aplicamos Programación Dinámica a un problema que también tiene solución por divide y vencerás podemos asegurar que...
 A: 2
 O: El coste temporal se reduce y el espacial aumenta con respecto a la solución por DyV
 O: El coste temporal aumenta y el espacial se reduce con respecto a la solución por DyV
 O: Ninguna de las anteriores.
-
+,
 Q: ¿Cuándo utilizaremos Programación Dinámica en lugar de Divide y Vencerás?
 A: 1
 O: Cuando se incrementa la eficacia
 O: Cuando se incrementa la eficiencia
 O: Cuando se reduce el coste espacial.
-
+,
 Q: En programación dinámica, dónde almacenamos los valores de los problemas resueltos?
 A: 2
 O: En un vector unidimensional
 O: En un vector bidimensional
 O: Depende del problema
-
+,
 Q: Supongamos el problema de la mochila resuelto mediante Programación Dinámica y particularizado para n elementos y un peso máximo trasportable de P. ¿Es necesario calcular valores para toda la matriz auxiliar para obtener el resultado?
 A: 1
 O: Si
 O: No
 O: Depende de los valores de n y P.
-
+,
 Q: Un problema de optimización cuya solución se puede expresar mediante una secuencia de decisiones cumple el principio de optimalidad si, dada una secuencia óptima:
 A: 2
 O: Existe una subsecuencia de esa solución que corresponde a la solución óptima de su subproblema asociado
 O: Existe al menos una subsecuencia de esa solución que corresponde a la solución óptima de su subproblema asociado
 O: Cualquier subsecuencia de esa solución corresponde a la solución óptima de su subproblema asociado
-
+,
 Q: La programación dinámica, para resolver un problema, aplica la estrategia...
 A: 0
 O: Se resuelven los problemas más pequeños y, combinando las soluciones, se obtienen las soluciones de problemas sucesivamente más grandes hasta llegar al problema original.
 O: Se descompone el problema a resolver en subproblemas más pequeños, que se resuelven independientemente para finalmente combinar las soluciones de los subproblemas para obtener la solución del problema original.
 O: Ninguna de las anteriores
-
+,
 Q: ¿Qué esquema de programación es el adecuado para resolver el problema del k-ésimo mínimo en un vector?
 A: 1
 O: Programación Dinámica
 O: Divide y Vencerás
 O: Ninguno de los dos
-
+,
 Q: Si n es el número de elementos de un vector. La solución de menor coste al problema de encontrar su k-ésimo mínimo tiene la siguiente complejidad:
 A: 1
 O: $\Omega(n)$ y $O(n \log n)$
 O: $\Omega(n)$ y $O(n^2)$
 O: Ninguna de las dos
-
+,
 Q: Si n es el número de elementos de un vector. Podemos encontrar una solución al problema de encontrar su k-ésimo que esté acotada superiormente por:
 A: 0
 O: $O(n^3)$
 O: $O(n)$
 O: Ninguna de las dos
-
+,
 Q: Dada la solución recursiva al problema de encontrar el k-ésimo mínimo de un vector. Cada llamada recursiva, ¿cuántas nuevas llamadas recursivas genera?
 A: 0
 O: una o ninguna
 O: dos o ninguna
 O: una o dos
-
+,
 Q: La solución al problema de encontrar el k-ésimo mínimo de un vector pone en práctica la siguiente estrategia:
 A: 1
 O: Ordena totalmente el vector
 O: Ordena parcialmente el vector
 O: No ordena ningún elemento del vector
-
+,
 Q: ¿Qué esquema de programación es el adecuado para resolver el problema de la búsqueda binaria?
 A: 1
 O: Programación Dinámica
 O: Divide y Vencerás
 O: Ninguno de los dos
-
+,
 Q: Si n es el número de elementos de un vector. La solución de menor coste al problema de la búsqueda binaria tiene la siguiente complejidad:
 A: 2
 O: $\Omega(\log n)$ y $O(n \log n)$
 O: $\Theta(n \log n)$
 O: $\Omega(1)$ y $O(\log n)$
-
+,
 Q: ¿Con qué esquema de programación obtenemos algoritmos que calculan la distancia de edición entre dos cadenas?
 A: 0
 O: Programación Dinámica
 O: Divide y vencerás
 O: Ambos
-
+,
 Q: Disponemos de dos cadenas de longitudes m y n. Si resolvemos el problema de la distancia de edición mediante programación dinámica, ¿De qué tamaño debemos definir la matriz que necesitaremos?
 A: 2
 O: $(m-1) \times (n-1)$
 O: $m \times n$
 O: $(m+1) \times (n+1)$
-
+,
 Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva:
 ```cpp
 float f(unsigned x, int y) {
@@ -576,7 +576,7 @@ A: 2
 O: $O(y)$
 O: $O(x)$
 O: $O(x \cdot y)$
-
+,
 Q: Se pretende implementar mediante programación dinámica iterativa la función recursiva:
 ```cpp
 int f(int x, int y) {
@@ -590,13 +590,13 @@ A: 1
 O: $O(y)$
 O: $O(x)$
 O: $O(x \cdot y)$
-
+,
 Q: La solución de programación dinámica iterativa del problema de la mochila discreta ...
 A: 1
 O: ... calcula menos veces el valor de la mochila que la correspondiente solución de programación dinámica recursiva.
 O: ... tiene la restricción de que los pesos de los objetos tienen que ser números discretos o discretizables.
 O: ... tiene la restricción de que los valores de los objetos tienen que ser números discretos o discretizables.
-
+,
 Q: Se pretende aplicar la técnica memoización a la siguiente función recursiva:
 ```cpp
 int f(int x, int y) {
@@ -610,31 +610,31 @@ A: 0
 O: $O(x-y)$, tanto temporal como espacial.
 O: Ninguna de las otras dos opciones es correcta
 O: Temporal $O(x-y)$ y espacial $O(1)$
-
+,
 Q: El problema de encontrar el árbol de recubrimiento de coste mínimo para un grafo no dirigido, conexo y ponderado ...
 A: 0
 O: ... se puede resolver siempre con una estrategia voraz
 O: sólo se puede resolver con una estrategia voraz si existe una arista para cualquier par de vértices del grafo
 O: ... no se puede resolver en general con una estrategia voraz
-
+,
 Q: ¿Para qué se utiliza el TAD "Union-find" en el algoritmo de Kruskal?
 A: 0
 O: Para comprobar si un arco forma ciclos
 O: Para comprobar si un vétice ya ha sido visitado
 O: Para comprobar si dos vértices son equivalentes
-
+,
 Q: La solución óptima al problema de encontrar el árbol de recubrimiento de coste mínimo par un grafo no dirigido, conexo y ponderado ...
 A: 0
 O: ...puede construirlo tanto vértice a vértice como arista a arista
 O: ...debe construirlo vértice a vértice: arista a arista no puede ser
 O: ...debe construirlo arista a arista: vértice a vértice no puede ser
-
+,
 Q: ¿Cuál de los siguientes pares de problemas son equivalentes en cuanto al tipo de solución (óptima, factible, etc.) aportada por el método voraz?
 A: 1
 O: El fontanero diligente y la asignación de tareas.
 O: El fontanero diligente y la mochila continua.
 O: El fontanero diligente y el problema del cambio.
-
+,
 Q: Un algoritmo recursivo basado en el esquema de divide y vencerás ...
 A: 2
 O: Las demás opciones son verdaderas

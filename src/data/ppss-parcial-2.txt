@@ -4,14 +4,14 @@ O: todas las afirmaciones del resto de opciones son falsas
 O: en una estrategia de integración top-down los componentes de la lógica de negocio serán los menos probados
 O: en cualquier estrategia de integración las últimas unidades integradas serán las más probadas
 O: en una estrategia de integración bottom-up los componentes de la interfaz de usuario serán los primeros en integrarse
-
+,
 Q: respecto a Webdriver:
 A: 1
 O: es una librería que sustituye al navegador durante las pruebas
 O: es una librería usada para pruebas de escenarios
 O: es una API que se puede usar como una alternativa a JMeter
 O: todas las afirmaciones del resto de opciones son falsas
-
+,
 Q: Dado el siguiente fragmento de código en Java:
 ```java
 if (x > 5 & y < 2) {
@@ -35,7 +35,7 @@ O: sólo el nivel 3
 O: niveles 1 y 3
 O: ninguno de estos niveles
 O: sólo el nivel 1
-
+,
 Q: A partir de este informe de JMeter obtenido con la siguiente configuración del elemento Thread Group:
 Number of Threads (users): 1
 Loop Count: 1
@@ -46,14 +46,14 @@ O: 3
 O: 2
 O: 6
 O: no se puede saber porque falta en la configuración el valor Ramp-up
-
+,
 Q: En un plan de pruebas:
 A: 3
 O: El diseño de las pruebas siempre es anterior a su implementación, excepto en BDD
 O: El diseño de las pruebas no condiciona la calidad de las pruebas si conseguimos niveles altos de cobertura
 O: Podemos omitir alguno de los niveles de pruebas y cambiar su orden si fuese necesario
 O: Podemos separar los procesos de diseño e implementación, pero no su orden
-
+,
 Q: Indica cuál es el valor para del contador de líneas a nivel de clase, según el siguiente informe de JaCoCo:
 ![Tabla](/data/images/ppss-p2-2.png){width=1616 height=165}
 A: 0
@@ -61,14 +61,14 @@ O: 0,70
 O: 0,30
 O: 0,75
 O: ninguno de los valores indicados en el resto de opciones
-
+,
 Q: Indica cuál de las siguientes afirmaciones es falsa:
 A: 2
 O: durante el proceso de desarrollo de un producto, cuanto antes se detecte un defecto menos costoso será repararlo
 O: aunque probemos un código utilizando un conjunto de pruebas eficiente y efectivo y todos los tests pasen, no podemos garantizar que el código no presenta ningún defecto
 O: las pruebas pueden demostrar la ausencia de defectos
 O: aunque un producto funcione de acuerdo a los requerimientos especificados puede que no satisfaga las expectativas del cliente
-
+,
 Q: Dado el siguiente plan JMeter que es ejecutado por un sólo usuario con las siguientes configuraciones:
 Thread Properties
 	Loop Count: 3
@@ -81,42 +81,42 @@ O: 1
 O: 3
 O: 5
 O: 7
-
+,
 Q: En un plan de un proyecto software:
 A: 3
 O: Las pruebas unitarias, integración, y sistema, no se realizan siempre en ese orden, dependerá de si usamos una planificación adaptativa o predictiva
 O: Las pruebas unitarias, integración, y sistema, no siempre se realizan en ese orden, dependerá del modelo de proceso aplicado y del horizonte de planificación
 O: Todas las afirmaciones del resto de opciones son falsas
 O: Las pruebas unitarias, integración, y sistema, se realizan siempre en ese orden
-
+,
 Q: Indica cuál de las siguientes afirmaciones es cierta:
 A: 2
 O: las pruebas unitarias son dinámicas y las pruebas de integración son estáticas
 O: con pruebas de integración no se pueden detectar errores en las unidades a integrar
 O: todas las afirmaciones del resto de opciones son falsas
 O: los defectos del software que no han sido detectados con las pruebas unitarias, serán detectados con las pruebas de integración
-
+,
 Q: Indica cuál de las siguientes afirmaciones es cierta:
 A: 1
 O: un proyecto maven con un empaquetado "pom" debe incluir la etiqueta `<parent>` en su pom.xml
 O: un proyecto maven con un empaquetado "pom" no tiene asociada por defecto ninguna goal a la fase test
 O: el mecanismo reactor de maven permite que un proyectos hijo hereden elementos de la configuración del proyecto padre
 O: todas las afirmaciones del resto de opciones son falsas
-
+,
 Q: Indica cuál de las siguientes afirmaciones es cierta:
 A: 2
 O: los objetos de tipo WebElement se instancian con el constructor de una Page Object cuando se usa la clase PageFactory
 O: si no usamos la clase PageFactory, hay que localizar los elementos de las páginas con la anotación @FindBy
 O: todas las afirmaciones del resto de opciones son falsas
 O: cuando utilizamos la clase PageFactory, los elementos de las páginas se localizan con el método `findElement()`
-
+,
 Q: Un test que use Webdriver con maven:
 A: 3
 O: puede implementarse en src/main
 O: todas las afirmaciones del resto de opciones son falsas
 O: necesariamente se debe ejecutar durante la fase verify
 O: puede ejecutarse durante la fase test
-
+,
 Q: Teniendo en cuenta el proyecto matriculación usado en prácticas:
 ![grafo](/data/images/ppss-p2-4.png){width=400 height=200}
 A: 2
@@ -124,21 +124,21 @@ O: Podemos integrar DAO + PROXY usando alguna estrategia de integración
 O: No podemos hacer pruebas unitarias sobre el módulo DAO ya que necesitamos acceder a una BD
 O: Podemos integrar DAO + PROXY usando una estrategia de integración
 O: Sobre BO podemos realizar tanto pruebas unitarias como de integración
-
+,
 Q: ¿Cuál de las siguientes afirmaciones es falsa sobre las ventajas de la integración continua (CI):
 A: 2
 O: Normalmente, los errores serán más fáciles de resolver
 O: El proceso de encontrar errores es menos costoso
 O: Permite que los programadores no tengan que ejecutar las pruebas unitarias en su equipo
 O: Requiere automatizar el proceso de construcción
-
+,
 Q: Indica cuál de las siguientes afirmaciones es cierta:
 A: 0
 O: Un test DBUnit no necesariamente usa la clase Assertion, puede usar la clase Assertions de JUnit
 O: Las anotaciones DBUnit son necesarias para ejecutar los tests de integración
 O: El plugin sql lo hemos usado para inicializar el estado de la BD en cada uno de los tests
 O: La cadena de conexión con la BD se usa solamente en las tests y en el pom
-
+,
 Q: A partir de este informe de JMeter obtenido con la siguiente configuración del elemento Thread Group:
 Number of Threads (users): 1
 Loop Count: 2
@@ -149,7 +149,7 @@ O: 2,2
 O: 1,1
 O: 3,3
 O: no se puede saber porque falta en la configuración el valor Ramp-up
-
+,
 Q: Dado el siguiente fragmento de código en Java:
 ```java
 if (x > 5 & y < 2) {
@@ -173,28 +173,28 @@ O: sólo el nivel 3
 O: niveles 1 y 3
 O: ninguno de estos niveles
 O: sólo el nivel 1
-
+,
 Q: Indica cuál de las siguientes afirmaciones es cierta:
 A: 3
 O: todas las afirmaciones del resto de opciones son falsas
 O: cuando utilizamos la clase PageFactory, el método `initElements()` tenemos que invocarlo desde el constructor de la page object asociada a la página principal
 O: es conveniente que los objetos de tipo Alert sean manejados en el código de los tests
 O: cuando utilizamos la clase PageFactory, no creamos una page object usando `new()`
-
+,
 Q: En un test (plan) JMeter:
 A: 2
 O: No es necesario usar un servidor proxy si nuestros tests solo usan peticiones http POST
 O: Si usamos un servidor proxy tendremos que cambiar la configuración del navegador para ejecutar el plan
 O: todas las afirmaciones del resto de opciones son falsas
 O: Si usamos un servidor proxy podremos ejecutar las pruebas aunque el servidor real no esté en ejecución
-
+,
 Q: Con respecto a las pruebas de aceptación:
 A: 2
 O: el diseño de las pruebas lo realiza el propio cliente
 O: tienen como objetivo encontrar defectos porque son pruebas dinámicas
 O: el código a probar es el mismo que en las pruebas del sistema
 O: todas las afirmaciones del resto de opciones son falsas
-
+,
 Q: Indica cuál es el valor para el contador de complejidad ciclomática a nivel de clase, según el siguiente informe de JaCoCo:
 ![Tabla](/data/images/ppss-p2-6.png){width=1616 height=165}
 A: 1
@@ -202,14 +202,14 @@ O: ninguno de los valores indicados en el resto de opciones
 O: 0,80
 O: 0,20
 O: 0,30
-
+,
 Q: Indica cuál de las siguientes afirmaciones es cierta:
 A: 3
 O: La etiqueta `<modules>` en un aggregator pom permite que los módulos indicados hereden su configuración (propiedades, dependencias y otros elementos)
 O: Todas las afirmaciones son falsas
 O: El mecanismo reactor de Maven permite que los proyectos hijos hereden elementos de la configuración del proyecto padre
 O: Para establecer una relación de agregación entre proyectos Maven, no es necesario usar la etiqueta `<parent>`
-
+,
 Q: A partir de este informe de JMeter obtenido con la siguiente configuración del elemento Thread Group:
 Number of Threads (users): 1
 Loop Count: 3

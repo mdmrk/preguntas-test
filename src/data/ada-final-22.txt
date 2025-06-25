@@ -4,56 +4,56 @@ C: Junio 2022
 O: Para todo $n > 4$ se cumple que $3n + 4 < 4n$
 O: Para todo $n > \frac{4}{c-3}$, con $c > 3$, se cumple que $3n + 4 < cn$.
 O: Para todo $n < \frac{4}{c-3}$, con $c > 4$, se cumple que $3n + 4 < cn$.
-
+,
 Q: Para resolver la versión simplificada del problema del encaminamiento óptimo, se ha diseñado la función `met(m, n)`, que obtiene el mínimo tráfico de la red entre el servidor 0 y el $n - 1$ colocando, en el sitio más adecuado, $m$ puertas de enlace. Para acelerarla, aplicamos la técnica de memoización. ¿Qué estructura del almacén será la más adecuada?
 A: 0
 C: Junio 2022
 O: una tabla (dos índices)
 O: un vector (un índice)
 O: una constante (ningún índice)
-
+,
 Q: ¿Cuál es la complejidad temporal en el caso mejor del algoritmo que, dado un vector, nos dice cuál de sus elementos quedaría en la posición $k$ si lo ordenáramos por orden descendente de valor?
 A: 1
 C: Junio 2022
 O: $O(\log n)$
 O: $O(n)$
 O: $O(n \log n)$
-
+,
 Q: Tengo que sumar una larga lista de $n$ cantidades diferentes y se me ha ocurrido que una manera de ganar tiempo es la siguiente estrategia recursiva: parto la lista en dos sublistas iguales, calculo su suma por separado usando la misma técnica y luego sumo las dos cantidades. Cuando al partir una lista me quedo con una cantidad sola, la suma es esa cantidad, y si me quedan cero cantidades, la suma es cero. ¿Gano tiempo, es decir, hago menos sumas?
 A: 2
 C: Junio 2022
 O: No, en este caso el coste temporal es $\Theta(n \log n)$.
 O: Sí, ya que en este caso el coste temporal se reduce a $\Theta(\log n)$.
 O: No, ya que la complejidad temporal del método propuesto es la misma que la de sumar una a una las cantidades
-
+,
 Q: Se pretende resolver el problema del encaminamiento óptimo (versión general) mediante ramificación y poda y para ello se hace uso de una cota que consiste en asumir que, independientemente de las puertas ya colocadas, los restantes nodos aún no tratados no van a ser puerta de enlace. ¿Qué podemos decir de esta cota?
 A: 0
 C: Junio 2022
 O: Que no es cota, ni optimista ni pesimista.
 O: Que es una cota optimista.
 O: Que es una cota pesimista.
-
+,
 Q: Uno de estos tres algoritmos de ordenación no opera directamente sobre el vector, y necesita almacenamiento adicional para los elementos del mismo. ¿Cuál es?
 A: 0
 C: Junio 2022
 O: Mergesort
 O: Heapsort
 O: Quicksort
-
+,
 Q: Si $\lim_{n \to \infty} (f(n)/n^2) = 3$ ¿cuál de estas tres afirmaciones es cierta?
 A: 2
 C: Junio 2022
 O: $f(n) \in \Omega(n^3)$
 O: $f(n) \in \Theta(n^3)$
 O: Las otras dos opciones son ambas falsas.
-
+,
 Q: Indica cuál de los siguientes conjuntos es el conjunto $O(f)$:
 A: 0
 C: Junio 2022
 O: $\{g : \mathbb{N} \to \mathbb{R}^+ | \exists c > 0, \exists n_0 \in \mathbb{N}, \forall n \geq n_0, g(n) \leq cf(n)\}$
 O: $\{g : \mathbb{N} \to \mathbb{R}^+ | \exists c > 0, \exists n_0 \in \mathbb{N} : \forall n \geq n_0, g(n) \geq cf(n)\}$
 O: $\{g : \mathbb{N} \to \mathbb{R}^+ | \exists c, d > 0, \exists n_0 \in \mathbb{N} : \forall n \geq n_0, cf(n) \leq g(n) \leq df(n)\}$
-
+,
 Q: Se pretende resolver el problema del encaminamiento óptimo (versión general) mediante vuelta atrás. La solución se expresa mediante un vector $x$ de $n$ valores booleanos en el cual $x_i$ indica si se coloca una puerta en el $i$-ésimo servidor. Dado un nodo del árbol de búsqueda que se ha completado hasta la posición $k$ del vector, ¿cuál de los siguientes fragmentos de código obtiene una cota optimista correcta y, además, resulta ser la más rápida, en el cálculo, de entre las posibles alternativas válidas? (fíjate únicamente en el recorrido de los bucles, el resto es idéntico en las tres opciones. Descarta posibles opciones que no calculan una cota optimista correcta)
 A: 0
 C: Junio 2022
@@ -102,56 +102,56 @@ for (int i = 0; i < n; i++) {
 }
 return optimistic_bound;
 ```
-
+,
 Q: El elemento $n$-ésimo de la serie tribonacci, $T(n)$, se define como sigue: $T(n) = T(n - 3) + T(n - 2) + T(n - 1)$ para $n \geq 3$; $T(0) = 0$; $T(1) = 1$ y $T(2) = 1$. ¿Cuál de estas afirmaciones es falsa?
 A: 2
 C: Junio 2022
 O: Una implementación ingenua de la función $T(n)$, la cual llamaría a $T(n-1)$, $T(n-2)$ y $T(n-3)$ tendría una complejidad prohibitiva por la repetición de cálculos que se produciría.
 O: Es posible una implementación de programación dinámica iterativa con complejidad $\Theta(n)$.
 O: El problema no tiene una solución de programación dinámica iterativa pero se puede resolver añadiendo memoización al cálculo recursivo ingenuo en el que el cálculo de $T(n)$ comporta realizar las llamadas a $T(n - 1)$, $T(n - 2)$ y $T(n - 3)$.
-
+,
 Q: A partir del problema del encaminamiento óptimo (versión simplificada), modificamos la expresión que obtiene el tráfico estimado de la red; ahora es $\sum_{i=0}^{m-1} c_i(d_i - d_p)^2$ ($d_i$ es la distancia de $i$ al primer servidor del bus; $p_i$ es la puerta de acceso más cercana a $i$). Disponemos de la nueva función `ogw(k, n)` que obtiene el mínimo tráfico de la subred colocando solo una puerta de enlace en el lugar apropiado entre el servidor $k$ y el $n - 1$ (ambos incluidos). Estamos interesados en una función `met(m, n)` que calcule el mínimo tráfico de la red colocando, en las mejores ubicaciones, $m$ puertas de enlace. Sabiendo que `met(1, n) = ogw(0, n)`, ¿cómo se podría calcular ahora, de forma recursiva, `met(m, n)`, con $1 \leq m \leq n$?
 A: 0
 C: Junio 2022
 O: De la misma manera que en el problema original que se ha trabajado en las sesiones de prácticas.
 O: No su puede pues, con la modificación planteada, no se cumple la propiedad de subestructura óptima.
 O: Como la distancia está elevada al cuadrado, esta función no se puede calcular recursivamente.
-
+,
 Q: Sobre el teorema de reducción:
 A: 1
 C: Junio 2022
 O: Que se cumpla es condición necesaria para poder aplicar divide y vencerás.
 O: Las otras dos opciones son ambas falsas.
 O: Que se cumpla es condición necesaria para poder aplicar programación dinámica.
-
+,
 Q: De las siguientes situaciones, o bien dos son posibles y una no lo es, o bien al contrario, solo una es posible y las otras dos no lo son. Marca la que, en este sentido, es diferente a las demás.
 A: 1
 C: Junio 2022
 O: $f(n) \in O(n)$ y $f(n) \in \Omega(1)$.
 O: $f(n) \in O(n)$ y $f(n) \in \Omega(n^2)$.
 O: $f(n) \in O(n)$ y $f(n) \in O(n^2)$.
-
+,
 Q: ¿Puede ocurrir que la solución recursiva de estilo "divide y vencerás" pero con memoización de un problema resuelva menos subproblemas que la mejor solución iterativa posible de programación dinámica?
 A: 1
 C: Junio 2022
 O: No, nunca.
 O: Sí, porque la mejor solución iterativa posible de programación dinámica puede resolver subproblemas que no sean necesarios al resolver subproblemas posteriores.
 O: Sí, porque no existe garantía de que la mejor solución iterativa posible no resuelva problemas repetidos, mientras que la técnica de memoización lo garantiza directamente mediante el uso de un almacén.
-
+,
 Q: En la estrategia de ramificación y poda se usa una cola de prioridad para decidir en qué orden se expanden los nodos. Imaginemos un problema de optimización. ¿Puede ser que el valor por el cual se ordenan los nodos sea una cota pesimista del nodo?
 A: 0
 C: Junio 2022
 O: Sí.
 O: No, porque para podar necesitamos una cota optimista.
 O: No, porque una cota pesimista es típicamente el valor que se encuentra en una de las hojas que cuelga del nodo.
-
+,
 Q: Sobre la propiedad de subestructura óptima de un problema de optimización (por selección discreta):
 A: 2
 C: Junio 2022
 O: Es condición necesaria para poder aplicar divide y vencerás.
 O: Es condición necesaria para poder aplicar programación dinámica.
 O: Las otras dos opciones son ambas ciertas.
-
+,
 Q: En cuanto a la complejidad temporal de la siguiente función, ¿cuál de las siguientes formulaciones expresa mejor su complejidad en el peor de los casos?
 ```cpp
 int f(vector<int> &v) {
@@ -172,14 +172,14 @@ C: Junio 2022
 O: $c_s(n) = \sum_{k=1}^{\lfloor \frac{n-1}{2} \rfloor} \log_2 2k \in O(n \log n)$
 O: $c_s(n) = \sum_{k=1}^{\lfloor \frac{n-1}{2} \rfloor} \log_2 2k \in O(\log^2 n)$
 O: Las otras dos opciones son ambas falsas.
-
+,
 Q: La costa de un país tiene $n$ núcleos de población, todos ellos unidos por una línea costera de tren. La industria de cada núcleo de población $j$ produce $T_j$ toneladas de productos para la exportación y se encuentra en el kilómetro $k_j$ de la línea de tren. Las exportaciones son básicas para su economía y debe realizarlas por mar ya que ha roto relaciones con los países con los que linda por tierra. El gobierno ha decidido promover el transporte marítimo y ha presupuestado la cantidad necesaria para construir $p$ puertos de manera que se minimice el tráfico por la línea de tren. El tráfico es $\sum_{j=1}^{n} T_j |k_j - k_{s(j)}|$ donde $s(j)$ es el puerto de salida más cercano al núcleo $j$ ¿Es posible resolver el problema mediante una técnica de programación dinámica?
 A: 1
 C: Junio 2022
 O: No. Debe resolverse usando una técnica de búsqueda y enumeración (vuelta atrás, ramificación y poda) ya que el problema no tiene subestructura óptima.
 O: Sí. El problema goza de subestructura óptima: podemos resolver el problema asumiendo que conocemos la solución para las $m$ primeras ciudades y para $p - 1$ puertos, determinar la posición óptima para que el puerto $p$ sirva a las $n - m$ ciudades restantes, y buscar el valor óptimo de $m$.
 O: No, pero el problema tiene una solución voraz exacta que consiste en empezar por asignar puerto a todos los núcleos de población e ir quitando uno a uno los puertos de manera que el tráfico que resulte de quitarlos aumente lo mínimo posible.
-
+,
 Q: ¿Cuál de las siguientes formulaciones expresa mejor la complejidad temporal, en función del parámetro $n$, de la siguiente función? (asumimos que $n$ es potencia exacta de 2)
 ```cpp
 int f(int n) {
@@ -195,42 +195,42 @@ C: Junio 2022
 O: $\sum_{p=2}^{n/2} \frac{p-1}{2}$
 O: $\sum_{p=1}^{\log n} 2^{p-1}$
 O: $\sum_{p=1}^{\log n} 2 \cdot (p - 1)$
-
+,
 Q: ¿Cuál es el coste temporal de crear un montículo a partir de un vector no ordenado?
 A: 0
 C: Junio 2022
 O: $\Theta(n)$
 O: $\Theta(n \log n)$
 O: $\Omega(n \log n)$ y $O(n^2)$.
-
+,
 Q: Existen dos algoritmos que para ordenar un vector de $n$ elementos, buscan el máximo de esos $n$ elementos, lo intercambian con el $n$-ésimo elemento para ponerlo al final, y luego ordenan, usando el mismo algoritmo, el vector de las primeras $n - 1$ componentes. ¿Cuál de las afirmaciones siguientes es cierta?
 A: 0
 C: Junio 2022
 O: Uno de los algoritmos es heapsort y el otro es una de las posibles maneras de realizar la ordenación por selección; el primero tiene un coste temporal $O(n \log n)$ y el segundo, $O(n^2)$.
 O: Uno de los algoritmos es heapsort y el otro es una de las posibles maneras de realizar la ordenación por burbuja o bubblesort; el primero tiene un coste temporal $O(n \log n)$ y el segundo, $O(n^2)$.
 O: Uno de los algoritmos es heapsort y el otro es una de las posibles maneras de realizar la ordenación por selección; el primero tiene un coste temporal $O(n)$ y el segundo, $O(n^2)$.
-
+,
 Q: Se pretende resolver la versión general del problema del encaminamiento óptimo mediante la técnica "divide y vencerás", ¿se podría obtener la mejor disposición de las puertas?
 A: 0
 C: Junio 2022
 O: No, ya que no se cumple la propiedad "subestructura óptima".
 O: No, ya que no cumple el teorema de reducción.
 O: Sí, pero a costa de una complejidad temporal prohibitiva.
-
+,
 Q: Cuál es la complejidad temporal en función del tamaño del problema ($n$) de multiplicar dos matrices cuadradas?
 A: 1
 C: Junio 2022
 O: $O(n^2)$
 O: $O(n^{3/2})$
 O: $O(n^3)$
-
+,
 Q: Se pretende resolver el problema del encaminamiento óptimo mediante ramificación y poda (versión general) y para ello se implementa la lista de nodos vivos con una pila. ¿qué podemos decir del algoritmo resultante frente a una solución de vuelta atrás?
 A: 2
 C: Junio 2022
 O: Que para mejorar la solución de vuelta atrás será necesario hacer uso de las cotas pesimistas de los nodos intermedios.
 O: Que será más eficiente que la solución de vuelta atrás, tanto en tiempo como en espacio requerido.
 O: Que ambos, el de vuelta atrás y el de ramificación y poda, estarían utilizando la misma estrategia de búsqueda.
-
+,
 Q: Se quiere resolver el problema del encaminamiento óptimo (versión simplificada) mediante un algoritmo voraz que sigue la siguiente estrategia:
 a) suponer que no hay puertas de acceso.
 b) buscar cual es el servidor (que aún no es puerta de acceso) que al hacerlo puerta de acceso produce un tráfico menor.
@@ -241,14 +241,14 @@ C: Junio 2022
 O: El algoritmo no devuelve en general la solución óptima del problema.
 O: El algoritmo no es voraz.
 O: El algoritmo siempre devuelve la solución óptima del problema.
-
+,
 Q: Para un problema concreto, ¿puede ser que la técnica de ramificación y poda pode más que la de vuelta atrás pero al final sea más lenta?
 A: 0
 C: Junio 2022
 O: Sí, puede pasar incluso con implementaciones muy eficientes.
 O: No, la que poda más es siempre más rápida.
 O: No, a menos que la implementación sea muy ineficiente.
-
+,
 Q: Se quiere resolver el problema del encaminamiento óptimo (versión simplificada) mediante un algoritmo voraz que sigue la siguiente estrategia:
 a) marcar todos los servidores como puertas de acceso (por tanto, el tráfico será cero).
 b) buscar de qué nodo tenemos que quitar la puerta de acceso para que el aumento de tráfico sea mínimo.
@@ -259,21 +259,21 @@ C: Junio 2022
 O: El algoritmo no es voraz.
 O: El algoritmo siempre devuelve la solución óptima del problema.
 O: El algoritmo no devuelve en general la solución óptima del problema.
-
+,
 Q: Una de las tres afirmaciones siguientes sobre los algoritmos que obtienen el árbol de recubrimiento mínimo de un grafo ponderado no dirigido es cierta. ¿Cuál es?
 A: 1
 C: Junio 2022
 O: El algoritmo de Kruskal va ampliando un único árbol de recubrimiento mínimo.
 O: El algoritmo de Prim va ampliando un único árbol de recubrimiento mínimo.
 O: El algoritmo de Prim se puede acelerar usando una estructura de datos de conjuntos disjuntos con las operaciones union y find.
-
+,
 Q: Se pretende resolver la versión general del problema del encaminamiento óptimo mediante la técnica de programación dinámica. ¿Con qué inconveniente nos encontraríamos?
 A: 2
 C: Junio 2022
 O: Las otras dos opciones son ambas verdaderas.
 O: Que el programa resultante solo sería capaz de resolver los casos sencillos.
 O: Que no se cumple la propiedad de subestructura óptima.
-
+,
 Q: Dado el problema del encaminamiento óptimo (versión simplificada), la siguiente función pretende encontrar la mejor ubicación de las puertas de enlace haciendo uso del almacén $M$. ¿Es correcta?
 Nota: la función `pair<int, double>ogw(...)` devuelve, respectivamente, la mejor ubicación de puerta de enlace entre dos nodos; y el tráfico asociado a esa ubicación de la puerta de enlace)
 ```cpp
@@ -303,56 +303,56 @@ C: Junio 2022
 O: Sí, aunque solo resolvería ejemplos sencillos.
 O: No, ya que no resuelve todos los subproblemas necesarios.
 O: No, puesto que no será posible extraer la mejor ubicación de las puertas a partir del almacén $M$.
-
+,
 Q: Un ladrón entra por la noche en la quesería más prestigiosa del mercado central con una larga mochila cilíndrica que tiene exactamente el diámetro de los quesos (todos los quesos son cilindros del mismo diámetro y altura, siguiendo un nuevo estándar de la UE) en la que puede cargar exactamente un metro de quesos y con una sofisticada sierra radial quesera (con baterías) que le permite cortar un queso horizontalmente en lugar de hacer cuñas, de manera que se lleve un cilindro. Cada queso tiene un precio único, que no se repite en la tienda. Se quiere llevar queso por el máximo importe posible. Indica cuál de las siguientes afirmaciones sobre la carga óptima es falsa.
 A: 2
 C: Junio 2022
 O: Lleva la mochila llena hasta arriba y como mucho ha usado la sierra radial para cortar un queso.
 O: Los primeros quesos que ha cargado son, enteros, los quesos más caros de toda la quesería.
 O: Lleva la mochila llena hasta arriba y ha usado la sierra radial más de una vez para llevarse porciones bien calculadas de los quesos más caros.
-
+,
 Q: Dado el problema del encaminamiento óptimo (versión general), el valor que se obtiene con el método voraz es ...
 A: 2
 C: Junio 2022
 O: ... una cota superior para el valor óptimo, pero que nunca coincide con este.
 O: ... una cota inferior para el valor óptimo.
 O: ... una cota superior para el valor óptimo que a veces coincide con este.
-
+,
 Q: El problema del cambio es el de formar una suma $M$ con el número mínimo de monedas tomadas (con repetición) de un conjunto $C$ en el que el valor facial de la moneda de tipo $i$ es $c_i$. ¿Cuál de las siguientes afirmaciones es falsa?
 A: 2
 C: Junio 2022
 O: Una versión (memoizada) de la siguiente recursión da la solución óptima en caso de que exista: $n(M) = 1 + \min_{1 \leq i \leq |C|} n(M - c_i); n(0) = 0, n(x) = \infty$ para $x < 0$
 O: La solución voraz consistente en coger siempre la moneda de valor facial más grande cuyo valor es menor que la cantidad $M$ así: $n(M) = 1 + n(M - c^*)$ donde $c^* = \max\{c \in C|c \leq M\}$ puede no encontrar solución para cualquier $M$ y $C$.
 O: La solución voraz consistente en coger siempre la moneda de valor facial más grande cuyo valor es menor que la cantidad $M$ así: $n(M) = 1 + n(M - c^*)$ donde $c^* = \max\{c \in C|c \leq M\}$ encuentra siempre la solución óptima para cualquier $M$ y $C$ si existe dicha solución.
-
+,
 Q: Hemos resuelto el problema del encaminamiento óptimo (versión simplificada) mediante un algoritmo de programación dinámica cuya complejidad espacial ha resultado ser $O(n)$. ¿Qué podemos asegurar de esta solución?
 A: 1
 C: Junio 2022
 O: Que no es correcta si lo que se pretende es encontrar el valor del tráfico estimado para la mejor disposición de las puertas de enlace.
 O: Que no podremos determinar dónde colocar las puertas de enlace.
 O: Que no es la más eficiente si lo que se pretende es encontrar, utilizando las técnicas estudiadas durante el curso, el valor del tráfico estimado para la mejor disposición de las puertas de enlace.
-
+,
 Q: Sea un problema de optimización por selección discreta, con restricciones, en el que se deben tomar $n$ decisiones booleanas para optimizar un indicador, y se abordará mediante un método de búsqueda y enumeración (vuelta atrás, ramificación y poda). ¿Cuál de las siguientes afirmaciones es correcta?
 A: 1
 C: Junio 2022
 O: La complejidad temporal será como mucho $O(n \log n)$ porque en general basta con ordenar adecuadamente las decisiones para convertir cualquier problema de este tipo en un problema de complejidad temporal lineal.
 O: Puede haber problemas para los que la complejidad será exponencial o peor; ninguna estrategia de poda puede garantizar que esto no va a ocurrir.
 O: La complejidad temporal en el peor caso será $O(n^2)$ ya que se toman $n$ decisiones binarias.
-
+,
 Q: Se pretende resolver el problema del encaminamiento óptimo (versión general) mediante ramificación y poda. Si un nodo interno del árbol de búsqueda se completa colocando las restantes puertas de enlace en los servidores con más carga de entre los que quedan por analizar. ¿Qué obtenemos?
 A: 1
 C: Junio 2022
 O: las otras dos opciones son ambas falsas.
 O: Una cota pesimista, es decir, una hoja del árbol de búsqueda situada más abajo que ese nodo interno, en la misma rama.
 O: Una cota optimista, es decir, una hoja del árbol de búsqueda situada más abajo que ese nodo interno, en la misma rama.
-
+,
 Q: Tenemos un "superprocesador" que tiene una instrucción que permite la ordenación de 100 elementos en un tiempo constante. Para este superprocesador, adaptamos el algoritmo Mergesort de forma que cada vez que queremos ordenar menos de 100 elementos, en lugar de hacer las llamadas recursivas, llama a esta instrucción. ¿cuál sería la complejidad de este algoritmo?
 A: 0
 C: Junio 2022
 O: $O(n \log n)$
 O: $O(n)$
 O: $O(1)$
-
+,
 Q: En cuanto a la complejidad temporal de la siguiente función, ¿qué podemos decir acerca del mejor de los casos?
 ```cpp
 int f(vector<int> &v) {
@@ -373,14 +373,14 @@ C: Junio 2022
 O: Que el mejor de los casos ocurre cuando el vector tiene 2 elementos o menos y la complejidad es $\Omega(1)$.
 O: Que uno de los mejores casos ocurre cuando $v[j] = v[1]$ $\forall j \in \mathbb{N}$ y la complejidad es $\Omega(n)$.
 O: Las otras dos opciones son ambas falsas.
-
+,
 Q: Se pretende calcular el valor $2^n$, $n \in \mathbb{N}$, haciendo una transcripción literal de la expresión $2^n = 1 + \sum_{i=1}^{n-1} \prod_{j=1}^{i} 2$. ¿Cuál sería la complejidad temporal asintótica, en función de $n$, del algoritmo resultante?
 A: 1
 C: Junio 2022
 O: $O(2^n)$
 O: $O(n^2)$
 O: $O(n)$
-
+,
 Q: Teniendo en cuenta que `ogw(k, n)` obtiene el tráfico estimado si se coloca una sola puerta de enlace entre los nodos $k$ y $n - 1$, ¿cuál de las siguientes recurrencias es la más apropiada para resolver la versión simplificada del problema del encaminamiento óptimo mediante divide y vencerás?
 A: 0
 C: Junio 2022
