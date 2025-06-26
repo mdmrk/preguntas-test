@@ -6,7 +6,7 @@ import { RouterView } from "vue-router"
 </script>
 
 <template>
-  <header class="flex justify-end space-x-3">
+  <header class="flex justify-end space-x-3 mb-4">
     <HomeButton />
     <ThemeManager />
   </header>

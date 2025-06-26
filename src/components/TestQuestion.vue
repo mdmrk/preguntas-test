@@ -51,8 +51,18 @@
     </div>
   </div>
 
-  <div v-if="answered && !readOnly" class="flex justify-center items-center mt-6">
+  <div class="flex justify-center items-center mt-6 space-x-3">
     <button
+      @click="copyQuestion"
+      class="nav-button"
+      :aria-label="copied ? 'Question copied' : 'Copy question'"
+    >
+      <CopiedIcon v-if="copied" class="w-5 h-5" />
+      <CopyIcon v-else class="w-5 h-5" />
+    </button>
+
+    <button
+      v-show="answered && !readOnly"
       @click="$emit('next')"
       class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg cursor-pointer"
     >
@@ -67,6 +77,8 @@ import { shuffle } from "@/utils"
 import { computed, ref, watch } from "vue"
 import TextRenderer from "./TextRenderer.vue"
 import CheckIcon from "./icons/CheckIcon.vue"
+import CopiedIcon from "./icons/CopiedIcon.vue"
+import CopyIcon from "./icons/CopyIcon.vue"
 import XIcon from "./icons/XIcon.vue"
 
 interface Props {
@@ -122,6 +134,7 @@ const getInitialSelectedOption = () => {
 
 const selectedOption = ref<number | null>(getInitialSelectedOption())
 const answered = ref(props.answered || false)
+const copied = ref(false)
 
 const isCorrect = computed(() => {
   if (selectedOption.value === null) return false
@@ -194,6 +207,25 @@ const selectAnswer = (shuffledIndex: number) => {
     selectedOption: originalIndex,
     isCorrect: isCorrect.value
   })
+}
+
+const copyQuestion = async () => {
+  try {
+    let textToCopy = `${props.question.question}\n\n`
+
+    props.question.options.forEach((option, index) => {
+      textToCopy += `${String.fromCharCode(65 + index)}. ${option}\n`
+    })
+
+    await navigator.clipboard.writeText(textToCopy)
+    copied.value = true
+
+    setTimeout(() => {
+      copied.value = false
+    }, 500)
+  } catch (err) {
+    console.error("Failed to copy question:", err)
+  }
 }
 
 const resetQuestion = () => {
