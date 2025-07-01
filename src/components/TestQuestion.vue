@@ -213,7 +213,7 @@ const copyQuestion = async () => {
   try {
     let textToCopy = `${props.question.question}\n\n`
 
-    props.question.options.forEach((option, index) => {
+    shuffledOptions.value.forEach((option, index) => {
       textToCopy += `${String.fromCharCode(65 + index)}. ${option}\n`
     })
 
