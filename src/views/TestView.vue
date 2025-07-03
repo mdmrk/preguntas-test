@@ -29,6 +29,11 @@
               <span class="text-blue-600 dark:text-blue-400">{{ stats.percentageRounded }}%</span>
             </div>
           </div>
+          <div>
+            <h1 class="text-lg font-semibold text-gray-900 dark:text-white">
+              {{ testTitle }}
+            </h1>
+          </div>
         </div>
 
         <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 flex overflow-hidden">
@@ -132,6 +137,18 @@ const questions = computed(() => {
 })
 
 const currentQuestion = computed(() => questions.value[currentQuestionIndex.value] || null)
+
+const testTitle = computed(() => {
+  return testId.value
+    .split("-")
+    .map((word, index) => {
+      if (index === 0) {
+        return word.toUpperCase()
+      }
+      return word.charAt(0).toUpperCase() + word.slice(1)
+    })
+    .join(" ")
+})
 
 const stats = computed(() => {
   const answered = answers.value.length
