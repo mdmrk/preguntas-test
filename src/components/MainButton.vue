@@ -1,16 +1,16 @@
 <template>
-  <div class="w-full rounded-4xl">
+  <div class="w-full">
     <button
       @click="handleClick"
       :class="[
-        'w-full md:h-26 h-18 font-black text-gray-50 md:text-7xl text-5xl text-left overflow-clip pl-4 rounded-4xl cursor-pointer hover:scale-105 hover:shadow-2xl relative group',
+        'w-full md:h-26 h-18 font-black text-gray-50 md:text-7xl text-5xl text-left overflow-clip pl-4 rounded-3xl md:rounded-4xl cursor-pointer hover:scale-105 hover:shadow-2xl relative group',
         props.bg
       ]"
     >
       <div v-if="props.id !== undefined">
         <div
           @click.prevent.stop="navigateToRepository"
-          class="absolute right-0 top-0 h-full w-16 flex items-center justify-center cursor-pointer rounded-r-4xl bg-white/10 hover:bg-white/25 border-l border-white/20 z-10"
+          class="absolute right-0 top-0 h-full w-16 flex items-center justify-center cursor-pointer rounded-r-3xl md:rounded-r-4xl bg-white/10 hover:bg-white/25 border-l border-white/20 z-10"
         >
           <ListCheckIcon class="w-5" />
         </div>
@@ -24,7 +24,7 @@
       </div>
       <div
         v-else-if="hasSlot"
-        class="absolute right-0 top-0 h-full w-16 flex items-center justify-center cursor-pointer rounded-r-4xl"
+        class="absolute right-0 top-0 h-full w-16 flex items-center justify-center cursor-pointer rounded-r-3xl md:rounded-r-4xl"
       >
         <CaretUpDownIcon class="w-5" />
       </div>
@@ -39,7 +39,7 @@
         :key="year"
         @click="navigateToYear(year)"
         :class="[
-          'w-full md:h-20 h-12 font-black text-gray-50 md:text-5xl text-3xl text-left overflow-clip px-4 rounded-4xl cursor-pointer hover:scale-105 hover:shadow-2xl relative group',
+          'w-full md:h-20 h-12 font-black text-gray-50 md:text-5xl text-3xl text-left overflow-clip px-4 rounded-2xl md:rounded-3xl cursor-pointer hover:scale-105 hover:shadow-2xl relative group',
           props.bg
         ]"
       >

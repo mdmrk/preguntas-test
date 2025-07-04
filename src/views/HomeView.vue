@@ -9,12 +9,7 @@ import MainButton from "@/components/MainButton.vue"
       <MainButton bg="gradient-red" class="relative" text="ADA">
         <MainButton id="ada-parcial-1" bg="gradient-red" text="parcial 1" />
         <MainButton id="ada-parcial-2" bg="gradient-red" text="parcial 2" />
-        <MainButton
-          id="ada-final"
-          years="2025;2024;2023;2022;2021"
-          bg="gradient-red"
-          text="final"
-        />
+        <MainButton id="ada-final" years="2025;2024;2023;2022" bg="gradient-red" text="final" />
       </MainButton>
       <MainButton bg="gradient-blue" class="relative" text="PPSS">
         <MainButton id="ppss-parcial-1" bg="gradient-blue" text="parcial 1" />
