@@ -131,7 +131,6 @@ const loading = ref(true)
 const currentQuestionIndex = ref(0)
 const answers = ref<Answer[]>([])
 const testFinished = ref(false)
-
 const testId = computed(() => route.params.id as string)
 const year = computed(() => route.params.year as string | undefined)
 
@@ -140,7 +139,7 @@ const loader = new TestLoader()
 const questions = computed(() => {
   if (!testContent.value) return []
   const allQuestions = loader.parseTestText(testContent.value)
-  if (year.value !== undefined) {
+  if (year.value && year.value.trim() !== "") {
     return allQuestions.filter((q) => q.tags && q.tags.some((tag) => tag.includes(year.value!)))
   }
   return allQuestions
@@ -158,7 +157,7 @@ const testTitle = computed(() => {
       return word.charAt(0).toUpperCase() + word.slice(1)
     })
     .join(" ")
-  if (year.value !== undefined) {
+  if (year.value && year.value.trim() !== "") {
     base += ` ${year.value}`
   }
   return base
