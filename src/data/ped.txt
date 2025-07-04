@@ -333,11 +333,6 @@ A: 0
 O: V
 O: F
 ,
-Q: El grado de un árbol es el máximo nivel que pueden tener sus subárboles.
-A: 1
-O: V
-O: F
-,
 Q: La operación desencolar vista en clase es la siguiente: VAR c: cola, x: item; desencolar( crear( ) ) = crear( ); si esvacia( c ) entonces desencolar( encolar( c, x ) ) = crear ( ); si no desencolar( encolar( c, x ) ) = encolar( desencolar ( c ), x );
 A: 0
 O: V
@@ -583,11 +578,6 @@ A: 0
 O: V
 O: F
 ,
-Q: La complejidad espacial es la cantidad de recursos espaciales que un algoritmo consume o necesita para su ejecución
-A: 0
-O: V
-O: F
-,
 Q: La semántica de la operación obtener en una lista con acceso por posición es la siguiente (IC=InsertarCabeza(Lista, Ítem), p: posición, l1: lista, x: ítem): obtener(crear(),p)=error_item(); si p = = primera(IC(l1,x)) entonces obtener(IC(l1,x),p)=x; sino obtener(IC(l1,x),p)=IC(obtener(l1,p),x);
 A: 1
 O: V
@@ -625,11 +615,6 @@ O: F
 ,
 Q: En la escala de complejidades se cumple que O(log n) ⊂ O(log log n).
 A: 1
-O: V
-O: F
-,
-Q: El algoritmo de búsqueda binaria estudiado en clase (búsqueda de un elemento en un vector ordenado) tiene una complejidad de Ω(1)
-A: 0
 O: V
 O: F
 ,
@@ -700,11 +685,6 @@ O: F
 ,
 Q: Dado un único recorrido de un árbol binario lleno es posible reconstruir dicho árbol
 A: 0
-O: V
-O: F
-,
-Q: A los árboles generales también se les llama árboles multicamino de búsqueda
-A: 1
 O: V
 O: F
 ,
@@ -799,11 +779,6 @@ O: V
 O: F
 ,
 Q: Los árboles AVL son árboles balanceados con respecto a la altura de los subárboles
-A: 0
-O: V
-O: F
-,
-Q: El número mínimo de nodos que tiene un árbol AVL de altura 4 es 7
 A: 0
 O: V
 O: F
@@ -963,16 +938,6 @@ A: 1
 O: V
 O: F
 ,
-Q: El nivel de un nodo en un árbol coincide con la longitud del camino desde la raíz a dicho nodo
-A: 1
-O: V
-O: F
-,
-Q: Es posible reconstruir un único árbol binario de altura 6 a partir de un recorrido en postorden con 63 etiquetas.
-A: 0
-O: V
-O: F
-,
 Q: La complejidad temporal del recorrido por niveles en un árbol binario es la misma que las de los recorridos in-pre-post orden
 A: 0
 O: V
@@ -983,22 +948,12 @@ A: 1
 O: V
 O: F
 ,
-Q: A los árboles generales también se les llama árboles multicamino de búsqueda
-A: 1
-O: V
-O: F
-,
 Q: Cuando realizamos un recorrido en preorden en un árbol binario de búsqueda las etiquetas aparecen ordenadas de menor a mayor
 A: 1
 O: V
 O: F
 ,
 Q: El coste temporal (en su peor caso) de insertar una etiqueta en un árbol binario de búsqueda es lineal con la altura del árbol
-A: 0
-O: V
-O: F
-,
-Q: El ítem medio (según la relación de orden) almacenado en un árbol binario de búsqueda lleno siempre se encuentra en la raíz.
 A: 0
 O: V
 O: F
@@ -1058,16 +1013,6 @@ A: 1
 O: V
 O: F
 ,
-Q: En C++, los miembros protected son privados para el exterior, pero permiten el acceso a las clases derivadas.
-A: 0
-O: V
-O: F
-,
-Q: En C++, si una clase "B" se construye por composición (layering) , a partir de otra clase "A" , definiendo un objeto miembro de la clase "A" en su parte privada, al invocar al constructor de "B" se invoca antes al constructor de "A" y luego al de "B"
-A: 0
-O: V
-O: F
-,
 Q: En layering los métodos de la clase derivada pueden acceder a la parte pública y privada de la clase base
 A: 1
 O: V
@@ -1079,11 +1024,6 @@ O: V
 O: F
 ,
 Q: En C++, al hacer layering los métodos de la clase derivada pueden acceder a la parte pública de la clase base.
-A: 0
-O: V
-O: F
-,
-Q: En C++, el puntero this sólo se puede usar dentro de los métodos de la clase.
 A: 0
 O: V
 O: F
@@ -1123,16 +1063,6 @@ A: 1
 O: V
 O: F
 ,
-Q: En la escala de complejidades se cumple que O(log n) ⊂ O(log log n).
-A: 1
-O: V
-O: F
-,
-Q: La complejidad espacial es la cantidad de recursos espaciales que un algoritmo consume o necesita para su ejecución
-A: 0
-O: V
-O: F
-,
 Q: La complejidad temporal del siguiente fragmento de código es O(n) int i, j, n, sum; for (i = 4; i < n; i++){ for (j = i-3, sum = a[i-4]; j <= i; j++) sum += a[j]; cout << “La suma del subarray “ << i-4 << “ es “ << sum << endl;}
 A: 0
 O: V
@@ -1149,16 +1079,6 @@ O: V
 O: F
 ,
 Q: Si la complejidad temporal de un algoritmo en el mejor caso es lineal y en el peor caso es lineal, podemos decir que la complejidad promedio es lineal
-A: 0
-O: V
-O: F
-,
-Q: El algoritmo de búsqueda binaria estudiado en clase (búsqueda de un elemento en un vector ordenado) tiene una complejidad de Ω(1).
-A: 0
-O: V
-O: F
-,
-Q: El algoritmo de intercambio directo o burbuja estudiado en clase (ordenación de los elementos de un vector) tiene una complejidad promedio de Θ(n^2), siendo n el número de elementos del vector.
 A: 0
 O: V
 O: F
@@ -1508,11 +1428,6 @@ A: 0
 O: V
 O: F
 ,
-Q: El tipo de datos vector (visto en clase) se define como un conjunto en el que sus componentes ocupan posiciones consecutivas de memoria
-A: 1
-O: V
-O: F
-,
 Q: En cualquier tipo de datos lineal cada elemento tiene un único sucesor y varios predecesor
 A: 1
 O: V
@@ -1553,11 +1468,6 @@ A: 0
 O: V
 O: F
 ,
-Q: La siguiente especificación corresponde a la operación unión de conjuntos: VAR A, B: Conjuntos; x:item; Union(crear(), A) = A; Union(Insertar(A,x),B)= si (Pertenece(B,x)) entonces Union(A, B); sino Insertar(Union(A, B), x)
-A: 0
-O: V
-O: F
-,
 Q: La función de redispersión en una tabla de dispersión abierta (hash abierto), para que se recorran todas las posiciones del vector, tiene que cumplir que el valor de B sea primo.
 A: 1
 O: V
@@ -1588,11 +1498,6 @@ A: 1
 O: V
 O: F
 ,
-Q: Existe un único árbol 2-3 de altura 3 que representa a las etiquetas del 1 al 9.
-A: 1
-O: V
-O: F
-,
 Q: El número mínimo de nodos que tiene un árbol AVL de altura 4 es 7.
 A: 0
 O: V
@@ -1605,11 +1510,6 @@ O: F
 ,
 Q: La función de búsqueda BINARIA de un elemento en una lista ordenada podría alcanzar una complejidad temporal O(log2 n).
 A: 1
-O: V
-O: F
-,
-Q: El algoritmo de intercambio directo o burbuja estudiado en clase (ordenación de los elementos de un vector) tiene una complejidad promedio de θ(n^2), siendo n el número de elementos del vector.
-A: 0
 O: V
 O: F
 ,
@@ -1640,11 +1540,6 @@ O: F
 ,
 Q: En los árboles binarios de búsqueda, en el borrado de un elemento que tiene dos hijos, la siguiente ecuación de su especificación algebraica indica que dicho elemento se sustituye por el menor del subárbol izquierdo: si ( y==x ) y no esvacio( d ) y no esvacio( i ) entonces borrar( enraizar( i, x, d ), y ) = enraizar( i, min( d ), borrar( d, min( d ) ) ) fsi
 A: 1
-O: V
-O: F
-,
-Q: El número mínimo de nodos que tiene un árbol AVL de altura 4 es 7.
-A: 0
 O: V
 O: F
 ,
@@ -1685,11 +1580,6 @@ O: F
 ,
 Q: El algoritmo de intercambio directo o burbuja estudiado en clase (ordenación de los elementos de un vector) tiene una complejidad de Ω(n^2), siendo n el número de elementos del vector.
 A: 0
-O: V
-O: F
-,
-Q: La cota promedio de complejidad es el resultado de hacer la media entre la cota superior y la cota inferior.
-A: 1
 O: V
 O: F
 ,
@@ -1758,17 +1648,7 @@ A: 1
 O: V
 O: F
 ,
-Q: En C++, el puntero this se tiene que declarar en todos los constructores de la clase.
-A: 1
-O: V
-O: F
-,
 Q: Para el siguiente fragmento de código para C++ de un posible método perteneciente a la conocida clase TCalendario, la línea “delete [] a;" es la instruccción más adecuada para liberar correctamente la memoria dinámica de a. void Funcion(void) { TCalendario *a =new TCalendario; TCalendario *b =new TCalendario [5]; (. . . . . . .); delete [] a;}
-A: 1
-O: V
-O: F
-,
-Q: La cota promedio de complejidad es el resultado de hacer la media entre la cota superior y la cota inferior.
 A: 1
 O: V
 O: F
@@ -1778,22 +1658,12 @@ A: 1
 O: V
 O: F
 ,
-Q: Existe un único árbol binario completo que se puede construir a partir del recorrido en postorden.
-A: 0
-O: V
-O: F
-,
 Q: La complejidad temporal, en su peor caso, del recorrido por niveles en un árbol binario es la misma que las de los recorridos in-pre-post orden.
 A: 0
 O: V
 O: F
 ,
 Q: El número máximo de nodos en un árbol AVL de altura 10 sería de 1023.
-A: 0
-O: V
-O: F
-,
-Q: El número mínimo de nodos que tiene un árbol AVL de altura 4 es 7.
 A: 0
 O: V
 O: F
@@ -2128,11 +1998,6 @@ A: 0
 O: V
 O: F
 ,
-Q: Un árbol binario de búsqueda con 3 elementos siempre será un árbol completo.
-A: 1
-O: V
-O: F
-,
 Q: Un árbol binario de búsqueda equilibrado respecto a la altura tiene una complejidad temporal en su peor caso en la operación de búsqueda de O(log2(n)), con n el número de elementos del árbol.
 A: 0
 O: V
@@ -2140,11 +2005,6 @@ O: F
 ,
 Q: En la operación de borrado de un elemento en un árbol AVL, si se realiza una rotación doble siempre decrece la altura del subárbol sobre el que se ha realizado la rotación.
 A: 0
-O: V
-O: F
-,
-Q: La altura de un árbol 2-3 únicamente crece cuando se inserta un elemento y todos los nodos del árbol son 3-nodo.
-A: 1
 O: V
 O: F
 ,
@@ -2179,11 +2039,6 @@ O: V
 O: F
 ,
 Q: Cuando utilizamos una tabla de dispersión abierta de tamaño B, el número máximo de elementos que se pueden almacenar está limitado a B elementos.
-A: 1
-O: V
-O: F
-,
-Q: La definición de un Heap Mínimo indica que ha de ser un árbol binario que además es árbol mínimo.
 A: 1
 O: V
 O: F
@@ -2318,11 +2173,6 @@ A: 1
 O: V
 O: F
 ,
-Q: En la dispersión abierta sólo se producen colisiones entre claves sinónimas.
-A: 0
-O: V
-O: F
-,
 Q: El TAD Cola de Prioridad representado por una lista desordenada, tendrá coste O(1) para la operación de borrado de un elemento.
 A: 1
 O: V
@@ -2334,11 +2184,6 @@ O: V
 O: F
 ,
 Q: Al representar un grafo de N vértices y K aristas con una lista de adyacencia, la operación de hallar la adyacencia de entrada de un vértice tiene una complejidad de O(K).
-A: 0
-O: V
-O: F
-,
-Q: Un bosque extendido en profundidad de un grafo no dirigido es un grafo acíclico.
 A: 0
 O: V
 O: F
