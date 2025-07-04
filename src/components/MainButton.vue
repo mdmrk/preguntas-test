@@ -7,12 +7,20 @@
         props.bg
       ]"
     >
-      <div
-        v-if="props.id !== undefined"
-        @click.prevent.stop="navigateToRepository"
-        class="absolute right-0 top-0 h-full w-16 flex items-center justify-center cursor-pointer rounded-r-4xl bg-white/10 hover:bg-white/25 border-l border-white/20 z-10"
-      >
-        <ListCheckIcon class="w-5" />
+      <div v-if="props.id !== undefined">
+        <div
+          @click.prevent.stop="navigateToRepository"
+          class="absolute right-0 top-0 h-full w-16 flex items-center justify-center cursor-pointer rounded-r-4xl bg-white/10 hover:bg-white/25 border-l border-white/20 z-10"
+        >
+          <ListCheckIcon class="w-5" />
+        </div>
+        <div
+          v-show="props.years"
+          @click.prevent.stop="toggleYears = !toggleYears"
+          class="absolute right-16 top-0 h-full w-16 flex items-center justify-center cursor-pointer bg-white/10 hover:bg-white/25 border-l border-white/20 z-10"
+        >
+          <CalendarIcon class="w-5" />
+        </div>
       </div>
       <div
         v-else-if="hasSlot"
@@ -25,7 +33,11 @@
     <div class="flex flex-col items-center w-full space-y-3 mt-3" v-if="hasSlot && toggle">
       <slot />
     </div>
-    <div v-if="props.years" class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3">
+    <div
+      v-if="props.years && toggleYears"
+      class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3"
+      :class="['bg-linear-to-t from-{{props.bg}}/15 from-0% to-black/0 to-70%']"
+    >
       <button
         v-for="year in props.years.split(';')"
         :key="year"
@@ -46,9 +58,11 @@ import CaretUpDownIcon from "@/components/icons/CaretUpDownIcon.vue"
 import ListCheckIcon from "@/components/icons/ListCheckIcon.vue"
 import { ref, useSlots } from "vue"
 import { useRouter } from "vue-router"
+import CalendarIcon from "./icons/CalendarIcon.vue"
 
 const router = useRouter()
 const toggle = ref(false)
+const toggleYears = ref(false)
 const slots = useSlots()
 const hasSlot = !!slots.default && slots.default().length > 0
 

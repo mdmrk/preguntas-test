@@ -5,7 +5,7 @@ import MainButton from "@/components/MainButton.vue"
 <template>
   <main>
     <nav class="flex flex-col items-center w-full space-y-3">
-      <MainButton id="redes" bg="gradient-orange" text="REDES" />
+      <MainButton id="redes" bg="gradient-orange" text="REDES" years="2025" />
       <MainButton bg="gradient-red" class="relative" text="ADA">
         <MainButton id="ada-parcial-1" bg="gradient-red" text="parcial 1" />
         <MainButton id="ada-parcial-2" bg="gradient-red" text="parcial 2" />

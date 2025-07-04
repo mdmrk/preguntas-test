@@ -9420,3 +9420,283 @@ O: Fibra óptica de índice de salto.
 O: Fibra óptica monomodo.
 O: Todas las fibras alcanzan la misma velocidad de transmisión a una distancia de 1 km.
 A: 2
+,
+Q: Sobre el funcionamiento de una red de difusión es cierto que,
+A: 2
+C: Julio 2025
+O: Los paquetes no precisan incorporar cabeceras de protocolos.
+O: El uso de la dirección de difusión permite enviar varios paquetes a un solo equipo de la red.
+O: Es necesario asignar una dirección única a cada equipo de la red.
+O: La transmisión de un paquete a todos los equipos de la red no necesita el empleo de una cabecera en el paquete.
+,
+Q: Si dos equipos (A y B) se encuentran dentro de la misma red de difusión inalámbrica, es cierto que:
+A: 0
+C: Julio 2025
+O: Los equipos A y B pueden observar las transmisiones de los demás equipos de la red.
+O: Si el equipo A envía un paquete con dirección destino B, sólo el equipo B recibirá el paquete.
+O: Si el equipo A envía un paquete a una dirección de grupo al que no pertenece B, el equipo B no recibirá el paquete.
+O: Todas las respuestas anteriores son ciertas.
+,
+Q: Sobre el funcionamiento de una red de conmutación de paquetes basada en datagramas es cierto que:
+A: 3
+C: Julio 2025
+O: Cada equipo determina la ruta que seguirán en la red los paquetes que transmita.
+O: El equipo destinatario de un paquete determina la ruta que seguirá el paquete en la red.
+O: Los routers de la red determinan el camino de los paquetes en función de la dirección de origen en el paquete.
+O: Es posible que un paquete pueda circular en un bucle en la red de comunicaciones.
+,
+Q: Las redes de conmutación de paquetes por datagramas y circuitos virtuales tienen en común que:
+A: 2
+C: Julio 2025
+O: Ambos tipos de redes presentan el mismo nivel de congestión.
+O: Las redes de datagramas sufren congestión y las de circuitos virtuales sufren saturación.
+O: Ambos tipos de redes emplean routers para el encaminamiento de la información.
+O: Ambos tipos de redes determinan una ruta en la red antes del envío de los paquetes entre un origen y un destino.
+,
+Q: ¿Qué topología de red precisa de tamaños de paquete mayores para la transmisión de información?
+A: 3
+C: Julio 2025
+O: Malla.
+O: Árbol.
+O: Anillo.
+O: La topología de la red no afecta al tamaño de los paquetes.
+,
+Q: Sobre una arquitectura de red con N niveles, es cierto que:
+A: 1
+C: Julio 2025
+O: La capa de nivel N siempre es la capa física.
+O: Las capas del mismo nivel de la arquitectura se denominan pares.
+O: Las capas del mismo nivel de la arquitectura se denominan adyacentes.
+O: Todas las capas de la arquitectura tienen sólo una capa adyacente.
+,
+Q: Si la capa N de una arquitectura de red envía datos a su capa par, es cierto que:
+A: 1
+C: Julio 2025
+O: Todos los paquetes que genera la capa N siempre incorporan la cabecera de la capa N-1.
+O: Todos los paquetes que genera la capa N siempre incorporan la cabecera de la capa N.
+O: Todos los paquetes que genera la capa N siempre incorporan la cabecera de la capa N+1.
+O: Todas las respuestas anteriores son falsas.
+,
+Q: Sobre el funcionamiento de los dispositivos de interconexión es FALSO que:
+A: 3
+C: Julio 2025
+O: Todos tienen un número de capas inferior al número de capas de la arquitectura de red.
+O: Cada dispositivo emplea diferente número de capas de la arquitectura de red.
+O: Todos emplean la capa física de la arquitectura de red.
+O: Todos analizan la cabecera IP para el reenvío de paquetes.
+,
+Q: ¿Cuántos eventos de entrada puede tener una transición en una máquina de estados finitos?
+A: 1
+C: Julio 2025
+O: Siempre más de un evento de entrada.
+O: Al menos un evento de entrada.
+O: No es obligada la existencia de un evento de entrada.
+O: Un número de eventos de entrada igual al número de eventos de salida de la transición.
+,
+Q: Si una señal de pulsos tiene una frecuencia fundamental de 2000 Hz, las 3 primeras componentes frecuenciales tendrán valor:
+A: 0
+C: Julio 2025
+O: 2000 Hz, 4000 Hz y 6000 Hz.
+O: 4000 Hz, 6000 Hz y 8000 Hz.
+O: 2000 Hz, 3000 Hz y 4000 Hz.
+O: 2000 Hz, 4000 Hz y 8000 Hz.
+,
+Q: Sobre el espectro de frecuencias de una señal de datos es cierto que:
+A: 1
+C: Julio 2025
+O: Representa el conjunto de componentes frecuenciales que pasan por un medio físico.
+O: Representa la información de una señal en base a sus componentes frecuenciales.
+O: Las componentes frecuenciales de mayor frecuencia tienen un mayor valor de amplitud.
+O: Todas las señales de datos tienen la misma amplitud en la segunda componente frecuencial.
+,
+Q: Sobre el teorema de Nyquist para la velocidad máxima de transmisión de una señal de datos en un medio, es cierto que:
+A: 3
+C: Julio 2025
+O: Todos los medios físicos presentan la misma velocidad máxima si emplean codificación de 2 niveles.
+O: Una señal no se propaga por un medio físico si emplea una velocidad superior al teorema de Nyquist.
+O: El aumento de la relación señal ruido en un medio físico aumenta el valor del teorema de Nyquist.
+O: Una señal sufre errores si emplea una velocidad superior al valor del teorema de Nyquist.
+,
+Q: ¿En qué situación se podrá transmitir a mayor velocidad una señal de pulsos de 2 niveles sin que se produzcan errores?
+A: 2
+C: Julio 2025
+O: Medio físico con ancho de banda de 1000 Hz y sin presencia de ruido.
+O: Medio físico con ancho de banda de 2000 Hz y relación S/N de 1.
+O: Medio físico con ancho de banda de 2000 Hz y sin presencia de ruido.
+O: Medio físico con ancho de banda de 1000 Hz y relación S/N de 3.
+,
+Q: ¿Qué tipo de ruido presente en un cable eléctrico es posible eliminar con un blindado?
+A: 2
+C: Julio 2025
+O: Ruido cruzado.
+O: Ruido de retardo.
+O: Ruido de impulso.
+O: Ruido térmico.
+,
+Q: ¿En qué tipo de señalización en banda base NO se emplean niveles de tensión para codificar bits?
+A: 3
+C: Julio 2025
+O: Binaria con retorno a cero bipolar.
+O: Binaria sin retorno a cero unipolar.
+O: Binaria sin retorno a cero bipolar.
+O: Manchester.
+,
+Q: ¿En qué tipo de modulación se consigue menor velocidad de transmisión empleando un mismo ancho de banda?
+A: 2
+C: Julio 2025
+O: QPSK.
+O: PSK.
+O: FSK.
+O: ASK.
+,
+Q: ¿A qué tipo de modulación le afecta más la presencia de ruido en el medio físico?
+A: 1
+C: Julio 2025
+O: QPSK.
+O: QAM.
+O: ASK.
+O: FSK.
+,
+Q: La dispersión intermodal es un fenómeno propio de:
+A: 0
+C: Julio 2025
+O: Las fibras multimodo de índice de salto e índice gradual.
+O: Las fibras multimodo de índice de salto y fibras monomodo.
+O: Las fibras monomodo.
+O: La dispersión intermodal está presente en todos los tipos de fibra óptica.
+,
+Q: Las fibras ópticas permiten velocidades de transmisión superiores a los cables eléctricos debido a que:
+A: 1
+C: Julio 2025
+O: Emplean señales de pulsos con más niveles que en las señales eléctricas.
+O: Pueden combinar con WDM varios haces de luz en una sola fibra óptica.
+O: Emplean potencias de transmisión mayores que en las señales eléctricas.
+O: Las fibras ópticas tienen un ancho de banda similar a los cables eléctricos.
+,
+Q: Sobre el funcionamiento de la comunicación satelital es cierto que,
+A: 1
+C: Julio 2025
+O: Se emplean APs en los satélites para gestionar el acceso desde tierra.
+O: Los satélites actúan como repetidores de señales.
+O: Emplean siempre las mismas frecuencias que las redes Wi-Fi.
+O: La cobertura de un satélite es la misma en cualquier órbita terrestre.
+,
+Q: Sobre el funcionamiento de un protocolo de ventana deslizante con repetición NO selectiva es cierto que:
+A: 3
+C: Julio 2025
+O: Nunca se producen errores en la transmisión de paquetes.
+O: El tamaño de la ventana del emisor siempre es 1.
+O: El tamaño de la ventana del receptor siempre es igual a la del emisor.
+O: A mayor tamaño de la ventana del emisor hay más rechazos de paquetes en el receptor en caso de error.
+,
+Q: ¿Qué red local del IEEE NO precisa del protocolo LLC para su funcionamiento?
+A: 3
+C: Julio 2025
+O: IEEE 802.3.
+O: IEEE 802.5.
+O: IEEE 802.11.
+O: Todas las redes locales del IEEE emplean el protocolo LLC.
+,
+Q: Las redes Ethernet 10BaseT basadas en concentradores se caracterizan por:
+A: 1
+C: Julio 2025
+O: Su extensión está limitada a un solo concentrador donde se conectan todos los equipos.
+O: Presentan un alto nivel de colisiones cuando aumenta el número de equipos en la red.
+O: Emplear un solo par de hilos trenzados para transmitir y recibir paquetes.
+O: Permitir el modo de funcionamiento half-duplex y full-duplex.
+,
+Q: El proceso de aprendizaje de la tabla de reenvío en los puentes Ethernet se caracteriza por:
+A: 0
+C: Julio 2025
+O: Emplear la dirección MAC origen en los paquetes Ethernet para construir la tabla de reenvío.
+O: Emplear la dirección MAC destino en los paquetes Ethernet para construir la tabla de reenvío.
+O: Un puente sólo dispone en su tabla de reenvío de las direcciones MAC de los segmentos a los que está conectado directamente.
+O: No es posible recibir paquetes entre segmentos Ethernet hasta que se complete la tabla de reenvío con todas las direcciones MAC.
+,
+Q: Sobre el funcionamiento de los conmutadores Ethernet 100BaseTX es cierto que:
+A: 1
+C: Julio 2025
+O: Un conmutador NO dispone de tabla de reenvío para su funcionamiento.
+O: Los puertos de un conmutador pueden tener conectado un equipo u otro conmutador.
+O: Los puertos half-duplex permiten transmitir y recibir paquetes simultáneamente empleando los buffers.
+O: La transmisión de paquetes Ethernet de difusión provoca colisiones en los puertos full-duplex.
+,
+Q: Sobre la tecnología Ethernet 100BaseFX es cierto que:
+A: 2
+C: Julio 2025
+O: Emplea la codificación 8B/10B para la sincronización de señales.
+O: Emplea la señalización 4D-PAM5 para la transmisión de pulsos de luz.
+O: Emplea la señalización NRZI para la transmisión de pulsos de luz.
+O: Emplea la señalización MLT-3 para la transmisión de pulsos de luz.
+,
+Q: Las redes Ethernet 40GBase-XX se caracterizan por:
+A: 1
+C: Julio 2025
+O: Transmitir un pulso de luz en una fibra óptica a una velocidad de 40 Gbps.
+O: Combinar varios pulsos de luz a 10 Gbps en una sola fibra óptica.
+O: Emplear formatos de paquete Ethernet diferentes del resto de tecnologías Ethernet.
+O: Emplear conmutadores que permiten puertos en modo half-duplex.
+,
+Q: Sobre el funcionamiento de los conmutadores Ethernet VLAN es cierto que:
+A: 3
+C: Julio 2025
+O: Permiten definir diferentes dominios de colisión con direcciones de red IP diferentes.
+O: Un puerto de acceso permite conectividad con diferentes VLAN.
+O: Los paquetes de difusión de una VLAN siempre son reenviados a todos los puertos del conmutador.
+O: El conocimiento de las VLAN existentes en diferentes conmutadores se realiza con el protocolo GVRP.
+,
+Q: Sobre el funcionamiento de las redes inalámbricas Wi-Fi es cierto que:
+A: 1
+C: Julio 2025
+O: Las colisiones entre equipos se eliminan con el mecanismo RTS/CTS.
+O: El mecanismo RTS/CTS reduce las colisiones en las redes con APs.
+O: Cada tecnología Wi-Fi (4,5,6…) emplea frecuencias de transmisión diferentes.
+O: El aumento de la velocidad de transmisión aumenta la probabilidad de colisiones.
+,
+Q: Sobre el mecanismo WPA2-PSK es cierto que:
+A: 1
+C: Julio 2025
+O: Crea una clave de autenticación diferente en cada conexión a la red Wi-Fi.
+O: Emplea la misma clave de autenticación para todos los usuarios de la red Wi-Fi.
+O: Emplea exclusivamente el algoritmo de cifrado TKIP.
+O: Emplea longitudes de clave de cifrado de 256 bits.
+,
+Q: Sobre los mecanismos de autenticación WPA2-Enterprise es cierto que:
+A: 2
+C: Julio 2025
+O: El mecanismo EAP/TLS emplea la misma clave de autenticación para todos los usuarios.
+O: El mecanismo PEAP no emplea certificados de seguridad en el proceso de autenticación.
+O: Proporciona a cada usuario una clave primaria (MK) de cifrado diferente.
+O: El mecanismo AES oculta la clave de acceso en el proceso de autenticación.
+,
+Q: Sobre la congestión de los routers de Internet es cierto que:
+A: 0
+C: Julio 2025
+O: El uso de CPUs más potentes permite reducir la congestión.
+O: Paquetes de mayor tamaño sufren más congestión que los de menor tamaño.
+O: El protocolo UDP permite reducir la congestión en Internet.
+O: La reducción de la congestión sólo es posible reiniciando los routers.
+,
+Q: Sobre los AS (Sistemas Autónomos) en Internet, es cierto que:
+A: 2
+C: Julio 2025
+O: El organismo IAB asigna los identificadores de AS en Europa.
+O: Los AS emplean el protocolo RIP para conocer el conjunto de redes existentes en Internet.
+O: Los AS emplean el protocolo OSPF para determinar las rutas óptimas en los routers dentro del AS.
+O: El router frontera de un AS siempre establece una conexión BGP al router frontera más cercano geográficamente.
+,
+Q: ¿Qué algoritmo de encaminamiento NO emplea un procedimiento matemático para determinar las rutas?
+A: 0
+C: Julio 2025
+O: BGP.
+O: RIPv1.
+O: RIPv2.
+O: OSPF.
+,
+Q: Sobre el funcionamiento del protocolo IPv6 es cierto que,
+A: 3
+C: Julio 2025
+O: Las direcciones IP origen y destino se incluyen en una cabecera de extensión.
+O: En un paquete IPv6 todas las cabeceras de extensión tienen que estar presentes.
+O: La cabecera IPv6 tiene el mismo tamaño que la cabecera IPv4.
+O: El protocolo IPv6 permite definir direcciones IP de multidifusión.
