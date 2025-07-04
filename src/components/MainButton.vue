@@ -3,7 +3,7 @@
     <button
       @click="handleClick"
       :class="[
-        'w-full h-26 font-black text-gray-50 text-7xl text-left overflow-clip pl-4 rounded-4xl cursor-pointer hover:scale-105 hover:shadow-2xl relative group',
+        'w-full md:h-26 h-18 font-black text-gray-50 md:text-7xl text-5xl text-left overflow-clip pl-4 rounded-4xl cursor-pointer hover:scale-105 hover:shadow-2xl relative group',
         props.bg
       ]"
     >
@@ -28,7 +28,7 @@
       >
         <CaretUpDownIcon class="w-5" />
       </div>
-      <div class="translate-y-7 truncate">{{ props.text }}</div>
+      <div class="md:translate-y-7 translate-y-5 truncate">{{ props.text }}</div>
     </button>
     <div class="flex flex-col items-center w-full space-y-3 mt-3" v-if="hasSlot && toggle">
       <slot />
@@ -43,11 +43,11 @@
         :key="year"
         @click="navigateToYear(year)"
         :class="[
-          'w-full h-20 font-black text-gray-50 text-5xl text-left overflow-clip pl-4 pr-8 rounded-4xl cursor-pointer hover:scale-105 hover:shadow-2xl relative group',
+          'w-full md:h-20 h-12 font-black text-gray-50 md:text-5xl text-3xl text-left overflow-clip pl-4 rounded-4xl cursor-pointer hover:scale-105 hover:shadow-2xl relative group',
           props.bg
         ]"
       >
-        <div class="translate-y-6">{{ year }}</div>
+        <div class="md:translate-y-6 translate-y-3.5">{{ year }}</div>
       </button>
     </div>
   </div>
