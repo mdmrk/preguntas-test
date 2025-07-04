@@ -123,4 +123,28 @@ const navigateToYear = (year: string) => {
 .gradient-red {
   background: linear-gradient(135deg, #ef4444, #ec4899);
 }
+.gradient-yellow {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+}
+.gradient-cyan {
+  background: linear-gradient(135deg, #06b6d4, #0891b2);
+}
+.gradient-lime {
+  background: linear-gradient(135deg, #84cc16, #65a30d);
+}
+.gradient-amber {
+  background: linear-gradient(135deg, #fbbf24, #d97706);
+}
+.gradient-emerald {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+.gradient-sky {
+  background: linear-gradient(135deg, #0ea5e9, #0284c7);
+}
+.gradient-violet {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+.gradient-rose {
+  background: linear-gradient(135deg, #f43f5e, #e11d48);
+}
 </style>

@@ -22,7 +22,7 @@ def parse_quiz_data(text):
             
         # Second line is always the answer index (1-4)
         if i < len(lines) and lines[i].isdigit() and lines[i] in ['1', '2', '3', '4']:
-            answer_num = lines[i]
+            answer_num = int(lines[i]) - 1
             i += 1
         else:
             # Skip this question if no valid answer found
@@ -87,7 +87,7 @@ def format_questions(questions):
         for option in q['options']:
             formatted.append(f"O: {option}")
         
-        formatted.append("")  # Empty line between questions
+        formatted.append(",")  # Empty line between questions
     
     return '\n'.join(formatted)
 

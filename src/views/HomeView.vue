@@ -15,6 +15,7 @@ import MainButton from "@/components/MainButton.vue"
         <MainButton id="ppss-parcial-1" bg="gradient-blue" text="parcial 1" />
         <MainButton id="ppss-parcial-2" bg="gradient-blue" text="parcial 2" />
       </MainButton>
+      <MainButton id="ped" bg="gradient-amber" text="PED" />
       <MainButton id="gpi" bg="gradient-green" text="GPI" />
       <MainButton id="hada" bg="gradient-indigo" text="HADA" />
       <MainButton id="dca" bg="gradient-teal" text="DCA" />
