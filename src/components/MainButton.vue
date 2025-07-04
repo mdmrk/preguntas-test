@@ -1,44 +1,93 @@
 <template>
-  <button
-    @click="navigateToTest"
-    class="w-full h-26 font-black text-gray-50 text-7xl text-left overflow-clip pl-4 rounded-4xl cursor-pointer hover:scale-105 hover:shadow-2xl relative group"
-  >
-    <div
-      v-if="id !== undefined"
-      @click.prevent.stop="navigateToRepository"
-      class="absolute right-0 top-0 h-full w-16 flex items-center justify-center cursor-pointer rounded-r-4xl bg-white/10 hover:bg-white/25 border-l border-white/20 z-10"
+  <div class="w-full rounded-4xl">
+    <button
+      @click="handleClick"
+      :class="[
+        'w-full h-26 font-black text-gray-50 text-7xl text-left overflow-clip pl-4 rounded-4xl cursor-pointer hover:scale-105 hover:shadow-2xl relative group',
+        props.bg
+      ]"
     >
-      <ListCheckIcon class="w-5" />
+      <div
+        v-if="props.id !== undefined"
+        @click.prevent.stop="navigateToRepository"
+        class="absolute right-0 top-0 h-full w-16 flex items-center justify-center cursor-pointer rounded-r-4xl bg-white/10 hover:bg-white/25 border-l border-white/20 z-10"
+      >
+        <ListCheckIcon class="w-5" />
+      </div>
+      <div
+        v-else-if="hasSlot"
+        class="absolute right-0 top-0 h-full w-16 flex items-center justify-center cursor-pointer rounded-r-4xl"
+      >
+        <CaretUpDownIcon class="w-5" />
+      </div>
+      <div class="translate-y-7 truncate">{{ props.text }}</div>
+    </button>
+    <div class="flex flex-col items-center w-full space-y-3 mt-3" v-if="hasSlot && toggle">
+      <slot />
     </div>
-    <div
-      v-else
-      class="absolute right-0 top-0 h-full w-16 flex items-center justify-center cursor-pointer rounded-r-4xl z-10"
-    >
-      <CaretUpDownIcon class="w-5" />
+    <div v-if="props.years" class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3">
+      <button
+        v-for="year in props.years.split(';')"
+        :key="year"
+        @click="navigateToYear(year)"
+        :class="[
+          'w-full h-20 font-black text-gray-50 text-5xl text-left overflow-clip pl-4 pr-8 rounded-4xl cursor-pointer hover:scale-105 hover:shadow-2xl relative group',
+          props.bg
+        ]"
+      >
+        <div class="translate-y-6">{{ year }}</div>
+      </button>
     </div>
-    <div class="translate-y-7"><slot /></div>
-  </button>
+  </div>
 </template>
+
 <script setup lang="ts">
 import CaretUpDownIcon from "@/components/icons/CaretUpDownIcon.vue"
 import ListCheckIcon from "@/components/icons/ListCheckIcon.vue"
+import { ref, useSlots } from "vue"
 import { useRouter } from "vue-router"
+
 const router = useRouter()
+const toggle = ref(false)
+const slots = useSlots()
+const hasSlot = !!slots.default && slots.default().length > 0
+
 interface Props {
   id?: string
+  years?: string
+  bg: string
+  text: string
 }
+
 const props = defineProps<Props>()
+
+const handleClick = () => {
+  if (hasSlot) {
+    toggle.value = !toggle.value
+  } else if (props.id) {
+    navigateToTest()
+  }
+}
+
 const navigateToTest = () => {
   if (props.id) {
     router.push(`/test/${props.id}`)
   }
 }
+
 const navigateToRepository = () => {
   if (props.id) {
     router.push(`/repository/${props.id}`)
   }
 }
+
+const navigateToYear = (year: string) => {
+  if (props.id) {
+    router.push(`/test/${props.id}/${year}`)
+  }
+}
 </script>
+
 <style scoped>
 .gradient-blue {
   background: linear-gradient(135deg, #3b82f6, #1d4ed8);

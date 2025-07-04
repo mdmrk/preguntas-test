@@ -129,17 +129,23 @@ const answers = ref<Answer[]>([])
 const testFinished = ref(false)
 
 const testId = computed(() => route.params.id as string)
+const year = computed(() => route.params.year as string | undefined)
+
 const loader = new TestLoader()
 
 const questions = computed(() => {
   if (!testContent.value) return []
-  return loader.parseTestText(testContent.value)
+  const allQuestions = loader.parseTestText(testContent.value)
+  if (typeof year.value === "string" && year.value.length === 4) {
+    return allQuestions.filter((q) => q.tags && q.tags.some((tag) => tag.includes(year.value!)))
+  }
+  return allQuestions
 })
 
 const currentQuestion = computed(() => questions.value[currentQuestionIndex.value] || null)
 
 const testTitle = computed(() => {
-  return testId.value
+  let base = testId.value
     .split("-")
     .map((word, index) => {
       if (index === 0) {
@@ -148,6 +154,10 @@ const testTitle = computed(() => {
       return word.charAt(0).toUpperCase() + word.slice(1)
     })
     .join(" ")
+  if (year.value !== undefined && year.value.length === 4) {
+    base += ` ${year.value}`
+  }
+  return base
 })
 
 const stats = computed(() => {
