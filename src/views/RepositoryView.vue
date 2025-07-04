@@ -8,13 +8,11 @@
       <div
         class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 mb-6"
       >
-        <div class="flex items-center justify-between">
-          <div class="flex items-center space-x-4">
-            <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Repositorio</h2>
-            <span class="text-sm font-medium text-gray-600 dark:text-gray-400">
-              {{ questionCountText }}
-            </span>
-          </div>
+        <div class="flex flex-col items-start space-x-4">
+          <h2 class="text-lg font-semibold text-gray-900 dark:text-white">{{ testTitle }}</h2>
+          <span class="text-sm font-medium text-gray-600 dark:text-gray-400">
+            {{ questionCountText }}
+          </span>
         </div>
 
         <div
@@ -163,6 +161,19 @@ const questionCountText = computed(() => {
 const getQuestionNumber = (question: Question) => {
   return questions.value.findIndex((q) => q.id === question.id) + 1
 }
+
+const testTitle = computed(() => {
+  const base = testId.value
+    .split("-")
+    .map((word, index) => {
+      if (index === 0) {
+        return word.toUpperCase()
+      }
+      return word.charAt(0).toUpperCase() + word.slice(1)
+    })
+    .join(" ")
+  return base
+})
 
 const loadTestData = async () => {
   try {

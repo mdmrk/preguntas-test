@@ -10,29 +10,33 @@
         class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 mb-6"
       >
         <div class="flex items-center justify-between mb-4">
-          <div class="flex items-center space-x-4">
-            <span
-              class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
-            >
-              {{ currentQuestionIndex + 1 }} / {{ questions.length }}
-            </span>
-
-            <div v-if="stats.answered > 0" class="flex items-center space-x-4 text-sm font-medium">
-              <div class="flex items-center space-x-1">
-                <div class="w-3 h-3 rounded-full bg-green-500" />
-                <span class="text-green-600 dark:text-green-400">{{ stats.correct }}</span>
-              </div>
-              <div class="flex items-center space-x-1">
-                <div class="w-3 h-3 rounded-full bg-red-500" />
-                <span class="text-red-600 dark:text-red-400">{{ stats.incorrect }}</span>
-              </div>
-              <span class="text-blue-600 dark:text-blue-400">{{ stats.percentageRounded }}%</span>
-            </div>
-          </div>
-          <div>
-            <h1 class="text-lg font-semibold text-gray-900 dark:text-white">
+          <div class="flex flex-col items-start space-y-3">
+            <h1 class="text-lg font-semibold">
               {{ testTitle }}
             </h1>
+
+            <div class="flex items-center space-x-4">
+              <span
+                class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+              >
+                {{ currentQuestionIndex + 1 }} / {{ questions.length }}
+              </span>
+
+              <div
+                v-if="stats.answered > 0"
+                class="flex items-center space-x-4 text-sm font-medium"
+              >
+                <div class="flex items-center space-x-1">
+                  <div class="w-3 h-3 rounded-full bg-green-500" />
+                  <span class="text-green-600 dark:text-green-400">{{ stats.correct }}</span>
+                </div>
+                <div class="flex items-center space-x-1">
+                  <div class="w-3 h-3 rounded-full bg-red-500" />
+                  <span class="text-red-600 dark:text-red-400">{{ stats.incorrect }}</span>
+                </div>
+                <span class="text-blue-600 dark:text-blue-400">{{ stats.percentageRounded }}%</span>
+              </div>
+            </div>
           </div>
         </div>
 

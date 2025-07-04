@@ -33,17 +33,13 @@
     <div class="flex flex-col items-center w-full space-y-3 mt-3" v-if="hasSlot && toggle">
       <slot />
     </div>
-    <div
-      v-if="props.years && toggleYears"
-      class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3"
-      :class="['bg-linear-to-t from-{{props.bg}}/15 from-0% to-black/0 to-70%']"
-    >
+    <div v-if="props.years && toggleYears" class="grid grid-cols-3 md:grid-cols-4 gap-3 mt-3">
       <button
         v-for="year in props.years.split(';')"
         :key="year"
         @click="navigateToYear(year)"
         :class="[
-          'w-full md:h-20 h-12 font-black text-gray-50 md:text-5xl text-3xl text-left overflow-clip pl-4 rounded-4xl cursor-pointer hover:scale-105 hover:shadow-2xl relative group',
+          'w-full md:h-20 h-12 font-black text-gray-50 md:text-5xl text-3xl text-left overflow-clip px-4 rounded-4xl cursor-pointer hover:scale-105 hover:shadow-2xl relative group',
           props.bg
         ]"
       >
