@@ -22,7 +22,7 @@ class TestParser:
     @staticmethod
     def parse_test_text(text: str) -> List[Question]:
         """Parse test text into Question objects"""
-        chunks = text.split("\n\n")
+        chunks = re.split(r'^,$', text, flags=re.MULTILINE)
         questions = []
         
         for chunk in chunks:
@@ -114,6 +114,41 @@ class TestDeduplicator:
         return options1_normalized == options2_normalized
     
     @staticmethod
+    def standardize_option_order(canonical_question: Question, duplicate_question: Question) -> Question:
+        """
+        Reorder the options of duplicate_question to match the order in canonical_question.
+        Also updates the correct_answer_index accordingly.
+        """
+        # Create mapping from normalized option text to original option text for both questions
+        canonical_options_normalized = [TestDeduplicator.normalize_text(opt) for opt in canonical_question.options]
+        duplicate_options_normalized = [TestDeduplicator.normalize_text(opt) for opt in duplicate_question.options]
+        
+        # Create reordered options list matching canonical order
+        reordered_options = []
+        new_correct_answer_index = -1
+        
+        # For each option in canonical order, find the corresponding option in duplicate
+        for i, canonical_opt_norm in enumerate(canonical_options_normalized):
+            # Find this option in the duplicate question
+            for j, duplicate_opt_norm in enumerate(duplicate_options_normalized):
+                if canonical_opt_norm == duplicate_opt_norm:
+                    reordered_options.append(duplicate_question.options[j])
+                    # If this was the correct answer in the duplicate, update the index
+                    if j == duplicate_question.correct_answer_index:
+                        new_correct_answer_index = i
+                    break
+        
+        # Create new question with reordered options
+        return Question(
+            question_text=duplicate_question.question_text,
+            options=reordered_options,
+            correct_answer_index=new_correct_answer_index,
+            image=duplicate_question.image,
+            categories=duplicate_question.categories,
+            raw_chunk=duplicate_question.raw_chunk
+        )
+    
+    @staticmethod
     def merge_categories(cat1: Optional[str], cat2: Optional[str]) -> Optional[str]:
         """
         Merge two category strings, removing duplicates and maintaining order.
@@ -162,6 +197,7 @@ class TestDeduplicator:
     def remove_duplicates(questions: List[Question]) -> Tuple[List[Question], int]:
         """
         Remove duplicate questions, keeping the first occurrence and merging categories.
+        Standardizes option order across duplicates to match the first occurrence.
         Returns (unique_questions, num_removed).
         """
         if not questions:
@@ -189,17 +225,29 @@ class TestDeduplicator:
             duplicate_groups[second_idx] = leader
             indices_to_remove.add(second_idx)
         
-        # Merge categories for each group
+        # Merge categories for each group and standardize option orders
         category_merges = {}
+        standardized_questions = {}
+        
         for idx, leader in duplicate_groups.items():
             if leader not in category_merges:
                 category_merges[leader] = questions[leader].categories
+                # The leader question is the canonical version for option ordering
+                standardized_questions[leader] = questions[leader]
             
             if idx != leader:
+                # Merge categories
                 category_merges[leader] = TestDeduplicator.merge_categories(
                     category_merges[leader], 
                     questions[idx].categories
                 )
+                
+                # Standardize the duplicate's option order to match the leader
+                standardized_duplicate = TestDeduplicator.standardize_option_order(
+                    questions[leader], questions[idx]
+                )
+                # Store the standardized version (though we'll remove it anyway)
+                standardized_questions[idx] = standardized_duplicate
         
         # Create the result list
         unique_questions = []
@@ -266,7 +314,7 @@ class TestDeduplicator:
             
             chunks.append('\n'.join(chunk_lines))
         
-        return '\n\n'.join(chunks)
+        return '\n,\n'.join(chunks)
 
 def process_file(file_path: Path) -> Tuple[int, int]:
     """

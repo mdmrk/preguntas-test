@@ -3987,6 +3987,7 @@ void f(vector<int> &A) {
 }
 ```
 A: 2
+C: Junio 2023
 O: Invierte el vector A (el último elemento quedará el primero).
 O: Nada, deja el vector A como estaba.
 O: Ordena el vector A.
@@ -7173,25 +7174,6 @@ C: Junio 2023
 O: La solución voraz del problema de cargar cada paquete en el camión de menor consumo donde cada paquete llega a tiempo, sin tener en cuenta si el camión se sobrecarga o no.
 O: La solución voraz del problema de cargar cada paquete en el camión de menor consumo, sin sobrecargarlo, sin tener en cuenta si el paquete llega a tiempo o no.
 O: Ambas son cotas optimistas válidas.
-,
-Q: ¿Qué hace la siguiente función?
-```cpp
-void f(vector<int> &A) {
-  priority_queue<int> pq;
-  for (auto i : A)
-    pq.push(A[i]);
-  A.clear();
-  while (!pq.empty()) {
-    A.push_back(pq.top());
-    pq.pop();
-  }
-}
-```
-A: 2
-C: Junio 2023
-O: Invierte el vector A (el último elemento quedará el primero).
-O: Nada, deja el vector A como estaba.
-O: Ordena el vector A.
 ,
 Q: Dada la versión restringida del problema del laberinto, si solo se desea conocer la longitud del camino de salida más corto, ¿cuál es la mejor complejidad temporal y espacial que se puede conseguir si se aplica programación dinámica?
 A: 0
