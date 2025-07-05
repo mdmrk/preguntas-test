@@ -43,7 +43,7 @@ pre > code {
 }
 
 .icon {
-  @apply dark:[&>svg]:text-gray-50;
+  @apply [&>svg]:text-gray-900 dark:[&>svg]:text-gray-50;
 }
 
 .katex > span {
