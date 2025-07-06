@@ -1501,9 +1501,9 @@ O: F
 Q: La especificación algebraica de la siguiente operación indica que se devolverá el número de elementos del conjunto multiplicado por 3:
 ```
 Operación(Conjunto) → Natural;
-Var: C: Conjunto; x: Ítem
+Var: D: Conjunto; x: Ítem
 Operación(Crear) → 1;
-Operación(Insertar(C, x)) → 3 + Operación(C)
+Operación(Insertar(D, x)) → 3 + Operación(D)
 ```
 A: 1
 O: V
@@ -1521,10 +1521,10 @@ O: F
 ,
 Q: La especificación algebraica de la siguiente operación eliminaría todas las claves repetidas de un determinado ítem:
 ```
-C: ConjuntoConClavesRepetidas; x, y: Ítem
+D: ConjuntoConClavesRepetidas; x, y: Ítem
 Eliminar(Crear, x) → Crear
-Eliminar(Insertar(C, x), y) → si (x == y) entonces C
-                             sino Insertar(Eliminar(C, y), x)
+Eliminar(Insertar(D, x), y) → si (x == y) entonces D
+                             sino Insertar(Eliminar(D, y), x)
 ```
 A: 1
 O: V
@@ -1537,9 +1537,9 @@ O: F
 ,
 Q: La especificación algebraica de la siguiente operación indica que se devolverá el número de elementos del conjunto:
 ```
-C: Conjunto; x: Ítem
+D: Conjunto; x: Ítem
 Operación(Crear) → 0
-Operación(Insertar(C, x)) → 2 + Operación(C)
+Operación(Insertar(D, x)) → 2 + Operación(D)
 ```
 A: 1
 O: V
@@ -1605,12 +1605,12 @@ A: 0
 O: V
 O: F
 ,
-Q: En el TAD Diccionario con dispersión cerrada, con función de redispersión "$h_i(x) = (H(x) + C \cdot i) \bmod B$", "B" y "C" han de tener factores primos comunes mayores que uno, para que se busque una casilla libre por toda la tabla.
+Q: En el TAD Diccionario con dispersión cerrada, con función de redispersión "$h_i(x) = (H(x) + D \cdot i) \bmod B$", "B" y "D" han de tener factores primos comunes mayores que uno, para que se busque una casilla libre por toda la tabla.
 A: 1
 O: V
 O: F
 ,
-Q: Sea una tabla de dispersión cerrada con estrategia de redispersión $h_i(x) = (H(x) + C \cdot i) \bmod B$, con B=1000 y C=74. Para cualquier clave "x" que se desee insertar, se recorrerán todas las posiciones de la tabla buscando una posición libre.
+Q: Sea una tabla de dispersión cerrada con estrategia de redispersión $h_i(x) = (H(x) + D \cdot i) \bmod B$, con B=1000 y D=74. Para cualquier clave "x" que se desee insertar, se recorrerán todas las posiciones de la tabla buscando una posición libre.
 A: 1
 O: V
 O: F
@@ -2006,8 +2006,8 @@ O: F
 ,
 Q: La especificación algebraica de la inserción de un elemento en un conjunto sin claves repetidas sería la siguiente:
 ```
-C: Conjunto; x, y: Ítem
-Insertar(Insertar(C, x), y) ⇿ Insertar(Insertar(C,y), x)
+D: Conjunto; x, y: Ítem
+Insertar(Insertar(D, x), y) ⇿ Insertar(Insertar(D,y), x)
 ```
 A: 1
 O: V
@@ -2269,7 +2269,7 @@ A: 0
 O: V
 O: F
 ,
-Q: Sea una tabla de dispersión cerrada con estrategia de redispersión $h_i(x)=(H(x) + C \cdot i) \bmod B$, con B=1000 y C=74. Para cualquier clave "x" que se desee insertar, se recorrerán todas las posiciones de la tabla buscando una posición libre.
+Q: Sea una tabla de dispersión cerrada con estrategia de redispersión $h_i(x)=(H(x) + D \cdot i) \bmod B$, con B=1000 y D=74. Para cualquier clave "x" que se desee insertar, se recorrerán todas las posiciones de la tabla buscando una posición libre.
 A: 1
 O: V
 O: F
@@ -2496,7 +2496,7 @@ A: 1
 O: V
 O: F
 ,
-Q: Sea la dispersión cerrada con la siguiente función de redispersión: $h_i(x)=(h_{i-1}(x) + C) \bmod B$. Dos claves sinónimas x, y tendrán la misma secuencia de intentos, es decir, $h_i(x) = h_i(y)$.
+Q: Sea la dispersión cerrada con la siguiente función de redispersión: $h_i(x)=(h_{i-1}(x) + D) \bmod B$. Dos claves sinónimas x, y tendrán la misma secuencia de intentos, es decir, $h_i(x) = h_i(y)$.
 A: 0
 O: V
 O: F
@@ -2533,11 +2533,11 @@ O: F
 Q: La operación `subconjunto_impares` que se aplica sobre un conjunto de números naturales, definida a continuación, devuelve el subconjunto formado por los números impares que existen en el conjunto original:
 ```
 subconjunto_impares: conjunto → conjunto;
-Var C: conjunto; x: natural;
+Var D: conjunto; x: natural;
 subconjunto_impares(crear_conjunto()) = crear_conjunto();
-subconjunto_impares(Insertar(C,x)) = 
-    si (x MOD 2 == suc(cero)) entonces Insertar(subconjunto_impares(C),x)
-    si no subconjunto_impares(C)
+subconjunto_impares(Insertar(D,x)) = 
+    si (x MOD 2 == suc(cero)) entonces Insertar(subconjunto_impares(D),x)
+    si no subconjunto_impares(D)
 ```
 A: 0
 O: V
@@ -2735,10 +2735,10 @@ O: F
 ,
 Q: La especificación algebraica de la siguiente operación eliminaría todas las ocurrencias de un determinado ítem:
 ```
-C: ConjuntoConClavesRepetidas; x, y: Ítem
+D: ConjuntoConClavesRepetidas; x, y: Ítem
 Eliminar(Crear, x) ↔ Crear;
-Eliminar(Insertar(C, x), y) ↔ si (x == y) entonces Eliminar(C, y)
-                               sino Insertar(Eliminar(C, y), x)
+Eliminar(Insertar(D, x), y) ↔ si (x == y) entonces Eliminar(D, y)
+                               sino Insertar(Eliminar(D, y), x)
 ```
 A: 0
 O: V
