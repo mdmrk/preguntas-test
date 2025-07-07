@@ -18,16 +18,16 @@ pre {
   @apply p-4 rounded-lg my-4 overflow-x-auto;
 }
 
+code {
+  @apply text-sm;
+}
+
 pre > code {
-  @apply whitespace-pre-wrap block text-sm;
+  @apply whitespace-pre-wrap block text-gray-800;
 }
 
 pre {
   @apply bg-gray-100 border border-gray-200;
-}
-
-pre > code {
-  @apply text-gray-800;
 }
 
 .dark pre {
