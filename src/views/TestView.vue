@@ -64,6 +64,7 @@
         :question="currentQuestion"
         @answered="handleAnswer"
         @next="nextQuestion"
+        :shuffle-answers="shouldShuffleAnswers"
       />
 
       <div
@@ -125,6 +126,7 @@ interface Answer {
   isCorrect: boolean
 }
 
+const doNotShuffle: string[] = ["ped"]
 const route = useRoute()
 const testContent = ref("")
 const loading = ref(true)
@@ -187,6 +189,10 @@ const progressBarClasses = computed(() => ({
 }))
 
 const finalPercentage = computed(() => Math.round(stats.value.percentage * 10) / 10)
+
+const shouldShuffleAnswers = computed(() => {
+  return !doNotShuffle.some((str) => testTitle.value.toLowerCase().includes(str.toLowerCase()))
+})
 
 const handleAnswer = (answer: Answer) => {
   answers.value.push(answer)

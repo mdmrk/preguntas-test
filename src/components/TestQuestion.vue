@@ -93,9 +93,7 @@ interface Emits {
   (e: "next"): void
 }
 
-const props = withDefaults(defineProps<Props>(), {
-  shuffleAnswers: true
-})
+const props = defineProps<Props>()
 
 const emit = defineEmits<Emits>()
 
