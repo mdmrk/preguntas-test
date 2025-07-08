@@ -9700,3 +9700,283 @@ O: Las direcciones IP origen y destino se incluyen en una cabecera de extensión
 O: En un paquete IPv6 todas las cabeceras de extensión tienen que estar presentes.
 O: La cabecera IPv6 tiene el mismo tamaño que la cabecera IPv4.
 O: El protocolo IPv6 permite definir direcciones IP de multidifusión.
+,
+Q: En el funcionamiento de una red de conmutación de paquetes con datagramas es cierto que:
+A: 1
+C: Enero 2025
+O: El fallo de un medio físico en la red provoca la incomunicación entre todos los equipos.
+O: Los paquetes incluyen en la cabecera la dirección origen y destino de los equipos que intercambian la información.
+O: Los routers determinan una ruta en la red antes de intercambiar paquetes entre dos equipos.
+O: Emplea la tecnología de difusión para la interconexión física de los equipos de la red.
+
+Q: El proceso de encaminamiento de paquetes en un router presenta menos congestión en:
+A: 1
+C: Enero 2025
+O: Redes WAN de conmutación de paquetes con datagramas.
+O: Redes WAN de conmutación de paquetes con circuitos virtuales.
+O: Redes WAN de difusión.
+O: Redes LAN de difusión.
+
+Q: Sobre el funcionamiento de una red de difusión es cierto que:
+A: 2
+C: Enero 2025
+O: Los paquetes indican en su cabecera la ruta a seguir en la red de comunicaciones.
+O: Todos los equipos se identifican con la misma dirección física.
+O: Existen direcciones que identifican a grupos de equipos en una red.
+O: Cuando se envía información a un grupo de máquinas en la red, se transmite un paquete para cada una de las máquinas del grupo.
+
+Q: ¿Qué topología de red presenta mayor tolerancia a fallos en caso de que un medio físico de comunicación deje de funcionar?
+A: 2
+C: Enero 2025
+O: Anillo.
+O: Bus común.
+O: Malla.
+O: La topología de la red no afecta a la tolerancia a fallos.
+
+Q: Sobre una arquitectura de red con N niveles, es cierto que:
+A: 2
+C: Enero 2025
+O: El número de protocolos en la arquitectura siempre será N-1.
+O: El número de protocolos en la arquitectura siempre será N+1.
+O: El número de protocolos en la arquitectura será al menos N.
+O: Un nivel de la arquitectura define siempre un único protocolo.
+
+Q: Si la capa N de una arquitectura de red realiza la fragmentación de información procedente de la capa N+1, es cierto que:
+A: 1
+C: Enero 2025
+O: Todos los paquetes que genera la capa N incorporan la cabecera de la capa N+1.
+O: Todos los paquetes que genera la capa N incorporan la cabecera de la capa N.
+O: La cabecera de la capa N+1 estará al final de los paquetes generados por la capa N.
+O: Todas las respuestas anteriores son falsas.
+
+Q: Sobre el funcionamiento del protocolo DNS es cierto que:
+A: 3
+C: Enero 2025
+O: Asocia una dirección MAC de Internet con un nombre de dominio.
+O: Todos los nombres de dominio tienen la misma raíz .net.
+O: Existe un único servidor DNS en Internet para gestionar las consultas.
+O: Una misma pregunta DNS tiene la misma respuesta en cualquier servidor DNS.
+
+Q: ¿Cuántas capas de la arquitectura de red emplean todos los dispositivos de interconexión entre redes?
+A: 3
+C: Enero 2025
+O: Una capa.
+O: Dos capas.
+O: Tres capas.
+O: Depende del tipo de dispositivo de interconexión.
+
+Q: Una señal será transmitida sin errores por un medio físico de comunicación si:
+A: 3
+C: Enero 2025
+O: Todas las componentes frecuenciales de la señal son transmitidas por el medio físico.
+O: Todas las componentes frecuenciales pares (2,4,6, etc.) de la señal son transmitidas por el medio físico.
+O: Todas las componentes frecuenciales impares (1,3,5, etc.) de la señal son transmitidas por el medio físico.
+O: Si un conjunto suficiente de componentes frecuenciales de menor frecuencia son transmitidas por el medio físico.
+
+Q: Sobre el ancho de banda de B Hz de un medio físico es cierto que:
+A: 2
+C: Enero 2025
+O: Permite la transmisión de B componentes frecuenciales de la señal.
+O: Permite la transmisión de B/2 componentes frecuenciales de la señal.
+O: Permite la transmisión de componentes frecuenciales de valor inferior a B Hz.
+O: Permite la transmisión de componentes frecuenciales de valor superior a B Hz.
+
+Q: Sobre el límite de Nyquist para la velocidad máxima de transmisión de una señal de datos en un medio, es cierto que:
+A: 0
+C: Enero 2025
+O: Depende del número de niveles de la señal transmitida por el medio físico.
+O: Se reduce al aumentar la relación señal-ruido en el medio físico.
+O: Depende del valor de los datos de la señal transmitida por el medio físico.
+O: Aumenta al reducir el valor del ancho de banda del medio físico.
+
+Q: Sea una señal de pulsos con dos niveles que se transmite por un medio físico a una velocidad de V bps:
+A: 0
+C: Enero 2025
+O: La señal se transmitirá correctamente en un medio físico de V Hz de ancho de banda y sin ruido.
+O: La señal se transmitirá siempre correctamente en un medio físico de V Hz de ancho de banda, independientemente del nivel de ruido existente.
+O: La señal sufrirá siempre errores en un medio físico de V Hz de ancho de banda, independientemente del nivel de ruido existente.
+O: Todas las respuestas anteriores son correctas.
+
+Q: ¿Qué tipo de señalización en banda base NO emplea la amplitud de la señal para identificar los bits de información?
+A: 2
+C: Enero 2025
+O: Codificación binaria bipolar.
+O: Codificación binaria unipolar.
+O: Codificación Manchester.
+O: Codificación PSK.
+
+Q: ¿En qué tipo de modulación se definen más cambios de frecuencia para identificar bits de información?
+A: 2
+C: Enero 2025
+O: QPSK.
+O: QAM.
+O: FSK.
+O: PSK de fase coherente.
+
+Q: ¿En qué situación de transmisión de señales es necesario el uso de la modulación?
+A: 3
+C: Enero 2025
+O: Transmisión de datos con fibra óptica monomodo.
+O: Transmisión de datos con cable UTP categoría 5.
+O: Multiplexado en el tiempo de señales digitales.
+O: Multiplexado en frecuencia de señales digitales.
+
+Q: ¿Qué diferencia existe en el uso de cable coaxial y cable UTP?
+A: 0
+C: Enero 2025
+O: El cable coaxial es más inmune al ruido de impulso que el cable UTP.
+O: El cable UTP permite señales de pulsos y moduladas, y el cable coaxial solo señales moduladas.
+O: El cable UTP tiene siempre el mismo ancho de banda y el cable coaxial existe en diferentes categorías.
+O: El cable coaxial tiene menos coste económico por metro lineal que el cable UTP.
+
+Q: ¿Qué tipo de fibra óptica presenta menor dispersión intermodal?
+A: 2
+C: Enero 2025
+O: Fibra multimodo de índice de salto.
+O: Fibra multimodo de índice gradual.
+O: Fibra monomodo.
+O: Todas las fibras ópticas presentan el mismo valor de dispersión intermodal.
+
+Q: ¿Qué mecanismo permite aumentar la velocidad de transmisión que se puede emplear en una fibra óptica?
+A: 0
+C: Enero 2025
+O: El multiplexado por longitud de onda WDM.
+O: El multiplexado en el tiempo TDM.
+O: La modulación PSK.
+O: La modulación ASK.
+
+Q: Sobre el uso de la comunicación inalámbrica es cierto que:
+A: 2
+C: Enero 2025
+O: Es posible emplear cualquier frecuencia del espectro para redes Wi-Fi.
+O: Un satélite geoestacionario tiene cobertura sobre todo el planeta Tierra.
+O: Es necesario el uso de la modulación para la transmisión de datos.
+O: Los satélites no-geoestacionarios tienen cobertura permanente en una zona geográfica.
+
+Q: ¿Qué mecanismo de detección de errores detecta la existencia de errores en un conjunto de 24 bits seguidos?
+A: 2
+C: Enero 2025
+O: Paridad par.
+O: Paridad impar.
+O: CRC-32.
+O: Ningún mecanismo de detección de errores detecta esa situación de error.
+
+Q: ¿Qué modo de funcionamiento de redes Ethernet NO es posible empleando cables UTP?
+A: 3
+C: Enero 2025
+O: Ethernet Full-Duplex.
+O: Ethernet Half-Duplex.
+O: Ni Ethernet Half-Duplex ni Ethernet Full-Duplex.
+O: Los cables UTP soportan todos los modos de funcionamiento de Ethernet.
+
+Q: ¿Qué tipo de paquetes Ethernet reenvía SIEMPRE un puente desde un puerto a todos los demás?
+A: 2
+C: Enero 2025
+O: Paquetes Ethernet sin dirección MAC origen.
+O: Paquetes Ethernet sin dirección MAC destino.
+O: Paquetes Ethernet con dirección MAC destino de difusión.
+O: Paquetes Ethernet con dirección MAC origen de difusión.
+
+Q: Sobre los conmutadores 100BaseTX y 1000BaseT es cierto que:
+A: 0
+C: Enero 2025
+O: Ambos conmutadores emplean el mismo formato de paquete Ethernet.
+O: Ambos conmutadores emplean cable UTP de categoría 3.
+O: Ambos conmutadores emplean el mismo tipo de señalización en los cables UTP.
+O: Las tablas de reenvío en los conmutadores 100BaseTX son 10 veces más grandes que en los conmutadores 1000BaseT.
+
+Q: ¿Qué tecnología Ethernet se ha desarrollado para el uso de puntos de acceso Wi-Fi de velocidades superiores a 1 Gbps?
+A: 1
+C: Enero 2025
+O: Ethernet 10GBase-T.
+O: Ethernet 2.5GBase-T.
+O: Ethernet 40GBase-XX.
+O: Ethernet 100GBase-XX.
+
+Q: ¿Cuántas VLAN pueden funcionar como mucho en un único conmutador con 10 puertos de enlace y 1 puerto troncal?
+A: 1
+C: Enero 2025
+O: 1 única VLAN asociada al puerto troncal.
+O: 10 VLANs diferentes.
+O: 100 VLANs diferentes.
+O: El número de VLANs que pueden funcionar en un conmutador es ilimitado.
+
+Q: Las diferentes tecnologías Wi-Fi (Wi-Fi 4, Wi-Fi 5, etc.) hacen referencia a:
+A: 1
+C: Enero 2025
+O: Diferentes formatos de paquetes IEEE 802.11x.
+O: Diferentes sistemas de modulación y frecuencias de señales portadoras.
+O: Diferentes mecanismos de acceso al medio CSMA/CA.
+O: Diferentes tamaños en los chipsets de modulación de señales.
+
+Q: Sobre el funcionamiento del mecanismo CSMA/CA, es cierto que:
+A: 0
+C: Enero 2025
+O: Precisa del mecanismo RTC/CTS para que todos los equipos asociados al AP detecten siempre la transmisión de un equipo.
+O: El mecanismo RTS/CTS permite una transmisión de paquetes inalámbricos en menos tiempo.
+O: Aumenta la probabilidad de colisión si se emplea el mecanismo RTS/CTS.
+O: Si un equipo detecta que otro ha finalizado una transmisión, NO espera un tiempo de contienda para enviar paquetes.
+
+Q: Sobre los mecanismos de seguridad Wi-Fi WPA2-PSK y WPA3-PSK es cierto que:
+A: 1
+C: Enero 2025
+O: WPA2-PSK emplea el algoritmo de cifrado AES y WPA3-PSK el algoritmo de cifrado TKIP.
+O: WPA2-PSK y WPA3-PSK emplean ambos claves de cifrado de 128 bits.
+O: WPA2-PSK emplea autenticación sin clave y WPA3-PSK emplea autenticación con un servidor Radius.
+O: WPA3-PSK emplea claves de cifrado de 192 bits y WPA2-PSK de 64 bits.
+
+Q: Un servidor DHCP proporciona a un equipo de una red diferentes parámetros de configuración, excepto:
+A: 3
+C: Enero 2025
+O: La dirección IP de un equipo de la red.
+O: La máscara de red de un equipo de la red.
+O: Los servidores de nombres de un equipo de la red.
+O: La dirección MAC de la puerta de enlace por defecto de un equipo de la red.
+
+Q: Sobre los AS (Sistemas Autónomos) en Internet, es cierto que:
+A: 1
+C: Enero 2025
+O: El organismo IANA asigna los identificadores de AS en Europa.
+O: Los AS emplean el protocolo BGP para conocer el conjunto de redes existentes en Internet.
+O: Los AS emplean el protocolo OSPF para determinar las rutas óptimas entre AS diferentes.
+O: El router frontera de un AS siempre establece una conexión BGP con un único router BGP de Internet que conoce todos los destinos.
+
+Q: ¿Qué algoritmo de encaminamiento determina de manera más eficiente el mejor camino a un destino?
+A: 3
+C: Enero 2025
+O: BGP.
+O: RIPv1.
+O: RIPv2.
+O: OSPF.
+
+Q: Sobre las direcciones de multidifusión del protocolo IPv4 es cierto que:
+A: 2
+C: Enero 2025
+O: Sólo se emplean para la propagación de información en algoritmos de encaminamiento.
+O: Cada zona de Internet dispone de un conjunto de direcciones de multidifusión para ser empleadas.
+O: En Ethernet, cada dirección IP de multidifusión tiene asociada una dirección MAC de multidifusión.
+O: El número de direcciones IP de multidifusión disponibles es de 224.
+
+Q: ¿Qué valor inicial de dirección IPv6 se puede asignar a un interfaz de comunicaciones?
+A: 0
+C: Enero 2025
+O: 2001:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx.
+O: 4001:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx.
+O: 6001:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx.
+O: 8001:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx.
+
+Q: Sobre el funcionamiento de la ventana deslizante del protocolo TCP es cierto que:
+A: 2
+C: Enero 2025
+O: Si no se recibe ACK de un paquete de datos, se reenvían todos los paquetes desde el paquete no confirmado.
+O: Si no se recibe ACK de un paquete de datos, en el reenvío del paquete se reduce el tiempo de espera de ACK.
+O: El valor de tiempo de espera de ACK de un paquete de datos es variable durante el funcionamiento de la conexión TCP.
+O: Los paquetes de datos de los que no se ha recibido ACK se reenvían cuando se llena la ventana del emisor TCP.
+
+Q: Sobre el control de congestión en el protocolo TCP es cierto que:
+A: 1
+C: Enero 2025
+O: La expiración del tiempo de espera de ACK de un paquete provoca la reducción en los tiempos de espera de ACK.
+O: La expiración del tiempo de espera de ACK de un paquete puede reducir la ventana de emisión del emisor del paquete.
+O: La ventana de recepción de un equipo se reduce al expirar los tiempos de espera de ACK en los envíos de paquetes del equipo.
+O: La ventana de recepción y la ventana de congestión de un equipo siempre tienen el mismo valor.

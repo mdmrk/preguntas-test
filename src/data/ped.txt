@@ -826,11 +826,6 @@ A: 1
 O: V
 O: F
 ,
-Q: El algoritmo de búsqueda binaria estudiado en clase (búsqueda de un elemento en un vector ordenado) tiene una complejidad de $\Omega(1)$.
-A: 0
-O: V
-O: F
-,
 Q: La semántica de la operación obtener en una lista con acceso por posición es la siguiente (IC=InsertarCabeza(Lista, Ítem), p: posición, l1: lista, x: ítem):
 ```
 obtener(crear(),p) = error_item();
@@ -946,11 +941,6 @@ A: 1
 O: V
 O: F
 ,
-Q: Una operación del TAD X que tenga la sintaxis `Crear() → X` es una operación constructora generadora.
-A: 0
-O: V
-O: F
-,
 Q: En C++, los miembros `protected` son privados para el exterior, pero permiten el acceso a las clases derivadas.
 A: 0
 O: V
@@ -961,17 +951,7 @@ A: 1
 O: V
 O: F
 ,
-Q: El nivel de un nodo en un árbol coincide con la longitud del camino desde la raíz a dicho nodo.
-A: 1
-O: V
-O: F
-,
 Q: Dado un único recorrido de un árbol binario lleno es posible reconstruir dicho árbol.
-A: 0
-O: V
-O: F
-,
-Q: El ítem medio (según la relación de orden) almacenado en un árbol binario de búsqueda lleno siempre se encuentra en la raíz.
 A: 0
 O: V
 O: F
@@ -1027,11 +1007,6 @@ Base(crear_pila()) = crear_pila();
 Base(apilar(crear_pila(), x)) = x;
 Base(apilar(p, x)) = Base(p);
 ```
-A: 1
-O: V
-O: F
-,
-Q: Cuando se realiza un borrado en un árbol AVL, en el camino de vuelta atrás para actualizar los factores de equilibrio, como mucho sólo se va a efectuar una rotación.
 A: 1
 O: V
 O: F
@@ -1196,16 +1171,6 @@ A: 0
 O: V
 O: F
 ,
-Q: El grado de un árbol es el máximo nivel que pueden tener sus subárboles.
-A: 1
-O: V
-O: F
-,
-Q: El máximo número de nodos en un nivel i-1 de un árbol binario es $2^{i-2}$, $i \geq 2$.
-A: 0
-O: V
-O: F
-,
 Q: Existe al menos un árbol, que representa los siguientes recorridos: inorden = YXZT, niveles = XTYZ.
 A: 1
 O: V
@@ -1228,16 +1193,6 @@ O: F
 ,
 Q: Un camino en un árbol es una secuencia $a_1, ..., a_s$ de árboles tal que para todo $i \in (1, ..., s-1)$, $a_{i+1}$ es subárbol de $a_i$.
 A: 0
-O: V
-O: F
-,
-Q: Dado un único recorrido de un árbol binario, es posible reconstruir dicho árbol.
-A: 1
-O: V
-O: F
-,
-Q: El grado de un árbol es el grado mínimo de todos los nodos de ese árbol.
-A: 1
 O: V
 O: F
 ,
@@ -1281,17 +1236,7 @@ A: 0
 O: V
 O: F
 ,
-Q: El coste temporal (en su peor caso) de insertar una etiqueta en un árbol binario de búsqueda es lineal respecto al número de nodos del árbol.
-A: 0
-O: V
-O: F
-,
 Q: El coste temporal en su peor caso de insertar una etiqueta en un árbol binario de búsqueda es logarítmica respecto a la altura del árbol.
-A: 1
-O: V
-O: F
-,
-Q: El ítem medio (según la relación de orden en la búsqueda) almacenado en un árbol binario de búsqueda siempre se encuentra en la raíz.
 A: 1
 O: V
 O: F
@@ -1314,11 +1259,6 @@ for (i = 1; i <= 3; i++) {
   b += a++;
 }
 ```
-A: 1
-O: V
-O: F
-,
-Q: En C++, después de invocar el destructor (`~NombreClase`) de un objeto, no se puede acceder a los miembros (propiedades y métodos) de dicho objeto.
 A: 1
 O: V
 O: F
@@ -1403,24 +1343,6 @@ O: V
 O: F
 ,
 Q: El algoritmo de intercambio directo o burbuja estudiado en clase (ordenación de los elementos de un vector) tiene una complejidad de $\Omega(n)$, siendo n el número de elementos del vector.
-A: 0
-O: V
-O: F
-,
-Q: El resultado del cálculo de la complejidad temporal en el mejor caso de un algoritmo X, da como resultado $n + n \log(n)$. Por lo tanto, diremos que la complejidad del algoritmo X cuando $n \to \infty$ pertenece a $\Omega(n)$.
-A: 1
-O: V
-O: F
-,
-Q: La complejidad temporal del siguiente fragmento de código es $O(n)$:
-```cpp
-int i, j, n, sum;
-for (i = 4; i < n; i++) {
-  for (j = i - 3, sum = a[i - 4]; j <= i; j++)
-    sum += a[j];
-  cout << "La suma del subarray " << i - 4 << " es " << sum << endl;
-}
-```
 A: 0
 O: V
 O: F
@@ -1857,11 +1779,6 @@ A: 0
 O: V
 O: F
 ,
-Q: La complejidad temporal en el peor caso para la inserción de un elemento en una lista ordenada y en otra no ordenada, que no permiten elementos repetidos, siempre es lineal con el número de elementos en ambos casos.
-A: 0
-O: V
-O: F
-,
 Q: La semántica de la operación cima del tipo pila vista en clase es la siguiente:
 ```
 VAR p: pila, e: item;
@@ -1904,11 +1821,6 @@ A: 0
 O: V
 O: F
 ,
-Q: En un montículo doble todas las claves del montículo máximo son mayores que las del montículo mínimo.
-A: 1
-O: V
-O: F
-,
 Q: Para todos los nodos de un montículo simple, se cumple que el número de nodos de su subárbol derecho es menor o igual que el número de nodos de su subárbol izquierdo.
 A: 0
 O: V
@@ -1921,11 +1833,6 @@ O: F
 ,
 Q: Según el algoritmo de inserción de un árbol 2-3-4 visto en clase, la altura de un árbol 2-3-4 sólo crece cuando al insertar un ítem, todos los nodos del camino de búsqueda desde la raíz hasta la hoja donde se inserta el ítem son 4-nodo.
 A: 1
-O: V
-O: F
-,
-Q: El número mínimo de nodos que tiene un árbol AVL de altura 4 es 7.
-A: 0
 O: V
 O: F
 ,
@@ -2256,11 +2163,6 @@ O: F
 ,
 Q: En el algoritmo del borrado de un elemento en un árbol 2-3-4 siempre que "p" sea 2-nodo hay que hacer una reestructuración.
 A: 1
-O: V
-O: F
-,
-Q: La complejidad temporal en el peor caso de la operación inserción en un árbol 2-3-4 es $\log_2(n+1)$.
-A: 0
 O: V
 O: F
 ,
@@ -2665,11 +2567,6 @@ O: F
 ,
 Q: En la operación de inserción de un elemento en un árbol 2-3-4 sólo se divide la raíz si ésta es un 3-nodo.
 A: 1
-O: V
-O: F
-,
-Q: En la representación de conjuntos mediante listas, el espacio es proporcional al tamaño del conjunto representado.
-A: 0
 O: V
 O: F
 ,

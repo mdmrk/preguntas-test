@@ -15,6 +15,7 @@ class Question:
     image: Optional[str] = None
     categories: Optional[str] = None  # Categories separated by semicolons
     raw_chunk: str = ""  # Store original text for reconstruction
+    categories_modified: bool = False  # Track if categories were merged
 
 class TestParser:
     """Parser for test text files"""
@@ -255,14 +256,20 @@ class TestDeduplicator:
             if i not in indices_to_remove:
                 # If this question had duplicates, use the merged categories
                 if i in category_merges:
-                    # Create a new question with merged categories
+                    # Check if categories actually changed
+                    original_categories = questions[i].categories
+                    merged_categories = category_merges[i]
+                    categories_changed = original_categories != merged_categories
+                    
+                    # Create a new question with merged categories and mark if modified
                     merged_question = Question(
                         question_text=question.question_text,
                         options=question.options,
                         correct_answer_index=question.correct_answer_index,
                         image=question.image,
-                        categories=category_merges[i],
-                        raw_chunk=question.raw_chunk
+                        categories=merged_categories,
+                        raw_chunk=question.raw_chunk,
+                        categories_modified=categories_changed
                     )
                     unique_questions.append(merged_question)
                 else:
@@ -272,49 +279,56 @@ class TestDeduplicator:
         return unique_questions, num_removed
     
     @staticmethod
+    def update_categories_in_raw_chunk(raw_chunk: str, new_categories: Optional[str]) -> str:
+        """
+        Update the categories line in a raw chunk while preserving all other formatting.
+        """
+        lines = raw_chunk.split('\n')
+        updated_lines = []
+        categories_line_found = False
+        
+        for line in lines:
+            if line.strip().startswith('C:'):
+                # Replace the categories line
+                if new_categories:
+                    updated_lines.append(f"C: {new_categories}")
+                categories_line_found = True
+            else:
+                updated_lines.append(line)
+        
+        # If no categories line was found but we have new categories, add it
+        # Insert after the answer line (A:)
+        if not categories_line_found and new_categories:
+            for i, line in enumerate(updated_lines):
+                if line.strip().startswith('A:'):
+                    updated_lines.insert(i + 1, f"C: {new_categories}")
+                    break
+        
+        return '\n'.join(updated_lines)
+    
+    @staticmethod
     def reconstruct_test_text(questions: List[Question]) -> str:
-        """Reconstruct test text from Question objects using original formatting"""
+        """
+        Reconstruct test text from Question objects, preserving original formatting
+        when possible and only reconstructing when necessary.
+        """
         if not questions:
             return ""
         
         chunks = []
         for question in questions:
-            # Reconstruct the chunk with proper formatting
-            chunk_lines = []
-            
-            # Add question
-            if '\n' in question.question_text:
-                lines = question.question_text.split('\n')
-                chunk_lines.append(f"Q: {lines[0]}")
-                for line in lines[1:]:
-                    chunk_lines.append(line)
+            # If categories weren't modified, use the original raw chunk to preserve formatting
+            if not question.categories_modified:
+                chunks.append(question.raw_chunk)
             else:
-                chunk_lines.append(f"Q: {question.question_text}")
-            
-            # Add answer
-            chunk_lines.append(f"A: {question.correct_answer_index}")
-            
-            # Add categories if present
-            if question.categories:
-                chunk_lines.append(f"C: {question.categories}")
-            
-            # Add options
-            for option in question.options:
-                if '\n' in option:
-                    lines = option.split('\n')
-                    chunk_lines.append(f"O: {lines[0]}")
-                    for line in lines[1:]:
-                        chunk_lines.append(line)
-                else:
-                    chunk_lines.append(f"O: {option}")
-            
-            # Add image if present
-            if question.image:
-                chunk_lines.append(f"I: {question.image}")
-            
-            chunks.append('\n'.join(chunk_lines))
+                # Categories were merged, so we need to update the raw chunk
+                updated_chunk = TestDeduplicator.update_categories_in_raw_chunk(
+                    question.raw_chunk, 
+                    question.categories
+                )
+                chunks.append(updated_chunk)
         
-        return '\n,\n'.join(chunks)
+        return ','.join(chunks)
 
 def process_file(file_path: Path) -> Tuple[int, int]:
     """
