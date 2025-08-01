@@ -106,21 +106,23 @@ O: Es $\Theta(n^2)$
 ,
 Q: Que calcula el siguiente algoritmo:
 ```
-función Ejercicio (ent A: ÁrbolBinario, ent/sal actual:entero):nada
-variables		x: entero
-Izq, Der: ÁrbolBinario
+función Ejercicio (ent A: ÁrbolBinario, ent/sal actual: entero): nada
+variables
+  x: entero
+  Izq, Der: ÁrbolBinario
 inicio
-si A.Vacio entonces
-A.HijoIzq(Izq)
-A.HijoDer(Der)
-A.Raíz(x)
-actual:=actual + x
-Ejercicio (Izq, actual)
-Ejercicio (Der, actual)
-finsi
+  si A.Vacio entonces
+    A.HijoIzq(Izq)
+    A.HijoDer(Der)
+    A.Raíz(x)
+    actual := actual + x
+    Ejercicio(Izq, actual)
+    Ejercicio(Der, actual)
+  finsi
 fin
+
 Llamada desde el programa principal:
-n:= 0			// Arb es un árbol
+n := 0      // Arb es un árbol
 Ejercicio(Arb, n)
 ```
 A: 1
