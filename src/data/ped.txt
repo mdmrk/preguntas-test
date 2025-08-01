@@ -226,8 +226,8 @@ O: F
 Q: Para el siguiente fragmento de código C++ de un posible método perteneciente a la conocida clase `TCoordenada`, la línea `delete [] b;` liberaría correctamente la memoria dinámica de b.
 ```cpp
 void TCoordenada::Funcion(void) {
-  TCoordenada *a = new TCoordenada;
-  TCoordenada *b = new TCoordenada[5];
+  TCoordenada* a = new TCoordenada;
+  TCoordenada* b = new TCoordenada[5];
   // (. . . . . . .)
   delete[] b;
 }
@@ -1277,8 +1277,8 @@ TPosicion TLista::Primera() {
 }
 
 class TLista {
-public:
-... private : TNodo *primero;
+ public:
+ ... private : TNodo* primero;
 }
 ```
 En el método `Primera`, se invoca de forma implícita a los constructores de `TPosicion` y `TLista`.
@@ -1310,8 +1310,8 @@ TPosicion TLista::Primera() {
 }
 
 class TLista {
-public:
-... private : TNodo *lis;
+ public:
+ ... private : TNodo* lis;
 }
 ```
 En el método `Primera`, se invoca a la sobrecarga del operador asignación entre objetos del tipo `TPosicion`.
@@ -1328,8 +1328,8 @@ TPosicion Tlista::Primera() {
 }
 
 class Tlista {
-public:
-... private : Tnodo *lis;
+ public:
+ ... private : Tnodo* lis;
 }
 ```
 En el método `Primera` se invoca al constructor y destructor para el objeto `TPosicion p`.
@@ -1859,8 +1859,8 @@ O: F
 Q: Para el siguiente fragmento de código C++ de un posible método perteneciente a la conocida clase `TCoordenada`, `delete [] a;` liberaría correctamente la memoria dinámica de a.
 ```cpp
 void Funcion(void) {
-  TCoordenada *a = new TCoordenada;
-  TCoordenada *b = new TCoordenada[5];
+  TCoordenada* a = new TCoordenada;
+  TCoordenada* b = new TCoordenada[5];
   // (. . . . . . .)
 }
 ```
@@ -2039,8 +2039,8 @@ O: F
 Q: Para el siguiente fragmento de código para C++ de un posible método perteneciente a la conocida clase `TCalendario`, la línea `delete [] a;` es la instrucción más adecuada para liberar correctamente la memoria dinámica de a.
 ```cpp
 void Funcion(void) {
-  TCalendario *a = new TCalendario;
-  TCalendario *b = new TCalendario[5];
+  TCalendario* a = new TCalendario;
+  TCalendario* b = new TCalendario[5];
   // (. . . . . . .);
   delete[] a;
 }

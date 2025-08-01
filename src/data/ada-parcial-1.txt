@@ -196,14 +196,14 @@ O: $n + n \log(n) \in \Theta(n)$
 ,
 Q: Indica cuál es la complejidad en el peor caso de la función replace:
 ```cpp
-unsigned bound(const vector<int> &v) {
+unsigned bound(const vector<int>& v) {
   for (unsigned i = 0; i < v.size(); i++)
     if (v[i] == '0')
       return i;
   return v.size();
 }
 
-void replace(vector<int> &v, int c) {
+void replace(vector<int>& v, int c) {
   for (unsigned i = 0; i < bound(v); i++)
     v[i] = c;
 }
@@ -348,7 +348,7 @@ O: ... que aplican la estrategia de divide y vencerás.
 ,
 Q: Indica cuál es la complejidad de la función siguiente:
 ```cpp
-unsigned sum(const mat &A) {
+unsigned sum(const mat& A) {
 #A es una matriz cuadrada unsigned d = A.n_rows();
   unsigned a = 0;
   for (unsigned i = 0; i < d; i++)
@@ -501,7 +501,7 @@ O: Las otras dos opciones son ciertas
 ,
 Q: ¿Cuál es la complejidad temporal de la siguiente función?
 ```cpp
-int ejemplo(vector<int> &v) {
+int ejemplo(vector<int>& v) {
   int n = v.size();
   int j, i = 2;
   int sum = 0;
@@ -523,7 +523,7 @@ O: $\Omega(n)$
 ,
 Q: En cuanto a la complejidad temporal de la siguiente función:
 ```cpp
-int ejemplo(vector<int> &v) {
+int ejemplo(vector<int>& v) {
   int n = v.size();
   int j, i = 2;
   int sum = 0;
@@ -657,7 +657,7 @@ O: $O(n^2)$
 ,
 Q: Se pretende obtener la complejidad temporal en el caso más desfavorable de la siguiente función.
 ```cpp
-int exa(vector<int> &v) {
+int exa(vector<int>& v) {
   int i, sum = 0, n = v.size();
   if (n > 0) {
     int j = n;

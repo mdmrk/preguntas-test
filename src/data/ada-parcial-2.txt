@@ -347,7 +347,7 @@ O: p, r, n-i
 Q: Dadas las siguientes funciones:
 ```cpp
 #Precondición : {0 <= i < v.size(); i < j <= v.size() }
-unsigned f(const vector<unsigned> &v, unsigned i, unsigned j) {
+unsigned f(const vector<unsigned>& v, unsigned i, unsigned j) {
   if (i == j + 1)
     return v[i];
   unsigned sum = 0;
@@ -356,7 +356,7 @@ unsigned f(const vector<unsigned> &v, unsigned i, unsigned j) {
   return sum;
 }
 
-unsigned g(const vector<unsigned> &v) {
+unsigned g(const vector<unsigned>& v) {
   return f(v, v.begin(), v.end());
 }
 ```

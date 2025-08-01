@@ -182,9 +182,9 @@ Ordena(vector V[N] de enteros) {
   int i, j, aux;
   for (i = 1; i < N; i++) {
     for (j = 0; j < N - i; j++) {
-      if (V[j] > V[j + 1]) { // (2)
+      if (V[j] > V[j + 1]) {  // (2)
         aux = V[j];
-        V[j] = V[j + 1]; // (3)
+        V[j] = V[j + 1];  // (3)
         V[j + 1] = aux;
       }
     }
@@ -239,8 +239,11 @@ O: Ambas por igual
 ,
 Q: Se dispone de n clases de objetos. De cada una de ellas se conoce el número máximo de piezas que se puede fabricar, $m_i \in \mathbb{N}$ y el tiempo necesario para su fabricación $t_i \in \mathbb{R}$, $i \in [0..n-1]$. Queremos listar todas las posibilidades de fabricación de objetos teniendo en cuenta que el tiempo total está limitado por $T \in \mathbb{R}$. Para ello hemos hecho el siguiente programa donde faltan unas líneas:
 ```cpp
-void combinations(const vector<int> &m, const vector<double> &t, double T,
-                  size_t k, vector<int> &x) {
+void combinations(const vector<int>& m,
+                  const vector<double>& t,
+                  double T,
+                  size_t k,
+                  vector<int>& x) {
   if (k == m.size()) {
     print_comb(x);
     return;
@@ -249,7 +252,7 @@ void combinations(const vector<int> &m, const vector<double> &t, double T,
 }
 ```
 ```cpp
-void combinations(const vector<int> &m, const vector<double> &t, double T) {
+void combinations(const vector<int>& m, const vector<double>& t, double T) {
   vector<int> x(m.size());
   combinations(m, t, T, 0, x);
 }
@@ -613,7 +616,7 @@ O: Un algoritmo voraz.
 ,
 Q: En cuanto a la complejidad temporal de la siguiente función, ¿qué podemos decir acerca del mejor de los casos?
 ```cpp
-int f(vector<int> &v) {
+int f(vector<int>& v) {
   int n = v.size(), i = 2, k = 0;
   while (i < n) {
     int j = i;
@@ -687,7 +690,7 @@ O: El problema de las torres de Hanoi.
 ,
 Q: ¿Qué hace la siguiente función?
 ```cpp
-void f(vector<int> &A) {
+void f(vector<int>& A) {
   priority_queue<int> pq;
   for (auto a : A)
     pq.push(a);
@@ -723,7 +726,7 @@ O: ... El hecho de que el vector estuviera previamente ordenado o no, no influye
 ,
 Q: Dada la siguiente función:
 ```cpp
-int exa(vector<int> &v) {
+int exa(vector<int>& v) {
   int j, i = 1, n = v.size();
   if (n > 1)
     do {
@@ -1016,7 +1019,7 @@ O: No, ya que este algoritmo ha de recorrer varias veces el vector de booleanos.
 ,
 Q: En cuanto a la complejidad temporal de la siguiente función, ¿qué podemos decir acerca del mejor de los casos?
 ```cpp
-int f(vector<int> &v) {
+int f(vector<int>& v) {
   int n = v.size(), i = 2, k = 0;
   while (i < n) {
     int j = i;
@@ -2130,7 +2133,7 @@ O: El valor máximo que puede tomar una instancia cualquiera de ese problema.
 ,
 Q: Dada la siguiente función:
 ```cpp
-int exa(string &cad, int pri, int ult) {
+int exa(string& cad, int pri, int ult) {
   if (pri >= ult) {
     return 1;
   } else {
@@ -2920,7 +2923,7 @@ O: $O(\sqrt{n})$
 ,
 Q: Se pretende implementar mediante programacion dinamica iterativa la funcion recursiva:
 ```cpp
-unsigned f(unsigned y, unsigned x) { // suponemos y >= x
+unsigned f(unsigned y, unsigned x) {  // suponemos y >= x
   if (x == 0 || y == x)
     return 1;
   return f(y - 1, x - 1) + f(y - 1, x);
@@ -2978,18 +2981,18 @@ O: $... \subset O(2^n) \subset O(n!) \subset O(n^n)$
 Q: Considera el algoritmo descrito a continuacion. Si consideramos como medida significativa el numero de movimientos del vector instrucciones 1 y 3 entonces el algoritmo tiene un coste:
 ```cpp
 for (i = 1; i < N; i++) {
-  X = V[i]; // (1)
+  X = V[i];  // (1)
   Izq = 0;
   Der = i - 1;
   while (Izq <= Der) {
     Medio = (Izq + Der) / 2;
-    if (X < V[Medio]) // (2)
+    if (X < V[Medio])  // (2)
       Der = Medio - 1;
     else
       Izq = Medio + 1;
   }
   for (j = i - 1; j >= Izq; j--) {
-    V[j + 1] = V[j]; // (3)
+    V[j + 1] = V[j];  // (3)
   }
   V[Izq] = X;
 }
@@ -3165,7 +3168,7 @@ O: O(n)
 ,
 Q: En cuanto a la complejidad temporal de la siguiente función:
 ```cpp
-int ejemplo(vector<int> &v) {
+int ejemplo(vector<int>& v) {
   int n = v.size();
   int j, i = 2;
   int sum = 0;
@@ -3452,8 +3455,11 @@ O: expresan recursivamente el coste temporal de un algoritmo
 ,
 Q: El problema del alfarero (solución discreta con valores y tiempos discretos): Se dispone de n clases de objetos. De cada una de ellas se conoce el número máximo de piezas que se puede fabricar, $m_i \in \mathbb{N}$; El valor de cada pieza terminada, $v_i \in \mathbb{N}$ y el tiempo necesario para su fabricación $t_i \in \mathbb{N}$, $i \in [0..n-1]$. ¿Cual es el valor máximo de los objetos que puede fabricar teniendo en cuenta que el tiempo total está limitado por $T \in \mathbb{N}$? Para ello se escribe la siguiente función siguiendo la técnica de divide y vencerás:
 ```cpp
-int potter(const vector<int> &v, const vector<int> &m, const vector<int> &t,
-           int T, int k) {
+int potter(const vector<int>& v,
+           const vector<int>& m,
+           const vector<int>& t,
+           int T,
+           int k) {
   if (k == 0)
     return 0;
   int max_earnings = -1;
@@ -3749,7 +3755,7 @@ O: $O(n \log(n))$.
 ,
 Q: ¿Qué hace la siguiente función?
 ```cpp
-void f(vector<int> &A) {
+void f(vector<int>& A) {
   priority_queue<int> pq;
   for (int i = A.size() - 1; i >= 0; i--) {
     pq.push(A[i]);
@@ -3921,7 +3927,7 @@ O: Ninguna de las otras dos opciones es cierta.
 ,
 Q: Se pretende obtener la complejidad temporal en el caso más desfavorable de la siguiente función.
 ```cpp
-int exa(vector<int> &v) {
+int exa(vector<int>& v) {
   int i, sum = 0, n = v.size();
   if (n > 0) {
     int j = n;
@@ -3975,7 +3981,7 @@ O: Porque si no se hace no es posible garantizar que la toma de decisiones siga 
 ,
 Q: ¿Qué hace la siguiente función?
 ```cpp
-void f(vector<int> &A) {
+void f(vector<int>& A) {
   priority_queue<int> pq;
   for (auto i : A)
     pq.push(A[i]);
@@ -3994,7 +4000,7 @@ O: Ordena el vector A.
 ,
 Q: Indica cuál es la complejidad de la función siguiente:
 ```cpp
-unsigned sum(const mat &A) {
+unsigned sum(const mat& A) {
   // A es una matriz cuadrada
   unsigned d = A.n_rows();
   unsigned a = 0;
@@ -4647,7 +4653,7 @@ O: Mergesort
 ,
 Q: En cuanto a la complejidad temporal de la siguiente función, ¿cuál de las siguientes formulaciones expresa mejor su complejidad en el peor de los casos?
 ```cpp
-int f(vector<int> &v) {
+int f(vector<int>& v) {
   int n = v.size(), i = 2, k = 0;
   while (i < n) {
     int j = i;
@@ -4806,7 +4812,7 @@ O: Que se podría podar el nodo que conduce a la solución óptima.
 ,
 Q: Se pretende implementar mediante programación dinámica iterativa la siguiente función recursiva:
 ```cpp
-int f(int m, int n, int p, int *v) {
+int f(int m, int n, int p, int* v) {
   if (n < 0)
     return 0;
   int aux = 0;
@@ -4848,7 +4854,10 @@ O: $\Theta(\log n)$
 Q: Una empresa tiene M referencias en su stock. Cada referencia $j \in [1,M]$ tiene un peso $p_j$ y un valor $v_j$ y dispone de $n_j$ unidades en su stock. Dispone de un solo camión en el que puede cargar como máximo un peso P. Indicad cuál de las tres funciones siguientes representa una posible solución voraz aproximada al problema de cargar el camión de manera que se transporte un valor máximo.
 A: 0
 O: ```cpp
-int f(const vector<int> &p, const vector<int> &v, const vector<int> &n, int P,
+int f(const vector<int>& p,
+      const vector<int>& v,
+      const vector<int>& n,
+      int P,
       int k) {
   if (k == 0 || P == 0)
     return 0;
@@ -4857,7 +4866,10 @@ int f(const vector<int> &p, const vector<int> &v, const vector<int> &n, int P,
 }
 ```
 O: ```cpp
-int f(const vector<int> &p, const vector<int> &v, const vector<int> &n, int P,
+int f(const vector<int>& p,
+      const vector<int>& v,
+      const vector<int>& n,
+      int P,
       int k) {
   if (k == 0 || P == 0)
     return 0;
@@ -4868,7 +4880,10 @@ int f(const vector<int> &p, const vector<int> &v, const vector<int> &n, int P,
 }
 ```
 O: ```cpp
-int f(const vector<int> &p, const vector<int> &v, const vector<int> &n, int P,
+int f(const vector<int>& p,
+      const vector<int>& v,
+      const vector<int>& n,
+      int P,
       int k) {
   if (k == 0 || P == 0)
     return 0;
@@ -5384,7 +5399,7 @@ O: Para todas las ciudades que son alcanzables en un paso desde la ciudad inicia
 ,
 Q: ¿Qué complejidad tiene la siguiente función?
 ```cpp
-void f(vector<int> &A) {
+void f(vector<int>& A) {
   priority_queue<int> pq(begin(A), end(A));
   A.clear();
   while (!pq.empty()) {
@@ -5681,8 +5696,11 @@ O: No necesariamente
 Q: El problema del alfarero (solución discreta con valores y tiempos continuos): Se dispone de n clases de objetos. De cada una de ellas se conoce el número máximo de piezas que se puede fabricar, $m_i \in \mathbb{N}$; El valor de cada pieza terminada, $v_i \in \mathbb{R}$ y el tiempo necesario para su fabricación $t_i \in \mathbb{R}$, $i \in [0..n-1]$. ¿Cuántos objetos de cada clase hay que fabricar para maximizar la ganancia teniendo en cuenta que el tiempo total está limitado por $T \in \mathbb{R}$? Se pretende resolverlo mediante ramificación y poda. Las siguientes funciones tratan de estimar una ganancia aproximada para la parte del nodo aún sin completar. ¿cuál es la mejor para usarla como parte de la cota optimista?
 A: 2
 O: ```cpp
-double optimistic(const vector<int> &m, const vector<double> &v,
-                  const vector<double> &t, double T, size_t from) {
+double optimistic(const vector<int>& m,
+                  const vector<double>& v,
+                  const vector<double>& t,
+                  double T,
+                  size_t from) {
   double gain = 0.0;
   for (size_t i = from; i < m.size() && T > 0; i++) {
     for (int j = 1; j <= m[i]; j++) {
@@ -5696,8 +5714,11 @@ double optimistic(const vector<int> &m, const vector<double> &v,
 }
 ```
 O: ```cpp
-double optimistic(const vector<int> &m, const vector<double> &v,
-                  const vector<double> &t, double T, size_t from) {
+double optimistic(const vector<int>& m,
+                  const vector<double>& v,
+                  const vector<double>& t,
+                  double T,
+                  size_t from) {
   double gain = 0.0;
   for (size_t i = from; i < m.size() && T > 0; i++) {
     for (int j = 1; j <= m[i]; j++) {
@@ -5709,8 +5730,11 @@ double optimistic(const vector<int> &m, const vector<double> &v,
 }
 ```
 O: ```cpp
-double optimistic(const vector<int> &m, const vector<double> &v,
-                  const vector<double> &t, double T, size_t from) {
+double optimistic(const vector<int>& m,
+                  const vector<double>& v,
+                  const vector<double>& t,
+                  double T,
+                  size_t from) {
   double gain = 0.0;
   for (size_t i = from; i < m.size() && T > 0; i++) {
     double num_objs = min(T / t[i], double(m[i]));
@@ -5786,7 +5810,7 @@ O: Si G es conexo entonces G es acíclico
 ,
 Q: ¿Cuál es la complejidad temporal de la siguiente función?
 ```cpp
-int ejemplo(vector<int> &v) {
+int ejemplo(vector<int>& v) {
   int n = v.size();
   int j, i = 2;
   int sum = 0;
@@ -5889,7 +5913,7 @@ O: $O(n \log n)$
 ,
 Q: ¿Cuál es la complejidad temporal asintótica de la función $f$? (en la primera llamada, el parámetro $i$ toma valor $n-1$; el tamaño de los vectores $w$ y $v$ es $n$)
 ```cpp
-float f(vector<float> &w, vector<unsigned> &v, unsigned P, int i) {
+float f(vector<float>& w, vector<unsigned>& v, unsigned P, int i) {
   float S1 = 0, S2;
   if (i >= 0) {
     if (w[i] <= P)
@@ -5908,7 +5932,7 @@ O: $\Theta(2^n)$
 ,
 Q: Dada la siguiente función:
 ```cpp
-void f(vector<int> &v) {
+void f(vector<int>& v) {
   int i = 1, n = v.size();
   bool swaped = true;
   while (swaped) {
@@ -6096,7 +6120,7 @@ O: $T(n) = 1 + T(n-1)$; $T(0) = 1$
 ,
 Q: El siguiente programa resuelve el problema de cortar un tubo de longitud $n$ en segmentos de longitud entera entre 1 y $n$ de manera que se maximice el precio de acuerdo con una tabla $p$ que da el precio para cada longitud, pero falta un trozo. ¿Qué debería ir en lugar de XXXXXXX?
 ```cpp
-int tube_cut(const vector<int> &p, const int n) {
+int tube_cut(const vector<int>& p, const int n) {
   if (n == 0)
     return 0;
   int q = numeric_limits<int>::lowest();
@@ -6183,7 +6207,7 @@ O: Ambos por igual
 ,
 Q: ¿A qué esquema de entre los estudiados pertenece la siguiente función?
 ```cpp
-void g(vector<unsigned> &v, unsigned j) {
+void g(vector<unsigned>& v, unsigned j) {
   if (j == v.size())
     return;
   for (unsigned i = j; i < v.size(); i++) {
@@ -6514,7 +6538,7 @@ O: Para obtener cotas optimistas
 ,
 Q: Se pretende obtener la complejidad temporal en el caso más desfavorable de la siguiente función.
 ```cpp
-int exa(vector<int> &v) {
+int exa(vector<int>& v) {
   int i, sum = 0, n = v.size();
   if (n > 0) {
     int j = n;
@@ -6611,7 +6635,7 @@ O: Divide y vencerás.
 ,
 Q: Dada la siguiente función:
 ```cpp
-int exa(string &cad, int pri, int ult) {
+int exa(string& cad, int pri, int ult) {
   if (pri >= ult)
     return 1;
   else if (cad[pri] == cad[ult])
@@ -6918,7 +6942,7 @@ Q: Para resolver la versión general del problema del laberinto mediante vuelta 
 ```cpp
 using Maze = vector<vector<bool>>;
 using Point = tuple<size_t, size_t>;
-size_t estimator(const Maze &maze, const Point &p) {
+size_t estimator(const Maze& maze, const Point& p) {
   return max(maze.size() - get<0>(p), maze[0].size() - get<1>(p)) - 1;
 }
 ```
@@ -7102,8 +7126,11 @@ O: Que es una cota optimista correcta y además puede obtenerse con complejidad 
 ,
 Q: ¿Qué inconveniente presenta la siguiente función?
 ```cpp
-void maze(const Maze &maze, vector<vector<bool>> &visited, Point &currentPoint,
-          size_t currentLength, size_t &currentBestLength) {
+void maze(const Maze& maze,
+          vector<vector<bool>>& visited,
+          Point& currentPoint,
+          size_t currentLength,
+          size_t& currentBestLength) {
   if (currentPoint == maze.exit()) {
     currentBestLength = min(currentBestLength, currentLength);
     return;
@@ -7430,7 +7457,7 @@ O: Como la distancia está elevada al cuadrado, esta función no se puede calcul
 ,
 Q: En cuanto a la complejidad temporal de la siguiente función, ¿cuál de las siguientes formulaciones expresa mejor su complejidad en el peor de los casos?
 ```cpp
-int f(vector<int> &v) {
+int f(vector<int>& v) {
   int n = v.size(), i = 2, k = 0;
   while (i < n) {
     int j = i;
@@ -7532,8 +7559,11 @@ O: Que no se cumple la propiedad de subestructura óptima.
 Q: Dado el problema del encaminamiento óptimo (versión simplificada), la siguiente función pretende encontrar la mejor ubicación de las puertas de enlace haciendo uso del almacén $M$. ¿Es correcta?
 Nota: la función `pair<int, double>ogw(...)` devuelve, respectivamente, la mejor ubicación de puerta de enlace entre dos nodos; y el tráfico asociado a esa ubicación de la puerta de enlace)
 ```cpp
-double met_naive(vector<int> &M, const vector<double> &d,
-                 const vector<double> &c, int n, int m) {
+double met_naive(vector<int>& M,
+                 const vector<double>& d,
+                 const vector<double>& c,
+                 int n,
+                 int m) {
   double best_traffic;
   int best_gw;
   if (m == 1) {
@@ -7596,7 +7626,7 @@ O: Una cota optimista, es decir, una hoja del árbol de búsqueda situada más a
 ,
 Q: En cuanto a la complejidad temporal de la siguiente función, ¿qué podemos decir acerca del mejor de los casos?
 ```cpp
-int f(vector<int> &v) {
+int f(vector<int>& v) {
   int n = v.size(), i = 2, k = 0;
   while (i < n) {
     int j = i;
