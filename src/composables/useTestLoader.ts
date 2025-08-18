@@ -8,7 +8,7 @@ export class TestLoader {
     let questionId = 1
 
     for (let i = 0; i < chunks.length; i++) {
-      const lines = chunks[i].split("\n").filter(Boolean)
+      const lines = chunks[i]!.split("\n").filter(Boolean)
 
       let questionText = ""
       let correctAnswerIndex = -1
@@ -20,7 +20,7 @@ export class TestLoader {
       let tags: string[] = []
 
       for (let j = 0; j < lines.length; j++) {
-        const line = lines[j]
+        const line = lines[j]!
 
         if (line.startsWith("O:")) {
           options.push(line.substring(2))
