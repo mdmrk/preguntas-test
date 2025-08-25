@@ -125,7 +125,8 @@ const shuffledToOriginalIndex = computed(() => {
 
 const getInitialSelectedOption = () => {
   if (props.answered) {
-    return originalToShuffledIndex.value[props.question.correctAnswer] ?? null
+    const mappedIndex = originalToShuffledIndex.value[props.question.correctAnswer]
+    return mappedIndex !== undefined ? mappedIndex : null
   }
   return null
 }
@@ -199,6 +200,7 @@ const selectAnswer = (shuffledIndex: number) => {
   answered.value = true
 
   const originalIndex = shuffledToOriginalIndex.value[shuffledIndex]
+  if (originalIndex === undefined) return
 
   emit("answered", {
     questionId: props.question.id,

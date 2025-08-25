@@ -123,11 +123,25 @@ const availableTags = computed(() => {
   }
 
   return Array.from(tags).sort((a, b) => {
-    const [monthA, yearA] = a.split(" ")
-    const [monthB, yearB] = b.split(" ")
+    const partsA = a.split(" ")
+    const partsB = b.split(" ")
 
-    const dateA = new Date(parseInt(yearA), monthMapping[monthA] || 0)
-    const dateB = new Date(parseInt(yearB), monthMapping[monthB] || 0)
+    if (partsA.length < 2 || partsB.length < 2) {
+      return a.localeCompare(b)
+    }
+
+    const [monthA, yearA] = partsA
+    const [monthB, yearB] = partsB
+
+    const monthIndexA = monthMapping[monthA]
+    const monthIndexB = monthMapping[monthB]
+
+    if (monthIndexA === undefined || monthIndexB === undefined) {
+      return a.localeCompare(b)
+    }
+
+    const dateA = new Date(parseInt(yearA), monthIndexA)
+    const dateB = new Date(parseInt(yearB), monthIndexB)
 
     return dateB.getTime() - dateA.getTime()
   })
