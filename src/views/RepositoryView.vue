@@ -126,12 +126,21 @@ const availableTags = computed(() => {
     const partsA = a.split(" ")
     const partsB = b.split(" ")
 
-    if (partsA.length < 2 || partsB.length < 2) {
+    if (
+      partsA.length < 2 ||
+      partsB.length < 2 ||
+      !partsA[0] ||
+      !partsA[1] ||
+      !partsB[0] ||
+      !partsB[1]
+    ) {
       return a.localeCompare(b)
     }
 
-    const [monthA, yearA] = partsA
-    const [monthB, yearB] = partsB
+    const monthA = partsA[0]
+    const yearA = partsA[1]
+    const monthB = partsB[0]
+    const yearB = partsB[1]
 
     const monthIndexA = monthMapping[monthA]
     const monthIndexB = monthMapping[monthB]

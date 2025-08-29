@@ -12,8 +12,10 @@ import MoonIcon from "@/components/icons/MoonIcon.vue"
 import SunIcon from "@/components/icons/SunIcon.vue"
 import { onMounted, ref } from "vue"
 
-const currentTheme = ref<string>("device")
 const themes = ["light", "dark", "device"] as const
+type Theme = (typeof themes)[number]
+
+const currentTheme = ref<Theme>("device")
 
 const getSystemPreference = () => {
   return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
@@ -35,7 +37,7 @@ const loadHighlightTheme = (isDark: boolean) => {
   document.head.appendChild(link)
 }
 
-const applyTheme = (theme: string) => {
+const applyTheme = (theme: Theme) => {
   let actualTheme = theme
   if (theme === "device") {
     actualTheme = getSystemPreference()
@@ -58,9 +60,13 @@ const applyTheme = (theme: string) => {
   }
 }
 
+const isValidTheme = (theme: string): theme is Theme => {
+  return themes.includes(theme as Theme)
+}
+
 const setupTheme = () => {
   const savedTheme = localStorage.getItem("theme")
-  if (savedTheme && themes.includes(savedTheme as any)) {
+  if (savedTheme && isValidTheme(savedTheme)) {
     currentTheme.value = savedTheme
   } else {
     currentTheme.value = "device"
@@ -69,10 +75,13 @@ const setupTheme = () => {
 }
 
 const cycleTheme = () => {
-  const currentIndex = themes.indexOf(currentTheme.value as any)
+  const currentIndex = themes.indexOf(currentTheme.value)
   const nextIndex = (currentIndex + 1) % themes.length
-  currentTheme.value = themes[nextIndex]
-  applyTheme(currentTheme.value)
+  const nextTheme = themes[nextIndex]
+  if (nextTheme) {
+    currentTheme.value = nextTheme
+    applyTheme(currentTheme.value)
+  }
 }
 
 onMounted(() => {

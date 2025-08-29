@@ -9,12 +9,18 @@ import katex from "katex"
 import { computed } from "vue"
 
 interface Props {
-  text: string
+  text?: string
 }
 
-const props = defineProps<Props>()
+const props = withDefaults(defineProps<Props>(), {
+  text: ""
+})
 
 const renderedText = computed(() => {
+  if (!props.text) {
+    return ""
+  }
+
   try {
     let result = props.text
 
