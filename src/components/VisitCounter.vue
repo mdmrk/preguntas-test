@@ -1,6 +1,6 @@
 <template>
-  <div class="text-sm text-gray-600 my-4">
-    <span v-show="!loading">{{ visitCount }} visitas</span>
+  <div class="text-sm text-gray-600 mb-4">
+    <span v-show="!loading">Visitas: {{ visitCount }}</span>
   </div>
 </template>
 

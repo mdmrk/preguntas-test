@@ -12,5 +12,5 @@ import { RouterView } from "vue-router"
     <ThemeManager />
   </header>
   <RouterView />
-  <footer class="flex justify-between"><LastUpdated /><VisitCounter /></footer>
+  <footer class="flex flex-col"><LastUpdated /><VisitCounter /></footer>
 </template>
