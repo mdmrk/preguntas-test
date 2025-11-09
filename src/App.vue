@@ -2,8 +2,6 @@
 import HomeButton from "@/components/HomeButton.vue"
 import LastUpdated from "@/components/LastUpdated.vue"
 import ThemeManager from "@/components/ThemeManager.vue"
-import VisitCounter from "@/components/VisitCounter.vue"
-import { RouterView } from "vue-router"
 </script>
 
 <template>
@@ -12,5 +10,5 @@ import { RouterView } from "vue-router"
     <ThemeManager />
   </header>
   <RouterView />
-  <footer class="flex flex-col"><LastUpdated /><VisitCounter /></footer>
+  <footer class="flex flex-col"><LastUpdated /></footer>
 </template>
