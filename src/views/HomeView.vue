@@ -18,6 +18,10 @@ import MainButton from "@/components/MainButton.vue"
       <MainButton id="ped" bg="gradient-amber" text="PED" />
       <MainButton id="gpi" bg="gradient-green" text="GPI" />
       <MainButton id="hada" bg="gradient-indigo" text="HADA" />
+      <MainButton bg="gradient-lime" class="relative" text="MADS">
+        <MainButton id="mads-parcial-1" bg="gradient-lime" text="parcial 1" />
+        <MainButton id="mads-parcial-2" bg="gradient-lime" text="parcial 2" />
+      </MainButton>
       <MainButton id="dca" bg="gradient-teal" text="DCA" />
     </nav>
   </main>
