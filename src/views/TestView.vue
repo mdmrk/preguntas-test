@@ -115,7 +115,8 @@
 <script setup lang="ts">
 import LoadingSpinnerIcon from "@/components/icons/LoadingSpinnerIcon.vue"
 import TestQuestion from "@/components/TestQuestion.vue"
-import { TestLoader } from "@/composables/useTestLoader"
+import type { Question } from "@/types/test"
+import { shuffle } from "@/utils"
 import "katex/dist/katex.min.css"
 import { computed, onMounted, ref } from "vue"
 import { useRoute } from "vue-router"
@@ -128,7 +129,7 @@ interface Answer {
 
 const doNotShuffle: string[] = ["ped"]
 const route = useRoute()
-const testContent = ref("")
+const rawQuestions = ref<Question[]>([])
 const loading = ref(true)
 const currentQuestionIndex = ref(0)
 const answers = ref<Answer[]>([])
@@ -136,15 +137,24 @@ const testFinished = ref(false)
 const testId = computed(() => route.params.id as string)
 const year = computed(() => route.params.year as string | undefined)
 
-const loader = new TestLoader()
-
 const questions = computed(() => {
-  if (!testContent.value) return []
-  const allQuestions = loader.parseTestText(testContent.value)
-  if (year.value && year.value.trim() !== "") {
-    return allQuestions.filter((q) => q.tags && q.tags.some((tag) => tag.includes(year.value!)))
+  if (rawQuestions.value.length === 0) return []
+
+  let q = [...rawQuestions.value]
+  const shouldShuffle = !doNotShuffle.some((str) =>
+    testTitle.value.toLowerCase().includes(str.toLowerCase())
+  )
+
+  if (shouldShuffle) {
+    q = shuffle(q)
   }
-  return allQuestions
+
+  if (year.value && year.value.trim() !== "") {
+    return q.filter(
+      (question) => question.tags && question.tags.some((tag: string) => tag.includes(year.value!))
+    )
+  }
+  return q
 })
 
 const currentQuestion = computed(() => questions.value[currentQuestionIndex.value] || null)
@@ -214,8 +224,8 @@ const restartTest = () => {
 
 const loadTestData = async () => {
   try {
-    const module = await import(`@/data/${testId.value}.txt?raw`)
-    testContent.value = module.default
+    const module = await import(`@/data/${testId.value}.json`)
+    rawQuestions.value = module.default
   } catch (error) {
     console.error("Failed to load test:", error)
   } finally {

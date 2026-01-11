@@ -83,23 +83,16 @@
 <script setup lang="ts">
 import LoadingSpinnerIcon from "@/components/icons/LoadingSpinnerIcon.vue"
 import TestQuestion from "@/components/TestQuestion.vue"
-import { TestLoader } from "@/composables/useTestLoader"
 import type { Question } from "@/types/test"
 import "katex/dist/katex.min.css"
 import { computed, onMounted, ref } from "vue"
 import { useRoute } from "vue-router"
 
 const route = useRoute()
-const testContent = ref("")
+const questions = ref<Question[]>([])
 const loading = ref(true)
 const selectedTags = ref<string[]>([])
 const testId = computed(() => route.params.id as string)
-const loader = new TestLoader()
-
-const questions = computed(() => {
-  if (!testContent.value) return []
-  return loader.parseTestText(testContent.value, false)
-})
 
 const availableTags = computed(() => {
   const tags = new Set<string>()
@@ -200,8 +193,8 @@ const testTitle = computed(() => {
 
 const loadTestData = async () => {
   try {
-    const module = await import(`@/data/${testId.value}.txt?raw`)
-    testContent.value = module.default
+    const module = await import(`@/data/${testId.value}.json`)
+    questions.value = module.default
   } catch (error) {
     console.error("Failed to load test:", error)
   } finally {
