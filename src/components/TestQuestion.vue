@@ -1,5 +1,5 @@
 <template>
-  <div v-show="question.image !== undefined" class="mb-6">
+  <div v-if="question.image" class="mb-6">
     <img :src="'/test/' + question.image" />
   </div>
 
