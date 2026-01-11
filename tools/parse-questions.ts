@@ -96,7 +96,7 @@ async function main() {
       const outputName = parse(file).name + ".json"
       const outputPath = join(DATA_DIR, outputName)
 
-      await writeFile(outputPath, JSON.stringify(questions, null, 2))
+      await writeFile(outputPath, JSON.stringify(questions))
       console.log(`Generated ${outputName} (${questions.length} questions)`)
     }
 
