@@ -28,7 +28,7 @@
       >
         <CaretUpDownIcon class="w-5" />
       </div>
-      <div class="md:translate-y-7 translate-y-5 truncate">{{ props.text }}</div>
+      <div class="md:translate-y-7 translate-y-5 truncate text-shadow-strong">{{ props.text }}</div>
     </button>
     <div class="flex flex-col items-center w-full space-y-3 mt-3" v-if="hasSlot && toggle">
       <slot />
@@ -43,7 +43,7 @@
           props.bg
         ]"
       >
-        <div class="md:translate-y-6 translate-y-3.5">{{ year }}</div>
+        <div class="md:translate-y-6 translate-y-3.5 text-shadow-strong">{{ year }}</div>
       </button>
     </div>
   </div>
@@ -146,5 +146,9 @@ const navigateToYear = (year: string) => {
 }
 .gradient-rose {
   background: linear-gradient(135deg, #f43f5e, #e11d48);
+}
+
+.text-shadow-strong {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 </style>
