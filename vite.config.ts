@@ -3,6 +3,7 @@ import vue from "@vitejs/plugin-vue"
 import { fileURLToPath, URL } from "node:url"
 import { visualizer } from "rollup-plugin-visualizer"
 import { defineConfig } from "vite"
+import viteCompression from "vite-plugin-compression"
 import vueDevTools from "vite-plugin-vue-devtools"
 
 export default defineConfig({
@@ -17,6 +18,11 @@ export default defineConfig({
     }),
     vueDevTools(),
     tailwindcss(),
+    viteCompression(),
+    viteCompression({
+      algorithm: "brotliCompress",
+      ext: ".br"
+    }),
     visualizer({
       filename: "dist/stats.html",
       gzipSize: true,
@@ -29,12 +35,15 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url))
     }
   },
-  esbuild: {
-    drop: process.env.NODE_ENV === "production" ? ["console", "debugger"] : []
-  },
   build: {
     target: "esnext",
-    minify: "esbuild",
+    minify: "terser",
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true
+      }
+    },
     cssMinify: "esbuild",
     rollupOptions: {
       output: {
