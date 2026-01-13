@@ -118,7 +118,7 @@ import TestQuestion from "@/components/TestQuestion.vue"
 import type { Question } from "@/types/test"
 import { shuffle } from "@/utils"
 import "katex/dist/katex.min.css"
-import { computed, onMounted, ref } from "vue"
+import { computed, markRaw, onMounted, ref, shallowRef } from "vue"
 import { useRoute } from "vue-router"
 
 interface Answer {
@@ -129,7 +129,7 @@ interface Answer {
 
 const doNotShuffle: string[] = ["ped"]
 const route = useRoute()
-const rawQuestions = ref<Question[]>([])
+const rawQuestions = shallowRef<Question[]>([])
 const loading = ref(true)
 const currentQuestionIndex = ref(0)
 const answers = ref<Answer[]>([])
@@ -225,7 +225,7 @@ const restartTest = () => {
 const loadTestData = async () => {
   try {
     const module = await import(`@/data/${testId.value}.json`)
-    rawQuestions.value = module.default
+    rawQuestions.value = markRaw(module.default)
   } catch (error) {
     console.error("Failed to load test:", error)
   } finally {
