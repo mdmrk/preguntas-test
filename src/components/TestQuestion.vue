@@ -4,7 +4,7 @@
   </div>
 
   <div class="mb-6">
-    <div class="text-base font-semibold mb-3 flex-1">
+    <div class="text-base font-semibold mb-3 flex-1 overflow-x-auto">
       <TextRenderer :text="question.question" />
     </div>
   </div>
@@ -25,9 +25,12 @@
           <div v-if="shouldShowRadioDot(shuffledIndex)" class="w-2 h-2 rounded-full bg-white" />
         </div>
 
-        <span class="text-base font-medium flex-1" :class="getTextClasses(shuffledIndex)">
+        <div
+          class="text-base font-medium flex-1 min-w-0 overflow-x-auto"
+          :class="getTextClasses(shuffledIndex)"
+        >
           <TextRenderer :text="option" />
-        </span>
+        </div>
 
         <div v-if="isCorrectOption(shuffledIndex)" class="ml-auto">
           <CheckIcon class="w-5 text-green-600 dark:text-green-400" />
