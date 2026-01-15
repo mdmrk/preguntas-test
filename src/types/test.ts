@@ -5,5 +5,4 @@ export interface Question {
   correctAnswer: number
   image?: string
   tags: string[]
-  explanation?: string
 }

@@ -40,17 +40,6 @@
     </div>
   </div>
 
-  <div v-if="answered && question.explanation" class="mb-6">
-    <div
-      class="p-4 bg-blue-50 dark:bg-blue-900/50 border border-blue-200 dark:border-blue-700 rounded-lg"
-    >
-      <h4 class="font-semibold mb-2 text-blue-900 dark:text-blue-100">Explicación</h4>
-      <div class="text-blue-800 dark:text-blue-200">
-        <TextRenderer :text="question.explanation" />
-      </div>
-    </div>
-  </div>
-
   <div class="flex justify-center items-center mt-6 space-x-3">
     <div class="relative group">
       <button

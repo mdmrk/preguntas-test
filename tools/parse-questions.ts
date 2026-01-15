@@ -10,7 +10,6 @@ interface Question {
   correctAnswer: number
   image?: string
   tags: string[]
-  explanation?: string
 }
 
 function parseTestText(text: string): Question[] {
