@@ -44,26 +44,14 @@
   </div>
 
   <div class="flex justify-center items-center mt-6 space-x-3">
-    <div class="relative group">
-      <button
-        @click="copyQuestion"
-        class="nav-button"
-        :aria-label="copied ? 'Pregunta copiada' : 'Copiar pregunta'"
-      >
-        <CopiedIcon v-if="copied" class="w-5 h-5 text-green-600 dark:text-green-400" />
-        <CopyIcon v-else class="w-5 h-5" />
-      </button>
-
-      <div
-        class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs font-medium text-white bg-gray-900 rounded shadow-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none dark:bg-gray-700"
-        :class="{ '!opacity-100': copied }"
-      >
-        {{ copied ? "¡Copiada!" : "Copiar pregunta" }}
-        <div
-          class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-900 dark:border-t-gray-700"
-        ></div>
-      </div>
-    </div>
+    <button
+      @click="copyQuestion"
+      class="nav-button"
+      :aria-label="copied ? 'Pregunta copiada' : 'Copiar pregunta'"
+    >
+      <CopiedIcon v-if="copied" class="w-5 h-5 text-green-600 dark:text-green-400" />
+      <CopyIcon v-else class="w-5 h-5" />
+    </button>
 
     <button
       v-show="answered && !readOnly"
