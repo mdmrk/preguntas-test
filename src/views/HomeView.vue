@@ -16,9 +16,6 @@ useHead({
 
 <template>
   <main>
-    <h1 class="text-3xl font-bold text-center mb-6 text-gray-800 dark:text-gray-100">
-      Preguntas Test
-    </h1>
     <nav class="flex flex-col items-center w-full space-y-3">
       <MainButton id="redes" bg="gradient-orange" text="REDES" years="2025" />
       <MainButton bg="gradient-red" class="relative" text="ADA">
