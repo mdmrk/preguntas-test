@@ -84,6 +84,7 @@
 import LoadingSpinnerIcon from "@/components/icons/LoadingSpinnerIcon.vue"
 import TestQuestion from "@/components/TestQuestion.vue"
 import type { Question } from "@/types/test"
+import { useHead } from "@unhead/vue"
 import "katex/dist/katex.min.css"
 import { computed, markRaw, onMounted, ref, shallowRef } from "vue"
 import { useRoute } from "vue-router"
@@ -189,6 +190,16 @@ const testTitle = computed(() => {
     })
     .join(" ")
   return base
+})
+
+useHead({
+  title: computed(() => `Repositorio - ${testTitle.value}`),
+  meta: [
+    {
+      name: "description",
+      content: computed(() => `Explora las preguntas del repositorio de ${testTitle.value}.`)
+    }
+  ]
 })
 
 const loadTestData = async () => {

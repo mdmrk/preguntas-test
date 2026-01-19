@@ -117,6 +117,7 @@ import LoadingSpinnerIcon from "@/components/icons/LoadingSpinnerIcon.vue"
 import TestQuestion from "@/components/TestQuestion.vue"
 import type { Question } from "@/types/test"
 import { shuffle } from "@/utils"
+import { useHead } from "@unhead/vue"
 import "katex/dist/katex.min.css"
 import { computed, markRaw, onMounted, ref, shallowRef } from "vue"
 import { useRoute } from "vue-router"
@@ -173,6 +174,16 @@ const testTitle = computed(() => {
     base += ` ${year.value}`
   }
   return base
+})
+
+useHead({
+  title: computed(() => testTitle.value),
+  meta: [
+    {
+      name: "description",
+      content: computed(() => `Practica preguntas de examen de ${testTitle.value}.`)
+    }
+  ]
 })
 
 const stats = computed(() => {

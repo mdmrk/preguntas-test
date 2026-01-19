@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "generate-questions": "bun tools/parse-questions.ts",
-    "build": "bun run generate-questions && VITE_BUILD_TIME=$(date -u +%Y-%m-%dT%H:%M:%S.%3NZ) run-p type-check \"build-only {@}\" --",
+    "generate-sitemap": "bun tools/generate-sitemap.ts",
+    "build": "bun run generate-questions && bun run generate-sitemap && VITE_BUILD_TIME=$(date -u +%Y-%m-%dT%H:%M:%S.%3NZ) run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
@@ -16,6 +17,7 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
     "@types/katex": "^0.16.8",
+    "@unhead/vue": "^2.1.2",
     "highlight.js": "^11.11.1",
     "katex": "^0.16.27",
     "prettier-plugin-organize-imports": "^4.3.0",

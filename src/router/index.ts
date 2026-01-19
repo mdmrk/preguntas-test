@@ -33,26 +33,4 @@ const router = createRouter({
   ]
 })
 
-router.beforeEach((to, _, next) => {
-  const baseTitle = to.name === "test" ? "Preguntas" : "Repositorio"
-
-  if (to.name === "test" || to.name === "repository") {
-    const id = to.params.id as string
-    const formattedTitle = id
-      .split(/[-_]/)
-      .map((word, index) => {
-        if (index === 0) {
-          return word.toUpperCase()
-        }
-        return word.charAt(0).toUpperCase() + word.slice(1)
-      })
-      .join(" ")
-    document.title = `${baseTitle} - ${formattedTitle}`
-  } else {
-    document.title = "Preguntas Test"
-  }
-
-  next()
-})
-
 export default router
