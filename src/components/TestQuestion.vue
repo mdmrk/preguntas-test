@@ -13,7 +13,7 @@
     <div
       v-for="(option, shuffledIndex) in shuffledOptions"
       :key="shuffledIndex"
-      class="flex items-center p-4 rounded-lg border outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
+      class="flex items-center p-4 rounded-lg border outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
       :class="getOptionClasses(shuffledIndex)"
       @click="selectAnswer(shuffledIndex)"
       @keydown.enter.prevent="selectAnswer(shuffledIndex)"
