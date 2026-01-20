@@ -1,6 +1,6 @@
 <template>
   <div v-if="question.image" class="mb-6">
-    <img :src="'/test/' + question.image" />
+    <img :src="'/test/' + question.image" :alt="`Imagen para la pregunta: ${question.question}`" />
   </div>
 
   <div class="mb-6">
@@ -9,18 +9,24 @@
     </div>
   </div>
 
-  <div class="space-y-3">
+  <div class="space-y-3" role="radiogroup" aria-label="Opciones de respuesta">
     <div
       v-for="(option, shuffledIndex) in shuffledOptions"
       :key="shuffledIndex"
-      class="flex items-center p-4 rounded-lg border"
+      class="flex items-center p-4 rounded-lg border outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
       :class="getOptionClasses(shuffledIndex)"
       @click="selectAnswer(shuffledIndex)"
+      @keydown.enter.prevent="selectAnswer(shuffledIndex)"
+      @keydown.space.prevent="selectAnswer(shuffledIndex)"
+      role="radio"
+      :aria-checked="selectedOption === shuffledIndex"
+      :tabindex="answered ? -1 : 0"
     >
       <div class="flex items-center w-full">
         <div
           class="w-4 h-4 rounded-full border-2 mr-4 flex items-center justify-center"
           :class="getRadioClasses(shuffledIndex)"
+          aria-hidden="true"
         >
           <div v-if="shouldShowRadioDot(shuffledIndex)" class="w-2 h-2 rounded-full bg-white" />
         </div>
@@ -33,11 +39,11 @@
         </div>
 
         <div v-if="isCorrectOption(shuffledIndex)" class="ml-auto">
-          <CheckIcon class="w-5 text-green-600 dark:text-green-400" />
+          <CheckIcon class="w-5 text-green-600 dark:text-green-400" aria-label="Correcta" />
         </div>
 
         <div v-if="isSelectedIncorrectOption(shuffledIndex)" class="ml-auto">
-          <XIcon class="w-5 text-red-600 dark:text-red-400" />
+          <XIcon class="w-5 text-red-600 dark:text-red-400" aria-label="Incorrecta" />
         </div>
       </div>
     </div>

@@ -40,7 +40,14 @@
           </div>
         </div>
 
-        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 flex overflow-hidden">
+        <div
+          class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 flex overflow-hidden"
+          role="progressbar"
+          aria-label="Progreso del test"
+          :aria-valuenow="Math.round(stats.percentage)"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
           <div
             v-if="stats.answered > 0"
             class="bg-green-500 dark:bg-green-400 transition-all duration-300"

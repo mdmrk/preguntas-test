@@ -1,35 +1,49 @@
 <template>
   <div class="w-full">
-    <button
-      @click="handleClick"
+    <div
       :class="[
-        'w-full md:h-26 h-18 font-black text-gray-50 md:text-7xl text-5xl text-left overflow-clip pl-4 rounded-3xl md:rounded-4xl cursor-pointer hover:scale-105 hover:shadow-2xl relative group duration-100 ease-in',
+        'w-full md:h-26 h-18 text-left overflow-clip pl-4 rounded-3xl md:rounded-4xl relative group duration-100 ease-in hover:scale-105 hover:shadow-2xl',
         props.bg
       ]"
     >
-      <div v-if="props.id !== undefined">
-        <div
-          @click.prevent.stop="navigateToRepository"
-          class="absolute right-0 top-0 h-full w-16 flex items-center justify-center cursor-pointer rounded-r-3xl md:rounded-r-4xl bg-white/10 hover:bg-white/25 border-l border-white/20 z-10"
+      <button
+        @click="handleClick"
+        class="absolute inset-0 w-full h-full text-left cursor-pointer focus:outline-none focus:ring-4 focus:ring-white/50 rounded-3xl md:rounded-4xl z-0"
+        :aria-label="props.text"
+      >
+        <span
+          class="block md:translate-y-7 translate-y-5 truncate text-shadow-strong font-black text-gray-50 md:text-7xl text-5xl w-full pl-4"
         >
-          <ListCheckIcon class="w-5" />
-        </div>
-        <div
+          {{ props.text }}
+        </span>
+      </button>
+
+      <div v-if="props.id">
+        <button
+          @click.stop="navigateToRepository"
+          class="absolute right-0 top-0 h-full w-16 flex items-center justify-center cursor-pointer rounded-r-3xl md:rounded-r-4xl bg-white/10 hover:bg-white/25 border-l border-white/20 z-10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+          aria-label="Ir al repositorio"
+        >
+          <ListCheckIcon class="w-5 text-gray-50" />
+        </button>
+        <button
           v-show="props.years"
-          @click.prevent.stop="toggleYears = !toggleYears"
-          class="absolute right-16 top-0 h-full w-16 flex items-center justify-center cursor-pointer bg-white/10 hover:bg-white/25 border-l border-white/20 z-10"
+          @click.stop="toggleYears = !toggleYears"
+          class="absolute right-16 top-0 h-full w-16 flex items-center justify-center cursor-pointer bg-white/10 hover:bg-white/25 border-l border-white/20 z-10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+          :aria-expanded="toggleYears"
+          aria-label="Mostrar años anteriores"
         >
-          <CalendarIcon class="w-5" />
-        </div>
+          <CalendarIcon class="w-5 text-gray-50" />
+        </button>
       </div>
       <div
         v-else-if="hasSlot"
-        class="absolute right-0 top-0 h-full w-16 flex items-center justify-center cursor-pointer rounded-r-3xl md:rounded-r-4xl"
+        class="absolute right-0 top-0 h-full w-16 flex items-center justify-center pointer-events-none rounded-r-3xl md:rounded-r-4xl z-10"
       >
-        <CaretUpDownIcon class="w-5" />
+        <CaretUpDownIcon class="w-5 text-gray-50" />
       </div>
-      <div class="md:translate-y-7 translate-y-5 truncate text-shadow-strong">{{ props.text }}</div>
-    </button>
+    </div>
+
     <div class="flex flex-col items-center w-full space-y-3 mt-3" v-if="hasSlot && toggle">
       <slot />
     </div>
@@ -39,7 +53,7 @@
         :key="year"
         @click="navigateToYear(year)"
         :class="[
-          'w-full md:h-20 h-12 font-black text-gray-50 md:text-5xl text-3xl text-left overflow-clip px-4 rounded-2xl md:rounded-3xl cursor-pointer hover:scale-105 hover:shadow-2xl relative group duration-100 ease-in',
+          'w-full md:h-20 h-12 font-black text-gray-50 md:text-5xl text-3xl text-left overflow-clip px-4 rounded-2xl md:rounded-3xl cursor-pointer hover:scale-105 hover:shadow-2xl relative group duration-100 ease-in focus:outline-none focus:ring-4 focus:ring-offset-2',
           props.bg
         ]"
       >
