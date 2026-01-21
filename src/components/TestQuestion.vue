@@ -23,12 +23,29 @@
       :tabindex="answered ? -1 : 0"
     >
       <div class="flex items-center w-full">
-        <div
-          class="w-4 h-4 rounded-full border-2 mr-4 flex items-center justify-center"
-          :class="getRadioClasses(shuffledIndex)"
-          aria-hidden="true"
-        >
-          <div v-if="shouldShowRadioDot(shuffledIndex)" class="w-2 h-2 rounded-full bg-white" />
+        <div class="mr-4 flex items-center justify-center min-w-[1.25rem]">
+          <div
+            v-if="!answered"
+            class="w-4 h-4 rounded-full border-2 flex items-center justify-center"
+            :class="getRadioClasses(shuffledIndex)"
+            aria-hidden="true"
+          >
+            <div v-if="shouldShowRadioDot(shuffledIndex)" class="w-2 h-2 rounded-full bg-white" />
+          </div>
+
+          <template v-else>
+            <CheckIcon
+              v-if="isCorrectOption(shuffledIndex)"
+              class="w-5 text-green-600 dark:text-green-400"
+              aria-label="Correcta"
+            />
+            <XIcon
+              v-else-if="isSelectedIncorrectOption(shuffledIndex)"
+              class="w-5 text-red-600 dark:text-red-400"
+              aria-label="Incorrecta"
+            />
+            <div v-else class="w-5" aria-hidden="true"></div>
+          </template>
         </div>
 
         <div
@@ -36,14 +53,6 @@
           :class="getTextClasses(shuffledIndex)"
         >
           <TextRenderer :text="option" />
-        </div>
-
-        <div v-if="isCorrectOption(shuffledIndex)" class="ml-auto">
-          <CheckIcon class="w-5 text-green-600 dark:text-green-400" aria-label="Correcta" />
-        </div>
-
-        <div v-if="isSelectedIncorrectOption(shuffledIndex)" class="ml-auto">
-          <XIcon class="w-5 text-red-600 dark:text-red-400" aria-label="Incorrecta" />
         </div>
       </div>
     </div>
@@ -156,12 +165,15 @@ const getOptionClasses = (shuffledIndex: number) => {
     ? "cursor-default"
     : "cursor-pointer hover:bg-blue-50 hover:border-blue-300 hover:shadow-md dark:hover:bg-blue-900/10 dark:hover:border-blue-600"
 
+  const isSelected = selectedOption.value === shuffledIndex
+  const ringClass = answered.value && isSelected ? "ring-2" : ""
+
   if (isCorrectOption(shuffledIndex)) {
-    return `${baseClasses} bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-700`
+    return `${baseClasses} ${ringClass} ring-green-500 bg-green-100 border-green-500 dark:bg-green-900/30 dark:border-green-500 dark:ring-green-400`
   }
 
   if (isSelectedIncorrectOption(shuffledIndex)) {
-    return `${baseClasses} bg-red-50 border-red-200 dark:bg-red-900/20 dark:border-red-700`
+    return `${baseClasses} ${ringClass} ring-red-500 bg-red-100 border-red-500 dark:bg-red-900/30 dark:border-red-500 dark:ring-red-400`
   }
 
   return `${baseClasses} bg-gray-50 border-gray-200 dark:bg-gray-700 dark:border-gray-600`
