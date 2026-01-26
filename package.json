@@ -19,7 +19,7 @@
     "@types/katex": "^0.16.8",
     "@unhead/vue": "^2.1.2",
     "highlight.js": "^11.11.1",
-    "katex": "^0.16.27",
+    "katex": "^0.16.28",
     "prettier-plugin-organize-imports": "^4.3.0",
     "rollup-plugin-visualizer": "^6.0.5",
     "tailwindcss": "^4.1.18",
@@ -43,6 +43,6 @@
     "vite": "^7.3.1",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-vue-devtools": "^8.0.5",
-    "vue-tsc": "^3.2.3"
+    "vue-tsc": "^3.2.4"
   }
 }
