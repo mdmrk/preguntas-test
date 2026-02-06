@@ -10015,3 +10015,284 @@ O: La expiración del tiempo de espera de ACK de un paquete provoca la reducció
 O: La expiración del tiempo de espera de ACK de un paquete puede reducir la ventana de emisión del emisor del paquete.
 O: La ventana de recepción de un equipo se reduce al expirar los tiempos de espera de ACK en los envíos de paquetes del equipo.
 O: La ventana de recepción y la ventana de congestión de un equipo siempre tienen el mismo valor.
+,
+Q: Sobre el funcionamiento de una red de conmutación de paquetes con datagramas es cierto que:
+O: Los paquetes siempre emplean el mismo camino entre un origen y un destino.
+O: Es necesario un mecanismo para reordenar los paquetes que llegan al destino.
+O: Cada intercambio de datos entre dos equipos se identifica con un identificador de camino.
+O: Siempre se producen errores en el intercambio de paquetes entre dos equipos.
+A: 1
+C: Enero 2026
+,
+Q: ¿ En qué tipo de redes la multidifusión se lleva a cabo con la transmisión física de UN SOLO paquete ?
+O: Redes conmutación de paquetes con datagramas.
+O: Redes conmutación de paquetes con circuitos virtuales.
+O: Redes de difusión.
+O: Redes punto a punto.
+A: 2
+C: Enero 2026
+,
+Q: ¿ Qué característica NO es propia de las redes de conmutación de paquetes ?
+O: Colisiones en el medio físico compartido entre todos los equipos.
+O: Congestión en el encaminamiento de paquetes.
+O: Empleo de routers para encaminar paquetes entre un origen y un destino.
+O: Tolerancia a fallos en el medio físico en el intercambio de paquetes entre los equipos.
+A: 0
+C: Enero 2026
+,
+Q: En una arquitectura de red, cada capa n define:
+O: Al menos un protocolo de comunicación con la capa adyacente n-1.
+O: Al menos un protocolo de comunicación con la capa adyacente n+1.
+O: Al menos un protocolo de comunicación con la capa par n+1.
+O: Al menos un protocolo de comunicación con la capa par n.
+A: 3
+C: Enero 2026
+,
+Q: Sobre los paquetes generados en la capa n de una arquitectura de red es cierto que:
+O: Todos los paquetes incorporan siempre la cabecera de la capa n.
+O: Todos los paquetes incorporan siempre la cabecera de la capa n+1.
+O: Todos los paquetes incorporan siempre la cabecera de la capa n-1.
+O: Todas las respuestas anteriores son falsas.
+A: 0
+C: Enero 2026
+,
+Q: Si en un protocolo de la capa n el tamaño máximo de datos es X, la fragmentación de la información procedente de la capa n+1 se realiza:
+O: Cuando la cabecera de la capa n+1 excede del valor X.
+O: Cuando el paquete procedente de la capa n+1 excede el valor X.
+O: Cuando los datos en el paquete de la capa n+1 excede del valor X.
+O: Cuando el tamaño del paquete generado en el nivel n excede del valor X.
+A: 1
+C: Enero 2026
+,
+Q: ¿ Qué organismo lleva a cabo la definición de las normas RFC de Internet ?
+O: IRTF.
+O: IETF.
+O: IAB.
+O: IANA.
+A: 1
+C: Enero 2026
+,
+Q: ¿ Qué dispositivo de interconexión emplea las direcciones físicas de los equipos para el reenvío de paquetes entre segmentos de red ?
+O: Repetidor.
+O: Puente.
+O: Encaminador.
+O: Ningún dispositivo de interconexión emplea las direcciones físicas para el reenvío de paquetes.
+A: 1
+C: Enero 2026
+,
+Q: Sobre la transmisión de señales de datos a través de un medio físico es cierto que:
+O: Todos los medios físicos transmiten igual una misma señal de datos.
+O: Las señales transmitidas a diferentes velocidades siempre sufren los mismos errores.
+O: Las señales siempre presentarán errores en los datos si existe ruido en el medio físico.
+O: La existencia de errores en los datos depende de la velocidad de transmisión empleada.
+A: 3
+C: Enero 2026
+,
+Q: El valor del ancho de banda disponible en un medio físico depende de:
+O: La velocidad de transmisión empleada en las señales transmitidas.
+O: El nivel de ruido presente en el medio físico.
+O: Las características físicas del propio medio físico.
+O: Los datos existentes en las señales transmitidas.
+A: 2
+C: Enero 2026
+,
+Q: ¿ Qué tipo de señalización en banda base con codificación binaria emplea más niveles de tensión ?
+O: Codificación binaria con retorno a cero unipolar.
+O: Codificación binaria con retorno a cero bipolar.
+O: Codificación binaria sin retorno a cero bipolar.
+O: Todas las codificaciones binarias emplean el mismo número de niveles de tensión.
+A: 3
+C: Enero 2026
+,
+Q: ¿ En qué situación se emplea la modulación en la transmisión de datos ?
+O: Siempre que la información sean bits digitales.
+O: Cuando se emplea un medio físico analógico.
+O: Cuando las principales componentes frecuenciales de una señal están fuera del ancho de banda del medio físico.
+O: Cuando sea necesario transmitir señales de datos a una velocidad superior al teorema de Nyquist.
+A: 2
+C: Enero 2026
+,
+Q: ¿ Qué tipo de modulación permite su empleo en la multiplexión por división en el tiempo ?
+O: Modulación ASK.
+O: Modulación PSK.
+O: Modulación FSK.
+O: Modulación PCM.
+A: 3
+C: Enero 2026
+,
+Q: ¿ En qué tipo de cable par trenzado tiene menos efecto el ruido de impulso ?
+O: Cable STP.
+O: Cable UTP categoría 5.
+O: Cable UTP categoría 6.
+O: Cable UTP categoría 7.
+A: 0
+C: Enero 2026
+,
+Q: ¿ Qué tipo de fibra óptica presenta mayor limitación en la distancia máxima ?
+O: Fibra monomodo.
+O: Fibra multimodo de índice de salto.
+O: Fibra multimodo de índice gradual.
+O: Todas las fibras ópticas están normalizadas para su funcionamiento a 100 km de distancia.
+A: 1
+C: Enero 2026
+,
+Q: ¿ Con qué técnica se combinan varios haces de luz de datos en una fibra óptica ?
+O: Multiplexión intermodal.
+O: Multiplexión intramodal.
+O: Multiplexión WDM.
+O: Multiplexión FTTH.
+A: 2
+C: Enero 2026
+,
+Q: ¿ En qué tipo de comunicación inalámbrica se emplean señales portadoras de mayor valor de frecuencia ?
+O: Redes Wi-Fi.
+O: Redes satelitales.
+O: Transmisión de televisión.
+O: Transmisión de radio FM.
+A: 1
+C: Enero 2026
+,
+Q: ¿ Qué mecanismo detector de errores permite identificar la posición de 20 bits erróneos en un paquete ?
+O: Código CRC-16.
+O: Código CRC-32.
+O: Paridad impar.
+O: Ningún mecanismo detector de errores puede identificar los 20 bits erróneos en un paquete.
+A: 3
+C: Enero 2026
+,
+Q: Sobre los formatos de paquetes Ethernet IEEE 802.3 y Ethernet DIX es cierto que:
+O: Ambos formatos emplean la misma secuencia de sincronización.
+O: El formato Ethernet DIX permite paquetes Ethernet de mayor tamaño.
+O: El formato Ethernet IEEE 802.3 detecta errores en ráfaga de mayor longitud que Ethernet DIX.
+O: Ambos formatos de paquete emplean la cabecera LLC en los datos.
+A: 0
+C: Enero 2026
+,
+Q: Sobre el procedimiento de aprendizaje de un conmutador Ethernet es cierto que:
+O: Analiza la dirección MAC origen en los paquetes recibidos en un puerto del conmutador.
+O: Analiza la dirección MAC origen en los paquetes transmitidos en un puerto del conmutador.
+O: Analiza la dirección MAC destino en los paquetes recibidos en un puerto del conmutador.
+O: Analiza la dirección MAC destino en los paquetes transmitidos en un puerto del conmutador.
+A: 0
+C: Enero 2026
+,
+Q: ¿ Qué puertos de un conmutador están habilitados para el aprendizaje de la tabla CAM si se emplea el algoritmo Spanning Tree ?
+O: Sólo el puerto raíz.
+O: Sólo los puertos designados.
+O: Sólo los puertos raíces y los puertos designados.
+O: Todos los puertos activos del conmutador.
+A: 3
+C: Enero 2026
+,
+Q: ¿ En qué capa se define el tipo de señalización para transmitir los bits de los paquetes Ethernet ?
+O: MAC 802.3.
+O: MAC DIX.
+O: PMD.
+O: CS.
+A: 2
+C: Enero 2026
+,
+Q: ¿ Qué normativa Ethernet permite emplear el multiplexado por longitud de onda (WDM) ?
+O: Ethernet 10GBase-T.
+O: Ethernet 2.5GBase-T.
+O: Ethernet 40GBase-XX.
+O: La normativa Ethernet no emplea la multiplexión por longitud de onda.
+A: 2
+C: Enero 2026
+,
+Q: ¿ Cuál es el uso de los puertos troncales en los conmutadores VLAN ?
+O: La conexión de dispositivos que emplean el formato Ethernet DIX.
+O: Solamente para hacer el reenvío de paquetes de difusión a otros puertos troncales del mismo conmutador.
+O: La conexión de un router para tener conectividad con varias VLAN.
+O: La conexión de dispositivos que emplean el formato Ethernet IEEE 802.3.
+A: 2
+C: Enero 2026
+,
+Q: ¿ Qué mecanismo permite que un AP pueda detectar cualquier transmisión de cualquier equipo de una red inalámbrica ?
+O: CSMA-CD.
+O: CSMA-CA.
+O: CSMA-CA con RTS/CTS.
+O: CSMA-CA con polling.
+A: 2
+C: Enero 2026
+,
+Q: ¿ Qué tecnología Ethernet NO añade bits adicionales de sincronización en la transmisión de paquetes ?
+O: Ethernet 1000BaseT.
+O: Ethernet 1000BaseLX.
+O: Ethernet 100BaseTX.
+O: Ethernet 100BaseFX.
+A: 0
+C: Enero 2026
+,
+Q: ¿ Qué mecanismo de autenticación Wi-Fi es más resistente a ataques de fuerza bruta ?
+O: WPA-PSK.
+O: WPA2-PSK.
+O: WPA3-PSK.
+O: Los ataques de fuerza bruta no pueden determinar nunca la clave de autenticación.
+A: 2
+C: Enero 2026
+,
+Q: ¿ Qué algoritmo de cifrado emplean las redes Wi-Fi WPA2-Enterprise ?
+O: AES
+O: PEAP.
+O: TLS.
+O: TKIP.
+A: 0
+C: Enero 2026
+,
+Q: ¿ Qué característica indica que una red está sufriendo congestión ?
+O: La dedicación de la CPU de un router para el encaminamiento alcanza el valor del 50%.
+O: La red presenta numerosos mensajes ICMP Source Quench.
+O: El flujo de salida de paquetes en la red aumenta conforme aumenta el flujo de entrada de paquetes en la red.
+O: La red presenta numerosos mensajes ICMP Host Unreachable.
+A: 1
+C: Enero 2026
+,
+Q: Si un router está conectado directamente a 3 redes y tiene conectividad a Internet, el número de entradas en su tabla de encaminamiento será:
+O: Como mínimo 1 entrada.
+O: Como mínimo 3 entradas.
+O: Como mínimo 4 entradas.
+O: Nunca superior a 3 entradas.
+A: 2
+C: Enero 2026
+,
+Q: Sobre el funcionamiento de un router frontera de un sistema autónomo (AS) es cierto que:
+O: Establece conexiones UDP con otros routers frontera de otros sistemas autónomos.
+O: No es posible suplantar un mensaje BGP emitido por un router frontera de Internet.
+O: Emplea el protocolo BGP para determinar la ruta con mejor métrica a cualquier destino de Internet.
+O: Un router frontera solo informa de las redes existentes dentro de su sistema autónomo.
+A: 1
+C: Enero 2026
+,
+Q: ¿ Qué protocolo de gestión de tablas de encaminamiento emplea un algoritmo de vector de distancia para determinar la ruta óptima a un destino ?
+O: BGP.
+O: RIP.
+O: OSPF.
+O: Todos los protocolos de gestión de tablas de encaminamiento emplean el algoritmo de Djikstra.
+A: 1
+C: Enero 2026
+,
+Q: ¿ Qué algoritmo de encaminamiento actualiza con mayor rapidez una ruta óptima que ha modificado su coste ?
+O: RIPv1.
+O: RIPv2.
+O: OSPF.
+O: BGP.
+A: 2
+C: Enero 2026
+,
+Q: Sobre el protocolo IPv6 es cierto que:
+O: Emplea direcciones IP compatibles con la versión IPv4.
+O: Define una dirección de difusión en cada red IPv6.
+O: Emplea un tamaño de cabecera igual que en la versión IPv4.
+O: Ningún interfaz de red puede emplear una dirección IPv6 previamente asignada a otro interfaz de red.
+A: 3
+C: Enero 2026
+,
+Q: Sobre el algoritmo de Inicio Lento en el control de la congestión que realiza el protocolo TCP es cierto que:
+O: El valor de la ventana de emisión se incrementa en el tamaño del MSS cada vez que se recibe un ACK.
+O: El valor de la ventana de congestión se incrementa en el tamaño del MSS cada vez que se recibe un ACK.
+O: El valor de la ventana de recepción se incrementa en el tamaño del MSS cada vez que se recibe un ACK.
+O: El valor de la ventana de recepción siempre es el valor mínimo de la ventana de emisión y la ventana de congestión.
+A: 1
+C: Enero 2026
+,
