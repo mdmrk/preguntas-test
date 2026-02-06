@@ -19,7 +19,7 @@ useHead({
     <nav class="flex flex-col items-center w-full">
       <ul class="w-full space-y-3 p-0 m-0 list-none flex flex-col items-center">
         <li class="w-full">
-          <MainButton id="redes" bg="gradient-orange" text="REDES" years="2025" />
+          <MainButton id="redes" bg="gradient-orange" text="REDES" years="2025;2024" />
         </li>
         <li class="w-full">
           <MainButton bg="gradient-red" class="relative" text="ADA">

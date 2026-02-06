@@ -67,6 +67,7 @@ O: Identificar a todos los equipos de una red con varias direcciones físicas di
 O: Identificar a un grupo de equipos en la red con un valor único de dirección física.
 O: Establecer n grupos de equipos si se disponen de n bits para identificar direcciones físicas.
 A: 2
+C: Enero 2024
 ,
 Q: EI aumento en la velocidad de transmisión máxima de una señal que se transmite en un medio físico SIN ruido se consigue:
 O: Aumentando el número de niveles de codificación de la señal.
@@ -592,6 +593,7 @@ O: WPA2-PSK.
 O: WPA3-PSK.
 O: WPA3-AES.
 A: 2
+C: Enero 2024
 ,
 Q: La PDU del nivel n (que se envía a la entidad para del nivel n) incorpora en su campo de datos,
 O: La PDU del nivel n-1.
@@ -655,6 +657,7 @@ O: Se añade una entrada en la tabla de reenvío con la dirección MAC de origen
 O: Se añade una entrada en la tabla de reenvío con la dirección MAC de destino del paquete.
 O: Se descarta el paquete Ethernet y no se reenvía.
 A: 1
+C: Enero 2024
 ,
 Q: Sobre un acceso ADSL para conectividad a Internet es cierto que,
 O: El canal ascendente y descendente pueden ser simétricos con la tecnología ADSL2+
@@ -669,6 +672,7 @@ O: Ethernet 5GBase-T.
 O: Ethernet 2.5GBase-T.
 O: Ethernet 40GBase-XX.
 A: 3
+C: Enero 2024
 ,
 Q: ¿ Qué tipo de fibra óptica NO presenta dispersión intramodal ?
 O: Fibra óptica multimodo de índice gradual.
@@ -1628,6 +1632,7 @@ O: Un SA emplea el protocolo RIP para determinar la conectividad con otros SA.
 O: Todos los SA de Internet están conectados directamente al troncal de Internet.
 O: Un SA dispone al menos de un router frontera para su conectividad con otros SA.
 A: 3
+C: Enero 2024
 ,
 Q: Sobre el funcionamiento del algoritmo de Karn es cierto que:
 O: Reduce el valor del temporizador de espera de los ACK cuando estos expiran.
@@ -1880,6 +1885,7 @@ O: La única capa que tiene comunicación horizontal real es la capa N.
 O: La única capa que tiene comunicación horizontal real es la capa 1.
 O: Todas las capas emplean un protocolo de comunicación con su capa inferior.
 A: 2
+C: Enero 2024
 ,
 Q: El valor de ancho de banda de un medio físico depende de:
 O: Las propiedades físicas del medio.
@@ -1887,6 +1893,7 @@ O: El número de señales a transmitir en el medio físico.
 O: La relación señal-ruido presente en el medio físico.
 O: El número de armónicos que componen una señal.
 A: 0
+C: Enero 2024
 ,
 Q: ¿En qué tipo de señalización en banda base NO se emplea la amplitud del pulso para identificar los bits de datos?
 O: Codificación binaria bipolar SIN retorno a cero.
@@ -2335,6 +2342,7 @@ O: Multiplexado TDM síncrono.
 O: Multiplexado TDM asíncrono.
 O: Multiplexado QAM.
 A: 1
+C: Enero 2024
 ,
 Q: Sobre el funcionamiento del mecanismo CSMA/CD de Ethernet es cierto que:
 O: Una estación puede detectar colisiones en todo momento.
@@ -2790,6 +2798,7 @@ O: Enviar información a todos los equipos con la transmisión física de un sol
 O: Definir varias direcciones físicas diferentes para identificar a todos los equipos de la red.
 O: Permitir la conectividad entre equipos si falla el medio físico compartido.
 A: 1
+C: Enero 2024
 ,
 Q: El protocolo de nivel de enlace HDLC se caracteriza por,
 O: Emplear tramas no numeradas para el control del flujo emisor-receptor.
@@ -3287,6 +3296,7 @@ O: Todas las señales de pulsos tienen el mismo espectro de frecuencias.
 O: La amplitud de cada armónico depende de los datos de la señal.
 O: El número de armónicos de la señal es el doble del ancho de banda del medio físico.
 A: 2
+C: Enero 2024
 ,
 Q: Considérese que un protocolo de nivel de enlace emplea parada y espera con numeración de datos pero no de confirmaciones. Si se pierde la primera trama de datos, ¿cuál de las siguientes afirmaciones es correcta?
 O: Únicamente llegará al nivel de red del receptor la segunda trama de datos.
@@ -3546,6 +3556,7 @@ O: Debe conocer el SSID del AP en el que quiere registrarse.
 O: El AP debe conocer previamente la MAC del dispositivo que quiere registrarse.
 O: La frecuencia empleada por el AP determina el número máximo de equipos que pueden registrarse.
 A: 1
+C: Enero 2024
 ,
 Q: De las técnicas de modulación analógica presentes en la actualidad, se puede afirmar que:
 O: ASK sólo permite dos niveles de amplitud para codificar bits.
@@ -3741,6 +3752,7 @@ O: TLA.
 O: SLA.
 O: NLA.
 A: 0
+C: Enero 2024
 ,
 Q: Las redes de difusión de caracterizan por:
 O: Presentar colisiones en la transmisión simultánea de varios equipos de la red.
@@ -3818,6 +3830,7 @@ O: MILNET.
 O: IAB.
 O: IETF.
 A: 2
+C: Enero 2024
 ,
 Q: Indica el sistema de señalizacion empleado en Ethernet 100BaseFX:
 O: Manchester.
@@ -3923,6 +3936,7 @@ O: El intercambio de información entre dos equipos siempre se realiza por el mi
 O: Si un nodo de la red falla, todas las comunicaciones entre equipos ya no son posibles.
 O: Enviar información a todos los equipos de la red supone varias transmisiones en varios medios físicos.
 A: 3
+C: Enero 2024
 ,
 Q: ¿Qué tipo de fibra es la más adecuada para el empleo de la técnica de multiplexado por longitud de onda?
 O: Fibra multimodo.
@@ -4714,6 +4728,7 @@ O: Todas las aplicaciones de Internet emplean el protocolo de transporte UDP.
 O: Todas las aplicaciones de Internet emplean el protocolo de control ICMP.
 O: Todas las aplicaciones de Internet emplean el protocolo de red IP.
 A: 3
+C: Enero 2024
 ,
 Q: El protocolo de transporte TCP:
 O: Permite controlar la congestión de las redes de comunicación a través del campo ventana.
@@ -4742,6 +4757,7 @@ O: Emplear una velocidad de modulación de B baudios.
 O: Emplear una velocidad de modulación de 4*B baudios.
 O: Emplear B niveles de amplitud en la señal.
 A: 0
+C: Enero 2024
 ,
 Q: Si se desea aumentar la velocidad de transmisión obtenida en una fibra óptica monomodo sin modificar la codificación del número de niveles, es necesario:
 O: Cambiar la fibra al tipo multimodo de mayor ancho de banda.
@@ -5211,6 +5227,7 @@ O: Permite aumentar la ventana de congestión de un equipo si expiran los tempor
 O: Si expira un temporizador de espera de ACK no se reenvían paquetes TCP.
 O: Si expira un temporizador de espera de ACK se reduce a la mitad el tamaño de la ventana de congestión de un equipo.
 A: 3
+C: Enero 2024
 ,
 Q: En una transición de una MEF que modela un protocolo de comunicación, es cierto que:
 O: Existe siempre más de un evento de salida.
@@ -5351,6 +5368,7 @@ O: Modulación FSK.
 O: Modulación PSK.
 O: Modulación QAM.
 A: 1
+C: Enero 2024
 ,
 Q: Con respecto a las técnicas de modulación de analógico a digital…
 O: PCM diferencial requiere un ancho de banda menor que DM.
@@ -5756,6 +5774,7 @@ O: Diodo LED.
 O: Fotodiodo semiconductor en avalancha.
 O: Diodo APD.
 A: 0
+C: Enero 2024
 ,
 Q: En una red de conmutación de paquetes por datagramas, es cierto que:
 O: La comunicación extremo a extremo en la red es fiable.
@@ -5840,6 +5859,7 @@ O: Protocolo de ventana deslizante con repetición selectiva SIN tiempo de esper
 O: Protocolo de ventana deslizante con repetición selectiva CON tiempo de espera de ACK.
 O: Protocolo de ventana deslizante con ventana de receptor y de emisor de tamaño 1.
 A: 2
+C: Enero 2024
 ,
 Q: En cuanto a las técnicas de contienda empleadas para compartir el medio en LANs es cierto que:
 O: Hay colisiones en los datos.
@@ -5973,6 +5993,7 @@ O: IEEE 802.11.
 O: IEEE 802.1D.
 O: Las normas MAC del IEEE siempre emplean la capa LLC.
 A: 3
+C: Enero 2024
 ,
 Q: ¿En qué tipo de señalización en BANDA BASE pueden existir más problemas de sincronización emisor – receptor?
 O: Codificación binaria unipolar sin retorno a cero.
@@ -6848,6 +6869,7 @@ O: Fibra multimodo de índice gradual.
 O: Fibra monomodo.
 O: Fibra WDM.
 A: 2
+C: Enero 2024
 ,
 Q: En relación con la modulación PSK se puede afirmar que:
 O: Es una modulación analógica en amplitud donde la señal portadora modifica su valor en función del valor de una señal moduladora
@@ -7170,6 +7192,7 @@ O: Ruido de impulso.
 O: Autoacoplamiento.
 O: El ruido que presenta un medio físico siempre es posible predeterminarlo.
 A: 1
+C: Enero 2024
 ,
 Q: Las redes de conmutación de paquetes con datagramas se caracterizan por:
 O: Establecer circuitos físicos de comunicación extremo a extremo para los paquetes de información.
@@ -8013,6 +8036,7 @@ O: RIPv2.
 O: OSPF.
 O: IGMP.
 A: 2
+C: Enero 2024
 ,
 Q: Determina la velocidad máxima de transmisión para una señal de pulsos con 4 niveles de tensión en un medio físico half-duplex con ancho de banda de 1000 Hz.
 O: 1000 bps.
@@ -8097,6 +8121,7 @@ O: Repetidor.
 O: Router.
 O: La congestión no depende del dispositivo de interconexión empleado.
 A: 1
+C: Enero 2024
 ,
 Q: Respecto al protocolo RlP es falso que:
 O: Emplee paquetes UDP dirigidos al puerto 520.
@@ -8412,6 +8437,7 @@ O: Solo los paquetes MAC IEEE 802.11 de control son confirmados por el destinata
 O: Dos redes inalámbricas en un mismo entorno físico pueden funcionar con la misma frecuencia sin interferencias.
 O: Un equipo asociado a un AP puede detectar las transmisiones de todos los equipos asociados al AP.
 A: 0
+C: Enero 2024
 ,
 Q: Sobre el protocolo de encaminamiento IPv6 es cierto que,
 O: Es posible el intercambio de paquetes IPv4 a través de una red IPv6.
@@ -8482,6 +8508,7 @@ O: La normativa 100BaseTX emplea la codificación 4B5B y 100BaseFX 8B10B.
 O: La normativa 100BaseTX emplea señalización Manchester.
 O: La normativa 100BaseFX emplea señalización NRZI.
 A: 3
+C: Enero 2024
 ,
 Q: El proceso generación de CRC es una de las funciones básicas asociadas a un nivel OSI. Concretamente:
 O: Nivel de enlace.
@@ -8566,6 +8593,7 @@ O: Siempre que sea necesario transmitir el mismo flujo de vídeo a varios equipo
 O: En los Sistemas Autónomos que ofrecen servicio de TV IP a sus clientes.
 O: Para aumentar la velocidad de transmisión necesaria en los servidores de vídeo en Internet.
 A: 2
+C: Enero 2024
 ,
 Q: Sobre el funcionamiento de las redes inalámbricas IEEE 802.11x es cierto que:
 O: Emplean el mismo formato de paquete MAC que la norma IEEE 802.3.
@@ -8685,6 +8713,7 @@ O: Los equipos conectados deben emplear todos el formato de paquete IEEE 802.1Q.
 O: Varias VLAN diferentes pueden emplear la misma dirección de red IP.
 O: El protocolo GVRP emplea los puertos de acceso para conocer qué VLANs existen en el conmutador.
 A: 0
+C: Enero 2024
 ,
 Q: Si la capa N de una arquitectura de red fragmenta un paquete procedente de la capa N+l, ¿ cuántos paquetes con cabecera del nivel N+l se envian a la capa par N ?
 O: Tantos como fragmentos se generan.
@@ -8769,6 +8798,7 @@ O: Añade a la información la cabecera del protocolo de nivel N+1.
 O: Añade a la información la cabecera del protocolo de nivel N-1.
 O: Añade a la información las cabeceras de los protocolos de nivel N+1 y N-1.
 A: 0
+C: Enero 2024
 ,
 Q: ¿Qué factores producen un aumento de la congestión en una red TCP/IP?
 O: Valores de MTU iguales en toda la red.
@@ -8846,6 +8876,7 @@ O: Redes de conmutación de paquetes con datagramas.
 O: Redes de difusión.
 O: En cualquier red de comunicaciones se indican las direcciones origen y destino de los equipos en los paquetes.
 A: 0
+C: Enero 2024
 ,
 Q: La capa de transporte en la arquitectura TCP/IP se caracteriza por,
 O: Reducir la tasa de errores en el medio físico al emplear el protocolo TCP.
@@ -8993,6 +9024,7 @@ O: Modulación QPSK.
 O: Modulación QAM.
 O: El ruido no afecta a las comunicaciones que emplean la modulación.
 A: 2
+C: Enero 2024
 ,
 Q: Sobre el funcionamiento del mecanismo RTS/CTS es cierto que:
 O: Las estaciones que detectan un paquete RTS pueden transmitir paquetes.
@@ -9063,6 +9095,7 @@ O: Redes Wi-Fi 3.
 O: Redes Wi-Fi 4.
 O: Comunicaciones satelitales.
 A: 3
+C: Enero 2024
 ,
 Q: Indica cuál de los siguientes es un mecanismo de autenticación en WPA2.
 O: TKIP.
@@ -9182,6 +9215,7 @@ O: Cable UTP categoría 6.
 O: Cable UTP categoría 7.
 O: Cable STP.
 A: 3
+C: Enero 2024
 ,
 Q: La existencia de una dirección origen y destino en la cabecera de red de los paquetes intercambiados en una red de datagramas es necesaria para,
 O: Realizar un encaminamiento independiente para cada paquete de datos.
@@ -9350,6 +9384,7 @@ O: Codificación binaria bipolar.
 O: Codificación Manchester.
 O: Codificación MLT-3.
 A: 3
+C: Enero 2024
 ,
 Q: La tecnología de difusión no es apropiada para redes WAN ya que:
 O: Los errores en los medios de difusión son muy frecuentes.
