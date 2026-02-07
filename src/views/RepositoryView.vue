@@ -27,7 +27,8 @@
                   'inline-flex items-center px-3 py-1 rounded-full text-sm font-medium',
                   selectedTags.includes(tag)
                     ? 'bg-blue-600 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600',
+                  'hover:ring-2 hover:ring-blue-500 hover:ring-offset-2 dark:ring-offset-gray-800'
                 ]"
               >
                 {{ tag }}
