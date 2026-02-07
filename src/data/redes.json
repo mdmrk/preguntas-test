@@ -15891,5 +15891,395 @@
     ],
     "correctAnswer": 1,
     "tags": ["Enero 2025"]
+  },
+  {
+    "question": "Sobre el funcionamiento de una red de conmutación de paquetes con datagramas es cierto que:",
+    "options": [
+      "Los paquetes siempre emplean el mismo camino entre un origen y un destino.",
+      "Es necesario un mecanismo para reordenar los paquetes que llegan al destino.",
+      "Cada intercambio de datos entre dos equipos se identifica con un identificador de camino.",
+      "Siempre se producen errores en el intercambio de paquetes entre dos equipos."
+    ],
+    "correctAnswer": 1,
+    "tags": ["Enero 2026"],
+    "id": 1414
+  },
+  {
+    "question": "¿ En qué tipo de redes la multidifusión se lleva a cabo con la transmisión física de UN SOLO paquete ?",
+    "options": [
+      "Redes conmutación de paquetes con datagramas.",
+      "Redes conmutación de paquetes con circuitos virtuales.",
+      "Redes de difusión.",
+      "Redes punto a punto."
+    ],
+    "correctAnswer": 2,
+    "tags": ["Enero 2026"],
+    "id": 1415
+  },
+  {
+    "question": "¿ Qué característica NO es propia de las redes de conmutación de paquetes ?",
+    "options": [
+      "Colisiones en el medio físico compartido entre todos los equipos.",
+      "Congestión en el encaminamiento de paquetes.",
+      "Empleo de routers para encaminar paquetes entre un origen y un destino.",
+      "Tolerancia a fallos en el medio físico en el intercambio de paquetes entre los equipos."
+    ],
+    "correctAnswer": 0,
+    "tags": ["Enero 2026"],
+    "id": 1416
+  },
+  {
+    "question": "En una arquitectura de red, cada capa n define:",
+    "options": [
+      "Al menos un protocolo de comunicación con la capa adyacente n-1.",
+      "Al menos un protocolo de comunicación con la capa adyacente n+1.",
+      "Al menos un protocolo de comunicación con la capa par n+1.",
+      "Al menos un protocolo de comunicación con la capa par n."
+    ],
+    "correctAnswer": 3,
+    "tags": ["Enero 2026"],
+    "id": 1417
+  },
+  {
+    "question": "Sobre los paquetes generados en la capa n de una arquitectura de red es cierto que:",
+    "options": [
+      "Todos los paquetes incorporan siempre la cabecera de la capa n.",
+      "Todos los paquetes incorporan siempre la cabecera de la capa n+1.",
+      "Todos los paquetes incorporan siempre la cabecera de la capa n-1.",
+      "Todas las respuestas anteriores son falsas."
+    ],
+    "correctAnswer": 0,
+    "tags": ["Enero 2026"],
+    "id": 1418
+  },
+  {
+    "question": "Si en un protocolo de la capa n el tamaño máximo de datos es X, la fragmentación de la información procedente de la capa n+1 se realiza:",
+    "options": [
+      "Cuando la cabecera de la capa n+1 excede del valor X.",
+      "Cuando el paquete procedente de la capa n+1 excede el valor X.",
+      "Cuando los datos en el paquete de la capa n+1 excede del valor X.",
+      "Cuando el tamaño del paquete generado en el nivel n excede del valor X."
+    ],
+    "correctAnswer": 1,
+    "tags": ["Enero 2026"],
+    "id": 1419
+  },
+  {
+    "question": "¿ Qué organismo lleva a cabo la definición de las normas RFC de Internet ?",
+    "options": ["IRTF.", "IETF.", "IAB.", "IANA."],
+    "correctAnswer": 1,
+    "tags": ["Enero 2026"],
+    "id": 1420
+  },
+  {
+    "question": "¿ Qué dispositivo de interconexión emplea las direcciones físicas de los equipos para el reenvío de paquetes entre segmentos de red ?",
+    "options": [
+      "Repetidor.",
+      "Puente.",
+      "Encaminador.",
+      "Ningún dispositivo de interconexión emplea las direcciones físicas para el reenvío de paquetes."
+    ],
+    "correctAnswer": 1,
+    "tags": ["Enero 2026"],
+    "id": 1421
+  },
+  {
+    "question": "Sobre la transmisión de señales de datos a través de un medio físico es cierto que:",
+    "options": [
+      "Todos los medios físicos transmiten igual una misma señal de datos.",
+      "Las señales transmitidas a diferentes velocidades siempre sufren los mismos errores.",
+      "Las señales siempre presentarán errores en los datos si existe ruido en el medio físico.",
+      "La existencia de errores en los datos depende de la velocidad de transmisión empleada."
+    ],
+    "correctAnswer": 3,
+    "tags": ["Enero 2026"],
+    "id": 1422
+  },
+  {
+    "question": "El valor del ancho de banda disponible en un medio físico depende de:",
+    "options": [
+      "La velocidad de transmisión empleada en las señales transmitidas.",
+      "El nivel de ruido presente en el medio físico.",
+      "Las características físicas del propio medio físico.",
+      "Los datos existentes en las señales transmitidas."
+    ],
+    "correctAnswer": 2,
+    "tags": ["Enero 2026"],
+    "id": 1423
+  },
+  {
+    "question": "¿ Qué tipo de señalización en banda base con codificación binaria emplea más niveles de tensión ?",
+    "options": [
+      "Codificación binaria con retorno a cero unipolar.",
+      "Codificación binaria con retorno a cero bipolar.",
+      "Codificación binaria sin retorno a cero bipolar.",
+      "Todas las codificaciones binarias emplean el mismo número de niveles de tensión."
+    ],
+    "correctAnswer": 3,
+    "tags": ["Enero 2026"],
+    "id": 1424
+  },
+  {
+    "question": "¿ En qué situación se emplea la modulación en la transmisión de datos ?",
+    "options": [
+      "Siempre que la información sean bits digitales.",
+      "Cuando se emplea un medio físico analógico.",
+      "Cuando las principales componentes frecuenciales de una señal están fuera del ancho de banda del medio físico.",
+      "Cuando sea necesario transmitir señales de datos a una velocidad superior al teorema de Nyquist."
+    ],
+    "correctAnswer": 2,
+    "tags": ["Enero 2026"],
+    "id": 1425
+  },
+  {
+    "question": "¿ Qué tipo de modulación permite su empleo en la multiplexión por división en el tiempo ?",
+    "options": ["Modulación ASK.", "Modulación PSK.", "Modulación FSK.", "Modulación PCM."],
+    "correctAnswer": 3,
+    "tags": ["Enero 2026"],
+    "id": 1426
+  },
+  {
+    "question": "¿ En qué tipo de cable par trenzado tiene menos efecto el ruido de impulso ?",
+    "options": [
+      "Cable STP.",
+      "Cable UTP categoría 5.",
+      "Cable UTP categoría 6.",
+      "Cable UTP categoría 7."
+    ],
+    "correctAnswer": 0,
+    "tags": ["Enero 2026"],
+    "id": 1427
+  },
+  {
+    "question": "¿ Qué tipo de fibra óptica presenta mayor limitación en la distancia máxima ?",
+    "options": [
+      "Fibra monomodo.",
+      "Fibra multimodo de índice de salto.",
+      "Fibra multimodo de índice gradual.",
+      "Todas las fibras ópticas están normalizadas para su funcionamiento a 100 km de distancia."
+    ],
+    "correctAnswer": 1,
+    "tags": ["Enero 2026"],
+    "id": 1428
+  },
+  {
+    "question": "¿ Con qué técnica se combinan varios haces de luz de datos en una fibra óptica ?",
+    "options": [
+      "Multiplexión intermodal.",
+      "Multiplexión intramodal.",
+      "Multiplexión WDM.",
+      "Multiplexión FTTH."
+    ],
+    "correctAnswer": 2,
+    "tags": ["Enero 2026"],
+    "id": 1429
+  },
+  {
+    "question": "¿ En qué tipo de comunicación inalámbrica se emplean señales portadoras de mayor valor de frecuencia ?",
+    "options": [
+      "Redes Wi-Fi.",
+      "Redes satelitales.",
+      "Transmisión de televisión.",
+      "Transmisión de radio FM."
+    ],
+    "correctAnswer": 1,
+    "tags": ["Enero 2026"],
+    "id": 1430
+  },
+  {
+    "question": "¿ Qué mecanismo detector de errores permite identificar la posición de 20 bits erróneos en un paquete ?",
+    "options": [
+      "Código CRC-16.",
+      "Código CRC-32.",
+      "Paridad impar.",
+      "Ningún mecanismo detector de errores puede identificar los 20 bits erróneos en un paquete."
+    ],
+    "correctAnswer": 3,
+    "tags": ["Enero 2026"],
+    "id": 1431
+  },
+  {
+    "question": "Sobre los formatos de paquetes Ethernet IEEE 802.3 y Ethernet DIX es cierto que:",
+    "options": [
+      "Ambos formatos emplean la misma secuencia de sincronización.",
+      "El formato Ethernet DIX permite paquetes Ethernet de mayor tamaño.",
+      "El formato Ethernet IEEE 802.3 detecta errores en ráfaga de mayor longitud que Ethernet DIX.",
+      "Ambos formatos de paquete emplean la cabecera LLC en los datos."
+    ],
+    "correctAnswer": 0,
+    "tags": ["Enero 2026"],
+    "id": 1432
+  },
+  {
+    "question": "Sobre el procedimiento de aprendizaje de un conmutador Ethernet es cierto que:",
+    "options": [
+      "Analiza la dirección MAC origen en los paquetes recibidos en un puerto del conmutador.",
+      "Analiza la dirección MAC origen en los paquetes transmitidos en un puerto del conmutador.",
+      "Analiza la dirección MAC destino en los paquetes recibidos en un puerto del conmutador.",
+      "Analiza la dirección MAC destino en los paquetes transmitidos en un puerto del conmutador."
+    ],
+    "correctAnswer": 0,
+    "tags": ["Enero 2026"],
+    "id": 1433
+  },
+  {
+    "question": "¿ Qué puertos de un conmutador están habilitados para el aprendizaje de la tabla CAM si se emplea el algoritmo Spanning Tree ?",
+    "options": [
+      "Sólo el puerto raíz.",
+      "Sólo los puertos designados.",
+      "Sólo los puertos raíces y los puertos designados.",
+      "Todos los puertos activos del conmutador."
+    ],
+    "correctAnswer": 3,
+    "tags": ["Enero 2026"],
+    "id": 1434
+  },
+  {
+    "question": "¿ En qué capa se define el tipo de señalización para transmitir los bits de los paquetes Ethernet ?",
+    "options": ["MAC 802.3.", "MAC DIX.", "PMD.", "CS."],
+    "correctAnswer": 2,
+    "tags": ["Enero 2026"],
+    "id": 1435
+  },
+  {
+    "question": "¿ Qué normativa Ethernet permite emplear el multiplexado por longitud de onda (WDM) ?",
+    "options": [
+      "Ethernet 10GBase-T.",
+      "Ethernet 2.5GBase-T.",
+      "Ethernet 40GBase-XX.",
+      "La normativa Ethernet no emplea la multiplexión por longitud de onda."
+    ],
+    "correctAnswer": 2,
+    "tags": ["Enero 2026"],
+    "id": 1436
+  },
+  {
+    "question": "¿ Cuál es el uso de los puertos troncales en los conmutadores VLAN ?",
+    "options": [
+      "La conexión de dispositivos que emplean el formato Ethernet DIX.",
+      "Solamente para hacer el reenvío de paquetes de difusión a otros puertos troncales del mismo conmutador.",
+      "La conexión de un router para tener conectividad con varias VLAN.",
+      "La conexión de dispositivos que emplean el formato Ethernet IEEE 802.3."
+    ],
+    "correctAnswer": 2,
+    "tags": ["Enero 2026"],
+    "id": 1437
+  },
+  {
+    "question": "¿ Qué mecanismo permite que un AP pueda detectar cualquier transmisión de cualquier equipo de una red inalámbrica ?",
+    "options": ["CSMA-CD.", "CSMA-CA.", "CSMA-CA con RTS/CTS.", "CSMA-CA con polling."],
+    "correctAnswer": 2,
+    "tags": ["Enero 2026"],
+    "id": 1438
+  },
+  {
+    "question": "¿ Qué tecnología Ethernet NO añade bits adicionales de sincronización en la transmisión de paquetes ?",
+    "options": [
+      "Ethernet 1000BaseT.",
+      "Ethernet 1000BaseLX.",
+      "Ethernet 100BaseTX.",
+      "Ethernet 100BaseFX."
+    ],
+    "correctAnswer": 0,
+    "tags": ["Enero 2026"],
+    "id": 1439
+  },
+  {
+    "question": "¿ Qué mecanismo de autenticación Wi-Fi es más resistente a ataques de fuerza bruta ?",
+    "options": [
+      "WPA-PSK.",
+      "WPA2-PSK.",
+      "WPA3-PSK.",
+      "Los ataques de fuerza bruta no pueden determinar nunca la clave de autenticación."
+    ],
+    "correctAnswer": 2,
+    "tags": ["Enero 2026"],
+    "id": 1440
+  },
+  {
+    "question": "¿ Qué algoritmo de cifrado emplean las redes Wi-Fi WPA2-Enterprise ?",
+    "options": ["AES", "PEAP.", "TLS.", "TKIP."],
+    "correctAnswer": 0,
+    "tags": ["Enero 2026"],
+    "id": 1441
+  },
+  {
+    "question": "¿ Qué característica indica que una red está sufriendo congestión ?",
+    "options": [
+      "La dedicación de la CPU de un router para el encaminamiento alcanza el valor del 50%.",
+      "La red presenta numerosos mensajes ICMP Source Quench.",
+      "El flujo de salida de paquetes en la red aumenta conforme aumenta el flujo de entrada de paquetes en la red.",
+      "La red presenta numerosos mensajes ICMP Host Unreachable."
+    ],
+    "correctAnswer": 1,
+    "tags": ["Enero 2026"],
+    "id": 1442
+  },
+  {
+    "question": "Si un router está conectado directamente a 3 redes y tiene conectividad a Internet, el número de entradas en su tabla de encaminamiento será:",
+    "options": [
+      "Como mínimo 1 entrada.",
+      "Como mínimo 3 entradas.",
+      "Como mínimo 4 entradas.",
+      "Nunca superior a 3 entradas."
+    ],
+    "correctAnswer": 2,
+    "tags": ["Enero 2026"],
+    "id": 1443
+  },
+  {
+    "question": "Sobre el funcionamiento de un router frontera de un sistema autónomo (AS) es cierto que:",
+    "options": [
+      "Establece conexiones UDP con otros routers frontera de otros sistemas autónomos.",
+      "No es posible suplantar un mensaje BGP emitido por un router frontera de Internet.",
+      "Emplea el protocolo BGP para determinar la ruta con mejor métrica a cualquier destino de Internet.",
+      "Un router frontera solo informa de las redes existentes dentro de su sistema autónomo."
+    ],
+    "correctAnswer": 1,
+    "tags": ["Enero 2026"],
+    "id": 1444
+  },
+  {
+    "question": "¿ Qué protocolo de gestión de tablas de encaminamiento emplea un algoritmo de vector de distancia para determinar la ruta óptima a un destino ?",
+    "options": [
+      "BGP.",
+      "RIP.",
+      "OSPF.",
+      "Todos los protocolos de gestión de tablas de encaminamiento emplean el algoritmo de Djikstra."
+    ],
+    "correctAnswer": 1,
+    "tags": ["Enero 2026"],
+    "id": 1445
+  },
+  {
+    "question": "¿ Qué algoritmo de encaminamiento actualiza con mayor rapidez una ruta óptima que ha modificado su coste ?",
+    "options": ["RIPv1.", "RIPv2.", "OSPF.", "BGP."],
+    "correctAnswer": 2,
+    "tags": ["Enero 2026"],
+    "id": 1446
+  },
+  {
+    "question": "Sobre el protocolo IPv6 es cierto que:",
+    "options": [
+      "Emplea direcciones IP compatibles con la versión IPv4.",
+      "Define una dirección de difusión en cada red IPv6.",
+      "Emplea un tamaño de cabecera igual que en la versión IPv4.",
+      "Ningún interfaz de red puede emplear una dirección IPv6 previamente asignada a otro interfaz de red."
+    ],
+    "correctAnswer": 3,
+    "tags": ["Enero 2026"],
+    "id": 1447
+  },
+  {
+    "question": "Sobre el algoritmo de Inicio Lento en el control de la congestión que realiza el protocolo TCP es cierto que:",
+    "options": [
+      "El valor de la ventana de emisión se incrementa en el tamaño del MSS cada vez que se recibe un ACK.",
+      "El valor de la ventana de congestión se incrementa en el tamaño del MSS cada vez que se recibe un ACK.",
+      "El valor de la ventana de recepción se incrementa en el tamaño del MSS cada vez que se recibe un ACK.",
+      "El valor de la ventana de recepción siempre es el valor mínimo de la ventana de emisión y la ventana de congestión."
+    ],
+    "correctAnswer": 1,
+    "tags": ["Enero 2026"],
+    "id": 1448
   }
 ]
