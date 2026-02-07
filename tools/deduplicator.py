@@ -1,89 +1,54 @@
 #!/usr/bin/env python3
 
+import json
 import re
 from pathlib import Path
-from dataclasses import dataclass
-from typing import List, Optional, Set, Tuple
-import itertools
+from dataclasses import dataclass, asdict
+from typing import List, Optional, Set, Tuple, Dict, Any
 
 @dataclass
 class Question:
     """Represents a test question"""
-    question_text: str
+    id: int
+    question: str
     options: List[str]
-    correct_answer_index: int
+    correctAnswer: int
     image: Optional[str] = None
-    categories: Optional[str] = None  # Categories separated by semicolons
-    raw_chunk: str = ""  # Store original text for reconstruction
-    categories_modified: bool = False  # Track if categories were merged
+    tags: Optional[List[str]] = None
+    
+    def to_dict(self) -> Dict[str, Any]:
+        result = {
+            "id": self.id,
+            "question": self.question,
+            "options": self.options,
+            "correctAnswer": self.correctAnswer,
+        }
+        if self.image:
+            result["image"] = self.image
+        if self.tags:
+            result["tags"] = self.tags
+        return result
 
 class TestParser:
-    """Parser for test text files"""
+    """Parser for test JSON files"""
     
     @staticmethod
-    def parse_test_text(text: str) -> List[Question]:
-        """Parse test text into Question objects"""
-        chunks = re.split(r'^,$', text, flags=re.MULTILINE)
+    def parse_json(data: List[Dict[str, Any]]) -> List[Question]:
+        """Parse JSON data into Question objects"""
         questions = []
         
-        for chunk in chunks:
-            if not chunk.strip():
-                continue
-                
-            lines = [line for line in chunk.split("\n") if line.strip()]
-            if not lines:
-                continue
-            
-            question_text = ""
-            correct_answer_index = -1
-            image = None
-            categories = None
-            options = []
-            
-            parsing_question = False
-            parsing_option = False
-            current_option_index = -1
-            
-            for line in lines:
-                if line.startswith("O:"):
-                    options.append(line[2:].strip())
-                    current_option_index = len(options) - 1
-                    parsing_question = False
-                    parsing_option = True
-                elif line.startswith("C:"):
-                    categories = line[2:].strip()
-                    parsing_question = False
-                    parsing_option = False
-                elif line.startswith("Q:"):
-                    question_text = line[2:].strip()
-                    parsing_question = True
-                    parsing_option = False
-                elif line.startswith("A:"):
-                    try:
-                        correct_answer_index = int(line[2:].strip())
-                    except ValueError:
-                        correct_answer_index = -1
-                    parsing_question = False
-                    parsing_option = False
-                elif line.startswith("I:"):
-                    image = line[2:].strip()
-                    parsing_question = False
-                    parsing_option = False
-                elif parsing_question:
-                    question_text += "\n" + line.strip()
-                elif parsing_option and current_option_index >= 0:
-                    options[current_option_index] += "\n" + line.strip()
-            
-            # Only add valid questions
-            if question_text and correct_answer_index >= 0 and options:
-                questions.append(Question(
-                    question_text=question_text.strip(),
-                    options=[opt.strip() for opt in options],
-                    correct_answer_index=correct_answer_index,
-                    image=image,
-                    categories=categories,
-                    raw_chunk=chunk  # Store the original chunk
-                ))
+        for item in data:
+            # Handle potential variations in field names if necessary, 
+            # but strictly following the current schema:
+            q = Question(
+                id=item.get("id", 0),
+                question=item.get("question", ""),
+                options=item.get("options", []),
+                correctAnswer=item.get("correctAnswer", -1),
+                image=item.get("image"),
+                tags=item.get("tags")
+            )
+            questions.append(q)
         
         return questions
 
@@ -105,7 +70,7 @@ class TestDeduplicator:
         (regardless of order).
         """
         # Compare normalized question texts
-        if TestDeduplicator.normalize_text(q1.question_text) != TestDeduplicator.normalize_text(q2.question_text):
+        if TestDeduplicator.normalize_text(q1.question) != TestDeduplicator.normalize_text(q2.question):
             return False
         
         # Compare option sets (order doesn't matter)
@@ -118,7 +83,7 @@ class TestDeduplicator:
     def standardize_option_order(canonical_question: Question, duplicate_question: Question) -> Question:
         """
         Reorder the options of duplicate_question to match the order in canonical_question.
-        Also updates the correct_answer_index accordingly.
+        Also updates the correctAnswer accordingly.
         """
         # Create mapping from normalized option text to original option text for both questions
         canonical_options_normalized = [TestDeduplicator.normalize_text(opt) for opt in canonical_question.options]
@@ -135,49 +100,43 @@ class TestDeduplicator:
                 if canonical_opt_norm == duplicate_opt_norm:
                     reordered_options.append(duplicate_question.options[j])
                     # If this was the correct answer in the duplicate, update the index
-                    if j == duplicate_question.correct_answer_index:
+                    if j == duplicate_question.correctAnswer:
                         new_correct_answer_index = i
                     break
         
         # Create new question with reordered options
         return Question(
-            question_text=duplicate_question.question_text,
+            id=duplicate_question.id,
+            question=duplicate_question.question,
             options=reordered_options,
-            correct_answer_index=new_correct_answer_index,
+            correctAnswer=new_correct_answer_index,
             image=duplicate_question.image,
-            categories=duplicate_question.categories,
-            raw_chunk=duplicate_question.raw_chunk
+            tags=duplicate_question.tags
         )
     
     @staticmethod
-    def merge_categories(cat1: Optional[str], cat2: Optional[str]) -> Optional[str]:
+    def merge_tags(tags1: Optional[List[str]], tags2: Optional[List[str]]) -> Optional[List[str]]:
         """
-        Merge two category strings, removing duplicates and maintaining order.
-        Categories are separated by semicolons.
-        
-        If one question has categories and the other doesn't, preserves the categories.
+        Merge two lists of tags, removing duplicates and maintaining order.
         """
-        if not cat1 and not cat2:
+        if not tags1 and not tags2:
             return None
-        if not cat1:  # First has no categories, second has categories
-            return cat2
-        if not cat2:  # First has categories, second has no categories
-            return cat1
-        
-        # Split categories by semicolon and normalize
-        cats1 = [cat.strip() for cat in cat1.split(';') if cat.strip()]
-        cats2 = [cat.strip() for cat in cat2.split(';') if cat.strip()]
+        if not tags1:
+            return tags2
+        if not tags2:
+            return tags1
         
         # Merge while preserving order and removing duplicates
         merged = []
         seen = set()
         
-        for cat in cats1 + cats2:
-            if cat.lower() not in seen:
-                merged.append(cat)
-                seen.add(cat.lower())
+        for tag in tags1 + tags2:
+            normalized_tag = tag.lower().strip()
+            if normalized_tag not in seen:
+                merged.append(tag.strip())
+                seen.add(normalized_tag)
         
-        return ';'.join(merged) if merged else None
+        return merged
     
     @staticmethod
     def find_duplicates(questions: List[Question]) -> List[Tuple[int, int]]:
@@ -197,7 +156,7 @@ class TestDeduplicator:
     @staticmethod
     def remove_duplicates(questions: List[Question]) -> Tuple[List[Question], int]:
         """
-        Remove duplicate questions, keeping the first occurrence and merging categories.
+        Remove duplicate questions, keeping the first occurrence and merging tags.
         Standardizes option order across duplicates to match the first occurrence.
         Returns (unique_questions, num_removed).
         """
@@ -226,50 +185,41 @@ class TestDeduplicator:
             duplicate_groups[second_idx] = leader
             indices_to_remove.add(second_idx)
         
-        # Merge categories for each group and standardize option orders
-        category_merges = {}
+        # Merge tags for each group and standardize option orders
+        tags_merges = {}
         standardized_questions = {}
         
         for idx, leader in duplicate_groups.items():
-            if leader not in category_merges:
-                category_merges[leader] = questions[leader].categories
+            if leader not in tags_merges:
+                tags_merges[leader] = questions[leader].tags
                 # The leader question is the canonical version for option ordering
                 standardized_questions[leader] = questions[leader]
             
             if idx != leader:
-                # Merge categories
-                category_merges[leader] = TestDeduplicator.merge_categories(
-                    category_merges[leader], 
-                    questions[idx].categories
+                # Merge tags
+                tags_merges[leader] = TestDeduplicator.merge_tags(
+                    tags_merges[leader], 
+                    questions[idx].tags
                 )
                 
                 # Standardize the duplicate's option order to match the leader
-                standardized_duplicate = TestDeduplicator.standardize_option_order(
-                    questions[leader], questions[idx]
-                )
-                # Store the standardized version (though we'll remove it anyway)
-                standardized_questions[idx] = standardized_duplicate
-        
+                # (This part might be redundant if we are removing the duplicate key,
+                # but good for consistency if we ever kept duplicates)
+                
         # Create the result list
         unique_questions = []
         for i, question in enumerate(questions):
             if i not in indices_to_remove:
-                # If this question had duplicates, use the merged categories
-                if i in category_merges:
-                    # Check if categories actually changed
-                    original_categories = questions[i].categories
-                    merged_categories = category_merges[i]
-                    categories_changed = original_categories != merged_categories
-                    
-                    # Create a new question with merged categories and mark if modified
+                # If this question had duplicates, use the merged tags
+                if i in tags_merges:
+                    # Create a new question with merged tags
                     merged_question = Question(
-                        question_text=question.question_text,
+                        id=question.id,
+                        question=question.question,
                         options=question.options,
-                        correct_answer_index=question.correct_answer_index,
+                        correctAnswer=question.correctAnswer,
                         image=question.image,
-                        categories=merged_categories,
-                        raw_chunk=question.raw_chunk,
-                        categories_modified=categories_changed
+                        tags=tags_merges[i]
                     )
                     unique_questions.append(merged_question)
                 else:
@@ -277,85 +227,44 @@ class TestDeduplicator:
         
         num_removed = len(indices_to_remove)
         return unique_questions, num_removed
-    
-    @staticmethod
-    def update_categories_in_raw_chunk(raw_chunk: str, new_categories: Optional[str]) -> str:
-        """
-        Update the categories line in a raw chunk while preserving all other formatting.
-        """
-        lines = raw_chunk.split('\n')
-        updated_lines = []
-        categories_line_found = False
-        
-        for line in lines:
-            if line.strip().startswith('C:'):
-                # Replace the categories line
-                if new_categories:
-                    updated_lines.append(f"C: {new_categories}")
-                categories_line_found = True
-            else:
-                updated_lines.append(line)
-        
-        # If no categories line was found but we have new categories, add it
-        # Insert after the answer line (A:)
-        if not categories_line_found and new_categories:
-            for i, line in enumerate(updated_lines):
-                if line.strip().startswith('A:'):
-                    updated_lines.insert(i + 1, f"C: {new_categories}")
-                    break
-        
-        return '\n'.join(updated_lines)
-    
-    @staticmethod
-    def reconstruct_test_text(questions: List[Question]) -> str:
-        """
-        Reconstruct test text from Question objects, preserving original formatting
-        when possible and only reconstructing when necessary.
-        """
-        if not questions:
-            return ""
-        
-        chunks = []
-        for question in questions:
-            # If categories weren't modified, use the original raw chunk to preserve formatting
-            if not question.categories_modified:
-                chunks.append(question.raw_chunk)
-            else:
-                # Categories were merged, so we need to update the raw chunk
-                updated_chunk = TestDeduplicator.update_categories_in_raw_chunk(
-                    question.raw_chunk, 
-                    question.categories
-                )
-                chunks.append(updated_chunk)
-        
-        return ','.join(chunks)
 
 def process_file(file_path: Path) -> Tuple[int, int]:
     """
-    Process a single test file to remove duplicates.
+    Process a single JSON file to remove duplicates.
     Returns (original_count, final_count).
     """
     try:
         # Read the file
-        with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
-            text = f.read()
+        with open(file_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
         
+        if not isinstance(data, list):
+            print(f"  ❌ Error: {file_path.name} is not a list of questions.")
+            return 0, 0
+
         # Parse questions
-        questions = TestParser.parse_test_text(text)
+        questions = TestParser.parse_json(data)
         original_count = len(questions)
         
         if original_count == 0:
             return 0, 0
         
-        # Remove duplicates and merge categories
+        # Remove duplicates and merge tags
         unique_questions, num_removed = TestDeduplicator.remove_duplicates(questions)
         final_count = len(unique_questions)
         
         if num_removed > 0:
             # Reconstruct and write the file
-            new_text = TestDeduplicator.reconstruct_test_text(unique_questions)
+            # Re-index questions to ensure sequential IDs if necessary?
+            # The user didn't explicitly ask for re-indexing, but it might be good practice.
+            # For now, let's keep IDs as they are or potentially re-assign them.
+            # The original script didn't seem to care about IDs (it was text based).
+            # Let's just write them back.
+            
+            output_data = [q.to_dict() for q in unique_questions]
+            
             with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(new_text)
+                json.dump(output_data, f, indent=2, ensure_ascii=False)
             
             print(f"  ✅ Merged {num_removed} duplicate(s): {original_count} → {final_count}")
         else:
@@ -363,12 +272,15 @@ def process_file(file_path: Path) -> Tuple[int, int]:
         
         return original_count, final_count
         
+    except json.JSONDecodeError as e:
+        print(f"  ❌ Error decoding JSON in {file_path.name}: {e}")
+        return 0, 0
     except Exception as e:
         print(f"  ❌ Error processing {file_path.name}: {e}")
         return 0, 0
 
 def process_directory(input_dir: Path) -> None:
-    """Process all files in a directory to remove duplicates"""
+    """Process all JSON files in a directory to remove duplicates"""
     
     if not input_dir.exists():
         print(f"Error: Directory '{input_dir}' not found.")
@@ -378,14 +290,14 @@ def process_directory(input_dir: Path) -> None:
         print(f"Error: '{input_dir}' is not a directory.")
         return
     
-    # Get all files in the directory
-    files = [f for f in input_dir.iterdir() if f.is_file()]
+    # Get all JSON files in the directory
+    files = [f for f in input_dir.iterdir() if f.is_file() and f.suffix == '.json']
     
     if not files:
-        print(f"No files found in '{input_dir}'")
+        print(f"No JSON files found in '{input_dir}'")
         return
     
-    print(f"Found {len(files)} files in '{input_dir}'")
+    print(f"Found {len(files)} JSON files in '{input_dir}'")
     
     total_original = 0
     total_final = 0
@@ -418,7 +330,7 @@ def main():
     data_dir = script_dir / ".." / "src" / "data"
     
     print(f"Processing all test files in: {data_dir.resolve()}")
-    print("Merging duplicate questions and combining categories...")
+    print("Merging duplicate questions and combining tags...")
     process_directory(data_dir)
 
 if __name__ == "__main__":

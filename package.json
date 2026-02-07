@@ -5,9 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "generate-questions": "bun tools/parse-questions.ts",
     "generate-sitemap": "bun tools/generate-sitemap.ts",
-    "build": "bun run generate-questions && bun run generate-sitemap && VITE_BUILD_TIME=$(date -u +%Y-%m-%dT%H:%M:%S.%3NZ) run-p type-check \"build-only {@}\" --",
+    "build": "bun run generate-sitemap && VITE_BUILD_TIME=$(date -u +%Y-%m-%dT%H:%M:%S.%3NZ) run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build",

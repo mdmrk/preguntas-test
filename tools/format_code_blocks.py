@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import json
 import re
 import subprocess
 import tempfile
@@ -70,10 +71,9 @@ def format_cpp_with_clang(code):
         clang_format_config = script_dir / '.clang-format'
         
         if clang_format_config.exists():
-            print(f"Using config file: {clang_format_config}")
             # Run clang-format from the script directory so it finds the config
-            result = subprocess.run(
-                [clang_format_path, f'-style=file:{clang_format_config}', temp_file_path],
+            subprocess.run(
+                [clang_format_path, f'-style=file:{clang_format_config}', '-i', temp_file_path],
                 capture_output=True,
                 text=True,
                 check=True,
@@ -82,17 +82,21 @@ def format_cpp_with_clang(code):
         else:
             print("No .clang-format config found, using Google style")
             # Fallback to Google style
-            result = subprocess.run(
-                [clang_format_path, '-style=Google', temp_file_path],
+            subprocess.run(
+                [clang_format_path, '-style=Google', '-i', temp_file_path],
                 capture_output=True,
                 text=True,
                 check=True
             )
         
+        # Read back the formatted code
+        with open(temp_file_path, 'r') as f:
+            formatted_code = f.read()
+            
         # Clean up the temporary file
         os.unlink(temp_file_path)
         
-        return result.stdout.strip()
+        return formatted_code.strip()
     
     except subprocess.CalledProcessError as e:
         print(f"Error running clang-format: {e}")
@@ -101,11 +105,9 @@ def format_cpp_with_clang(code):
         print(f"Unexpected error: {e}")
         return code
 
-
-
-def format_code_blocks(text):
+def format_code_blocks_in_text(text):
     """
-    Find and format only ```cpp code blocks using clang-format
+    Find and format only ```cpp code blocks using clang-format in a string
     """
     # Only match code blocks specifically marked as cpp
     cpp_code_block_regex = r'```cpp\s*([\s\S]*?)\s*```'
@@ -116,9 +118,13 @@ def format_code_blocks(text):
         nonlocal blocks_formatted
         code = match.group(1)
         
-        print(f"Formatting C++ code block {blocks_formatted + 1}...")
+        # Check if code needs formatting (simple check to avoid re-formatting identical code if possible,
+        # but clang-format is idempotent so it's fine to run it)
         formatted_code = format_cpp_with_clang(code)
-        blocks_formatted += 1
+        
+        if formatted_code != code.strip():
+            blocks_formatted += 1
+            
         return f"```cpp\n{formatted_code}\n```"
     
     # Apply the regex replacement only to cpp blocks
@@ -126,9 +132,70 @@ def format_code_blocks(text):
     
     return result, blocks_formatted
 
-def process_directory(input_dir, output_dir=None):
+def process_question(question_obj):
     """
-    Process all files in a directory
+    Process a single question object (dict) to format code blocks in its fields
+    """
+    blocks_count = 0
+    
+    # Format 'question' field
+    if 'question' in question_obj and isinstance(question_obj['question'], str):
+        formatted_text, count = format_code_blocks_in_text(question_obj['question'])
+        if count > 0:
+            question_obj['question'] = formatted_text
+            blocks_count += count
+            
+    # Format 'options' field
+    if 'options' in question_obj and isinstance(question_obj['options'], list):
+        new_options = []
+        for opt in question_obj['options']:
+            if isinstance(opt, str):
+                formatted_opt, count = format_code_blocks_in_text(opt)
+                if count > 0:
+                    blocks_count += count
+                new_options.append(formatted_opt)
+            else:
+                new_options.append(opt)
+        question_obj['options'] = new_options
+        
+    return blocks_count
+
+def process_file(file_path):
+    """
+    Process a single JSON file
+    """
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            
+        if not isinstance(data, list):
+            print(f"  ⚪ Skipping {file_path.name}: Not a list of questions")
+            return 0
+            
+        total_file_blocks = 0
+        
+        for question in data:
+            total_file_blocks += process_question(question)
+            
+        if total_file_blocks > 0:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
+            print(f"  ✅ Formatted {total_file_blocks} C++ code blocks in {file_path.name}")
+        else:
+            print(f"  ⚪ No C++ code blocks formatted in {file_path.name}")
+            
+        return total_file_blocks
+        
+    except json.JSONDecodeError:
+        print(f"  ❌ Error: {file_path.name} is not valid JSON")
+        return 0
+    except Exception as e:
+        print(f"  ❌ Error processing {file_path.name}: {e}")
+        return 0
+
+def process_directory(input_dir):
+    """
+    Process all JSON files in a directory
     """
     input_path = Path(input_dir)
     
@@ -140,41 +207,25 @@ def process_directory(input_dir, output_dir=None):
         print(f"Error: '{input_path}' is not a directory.")
         return
     
-    # Get all files in the directory
-    files = [f for f in input_path.iterdir() if f.is_file()]
+    # Get all JSON files in the directory
+    files = [f for f in input_path.iterdir() if f.is_file() and f.suffix == '.json']
     
     if not files:
-        print(f"No files found in '{input_path}'")
+        print(f"No JSON files found in '{input_path}'")
         return
     
-    print(f"Found {len(files)} files in '{input_path}'")
+    print(f"Found {len(files)} JSON files in '{input_path}'")
     
     total_blocks = 0
     processed_files = 0
     
     for file_path in files:
-        try:
-            print(f"\nProcessing: {file_path.name}")
-            
-            # Read the file
-            with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
-                text = f.read()
-            
-            # Format code blocks
-            formatted_text, blocks_count = format_code_blocks(text)
-            
-            if blocks_count > 0:
-                # Write back to the same file (overwrite)
-                with open(file_path, 'w', encoding='utf-8') as f:
-                    f.write(formatted_text)
-                print(f"  ✅ Formatted {blocks_count} C++ code blocks and updated file")
-                total_blocks += blocks_count
-                processed_files += 1
-            else:
-                print(f"  ⚪ No C++ code blocks found")
-                
-        except Exception as e:
-            print(f"  ❌ Error processing {file_path.name}: {e}")
+        print(f"\nProcessing: {file_path.name}")
+        blocks_formatted = process_file(file_path)
+        
+        if blocks_formatted > 0:
+            total_blocks += blocks_formatted
+            processed_files += 1
     
     print(f"\n{'='*50}")
     print(f"SUMMARY:")
@@ -184,23 +235,13 @@ def process_directory(input_dir, output_dir=None):
 
 def main():
     """
-    Main function to process text file, directory, or stdin
-    
-    Expected directory structure:
-    ├── formatter.py          # This script
-    ├── .clang-format         # Your custom clang-format config
-    ├── clang-format          # (Optional) clang-format executable
-    └── src/data/            # Directory with files to format
-        ├── file1.txt
-        ├── file2.md
-        └── ...
+    Main function
     """
-    
     # Process ../src/data directory
     script_dir = Path(__file__).parent.absolute()
     data_dir = script_dir / ".." / "src" / "data"
     
-    print(f"Processing all files in: {data_dir.resolve()}")
+    print(f"Processing all JSON files in: {data_dir.resolve()}")
     process_directory(data_dir)
 
 if __name__ == "__main__":

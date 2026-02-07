@@ -1,16 +1,16 @@
+import json
 import re
 import sys
 from pathlib import Path
 
-
 def parse_quiz_data(text):
     """
-    Parse quiz data from the given text format into Q:/A:/O: format
-    Simple format: question -> answer index -> options
+    Parse quiz data from the given text format into a list of question dictionaries.
     """
     lines = [line.strip() for line in text.strip().split('\n') if line.strip()]
     questions = []
     i = 0
+    question_id = 1
     
     while i < len(lines):
         # First line is always the question
@@ -67,41 +67,35 @@ def parse_quiz_data(text):
         # Only add if we have a complete question with at least 2 options
         if len(options) >= 2:
             questions.append({
+                'id': question_id,
                 'question': question_text,
-                'answer': answer_num,
-                'options': options[:4]  # Take only first 4 options
+                'options': options[:4],  # Take only first 4 options
+                'correctAnswer': answer_num
             })
+            question_id += 1
     
     return questions
-
-def format_questions(questions):
-    """
-    Format questions in the Q:/A:/O: format
-    """
-    formatted = []
-    
-    for q in questions:
-        formatted.append(f"Q: {q['question']}")
-        formatted.append(f"A: {q['answer']}")
-        
-        for option in q['options']:
-            formatted.append(f"O: {option}")
-        
-        formatted.append(",")  # Empty line between questions
-    
-    return '\n'.join(formatted)
 
 def main():
     script_dir = Path(__file__).parent.absolute()
     data_dir = script_dir / ".." / "src" / "data"
-    name = data_dir / sys.argv[1]
-    o = data_dir / "formatted.txt"
+    
+    if len(sys.argv) < 2:
+        print("Usage: python parse-netlify.py <input_filename>")
+        return
+
+    input_filename = sys.argv[1]
+    name = data_dir / input_filename
+    output_filename = input_filename.rsplit('.', 1)[0] + '.json'
+    output_path = data_dir / output_filename
+    
     # Read the input file
+    content = None
     try:
         with open(name, 'r', encoding='utf-8') as file:
             content = file.read()
     except FileNotFoundError:
-        print("File 'dca.txt' not found. Please make sure the file exists.")
+        print(f"File '{input_filename}' not found in {data_dir}.")
         return
     except UnicodeDecodeError:
         # Try with different encoding if UTF-8 fails
@@ -117,21 +111,20 @@ def main():
     
     print(f"Found {len(questions)} questions")
     
-    # Format and save the output
-    formatted_output = format_questions(questions)
-    
     # Save to output file
-    with open(o, 'w', encoding='utf-8') as file:
-        file.write(formatted_output)
+    try:
+        with open(output_path, 'w', encoding='utf-8') as file:
+            json.dump(questions, file, indent=2, ensure_ascii=False)
+        print(f"Formatted quiz saved to '{output_filename}'")
+    except Exception as e:
+        print(f"Error saving JSON file: {e}")
+        return
     
-    print("Formatted quiz saved to 'formatted_quiz.txt'")
-    
-    # Also print first few questions as preview
-    print("\nPreview of first 3 questions:")
-    print("=" * 50)
-    preview_questions = questions[:3]
-    preview_output = format_questions(preview_questions)
-    print(preview_output)
+    # Only print first question as preview if available
+    if questions:
+        print("\nPreview of first question:")
+        print("=" * 50)
+        print(json.dumps(questions[0], indent=2, ensure_ascii=False))
 
 if __name__ == "__main__":
     main()
