@@ -39,10 +39,10 @@
 
       <div class="space-y-6">
         <div
-          v-for="question in questions"
-          v-show="isQuestionVisible(question)"
+          v-for="question in displayedQuestions"
           :key="question.id"
           class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4"
+          style="content-visibility: auto; contain-intrinsic-size: 1px 100px"
         >
           <div class="flex items-center justify-between mb-4">
             <span
@@ -85,8 +85,7 @@ import LoadingSpinnerIcon from "@/components/icons/LoadingSpinnerIcon.vue"
 import TestQuestion from "@/components/TestQuestion.vue"
 import type { Question } from "@/types/test"
 import { useHead } from "@unhead/vue"
-import "katex/dist/katex.min.css"
-import { computed, markRaw, onMounted, ref, shallowRef } from "vue"
+import { computed, markRaw, onMounted, ref, shallowRef, watch } from "vue"
 import { useRoute } from "vue-router"
 
 const route = useRoute()
@@ -94,6 +93,8 @@ const questions = shallowRef<Question[]>([])
 const loading = ref(true)
 const selectedTags = ref<string[]>([])
 const testId = computed(() => route.params.id as string)
+
+const displayedLimit = ref(20)
 
 const availableTags = computed(() => {
   const tags = new Set<string>()
@@ -150,13 +151,6 @@ const availableTags = computed(() => {
   })
 })
 
-const isQuestionVisible = (question: Question): boolean => {
-  if (selectedTags.value.length === 0) {
-    return true
-  }
-  return selectedTags.value.some((tag) => question.tags.includes(tag))
-}
-
 const filteredQuestions = computed(() => {
   if (selectedTags.value.length === 0) {
     return questions.value
@@ -164,6 +158,10 @@ const filteredQuestions = computed(() => {
   return questions.value.filter((question) =>
     selectedTags.value.some((tag) => question.tags.includes(tag))
   )
+})
+
+const displayedQuestions = computed(() => {
+  return filteredQuestions.value.slice(0, displayedLimit.value)
 })
 
 const questionCountText = computed(() => {
@@ -206,12 +204,32 @@ const loadTestData = async () => {
   try {
     const module = await import(`@/data/${testId.value}.json`)
     questions.value = markRaw(module.default)
+    startProgressiveRendering()
   } catch (error) {
     console.error("Failed to load test:", error)
   } finally {
     loading.value = false
   }
 }
+
+const startProgressiveRendering = () => {
+  displayedLimit.value = 20
+
+  const renderNextChunk = () => {
+    if (displayedLimit.value < filteredQuestions.value.length) {
+      displayedLimit.value += 50
+      requestAnimationFrame(renderNextChunk)
+    }
+  }
+
+  requestAnimationFrame(renderNextChunk)
+}
+
+watch(selectedTags, () => {
+  displayedLimit.value = 20
+  window.scrollTo({ top: 0, behavior: "instant" })
+  startProgressiveRendering()
+})
 
 onMounted(loadTestData)
 </script>
