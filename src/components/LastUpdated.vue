@@ -22,7 +22,7 @@ onMounted(() => {
     month: "long",
     day: "numeric",
     hour: "2-digit",
-    minute: "2-digit"
+    minute: "2-digit",
   }
 
   formattedDate.value = buildDate.toLocaleDateString("es-ES", options)

@@ -27,7 +27,7 @@ ${routes
     <loc>${BASE_URL}${route}</loc>
     <changefreq>weekly</changefreq>
     <priority>${route === "/" ? "1.0" : "0.8"}</priority>
-  </url>`
+  </url>`,
   )
   .join("\n")}
 </urlset>`

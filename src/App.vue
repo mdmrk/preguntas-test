@@ -1,12 +1,12 @@
 <script setup lang="ts">
+import { useHead } from "@unhead/vue"
 import HomeButton from "@/components/HomeButton.vue"
 import LastUpdated from "@/components/LastUpdated.vue"
 import ThemeManager from "@/components/ThemeManager.vue"
-import { useHead } from "@unhead/vue"
 
 useHead({
   title: "Preguntas Test",
-  titleTemplate: (title) => (title ? `${title} - Preguntas Test` : "Preguntas Test")
+  titleTemplate: (title) => (title ? `${title} - Preguntas Test` : "Preguntas Test"),
 })
 </script>
 

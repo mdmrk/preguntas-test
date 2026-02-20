@@ -79,14 +79,14 @@
 </template>
 
 <script setup lang="ts">
+import { computed, ref, watch } from "vue"
 import type { Question } from "@/types/test"
 import { shuffle } from "@/utils"
-import { computed, ref, watch } from "vue"
-import TextRenderer from "./TextRenderer.vue"
 import CheckIcon from "./icons/CheckIcon.vue"
 import CopiedIcon from "./icons/CopiedIcon.vue"
 import CopyIcon from "./icons/CopyIcon.vue"
 import XIcon from "./icons/XIcon.vue"
+import TextRenderer from "./TextRenderer.vue"
 
 interface Props {
   question: Question
@@ -107,11 +107,11 @@ const emit = defineEmits<Emits>()
 const optionIndices = computed(() => props.question.options.map((_, index) => index))
 
 const shuffledIndices = computed(() =>
-  props.shuffleAnswers ? shuffle(optionIndices.value) : optionIndices.value
+  props.shuffleAnswers ? shuffle(optionIndices.value) : optionIndices.value,
 )
 
 const shuffledOptions = computed(() =>
-  shuffledIndices.value.map((originalIndex) => props.question.options[originalIndex])
+  shuffledIndices.value.map((originalIndex) => props.question.options[originalIndex]),
 )
 
 const originalToShuffledIndex = computed(() => {
@@ -215,7 +215,7 @@ const selectAnswer = (shuffledIndex: number) => {
   emit("answered", {
     questionId: props.question.id,
     selectedOption: originalIndex,
-    isCorrect: isCorrect.value
+    isCorrect: isCorrect.value,
   })
 }
 

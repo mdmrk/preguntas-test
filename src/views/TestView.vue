@@ -120,11 +120,11 @@
 </template>
 
 <script setup lang="ts">
+import { useHead } from "@unhead/vue"
 import LoadingSpinnerIcon from "@/components/icons/LoadingSpinnerIcon.vue"
 import TestQuestion from "@/components/TestQuestion.vue"
 import type { Question } from "@/types/test"
 import { shuffle } from "@/utils"
-import { useHead } from "@unhead/vue"
 import "katex/dist/katex.min.css"
 import { computed, markRaw, onMounted, ref, shallowRef } from "vue"
 import { useRoute } from "vue-router"
@@ -150,7 +150,7 @@ const questions = computed(() => {
 
   let q = [...rawQuestions.value]
   const shouldShuffle = !doNotShuffle.some((str) =>
-    testTitle.value.toLowerCase().includes(str.toLowerCase())
+    testTitle.value.toLowerCase().includes(str.toLowerCase()),
   )
 
   if (shouldShuffle) {
@@ -159,7 +159,7 @@ const questions = computed(() => {
 
   if (year.value && year.value.trim() !== "") {
     return q.filter(
-      (question) => question.tags && question.tags.some((tag: string) => tag.includes(year.value!))
+      (question) => question.tags && question.tags.some((tag: string) => tag.includes(year.value!)),
     )
   }
   return q
@@ -188,9 +188,9 @@ useHead({
   meta: [
     {
       name: "description",
-      content: computed(() => `Practica preguntas de examen de ${testTitle.value}.`)
-    }
-  ]
+      content: computed(() => `Practica preguntas de examen de ${testTitle.value}.`),
+    },
+  ],
 })
 
 const stats = computed(() => {
@@ -207,13 +207,13 @@ const stats = computed(() => {
     incorrect,
     percentage,
     incorrectPercentage,
-    percentageRounded
+    percentageRounded,
   }
 })
 
 const progressBarClasses = computed(() => ({
   "rounded-l-full": true,
-  "rounded-r-full": stats.value.incorrect === 0
+  "rounded-r-full": stats.value.incorrect === 0,
 }))
 
 const finalPercentage = computed(() => Math.round(stats.value.percentage * 10) / 10)

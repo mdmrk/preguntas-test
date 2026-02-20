@@ -82,12 +82,12 @@
   </div>
 </template>
 <script setup lang="ts">
-import LoadingSpinnerIcon from "@/components/icons/LoadingSpinnerIcon.vue"
-import TestQuestion from "@/components/TestQuestion.vue"
-import type { Question } from "@/types/test"
 import { useHead } from "@unhead/vue"
 import { computed, markRaw, onMounted, ref, shallowRef, watch } from "vue"
 import { useRoute } from "vue-router"
+import LoadingSpinnerIcon from "@/components/icons/LoadingSpinnerIcon.vue"
+import TestQuestion from "@/components/TestQuestion.vue"
+import type { Question } from "@/types/test"
 
 const route = useRoute()
 const questions = shallowRef<Question[]>([])
@@ -115,7 +115,7 @@ const availableTags = computed(() => {
     Septiembre: 8,
     Octubre: 9,
     Noviembre: 10,
-    Diciembre: 11
+    Diciembre: 11,
   }
 
   return Array.from(tags).sort((a, b) => {
@@ -157,7 +157,7 @@ const filteredQuestions = computed(() => {
     return questions.value
   }
   return questions.value.filter((question) =>
-    selectedTags.value.some((tag) => question.tags.includes(tag))
+    selectedTags.value.some((tag) => question.tags.includes(tag)),
   )
 })
 
@@ -196,9 +196,9 @@ useHead({
   meta: [
     {
       name: "description",
-      content: computed(() => `Explora las preguntas del repositorio de ${testTitle.value}.`)
-    }
-  ]
+      content: computed(() => `Explora las preguntas del repositorio de ${testTitle.value}.`),
+    },
+  ],
 })
 
 const loadTestData = async () => {

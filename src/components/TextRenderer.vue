@@ -13,7 +13,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  text: ""
+  text: "",
 })
 
 const renderedText = computed(() => {

@@ -5,6 +5,6 @@
 </template>
 
 <script setup lang="ts">
-import HouseIcon from "@/components/icons/HouseIcon.vue"
 import { RouterLink } from "vue-router"
+import HouseIcon from "@/components/icons/HouseIcon.vue"
 </script>

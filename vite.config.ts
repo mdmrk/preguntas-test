@@ -1,6 +1,6 @@
+import { fileURLToPath, URL } from "node:url"
 import tailwindcss from "@tailwindcss/vite"
 import vue from "@vitejs/plugin-vue"
-import { fileURLToPath, URL } from "node:url"
 import { visualizer } from "rollup-plugin-visualizer"
 import { defineConfig } from "vite"
 import viteCompression from "vite-plugin-compression"
@@ -12,28 +12,28 @@ export default defineConfig({
       template: {
         compilerOptions: {
           hoistStatic: true,
-          cacheHandlers: true
-        }
-      }
+          cacheHandlers: true,
+        },
+      },
     }),
     vueDevTools(),
     tailwindcss(),
     viteCompression(),
     viteCompression({
       algorithm: "brotliCompress",
-      ext: ".br"
+      ext: ".br",
     }),
     visualizer({
       filename: "dist/stats.html",
       gzipSize: true,
       brotliSize: true,
-      open: false
-    })
+      open: false,
+    }),
   ],
   resolve: {
     alias: {
-      "@": fileURLToPath(new URL("./src", import.meta.url))
-    }
+      "@": fileURLToPath(new URL("./src", import.meta.url)),
+    },
   },
   build: {
     target: "esnext",
@@ -41,8 +41,8 @@ export default defineConfig({
     terserOptions: {
       compress: {
         drop_console: true,
-        drop_debugger: true
-      }
+        drop_debugger: true,
+      },
     },
     cssMinify: "esbuild",
     rollupOptions: {
@@ -112,42 +112,42 @@ export default defineConfig({
             return "assets/css/[name]-[hash].[ext]"
           }
           return "assets/[name]-[hash].[ext]"
-        }
+        },
       },
       treeshake: {
         moduleSideEffects: false,
         propertyReadSideEffects: false,
-        unknownGlobalSideEffects: false
-      }
+        unknownGlobalSideEffects: false,
+      },
     },
     sourcemap: false,
     reportCompressedSize: false,
-    chunkSizeWarningLimit: 1000
+    chunkSizeWarningLimit: 1000,
   },
   server: {
     host: true,
     port: 5173,
     watch: {
-      usePolling: true
+      usePolling: true,
     },
     strictPort: false,
     fs: {
-      strict: false
-    }
+      strict: false,
+    },
   },
   preview: {
     host: true,
     port: 4173,
-    strictPort: false
+    strictPort: false,
   },
   optimizeDeps: {
     include: ["vue", "vue-router", "katex", "highlight.js"],
     exclude: ["vue-demi"],
-    force: false
+    force: false,
   },
   assetsInclude: ["**/*.txt"],
   define: {
     __VUE_PROD_DEVTOOLS__: false,
-    __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: false
-  }
+    __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: false,
+  },
 })

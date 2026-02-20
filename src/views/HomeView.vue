@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import MainButton from "@/components/MainButton.vue"
 import { useHead } from "@unhead/vue"
+import MainButton from "@/components/MainButton.vue"
 
 useHead({
   title: "Inicio",
@@ -8,9 +8,9 @@ useHead({
     {
       name: "description",
       content:
-        "Selecciona una asignatura para practicar preguntas de examen: Redes, ADA, PPSS, PED, GPI, HADA, MADS, DCA."
-    }
-  ]
+        "Selecciona una asignatura para practicar preguntas de examen: Redes, ADA, PPSS, PED, GPI, HADA, MADS, DCA.",
+    },
+  ],
 })
 </script>
 

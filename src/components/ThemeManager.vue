@@ -7,10 +7,10 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted, ref } from "vue"
 import DeviceIcon from "@/components/icons/DeviceIcon.vue"
 import MoonIcon from "@/components/icons/MoonIcon.vue"
 import SunIcon from "@/components/icons/SunIcon.vue"
-import { onMounted, ref } from "vue"
 
 const themes = ["light", "dark", "device"] as const
 type Theme = (typeof themes)[number]
