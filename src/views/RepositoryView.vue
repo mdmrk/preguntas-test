@@ -21,7 +21,13 @@
         >
           <div class="flex flex-wrap gap-2">
             <label v-for="tag in availableTags" :key="tag" class="cursor-pointer">
-              <input type="checkbox" :value="tag" v-model="selectedTags" class="sr-only" />
+              <input
+                :id="tag"
+                type="checkbox"
+                :value="tag"
+                v-model="selectedTags"
+                class="sr-only"
+              />
               <span
                 :class="[
                   'inline-flex items-center px-3 py-1 rounded-full text-sm font-medium',
