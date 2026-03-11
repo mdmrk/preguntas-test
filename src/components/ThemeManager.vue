@@ -31,8 +31,8 @@ const loadHighlightTheme = (isDark: boolean) => {
   link.rel = "stylesheet"
   link.setAttribute("data-highlight-theme", "true")
   link.href = isDark
-    ? "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
-    : "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/intellij-light.min.css"
+    ? "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css"
+    : "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/intellij-light.min.css"
 
   document.head.appendChild(link)
 }

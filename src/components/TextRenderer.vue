@@ -35,7 +35,7 @@ const renderedText = computed(() => {
     })
 
     result = result.replace(/```(?:\w+)?\s*([\s\S]*?)\s*```/g, (_, code) => {
-      return `<pre><code>${hljs.highlight(deescapeHtml(code), { language: "cpp" }).value}</code></pre>`
+      return `<pre><code>${hljs.highlightAuto(deescapeHtml(code), ["cpp", "java", "xml"]).value}</code></pre>`
     })
 
     result = result.replace(/`([^`]+)`/g, (_, code) => {

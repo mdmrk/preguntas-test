@@ -96,16 +96,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://preguntas-test.vercel.app/test/ppss-parcial-1</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://preguntas-test.vercel.app/repository/ppss-parcial-1</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://preguntas-test.vercel.app/test/ppss-parcial-2</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -122,6 +112,16 @@
   </url>
   <url>
     <loc>https://preguntas-test.vercel.app/repository/redes</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://preguntas-test.vercel.app/test/ppss-parcial-1</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://preguntas-test.vercel.app/repository/ppss-parcial-1</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
