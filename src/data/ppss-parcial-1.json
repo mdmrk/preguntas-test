@@ -133,7 +133,7 @@
   },
   {
     "id": 12,
-    "question": "Dado el siguiente diagrama de Venn que hemos trabajado en clase:\nIndica cuál de las siguientes afirmaciones es cierta:",
+    "question": "Dado el siguiente diagrama de Venn que hemos trabajado en clase. Indica cuál de las siguientes afirmaciones es cierta:",
     "options": [
       "Un tester debe intentar que el subconjunto 7 sea lo más grande posible",
       "Con métodos de caja negra y de caja blanca, se pueden alcanzar comportamientos de los subconjuntos 1 y 2",
@@ -242,7 +242,7 @@
   },
   {
     "id": 21,
-    "question": "![Diagrama](/data/images/ppss-p1-2.png){width=200 height=200}",
+    "question": "Indica las líneas en las que identificamos las dependencias externas de la SUT realizaReserva()",
     "options": [
       "En las líneas 14 y 18",
       "Dejo la pregunta en blanco",
@@ -250,7 +250,8 @@
       "En las líneas 11 y 18"
     ],
     "correctAnswer": 3,
-    "tags": []
+    "tags": [],
+    "image": "ppss002.png"
   },
   {
     "id": 22,
