@@ -44,8 +44,7 @@ export default defineConfig({
         drop_debugger: true,
       },
     },
-    cssMinify: "esbuild",
-    rollupOptions: {
+    rolldownOptions: {
       output: {
         manualChunks(id) {
           if (id.includes("src/data/") && id.includes(".txt")) {
