@@ -106,7 +106,9 @@ const displayedLimit = ref(20)
 const availableTags = computed(() => {
   const tags = new Set<string>()
   questions.value.forEach((question) => {
-    question.tags.forEach((tag) => tags.add(tag))
+    question.tags.forEach((tag) => {
+      tags.add(tag)
+    })
   })
 
   const monthMapping: Record<string, number> = {
@@ -151,8 +153,8 @@ const availableTags = computed(() => {
       return a.localeCompare(b)
     }
 
-    const dateA = new Date(parseInt(yearA), monthIndexA)
-    const dateB = new Date(parseInt(yearB), monthIndexB)
+    const dateA = new Date(parseInt(yearA, 10), monthIndexA)
+    const dateB = new Date(parseInt(yearB, 10), monthIndexB)
 
     return dateB.getTime() - dateA.getTime()
   })

@@ -80,9 +80,7 @@ interface Props {
   options: string[]
 }
 
-interface Emits {
-  (e: "close"): void
-}
+type Emits = (e: "close") => void
 
 const props = defineProps<Props>()
 const emit = defineEmits<Emits>()

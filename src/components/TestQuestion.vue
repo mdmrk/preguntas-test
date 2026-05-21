@@ -103,12 +103,13 @@ import CopiedIcon from "./icons/CopiedIcon.vue"
 import CopyIcon from "./icons/CopyIcon.vue"
 import FlagIcon from "./icons/FlagIcon.vue"
 import XIcon from "./icons/XIcon.vue"
-import TextRenderer from "./TextRenderer.vue"
 import ReportModal from "./ReportModal.vue"
+import TextRenderer from "./TextRenderer.vue"
 
 interface Props {
   question: Question
   readOnly?: boolean
+  // biome-ignore lint/correctness/noVueDuplicateKeys: false positive, shadows local ref
   answered?: boolean
   shuffleAnswers?: boolean
 }

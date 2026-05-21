@@ -158,8 +158,8 @@ const questions = computed(() => {
   }
 
   if (year.value && year.value.trim() !== "") {
-    return q.filter(
-      (question) => question.tags && question.tags.some((tag: string) => tag.includes(year.value!)),
+    return q.filter((question) =>
+      question.tags?.some((tag: string) => tag.includes(year.value ?? "")),
     )
   }
   return q
