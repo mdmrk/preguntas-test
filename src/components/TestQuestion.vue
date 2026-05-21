@@ -69,6 +69,14 @@
     </button>
 
     <button
+      @click="reportOpen = true"
+      class="nav-button"
+      aria-label="Reportar problema"
+    >
+      <FlagIcon class="w-5 h-5" />
+    </button>
+
+    <button
       v-show="answered && !readOnly"
       @click="$emit('next')"
       class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg cursor-pointer"
@@ -76,6 +84,14 @@
       Siguiente
     </button>
   </div>
+
+  <ReportModal
+    :open="reportOpen"
+    :question-id="question.id"
+    :question-text="question.question"
+    :options="shuffledOptions"
+    @close="reportOpen = false"
+  />
 </template>
 
 <script setup lang="ts">
@@ -85,8 +101,10 @@ import { shuffle } from "@/utils"
 import CheckIcon from "./icons/CheckIcon.vue"
 import CopiedIcon from "./icons/CopiedIcon.vue"
 import CopyIcon from "./icons/CopyIcon.vue"
+import FlagIcon from "./icons/FlagIcon.vue"
 import XIcon from "./icons/XIcon.vue"
 import TextRenderer from "./TextRenderer.vue"
+import ReportModal from "./ReportModal.vue"
 
 interface Props {
   question: Question
@@ -141,6 +159,7 @@ const getInitialSelectedOption = () => {
 const selectedOption = ref<number | null>(getInitialSelectedOption())
 const answered = ref(props.answered || false)
 const copied = ref(false)
+const reportOpen = ref(false)
 
 const isCorrect = computed(() => {
   if (selectedOption.value === null) return false
