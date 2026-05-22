@@ -44,9 +44,12 @@
         </div>
       </div>
 
-      <div class="space-y-6">
+      <div v-if="filterLoading" class="flex items-center justify-center py-12">
+        <LoadingSpinnerIcon />
+      </div>
+      <div v-else class="space-y-6">
         <div
-          v-for="question in filteredQuestions"
+          v-for="question in displayedQuestions"
           :key="question.id"
           class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4"
         >
@@ -97,7 +100,9 @@ import type { Question } from "@/types/test"
 const route = useRoute()
 const questions = shallowRef<Question[]>([])
 const loading = ref(true)
+const filterLoading = ref(false)
 const selectedTags = ref<string[]>([])
+const displayedQuestions = shallowRef<Question[]>([])
 const testId = computed(() => route.params.id as string)
 
 const availableTags = computed(() => {
@@ -206,6 +211,7 @@ const loadTestData = async () => {
   try {
     const module = await import(`@/data/${testId.value}.json`)
     questions.value = markRaw(module.default)
+    displayedQuestions.value = questions.value
   } catch (error) {
     console.error("Failed to load test:", error)
   } finally {
@@ -213,8 +219,19 @@ const loadTestData = async () => {
   }
 }
 
-watch(selectedTags, () => {
+watch(selectedTags, (newTags, oldTags) => {
   window.scrollTo({ top: 0, behavior: "instant" })
+  const next = filteredQuestions.value
+  if (newTags.length === 0 && oldTags.length > 0 && questions.value.length > 200) {
+    filterLoading.value = true
+    displayedQuestions.value = []
+    setTimeout(() => {
+      displayedQuestions.value = next
+      filterLoading.value = false
+    }, 0)
+  } else {
+    displayedQuestions.value = next
+  }
 })
 
 onMounted(loadTestData)
