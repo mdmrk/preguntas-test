@@ -46,10 +46,9 @@
 
       <div class="space-y-6">
         <div
-          v-for="question in displayedQuestions"
+          v-for="question in filteredQuestions"
           :key="question.id"
           class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4"
-          style="content-visibility: auto; contain-intrinsic-size: 1px 100px"
         >
           <div class="flex items-center justify-between mb-4">
             <span
@@ -100,8 +99,6 @@ const questions = shallowRef<Question[]>([])
 const loading = ref(true)
 const selectedTags = ref<string[]>([])
 const testId = computed(() => route.params.id as string)
-
-const displayedLimit = ref(20)
 
 const availableTags = computed(() => {
   const tags = new Set<string>()
@@ -169,10 +166,6 @@ const filteredQuestions = computed(() => {
   )
 })
 
-const displayedQuestions = computed(() => {
-  return filteredQuestions.value.slice(0, displayedLimit.value)
-})
-
 const questionCountText = computed(() => {
   const totalCount = questions.value.length
   const filteredCount = filteredQuestions.value.length
@@ -213,7 +206,6 @@ const loadTestData = async () => {
   try {
     const module = await import(`@/data/${testId.value}.json`)
     questions.value = markRaw(module.default)
-    startProgressiveRendering()
   } catch (error) {
     console.error("Failed to load test:", error)
   } finally {
@@ -221,23 +213,8 @@ const loadTestData = async () => {
   }
 }
 
-const startProgressiveRendering = () => {
-  displayedLimit.value = 20
-
-  const renderNextChunk = () => {
-    if (displayedLimit.value < filteredQuestions.value.length) {
-      displayedLimit.value += 50
-      requestAnimationFrame(renderNextChunk)
-    }
-  }
-
-  requestAnimationFrame(renderNextChunk)
-}
-
 watch(selectedTags, () => {
-  displayedLimit.value = 20
   window.scrollTo({ top: 0, behavior: "instant" })
-  startProgressiveRendering()
 })
 
 onMounted(loadTestData)
