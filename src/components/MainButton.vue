@@ -3,7 +3,7 @@
     <div
       :class="[
         'w-full md:h-26 h-18 text-left overflow-clip pl-4 rounded-3xl md:rounded-4xl relative group duration-100 ease-in hover:scale-105 hover:shadow-2xl',
-        props.bg
+        props.bg,
       ]"
     >
       <button
@@ -54,7 +54,7 @@
         @click="navigateToYear(year)"
         :class="[
           'w-full md:h-20 h-12 font-black text-gray-50 md:text-5xl text-3xl text-left overflow-clip px-4 rounded-2xl md:rounded-3xl cursor-pointer hover:scale-105 hover:shadow-2xl relative group duration-100 ease-in focus:outline-none focus:ring-4 focus:ring-offset-2',
-          props.bg
+          props.bg,
         ]"
       >
         <div class="md:translate-y-6 translate-y-3.5 text-shadow-strong">{{ year }}</div>

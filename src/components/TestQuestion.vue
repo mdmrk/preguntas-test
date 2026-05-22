@@ -68,11 +68,7 @@
       <CopyIcon v-else class="w-5 h-5" />
     </button>
 
-    <button
-      @click="reportOpen = true"
-      class="nav-button"
-      aria-label="Reportar problema"
-    >
+    <button @click="reportOpen = true" class="nav-button" aria-label="Reportar problema">
       <FlagIcon class="w-5 h-5" />
     </button>
 

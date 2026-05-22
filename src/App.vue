@@ -17,5 +17,5 @@ useHead({
     <ThemeManager />
   </header>
   <RouterView />
-  <footer class="flex flex-row gap-2 pt-4 text-sm text-gray-600"><LastUpdated />·<GitHubLink/></footer>
+  <footer class="flex flex-col pt-4 text-sm text-gray-600"><LastUpdated /><GitHubLink /></footer>
 </template>
