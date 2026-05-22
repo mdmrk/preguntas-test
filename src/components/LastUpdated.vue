@@ -1,5 +1,5 @@
 <template>
-  <div class="text-sm mt-4 text-gray-600">Última actualización: {{ formattedDate }}</div>
+  <div>Última actualización: {{ formattedDate }}</div>
 </template>
 
 <script setup lang="ts">

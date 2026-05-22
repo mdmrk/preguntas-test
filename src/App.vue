@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useHead } from "@unhead/vue"
+import GitHubLink from "@/components/GitHubLink.vue"
 import HomeButton from "@/components/HomeButton.vue"
 import LastUpdated from "@/components/LastUpdated.vue"
 import ThemeManager from "@/components/ThemeManager.vue"
@@ -16,5 +17,5 @@ useHead({
     <ThemeManager />
   </header>
   <RouterView />
-  <footer class="flex flex-col"><LastUpdated /></footer>
+  <footer class="flex flex-row gap-2 pt-4 text-sm text-gray-600"><LastUpdated />·<GitHubLink/></footer>
 </template>

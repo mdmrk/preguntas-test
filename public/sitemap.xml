@@ -16,56 +16,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://preguntas-test.vercel.app/test/dca</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://preguntas-test.vercel.app/repository/dca</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://preguntas-test.vercel.app/test/mads-parcial-2</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://preguntas-test.vercel.app/repository/mads-parcial-2</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://preguntas-test.vercel.app/test/ada-parcial-1</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://preguntas-test.vercel.app/repository/ada-parcial-1</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://preguntas-test.vercel.app/test/ppss-parcial-2</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://preguntas-test.vercel.app/repository/ppss-parcial-2</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://preguntas-test.vercel.app/test/ppss-parcial-1</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://preguntas-test.vercel.app/repository/ppss-parcial-1</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://preguntas-test.vercel.app/test/hada</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -76,12 +26,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://preguntas-test.vercel.app/test/redes</loc>
+    <loc>https://preguntas-test.vercel.app/test/gpi</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://preguntas-test.vercel.app/repository/redes</loc>
+    <loc>https://preguntas-test.vercel.app/repository/gpi</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -106,12 +56,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://preguntas-test.vercel.app/test/gpi</loc>
+    <loc>https://preguntas-test.vercel.app/test/ppss-parcial-1</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://preguntas-test.vercel.app/repository/gpi</loc>
+    <loc>https://preguntas-test.vercel.app/repository/ppss-parcial-1</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -122,6 +72,56 @@
   </url>
   <url>
     <loc>https://preguntas-test.vercel.app/repository/ped</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://preguntas-test.vercel.app/test/ppss-parcial-2</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://preguntas-test.vercel.app/repository/ppss-parcial-2</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://preguntas-test.vercel.app/test/ada-parcial-1</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://preguntas-test.vercel.app/repository/ada-parcial-1</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://preguntas-test.vercel.app/test/mads-parcial-2</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://preguntas-test.vercel.app/repository/mads-parcial-2</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://preguntas-test.vercel.app/test/dca</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://preguntas-test.vercel.app/repository/dca</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://preguntas-test.vercel.app/test/redes</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://preguntas-test.vercel.app/repository/redes</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
