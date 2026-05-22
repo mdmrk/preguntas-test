@@ -1,9 +1,13 @@
 <template>
-  <div>Última actualización: {{ formattedDate }}</div>
+  <div class="flex flex-row gap-1">
+    <ClockIcon class="w-5 h-5" />
+    <div>Última actualización: {{ formattedDate }}</div>
+  </div>
 </template>
 
 <script setup lang="ts">
 import { onMounted, ref } from "vue"
+import ClockIcon from "@/components/icons/ClockIcon.vue"
 
 const formattedDate = ref<string>("")
 
