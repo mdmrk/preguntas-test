@@ -58,6 +58,31 @@
     </div>
   </div>
 
+  <div
+    v-if="answered && question.explanation"
+    class="mt-4 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden"
+  >
+    <button
+      type="button"
+      class="w-full flex items-center justify-between px-4 py-3 text-sm font-medium text-left bg-gray-50 dark:bg-gray-700/50 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors cursor-pointer"
+      @click="explanationOpen = !explanationOpen"
+      :aria-expanded="explanationOpen"
+    >
+      <span>Explicación</span>
+      <ChevronDownIcon
+        class="w-5 h-5 text-gray-500 transition-transform duration-200"
+        :class="{ 'rotate-180': explanationOpen }"
+        aria-hidden="true"
+      />
+    </button>
+    <div
+      v-show="explanationOpen"
+      class="px-4 py-3 text-sm text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800"
+    >
+      <TextRenderer :text="question.explanation!" />
+    </div>
+  </div>
+
   <div class="flex justify-center items-center mt-6 space-x-3">
     <button
       @click="copyQuestion"
@@ -95,6 +120,7 @@ import { computed, ref, watch } from "vue"
 import type { Question } from "@/types/test"
 import { shuffle } from "@/utils"
 import CheckIcon from "./icons/CheckIcon.vue"
+import ChevronDownIcon from "./icons/ChevronDownIcon.vue"
 import CopiedIcon from "./icons/CopiedIcon.vue"
 import CopyIcon from "./icons/CopyIcon.vue"
 import FlagIcon from "./icons/FlagIcon.vue"
@@ -157,6 +183,7 @@ const selectedOption = ref<number | null>(getInitialSelectedOption())
 const answered = ref(props.answered || false)
 const copied = ref(false)
 const reportOpen = ref(false)
+const explanationOpen = ref(false)
 
 const isCorrect = computed(() => {
   if (selectedOption.value === null) return false
@@ -257,6 +284,7 @@ const copyQuestion = async () => {
 const resetQuestion = () => {
   selectedOption.value = getInitialSelectedOption()
   answered.value = props.answered || false
+  explanationOpen.value = false
 }
 
 watch(() => props.question, resetQuestion)
