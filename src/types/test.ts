@@ -4,6 +4,6 @@ export interface Question {
   options: string[]
   correctAnswer: number
   image?: string
-  tags: string[]
+  tags?: string[]
   explanation?: string
 }

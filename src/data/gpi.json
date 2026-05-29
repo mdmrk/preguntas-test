@@ -4,7 +4,6 @@
     "question": "En el análisis EVA, el indicador CV se calcula como:",
     "options": ["BCWP - ACWP", "BCWP - BCWS", "BCWP / BCWS", "BCWP / ACWP"],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "La Variación del Coste (CV — Cost Variance) se calcula como la diferencia entre el Valor Acumulado o Ganado (BCWP) y el Coste Real (ACWP). Esto nos indica si estamos gastando más o menos de lo presupuestado para el trabajo realizado."
   },
   {
@@ -17,7 +16,6 @@
       "Ley de Parkinson"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "Todas las opciones listadas (Juicio experto, Modelado algorítmico como COCOMO y la Ley de Parkinson) son técnicas válidas y reconocidas para la estimación de costes en ingeniería del software."
   },
   {
@@ -30,20 +28,13 @@
       "La holgura total de B y C pasa a ser de 2 y 1 día respectivamente"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "Por definición matemática en la planificación de proyectos (PERT/CPM), la Holgura Libre (HL) de una actividad nunca puede ser mayor que su Holgura Total (HT). En este enunciado se indica que HT(A)=2 y HL(A)=3, lo cual es teóricamente imposible."
   },
   {
     "id": 4,
     "question": "¿Cuál de las siguientes es una causa legal para poder transmitir los derechos de Propiedad Intelectual?",
-    "options": [
-      "En virtud de relación laboral",
-      "Mortis causa",
-      "Todas son ciertas",
-      "Intervivos"
-    ],
+    "options": ["En virtud de relación laboral", "Mortis causa", "Todas son ciertas", "Intervivos"],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "Los derechos patrimoniales (de explotación) de la Propiedad Intelectual pueden transmitirse legalmente por acuerdos entre personas vivas (inter vivos), por herencia (mortis causa) o por cesión implícita al crear software como empleado bajo una relación laboral."
   },
   {
@@ -56,7 +47,6 @@
       "Los clientes suscritos a nuestro servicio"
     ],
     "correctAnswer": 3,
-    "tags": [],
     "explanation": "En el marco de la RGPD/LOPDGDD, los autónomos (clientes) son los 'Responsables del Tratamiento' porque son quienes deciden la finalidad y recaban los datos de sus propios clientes. Nosotros, como proveedores del servicio web, actuaríamos como 'Encargados del Tratamiento'."
   },
   {
@@ -69,7 +59,6 @@
       "Esos dos valores son incompatibles"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "Un SPI > 1 indica que vamos adelantados en la agenda, mientras que un CPI < 1 indica que estamos gastando más de lo presupuestado. Esta combinación suele darse cuando se ha asignado demasiado personal o recursos costosos para acelerar el proyecto (crashing), lo que genera sobrecostes por baja eficiencia o rendimientos decrecientes."
   },
   {
@@ -82,7 +71,6 @@
       "Todas son ciertas"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "Una 'versión' es una instancia interna del sistema con funcionalidad añadida, mientras que una 'release' es una versión formal que se distribuye a los clientes (y que sí incluye la documentación técnica completa). Por tanto, en el ciclo de vida siempre se generan muchas más versiones internas que releases públicas."
   },
   {
@@ -95,7 +83,6 @@
       "Se hace siempre de dos en dos iteraciones"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "El proceso de planificación es iterativo. El plan general abarca todo el proyecto de forma abstracta, mientras que el plan detallado se elabora específicamente para la fase o iteración actual que se va a ejecutar."
   },
   {
@@ -103,7 +90,6 @@
     "question": "¿En nuestras prácticas, en qué fase del modelo UP ha sido objetivo la implementación de la capa lógica de negocio y acceso a datos?",
     "options": ["Construcción", "Inicio", "Transición", "Elaboración"],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "En el Proceso Unificado (UP), la fase de Construcción es donde ocurre el grueso de la programación e implementación de la lógica del sistema (desarrollando los componentes funcionales basados en la arquitectura previamente definida) hasta conseguir una versión operativa."
   },
   {
@@ -116,7 +102,6 @@
       "Los requerimientos funcionales y no funcionales"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "El Proceso Unificado (UP) es un marco de trabajo 'centrado en la arquitectura'. El hito fundamental de la fase de Elaboración es establecer una arquitectura base estable que permita minimizar riesgos, lo cual guía todo el desarrollo en la fase de Construcción."
   },
   {
@@ -129,33 +114,20 @@
       "Se distribuyen libremente y son de código abierto"
     ],
     "correctAnswer": 3,
-    "tags": [],
     "explanation": "El software libre se caracteriza por garantizar libertades fundamentales al usuario (ejecutar, copiar, distribuir, estudiar, cambiar y mejorar el software), por lo que siempre debe incluir acceso al código fuente de forma abierta."
   },
   {
     "id": 12,
     "question": "La cadena de actividades que determina la duración global mínima de un proyecto se conoce como:",
-    "options": [
-      "Cronograma",
-      "Diagrama de Gantt",
-      "Línea base",
-      "Camino crítico"
-    ],
+    "options": ["Cronograma", "Diagrama de Gantt", "Línea base", "Camino crítico"],
     "correctAnswer": 3,
-    "tags": [],
     "explanation": "El camino crítico (Critical Path) es la secuencia más larga de tareas dependientes en un proyecto que no tienen holgura. Por tanto, es la ruta que dicta el tiempo mínimo absoluto en el que se puede completar el proyecto."
   },
   {
     "id": 13,
     "question": "En el análisis EVA, la tarea/proyecto está por encima de lo presupuestado si:",
-    "options": [
-      "BCWP < BCWS",
-      "BCWP > ACWP",
-      "Todas son falsas",
-      "BCWP > BCWS"
-    ],
+    "options": ["BCWP < BCWS", "BCWP > ACWP", "Todas son falsas", "BCWP > BCWS"],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "Estar 'por encima de lo presupuestado' significa haber incurrido en un sobrecoste, es decir, el Coste Real (ACWP) es mayor que el Valor Acumulado (BCWP). La formulación matemática sería BCWP < ACWP. Como ninguna opción muestra esto correctamente, todas son falsas."
   },
   {
@@ -168,7 +140,6 @@
       "Todas son ciertas"
     ],
     "correctAnswer": 3,
-    "tags": [],
     "explanation": "Según la LOPDGDD, la ley no aplica al tratamiento de datos de personas fallecidas (aunque sus familiares pueden ejercer ciertos derechos de supresión), ni a materias de seguridad del Estado clasificadas, ni a lo excluido por el Reglamento Europeo."
   },
   {
@@ -176,7 +147,6 @@
     "question": "¿Cuál de las siguientes licencias no es propia del software libre?",
     "options": ["Creative Commons", "BSD", "OEM", "GPL"],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "OEM (Original Equipment Manufacturer) es un tipo de licencia de software privativo que se otorga vinculada a la venta de un hardware específico (por ejemplo, Windows preinstalado en un portátil nuevo). Las licencias GPL y BSD sí son de código abierto."
   },
   {
@@ -189,7 +159,6 @@
       "Establece un marco europeo relativo a la protección de las personas físicas en lo que respecta al tratamiento de sus datos personales y a la libre circulación de estos datos"
     ],
     "correctAnswer": 3,
-    "tags": [],
     "explanation": "El RGPD es el Reglamento General de Protección de Datos, y es la normativa de obligado cumplimiento en toda la Unión Europea para estandarizar la privacidad y el tratamiento de datos de carácter personal."
   },
   {
@@ -197,7 +166,6 @@
     "question": "¿Cómo se calcula el CPI?",
     "options": ["BCWP - ACWP", "BCWP - BCWS", "BCWP / ACWP", "BCWP * ACWP"],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "El CPI (Cost Performance Index) mide la eficiencia del coste. Se calcula dividiendo el Valor Acumulado (BCWP) entre el Coste Real incurrido (ACWP). Un CPI menor a 1 indica sobrecoste."
   },
   {
@@ -205,7 +173,6 @@
     "question": "Según la LOPDGDD ¿A partir de qué edad un menor puede expresar consentimiento en términos de protección de datos?",
     "options": ["12", "14", "18", "16"],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "Aunque el RGPD europeo fija el estándar por defecto en 16 años (permitiendo a los países bajarlo hasta 13), la adaptación española mediante la LOPDGDD fijó la edad mínima para prestar consentimiento válido sin necesidad de los padres en los 14 años."
   },
   {
@@ -213,7 +180,6 @@
     "question": "¿Cómo se calcula el SV?",
     "options": ["BCWP - BCWS", "BCWP / ACWP", "BCWP / BCWS", "BCWP - ACWP"],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "El SV (Schedule Variance o Variación del Cronograma) se calcula restando el Valor Planificado (BCWS) al Valor Acumulado/Ganado (BCWP). Un SV negativo indica que vamos con retraso."
   },
   {
@@ -221,7 +187,6 @@
     "question": "¿Cómo se calcula el SPI?",
     "options": ["BCWP / ACWP", "BCWP - ACWP", "BCWP / BCWS", "BCWP - BCWS"],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "El SPI (Schedule Performance Index) es el indicador de eficiencia en el tiempo. Se calcula dividiendo el Valor Acumulado (BCWP) entre el Valor Planificado inicial (BCWS). Un SPI menor a 1 implica retraso."
   },
   {
@@ -234,7 +199,6 @@
       "Se usa como seguimiento interno"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "Monitorizar es un proceso de control de la gestión de proyectos. Su esencia es comparar el progreso real (Agenda real) contra la línea base (Agenda planificada) para identificar desviaciones y aplicar correcciones."
   },
   {
@@ -247,7 +211,6 @@
       "Revisar las estrategias establecidas en el plan de riesgos"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "La gestión de riesgos es continua. Revisar los riesgos significa reevaluar los riesgos conocidos periódicamente, ya que a medida que avanza el proyecto, la probabilidad de que ocurran y el impacto que tendrían pueden haber cambiado."
   },
   {
@@ -260,7 +223,6 @@
       "No ha comenzado"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "Si BCWS es 1200, significa que había trabajo planificado para esta fecha (debería haber comenzado). Si BCWP y ACWP son 0, significa que no se ha hecho nada ni se ha gastado nada (no ha comenzado y por tanto va retrasada). Esta pregunta asume implícitamente que BCWP=ACWP=0."
   },
   {
@@ -273,7 +235,6 @@
       "Todas son ciertas"
     ],
     "correctAnswer": 3,
-    "tags": [],
     "explanation": "El plan de proyecto engloba todo: define las actividades a realizar (WBS/EDT), incluye las estimaciones de recursos y costes, y su estructuración proporciona visibilidad a la gestión para poder hacer un seguimiento adecuado."
   },
   {
@@ -281,20 +242,13 @@
     "question": "¿Cómo se calcula el CV?",
     "options": ["BCWP - BCWS", "BCWP / BCWS", "BCWP - ACWP", "BCWP / ACWP"],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "CV (Variación del Coste) es el Valor Acumulado (BCWP) menos el Coste Real (ACWP). Un CV negativo indica sobrecoste."
   },
   {
     "id": 27,
     "question": "¿Qué técnica de estimación de costes se basa en contabilizar pantallas, informes y módulos de cálculo?",
-    "options": [
-      "Puntos función",
-      "Puntos objeto",
-      "Estimación por analogía",
-      "Pricing to win"
-    ],
+    "options": ["Puntos función", "Puntos objeto", "Estimación por analogía", "Pricing to win"],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "El análisis de Puntos de Función (Function Points) es una métrica de tamaño del software que estima el esfuerzo basándose en la funcionalidad observable por el usuario: entradas externas, salidas (informes), consultas, archivos lógicos y pantallas."
   },
   {
@@ -307,7 +261,6 @@
       "Las iteraciones tienen siempre la misma duración"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "En el Proceso Unificado (UP), el número y la duración de las iteraciones no es fijo y varía según las necesidades de cada fase y proyecto. Ninguna de las opciones presentadas es correcta; la afirmación verdadera sería 'Las iteraciones pueden tener duraciones distintas'."
   },
   {
@@ -315,7 +268,6 @@
     "question": "En el análisis EVA, la tarea/proyecto va con retraso según la agenda si:",
     "options": ["BCWP < ACWP", "BCWP < BCWS", "BCWP > ACWP", "BCWP > BCWS"],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "Un proyecto va con retraso cuando el trabajo que realmente se ha completado (BCWP, Valor Acumulado) es inferior al trabajo que se había planificado tener listo para esta fecha (BCWS, Valor Planificado)."
   },
   {
@@ -328,7 +280,6 @@
       "Nada, ya que no sobrepasamos la holgura total de A"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "El retraso de A (4 días) excede su Holgura Libre (3 días) en 1 día. Ese día extra se le resta forzosamente a la Holgura Total de las actividades sucesoras. Por tanto, HT(B) pasa de 2 a 1, y HT(C) pasa de 3 a 2."
   },
   {
@@ -341,7 +292,6 @@
       "No es necesario tener planes de contingencia porque la experiencia demuestra que no es posible contener los riesgos en su totalidad"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "La naturaleza del software implica incertidumbre, por lo que el riesgo no se puede eliminar al 100%. Lo que se debe hacer es gestionarlo mediante la identificación temprana, el seguimiento continuo y planes de mitigación/prevención."
   },
   {
@@ -349,20 +299,13 @@
     "question": "En el análisis EVA, el indicador SV se calcula como:",
     "options": ["BCWP - BCWS", "BCWP / BCWS", "BCWP / ACWP", "BCWP - ACWP"],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "Schedule Variance (SV) = Valor Acumulado (BCWP) menos Valor Planificado (BCWS). Un SV negativo indica retraso."
   },
   {
     "id": 33,
     "question": "¿Cuál de las siguientes no es una técnica de estimación de costes?",
-    "options": [
-      "Modelado algorítmico de costes",
-      "Juicio Experto",
-      "Ley de Parkinson",
-      "Gantt"
-    ],
+    "options": ["Modelado algorítmico de costes", "Juicio Experto", "Ley de Parkinson", "Gantt"],
     "correctAnswer": 3,
-    "tags": [],
     "explanation": "El diagrama de Gantt es una herramienta de planificación temporal y monitorización de agendas, no una técnica para estimar cuánto esfuerzo (dinero/horas) costará el proyecto."
   },
   {
@@ -375,7 +318,6 @@
       "Todas son ciertas"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "Un gráfico Burn-down muestra en el eje Y el esfuerzo o trabajo pendiente (en horas o puntos de historia) y en el eje X el tiempo del Sprint. Ayuda a visualizar si el equipo terminará a tiempo."
   },
   {
@@ -388,7 +330,6 @@
       "Hasta que el proyecto se dote de más presupuesto"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "Los riesgos son dinámicos. Un riesgo (y su plan de contingencia asociado) deja de ser relevante únicamente cuando, por el avance del proyecto, su probabilidad de ocurrencia se vuelve nula o su impacto es insignificante."
   },
   {
@@ -401,7 +342,6 @@
       "Es posible utilizarlo sólo con lenguajes orientados a objetos"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "La principal virtud de la creación de prototipos es ayudar a esclarecer requisitos dudosos con el cliente en etapas tempranas. Esto reduce drásticamente el riesgo de construir un software equivocado y ahorra costes futuros de retrabajo."
   },
   {
@@ -414,7 +354,6 @@
       "No puedo aplicarlo sino hago el seguimiento del proyecto"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "El cono de la incertidumbre de Boehm ilustra que al principio del proyecto la variabilidad de las estimaciones es enorme (hasta 4x). A medida que avanza el desarrollo y se fijan los requisitos y la arquitectura, el rango de error se estrecha considerablemente."
   },
   {
@@ -427,7 +366,6 @@
       "Técnicas de Programación y Control de Proyectos. C. Romero López. Pirámide"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "El libro de texto principal sobre el que se estructuran las transparencias de teoría es Sommerville como referencia primaria, apoyado secundariamente por Pressman."
   },
   {
@@ -440,7 +378,6 @@
       "Empresas de 250 empleados o más"
     ],
     "correctAnswer": 3,
-    "tags": [],
     "explanation": "El Registro de Actividades de Tratamiento (RAT) es de carácter obligatorio para empresas u organizaciones que tengan 250 o más empleados. Las empresas más pequeñas solo están obligadas si tratan datos sensibles o el tratamiento supone un riesgo para los derechos."
   },
   {
@@ -448,7 +385,6 @@
     "question": "En el análisis EVA, el indicador CPI se calcula como:",
     "options": ["BCWP / ACWP", "BCWP - BCWS", "BCWP - ACWP", "BCWP / BCWS"],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "CPI (Cost Performance Index) = BCWP / ACWP. Un CPI > 1 significa que estamos por debajo del presupuesto; un CPI < 1 indica sobrecoste."
   },
   {
@@ -461,7 +397,6 @@
       "La definición de las tablas de la BD de la aplicación"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "En la Gestión de la Configuración del Software (GCS), un Elemento de Configuración (EC) es cualquier entregable, archivo, ejecutable, modelo de datos o documento que deba ser rastreado y versionado para futuros mantenimientos. Por tanto, todos lo son."
   },
   {
@@ -474,7 +409,6 @@
       "Para la cesión de los derechos de autoría del software de la empresa al empleado"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "Bajo una relación laboral, se ceden los derechos patrimoniales (de explotación) del empleado hacia la empresa que le paga el salario para que pueda comercializar el software."
   },
   {
@@ -487,7 +421,6 @@
       "Lo importante es el trabajo individual y la documentación que se realice sobre la aplicación"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "SCRUM es un marco ágil que entrega valor de forma iterativa e incremental. Fomenta el trabajo en equipo (Daily meetings) y define claramente roles fundamentales como el Product Owner, Scrum Master y Development Team."
   },
   {
@@ -500,7 +433,6 @@
       "Identifican normalmente riesgos muy poco probables"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "En la práctica habitual, las empresas son buenas detectando riesgos tardíos operativos (de ejecución, cuando el problema ya está cerca de ocurrir), pero suelen fallar en identificar riesgos sistémicos o estratégicos tempranos."
   },
   {
@@ -513,7 +445,6 @@
       "Todas son ciertas"
     ],
     "correctAnswer": 3,
-    "tags": [],
     "explanation": "Tanto Scrum como eXtreme Programming son metodologías ágiles. Ambas usan roles, capturan requisitos del cliente mediante Historias de Usuario, y se basan en entregar software funcional y testeado al final de iteraciones cortas."
   },
   {
@@ -526,7 +457,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "Cobol o Java son lenguajes, UML es modelado, e ITIL es gestión de servicios. Kanban, Scrum y XP son los principales marcos de trabajo de metodologías ágiles en desarrollo de software."
   },
   {
@@ -539,7 +469,6 @@
       "Las condiciones iniciales no se pueden dar"
     ],
     "correctAnswer": 3,
-    "tags": [],
     "explanation": "Misma trampa que en la pregunta 3. Matemáticamente, la Holgura Libre (HL) no puede exceder a la Holgura Total (HT). HT(A)=2 y HL(A)=3 es un grafo de dependencias imposible."
   },
   {
@@ -547,7 +476,6 @@
     "question": "En el análisis EVA, la tarea/proyecto está por encima de lo presupuesto si:",
     "options": ["BCWP > BCWS", "BCWP > ACWP", "BCWP < ACWP", "BCWP - ACWP"],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "Estar por encima del presupuesto significa gastar más dinero real (ACWP) del valor que realmente hemos aportado al construir el software (BCWP). Por tanto, BCWP < ACWP, lo que da una Variación de Coste (CV) negativa."
   },
   {
@@ -560,7 +488,6 @@
       "Los requisitos se establecen en la primera fase y no se permite ningún cambio en las fases siguientes"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "El Proceso Unificado (UP) es iterativo y los flujos de trabajo (como Requisitos) ocurren en todas las fases, pero su intensidad varía. Capturar requisitos es predominante en las fases de Inicio y Elaboración, pero está permitido aceptar cambios más adelante."
   },
   {
@@ -573,7 +500,6 @@
       "Necesidades de estima"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "Según la Pirámide de Maslow aplicada a recursos humanos en tecnología, los perfiles técnicos superiores y jefes de proyecto suelen tener cubiertas las necesidades básicas y de seguridad, por lo que su motivación principal recae en el nivel más alto: el reconocimiento, el logro y la autorrealización profesional."
   },
   {
@@ -586,7 +512,6 @@
       "Una herramienta de modelado de proyectos"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "MS Project es un software de administración de proyectos diseñado para asistir a administradores de proyectos en el desarrollo de planes, asignación de recursos a tareas, dar seguimiento al progreso (cronogramas/Gantt) y administrar presupuestos."
   },
   {
@@ -599,7 +524,6 @@
       "Se refleja como una línea horizontal en el gráfico burn-down"
     ],
     "correctAnswer": 3,
-    "tags": [],
     "explanation": "En un gráfico Burn-down, el eje Y representa el esfuerzo pendiente y el eje X el tiempo. Si hay un impedimento que bloquea al equipo, el trabajo pendiente no disminuye, por lo que la gráfica se dibuja como una línea horizontal durante esos días."
   },
   {
@@ -612,7 +536,6 @@
       "Descanso cada 15 días para renovar las ideas"
     ],
     "correctAnswer": 3,
-    "tags": [],
     "explanation": "Scrum es iterativo (Sprints) e incluye Dailys (reuniones diarias) y Reviews (demos). Sin embargo, no incluye 'descansos para renovar ideas' como parte de su framework oficial; los Sprints se suceden uno tras otro de manera continua."
   },
   {
@@ -625,7 +548,6 @@
       "El nuevo conocimiento semántico puede interferir con conocimiento semántico ya existente"
     ],
     "correctAnswer": 3,
-    "tags": [],
     "explanation": "Al estudiar los límites del pensamiento humano y la memoria, se explica que los nuevos conceptos (conocimiento semántico) pueden chocar o reestructurar lo que ya sabíamos, produciendo fenómenos de interferencia proactiva o retroactiva."
   },
   {
@@ -638,7 +560,6 @@
       "Establecer los requisitos de un sistema"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "El objetivo íntegro de la Ingeniería del Software y sus metodologías abarca recoger bien los requisitos, cumplir las expectativas de los stakeholders (clientes/usuarios) y hacerlo dentro de los márgenes de viabilidad económica y temporal previstos."
   },
   {
@@ -651,7 +572,6 @@
       "Simplificar la complejidad de otras metodologías"
     ],
     "correctAnswer": 3,
-    "tags": [],
     "explanation": "El Manifiesto Ágil prioriza 'Individuos e interacciones sobre procesos y herramientas' y 'Software funcionando sobre documentación extensiva'. Nacieron precisamente para simplificar la pesadez y rigidez burocrática de los modelos clásicos en cascada."
   },
   {
@@ -664,7 +584,6 @@
       "No ha comenzado"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "Si hay Valor Planificado (BCWS > 0) significa que por fecha debería haber comenzado. Al ser BCWP y ACWP iguales (y típicamente en estos ejercicios asumiendo que son 0), implica que no ha comenzado y, por ende, va retrasada. Por tanto, todas son ciertas."
   },
   {
@@ -677,7 +596,6 @@
       "Datos ya excluidos en el RGPD"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "Según el Título I de la Ley Orgánica 3/2018 (LOPDGDD), el tratamiento de datos de personas fallecidas y las materias sujetas a normativas de seguridad del Estado/clasificadas quedan excluidas de su ámbito general de aplicación, al igual que las ya excluidas por el RGPD europeo."
   },
   {
@@ -690,7 +608,6 @@
       "RGPD UE de 2016 y LOPD 3/2018"
     ],
     "correctAnswer": 3,
-    "tags": [],
     "explanation": "En España aplica el Reglamento General de Protección de Datos (RGPD) de la Unión Europea (aprobado en 2016, de obligado cumplimiento desde 2018) y su adaptación nacional: la Ley Orgánica 3/2018 de Protección de Datos y Garantía de los Derechos Digitales (LOPDGDD)."
   },
   {
@@ -703,7 +620,6 @@
       "Todas son ciertas"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "Una 'release' (lanzamiento) es una versión del sistema que se distribuye fuera del equipo de desarrollo, a los clientes. Por ello, a diferencia de las versiones internas, debe ir obligatoriamente empaquetada con manuales, notas de lanzamiento y documentación técnica."
   },
   {
@@ -716,7 +632,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "Scrum funciona bajo el concepto de Time-boxing (cajas de tiempo estáticas). Un Sprint tiene una duración fija (usualmente de 2 a 4 semanas) que no puede ser alterada ni alargada, independientemente de si se acaban o no las tareas."
   },
   {
@@ -729,7 +644,6 @@
       "El padre o tutor legal será el que lo haga en su nombre mientras forme parte de la unidad familiar"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "En España, la LOPDGDD establece de manera específica en su Artículo 7 que la edad mínima para el consentimiento válido de los menores para el tratamiento de sus datos personales es de 14 años."
   },
   {
@@ -742,7 +656,6 @@
       "20% Trabajando sólo, 30% actividades no productivas, 50% Interactuando con otra gente"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "Según las estadísticas clásicas de gestión de RRHH en Ingeniería del Software, un desarrollador pasa de media el 50% de su tiempo comunicándose o interactuando con otros, un 30% trabajando en solitario y un 20% en tareas administrativas o no directamente productivas."
   },
   {
@@ -755,7 +668,6 @@
       "No es necesario que el cliente esté in situ, ya que se pueden utilizar especificaciones escritas para la siguiente iteración"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "XP fomenta la Integración Continua y las Entregas Pequeñas (Small Releases). Al final de cada ciclo, el sistema debe ser completamente funcional y estar listo para pasar a producción. Además, XP sí requiere TDD (pruebas antes de programar) y el cliente in situ."
   },
   {
@@ -763,7 +675,6 @@
     "question": "¿Cuál de los siguientes tipos de licencia no es propia del software libre?",
     "options": ["Creative Commons", "OEM", "GPL", "BSD"],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "OEM (Original Equipment Manufacturer) es un licenciamiento de software comercial privativo que se liga a la venta de un hardware, no es de código abierto."
   },
   {
@@ -776,7 +687,6 @@
       "Ser incluidas y ajustar el programa"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "Las restricciones impuestas por el cliente son determinantes. No pueden ser ignoradas, pero tampoco 'incluidas a ciegas'. El director de proyecto debe tomarlas en cuenta, evaluar su viabilidad (estudio de viabilidad) y su impacto en el alcance y la calidad."
   },
   {
@@ -789,7 +699,6 @@
       "Identificar las tareas que consumen más recursos"
     ],
     "correctAnswer": 3,
-    "tags": [],
     "explanation": "Identificar las tareas críticas que absorben la mayoría del presupuesto o esfuerzo (regla del 80/20) es vital para enfocarse en su estimación precisa. Es un error planificar asumiendo un rendimiento del 100% (siempre hay bajas, reuniones, etc.)."
   },
   {
@@ -802,7 +711,6 @@
       "Las acciones que realizan los programadores para pasar las pruebas unitarias"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "La refactorización (refactoring) consiste en mejorar la estructura interna del código (hacerlo más limpio, legible y eficiente) sin alterar en absoluto lo que hace externamente (su funcionalidad o comportamiento para el usuario)."
   },
   {
@@ -815,20 +723,13 @@
       "El valor BCWP es erróneo"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "Si BCWS es 0, no estaba planificado hacer nada aún. Si BCWP es 0, no hemos aportado valor al proyecto. Sin embargo, ACWP = 800 significa que ya hemos incurrido en un coste real (quizás hemos comprado licencias o un servidor antes de tiempo). Por tanto, no debía empezar, pero ya hay gastos."
   },
   {
     "id": 71,
     "question": "¿Cuál de las siguientes no es técnica de estimación de costes de un proyecto?",
-    "options": [
-      "Juicio Experto",
-      "Gantt",
-      "Modelado algorítmico de costes",
-      "Ley de Parkinson"
-    ],
+    "options": ["Juicio Experto", "Gantt", "Modelado algorítmico de costes", "Ley de Parkinson"],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "El diagrama de Gantt pertenece a la fase de programación y seguimiento temporal del proyecto (Scheduling), no se utiliza para hacer estimaciones de esfuerzo, dinero o líneas de código."
   },
   {
@@ -841,7 +742,6 @@
       "El número de iteraciones es igual en todas las fases"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "En el Proceso Unificado de Desarrollo, el marco de trabajo es flexible. Las iteraciones pueden variar en duración (y cantidad) dependiendo del tamaño del proyecto y de la fase en la que nos encontremos (Inicio suele ser breve, Construcción más larga)."
   },
   {
@@ -854,7 +754,6 @@
       "Derecho de rectificación"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "Oposición, supresión y rectificación son los clásicos derechos 'ARCO' relativos a los datos. La LOPDGDD añadió un Título X específico dedicado a los 'Derechos Digitales', donde se encuadra el derecho a la intimidad frente al uso de dispositivos en el ámbito laboral."
   },
   {
@@ -867,7 +766,6 @@
       "Se definen y estiman las historias de usuario"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "En el ciclo de vida de XP, la fase de Exploración sirve para que el equipo entienda los requisitos creando 'Story cards' y dedique tiempo a mitigar riesgos técnicos probando arquitecturas y desarrollando prototipos arquitectónicos o tecnológicos (Spikes)."
   },
   {
@@ -875,7 +773,6 @@
     "question": "En el análisis EVA la tarea/proyecto va adelantada según la agenda si:",
     "options": ["BCWP > ACWP", "BCWP < BCWS", "BCWP > BCWS", "BCWP < ACWP"],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "Si el Valor Acumulado del trabajo realizado (BCWP) es mayor que el Valor Planificado que esperábamos tener completado a día de hoy (BCWS), el SPI será mayor a 1 y por tanto vamos por delante en la agenda."
   },
   {
@@ -888,7 +785,6 @@
       "Retrasarla según su holgura total"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "La Holgura Libre es el tiempo que una tarea puede retrasarse sin afectar ni al final del proyecto ni a la fecha de inicio de sus tareas sucesoras inmediatas. Consumir esta holgura es la forma más 'indolora' de absorber un retraso."
   },
   {
@@ -901,7 +797,6 @@
       "Complejidad del producto"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "En el modelo COCOMO, los multiplicadores de coste (Cost Drivers) ajustan la estimación. Si tenemos personal altamente experimentado, el multiplicador será menor que 1.0, lo que lógicamente reduce el coste total estimado."
   },
   {
@@ -914,7 +809,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "PERT (Project Evaluation and Review Technique) utiliza grafos de red donde los nodos o arcos (grafos dirigidos) representan las actividades y sus prelaciones temporales (dependencias), lo que permite calcular el camino crítico."
   },
   {
@@ -922,7 +816,6 @@
     "question": "¿Cuál de los siguientes tipos de licencia no es propia del software privativo?",
     "options": ["Apache", "EULA", "PKC", "ROK"],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "Apache es una licencia de software libre/código abierto de carácter permisivo. EULA (End User License Agreement), PKC y ROK son propias del mundo del software propietario o privativo."
   },
   {
@@ -935,7 +828,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "La gestión de riesgos es iterativa. A medida que cambian los requisitos, el equipo o las fechas, surgen riesgos nuevos y otros caducan. El plan de contingencia debe ser un documento dinámico ('vivo')."
   },
   {
@@ -948,7 +840,6 @@
       "Ninguna opción es correcta"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "En el marco jurídico español y europeo, el software (código fuente) en sí mismo no es patentable. Se protege como obra literaria acudiendo al Registro de la Propiedad Intelectual para asegurar los derechos de autor."
   },
   {
@@ -961,7 +852,6 @@
       "La EDT incluye todas las tareas necesarias para realizar el proyecto salvo las relacionadas con la gestión del proyecto"
     ],
     "correctAnswer": 3,
-    "tags": [],
     "explanation": "La Estructura de Desglose del Trabajo (EDT / WBS) debe contener el 100% del esfuerzo del proyecto. Esto incluye explícitamente las tareas de administración, documentación, reuniones y gestión del propio proyecto."
   },
   {
@@ -974,7 +864,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "Que una actividad tenga predecesoras y sucesoras no implica obligatoriamente que pertenezca al camino crítico. Puede tener holgura. El tiempo last (fin tardío) jamás puede ser menor que el tiempo early (inicio temprano) en una actividad."
   },
   {
@@ -987,7 +876,6 @@
       "Una organización del trabajo del equipo en paquetes de trabajo que ayudará en la comunicación con los interesados"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "El paso lógico inmediatamente posterior a definir el alcance es desglosarlo creando la EDT (Estructura de Desglose del Trabajo), cuya unidad base son los 'paquetes de trabajo' entregables, necesarios para asegurar que cumplimos los requisitos fijados."
   },
   {
@@ -1000,7 +888,6 @@
       "20 años a partir del fallecimiento del autor"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "Según la Ley de Propiedad Intelectual vigente en España, los derechos de explotación duran toda la vida del autor y se extienden hasta 70 años después de su fallecimiento o declaración de fallecimiento."
   },
   {
@@ -1013,7 +900,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "El estudio de viabilidad (económica, técnica, operativa) no es opcional ni depende del coste. Es el primer paso fundamental en la fase de iniciación/conceptuación de cualquier proyecto para evitar malgastar recursos en algo imposible o no rentable."
   },
   {
@@ -1026,20 +912,13 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "El 'Cliente' es quien solicita y paga (Editorial), el 'Usuario' es el destinatario final del producto (comprador del libro), y el 'Patrocinador' es la alta dirección de la empresa ejecutora que habilita los fondos y nombra al PM."
   },
   {
     "id": 88,
     "question": "Según la LPI, ¿Cuál de las siguientes figuras tiene un plazo de protección indefinido?",
-    "options": [
-      "Patentes",
-      "Marcas",
-      "Derechos de Autor",
-      "Secretos comerciales"
-    ],
+    "options": ["Patentes", "Marcas", "Derechos de Autor", "Secretos comerciales"],
     "correctAnswer": 3,
-    "tags": [],
     "explanation": "El Secreto Comercial o Industrial no se registra públicamente; su protección es indefinida mientras se mantenga oculto, a diferencia de las patentes o los derechos de autor que tienen plazos definidos."
   },
   {
@@ -1052,7 +931,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "La actividad C es crítica (holgura 0). La actividad D tiene una holgura de 4, lo que significa que puede retrasarse hasta 4 unidades de tiempo sin afectar la entrega. Si su holgura se reduce en 1 (pasa a 3), sigue sin sobrepasar su límite, por lo que la duración final permanece inalterada."
   },
   {
@@ -1065,7 +943,6 @@
       "Crear registros lecciones aprendidas"
     ],
     "correctAnswer": 3,
-    "tags": [],
     "explanation": "En la fase de cierre de un proyecto, el documento de 'Lecciones Aprendidas' es vital. Documenta qué salió bien, qué salió mal y cómo se resolvieron los problemas, generando la base de conocimiento histórico de la organización para el futuro."
   },
   {
@@ -1078,7 +955,6 @@
       "Enunciado del alcance del proyecto"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "El Diccionario de la EDT (WBS Dictionary) es el documento adjunto a la Estructura de Desglose del Trabajo donde se detallan exhaustivamente las especificaciones, criterios de aceptación y descripciones técnicas de cada paquete de trabajo."
   },
   {
@@ -1091,7 +967,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "Los riesgos son dinámicos. Es necesario revisarlos (monitorización de riesgos) de forma periódica en el proyecto."
   },
   {
@@ -1104,7 +979,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "A diferencia de las estimaciones basadas en Líneas de Código (LOC), los Puntos de Función miden la funcionalidad percibida por el usuario. Da igual si lo vas a programar en Java, Python o Ensamblador; la cantidad de 'funciones' (pantallas, BDs, inputs) es la misma."
   },
   {
@@ -1117,20 +991,13 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "Un estudio de viabilidad integral debe certificar la factibilidad no solo tecnológica o económica, sino también operativa, demostrando que emprender dicho proyecto aporta valor y es la ruta más lógica a seguir para la empresa."
   },
   {
     "id": 95,
     "question": "¿Qué modelo COCOMO utilizarías si el proyecto a desarrollar es muy complejo, restrictivo e innovador?",
-    "options": [
-      "Semiacoplado",
-      "Orgánico",
-      "Empotrado",
-      "Ninguno de los anteriores"
-    ],
+    "options": ["Semiacoplado", "Orgánico", "Empotrado", "Ninguno de los anteriores"],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "El modelo COCOMO original define 3 modos: Orgánico (pequeño/sencillo), Semiacoplado (medio) y Empotrado (Embedded). Este último aplica a sistemas con fortísimas restricciones de hardware/software, alta complejidad o innovación, donde la flexibilidad es nula."
   },
   {
@@ -1143,7 +1010,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "Siguiendo los modelos clásicos de calidad del software (como McCall o Boehm), la calidad del producto se mide por factores del producto final: operabilidad, mantenibilidad (soportar cambios) y portabilidad (nuevos entornos). La planificación temporal es calidad del proceso, no del producto."
   },
   {
@@ -1156,7 +1022,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "La holgura total es precisamente el margen de tiempo del que dispone una tarea para demorarse sin posponer la fecha final de todo el proyecto."
   },
   {
@@ -1169,7 +1034,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "La Revisión Técnica Formal (RTF) es un filtro de calidad de la fase SQA. Tras completarse, se levanta acta formal en la que obligatoriamente se debe documentar quién participó, qué se revisó (informe sumarial) y qué fallos o sucesos se encontraron para ser corregidos."
   },
   {
@@ -1177,7 +1041,6 @@
     "question": "¿Cuál de los siguientes modelos de proceso es evolutivo?",
     "options": ["Espiral", "Cascada", "Unificado", "Unificado y Espiral"],
     "correctAnswer": 3,
-    "tags": [],
     "explanation": "Tanto el modelo en Espiral de Boehm (basado en evaluación de riesgos e iteraciones evolutivas) como el Proceso Unificado (iterativo e incremental) se encuadran dentro del paradigma evolutivo."
   },
   {
@@ -1190,7 +1053,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "La principal característica (y ventaja) de la técnica de Puntos de Función respecto a contar líneas de código es que es completamente independiente del lenguaje de programación subyacente."
   },
   {
@@ -1203,7 +1065,6 @@
       "Contactar con el PM del proyecto anterior y pedirle consejos"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "La metodología estándar de gestión de proyectos (como PMBOK) dicta que lo primero que debe hacer un PM ante un nuevo reto es consultar los 'Activos de los Procesos de la Organización', lo cual incluye buscar registros históricos y lecciones aprendidas de proyectos similares archivados en la PMO."
   },
   {
@@ -1216,7 +1077,6 @@
       "Definir la mejor estrategia de comunicaciones con cada grupo de interesados"
     ],
     "correctAnswer": 3,
-    "tags": [],
     "explanation": "Una vez recabada toda la información, necesidades e intereses (lo que implica que ya han sido analizados y clasificados), el paso inmediatamente posterior es usar ese análisis para definir el plan de involucramiento o la estrategia de comunicación adecuada para cada uno de ellos."
   },
   {
@@ -1229,7 +1089,6 @@
       "Puede haber más de una versión por iteración"
     ],
     "correctAnswer": 3,
-    "tags": [],
     "explanation": "En el Proceso Unificado, una iteración produce un incremento ejecutable del producto. Sin embargo, a nivel interno de gestión de la configuración, durante una misma iteración el equipo puede ensamblar y compilar múltiples versiones internas antes de dar la iteración por cerrada."
   },
   {
@@ -1242,7 +1101,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "En la gestión del ciclo de vida de un proyecto, las fases pueden relacionarse de manera secuencial (una empieza cuando acaba la anterior), con superposición o solapamiento (fast-tracking) o de forma iterativa (ciclos repetitivos)."
   },
   {
@@ -1255,7 +1113,6 @@
       "Nada, simplemente tiene en cuenta que la tarea la realizan 2 recursos"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "En MS Project, el comportamiento al añadir recursos depende del 'Tipo de Tarea' configurado: si es de Trabajo Fijo, la duración bajará a la mitad; si es de Duración Fija, el tiempo no cambiará pero el trabajo asignado se recalculará; si es de Unidades Fijas, actuará de manera dependiente a la configuración de condicionamiento por esfuerzo."
   },
   {
@@ -1268,7 +1125,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "La afirmación es completamente falsa. Justamente, uno de los roles principales de la Dirección de Proyectos es lidiar y encontrar el punto de equilibrio entre las 'restricciones contrapuestas' (el clásico triángulo de hierro: alcance, tiempo, coste y calidad)."
   },
   {
@@ -1281,7 +1137,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "El plan de riesgos es un documento 'vivo'. Se redacta en la fase de planificación inicial, pero el seguimiento y reevaluación (monitorización) debe ser constante a lo largo del ciclo de vida del proyecto."
   },
   {
@@ -1294,7 +1149,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "La holgura (ya sea libre o total) es un margen temporal. Representa el 'colchón' de días del que dispone el director de proyecto para retrasar el inicio o alargar la ejecución de una actividad sin que esto provoque un retraso en la fecha de entrega final estipulada."
   },
   {
@@ -1307,7 +1161,6 @@
       "Se basa en existencia de una propuesta de valor que tenemos que comunicar al cliente mediante un modelo canvas y rellenando todos los apartados"
     ],
     "correctAnswer": 3,
-    "tags": [],
     "explanation": "El Business Model Canvas (Lienzo de Modelo de Negocio) es una herramienta estratégica que debe rellenarse en su totalidad (los 9 bloques fundamentales) para tener sentido, y su núcleo central sobre el que pivota todo el modelo es la 'Propuesta de Valor'."
   },
   {
@@ -1320,7 +1173,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "COCOMO es un modelo algorítmico y Delphi es una técnica de juicio experto por consenso; ambos son para estimar. WBS (o EDT) no estima nada directamente, es una técnica de descomposición estructural para dividir el alcance del proyecto en partes manejables."
   },
   {
@@ -1333,7 +1185,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "Un estudio de viabilidad (técnica, operativa y económica) busca responder a una pregunta fundamental antes de iniciar un proyecto: '¿Podemos hacerlo y merece la pena?'. Determina si se poseen las capacidades y si el coste/beneficio es aceptable."
   },
   {
@@ -1346,7 +1197,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "El diagrama de Gantt es una representación gráfica de barras (no de red, como PERT) en la que el eje horizontal representa el calendario temporal y el eje vertical las tareas. Sirve para planificar agendas y ver solapamientos temporales."
   },
   {
@@ -1359,7 +1209,6 @@
       "Una herramienta de seguimiento de proyectos"
     ],
     "correctAnswer": 3,
-    "tags": [],
     "explanation": "Microsoft Project es el software por excelencia para la calendarización (scheduling), planificación y seguimiento de proyectos, no un entorno de desarrollo ni una herramienta algorítmica de cálculo de estimación tipo COCOMO."
   },
   {
@@ -1372,20 +1221,13 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "Los Puntos de Función miden únicamente el tamaño del software basándose en su funcionalidad; por sí solos no dan dinero ni horas. Para saber el coste, necesitas introducir ese tamaño en un modelo matemático algorítmico como COCOMO, que es quien calcula el coste final."
   },
   {
     "id": 115,
     "question": "¿Cuándo tienen los interesados una mayor influencia en el proyecto?",
-    "options": [
-      "A lo largo del proyecto",
-      "Al final",
-      "Al inicio",
-      "En la mitad"
-    ],
+    "options": ["A lo largo del proyecto", "Al final", "Al inicio", "En la mitad"],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "El poder de influencia de los interesados (y la capacidad de modificar el alcance y las características del producto sin causar sobrecostes masivos) es máximo al principio del proyecto y decae de forma pronunciada a medida que avanza el desarrollo."
   },
   {
@@ -1398,7 +1240,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "La teoría clásica del análisis de sistemas dicta que la viabilidad debe cubrir estos 4 frentes: Económico (rentabilidad), Técnico (¿existe la tecnología/skills?), Operativo (¿se usará en la empresa?) y Legal (¿cumple leyes como LOPD, LPI?)."
   },
   {
@@ -1411,7 +1252,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "La legislación vigente (RGPD/LOPDGDD) asigna responsabilidades y obligaciones legales vinculantes tanto al 'Responsable del Tratamiento' (quien decide la finalidad) como al 'Encargado del Tratamiento' (quien procesa los datos en nombre del responsable)."
   },
   {
@@ -1419,7 +1259,6 @@
     "question": "En el análisis EVA, la tarea/proyecto está por debajo de lo presupuesto si:",
     "options": ["BCWP > ACWP", "BCWP > BCWS", "BCWP < ACWP", "BCWS < ACWP"],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "Estar 'por debajo de lo presupuestado' es positivo: significa que hemos ahorrado dinero. Ocurre cuando el Valor Ganado por el trabajo que hemos entregado (BCWP) es mayor que el Coste Real que hemos tenido que pagar por hacerlo (ACWP). Esto nos da un CV positivo y un CPI mayor a 1."
   },
   {
@@ -1427,7 +1266,6 @@
     "question": "¿Cuál de los siguientes parámetros EVA nos informa de la cantidad de trabajo planificado al final del proyecto/tarea?",
     "options": ["BCWP", "BAC", "ACWP", "BCWS"],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "BAC (Budget At Completion - Presupuesto a la Conclusión) es la suma total de todo el Valor Planificado (BCWS) previsto para el proyecto. Representa el presupuesto base total de todo el trabajo al llegar al 100% de finalización."
   },
   {
@@ -1440,7 +1278,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "La afirmación es completamente falsa. Las Revisiones Técnicas Formales (RTF) son, de hecho, la herramienta primaria y más importante de la SQA (Software Quality Assurance) para detectar errores en etapas tempranas antes de compilar el código."
   },
   {
@@ -1453,7 +1290,6 @@
       "Mantener una comunicación fluida con los interesados"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "El problema descrito es una mala gestión de stakeholders (interesados). El paso número uno absoluto en gestión de proyectos, antes siquiera de poder averiguar sus expectativas o comunicarse con ellos, es haberlos 'Identificado a todos' en la fase de iniciación."
   },
   {
@@ -1466,7 +1302,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "La SQA no es una fase aislada de 'Testing' al final del proyecto. Es una actividad protectora transversal que se aplica y acompaña al software durante todo su ciclo de vida (desde la toma de requisitos hasta el mantenimiento)."
   },
   {
@@ -1479,7 +1314,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "Por normativa europea recogida en el Convenio de Patente Europea y la ley española de patentes, el software ('los programas de ordenador como tales') está expresamente excluido de la patentabilidad. Se protege siempre mediante la Ley de Propiedad Intelectual (derechos de autor)."
   },
   {
@@ -1492,7 +1326,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "Tanto en la antigua LOPD 15/1999 como en la actual LOPDGDD, la protección de datos es un derecho fundamental que ampara única y exclusivamente a las personas físicas (ciudadanos). Las personas jurídicas (empresas o sociedades) no tienen datos personales que proteger bajo esta ley."
   },
   {
@@ -1505,7 +1338,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "Los Puntos de Función nacieron en IBM orientados a medir sistemas de gestión de bases de datos, entrada de formularios e informes (Sistemas de Información / Tipo Gestión). A diferencia de contar líneas de código, esta técnica no depende del lenguaje de implementación."
   },
   {
@@ -1518,7 +1350,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "La Estructura de Desglose del Trabajo (WBS/EDT) se representa clásicamente como un organigrama o estructura de árbol jerárquica. La raíz es el proyecto general y los nodos inferiores (las 'hojas') son los entregables o paquetes de trabajo a nivel granular."
   },
   {
@@ -1531,7 +1362,6 @@
       "Registrar los ficheros con los datos de carácter personal en la AEPD"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "Con la ley actual (RGPD), la opción de registrar ficheros en la AEPD ya no existe, fue eliminada. Nombrar un DPO solo es obligatorio en casos de alto riesgo o volumen. Para cualquier aplicación web actual, es imperativo legal incluir los textos informativos de aviso legal y política de privacidad."
   },
   {
@@ -1544,7 +1374,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "En una empresa, un gerente o director funcional es aquel que tiene autoridad jerárquica y de gestión sobre un departamento administrativo o de soporte específico y su personal (RRHH, contabilidad, producción), a diferencia del Director de Proyecto, cuyo rol es transversal."
   },
   {
@@ -1557,7 +1386,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "La deontología se refiere a la ética aplicada a una profesión. A diferencia de las leyes (reguladas por el Estado), la deontología profesional se autorregula a través del propio colectivo (Colegios Profesionales) plasmándose en Códigos Deontológicos que rigen su moral."
   },
   {
@@ -1570,7 +1398,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "Nota: Esta es una pregunta heredada de la antigua LOPD 15/1999, donde la obligación clave era 'declarar los ficheros a la AEPD'. Con la LOPDGDD actual, esta obligación fue sustituida por el RAT (Registro de Actividades de Tratamiento) interno."
   },
   {
@@ -1583,7 +1410,6 @@
       "Dejar que el patrocinador se entere de la solicitud de los interesados"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "Si el Patrocinador (Sponsor, quien tiene la autoridad de presupuesto final) ya negó tajantemente la financiación para este punto exacto del alcance, el PM debe gestionar las expectativas bloqueando la solicitud e informando a los interesados."
   },
   {
@@ -1596,7 +1422,6 @@
       "Diseño, Implementación y Feedback"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "Las tres claves (las '3 P's de la gestión de proyectos software') son: People (Personal calificado y organizado), Problem (Entender claramente los requisitos del sistema) y Process (Elegir y seguir la metodología adecuada)."
   },
   {
@@ -1609,7 +1434,6 @@
       "Necesidades de autorrealización"
     ],
     "correctAnswer": 3,
-    "tags": [],
     "explanation": "Se asume que profesionales en la cúspide de la gestión IT tienen ya cubiertas las necesidades fisiológicas, de seguridad, sociales e incluso las de estima básica, enfocando sus motivadores principales en los hitos de máxima autorrealización."
   },
   {
@@ -1622,7 +1446,6 @@
       "Desarrollo, Análisis, Planificación y Evaluación"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "El ciclo de vida canónico de la gestión de riesgos es: 1º Descubrirlos (Identificación), 2º Evaluar su probabilidad e impacto (Análisis), 3º Decidir las estrategias de respuesta o contingencia (Planificación) y 4º Revisarlos y rastrearlos periódicamente (Monitorización)."
   },
   {
@@ -1635,7 +1458,6 @@
       "50% actividades no productivas, 30% interactuando con otra gente, 20% trabajando solo"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "La mitad del tiempo (50%) en proyectos de software se invierte en comunicación y reuniones, un 30% en programación o trabajo solitario, y un 20% es absorbido por 'overhead' corporativo, lecturas o tareas no productivas."
   },
   {
@@ -1648,7 +1470,6 @@
       "La construcción del sistema"
     ],
     "correctAnswer": 3,
-    "tags": [],
     "explanation": "'Make' es la herramienta automatizada clásica de los entornos Unix/Linux cuya función fundamental es analizar las dependencias del código fuente e invocar automáticamente a los compiladores para realizar el Build (construcción) de los ejecutables del sistema."
   },
   {
@@ -1661,7 +1482,6 @@
       "Un hito es comúnmente conocido como welwitschia mirabilis"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "Los hitos (milestones) son puntos de verificación en el tiempo (duración cero en el cronograma) que marcan la finalización de fases, grupos de actividades o la consecución de una meta de revisión interna clave. No son los 'entregables' al cliente."
   },
   {
@@ -1674,7 +1494,6 @@
       "B se convierte en crítica"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "Retrasarse 4 días excede la holgura libre de A (que era 3) en 1 día. Ese día rebosante 'se come' obligatoriamente un día de la holgura total de sus tareas sucesoras. HT(B) 2-1=1, HT(C) 3-1=2."
   },
   {
@@ -1687,7 +1506,6 @@
       "Nos indica que tenemos que prescindir de personal ya que estamos gastando más de lo previsto"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "BCWS es el Valor Planificado. CPTR es el acrónimo en español de BCWP (Valor Ganado). Si BCWS > BCWP, significa que hemos conseguido avanzar menos de lo que teníamos planeado para esta fecha. Resultado: El proyecto va retrasado."
   },
   {
@@ -1700,7 +1518,6 @@
       "Tiene como objetivo el confeccionar una agenda del proyecto"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "La gestión de proyectos es la disciplina que engloba la planificación y el control completo de una iniciativa. Su propósito primario es organizar el esfuerzo respondiendo a las preguntas clave: Qué (Alcance/WBS), Cómo (Procesos/Metodología) y Quién (Asignación de Recursos)."
   },
   {
@@ -1713,7 +1530,6 @@
       "Todos los anteriores"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "Visualmente, en un diagrama de Gantt donde las fases del ciclo de vida (Análisis, Diseño, Implementación, Pruebas) se suceden de forma estrictamente secuencial, como peldaños de una escalera sin solapamientos ni retornos iterativos, estamos ante la representación clásica de un modelo de proceso en Cascada (Waterfall)."
   },
   {
@@ -1726,20 +1542,13 @@
       "El seguimiento del proyecto"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "MS Project es excepcional para planificar y hacer seguimiento de la agenda (días y recursos). Pero la estimación de las magnitudes técnicas del software (usar Puntos de Función o algoritmos como COCOMO) se realiza fuera de esta herramienta."
   },
   {
     "id": 154,
     "question": "En el análisis EVA, la tarea/proyecto está por debajo de lo presupuestado si:",
-    "options": [
-      "BCWP < ACWP",
-      "BCWP > ACWS",
-      "BCWP > ACWP",
-      "Ninguna de las anteriores"
-    ],
+    "options": ["BCWP < ACWP", "BCWP > ACWS", "BCWP > ACWP", "Ninguna de las anteriores"],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "Estar por debajo de lo presupuestado significa tener un balance positivo (ahorro). Ocurre cuando el Valor Ganado por lo que hemos construido (BCWP) es numéricamente superior al Coste Real (ACWP) que hemos tenido que pagar por ello."
   },
   {
@@ -1752,7 +1561,6 @@
       "No podemos saber si ha terminado sin conocer su BAC"
     ],
     "correctAnswer": 3,
-    "tags": [],
     "explanation": "Con BCWP=BCWS sabemos que va en tiempo. Con ACWP>BCWP sabemos que tiene sobrecoste. Pero para dictaminar si está 'terminada', necesitamos saber cuál era el Presupuesto a la Conclusión (BAC). Si el BAC era 600, ha terminado (con pérdidas); si el BAC era 1200, va por la mitad."
   },
   {
@@ -1765,7 +1573,6 @@
       "Solo corresponde a una fase del proyecto"
     ],
     "correctAnswer": 3,
-    "tags": [],
     "explanation": "Por el principio de la planificación gradual o iterativa, el plan 'detallado' se realiza únicamente para la fase actual que está a punto de ejecutarse, no para el proyecto entero a años vista."
   },
   {
@@ -1778,20 +1585,13 @@
       "Individualismo"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "Las metodologías ágiles (Scrum, XP) destacan por mejorar el Time-to-Market (rapidez) con entregas tempranas e incrementales, y por situar al cliente en el centro del proceso (colaboración continua) para asegurar que se construye el producto correcto."
   },
   {
     "id": 161,
     "question": "Según la LPI, ¿Cuál de las siguientes figuras tienen un plazo de protección indefinido?",
-    "options": [
-      "Marcas",
-      "Secretos comerciales",
-      "Patentes",
-      "Derecho de autor"
-    ],
+    "options": ["Marcas", "Secretos comerciales", "Patentes", "Derecho de autor"],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "Mientras una empresa sea capaz de proteger diligentemente sus activos para que no se filtren al dominio público, el 'Secreto Comercial' es la única figura de propiedad intelectual/industrial cuya vigencia legal no expira nunca con el tiempo."
   },
   {
@@ -1799,20 +1599,13 @@
     "question": "La necesidad de ........ es una de las mayores razones para la comunicación en un proyecto.",
     "options": ["Optimización", "Integridad", "Integración", "Diferenciación"],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "En el marco de la dirección de proyectos (PMBOK), el director de proyectos tiene el papel principal de 'Integrador'. La comunicación transversal fluida es el pegamento que permite la Integración de todas las áreas (costes, riesgos, alcance y cronograma) para que el proyecto actúe como un todo unificado."
   },
   {
     "id": 173,
     "question": "Un proyecto está lleno de modificaciones al acta de constitución ¿Quién tiene la responsabilidad principal de decidir si estos cambios son necesarios?",
-    "options": [
-      "El PM",
-      "El equipo del proyecto",
-      "El patrocinador",
-      "Los interesados"
-    ],
+    "options": ["El PM", "El equipo del proyecto", "El patrocinador", "Los interesados"],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "El Acta de Constitución (Project Charter) es el documento fundacional emitido y autorizado por el Sponsor. Al tratarse del documento que autoriza formalmente la existencia del proyecto y compromete el presupuesto, cualquier modificación recae bajo la responsabilidad directa del Patrocinador."
   },
   {
@@ -1825,7 +1618,6 @@
       "Requisitos del negocio"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "Como el proceso de iniciación tiene como principal salida crear el Acta de Constitución, y es precisamente en ese documento donde se nombra formalmente al Director de Proyecto, su existencia previa no es un requisito indispensable para comenzar la fase."
   },
   {
@@ -1838,7 +1630,6 @@
       "Acta de constitución / Ejecución del proyecto"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "El grupo de procesos de Inicio da como fruto principal el 'Acta de Constitución' y el 'Registro de Interesados'. Una vez firmados e identificados, se da carpetazo al inicio y el equipo transita inmediatamente a la siguiente gran fase: el grupo de procesos de 'Planificación'."
   },
   {
@@ -1851,7 +1642,6 @@
       "El director del proyecto crea el acta de constitución y el patrocinador la aprueba"
     ],
     "correctAnswer": 3,
-    "tags": [],
     "explanation": "En la práctica estándar, es habitual que el Director del Proyecto ayude a redactar el borrador del documento, pero carece de la jerarquía para aprobarlo. Única y exclusivamente el Patrocinador (Sponsor) o la dirección ejecutiva pueden aprobarlo para liberar el presupuesto."
   },
   {
@@ -1864,7 +1654,6 @@
       "El caso de negocio del proyecto"
     ],
     "correctAnswer": 3,
-    "tags": [],
     "explanation": "El Acta de Constitución es de alto nivel. Estrategias detalladas, paquetes de la WBS o estimaciones granulares pertenecen a la fase posterior de Planificación. El Acta contiene la visión macro: presupuesto resumido, hitos principales y la justificación económica o 'Caso de Negocio' (Business Case)."
   },
   {
@@ -1877,7 +1666,6 @@
       "No comenzar el proyecto"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "Al no estar firmada el acta, el PM no tiene autoridad formal ni el presupuesto está asegurado. La mejor práctica es educar a los superiores ('managing up') documentando y mostrando los enormes impactos y riesgos de proceder de manera no oficial."
   },
   {
@@ -1890,7 +1678,6 @@
       "Comunicación informal verbal"
     ],
     "correctAnswer": 3,
-    "tags": [],
     "explanation": "Ante la primera ocurrencia de un problema interpersonal o de bajo rendimiento, el acercamiento debe ser rápido, privado y constructivo. Una reunión cara a cara privada (Informal verbal) es la manera ideal de abordarlo antes de escalar a procesos burocráticos y formales."
   },
   {
@@ -1903,7 +1690,6 @@
       "La gerencia se disguste"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "El PMBOK estipula que el 90% del tiempo de un PM se invierte en comunicar. Las carencias en la comunicación son la raíz primigenia para la falta de alineación de expectativas, malentendidos y asunciones erróneas que inevitablemente eclosionan en conflictos."
   },
   {
@@ -1916,7 +1702,6 @@
       "Usarlo en una herramienta software para la dirección de proyectos"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "El sistema de numeración de la WBS (por ejemplo: 1.2.4.1) es una notación taxonómica. Sirve fundamentalmente para que cualquier miembro del equipo identifique de un vistazo a qué rama, fase y nivel jerárquico pertenece un paquete de trabajo concreto."
   },
   {
@@ -1929,7 +1714,6 @@
       "Un sistema de información para la mejora de la dirección de proyectos"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "El proceso 'Validar el Alcance' (Validate Scope) consiste en que el cliente o patrocinador revise los entregables terminados y firme su aceptación formal."
   },
   {
@@ -1942,7 +1726,6 @@
       "Durante los procesos de planificación"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "Para no acumular todo el riesgo técnico al final, la validación formal del alcance con el cliente debe ser progresiva y realizarse a medida que se completan hitos importantes, es decir, al cierre de cada fase mayor del ciclo de vida."
   },
   {
@@ -1955,7 +1738,6 @@
       "Las EDT son la única manera de identificar los riesgos del proyecto"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "El postulado fundamental de la Estructura de Desglose del Trabajo es la 'Regla del 100%'. Si el WBS está bien hecho, aglutina la totalidad del alcance. Si un trabajo no está dibujado en la EDT, queda legalmente fuera del proyecto, garantizando que ningún paquete de trabajo quede omitido."
   },
   {
@@ -1968,7 +1750,6 @@
       "Disponer de una lista de riesgos"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "Más allá de los gráficos de árbol, el proceso de descomponer el proyecto en partes más pequeñas de forma colaborativa genera un entendimiento técnico común. El verdadero valor de crear la EDT junto con el equipo es el compromiso y la 'aceptación' psicológica del equipo sobre lo que van a construir."
   },
   {
@@ -1981,7 +1762,6 @@
       "Iniciar el proyecto en base a un plan para la dirección del proyecto"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "Inmediatamente después de recibir autoridad (Acta aprobada), el PM debe identificar y validar la visión inicial reuniéndose con los Interesados (Stakeholders) para asentar la base política y las expectativas conjuntas del proyecto (suele hacerse en las reuniones Kick-off)."
   },
   {
@@ -1994,7 +1774,6 @@
       "Demasiado detalle"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "El Enunciado del Alcance detalla los límites del proyecto. Utilizar términos vagos ('optimizar', 'amigable', 'rápido') en lugar de métricas precisas abre la puerta a malentendidos insalvables y a la deformación silenciosa del alcance (Scope creep)."
   },
   {
@@ -2007,7 +1786,6 @@
       "Realizar el control integrado de cambios"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "Teniendo claros los requisitos y los límites estipulados en el 'Enunciado del Alcance', lo que procede es consolidar el 'Plan Maestro', elaborando la EDT y desarrollando el compendio de todos los planes subsidiarios de gestión (cronograma, costes, riesgos)."
   },
   {
@@ -2020,7 +1798,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 0,
-    "tags": [],
     "explanation": "La definición del camino crítico establece que su duración marca la duración mínima del proyecto entero. Sumar la duración de todas las actividades secuenciales que componen dicho camino (10 + 19 + 10 = 39) determina el tiempo mínimo absoluto necesario para finalizar el proyecto."
   },
   {
@@ -2028,20 +1805,13 @@
     "question": "La duración del proyecto es de 15 semanas, la varianza del camino crítico es 3,11 y su desviación estándar 1,76 semanas. La probabilidad de que el proyecto termine en 16 semanas es:",
     "options": ["62,5%", "71,2%", "77,3%", "Ninguna de las anteriores"],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "Se calcula el valor Z: Z = (Fecha Objetivo - Fecha Esperada) / Desviación Estándar → Z = (16 - 15) / 1,76 = 0,568. Consultando Z=0,56 en una tabla de distribución normal estandarizada se obtiene una probabilidad aproximada del 71,2%."
   },
   {
     "id": 192,
     "question": "Tres proyectos: A (70% ganar 5.000€ y 30% ganar 10.000€), B (50% ganar 70.000€ y 50% perder 10.000€), C (25% ganar 20.000€ y 75% perder 35.000€). ¿Cuál es el mejor?",
-    "options": [
-      "Proyecto A",
-      "Proyecto B",
-      "Proyecto C",
-      "Ninguna de las anteriores"
-    ],
+    "options": ["Proyecto A", "Proyecto B", "Proyecto C", "Ninguna de las anteriores"],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "Se aplica el análisis de Valor Monetario Esperado (EMV): A = (0.7 × 5.000) + (0.3 × 10.000) = +6.500€ | B = (0.5 × 70.000) + (0.5 × -10.000) = +30.000€ | C = (0.25 × 20.000) + (0.75 × -35.000) = -21.250€ | El Proyecto B ofrece el mayor beneficio ponderado."
   },
   {
@@ -2054,20 +1824,13 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "El Código de Ética de la ACM/IEEE para Ingenieros del Software descansa bajo 8 pilares rectores: Sociedad, Cliente y Empresario, Producto, Valoración (Juicio), Gestión, Profesión, Compañeros y Personal."
   },
   {
     "id": 194,
     "question": "Tres proyectos: A (50% ganar 50.000€ y 50% perder 10.000€), B (30% ganar 40.000€ y 70% ganar 10.000€), C (45% ganar 50.000€ y 55% perder 5.000€). ¿Cuál es el peor?",
-    "options": [
-      "Proyecto A",
-      "Proyecto B",
-      "Proyecto C",
-      "Ninguna de las anteriores"
-    ],
+    "options": ["Proyecto A", "Proyecto B", "Proyecto C", "Ninguna de las anteriores"],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "Aplicando el Valor Monetario Esperado (EMV): A = (0.5 × 50.000) + (0.5 × -10.000) = +20.000€ | B = (0.3 × 40.000) + (0.7 × 10.000) = +19.000€ | C = (0.45 × 50.000) + (0.55 × -5.000) = +19.750€ | El proyecto B es el que menos valor aporta estadísticamente."
   },
   {
@@ -2080,7 +1843,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 1,
-    "tags": [],
     "explanation": "El 4º principio del Código de la ACM/IEEE ('Judgment' o Valoración/Juicio profesional) exige categóricamente preservar la integridad y la independencia analítica frente a sobornos, presiones comerciales indebidas de la empresa o intereses deshonestos de terceros."
   },
   {
@@ -2088,7 +1850,6 @@
     "question": "Usted trabaja como responsable de un proyecto en una empresa con una estructura funcional. Su nivel de autoridad en el proyecto será:",
     "options": ["Alto", "Medio", "Muy alto", "Bajo"],
     "correctAnswer": 3,
-    "tags": [],
     "explanation": "En una 'estructura funcional' o tradicional estructurada por silos, los gerentes de departamento tienen todo el poder. El rol del 'Responsable de Proyecto' es más bien un coordinador que debe 'mendigar' recursos prestados a los jefes, por lo que su autoridad real es escasa o nula."
   },
   {
@@ -2101,7 +1862,6 @@
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 2,
-    "tags": [],
     "explanation": "Es una premisa totalmente incorrecta afirmar que la dirección de proyectos no es la encargada de las restricciones. Por el contrario, lograr el equilibrio y manejar con maestría los trade-offs entre Coste, Tiempo, Alcance, Calidad y Riesgo es la mismísima esencia de la Dirección de Proyectos."
   }
 ]

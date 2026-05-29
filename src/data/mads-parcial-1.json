@@ -8,15 +8,13 @@
       "A finales del siglo XIX.",
       "En los años 60."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 2,
     "question": "¿Cuál de las siguientes disciplinas es mencionada como una profesión antigua en comparación con la programación?",
     "options": ["Economía.", "Informática.", "Arquitectura.", "Filosofía."],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 3,
@@ -27,8 +25,7 @@
       "Sistema de seguridad bancaria.",
       "Sistema de control aéreo."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 4,
@@ -39,8 +36,7 @@
       "La importancia de escribir para que otros puedan leer.",
       "La evolución continua del software."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 5,
@@ -51,8 +47,7 @@
       "Aumenta la complejidad de los proyectos.",
       "Solo aplica en proyectos grandes."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 6,
@@ -63,8 +58,7 @@
       "La lluvia y el viento.",
       "Las flores y árboles."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 7,
@@ -75,8 +69,7 @@
       "La generación de la documentación.",
       "La formulación de construcciones conceptuales."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 8,
@@ -87,8 +80,7 @@
       "La dependencia de las herramientas de software.",
       "La estabilidad de los entornos."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 9,
@@ -99,8 +91,7 @@
       "La necesidad de refactorizar el código en cada iteración.",
       "El tiempo necesario para implementar cambios."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 10,
@@ -111,8 +102,7 @@
       "Porque los diagramas solo muestran una parte del sistema.",
       "Porque la mayoría de los sistemas son muy pequeños."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 11,
@@ -123,8 +113,7 @@
       "El software crece automáticamente como un jardín.",
       "La precisión en la planificación del desarrollo."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 12,
@@ -135,8 +124,7 @@
       "Para establecer una cultura común en el equipo.",
       "Para acelerar el desarrollo de proyectos."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 13,
@@ -147,8 +135,7 @@
       "La capacidad de cambio rápido en el producto.",
       "La creatividad y coordinación entre múltiples disciplinas."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 14,
@@ -159,8 +146,7 @@
       "La flexibilidad y facilidad de modificación del software.",
       "La capacidad de realizar pruebas rápidas."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 15,
@@ -171,8 +157,7 @@
       "Porque requiere habilidades avanzadas de programación.",
       "Porque las entidades del software no se repiten y aumentan en número."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 16,
@@ -183,8 +168,7 @@
       "Problemas de diseño que hacen el software menos flexible con el tiempo.",
       "Cambios necesarios en el diseño a medida que avanzan las iteraciones."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 17,
@@ -195,8 +179,7 @@
       "Evitar el cambio en los requisitos.",
       "Separar el desarrollo en fases de construcción y diseño."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 18,
@@ -207,8 +190,7 @@
       "La adaptación del software a nuevas tecnologías.",
       "La necesidad de realizar revisiones continuas de código."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 19,
@@ -219,8 +201,7 @@
       "Limita la flexibilidad y adaptación continua.",
       "Reduce la productividad en las iteraciones."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 20,
@@ -231,8 +212,7 @@
       "Aumentar el presupuesto del proyecto.",
       "Reducir la interacción con el equipo de desarrollo."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 21,
@@ -243,15 +223,13 @@
       "Porque el diseño del software es siempre estático.",
       "Porque el modelo waterfall no permite pruebas."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 22,
     "question": "¿Cuál de las siguientes NO es una característica esencial del software según Brooks?",
     "options": ["Complejidad.", "Cambiabilidad.", "Invisibilidad.", "Predictibilidad."],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 23,
@@ -262,8 +240,7 @@
       "Retroalimentación continua mediante iteraciones.",
       "Documentación extensa de los requisitos."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 24,
@@ -274,8 +251,7 @@
       "Crean expectativas incorrectas sobre el proceso de trabajo.",
       "Eliminan la creatividad en el desarrollo."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 25,
@@ -286,8 +262,7 @@
       "La velocidad del desarrollo de software.",
       "La dependencia de herramientas externas."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 26,
@@ -298,8 +273,7 @@
       "Invertir en hardware de alto rendimiento.",
       "Contratar más desarrolladores."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 27,
@@ -310,8 +284,7 @@
       "Iteraciones solo al final del proyecto.",
       "Iteraciones cortas con versiones funcionales."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 28,
@@ -322,8 +295,7 @@
       "La libertad total en la toma de decisiones.",
       "La predictibilidad del desarrollo."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 29,
@@ -334,8 +306,7 @@
       "Ingeniería mecánica.",
       "Construcción."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 30,
@@ -346,8 +317,7 @@
       "Porque los usuarios no influyen en el desarrollo.",
       "Porque se descubren problemas e incertidumbres a lo largo del proyecto."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 31,
@@ -358,8 +328,7 @@
       "Limitar los cambios en los requisitos.",
       "Evitar involucrarse en el desarrollo."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 32,
@@ -370,8 +339,7 @@
       "Elimina la necesidad de refactorización.",
       "Puede ralentizar la incorporación de cambios futuros."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 33,
@@ -382,8 +350,7 @@
       "Es predecible y planificable.",
       "Es costoso de construir."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 34,
@@ -394,8 +361,7 @@
       "Fomentar la colaboración y el ajuste continuo.",
       "Fijar una fecha límite inamovible."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 35,
@@ -406,8 +372,7 @@
       "La estructura de software es fácilmente comprensible.",
       "Todo el software se organiza en módulos simples."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 36,
@@ -418,8 +383,7 @@
       "Requiere muchos cambios en el equipo de desarrollo.",
       "Solo funciona en proyectos pequeños."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 37,
@@ -430,8 +394,7 @@
       "Reducir el número de desarrolladores en el proyecto.",
       "Evitar la necesidad de pruebas adicionales."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 38,
@@ -442,8 +405,7 @@
       "La dependencia mutua entre elementos del sistema ante cambios.",
       "La optimización de la ejecución del código."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 39,
@@ -454,8 +416,7 @@
       "Mejora la comunicación con el cliente.",
       "Reduce el riesgo de acoplamiento."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 40,
@@ -466,8 +427,7 @@
       "La estructura invariable del software.",
       "La entrega continua de nuevas funcionalidades al cliente."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 41,
@@ -478,8 +438,7 @@
       "Facilita la comunicación con los usuarios.",
       "Reduce el tiempo de construcción."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 42,
@@ -490,8 +449,7 @@
       "No refleja bien el carácter evolutivo y colectivo del software.",
       "Facilita el mantenimiento del software."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 43,
@@ -502,8 +460,7 @@
       "Son los encargados de supervisar los cambios.",
       "Determinan los fundamentos estructurales del sistema."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 44,
@@ -514,8 +471,7 @@
       "La fase de diseño es más importante en la construcción.",
       "Los edificios requieren más tiempo de construcción que el software."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 45,
@@ -526,15 +482,13 @@
       "Un alto acoplamiento contribuye a la deuda técnica, haciendo el software más rígido.",
       "La deuda técnica no se ve afectada por el acoplamiento."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 46,
     "question": "¿Qué metáfora enfatiza el aspecto cooperativo y creativo del desarrollo de software?",
     "options": ["Crecimiento por acreción.", "Jardinería.", "Escritura.", "Juego cooperativo."],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 47,
@@ -545,8 +499,7 @@
       "Permite reducir el tiempo de desarrollo.",
       "No afecta la complejidad del software."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 48,
@@ -557,8 +510,7 @@
       "No puede influir en las decisiones de diseño.",
       "Su participación es opcional en este modelo."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 49,
@@ -569,8 +521,7 @@
       "Definir las necesidades del cliente.",
       "Implementar el diseño en un lenguaje de programación específico."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 50,
@@ -581,8 +532,7 @@
       "La reestructuración del código para reducir la deuda técnica y mejorar su flexibilidad.",
       "La creación de documentación adicional."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 51,
@@ -593,8 +543,7 @@
       "La estructura inmutable del software.",
       "La reducción de la interacción con los usuarios."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 52,
@@ -605,8 +554,7 @@
       "Obtener retroalimentación temprana y ajustar el proyecto según el feedback.",
       "Limitar los cambios de diseño."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 53,
@@ -617,8 +565,7 @@
       "La organización de su código es completamente gráfica.",
       "El software no se embebe en un espacio físico, lo que dificulta su representación visual."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 54,
@@ -629,8 +576,7 @@
       "Reduce la comunicación necesaria con el cliente.",
       "Elimina la necesidad de prototipos."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 55,
@@ -641,8 +587,7 @@
       "Crear una dirección común y un conjunto de normas implícitas en el equipo.",
       "Facilitar la documentación."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 56,
@@ -653,8 +598,7 @@
       "Reducen la necesidad de participación del cliente.",
       "Permiten solo una entrega final del software."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 57,
@@ -665,8 +609,7 @@
       "La necesidad de documentación.",
       "La colaboración entre expertos de diferentes áreas para crear un producto completo."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 58,
@@ -677,8 +620,7 @@
       "Enfatizan demasiado la colaboración.",
       "Facilitan el crecimiento incremental del sistema."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 59,
@@ -689,8 +631,7 @@
       "Permite al cliente adaptarse a cambios en el entorno y ganar ventaja sobre la competencia.",
       "Reduce el costo de desarrollo."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 60,
@@ -701,8 +642,7 @@
       "La velocidad de desarrollo aumenta.",
       "Un cambio pequeño puede desencadenar múltiples cambios en otros componentes."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 61,
@@ -713,8 +653,7 @@
       "No incluye datos sobre Scrum.",
       "Es únicamente para empresas con más de 100 empleados."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 62,
@@ -725,15 +664,13 @@
       "Reducir la deuda técnica.",
       "Aumentar el tamaño de los equipos de desarrollo."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 63,
     "question": "¿Qué porcentaje de los encuestados en 2020 ocupa el rol de Scrum Master o Agile Coach?",
     "options": ["Cerca del 40%.", "Un 25%.", "Un 60%.", "Un 10%."],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 64,
@@ -744,8 +681,7 @@
       "Valor de negocio entregado al cliente.",
       "Cantidad de cambios realizados en el equipo."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 65,
@@ -756,15 +692,13 @@
       "Iteraciones cortas.",
       "Daily standup."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 66,
     "question": "Según el informe, ¿cuál es la metodología ágil más utilizada en las empresas?",
     "options": ["Scrum.", "Kanban.", "Lean.", "Extreme Programming (XP)."],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 67,
@@ -775,8 +709,7 @@
       "Aumentar el tamaño de los equipos de desarrollo.",
       "Reducir el presupuesto de los proyectos."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 68,
@@ -787,8 +720,7 @@
       "Implementar más métricas de calidad de código.",
       "Buscar una mejora continua en los procesos."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 69,
@@ -799,8 +731,7 @@
       "La satisfacción del cliente aumenta.",
       "Se reduce el tiempo de desarrollo."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 70,
@@ -811,8 +742,7 @@
       "Un uso superficial de Scrum, sin entender sus principios ágiles.",
       "El uso de Scrum únicamente en fases avanzadas del desarrollo."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 71,
@@ -823,8 +753,7 @@
       "Continuous deployment.",
       "Planificación del sprint."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 72,
@@ -835,8 +764,7 @@
       "Mejorar la calidad del software.",
       "Mejorar la mantenibilidad del software."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 73,
@@ -847,8 +775,7 @@
       "Cantidad de código desarrollado.",
       "Porcentaje de bugs resueltos."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 74,
@@ -859,8 +786,7 @@
       "Miden la calidad y consistencia del proceso de desarrollo en tiempo real.",
       "Aumentan la cantidad de historias entregadas."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 75,
@@ -871,8 +797,7 @@
       "La estandarización de las prácticas ágiles en todos los sectores.",
       "El uso exclusivo de Scrum para todo tipo de proyectos."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 76,
@@ -883,8 +808,7 @@
       "Reduce el tamaño de los equipos.",
       "Se pierde el enfoque en las personas y la flexibilidad del equipo."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 77,
@@ -895,15 +819,13 @@
       "No son reconocidas internacionalmente.",
       "Son difíciles de obtener."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 78,
     "question": "¿Cuál de las siguientes prácticas pertenece a las prácticas más comunes de ingeniería ágil?",
     "options": ["Unit testing.", "Test de aceptación.", "User stories.", "Customer journeys."],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 79,
@@ -914,8 +836,7 @@
       "Ser auto-organizado y valorar las interacciones.",
       "Seguir rígidamente los procesos de la empresa."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 80,
@@ -926,8 +847,7 @@
       "Incremento en la seguridad del software.",
       "La experimentación y velocidad de entrega en el desarrollo."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 81,
@@ -938,8 +858,7 @@
       "Valor de negocio entregado al cliente.",
       "Número de code reviews realizados."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 82,
@@ -950,8 +869,7 @@
       "La mayoría de las empresas solo adoptan prácticas de Lean.",
       "Scrum es más popular en Europa que en el resto del mundo."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 83,
@@ -962,8 +880,7 @@
       "Convertirse en un ritual vacío que no aporte al equipo.",
       "Dificultar la planificación del sprint."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 84,
@@ -974,15 +891,13 @@
       "Definir un único indicador de satisfacción del cliente.",
       "Aumentar la eficiencia en las reuniones."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 85,
     "question": "¿Qué porcentaje de empresas usa iteraciones cortas en sus procesos ágiles?",
     "options": ["80%", "75%", "90%", "64%"],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 86,
@@ -993,8 +908,7 @@
       "Cada desarrollador se encarga de una parte específica del código.",
       "El equipo de testers supervisa la calidad del código."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 87,
@@ -1005,8 +919,7 @@
       "Solo están disponibles en ciertos países.",
       "No permiten roles flexibles dentro de un equipo."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 88,
@@ -1017,8 +930,7 @@
       "Dar más importancia a las personas y sus interacciones sobre los procesos.",
       "Fomentar procesos detallados para todos los equipos."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 89,
@@ -1029,8 +941,7 @@
       "La supervisión constante de los managers.",
       "La reducción de reuniones y feedback."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 90,
@@ -1041,8 +952,7 @@
       "Continuous deployment.",
       "Test-driven development (TDD)."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 91,
@@ -1053,8 +963,7 @@
       "Aumenta la satisfacción del cliente.",
       "Puede llevar a ignorar la entrega de valor real al cliente."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 92,
@@ -1065,8 +974,7 @@
       "La implementación de Agile tiene un fin concreto.",
       "Agile se centra solo en la entrega final de productos."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 93,
@@ -1077,8 +985,7 @@
       "Facilita la adaptación a cambios y mejora la autonomía.",
       "Mejora la relación con los clientes."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 94,
@@ -1089,8 +996,7 @@
       "Historias completadas por iteración.",
       "Bugs resueltos."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 95,
@@ -1101,8 +1007,7 @@
       "Documentación detallada.",
       "Métricas de integración continua."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 96,
@@ -1113,8 +1018,7 @@
       "Aumentaría la satisfacción del cliente.",
       "Reduciría el costo del proyecto."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 97,
@@ -1125,8 +1029,7 @@
       "Uso superficial de Scrum sin entender ni aplicar la filosofía ágil.",
       "Incorporación de técnicas avanzadas de XP en Scrum."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 98,
@@ -1137,8 +1040,7 @@
       "Aumentar la cantidad de documentación.",
       "Mejorar la estructura del equipo."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 99,
@@ -1149,8 +1051,7 @@
       "Adaptarse y aceptar cambios en requisitos para satisfacer al cliente.",
       "Minimizar la cantidad de iteraciones."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 100,
@@ -1161,8 +1062,7 @@
       "Reducir el número de defectos.",
       "Usar encuestas, entrevistas y herramientas de análisis."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 101,
@@ -1173,15 +1073,13 @@
       "La mayoría de las empresas tienen entre 1,000 y 5,000 desarrolladores.",
       "Los equipos de menos de 100 personas son una minoría."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 102,
     "question": "¿Qué porcentaje de los encuestados en el State of Agile 2020 son miembros de equipos de desarrollo?",
     "options": ["Un 30%.", "Un 50%.", "Un 7%.", "Un 20%."],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 103,
@@ -1192,8 +1090,7 @@
       "Es un indicador difícil de medir.",
       "Puede asociarse con corregir errores en lugar de mejorar la agilidad."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 104,
@@ -1204,8 +1101,7 @@
       "Un tipo de sprint especial en Agile.",
       "Una práctica específica de XP."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 105,
@@ -1216,8 +1112,7 @@
       "Simplifican la colaboración del equipo.",
       "Pueden no reflejar adecuadamente el valor entregado al cliente."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 106,
@@ -1228,8 +1123,7 @@
       "Un objetivo con resultados clave medibles.",
       "Un plan de retrospectiva."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 107,
@@ -1240,8 +1134,7 @@
       "Mejora la eficiencia del equipo.",
       "Permite una entrega más rápida al cliente."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 108,
@@ -1252,8 +1145,7 @@
       "Una metodología de planificación iterativa.",
       "Una práctica ágil centrada en el feedback continuo."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 109,
@@ -1264,8 +1156,7 @@
       "Número de tareas asignadas por semana.",
       "Tiempo medio de reparación (MTTR)."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 110,
@@ -1276,8 +1167,7 @@
       "Reducen la necesidad de feedback del cliente.",
       "Son indicadores para evaluar al cliente."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 111,
@@ -1288,8 +1178,7 @@
       "Crear código de la forma más rápida posible.",
       "Adaptar y modificar sus procesos de trabajo según sus necesidades."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 112,
@@ -1300,8 +1189,7 @@
       "Que Agile es un enfoque más amplio y no se limita a un marco específico.",
       "Que Scrum se aplica únicamente en empresas grandes."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 113,
@@ -1312,8 +1200,7 @@
       "Mejora el feedback constante con el cliente.",
       "Aumenta su capacidad de entregar software."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 114,
@@ -1324,8 +1211,7 @@
       "Permite realizar cambios sin generar deuda técnica y asegurar la evolución del producto.",
       "Reduce la necesidad de métricas de éxito."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 115,
@@ -1336,8 +1222,7 @@
       "Disminuir el número de retrospectivas.",
       "Mejorar la cantidad de tareas asignadas."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 116,
@@ -1348,8 +1233,7 @@
       "Minimizar la cantidad de pruebas realizadas.",
       "Aumentar el control de calidad en todos los proyectos."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 117,
@@ -1360,8 +1244,7 @@
       "Permite asegurarse de que el software realmente cumple con las necesidades del cliente.",
       "Reduce la complejidad del software."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 118,
@@ -1372,15 +1255,13 @@
       "Frecuencia de retros.",
       "Métricas de servicio, como errores del servidor y tiempo de respuesta."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 119,
     "question": "¿Qué técnica de Extreme Programming (XP) mencionada es poco utilizada en las empresas según el informe?",
     "options": ["Daily standup.", "Revisión de sprint.", "Pair programming.", "User stories."],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 120,
@@ -1391,15 +1272,13 @@
       "Elimina la necesidad de iteraciones.",
       "Simplifica el proceso de integración continua."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 121,
     "question": "¿Qué porcentaje de empresas usa únicamente Scrum, según el informe State of Agile?",
     "options": ["58%", "76%", "40%", "23%"],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 122,
@@ -1410,8 +1289,7 @@
       "La mayoría de los encuestados son programadores y prefieren Scrum.",
       "XP es una metodología orientada solo a grandes empresas."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 123,
@@ -1422,8 +1300,7 @@
       "Lograr realizar entregas continuas de software.",
       "Aumentar la satisfacción de los desarrolladores."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 124,
@@ -1434,8 +1311,7 @@
       "Aumenta la velocidad de desarrollo.",
       "Incrementa la cohesión del equipo."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 125,
@@ -1446,8 +1322,7 @@
       "Planificación del sprint.",
       "Retrospectiva."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 126,
@@ -1458,8 +1333,7 @@
       "Puede ignorarse si el software realmente satisface las necesidades del cliente.",
       "Reduce la complejidad del código."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 127,
@@ -1470,8 +1344,7 @@
       "Los procesos rígidos optimizan las interacciones.",
       "La cantidad de historias entregadas es clave."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 128,
@@ -1482,8 +1355,7 @@
       "Un indicador de la velocidad del equipo.",
       "Un tipo de retrospectiva."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 129,
@@ -1494,8 +1366,7 @@
       "Scrum es más popular que Kanban en grandes empresas.",
       "Kanban es exclusivo para equipos pequeños."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 130,
@@ -1506,8 +1377,7 @@
       "Backlog grooming o refinamiento del backlog.",
       "Certificaciones Scrum."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 131,
@@ -1518,15 +1388,13 @@
       "Muestra la importancia de los procesos.",
       "Refuerza la idea de mejora continua y adaptación."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 132,
     "question": "¿Qué práctica de ingeniería ágil es usada en un 67% de las empresas según el informe?",
     "options": ["Refactorización.", "Pair programming.", "Unit testing.", "Continuous deployment."],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 133,
@@ -1537,8 +1405,7 @@
       "La ausencia de certificaciones en el equipo.",
       "Poco interés en las metodologías ágiles."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 134,
@@ -1549,8 +1416,7 @@
       "Estructura rígida en sprints.",
       "Uso de OKRs para medir el progreso."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 135,
@@ -1561,8 +1427,7 @@
       "Permiten establecer objetivos claros y resultados medibles.",
       "Aseguran el cumplimiento estricto de los plazos."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 136,
@@ -1573,8 +1438,7 @@
       "Número de historias entregadas.",
       "Porcentaje de cobertura de tests y cantidad de code smells."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 137,
@@ -1585,8 +1449,7 @@
       "Porque impide realizar entregas frecuentes.",
       "Porque aumenta la deuda técnica."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 138,
@@ -1597,15 +1460,13 @@
       "Entregar valor real al cliente de forma continua.",
       "Reducir el tiempo de cada iteración."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 139,
     "question": "¿Cuál es una práctica común en equipos ágiles para asegurar que todos estén alineados al inicio de cada día?",
     "options": ["Pair programming.", "Daily standup.", "Retrospectiva.", "Continuous deployment."],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 140,
@@ -1616,8 +1477,7 @@
       "Reflexionar sobre los aspectos positivos y negativos del sprint para mejorar en el futuro.",
       "Analizar el cumplimiento de métricas."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 141,
@@ -1628,8 +1488,7 @@
       "Cantidad de code reviews.",
       "Tiempo medio entre fallos (MTBF)."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 142,
@@ -1640,8 +1499,7 @@
       "El valor entregado es crucial para asegurar la satisfacción del cliente.",
       "Solo afecta en sprints largos."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 143,
@@ -1652,8 +1510,7 @@
       "Una cultura de revisión exhaustiva de procesos.",
       "Una cultura de supervisión constante."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 144,
@@ -1664,8 +1521,7 @@
       "Continuous delivery.",
       "Unit testing."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 145,
@@ -1676,8 +1532,7 @@
       "No reflejan adecuadamente el valor entregado y pueden promover prácticas de trabajo poco ágiles.",
       "Facilitan la planificación del sprint."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 146,
@@ -1688,8 +1543,7 @@
       "Es una práctica simple de implementar y ayuda a mantener la comunicación diaria.",
       "Permite revisar las métricas de calidad del sprint."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 147,
@@ -1700,8 +1554,7 @@
       "La popularidad de los daily standups y retrospectivas.",
       "La comercialización de certificaciones y formación para Scrum."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 148,
@@ -1712,8 +1565,7 @@
       "Horas trabajadas por iteración.",
       "Satisfacción del cliente."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 149,
@@ -1724,8 +1576,7 @@
       "Porque los valores ágiles enfatizan la flexibilidad y la importancia de las personas.",
       "Porque agiliza la entrega de software."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 150,
@@ -1736,8 +1587,7 @@
       "Mejora la satisfacción del cliente.",
       "Facilita la planificación de los próximos sprints."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 151,
@@ -1748,8 +1598,7 @@
       "Eliminar retrospectivas en cada sprint.",
       "Mejorar continuamente sus procesos y prácticas."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 152,
@@ -1760,8 +1609,7 @@
       "Reduce la cantidad de iteraciones.",
       "Elimina la necesidad de reuniones."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 153,
@@ -1772,8 +1620,7 @@
       "Que la mayoría de las empresas utilizan XP.",
       "Que se prioriza el pair programming."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 154,
@@ -1784,8 +1631,7 @@
       "Definición y evaluación de OKRs.",
       "Uso de daily standups."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 155,
@@ -1796,8 +1642,7 @@
       "Mantener la consistencia en las entregas frecuentes y reaccionar ante cambios.",
       "Optimizar la cantidad de reuniones."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 156,
@@ -1808,8 +1653,7 @@
       "Que no son reconocidas fuera de EE.UU.",
       "Que tras un curso breve no es posible dominar Agile, y el título de \"Master\" es engañoso."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 157,
@@ -1820,8 +1664,7 @@
       "Facilita la evaluación técnica del código.",
       "Optimiza el tiempo de los daily standups."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 158,
@@ -1832,8 +1675,7 @@
       "Aumenta la cantidad de retrospectivas.",
       "Facilita la adaptación rápida a nuevas necesidades del cliente."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 159,
@@ -1844,8 +1686,7 @@
       "Reducir el tamaño de los sprints.",
       "Aumentar el número de roles en el equipo."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 160,
@@ -1856,8 +1697,7 @@
       "Que Agile requiere una mejora constante y una adaptación continua.",
       "Que Agile se enfoca en un destino único final."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 161,
@@ -1868,8 +1708,7 @@
       "Planificar el próximo sprint.",
       "Reducir el tiempo de las reuniones diarias."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 162,
@@ -1880,8 +1719,7 @@
       "La rapidez garantiza la satisfacción del cliente.",
       "La velocidad elimina la necesidad de retroalimentación."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 163,
@@ -1892,8 +1730,7 @@
       "Mejora la satisfacción del cliente.",
       "Puede resultar en prácticas superficiales que no siguen los valores ágiles."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 164,
@@ -1904,8 +1741,7 @@
       "Monitorear la calidad y consistencia del desarrollo a medida que se avanza en el proyecto.",
       "Mejorar la velocidad de planificación."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 165,
@@ -1916,8 +1752,7 @@
       "Realizar entregas finales rápidas.",
       "Reducir la cantidad de retrospectivas."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 166,
@@ -1928,8 +1763,7 @@
       "Reduce la cantidad de historias en cada sprint.",
       "Facilita la planificación de las reuniones diarias."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 167,
@@ -1940,8 +1774,7 @@
       "Aumentar el número de roles en el equipo.",
       "Dar prioridad a las personas y las interacciones sobre los procesos y herramientas."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 168,
@@ -1952,8 +1785,7 @@
       "Un interés en aumentar las reuniones diarias.",
       "La adopción de roles adicionales en el equipo."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 169,
@@ -1964,8 +1796,7 @@
       "Evaluar la estabilidad y resiliencia del sistema en producción.",
       "Mejorar la cantidad de daily standups."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 170,
@@ -1976,8 +1807,7 @@
       "Refleja una preocupación por la comercialización excesiva de Agile a través de certificaciones y cursos.",
       "Reduce la dependencia de Scrum en equipos ágiles."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 171,
@@ -1988,8 +1818,7 @@
       "Tiempo total de programación en pares.",
       "Cantidad de líneas de código producidas."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 172,
@@ -2000,8 +1829,7 @@
       "Aumentar el número de historias entregadas por sprint.",
       "Facilitar la implementación de certificaciones."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 173,
@@ -2012,8 +1840,7 @@
       "Que pair programming es una técnica poco efectiva.",
       "Que prácticas colaborativas técnicas avanzadas son menos comunes en las empresas."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 174,
@@ -2024,8 +1851,7 @@
       "Permite que cualquier miembro del equipo pueda modificar y mejorar el código, fomentando la colaboración.",
       "Optimiza el uso de herramientas de integración continua."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 175,
@@ -2036,8 +1862,7 @@
       "Se incrementa la cantidad de bugs.",
       "Puede ignorarse si el software cumple con las necesidades y expectativas del cliente."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 176,
@@ -2048,8 +1873,7 @@
       "Facilita la implementación de daily standups.",
       "Mejora la relación con el cliente."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 177,
@@ -2060,8 +1884,7 @@
       "Facilita el uso de roles ágiles.",
       "Elimina la necesidad de retrospectivas."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 178,
@@ -2072,8 +1895,7 @@
       "Puede incluir KPIs, pero siempre que estos reflejen el valor entregado y la satisfacción del cliente.",
       "Limita el uso de métricas de rendimiento."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 179,
@@ -2084,8 +1906,7 @@
       "Mejorar el uso de KPIs en las métricas del equipo.",
       "Asegurar que el software se pueda adaptar y ajustar constantemente a las necesidades del cliente."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 180,
@@ -2096,8 +1917,7 @@
       "Puede crear una falsa impresión de agilidad sin seguir los valores fundamentales de Agile.",
       "Reduce el número de métricas usadas."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 181,
@@ -2108,8 +1928,7 @@
       "Los métodos con entrega continua.",
       "Los métodos con alta colaboración en equipos."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 182,
@@ -2120,8 +1939,7 @@
       "Número de daily standups.",
       "Cantidad de horas trabajadas por semana."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 183,
@@ -2132,8 +1950,7 @@
       "Fomentar la mejora continua de procesos y prácticas.",
       "Reducir la deuda técnica."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 184,
@@ -2144,8 +1961,7 @@
       "Optimiza el número de daily standups.",
       "Ayuda a priorizar y ajustar el trabajo en curso según las necesidades del cliente."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 185,
@@ -2156,8 +1972,7 @@
       "Facilitar la entrega final del software al cliente.",
       "Optimizar la velocidad de los daily standups."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 186,
@@ -2168,8 +1983,7 @@
       "La planificación a largo plazo sin flexibilidad.",
       "El enfoque en mantener un backlog inmutable."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 187,
@@ -2180,8 +1994,7 @@
       "Métricas de soporte, como MTBF y MTTR.",
       "Número de pull requests realizados."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 188,
@@ -2192,8 +2005,7 @@
       "Controlar las métricas del sprint.",
       "Guiar al equipo en la adopción y mejora continua de prácticas ágiles."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 189,
@@ -2204,8 +2016,7 @@
       "Asegura que el equipo implemente prácticas que mejoren la calidad técnica del software.",
       "Mejora la velocidad de las reuniones diarias."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 190,
@@ -2216,8 +2027,7 @@
       "Optimiza el número de historias por sprint.",
       "Facilita la planificación del próximo sprint."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 191,
@@ -2228,8 +2038,7 @@
       "A Spiral Model of Software Development",
       "Software Engineering with Ada"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 192,
@@ -2240,8 +2049,7 @@
       "Metodologías ligeras",
       "Modelo de cascada"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 193,
@@ -2252,15 +2060,13 @@
       "La codificación sin pruebas unitarias",
       "El desarrollo en fases secuenciales"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 194,
     "question": "¿Quién propuso por primera vez el desarrollo iterativo en software en los años 70?",
     "options": ["Kent Beck", "Martin Fowler", "Tom Gilb", "Barry Boehm"],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 195,
@@ -2271,29 +2077,25 @@
       "Desarrollo en fases secuenciales",
       "Fuerte dependencia en herramientas de gestión"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 196,
     "question": "¿En qué año se creó el Manifiesto Ágil?",
     "options": ["2001", "1999", "1996", "2003"],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 197,
     "question": "¿Dónde tuvo lugar la reunión en la que se desarrolló el Manifiesto Ágil?",
     "options": ["Silicon Valley", "Nueva York", "Washington, D.C.", "Snowbird, Utah"],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 198,
     "question": "¿Cuál fue uno de los términos alternativos considerados antes de decidir \"Ágil\"?",
     "options": ["Flexible", "Adaptativo", "Ligero", "Modular"],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 199,
@@ -2304,8 +2106,7 @@
       "Colaboración con el cliente sobre negociación de contratos",
       "Seguimiento de un plan sobre responder al cambio"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 200,
@@ -2316,8 +2117,7 @@
       "Los principios son los más abstractos y los valores son los más concretos",
       "Las prácticas son ideas generales que guían todas las acciones"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 201,
@@ -2328,8 +2128,7 @@
       "Entregar software que funcione frecuentemente",
       "Aumentar la velocidad de desarrollo"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 202,
@@ -2340,8 +2139,7 @@
       "Seguimiento de un plan sobre responder al cambio",
       "Negociación de contratos sobre colaboración con el cliente"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 203,
@@ -2352,8 +2150,7 @@
       "Porque el software funcional proporciona valor real al cliente",
       "Porque la documentación ralentiza el desarrollo"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 204,
@@ -2364,8 +2161,7 @@
       "Una revisión técnica del código",
       "Una reunión para reflexionar sobre cómo mejorar continuamente"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 205,
@@ -2376,8 +2172,7 @@
       "Documentándolos exhaustivamente antes de aplicarlos",
       "Considerándolos únicamente al inicio del proyecto"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 206,
@@ -2388,8 +2183,7 @@
       "Arie van Bennekum y Ken Schwaber",
       "Steve Mellor y Jon Kern"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 207,
@@ -2400,8 +2194,7 @@
       "Establecer términos legales detallados",
       "Asegurar que el cliente participe activamente y sus necesidades sean comprendidas durante todo el proyecto"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 208,
@@ -2412,8 +2205,7 @@
       "Adaptarse rápidamente a cambios en los requisitos del cliente",
       "Evitar cambios en la medida de lo posible"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 209,
@@ -2424,8 +2216,7 @@
       "La cantidad de reuniones realizadas",
       "La velocidad de los desarrolladores"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 210,
@@ -2436,8 +2227,7 @@
       "Mantener un ritmo constante en el equipo a largo plazo",
       "La colaboración con el cliente"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 211,
@@ -2448,8 +2238,7 @@
       "Es el modelo de desarrollo recomendado en el Manifiesto Ágil.",
       "Fue creado en los años 90 como respuesta a los métodos ágiles."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 212,
@@ -2460,8 +2249,7 @@
       "Procesos secuenciales con poca adaptabilidad al cambio.",
       "Colaboración continua con el cliente en cada fase."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 213,
@@ -2472,15 +2260,13 @@
       "Porque las empresas buscaban hacer más documentación en sus procesos.",
       "Para desarrollar software exclusivamente orientado a objetos."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 214,
     "question": "¿Quién de los siguientes fue uno de los principales impulsores de Extreme Programming (XP)?",
     "options": ["Jeff Sutherland", "Alistair Cockburn", "Ken Schwaber", "Kent Beck"],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 215,
@@ -2491,8 +2277,7 @@
       "Finalizar todos los requisitos antes de entregar",
       "Documentar cada entrega realizada"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 216,
@@ -2503,8 +2288,7 @@
       "Permite realizar adaptaciones durante el desarrollo",
       "Evita los ciclos de retroalimentación con el cliente"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 217,
@@ -2515,8 +2299,7 @@
       "La llegada de la Web y la explosión de empresas punto-com",
       "La demanda de mayor documentación en proyectos"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 218,
@@ -2527,8 +2310,7 @@
       "\"Incrementar la documentación del proyecto.\"",
       "\"Construir proyectos alrededor de individuos motivados y confiar en ellos.\""
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 219,
@@ -2539,8 +2321,7 @@
       "Porque reduce el tiempo de desarrollo",
       "Para garantizar que los desarrolladores decidan todas las funcionalidades"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 220,
@@ -2551,8 +2332,7 @@
       "Maximizar la cantidad de trabajo no realizado",
       "Desarrollar toda la funcionalidad en una sola fase"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 221,
@@ -2563,8 +2343,7 @@
       "Evita cualquier tipo de contacto o colaboración directa con el cliente.",
       "No permite cambios en los contratos una vez establecidos."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 222,
@@ -2575,8 +2354,7 @@
       "Mantener un enfoque rígido en los procesos",
       "Priorizar la comunicación y el trabajo en equipo por encima de los procesos estructurados"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 223,
@@ -2587,8 +2365,7 @@
       "Aumenta la documentación exhaustiva de los entregables",
       "Permite cumplir con el plan inicial sin cambios"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 224,
@@ -2599,8 +2376,7 @@
       "Porque reconoce que las necesidades del cliente pueden evolucionar",
       "Para minimizar la colaboración con el cliente"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 225,
@@ -2611,8 +2387,7 @@
       "La integración del cliente en cada fase del desarrollo",
       "La flexibilidad en la implementación de nuevas características"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 226,
@@ -2623,8 +2398,7 @@
       "Metodologías ligeras",
       "Modelo de código cerrado"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 227,
@@ -2635,8 +2409,7 @@
       "Desarrollo sostenible para mantener un ritmo constante",
       "Entrega de valor sin descanso"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 228,
@@ -2647,8 +2420,7 @@
       "Solamente desarrolladores independientes",
       "Empresarios interesados en reducir costes"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 229,
@@ -2659,8 +2431,7 @@
       "Una medida para aumentar la cantidad de trabajo en un proyecto",
       "La acumulación de problemas técnicos que pueden afectar la flexibilidad del código"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 230,
@@ -2671,8 +2442,7 @@
       "A través de reuniones semanales detalladas",
       "Con un sistema complejo de tickets y reportes"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 231,
@@ -2683,8 +2453,7 @@
       "División del proyecto en fases secuenciales con revisiones rígidas.",
       "Menor comunicación con el cliente durante el desarrollo."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 232,
@@ -2695,8 +2464,7 @@
       "Definir las prácticas de desarrollo utilizadas por el equipo.",
       "Actuar como intermediario con el cliente y priorizar los requisitos."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 233,
@@ -2707,8 +2475,7 @@
       "Cumplir con el plan original para mantener el cronograma.",
       "Minimizar las modificaciones en el código después de cada iteración."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 234,
@@ -2719,8 +2486,7 @@
       "Permite identificar áreas de mejora para el equipo y el proceso.",
       "Asegura que todos los miembros del equipo completen sus tareas."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 235,
@@ -2731,8 +2497,7 @@
       "Individuos e interacciones",
       "Planificación exhaustiva y rígida"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 236,
@@ -2743,8 +2508,7 @@
       "Aumentar el control gerencial sobre el equipo de desarrollo.",
       "Incrementar la complejidad en el proceso de desarrollo."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 237,
@@ -2755,8 +2519,7 @@
       "Simplificar el producto eliminando trabajo innecesario.",
       "Aumentar la cantidad de documentación técnica del proyecto."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 238,
@@ -2767,8 +2530,7 @@
       "Completar el trabajo sin retroalimentación del cliente.",
       "Mantener el enfoque en la cantidad de código escrito."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 239,
@@ -2779,8 +2541,7 @@
       "Facilita una documentación exhaustiva desde el principio.",
       "Minimiza la interacción con el cliente."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 240,
@@ -2791,8 +2552,7 @@
       "Promover un ritmo de trabajo sostenible.",
       "Minimizar la interacción del equipo con el cliente."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 241,
@@ -2803,8 +2563,7 @@
       "Evita la creación de documentación durante el desarrollo.",
       "Elimina la necesidad de reuniones periódicas."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 242,
@@ -2815,8 +2574,7 @@
       "Medir el software funcional entregado en cada iteración.",
       "Aumentar el número de cambios en los requisitos del cliente."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 243,
@@ -2827,8 +2585,7 @@
       "Completar todas las tareas documentadas en cada fase.",
       "Minimizar la cantidad de cambios realizados en el proyecto."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 244,
@@ -2839,8 +2596,7 @@
       "Consultores externos que supervisan el proyecto.",
       "Clientes o stakeholders que definen las necesidades del producto."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 245,
@@ -2851,8 +2607,7 @@
       "Optimizar el producto evitando el trabajo innecesario.",
       "Crear documentación detallada para cada fase de desarrollo."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 246,
@@ -2863,8 +2618,7 @@
       "Evitar la colaboración excesiva con el cliente.",
       "Identificar áreas de mejora en el proceso y el equipo."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 247,
@@ -2875,8 +2629,7 @@
       "Mantener un plan inicial sin modificaciones.",
       "Reducir el tiempo de desarrollo eliminando fases."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 248,
@@ -2887,8 +2640,7 @@
       "La capacidad de adaptación continua a nuevos requisitos.",
       "La separación estricta de cada fase del proyecto."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 249,
@@ -2899,8 +2651,7 @@
       "Evitar cambios en el software hasta la entrega final.",
       "Reducir la interacción con el cliente para ahorrar tiempo."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 250,
@@ -2911,8 +2662,7 @@
       "Asegura que cada miembro se concentre en su rol específico.",
       "Fomenta la responsabilidad y flexibilidad para mejorar el producto."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 251,
@@ -2923,8 +2673,7 @@
       "Incrementar la documentación técnica en cada entrega.",
       "Aumentar la cantidad de reuniones con el cliente."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 252,
@@ -2935,8 +2684,7 @@
       "Mejora la capacidad del equipo para entregar un producto útil.",
       "Disminuye el tiempo necesario para cada iteración."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 253,
@@ -2947,8 +2695,7 @@
       "Reducir el número de entregas de software al cliente.",
       "Minimizar la interacción entre los desarrolladores y el product owner."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 254,
@@ -2959,8 +2706,7 @@
       "Mayor dificultad para adaptar el software a las necesidades del cliente.",
       "Reducción en la cantidad de documentación producida."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 255,
@@ -2971,8 +2717,7 @@
       "Minimizar las reuniones para aumentar la eficiencia.",
       "Concentrarse únicamente en la entrega del producto final."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 256,
@@ -2983,8 +2728,7 @@
       "Implementar fases de prueba exhaustivas antes de cada iteración.",
       "Documentar todos los cambios realizados en cada entrega."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 257,
@@ -2995,8 +2739,7 @@
       "Implementar protocolos estrictos para cada fase de desarrollo.",
       "Fomentar la comunicación directa y flexible entre los miembros del equipo."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 258,
@@ -3007,8 +2750,7 @@
       "Enfocar los indicadores en objetivos de valor y no solo en métricas de rendimiento.",
       "Incrementar el trabajo en una sola característica por iteración."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 259,
@@ -3019,8 +2761,7 @@
       "Reduce la cantidad de interacciones con el cliente.",
       "Incrementa el control gerencial sobre el proyecto."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 260,
@@ -3031,8 +2772,7 @@
       "Facilitar la entrega rápida del software al cliente.",
       "Evitar la creación de documentación exhaustiva en el desarrollo."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 261,
@@ -3043,8 +2783,7 @@
       "La escasa documentación generada en cada fase.",
       "Su dependencia en herramientas de desarrollo específicas."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 262,
@@ -3055,15 +2794,13 @@
       "Aumentó la necesidad de documentación exhaustiva en cada etapa.",
       "Facilitó un desarrollo más modular y flexible, promoviendo el diseño iterativo."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 263,
     "question": "¿Cuál fue una de las primeras metodologías ligeras que se popularizó en los años 90?",
     "options": ["Scrum", "Crystal Methods", "Extreme Programming (XP)", "Model Driven Development"],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 264,
@@ -3074,8 +2811,7 @@
       "La creación de metodologías tradicionales de desarrollo en los 80.",
       "La adopción de metodologías iterativas en proyectos militares."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 265,
@@ -3086,8 +2822,7 @@
       "Porque capturaba la rapidez que caracteriza al desarrollo ágil.",
       "Porque representaba mejor la adaptabilidad y la respuesta al cambio."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 266,
@@ -3098,8 +2833,7 @@
       "La prioridad de las relaciones y la comunicación dentro del equipo.",
       "La necesidad de formalizar la documentación en cada fase del proyecto."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 267,
@@ -3110,8 +2844,7 @@
       "Incrementar la planificación detallada antes de cada fase del proyecto.",
       "Formalizar todas las fases del desarrollo en un solo documento."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 268,
@@ -3122,8 +2855,7 @@
       "A través del número de reuniones de retrospectiva realizadas.",
       "Evaluando el software en funcionamiento entregado al cliente."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 269,
@@ -3134,8 +2866,7 @@
       "Reduce la cantidad de interacciones necesarias con el cliente.",
       "Incrementa la documentación en cada entrega."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 270,
@@ -3146,8 +2877,7 @@
       "Entrega continua de software funcional.",
       "Responder a los cambios en el proyecto."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 271,
@@ -3158,8 +2888,7 @@
       "Identificar mejoras para el equipo y el proceso.",
       "Aumentar la cantidad de documentación en cada entrega."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 272,
@@ -3170,8 +2899,7 @@
       "Cumplimiento del plan inicial.",
       "Responder al cambio."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 273,
@@ -3182,8 +2910,7 @@
       "La adopción de Scrum como la metodología estándar.",
       "La creación de prácticas avanzadas de documentación."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 274,
@@ -3194,8 +2921,7 @@
       "Permite al cliente evaluar el valor del producto de forma incremental.",
       "Reduce la colaboración necesaria con el equipo de desarrollo."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 275,
@@ -3206,8 +2932,7 @@
       "En el desarrollo del primer libro de XP.",
       "En la creación de la wiki de XP."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 276,
@@ -3218,15 +2943,13 @@
       "Incrementa la velocidad de escritura de código de forma significativa.",
       "Requiere un espacio de trabajo adecuado y cómodo para dos personas."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 277,
     "question": "¿Cuál de los siguientes valores NO forma parte de los valores fundamentales de XP?",
     "options": ["Productividad.", "Simplicidad.", "Comunicación.", "Respeto."],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 278,
@@ -3237,8 +2960,7 @@
       "Integrar todos los cambios al final del desarrollo.",
       "Hacer crecer el diseño y arquitectura del software de manera gradual, ajustándose al tamaño actual del sistema."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 279,
@@ -3249,8 +2971,7 @@
       "La primera edición está orientada a equipos grandes, mientras que la segunda es para equipos pequeños.",
       "La segunda edición se centra exclusivamente en TDD y refactorización."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 280,
@@ -3261,8 +2982,7 @@
       "Continuous Integration.",
       "Test-First Programming."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 281,
@@ -3273,8 +2993,7 @@
       "Incluir siempre historias de mayor complejidad en la planificación.",
       "Incluir tareas menores que puedan ser abandonadas si es necesario para cumplir con la fecha de entrega."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 282,
@@ -3285,15 +3004,13 @@
       "Escribir primero un test que falle, luego implementar el código para que pase el test.",
       "Usar mocks para probar el código antes de escribir los tests."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 283,
     "question": "¿Cuál es una de las prácticas de planificación en XP que se realiza trimestralmente?",
     "options": ["Weekly Cycle", "Quarterly Cycle", "Yearly Cycle", "Monthly Cycle"],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 284,
@@ -3304,8 +3021,7 @@
       "Mantener a los programadores trabajando en diferentes proyectos a la vez.",
       "Formar un equipo multifuncional con todas las habilidades necesarias para el éxito del proyecto."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 285,
@@ -3316,22 +3032,19 @@
       "Técnica del Pomodoro",
       "Diseño Incremental"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 286,
     "question": "¿Cuál de los siguientes principios de XP promueve resolver conflictos de manera productiva y valora la variedad de perspectivas?",
     "options": ["Calidad", "Diversidad", "Oportunidad", "Pequeños pasos"],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 287,
     "question": "¿Qué práctica secundaria de XP implica que el código sea responsabilidad de todos y no de un individuo específico?",
     "options": ["Shared Code", "Code and Test", "Team Continuity", "Real Customer Involvement"],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 288,
@@ -3342,8 +3055,7 @@
       "Integrar al cliente dentro del equipo de desarrollo para una colaboración continua.",
       "Asegurar que los clientes envíen requisitos de manera estructurada."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 289,
@@ -3354,8 +3066,7 @@
       "Evita el despliegue incremental.",
       "Permite detectar problemas de producción rápidamente y recibir retroalimentación inmediata."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 290,
@@ -3366,8 +3077,7 @@
       "Un proceso de revisión diario de la productividad de cada desarrollador.",
       "La integración de nuevos miembros en el equipo cada semana."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 291,
@@ -3378,8 +3088,7 @@
       "Crear un entorno donde el progreso del proyecto sea visible y comprensible a simple vista.",
       "Fomentar la documentación exhaustiva del proyecto en informes semanales."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 292,
@@ -3390,8 +3099,7 @@
       "La valentía y el respeto.",
       "Los valores en general, que guían el porqué de las prácticas y evitan su ejecución sin entenderlas."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 293,
@@ -3402,8 +3110,7 @@
       "Permite que los desarrolladores trabajen en solitario y reduzcan conflictos.",
       "Minimiza la necesidad de realizar integraciones frecuentes en el sistema."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 294,
@@ -3414,8 +3121,7 @@
       "XP establece prácticas específicas orientadas al desarrollo de software.",
       "XP divide el equipo en roles muy específicos y ceremonias formales."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 295,
@@ -3426,8 +3132,7 @@
       "Desarrollar un código sin tests y posteriormente añadir los tests.",
       "Usar pruebas manuales después de que el código esté listo."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 296,
@@ -3438,8 +3143,7 @@
       "Los desarrolladores deben trabajar de manera individual para evitar conflictos.",
       "Todos los miembros necesarios para completar el proyecto forman parte del equipo."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 297,
@@ -3450,15 +3154,13 @@
       "Incluir tareas no esenciales que puedan eliminarse si es necesario para cumplir con los deadlines.",
       "Integrar descansos regulares en el trabajo diario del equipo."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 298,
     "question": "¿Cuál de los siguientes NO es un valor fundamental en XP?",
     "options": ["Comunicación", "Integridad", "Respeto", "Simplicidad"],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 299,
@@ -3469,8 +3171,7 @@
       "Permitir trabajar sin interrupciones durante un ciclo trimestral.",
       "Mantener una alta concentración en bloques de tiempo estructurados."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 300,
@@ -3481,8 +3182,7 @@
       "Dividir el proyecto en varias ramas de desarrollo.",
       "Asegurar que cada etapa del proceso se realice manualmente."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 301,
@@ -3493,8 +3193,7 @@
       "Permite realizar cambios de código sin aprobación.",
       "Requiere que solo una persona revise el código al final."
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 302,
@@ -3505,8 +3204,7 @@
       "Revisar y planificar el progreso del proyecto a largo plazo cada trimestre.",
       "Dividir las historias de usuario en tareas trimestrales."
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 303,
@@ -3517,8 +3215,7 @@
       "Trabajar sin realizar revisiones continuas.",
       "Enfrentar problemas, proponer soluciones y mejorar el diseño del sistema sin temor a errores."
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 304,
@@ -3529,29 +3226,25 @@
       "Hacer una revisión completa del código cada trimestre.",
       "Trabajar en diferentes ramas de desarrollo al mismo tiempo."
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 305,
     "question": "¿Qué valor de XP enfatiza la creación de un entorno donde todos los miembros del equipo puedan contribuir libremente y sentirse valorados?",
     "options": ["Simplicidad", "Valentía", "Respeto", "Retroalimentación"],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 306,
     "question": "¿Qué concepto en XP hace referencia a un sistema de trabajo que avanza mediante pequeños incrementos para facilitar el flujo continuo de desarrollo?",
     "options": ["Entrega semanal", "Diseño incremental", "Despliegue continuo", "Flujo"],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 307,
     "question": "¿Qué práctica de XP se centra en realizar una revisión y planificación global del proyecto cada trimestre?",
     "options": ["Weekly Cycle", "Quarterly Cycle", "Whole Team", "Test-First Programming"],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 308,
@@ -3562,15 +3255,13 @@
       "Facilita el ajuste del producto a las necesidades reales del cliente en cada iteración",
       "Aumenta el número de entregas de software al cliente"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 309,
     "question": "¿Qué práctica de XP asegura que el equipo se sienta completo y que cada miembro contribuya desde sus habilidades específicas?",
     "options": ["Whole Team", "Slack", "Pair Programming", "Weekly Cycle"],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 310,
@@ -3581,8 +3272,7 @@
       "Usar una única rama de código base para el proyecto, facilitando la integración continua",
       "Utilizar varias bases de datos para cada entorno de desarrollo"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 311,
@@ -3593,8 +3283,7 @@
       "Obliga al equipo a trabajar a un ritmo más rápido",
       "Facilita la documentación exhaustiva de todas las tareas del proyecto"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 312,
@@ -3605,8 +3294,7 @@
       "Asegura que cada cambio sea visible para el cliente final",
       "Proporciona un incremento significativo de productividad a corto plazo"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 313,
@@ -3617,8 +3305,7 @@
       "Optimiza el uso de herramientas y procesos de comunicación formal",
       "Promueve la transparencia y asegura que todo el equipo esté al tanto de decisiones y objetivos"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 314,
@@ -3629,15 +3316,13 @@
       "Definir todas las funcionalidades del producto antes de comenzar el desarrollo",
       "Crear un prototipo para pruebas internas, sin enfoque en el cliente final"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 315,
     "question": "¿Qué valor de XP busca minimizar la complejidad innecesaria y promover la claridad en el código?",
     "options": ["Simplicidad", "Retroalimentación", "Comunicación", "Respeto"],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 316,
@@ -3648,8 +3333,7 @@
       "Escribir el test antes del código y programar solo lo necesario para que el test pase",
       "Documentar exhaustivamente cada prueba antes de implementarla"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 317,
@@ -3660,8 +3344,7 @@
       "Un tiempo de espera de 10 minutos para el despliegue en producción",
       "La construcción completa y automatizada del sistema y ejecución de tests en un máximo de 10 minutos"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 318,
@@ -3672,29 +3355,25 @@
       "Permite que el cliente solo participe al final de cada trimestre",
       "Facilita la documentación exhaustiva de cada ciclo"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 319,
     "question": "¿Cuál de los siguientes es un principio fundamental en XP que enfatiza la mejora constante de las prácticas y procesos?",
     "options": ["Respeto", "Valentía", "Responsabilidad compartida", "Mejora"],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 320,
     "question": "¿Cuál fue el proyecto en el que Kent Beck implementó por primera vez las prácticas de XP, aunque este no tuvo éxito?",
     "options": ["Proyecto X15", "Proyecto C3 de Chrysler", "Proyecto Mercury", "Proyecto Spiral"],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 321,
     "question": "¿Qué valor en XP ayuda a mantener un entorno donde los miembros del equipo pueden expresar preocupaciones y buscar soluciones sin temor?",
     "options": ["Valentía", "Simplicidad", "Retroalimentación", "Respeto"],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 322,
@@ -3705,8 +3384,7 @@
       "Mejora la calidad del código mediante la revisión constante entre compañeros",
       "Permite que el equipo tenga roles de desarrollo más específicos"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 323,
@@ -3717,15 +3395,13 @@
       "Incrementar la cantidad de documentación requerida por el cliente",
       "Promover la programación en parejas en cada interacción con el cliente"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 324,
     "question": "¿Qué principio XP se refiere a resolver problemas difíciles desde diferentes perspectivas y con múltiples enfoques?",
     "options": ["Pequeños pasos", "Mejora", "Reflexión", "Redundancia"],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 325,
@@ -3736,8 +3412,7 @@
       "Un espacio en el que cualquier miembro del equipo pueda ver el estado del proyecto mediante elementos visuales",
       "Una oficina donde se agrupa a cada desarrollador en un cubículo separado"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 326,
@@ -3748,8 +3423,7 @@
       "Permite que los desarrolladores trabajen sin necesidad de validar con el equipo",
       "Proporciona al cliente un prototipo final sin necesidad de feedback intermedio"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 327,
@@ -3760,15 +3434,13 @@
       "Mantener una única versión del código en entornos separados",
       "Asegurar que los cambios de código se integran regularmente para evitar problemas acumulados en el proyecto"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 328,
     "question": "¿Qué valor subyacente permite al equipo XP aprender de los errores y tratar los problemas como oportunidades de mejora?",
     "options": ["Simplicidad", "Valentía", "Retroalimentación", "Resiliencia"],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 329,
@@ -3779,8 +3451,7 @@
       "Promueve el uso de varias versiones de código en paralelo",
       "Facilita la entrega continua de valor al cliente mediante el avance incremental en el desarrollo"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 330,
@@ -3791,22 +3462,19 @@
       "Aumenta el número de funcionalidades en cada iteración",
       "Permite que el equipo trabaje en aislamiento de otros departamentos"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 331,
     "question": "¿Cuál de los siguientes principios XP establece que es más efectivo adoptar prácticas que den beneficios inmediatos al equipo?",
     "options": ["Flujo", "Mejora", "Beneficio mutuo", "Redundancia"],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 332,
     "question": "¿Qué ciclo en XP permite al equipo hacer revisiones periódicas y ajustes en la dirección general del proyecto?",
     "options": ["Weekly Cycle", "Quarterly Cycle", "Slack Cycle", "Daily Integration"],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 333,
@@ -3817,8 +3485,7 @@
       "Se escriben todos los tests primero antes de iniciar el desarrollo del código",
       "Un desarrollador escribe el test y el otro el código necesario para pasarlo, alternándose en cada iteración"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 334,
@@ -3829,15 +3496,13 @@
       "Realizar revisiones de código y planificar la arquitectura",
       "Integrar todos los cambios en el sistema"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 335,
     "question": "¿Qué técnica originada en la comunidad Smalltalk utilizan Kent Beck y Ward Cunningham en XP para definir las responsabilidades de las clases?",
     "options": ["Diagramas de flujo", "Tarjetas CRC", "Pruebas unitarias", "Historias de usuario"],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 336,
@@ -3848,8 +3513,7 @@
       "La segunda edición",
       "La edición de 2019"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 337,
@@ -3860,8 +3524,7 @@
       "La adopción masiva de Scrum",
       "El avance en pruebas automatizadas"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 338,
@@ -3872,8 +3535,7 @@
       "Un equipo con todos los roles necesarios para completar el proyecto",
       "Un equipo dividido en subgrupos de especialistas"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 339,
@@ -3884,15 +3546,13 @@
       "Trabajar en pares de manera constante",
       "Aplicar patrones conocidos a problemas similares en diferentes contextos"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 340,
     "question": "¿Qué práctica XP implementada en el desarrollo de Eclipse permite recibir retroalimentación rápida de la comunidad de usuarios?",
     "options": ["TDD", "Refactorización", "Despliegue diario", "Programación en parejas"],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 341,
@@ -3903,8 +3563,7 @@
       "Para incluir más tareas en la semana de desarrollo",
       "Para aumentar el número de historias a completar"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 342,
@@ -3915,8 +3574,7 @@
       "Ejecutar todos los tests",
       "Escribir un test específico para la funcionalidad a desarrollar"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 343,
@@ -3927,8 +3585,7 @@
       "Compilar sólo el módulo específico en desarrollo",
       "Minimizar los tiempos de programación en parejas"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 344,
@@ -3939,8 +3596,7 @@
       "Que el cliente forme parte activa del equipo de desarrollo y proporcione feedback continuo",
       "Que el cliente revise el producto terminado sin participar en el proceso"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 345,
@@ -3951,8 +3607,7 @@
       "Producir un diseño detallado al inicio del proyecto",
       "Completar todas las características requeridas antes de la entrega"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 346,
@@ -3963,8 +3618,7 @@
       "Mejora la concentración en períodos cortos y aumenta la productividad",
       "Facilita la comunicación constante en el equipo"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 347,
@@ -3975,8 +3629,7 @@
       "Permite a cada desarrollador usar su propia versión de código",
       "Evita la integración continua en el sistema común"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 348,
@@ -3987,8 +3640,7 @@
       "Número excesivo de historias en curso",
       "Falta de colaboración y revisión en el equipo"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 349,
@@ -3999,8 +3651,7 @@
       "Aislar las tareas complejas del flujo de trabajo general",
       "Aumentar el tamaño de los equipos para resolver problemas"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 350,
@@ -4011,8 +3662,7 @@
       "Integrar cambios frecuentemente para detectar problemas lo antes posible",
       "Limitar el uso de pruebas automatizadas"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 351,
@@ -4023,8 +3673,7 @@
       "Que el equipo no necesita realizar reuniones de revisión",
       "Que el equipo debe trabajar por separado para cumplir los objetivos"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 352,
@@ -4035,15 +3684,13 @@
       "Evitar los descansos para maximizar la productividad",
       "Mantener un ritmo de trabajo que permita a los desarrolladores ser productivos y sostenibles"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 353,
     "question": "¿Cuál de los siguientes principios de XP promueve la adaptación del equipo al error como una forma de aprendizaje?",
     "options": ["Simplicidad", "Fallo", "Reflexión", "Flujo"],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 354,
@@ -4054,8 +3701,7 @@
       "Para asegurar que el cliente esté involucrado activamente y ofrezca retroalimentación continua",
       "Para que el cliente tenga control sobre el código fuente"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 355,
@@ -4066,8 +3712,7 @@
       "Limitar el número de ideas sobre un diseño",
       "Promover un solo estilo de programación"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 356,
@@ -4078,8 +3723,7 @@
       "XP asigna roles específicos como Scrum Master",
       "XP está especialmente orientado al desarrollo de software y prácticas de programación"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 357,
@@ -4090,8 +3734,7 @@
       "Priorizar el contrato por sobre las necesidades del cliente",
       "Modificar el contrato solo en circunstancias excepcionales"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 358,
@@ -4102,8 +3745,7 @@
       "Separar el código en módulos no relacionados",
       "Implementar el sistema en pequeñas partes progresivamente para minimizar riesgos"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 359,
@@ -4114,8 +3756,7 @@
       "Limitando las modificaciones del código a un solo miembro del equipo",
       "Delegando la responsabilidad de revisión de código a una sola persona"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 360,
@@ -4126,8 +3767,7 @@
       "Porque la calidad mejora otras propiedades deseables, como la productividad",
       "Porque reduce el número de líneas de código"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 361,
@@ -4138,8 +3778,7 @@
       "Controlar el uso de herramientas para el desarrollo",
       "Evitar la creación de gráficos y tarjetas en el entorno de trabajo"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 362,
@@ -4150,8 +3789,7 @@
       "Evitar el despliegue hasta que el sistema esté completo",
       "Poner el software en producción diariamente, subiendo cambios gradualmente"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 363,
@@ -4162,8 +3800,7 @@
       "La segunda edición incluye más énfasis en el equipo y en las dinámicas humanas",
       "La primera edición no menciona las prácticas de diseño incremental"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 364,
@@ -4174,8 +3811,7 @@
       "Crear documentación exhaustiva para todas las funcionalidades",
       "Definir todas las características técnicas del sistema en una única tarjeta"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 365,
@@ -4186,8 +3822,7 @@
       "Establecer un contrato obligatorio entre cliente y desarrolladores",
       "Organizar las tareas internas del equipo"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 366,
@@ -4198,8 +3833,7 @@
       "Porque las historias son más fáciles de dividir en tareas pequeñas",
       "Porque los requisitos no tienen que ser mutables"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 367,
@@ -4210,8 +3844,7 @@
       "\"Hacer que (rol) logre (acción) sin obstáculos\"",
       "\"El usuario realizará (acción) en el sistema para cumplir (objetivo)\""
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 368,
@@ -4222,8 +3855,7 @@
       "Que no se debe modificar bajo ningún concepto",
       "Que debe ser estimada rápidamente"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 369,
@@ -4234,8 +3866,7 @@
       "Que la historia debe aportar valor para los que pagan el software",
       "Que la historia debe completarse en el menor tiempo posible"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 370,
@@ -4246,8 +3877,7 @@
       "Para evitar depender de otras historias",
       "Para evitar la duplicación de esfuerzos"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 371,
@@ -4258,8 +3888,7 @@
       "Verificar cuándo la historia está completa y cumple con lo acordado",
       "Calcular el tiempo estimado de desarrollo"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 372,
@@ -4270,15 +3899,13 @@
       "Confirmar la historia con pruebas automatizadas",
       "Asegurar que el cliente esté presente en cada reunión del equipo"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 373,
     "question": "¿Cuál de las siguientes opciones NO es una de las tres Cs de una historia de usuario?",
     "options": ["Card", "Confirmation", "Creation", "Conversation"],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 374,
@@ -4289,8 +3916,7 @@
       "Que el equipo de desarrollo puede modificar la historia",
       "Que la historia se debe probar de manera manual"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 375,
@@ -4301,8 +3927,7 @@
       "Promueve la precisión en los términos del negocio y facilita la comunicación con el cliente",
       "Hace que el código sea menos complejo"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 376,
@@ -4313,8 +3938,7 @@
       "Establecer especificaciones detalladas desde el inicio",
       "Promover la colaboración continua con el cliente"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 377,
@@ -4325,8 +3949,7 @@
       "La secuencia temporal de las actividades del usuario",
       "La cantidad de pruebas necesarias"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 378,
@@ -4337,8 +3960,7 @@
       "Las pruebas de cada historia",
       "Las historias complejas y detalladas"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 379,
@@ -4349,8 +3971,7 @@
       "Que las historias no pueden cambiarse de tamaño",
       "Que cada historia debe completarse en un plazo específico"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 380,
@@ -4361,8 +3982,7 @@
       "Para estimar el costo de cada tarea",
       "Para almacenar las especificaciones finales del proyecto"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 381,
@@ -4373,8 +3993,7 @@
       "La lista de pruebas unitarias que pasaron",
       "La relación entre desarrolladores y clientes"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 382,
@@ -4385,8 +4004,7 @@
       "Establecer una lista de mejoras futuras",
       "Crear una historia principal que englobe todas las funcionalidades"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 383,
@@ -4397,8 +4015,7 @@
       "Durante la revisión de final de sprint",
       "Al finalizar la etapa de diseño del sistema"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 384,
@@ -4409,8 +4026,7 @@
       "Una forma de almacenar datos de usuario",
       "Una manera de documentar el progreso semanal"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 385,
@@ -4421,8 +4037,7 @@
       "Las tareas son acciones generales, y las actividades son detalles específicos",
       "No hay diferencia significativa entre actividades y tareas"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 386,
@@ -4433,8 +4048,7 @@
       "Evitar hacer cambios en las historias de usuario",
       "Confirmar la historia con el cliente al final del proyecto"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 387,
@@ -4445,8 +4059,7 @@
       "Especifican las condiciones que debe cumplir la historia para ser aceptada por el cliente",
       "Establecen el valor económico de la historia"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 388,
@@ -4457,8 +4070,7 @@
       "Debe ser compleja y específica",
       "Debe ser independiente de otras historias"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 389,
@@ -4469,8 +4081,7 @@
       "El eje diagonal",
       "El eje de confirmación"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 390,
@@ -4481,8 +4092,7 @@
       "Para asegurar una documentación clara y detallada",
       "Para que el cliente y el equipo compartan un vocabulario común y preciso"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 391,
@@ -4493,8 +4103,7 @@
       "Que la historia no debe ser considerada un contrato rígido y cerrado",
       "Que la historia debe negociarse exclusivamente con el equipo técnico"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 392,
@@ -4505,8 +4114,7 @@
       "Reducir el número de historias en un proyecto",
       "Establecer un plan a largo plazo sin requerir iteraciones"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 393,
@@ -4517,8 +4125,7 @@
       "Debe requerir confirmación del equipo técnico",
       "Debe poder estimarse en términos de tiempo o esfuerzo necesario"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 394,
@@ -4529,8 +4136,7 @@
       "Reduce la necesidad de conversaciones entre el cliente y el equipo",
       "Evita la necesidad de criterios de aceptación"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 395,
@@ -4541,8 +4147,7 @@
       "Una lista de tareas pendientes",
       "Una jerarquía de dependencias entre historias"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 396,
@@ -4553,15 +4158,13 @@
       "Dividirla en historias más pequeñas",
       "Incluirla directamente en la planificación del sprint"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 397,
     "question": "¿Cuál de las siguientes NO es una de las tres Cs de una historia de usuario?",
     "options": ["Confirmation", "Conversation", "Correction", "Card"],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 398,
@@ -4572,8 +4175,7 @@
       "Si genera ingresos inmediatos",
       "Si proporciona un beneficio significativo para el cliente o el negocio"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 399,
@@ -4584,8 +4186,7 @@
       "Establecer un contrato entre cliente y desarrollador",
       "Almacenar detalles técnicos de la implementación"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 400,
@@ -4596,8 +4197,7 @@
       "Las tareas detallan pasos específicos para cumplir con la actividad principal",
       "Las actividades se completan después de realizar todas las tareas"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 401,
@@ -4608,8 +4208,7 @@
       "Trabajar solo en una historia de usuario por ciclo",
       "Aplicar el modelo INVEST para priorizar"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 402,
@@ -4620,8 +4219,7 @@
       "Que es fácil de gestionar en un solo ciclo de desarrollo",
       "Que debe implementarse en el menor tiempo posible"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 403,
@@ -4632,8 +4230,7 @@
       "Establecer requisitos detallados sin intervención del cliente",
       "Aumentar el tiempo de implementación"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 404,
@@ -4644,8 +4241,7 @@
       "Un sistema de medición de progreso",
       "Una versión mínima y funcional de la aplicación que puede usarse"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 405,
@@ -4656,8 +4252,7 @@
       "Que los desarrolladores decidan completamente el contenido de la historia",
       "Que las historias sean aprobadas por todos los miembros del equipo"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 406,
@@ -4668,8 +4263,7 @@
       "La secuencia temporal de las tareas o actividades",
       "El nivel de detalle de cada historia"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 407,
@@ -4680,15 +4274,13 @@
       "Definir el código fuente del proyecto",
       "Permitir que el equipo y el cliente hablen en términos del negocio o dominio"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 408,
     "question": "¿Qué característica del modelo INVEST garantiza que una historia sea útil para el cliente?",
     "options": ["Valiosa", "Pequeña", "Independiente", "Negociable"],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 409,
@@ -4699,8 +4291,7 @@
       "Hace más sencilla su implementación y estimación",
       "Evita la necesidad de pruebas adicionales"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 410,
@@ -4711,8 +4302,7 @@
       "Para reducir la cantidad de criterios de aceptación",
       "Para facilitar la asignación de un único desarrollador"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 411,
@@ -4723,8 +4313,7 @@
       "Que generen documentación adicional",
       "Que ofrezcan un beneficio claro para el cliente o negocio"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 412,
@@ -4735,8 +4324,7 @@
       "Eliminación de historias duplicadas",
       "Definir criterios de aceptación para cada historia"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 413,
@@ -4747,8 +4335,7 @@
       "Evitar el uso de tarjetas físicas",
       "Asignar historias solo a un equipo específico"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 414,
@@ -4759,8 +4346,7 @@
       "Permite organizar las historias por tamaño",
       "Indica historias que no requieren pruebas"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 415,
@@ -4771,8 +4357,7 @@
       "Definir condiciones específicas que debe cumplir la historia para ser aceptada",
       "Identificar a los miembros del equipo responsables"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 416,
@@ -4783,8 +4368,7 @@
       "Porque define claramente los objetivos del equipo",
       "Porque permite crear pruebas para validar su cumplimiento"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 417,
@@ -4795,8 +4379,7 @@
       "Un conjunto de criterios de aceptación",
       "Una lista detallada de tareas específicas"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 418,
@@ -4807,8 +4390,7 @@
       "Reducen el tiempo de implementación a la mitad",
       "Eliminan la necesidad de reuniones con el cliente"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 419,
@@ -4819,8 +4401,7 @@
       "Fomentar la comunicación continua entre el equipo y el cliente para clarificar la historia",
       "Reducir el número de revisiones de cada historia"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 420,
@@ -4831,8 +4412,7 @@
       "Es un contrato entre el cliente y el equipo",
       "Sirve como documento técnico del proyecto"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 421,
@@ -4843,8 +4423,7 @@
       "Para evitar criterios de aceptación",
       "Para calcular el tiempo o esfuerzo que requiere"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 422,
@@ -4855,8 +4434,7 @@
       "Una versión mínima y funcional que permite a los usuarios comenzar a usar el sistema",
       "Una lista de tareas en segundo plano"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 423,
@@ -4867,8 +4445,7 @@
       "Reducir la cantidad de historias necesarias",
       "Definir el valor económico de cada historia"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 424,
@@ -4879,8 +4456,7 @@
       "Eliminan la necesidad de pruebas automatizadas",
       "Permiten al equipo realizar estimaciones detalladas sin consultarlo con el cliente"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 425,
@@ -4891,8 +4467,7 @@
       "Reduce el número de historias necesarias para el proyecto",
       "Evita la necesidad de reuniones de seguimiento"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 426,
@@ -4903,8 +4478,7 @@
       "Promover un intercambio continuo entre el cliente y el equipo sobre la historia",
       "Evitar cambios en la historia una vez acordada"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 427,
@@ -4915,8 +4489,7 @@
       "Un borrador del producto sin funcionalidades principales",
       "Una versión mínima y funcional del producto que abarca las características básicas"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 428,
@@ -4927,8 +4500,7 @@
       "Para que el equipo y el cliente puedan ajustar detalles según las necesidades",
       "Para que el cliente decida todas las especificaciones"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 429,
@@ -4939,8 +4511,7 @@
       "Que sea fácilmente desestimada",
       "Que pueda completarse sin ser probada"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 430,
@@ -4951,8 +4522,7 @@
       "Documentar los criterios de aceptación",
       "Servir como recordatorio visual y flexible para el equipo y el cliente"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 431,
@@ -4963,8 +4533,7 @@
       "Determinar los plazos de entrega",
       "Indicar la importancia de cada historia"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 432,
@@ -4975,8 +4544,7 @@
       "Para mejorar la precisión de las estimaciones y facilitar la implementación",
       "Para reducir el número de historias en el proyecto"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 433,
@@ -4987,8 +4555,7 @@
       "Facilita la creación de documentación detallada",
       "Reduce el número de historias necesarias"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 434,
@@ -4999,8 +4566,7 @@
       "Durante las reuniones trimestrales",
       "En el \"último momento responsable\", justo antes de su implementación"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 435,
@@ -5011,8 +4577,7 @@
       "Organizar las historias según su nivel de importancia",
       "Distribuir las historias en grupos de trabajo"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 436,
@@ -5023,8 +4588,7 @@
       "Incluye varios criterios de aceptación",
       "Es fácil de programar"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 437,
@@ -5035,8 +4599,7 @@
       "La transacción debe guardarse en el sistema",
       "Hacer un seguimiento de todas las actividades"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 438,
@@ -5047,8 +4610,7 @@
       "Organizándolas verticalmente, de las más importantes en la parte superior a las menos importantes en la parte inferior",
       "Según el coste estimado para cada historia"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 439,
@@ -5059,8 +4621,7 @@
       "Las tareas incluyen menos criterios de aceptación",
       "Las tareas se completan antes que las actividades"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 440,
@@ -5071,8 +4632,7 @@
       "Permitir al equipo y al cliente aclarar y ajustar las funcionalidades de la historia",
       "Establecer contratos entre el equipo y el cliente"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 441,
@@ -5083,8 +4643,7 @@
       "Reduce la cantidad de historias en el proyecto",
       "Permite que el equipo técnico determine las funcionalidades"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 442,
@@ -5095,8 +4654,7 @@
       "Para evitar la creación de requisitos",
       "Para permitir la validación de su cumplimiento mediante pruebas"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 443,
@@ -5107,8 +4665,7 @@
       "Promover un lenguaje compartido que permita al equipo y al cliente entender claramente el negocio",
       "Definir los criterios de aceptación de cada historia"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 444,
@@ -5119,8 +4676,7 @@
       "Eliminar historias redundantes",
       "Definir el valor de negocio de cada historia"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 445,
@@ -5131,8 +4687,7 @@
       "Servir como base de comunicación efectiva entre el cliente y el equipo",
       "Organizar los tiempos de desarrollo de cada funcionalidad"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 446,
@@ -5143,8 +4698,7 @@
       "Incluir todos los requisitos detallados en la tarjeta",
       "Establecer un contrato con el cliente para la implementación"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 447,
@@ -5155,8 +4709,7 @@
       "La historia es más pequeña y puede dividirse en varias épicas",
       "La épica es una historia grande que debe dividirse en historias más pequeñas"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 448,
@@ -5167,8 +4720,7 @@
       "Permitir negociaciones con el cliente",
       "Ser independientes de otras historias"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 449,
@@ -5179,8 +4731,7 @@
       "Registrar todas las interacciones en un log interno",
       "Reducir el tiempo de desarrollo en tareas técnicas"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 450,
@@ -5191,8 +4742,7 @@
       "Para permitir al equipo realizar una planificación realista y ajustada",
       "Para crear una lista de tareas de menor tamaño"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 451,
@@ -5203,8 +4753,7 @@
       "La agrupación de historias por tipo",
       "La secuencia temporal que sigue el usuario al utilizar la aplicación"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 452,
@@ -5215,8 +4764,7 @@
       "Las historias son flexibles y adaptables, mientras que los requisitos suelen ser obligatorios",
       "Los requisitos incluyen especificaciones técnicas detalladas"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 453,
@@ -5227,8 +4775,7 @@
       "Reduce el número de historias necesarias",
       "Aumenta la cantidad de funcionalidades en el proyecto"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 454,
@@ -5239,8 +4786,7 @@
       "Hace que la historia sea un contrato formal",
       "Elimina la necesidad de conversaciones con el cliente"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 455,
@@ -5251,8 +4797,7 @@
       "Evitar la creación de criterios de aceptación",
       "Crear un contrato de desarrollo con el cliente"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 456,
@@ -5263,8 +4808,7 @@
       "Crear una lista exhaustiva de todos los requisitos",
       "Definir las especificaciones técnicas de cada historia"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 457,
@@ -5275,8 +4819,7 @@
       "Incluir historias de usuario inmutables",
       "Contar con tareas flexibles que puedan posponerse en caso de necesidad"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 458,
@@ -5287,8 +4830,7 @@
       "Debe dividirse en historias más pequeñas y manejables",
       "Es menos valiosa para el cliente"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 459,
@@ -5299,8 +4841,7 @@
       "Definir los criterios de aceptación de cada historia",
       "Evitar la creación de nuevas historias durante el proyecto"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 460,
@@ -5311,8 +4852,7 @@
       "Para que todas las historias tengan el mismo valor",
       "Para hacer que el proyecto avance más rápidamente"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 461,
@@ -5323,8 +4863,7 @@
       "Definir plazos de entrega específicos",
       "Alinear el vocabulario entre el equipo y el cliente para facilitar la comprensión"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 462,
@@ -5335,8 +4874,7 @@
       "Facilita la documentación del proyecto",
       "Elimina la necesidad de descomponer la historia en tareas"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 463,
@@ -5347,8 +4885,7 @@
       "Mantener la comunicación abierta entre el cliente y el equipo para ajustar las expectativas",
       "Definir los detalles técnicos de cada funcionalidad"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 464,
@@ -5359,8 +4896,7 @@
       "Para agrupar historias con criterios de aceptación similares",
       "Para ordenar las historias según su importancia o prioridad"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 465,
@@ -5371,8 +4907,7 @@
       "Refactorizar el código para mejorar su diseño",
       "Hacer que el test anterior pase exitosamente"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 466,
@@ -5383,8 +4918,7 @@
       "Mejorar el diseño del código sin cambiar su comportamiento",
       "Eliminar todos los tests anteriores"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 467,
@@ -5395,8 +4929,7 @@
       "Elimina la necesidad de hacer tests",
       "Permite implementar cambios sin pensar en el diseño"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 468,
@@ -5407,8 +4940,7 @@
       "Interfaz, cálculos y condicionales, bucles, casos especiales y manejo de errores",
       "Casos especiales, interfaz, condicionales, bucles"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 469,
@@ -5419,8 +4951,7 @@
       "Identificar errores en la interfaz de usuario",
       "Documentar todos los requisitos del cliente"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 470,
@@ -5431,8 +4962,7 @@
       "Escribir un test para todo el sistema antes de empezar a programar",
       "Añadir más ejemplos en los tests para obligar a generalizar el código"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 471,
@@ -5443,8 +4973,7 @@
       "Crear cambios complejos que sean fáciles de probar",
       "Realizar un único cambio grande en el código"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 472,
@@ -5455,8 +4984,7 @@
       "Si el test pasa, hace un commit; si falla, revierte al último commit",
       "Permite omitir tests de funcionalidad en ciertos momentos"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 473,
@@ -5467,8 +4995,7 @@
       "El código es demasiado simple",
       "No es necesario realizar cambios en el test"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 474,
@@ -5479,8 +5006,7 @@
       "Obliga a realizar cambios muy rápidos en el código",
       "Elimina la necesidad de diseñar interfaces"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 475,
@@ -5491,8 +5017,7 @@
       "Debe enfocarse en un pequeño incremento de funcionalidad",
       "Debe ejecutarse al final de la implementación"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 476,
@@ -5503,8 +5028,7 @@
       "Los tests de caja negra son siempre internos",
       "TDD solo se aplica en proyectos ágiles"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 477,
@@ -5515,8 +5039,7 @@
       "Realizar todos los tests al mismo tiempo",
       "Diseñar el sistema desde la interfaz hasta los detalles internos"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 478,
@@ -5527,8 +5050,7 @@
       "Revisar y ajustar el código para que el test pase",
       "Escribir un nuevo test"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 479,
@@ -5539,8 +5061,7 @@
       "Evita el uso de pruebas automatizadas",
       "Hace innecesaria la refactorización"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 480,
@@ -5551,8 +5072,7 @@
       "Simplifica la estructura de las clases en general",
       "Asegura que los objetos se comparen por valor en lugar de por identidad"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 481,
@@ -5563,8 +5083,7 @@
       "Al implementar un único método para modificar el valor de la moneda",
       "Al permitir cambiar el valor de una moneda sin crear nuevos objetos"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 482,
@@ -5575,8 +5094,7 @@
       "TDD no incluye tests continuos",
       "TDD permite grandes cambios sin tests previos"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 483,
@@ -5587,8 +5105,7 @@
       "En que el desarrollo iterativo muestra errores en etapas tempranas",
       "En que solo los tests importantes deben pasar"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 484,
@@ -5599,8 +5116,7 @@
       "Facilita la ejecución de todos los tests al mismo tiempo",
       "Reduce la necesidad de hacer pruebas detalladas"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 485,
@@ -5611,8 +5127,7 @@
       "Refactorizar todo el código escrito",
       "Ejecutar todos los tests para verificar errores"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 486,
@@ -5623,8 +5138,7 @@
       "Eliminar el test y comenzar otro ciclo",
       "Cambiar el código de otro módulo"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 487,
@@ -5635,8 +5149,7 @@
       "Iniciar la implementación de una historia al comienzo de la semana",
       "Hacer pruebas al inicio de cada ciclo de desarrollo"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 488,
@@ -5647,8 +5160,7 @@
       "Que se ha completado la fase de refactorización",
       "Que el código está listo para producción"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 489,
@@ -5659,8 +5171,7 @@
       "Porque ayuda a realizar cambios grandes en poco tiempo",
       "Porque hace más rápida la implementación final"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 490,
@@ -5671,8 +5182,7 @@
       "Eliminar todos los comentarios del código",
       "Detectar duplicidades y mejorar el diseño del código"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 491,
@@ -5683,8 +5193,7 @@
       "En revertir el código si un test falla",
       "En ejecutar todos los tests de una vez y evaluar los resultados"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 492,
@@ -5695,8 +5204,7 @@
       "Elimina completamente la necesidad de refactorización",
       "Aumenta la velocidad de desarrollo en la fase inicial"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 493,
@@ -5707,8 +5215,7 @@
       "Simplificar el código para facilitar futuras modificaciones",
       "Implementar todas las funciones de una vez"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 494,
@@ -5719,8 +5226,7 @@
       "Para agilizar el proceso de desarrollo",
       "Para formular las hipótesis y validar que el código cumple los requisitos"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 495,
@@ -5731,8 +5237,7 @@
       "Un enfoque de integración continua en el que se combinan todas las capas",
       "Un enfoque de desarrollo centrado en el cliente"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 496,
@@ -5743,8 +5248,7 @@
       "Analizar y mejorar el diseño del código",
       "Crear un test más generalizado para la funcionalidad"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 497,
@@ -5755,8 +5259,7 @@
       "Facilita el uso de mocks en pruebas complejas",
       "Establece la integración continua en la aplicación"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 498,
@@ -5767,8 +5270,7 @@
       "Reduce la productividad debido a la necesidad de refactorización",
       "Agiliza la integración final del código"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 499,
@@ -5779,8 +5281,7 @@
       "Que TDD mejora la gestión de la base de datos",
       "Que TDD solo es útil en equipos de desarrollo grandes"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 500,
@@ -5791,8 +5292,7 @@
       "Desacoplan el uso de clases concretas de la lógica de negocio",
       "Reducen la necesidad de crear clases de objetos"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 501,
@@ -5803,8 +5303,7 @@
       "Implementando un control de versiones automático",
       "Realizando pruebas en clases externas únicamente"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 502,
@@ -5815,8 +5314,7 @@
       "Añadir un nuevo test o funcionalidad",
       "Especificar el diseño final de la aplicación"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 503,
@@ -5827,8 +5325,7 @@
       "Alienta el uso de dependencias externas",
       "Facilita la separación entre elementos acoplados"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 504,
@@ -5839,8 +5336,7 @@
       "Que el código no requiera refactorización",
       "Que el proceso de desarrollo sea menos eficiente"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 505,
@@ -5851,8 +5347,7 @@
       "Asegurar que el sistema es compatible con otros módulos",
       "Documentar todo el proceso de desarrollo"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 506,
@@ -5863,8 +5358,7 @@
       "Mejora la documentación general del proyecto",
       "Minimiza el riesgo de introducir errores grandes"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 507,
@@ -5875,8 +5369,7 @@
       "Escribir las pruebas antes de codificar para verificar resultados esperados",
       "Incluir toda la funcionalidad en los primeros tests"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 508,
@@ -5887,8 +5380,7 @@
       "Hacer una refactorización completa del código",
       "Añadir un nuevo test que corrija el error"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 509,
@@ -5899,8 +5391,7 @@
       "Facilita una documentación clara y específica del código",
       "Reduce el tiempo de desarrollo total"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 510,
@@ -5911,8 +5402,7 @@
       "Porque permite avanzar con mayor rapidez en la implementación",
       "Porque permite realizar cambios grandes sin perder información"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 511,
@@ -5923,8 +5413,7 @@
       "La duplicación reduce la claridad del código",
       "La refactorización busca eliminar la duplicación para mejorar el diseño"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 512,
@@ -5935,8 +5424,7 @@
       "Que es preferible no usar mocks",
       "Que los incrementos de funcionalidad son muy pequeños"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 513,
@@ -5947,8 +5435,7 @@
       "Es difícil mantener una base de tests actualizada",
       "Reduce la velocidad de desarrollo inicial"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 514,
@@ -5959,8 +5446,7 @@
       "Antes de implementar la funcionalidad completa",
       "En la fase de refactorización"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 515,
@@ -5971,8 +5457,7 @@
       "Aumenta la eficiencia de los tests, sobre todo de integración",
       "Facilita la creación de tests independientes"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 516,
@@ -5983,8 +5468,7 @@
       "Casos especiales y condicionales primero",
       "Generalizaciones, cálculos y bucles"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 517,
@@ -5995,8 +5479,7 @@
       "La localización más sencilla de errores",
       "La eliminación completa de la duplicación"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 518,
@@ -6007,8 +5490,7 @@
       "Las capas de la cebolla representan los diferentes equipos de desarrollo",
       "Primero se implementan las interfaces de usuario y luego las internas"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 519,
@@ -6019,8 +5501,7 @@
       "Facilitar la conexión con la base de datos",
       "Obligar a generalizar el código para eliminar dependencias"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 520,
@@ -6031,8 +5512,7 @@
       "Que todo el equipo comprende el lenguaje de programación",
       "Que las interfaces están listas para usarse"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 521,
@@ -6043,8 +5523,7 @@
       "Facilita un ritmo de trabajo sostenido y constante",
       "Aumenta la velocidad de desarrollo en la fase de pruebas"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 522,
@@ -6055,8 +5534,7 @@
       "Los cambios de diseño se eliminan automáticamente",
       "Las pruebas son opcionales en el diseño"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 523,
@@ -6067,8 +5545,7 @@
       "Recuperar automáticamente el código si el test falla",
       "Evitar la necesidad de hacer refactorización"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 524,
@@ -6079,8 +5556,7 @@
       "Para reducir el número de cambios necesarios en el diseño",
       "Para simplificar el desarrollo técnico"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 525,
@@ -6091,8 +5567,7 @@
       "Se escriben todos los tests al final del desarrollo",
       "Se realizan cambios grandes antes de escribir los tests"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 526,
@@ -6103,8 +5578,7 @@
       "Mantener el enfoque en los objetivos y pasos pendientes",
       "Reducir el tiempo necesario para refactorizar"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 527,
@@ -6115,8 +5589,7 @@
       "Se basa en el código heredado de otras funciones",
       "Se ignora la interfaz en favor de la funcionalidad"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 528,
@@ -6127,8 +5600,7 @@
       "Realizar los tests finales antes de pasar a producción",
       "Definir el próximo pequeño paso en la funcionalidad"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 529,
@@ -6139,8 +5611,7 @@
       "Evitar los cambios en el diseño al final del proyecto",
       "Implementar los cambios sin realizar pruebas adicionales"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 530,
@@ -6151,8 +5622,7 @@
       "Que el código necesita refactorización inmediata",
       "Que la funcionalidad ha sido implementada correctamente"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 531,
@@ -6163,8 +5633,7 @@
       "Facilita la construcción de funcionalidades avanzadas a partir de elementos básicos",
       "Permite identificar problemas en el sistema desde el principio"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 532,
@@ -6175,8 +5644,7 @@
       "Facilitar la eliminación de todas las duplicaciones de código",
       "Asegurar que se puede cambiar de tarea rápidamente"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 533,
@@ -6187,8 +5655,7 @@
       "Realizar los cambios en una rama separada",
       "Eliminar los cambios recientes y volver al último estado estable"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 534,
@@ -6199,8 +5666,7 @@
       "Facilita la generalización de los métodos y elimina dependencias del test",
       "Simplificación de la implementación de grandes cambios"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 535,
@@ -6211,8 +5677,7 @@
       "Crear un conjunto de clases independientes para los métodos",
       "Mantener todos los incrementos de código en un solo módulo"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 536,
@@ -6223,8 +5688,7 @@
       "Muchas dependencias entre los módulos",
       "Dificultad en la creación de tests"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 537,
@@ -6235,8 +5699,7 @@
       "Documentar todos los cambios realizados",
       "Realizar pruebas manuales exhaustivas"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 538,
@@ -6247,8 +5710,7 @@
       "Definir la estructura del proyecto en el test",
       "Evitar errores al comparar el código final"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 539,
@@ -6259,8 +5721,7 @@
       "Mejorar la eficiencia de los tests al reducir la dependencia de sistemas externos",
       "Simplificar el diseño del sistema"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 540,
@@ -6271,8 +5732,7 @@
       "Durante la implementación de la funcionalidad principal",
       "En la última fase del desarrollo"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 541,
@@ -6283,8 +5743,7 @@
       "Manteniendo la misma estructura en todos los módulos",
       "A través de los tests que definen el comportamiento esperado"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 542,
@@ -6295,8 +5754,7 @@
       "Crear todas las funcionalidades a la vez",
       "Programar desde la interfaz hasta el núcleo"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 543,
@@ -6307,8 +5765,7 @@
       "Evitar el uso de tests adicionales en TDD",
       "Reducir los incrementos de código a cambios pequeños y verificables"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 544,
@@ -6319,8 +5776,7 @@
       "Incrementa la claridad en la documentación técnica",
       "Permite una mayor integración con la base de datos"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 545,
@@ -6331,8 +5787,7 @@
       "Escribir un test para la funcionalidad que se quiere implementar",
       "Crear toda la documentación necesaria"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 546,
@@ -6343,8 +5798,7 @@
       "Porque reduce la necesidad de comentarios en el código",
       "Porque facilita la refactorización del código duplicado"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 547,
@@ -6355,8 +5809,7 @@
       "Facilitar la implementación de funcionalidades complejas",
       "Reducir el tiempo total de desarrollo"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 548,
@@ -6367,8 +5820,7 @@
       "Que todos los incrementos de código se completaron",
       "Que el test ha pasado exitosamente"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 549,
@@ -6379,8 +5831,7 @@
       "Crear los componentes visuales antes del código",
       "Evitar implementar pruebas para elementos sencillos"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 550,
@@ -6391,8 +5842,7 @@
       "TCR revierte cambios si un test falla, mientras que TDD no",
       "TCR permite ignorar algunos tests"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 551,
@@ -6403,8 +5853,7 @@
       "Reducir la cantidad de tests necesarios",
       "Facilitar la integración de nuevas tecnologías"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 552,
@@ -6415,8 +5864,7 @@
       "Evita la programación orientada a objetos",
       "Limita el uso de bases de datos"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 553,
@@ -6427,8 +5875,7 @@
       "Porque facilita la creación de tests unitarios",
       "Porque permite validar la igualdad de objetos en tests"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 554,
@@ -6439,8 +5886,7 @@
       "Incrementar el tiempo de desarrollo",
       "Facilitar la creación de interfaces"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 555,
@@ -6451,8 +5897,7 @@
       "Que los tests definen el comportamiento y los requisitos esperados",
       "Que los tests crean documentación adicional"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 556,
@@ -6463,8 +5908,7 @@
       "Evitar la creación de tests complejos",
       "Incrementar el uso de bucles y condiciones"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 557,
@@ -6475,8 +5919,7 @@
       "Implementar funcionalidades grandes de inmediato",
       "Evitar la necesidad de refactorización"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 558,
@@ -6487,8 +5930,7 @@
       "TDD se enfoca en commits grandes y completos",
       "TCR realiza un commit solo si el test pasa"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 559,
@@ -6499,8 +5941,7 @@
       "Un primer nivel de funcionalidades básicas en el sistema",
       "La planificación de todas las etapas del desarrollo"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 560,
@@ -6511,8 +5952,7 @@
       "La historia es revisada por un analista de sistemas",
       "Los criterios de aceptación para la historia son definidos y detallados"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 561,
@@ -6523,8 +5963,7 @@
       "Facilita la automatización de tareas repetitivas",
       "Permite usar mejor la interfaz de usuario"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 562,
@@ -6535,8 +5974,7 @@
       "Hace innecesario el contacto con el cliente",
       "Aumenta la autonomía del equipo en los cambios de funcionalidades"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 563,
@@ -6547,8 +5985,7 @@
       "Mantener un ritmo de desarrollo constante y sostenible",
       "Realizar pequeños cambios sin documentación"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 564,
@@ -6559,8 +5996,7 @@
       "Crear nuevas funcionalidades según los requerimientos del cliente",
       "Descartar cualquier test fallido y continuar"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 565,
@@ -6571,8 +6007,7 @@
       "Eliminar funcionalidades obsoletas del programa",
       "Añadir nuevas funciones al programa sin cambiar su estructura"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 566,
@@ -6583,8 +6018,7 @@
       "Para medir la eficiencia del código antes de refactorizarlo",
       "Para identificar las dependencias del código"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 567,
@@ -6595,8 +6029,7 @@
       "Minimizar la cantidad de líneas de código en el programa",
       "Aumentar la eficiencia del programa en términos de rendimiento"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 568,
@@ -6607,8 +6040,7 @@
       "Separar un método en múltiples funciones pequeñas",
       "Mover una función de una clase a otra"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 569,
@@ -6619,8 +6051,7 @@
       "Mejora la eficiencia del código al reducir el uso de memoria",
       "Permite simplificar las consultas SQL en el código"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 570,
@@ -6631,15 +6062,13 @@
       "Funciones largas o repetidas",
       "Nombres de variables muy descriptivos"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 571,
     "question": "¿Qué refactorización se recomienda cuando se encuentra código duplicado en varias clases relacionadas?",
     "options": ["Rename Method", "Replace Variable with Query", "Pull Up Method", "Move Method"],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 572,
@@ -6650,8 +6079,7 @@
       "Cuando el método no tiene dependencias externas",
       "Cuando el método tiene más relación con otra clase"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 573,
@@ -6662,8 +6090,7 @@
       "Que la variable no se utiliza en el código",
       "Que la función es demasiado pequeña y necesita expansión"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 574,
@@ -6674,8 +6101,7 @@
       "Unificar funciones similares mediante un parámetro",
       "Reducir la cantidad de parámetros de la función"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 575,
@@ -6686,8 +6112,7 @@
       "Mejora el rendimiento del programa inmediatamente",
       "Aumenta la eficiencia de los compiladores"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 576,
@@ -6698,22 +6123,19 @@
       "Mover un método a una clase que esté más relacionada con su función",
       "Simplificar la lógica de un método complejo"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 577,
     "question": "¿Qué code smell sugiere que una función debería dividirse en funciones más pequeñas?",
     "options": ["Código duplicado", "Nombres misteriosos", "Variables globales", "Función larga"],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 578,
     "question": "¿Qué herramienta de refactorización suele ser utilizada en los IDEs para renombrar variables, métodos o clases?",
     "options": ["Extract Method", "Rename", "Replace Temp with Query", "Parameterize Function"],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 579,
@@ -6724,8 +6146,7 @@
       "Cuando el código tiene muchos bucles anidados",
       "Cuando es necesario agregar lógica condicional"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 580,
@@ -6736,15 +6157,13 @@
       "Mejorar la legibilidad al agrupar líneas de código en un método separado",
       "Optimizar el rendimiento al reducir el uso de funciones"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 581,
     "question": "¿Qué técnica de refactorización ayuda a evitar la duplicación de código mediante el uso de clases superiores?",
     "options": ["Rename Field", "Move Method", "Replace Temp with Query", "Pull Up Method"],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 582,
@@ -6755,8 +6174,7 @@
       "Move Method",
       "Inline Function"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 583,
@@ -6767,8 +6185,7 @@
       "Eliminar código redundante",
       "Optimizar el tiempo de ejecución"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 584,
@@ -6779,8 +6196,7 @@
       "Nombre misterioso",
       "Parámetros excesivos"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 585,
@@ -6791,8 +6207,7 @@
       "Optimizar el rendimiento del programa",
       "Eliminar errores en el código"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 586,
@@ -6803,8 +6218,7 @@
       "Extraer código en métodos separados para mejorar la claridad y reutilización",
       "Eliminar funciones redundantes"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 587,
@@ -6815,8 +6229,7 @@
       "La variable no se utiliza en ningún lugar",
       "La variable almacena un valor numérico"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 588,
@@ -6827,8 +6240,7 @@
       "Mejorar la eficiencia del código",
       "Ubicar un método en una clase con la que esté más relacionado"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 589,
@@ -6839,15 +6251,13 @@
       "Mejorar la documentación de la función",
       "Optimizar el tiempo de ejecución"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 590,
     "question": "¿Qué refactorización ayuda a reducir código duplicado subiendo métodos a una clase superior?",
     "options": ["Extract Method", "Rename Method", "Pull Up Method", "Replace Temp with Query"],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 591,
@@ -6858,8 +6268,7 @@
       "Cuando necesitamos aumentar la eficiencia de una función",
       "Cuando el código tiene muchos comentarios"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 592,
@@ -6870,8 +6279,7 @@
       "Elimina un método reemplazando sus invocaciones por el propio código del método",
       "Añade parámetros adicionales a un método"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 593,
@@ -6882,22 +6290,19 @@
       "Eliminar errores en el código",
       "Reducir el tiempo de desarrollo"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 594,
     "question": "¿Qué técnica de refactorización puede aplicarse cuando encontramos un nombre de método ambiguo?",
     "options": ["Inline Method", "Pull Up Method", "Extract Method", "Change Function Declaration"],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 595,
     "question": "¿Cuál de estos code smells indica que una función es demasiado larga?",
     "options": ["Nombre misterioso", "Función larga", "Código duplicado", "Parámetros excesivos"],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 596,
@@ -6908,8 +6313,7 @@
       "Disminuir el tamaño del código fuente",
       "Aumentar el número de funcionalidades"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 597,
@@ -6920,8 +6324,7 @@
       "Crear una nueva clase para encapsular atributos y métodos relacionados",
       "Simplificar el flujo de control en una clase"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 598,
@@ -6932,8 +6335,7 @@
       "Cuando una función tiene demasiados parámetros",
       "Cuando se necesita una nueva variable"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 599,
@@ -6944,8 +6346,7 @@
       "Reducción de duplicación de código",
       "Cambio en el comportamiento del programa"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 600,
@@ -6956,15 +6357,13 @@
       "Dividir una clase compleja en varias más simples",
       "Mejorar la eficiencia del código"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 601,
     "question": "¿Cuál de los siguientes code smells podría solucionarse con \"Extract Method\"?",
     "options": ["Función larga", "Código duplicado", "Nombre misterioso", "Parámetros excesivos"],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 602,
@@ -6975,8 +6374,7 @@
       "Aumenta el rendimiento del código",
       "Reduce el número de líneas de código"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 603,
@@ -6987,8 +6385,7 @@
       "Errores de sintaxis",
       "Variables no inicializadas"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 604,
@@ -6999,8 +6396,7 @@
       "Evitar duplicación de código innecesaria",
       "Escribir funciones con un número limitado de parámetros"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 605,
@@ -7011,8 +6407,7 @@
       "Una indicación de que el código tiene un problema de diseño",
       "Una refactorización innecesaria"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 606,
@@ -7023,8 +6418,7 @@
       "Long Function (Función larga)",
       "Dead Code (Código muerto)"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 607,
@@ -7035,22 +6429,19 @@
       "Eliminar métodos duplicados",
       "Reducir el número de líneas de código en una clase"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 608,
     "question": "¿Cuál de las siguientes refactorizaciones ayuda a evitar la duplicación de código en subclases?",
     "options": ["Rename Field", "Replace Method", "Move Field", "Pull Up Method"],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 609,
     "question": "¿Qué tipo de refactorización se aplica cuando se quiere modificar un nombre confuso de una variable o función?",
     "options": ["Rename Variable", "Move Method", "Pull Up Field", "Extract Class"],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 610,
@@ -7061,8 +6452,7 @@
       "Cuando varias clases comparten métodos o atributos comunes",
       "Cuando una clase tiene demasiados métodos estáticos"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 611,
@@ -7073,8 +6463,7 @@
       "Mala elección de nombres",
       "Método que solo devuelve un valor constante"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 612,
@@ -7085,8 +6474,7 @@
       "Para mejorar la velocidad del código",
       "Para documentar los cambios más fácilmente"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 613,
@@ -7097,36 +6485,31 @@
       "Evitar duplicación de código innecesario",
       "Optimizar el rendimiento del código"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 614,
     "question": "¿Cuál es la refactorización más adecuada cuando varios métodos en una clase utilizan un campo o variable de otra clase?",
     "options": ["Move Field", "Extract Function", "Rename Variable", "Push Down Method"],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 615,
     "question": "¿Qué refactorización ayuda a mejorar la comprensión del código sin modificar su funcionamiento?",
     "options": ["Move Method", "Push Down Method", "Extract Superclass", "Rename Method"],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 616,
     "question": "¿Qué tipo de refactorización aplicarías si una función tiene muchas líneas de código y varias responsabilidades?",
     "options": ["Move Method", "Inline Method", "Extract Method", "Replace Variable with Method"],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 617,
     "question": "¿Cuál es un ejemplo de un bad code smell relacionado con la longitud del código?",
     "options": ["Dead Code", "Long Function", "Duplicate Code", "Switch Statement"],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 618,
@@ -7137,8 +6520,7 @@
       "Reemplazar números específicos por constantes con nombres descriptivos",
       "Evitar el uso de números en funciones"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 619,
@@ -7149,15 +6531,13 @@
       "Cuando los parámetros se repiten en varias funciones",
       "Cuando la función no utiliza parámetros"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 620,
     "question": "¿Qué refactorización permite eliminar duplicación de lógica en varias clases relacionadas?",
     "options": ["Move Method", "Extract Superclass", "Push Down Method", "Rename Field"],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 621,
@@ -7168,8 +6548,7 @@
       "Código que depende demasiado de otros elementos del sistema",
       "Código que se ejecuta de forma lenta"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 622,
@@ -7180,8 +6559,7 @@
       "Cuando una clase tiene demasiados atributos",
       "Cuando un método necesita ser dividido en varios más pequeños"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 623,
@@ -7192,8 +6570,7 @@
       "Reemplazar un bucle por una serie de operaciones encadenadas",
       "Simplificar un bucle anidado"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 624,
@@ -7204,8 +6581,7 @@
       "Bajo rendimiento en funciones con muchos parámetros",
       "Funciones demasiado cortas"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 625,
@@ -7216,8 +6592,7 @@
       "Cambiar el diseño de un programa sin modificar su estructura",
       "Transformar el código fuente sin cambiar el comportamiento del programa"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 626,
@@ -7228,8 +6603,7 @@
       "Mejorar la estructura interna del código sin cambiar su comportamiento externo",
       "Eliminar errores de sintaxis"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 627,
@@ -7240,8 +6614,7 @@
       "Para mejorar la eficiencia del código",
       "Para asegurar que el diseño cumple con los estándares"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 628,
@@ -7252,8 +6625,7 @@
       "Aumenta la comprensión del código por parte del equipo",
       "Facilita la integración con bibliotecas externas"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 629,
@@ -7264,8 +6636,7 @@
       "Encapsular un conjunto de código en una función separada",
       "Convertir una variable local en un parámetro"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 630,
@@ -7276,8 +6647,7 @@
       "Que la función utiliza variables globales",
       "Que el código está mal organizado"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 631,
@@ -7288,8 +6658,7 @@
       "Reemplazar variables globales por locales",
       "Sustituir una variable auxiliar por una llamada a un método"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 632,
@@ -7300,8 +6669,7 @@
       "Porque aumentan el tamaño del programa",
       "Porque complican la depuración"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 633,
@@ -7312,22 +6680,19 @@
       "Cuando un método tiene una complejidad alta",
       "Cuando un método utiliza variables globales"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 634,
     "question": "¿Qué refactorización es útil cuando se tiene código repetido en distintas subclases?",
     "options": ["Replace Function", "Push Down Method", "Pull Up Method", "Encapsulate Variable"],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 635,
     "question": "¿Cuál es un ejemplo de refactorización que ayuda a mejorar la modularidad del código?",
     "options": ["Inline Variable", "Extract Function", "Replace Method", "Move Method"],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 636,
@@ -7338,8 +6703,7 @@
       "Convertir una función en un método",
       "Reemplazar una función por un constructor"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 637,
@@ -7350,8 +6714,7 @@
       "Evitar el uso de muchos parámetros en una función, agrupándolos en un objeto",
       "Dividir una función larga en varias funciones"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 638,
@@ -7362,8 +6725,7 @@
       "Cuando se necesita incrementar la eficiencia de un bucle",
       "Cuando se trabaja con funciones que no devuelven un valor"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 639,
@@ -7374,8 +6736,7 @@
       "Dividir una clase grande en varias más pequeñas y específicas",
       "Reorganizar las clases en un nuevo paquete"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 640,
@@ -7386,22 +6747,19 @@
       "Agrupar métodos similares en una clase",
       "Hacer que los métodos sean más eficientes"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 641,
     "question": "¿Cuál es un síntoma de mal diseño relacionado con el uso de nombres poco descriptivos?",
     "options": ["Long Function", "Duplicate Code", "Inline Variable", "Mysterious Name"],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 642,
     "question": "¿Qué técnica es útil para mejorar la modularidad al mover métodos o atributos a una clase superior en la jerarquía?",
     "options": ["Replace Function", "Move Field", "Push Up Method", "Pull Down Method"],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 643,
@@ -7412,8 +6770,7 @@
       "Reduce el uso de memoria en el programa",
       "Optimiza las llamadas a métodos"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 644,
@@ -7424,8 +6781,7 @@
       "Hacer que el código sea compatible con otros lenguajes",
       "Reemplazar un método por una constante"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 645,
@@ -7436,15 +6792,13 @@
       "Dividir una clase grande en varias más pequeñas y enfocadas",
       "Convertir una función en un método de clase"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 646,
     "question": "¿Cuál de las siguientes es una técnica común para mejorar la claridad del código en una función larga?",
     "options": ["Push Up Method", "Extract Method", "Inline Variable", "Move Field"],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 647,
@@ -7455,8 +6809,7 @@
       "Extract Superclass",
       "Pull Up Method"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 648,
@@ -7467,15 +6820,13 @@
       "Menor consumo de memoria",
       "Mayor seguridad en el acceso a datos"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 649,
     "question": "¿Qué técnica puede ayudar a reducir el acoplamiento en una clase que tiene muchos atributos compartidos con otra?",
     "options": ["Replace Function", "Extract Class", "Push Down Field", "Inline Method"],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 650,
@@ -7486,8 +6837,7 @@
       "Optimizar el código",
       "Sustituir código condicional basado en tipos por subclases"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 651,
@@ -7498,8 +6848,7 @@
       "Simplificar la gestión de valores nulos evitando verificaciones condicionales",
       "Hacer el código compatible con otros entornos"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 652,
@@ -7510,15 +6859,13 @@
       "Incrementa la modularidad del sistema",
       "Facilita la comprensión del flujo del programa"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 653,
     "question": "¿Cuál es un ejemplo de \"bad smell\" que indica una mala organización de clases?",
     "options": ["Mysterious Name", "Inline Method", "Push Down Method", "Divergent Change"],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 654,
@@ -7529,8 +6876,7 @@
       "Pull Down Field",
       "Replace Type Code"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 655,
@@ -7541,8 +6887,7 @@
       "Cuando se quiere optimizar el acceso a elementos",
       "Cuando se trabaja con arrays de gran tamaño"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 656,
@@ -7553,8 +6898,7 @@
       "Pull Up Method",
       "Push Down Field"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 657,
@@ -7565,15 +6909,13 @@
       "Eliminar un método que no se utiliza",
       "Convertir un método en una función"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 658,
     "question": "¿Cuál es un síntoma de diseño deficiente al encontrar una función que se utiliza en muchas subclases pero no en la clase padre?",
     "options": ["Long Method", "Switch Statement", "Inline Class", "Feature Envy"],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 659,
@@ -7584,8 +6926,7 @@
       "Move Method",
       "Pull Up Method"
     ],
-    "correctAnswer": 0,
-    "tags": []
+    "correctAnswer": 0
   },
   {
     "id": 660,
@@ -7596,8 +6937,7 @@
       "Las variables que no son reutilizables",
       "La presencia de variables globales"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 661,
@@ -7608,8 +6948,7 @@
       "Para eliminar clases innecesarias y simplificar la estructura",
       "Para optimizar el rendimiento en operaciones de clase"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   },
   {
     "id": 662,
@@ -7620,8 +6959,7 @@
       "Código que contiene muchos condicionales",
       "Código que accede a datos de otra clase en exceso"
     ],
-    "correctAnswer": 3,
-    "tags": []
+    "correctAnswer": 3
   },
   {
     "id": 663,
@@ -7632,8 +6970,7 @@
       "Es una clase que no se utiliza",
       "Contiene funciones innecesariamente cortas"
     ],
-    "correctAnswer": 1,
-    "tags": []
+    "correctAnswer": 1
   },
   {
     "id": 664,
@@ -7644,7 +6981,6 @@
       "Replace Magic Number with Symbolic Constant",
       "Pull Up Field"
     ],
-    "correctAnswer": 2,
-    "tags": []
+    "correctAnswer": 2
   }
 ]
