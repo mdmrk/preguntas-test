@@ -1863,5 +1863,127 @@
     ],
     "correctAnswer": 2,
     "explanation": "Es una premisa totalmente incorrecta afirmar que la dirección de proyectos no es la encargada de las restricciones. Por el contrario, lograr el equilibrio y manejar con maestría los trade-offs entre Coste, Tiempo, Alcance, Calidad y Riesgo es la mismísima esencia de la Dirección de Proyectos."
+  },
+  {
+    "id": 198,
+    "question": "Analizando los valores EVA de la imagen...¿qué podemos decir de la tarea 4?",
+    "options": [
+      "El valor BCWP es erróneo",
+      "Debería haber comenzado y no lo ha hecho",
+      "El valor ACWP es erróneo",
+      "No debería haber comenzado pero sí lo ha hecho"
+    ],
+    "correctAnswer": 2,
+    "image": "gpi001.png"
+  },
+  {
+    "id": 199,
+    "question": "Analizando los valores EVA de la imagen...¿qué podemos decir de la tarea 2?",
+    "options": ["Todas son ciertas", "Va retrasada", "No ha comenzado", "Debería haber comenzado"],
+    "correctAnswer": 3,
+    "image": "gpi002.png"
+  },
+  {
+    "id": 200,
+    "question": "Analizando los valores EVA de la imagen...¿qué podemos decir del proyecto en su conjunto?",
+    "options": [
+      "El proyecto va adelantado y su productividad es alta",
+      "El proyecto va adelantado y su productividad es baja",
+      "El proyecto va atrasado y su productividad es baja",
+      "El proyecto va atrasado y su productividad es alta"
+    ],
+    "correctAnswer": 2,
+    "image": "gpi003.png"
+  },
+  {
+    "id": 201,
+    "question": "Analizando los valores EVA de la imagen...¿qué podemos decir de la tarea 1?",
+    "options": [
+      "Ha gastado menos de lo previsto",
+      "Va adelantada respecto a la agenda",
+      "Va atrasada respecto a la agenda",
+      "No podemos saber si ha terminado"
+    ],
+    "correctAnswer": 3,
+    "image": "gpi004.png"
+  },
+  {
+    "id": 202,
+    "question": "Analizando los valores EVA de la imagen...¿qué podemos decir de la tarea 3?",
+    "options": [
+      "Está gastando menos de lo previsto",
+      "Va retrasada",
+      "No ha comenzado",
+      "Todas son falsas"
+    ],
+    "correctAnswer": 0,
+    "image": "gpi005.png"
+  },
+  {
+    "id": 203,
+    "question": "En el siguiente diagrama Gantt ¿qué modelo de proceso se está siguiendo?",
+    "options": [
+      "Desarrollo Rápido de aplicaciones",
+      "Cascada",
+      "Prototipado",
+      "Todos los anteriores"
+    ],
+    "correctAnswer": 3,
+    "image": "gpi006.png"
+  },
+  {
+    "id": 204,
+    "question": "¿Qué podemos decir de la tarea 1?",
+    "options": [
+      "Ha gastado menos de lo previsto",
+      "Va adelantada respecto a la agenda",
+      "Va atrasada respecto a la agenda",
+      "No podemos saber si ha terminado"
+    ],
+    "correctAnswer": 3,
+    "image": "gpi007.png"
+  },
+  {
+    "id": 205,
+    "question": "¿Qué podemos decir de la tarea 2?",
+    "options": ["No ha comenzado", "Debería haber comenzado", "Va retrasada", "Todas son ciertas"],
+    "correctAnswer": 3,
+    "image": "gpi008.png"
+  },
+  {
+    "id": 206,
+    "question": "¿Qué podemos decir de la tarea 3?",
+    "options": [
+      "Está gastando menos de lo previsto",
+      "Va retrasada",
+      "No ha comenzado",
+      "Todas son falsas"
+    ],
+    "correctAnswer": 0,
+    "image": "gpi009.png"
+  },
+  {
+    "id": 207,
+    "question": "¿Qué podemos decir de la tarea 4?",
+    "options": [
+      "Debería haber comenzado y no lo ha hecho",
+      "El valor BCWP es erróneo",
+      "El valor ACWP es erróneo",
+      "No debería haber comenzado pero sí lo ha hecho"
+    ],
+    "correctAnswer": 2,
+    "image": "gpi010.png"
+  },
+  {
+    "id": 208,
+    "question": "¿Qué podemos decir del proyecto en su conjunto?",
+    "options": [
+      "El proyecto va adelantado y su productividad es baja",
+      "El proyecto va atrasado y su productividad es alta",
+      "El proyecto va adelantado y su productividad es alta",
+      "El proyecto va atrasado y su productividad es baja"
+    ],
+    "correctAnswer": 3,
+    "image": "gpi011.png"
   }
 ]
