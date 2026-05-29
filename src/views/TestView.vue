@@ -192,7 +192,12 @@ const stats = computed(() => {
   const incorrect = answered - correct
   const percentage = answered > 0 ? (correct / answered) * 100 : 0
   const incorrectPercentage = answered > 0 ? (incorrect / answered) * 100 : 0
-  const percentageRounded = Math.round(percentage)
+  const percentageRounded =
+    percentage === 0
+      ? 0
+      : percentage === 100
+        ? 100
+        : Math.max(1, Math.min(99, Math.round(percentage)))
 
   return {
     answered,
@@ -209,7 +214,12 @@ const progressBarClasses = computed(() => ({
   "rounded-r-full": stats.value.incorrect === 0,
 }))
 
-const finalPercentage = computed(() => Math.round(stats.value.percentage * 10) / 10)
+const finalPercentage = computed(() => {
+  const p = stats.value.percentage
+  if (p === 0) return 0
+  if (p === 100) return 100
+  return Math.max(0.1, Math.min(99.9, Math.round(p * 10) / 10))
+})
 
 const shouldShuffleAnswers = computed(() => {
   return !doNotShuffle.some((str) => testTitle.value.toLowerCase().includes(str.toLowerCase()))
