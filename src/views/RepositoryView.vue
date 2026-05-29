@@ -108,7 +108,7 @@ const testId = computed(() => route.params.id as string)
 const availableTags = computed(() => {
   const tags = new Set<string>()
   questions.value.forEach((question) => {
-    question.tags.forEach((tag) => {
+    question.tags?.forEach((tag) => {
       tags.add(tag)
     })
   })
@@ -167,7 +167,7 @@ const filteredQuestions = computed(() => {
     return questions.value
   }
   return questions.value.filter((question) =>
-    selectedTags.value.some((tag) => question.tags.includes(tag)),
+    selectedTags.value.some((tag) => question.tags?.includes(tag)),
   )
 })
 
