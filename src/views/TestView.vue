@@ -19,7 +19,7 @@
               {{ currentQuestionIndex + 1 }} / {{ questions.length }}
             </span>
 
-            <div v-if="stats.answered > 0" class="flex items-center space-x-4 text-sm font-medium">
+            <div class="flex items-center space-x-4 text-sm font-medium">
               <div class="flex items-center space-x-1">
                 <div class="w-3 h-3 rounded-full bg-green-500" />
                 <span class="text-green-600 dark:text-green-400">{{ stats.correct }}</span>
@@ -28,7 +28,9 @@
                 <div class="w-3 h-3 rounded-full bg-red-500" />
                 <span class="text-red-600 dark:text-red-400">{{ stats.incorrect }}</span>
               </div>
-              <span class="text-blue-600 dark:text-blue-400">{{ stats.percentageRounded }}%</span>
+              <span class="text-blue-600 dark:text-blue-400">{{
+                stats.answered > 0 ? `${stats.percentageRounded}%` : "-%"
+              }}</span>
             </div>
           </div>
         </div>
