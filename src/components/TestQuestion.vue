@@ -9,11 +9,11 @@
     </div>
   </div>
 
-  <div class="space-y-3" role="radiogroup" aria-label="Opciones de respuesta">
+  <div class="space-y-2" role="radiogroup" aria-label="Opciones de respuesta">
     <div
       v-for="(option, shuffledIndex) in shuffledOptions"
       :key="shuffledIndex"
-      class="flex items-center p-4 rounded-lg border outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
+      class="flex items-center px-4 py-3 rounded-lg border outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
       :class="getOptionClasses(shuffledIndex)"
       @click="selectAnswer(shuffledIndex)"
       @keydown.enter.prevent="selectAnswer(shuffledIndex)"
@@ -23,29 +23,14 @@
       :tabindex="answered ? -1 : 0"
     >
       <div class="flex items-center w-full">
-        <div class="mr-4 flex items-center justify-center min-w-[1.25rem]">
-          <div
-            v-if="!answered"
-            class="w-4 h-4 rounded-full border-2 flex items-center justify-center"
-            :class="getRadioClasses(shuffledIndex)"
+        <div class="mr-3 flex items-center justify-center min-w-[1.5rem]">
+          <span
+            class="w-5 h-5 rounded-md flex items-center justify-center text-xs font-bold shrink-0"
+            :class="getLetterClasses(shuffledIndex)"
             aria-hidden="true"
           >
-            <div v-if="shouldShowRadioDot(shuffledIndex)" class="w-2 h-2 rounded-full bg-white" />
-          </div>
-
-          <template v-else>
-            <CheckIcon
-              v-if="isCorrectOption(shuffledIndex)"
-              class="w-5 text-green-600 dark:text-green-400"
-              aria-label="Correcta"
-            />
-            <XIcon
-              v-else-if="isSelectedIncorrectOption(shuffledIndex)"
-              class="w-5 text-red-600 dark:text-red-400"
-              aria-label="Incorrecta"
-            />
-            <div v-else class="w-5" aria-hidden="true"></div>
-          </template>
+            {{ String.fromCharCode(65 + shuffledIndex) }}
+          </span>
         </div>
 
         <div
@@ -100,7 +85,7 @@
     <button
       v-show="answered && !readOnly"
       @click="$emit('next')"
-      class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg cursor-pointer"
+      class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg cursor-pointer w-full"
     >
       Siguiente
     </button>
@@ -119,12 +104,10 @@
 import { computed, ref, watch } from "vue"
 import type { Question } from "@/types/test"
 import { shuffle } from "@/utils"
-import CheckIcon from "./icons/CheckIcon.vue"
 import ChevronDownIcon from "./icons/ChevronDownIcon.vue"
 import CopiedIcon from "./icons/CopiedIcon.vue"
 import CopyIcon from "./icons/CopyIcon.vue"
 import FlagIcon from "./icons/FlagIcon.vue"
-import XIcon from "./icons/XIcon.vue"
 import ReportModal from "./ReportModal.vue"
 import TextRenderer from "./TextRenderer.vue"
 
@@ -200,9 +183,6 @@ const isCorrectOption = (shuffledIndex: number) => {
 const isSelectedIncorrectOption = (shuffledIndex: number) =>
   answered.value && selectedOption.value === shuffledIndex && !isCorrectOption(shuffledIndex)
 
-const shouldShowRadioDot = (shuffledIndex: number) =>
-  answered.value && (isCorrectOption(shuffledIndex) || selectedOption.value === shuffledIndex)
-
 const getOptionClasses = (shuffledIndex: number) => {
   const baseClasses = answered.value
     ? "cursor-default"
@@ -222,16 +202,20 @@ const getOptionClasses = (shuffledIndex: number) => {
   return `${baseClasses} bg-gray-50 border-gray-200 dark:bg-gray-700 dark:border-gray-600`
 }
 
-const getRadioClasses = (shuffledIndex: number) => {
-  if (isCorrectOption(shuffledIndex)) {
-    return "border-green-500 bg-green-500"
+const getLetterClasses = (shuffledIndex: number) => {
+  if (answered.value && isCorrectOption(shuffledIndex)) {
+    return "bg-green-500 text-white"
   }
 
-  if (isSelectedIncorrectOption(shuffledIndex)) {
-    return "border-red-500 bg-red-500"
+  if (answered.value && isSelectedIncorrectOption(shuffledIndex)) {
+    return "bg-red-500 text-white"
   }
 
-  return "border-gray-300 dark:border-gray-600"
+  if (!answered.value && selectedOption.value === shuffledIndex) {
+    return "bg-blue-500 text-white"
+  }
+
+  return "bg-gray-200 text-gray-700 dark:bg-gray-600 dark:text-gray-200"
 }
 
 const getTextClasses = (shuffledIndex: number) => {
