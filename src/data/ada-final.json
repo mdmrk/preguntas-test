@@ -8,7 +8,7 @@
   {
     "id": 2,
     "question": "El coste temporal de un algoritmo se ajusta a la siguiente ecuación de recurrencia:$$t(n) = \\begin{cases} 1 & \\text{para } n = 0 \\\\ n + \\sum_{j=0}^{n-1} t(j) & n > 1 \\end{cases}$$\n¿Qué coste temporal asintótico o complejidad temporal tendrá el algoritmo?",
-    "options": ["$O(n^2)$", "$O(n \\log n)$", "$O(2^n)$"],
+    "options": ["$\\Omicron(n^2)$", "$\\Omicron(n \\log n)$", "$\\Omicron(2^n)$"],
     "correctAnswer": 2
   },
   {
@@ -39,12 +39,12 @@
   },
   {
     "id": 6,
-    "question": "¿Cuál de estas afirmaciones sobre el algoritmo para calcular x^n es falsa?```\nFunción potencia ( ent x: entero, ent n: entero): entero\nInicio\nsi n==1 entonces\nretorna (x);\nsi no\nretorna (x*potencia(x,n-1));\nfinsi\nfin\n```",
+    "question": "¿Cuál de estas afirmaciones sobre el algoritmo para calcular $x^n$ es falsa?\n```text\nFunción potencia(ent x: entero, ent n: entero): entero\nInicio\n  si n == 1 entonces\n    retorna (x);\n  si no\n    retorna (x * potencia(x, n - 1));\n  finsi\nfin\n```",
     "options": [
       "Se utiliza un esquema de divide y venceras para su solucion",
       "Su precondición es {Q} = {x entero, n natural, n>=1}",
       "Su ecuación de recurrencia es T(n) = T(n-1)+1",
-      "Su coste temporal es O(x^n)"
+      "Su coste temporal es $\\Omicron(x^n)$"
     ],
     "correctAnswer": 3
   },
@@ -64,7 +64,7 @@
     "options": [
       "El mergesort es siempre el más rápido o igual (salvo una constante) que el quicksort.",
       "Como su nombre indica, quicksort.",
-      "Son los dos igual de rápidos, ya que el coste temporal asintótico de ambos es $O(n \\log n)$."
+      "Son los dos igual de rápidos, ya que el coste temporal asintótico de ambos es $\\Omicron(n \\log n)$."
     ],
     "correctAnswer": 2
   },
@@ -107,12 +107,16 @@
   {
     "id": 13,
     "question": "Indica cuál es el coste temporal en función de n del problema siguiente```cpp\ns = 0;\nfor (i = 0; i < n; i++)\n  for (j = i; j < n; j++)\n    s += n * i * j;\n```",
-    "options": ["Es $\\Theta(n)$", "Es $O(n^2)$ pero no $\\Omega(n^2)$", "Es $\\Theta(n^2)$"],
+    "options": [
+      "Es $\\Theta(n)$",
+      "Es $\\Omicron(n^2)$ pero no $\\Omega(n^2)$",
+      "Es $\\Theta(n^2)$"
+    ],
     "correctAnswer": 2
   },
   {
     "id": 14,
-    "question": "Que calcula el siguiente algoritmo:```\nfunción Ejercicio (ent A: ÁrbolBinario, ent/sal actual: entero): nada\nvariables\n  x: entero\n  Izq, Der: ÁrbolBinario\ninicio\n  si A.Vacio entonces\n    A.HijoIzq(Izq)\n    A.HijoDer(Der)\n    A.Raíz(x)\n    actual := actual + x\n    Ejercicio(Izq, actual)\n    Ejercicio(Der, actual)\n  finsi\nfin\nLlamada desde el programa principal:\nn := 0      // Arb es un árbol\nEjercicio(Arb, n)\n```",
+    "question": "Que calcula el siguiente algoritmo:\n```text\nfunción Ejercicio (ent A: ÁrbolBinario, ent/sal actual: entero): nada\nvariables\n  x: entero\n  Izq, Der: ÁrbolBinario\ninicio\n  si A.Vacio entonces\n    A.HijoIzq(Izq)\n    A.HijoDer(Der)\n    A.Raíz(x)\n    actual := actual + x\n    Ejercicio(Izq, actual)\n    Ejercicio(Der, actual)\n  finsi\nfin\nLlamada desde el programa principal:\nn := 0      // Arb es un árbol\nEjercicio(Arb, n)\n```",
     "options": [
       "n devuelve la suma de los valores de los nodos que no son hojas en el arbol",
       "n devuelve la suma de valores de los nodos del arbol",
@@ -159,7 +163,7 @@
   },
   {
     "id": 19,
-    "question": "¿De qué clase de complejidad es la solución de la siguiente relación de recurrencia?```\nf(n) = n(n - 1) + f(n - 1)   // si n > 0\nf(0) = 1                      // si n = 0\n```",
+    "question": "¿De qué clase de complejidad es la solución de la siguiente relación de recurrencia?\n```text\nf(n) = n(n - 1) + f(n - 1)   // si n > 0\nf(0) = 1                      // si n = 0\n```",
     "options": [
       "$f(n) \\in \\Theta(n^2)$",
       "Ninguna de las otras dos opciones es cierta.",
@@ -179,7 +183,7 @@
   },
   {
     "id": 21,
-    "question": "Considera el siguiente algoritmo: Nos interesa medir cuantas veces se ejecuta nº 3 entonces el caso mejor se obtiene cuando:```cpp\nOrdena(vector V[N] de enteros) {\n  int i, j, aux;\n  for (i = 1; i < N; i++) {\n    for (j = 0; j < N - i; j++) {\n      if (V[j] > V[j + 1]) {  // (2)\n        aux = V[j];\n        V[j] = V[j + 1];  // (3)\n        V[j + 1] = aux;\n      }\n    }\n  }\n}\n```",
+    "question": "Considera el siguiente algoritmo: Nos interesa medir cuantas veces se ejecuta nº 3 entonces el caso mejor se obtiene cuando:```text\nOrdena(vector V[N] de enteros) {\n  int i, j, aux;\n  for (i = 1; i < N; i++) {\n    for (j = 0; j < N - i; j++) {\n      if (V[j] > V[j + 1]) {  // (2)\n        aux = V[j];\n        V[j] = V[j + 1];  // (3)\n        V[j + 1] = aux;\n      }\n    }\n  }\n}\n```",
     "options": [
       "Cuando los datos vienen dispuestos en orden inverso, que se ejecuta del orden de $n^2$ veces",
       "Cuando los datos vienen ordenados ascendentemente, que se ejecuta del orden de $n^2$ veces",
@@ -265,7 +269,7 @@
   {
     "id": 29,
     "question": "Se pretende mejorar mediante programación dinámica iterativa la siguiente función (v1 y v2 son vectores definidos como variables globales). ¿Cuál es la mejor complejidad espacial que se puede conseguir?```cpp\nfloat f(unsigned n, int m) {\n  if (m < 0)\n    return 0;\n  float A = 0.0;\n  if (v1[m] <= n)\n    A = v2[m] + f(n - v1[m], m - 1);\n  float B = f(n, m - 1);\n  return A + B;\n}\n```",
-    "options": ["$O(m \\cdot n)$", "$O(n)$", "$O(m)$"],
+    "options": ["$\\Omicron(m \\cdot n)$", "$\\Omicron(n)$", "$\\Omicron(m)$"],
     "correctAnswer": 1
   },
   {
@@ -324,7 +328,7 @@
     "id": 35,
     "question": "Sea A una matriz cuadrada n × n. Se trata de buscar una permutación de las columnas tal que la suma de los elementos de la diagonal de la matriz resultante sea mínima. Indicad cuál de las siguientes afirmaciones es falsa.",
     "options": [
-      "La complejidad temporal de la mejor solución posible al problema es $O(n \\log n)$.",
+      "La complejidad temporal de la mejor solución posible al problema es $\\Omicron(n \\log n)$.",
       "Si se construye una solución al problema basada en el esquema de ramificación y poda, una buena elección de cotas optimistas y pesimistas podría evitar la exploración de todas las permutaciones posibles.",
       "La complejidad temporal de la mejor solución posible al problema está en $\\Omega(n^2)$."
     ],
@@ -344,7 +348,7 @@
     "id": 37,
     "question": "¿Qué algoritmo es asintóticamente más rápido, el Quicksort o el Mergesort?",
     "options": [
-      "Los dos son igual de rápidos ya que el coste temporal asintótico de ambos es O(n log(n)).",
+      "Los dos son igual de rápidos ya que el coste temporal asintótico de ambos es $\\Omicron(n \\log(n))$.",
       "como su nombre indica, el Quicksort.",
       "el Mergesort es siempre más rápido o igual (salvo una constante) que el Quicksort."
     ],
@@ -380,9 +384,9 @@
     "id": 41,
     "question": "De las siguientes expresiones, o bien dos son ciertas y una es falsa, o bien al contrario, una es cierta y dos son falsas. Marca la que en este sentido es diferente a las otras dos.",
     "options": [
-      "$\\sum_{i=1}^{n/2} \\sum_{j=1}^{i} 2^j = O(n \\log n)$",
-      "$\\sum_{i=1}^{n} \\sum_{j=1}^{\\log i} 2^j = O(n^2)$",
-      "$\\sum_{i=1}^{\\log n} \\sum_{j=1}^{n} 2^j = O(n \\log n)$"
+      "$\\sum_{i=1}^{n/2} \\sum_{j=1}^{i} 2^j = \\Omicron(n \\log n)$",
+      "$\\sum_{i=1}^{n} \\sum_{j=1}^{\\log i} 2^j = \\Omicron(n^2)$",
+      "$\\sum_{i=1}^{\\log n} \\sum_{j=1}^{n} 2^j = \\Omicron(n \\log n)$"
     ],
     "correctAnswer": 1
   },
@@ -423,16 +427,16 @@
     "id": 46,
     "question": "Existen dos algoritmos que para ordenar un vector de n elementos, buscan el máximo de esos n elementos, lo intercambian con el n-ésimo elemento para ponerlo al final, y luego ordenan, usando el mismo algoritmo, el vector de las primeras $n - 1$ componentes. ¿Cuál de las afirmaciones siguientes es cierta?",
     "options": [
-      "Uno de los algoritmos es heapsort y el otro es una de las posibles maneras de realizar la ordenación por selección; el primero tiene un coste temporal $O(n \\log n)$ y el segundo, $O(n^2)$.",
-      "Uno de los algoritmos es heapsort y el otro es una de las posibles maneras de realizar la ordenación por burbuja o bubblesort; el primero tiene un coste temporal $O(n \\log n)$ y el segundo, $O(n^2)$.",
-      "Uno de los algoritmos es heapsort y el otro es una de las posibles maneras de realizar la ordenación por selección; el primero tiene un coste temporal $O(n)$ y el segundo, $O(n^2)$."
+      "Uno de los algoritmos es heapsort y el otro es una de las posibles maneras de realizar la ordenación por selección; el primero tiene un coste temporal $\\Omicron(n \\log n)$ y el segundo, $\\Omicron(n^2)$.",
+      "Uno de los algoritmos es heapsort y el otro es una de las posibles maneras de realizar la ordenación por burbuja o bubblesort; el primero tiene un coste temporal $\\Omicron(n \\log n)$ y el segundo, $\\Omicron(n^2)$.",
+      "Uno de los algoritmos es heapsort y el otro es una de las posibles maneras de realizar la ordenación por selección; el primero tiene un coste temporal $\\Omicron(n)$ y el segundo, $\\Omicron(n^2)$."
     ],
     "correctAnswer": 0
   },
   {
     "id": 47,
     "question": "Indica cuál es la complejidad en función de n, donde k es una constante (no depende de n), del fragmento siguiente:```cpp\nfor (int i = k; i < n - k; i++) {\n  A[i] = 0;\n  for (int j = i - k; j < i + k; j++)\n    A[i] += B[j];\n}\n```",
-    "options": ["$O(n \\cdot \\log(n))$", "$O(n)$", "$O(n^2)$"],
+    "options": ["$\\Omicron(n \\cdot \\log(n))$", "$\\Omicron(n)$", "$\\Omicron(n^2)$"],
     "correctAnswer": 1
   },
   {
@@ -544,7 +548,7 @@
   },
   {
     "id": 59,
-    "question": "La siguiente relación de recurrencia expresa la complejidad de un algoritmo recursivo, donde g(n) es una función polinómica:$T(n) = \\begin{cases} 1 & \\text{si } n \\leq 1 \\\\ 2T(n/2) + g(n) & \\text{en otro caso} \\end{cases}$\nDi cuál de las siguientes afirmaciones es cierta:",
+    "question": "La siguiente relación de recurrencia expresa la complejidad de un algoritmo recursivo, donde g(n) es una función polinómica:\n$T(n) = \\begin{cases} 1 & \\text{si } n \\leq 1 \\\\ 2T(n/2) + g(n) & \\text{en otro caso} \\end{cases}$\nDi cuál de las siguientes afirmaciones es cierta:",
     "options": [
       "Si $g(n) \\in \\Theta(n)$ la relación de recurrencia representa la complejidad temporal del algoritmo de ordenación mergesort.",
       "Si $g(n) \\in \\Theta(n^2)$ la relación de recurrencia representa la complejidad temporal del algoritmo de ordenación mediante inserción binaria.",
@@ -583,9 +587,9 @@
     "id": 63,
     "question": "Un tubo de centímetros de largo se puede cortar en segmentos de 1 centímetro, 2 centímetros, etc. Existe una lista de los precios a los que se venden los segmentos de cada longitud. Una de las maneras de cortar el tubo es la que más ingresos nos producirá. Di cuál de estas tres afirmaciones es falsa.",
     "options": [
-      "Hacer una evaluación exhaustiva \"de fuerza bruta\" de todas las posibles maneras de cortar el tubo consume un tiempo $O(n!)$.",
+      "Hacer una evaluación exhaustiva \"de fuerza bruta\" de todas las posibles maneras de cortar el tubo consume un tiempo $\\Omicron(n!)$.",
       "Es posible evitar hacer la evaluación exhaustiva \"de fuerza bruta\" guardando, para cada posible longitud $j < n$ el precio más elevado posible que se puede obtener dividiendo el tubo correspondiente.",
-      "Hacer una evaluación exhaustiva \"de fuerza bruta\" de todas las posibles maneras de cortar el tubo consume un tiempo $O(2^n)$."
+      "Hacer una evaluación exhaustiva \"de fuerza bruta\" de todas las posibles maneras de cortar el tubo consume un tiempo $\\Omicron(2^n)$."
     ],
     "correctAnswer": 0
   },
@@ -608,7 +612,7 @@
   {
     "id": 66,
     "question": "Indica cuál es la complejidad, en función de $n$, del siguiente fragmento de código: `s=0; for(i=0;i<n;i++) for(j=i;j<n;j++) s+=i*j;`",
-    "options": ["$\\Theta(n^2)$", "$O(n^2)$ pero no $\\Omega(n^2)$", "$\\Theta(n)$"],
+    "options": ["$\\Theta(n^2)$", "$\\Omicron(n^2)$ pero no $\\Omega(n^2)$", "$\\Theta(n)$"],
     "correctAnswer": 0
   },
   {
@@ -623,7 +627,7 @@
   },
   {
     "id": 68,
-    "question": "El coste temporal asintótico del programa```cpp\ns = 0;\nfor (i = 0; i < n; i++)\n  for (j = i; j < n; j++)\n    s += i * j;\n```\ny del programa\n```cpp\ns = 0;\nfor (i = 0; i < n; i++)\n  for (j = 0; j < n; j++)\ns += i * i * j\n```",
+    "question": "El coste temporal asintótico del programa\n```cpp\ns = 0;\nfor (i = 0; i < n; i++)\n  for (j = i; j < n; j++)\n    s += i * j;\n```\ny del programa\n```cpp\ns = 0;\nfor (i = 0; i < n; i++)\n  for (j = 0; j < n; j++)\n    s += i * i * j;\n```",
     "options": [
       "El del segundo, menor que el primero.",
       "Iguales.",
@@ -634,7 +638,7 @@
   {
     "id": 69,
     "question": "Si n es el número de elementos de un vector. Podemos encontrar una solución al problema de encontrar su k-ésimo que esté acotada superiormente por :",
-    "options": ["$O(n^3)$", "$O(n)$", "Ninguna de las dos"],
+    "options": ["$\\Omicron(n^3)$", "$\\Omicron(n)$", "Ninguna de las dos"],
     "correctAnswer": 0
   },
   {
@@ -676,16 +680,20 @@
   {
     "id": 74,
     "question": "Sea $f(n) = 2f(n - 1) + 1$",
-    "options": ["$f(n) \\in O(n)$", "$f(n) \\in O(2^n)$", "$f(n) \\in O(n^2)$"],
+    "options": [
+      "$f(n) \\in \\Omicron(n)$",
+      "$f(n) \\in \\Omicron(2^n)$",
+      "$f(n) \\in \\Omicron(n^2)$"
+    ],
     "correctAnswer": 1
   },
   {
     "id": 75,
     "question": "Si n es el número de elementos de un vector. La solución de menor coste al problema de la búsqueda binaria tiene la siguiente complejidad:",
     "options": [
-      "$\\Omega(\\log n)$ y $O(n \\log n)$",
+      "$\\Omega(\\log n)$ y $\\Omicron(n \\log n)$",
       "$\\Theta(n \\log n)$",
-      "$\\Omega(1)$ y $O(\\log n)$"
+      "$\\Omega(1)$ y $\\Omicron(\\log n)$"
     ],
     "correctAnswer": 2
   },
@@ -708,7 +716,11 @@
   {
     "id": 78,
     "question": "Se dispone de un conjunto de n valores numéricos dispuestos en un vector sin orden preestablecido. Se desea escribir una función que reciba ese vector y un valor k ($n/2 \\leq k \\leq n$) y que devuelva los k valores más pequeños dispuestos en otro vector de manera ordenada. ¿Cuál es la complejidad temporal del mejor algoritmo que se puede escribir?",
-    "options": ["$O(kn)$", "$O(k \\log n)$", "Ninguna de las otras dos opciones es cierta."],
+    "options": [
+      "$\\Omicron(kn)$",
+      "$\\Omicron(k \\log n)$",
+      "Ninguna de las otras dos opciones es cierta."
+    ],
     "correctAnswer": 1
   },
   {
@@ -790,16 +802,16 @@
   {
     "id": 87,
     "question": "¿Cuál es la complejidad temporal de la siguiente función recursiva?```cpp\nunsigned desperdicio(unsigned n) {\n  if (n <= 1)\n    return 0;\n  unsigned sum = desperdicio(n / 2) + desperdicio(n / 2);\n  for (unsigned i = 1; i < n - 1; i++)\n    for (unsigned j = 1; j <= i; j++)\n      for (unsigned k = 1; k <= j; k++)\n        sum += i * j * k;\n  return sum;\n}\n```",
-    "options": ["$O(2^n)$", "$O(n^3 \\log n)$", "$O(n^3)$"],
+    "options": ["$\\Omicron(2^n)$", "$\\Omicron(n^3 \\log n)$", "$\\Omicron(n^3)$"],
     "correctAnswer": 2
   },
   {
     "id": 88,
-    "question": "La siguiente relación de recurrencia expresa la complejidad de un algoritmo recursivo, donde $g(n)$ es una función polinómica:$T(n) = \\begin{cases} 1 & \\text{si } n \\leq 1 \\\\ 2T(n/2)+g(n) & \\text{en otro caso} \\end{cases}$ Di cuál de las siguientes afirmaciones es cierta:",
+    "question": "La siguiente relación de recurrencia expresa la complejidad de un algoritmo recursivo, donde $g(n)$ es una función polinómica:\n$T(n) = \\begin{cases} 1 & \\text{si } n \\leq 1 \\\\ 2T(n/2)+g(n) & \\text{en otro caso} \\end{cases}$\nDi cuál de las siguientes afirmaciones es cierta:",
     "options": [
-      "Si $g(n) \\in O(n)$ la relación de recurrencia representa la complejidad temporal del algoritmo de ordenación Mergesort.",
-      "Si $g(n) \\in O(n^2)$ la relación de recurrencia representa la complejidad temporal del algoritmo de ordenación mediante inserción binaria.",
-      "Si $g(n) \\in O(1)$ la relación de recurrencia representa la complejidad temporal del algoritmo de búsqueda dicotómica."
+      "Si $g(n) \\in \\Omicron(n)$ la relación de recurrencia representa la complejidad temporal del algoritmo de ordenación Mergesort.",
+      "Si $g(n) \\in \\Omicron(n^2)$ la relación de recurrencia representa la complejidad temporal del algoritmo de ordenación mediante inserción binaria.",
+      "Si $g(n) \\in \\Omicron(1)$ la relación de recurrencia representa la complejidad temporal del algoritmo de búsqueda dicotómica."
     ],
     "correctAnswer": 0
   },
@@ -837,9 +849,9 @@
     "id": 92,
     "question": "El funcionamiento del algoritmo de ordenación Heapsort es similar al algoritmo de ordenación por selección, ya que localiza el valor más grande y lo sitúa en la posición final del vector; a continuación, localiza el siguiente valor más grande y lo sitúa en la posición anterior a la última, etc. ¿Cuál de las afirmaciones siguientes es cierta?",
     "options": [
-      "El algoritmo Heapsort tiene una complejidad $O(n)$ en el caso peor, mejor que la complejidad $O(n^2)$ del algoritmo de selección, porque Heapsort utiliza una algoritmo mucho más eficiente para localizar los valores del vector que valen más.",
-      "El algoritmo Heapsort tiene una complejidad $O(n \\log n)$ en el caso peor, mejor que la complejidad $O(n^2)$ del algoritmo de selección, porque Heapsort utiliza una algoritmo mucho más eficiente para localizar los valores del vector que valen más.",
-      "Por ello, los dos algoritmos tienen la misma complejidad en el caso peor, $O(n^2)$, aunque la complejidad en el caso mejor de Heapsort es $O(n \\log n)$."
+      "El algoritmo Heapsort tiene una complejidad $\\Omicron(n)$ en el caso peor, mejor que la complejidad $\\Omicron(n^2)$ del algoritmo de selección, porque Heapsort utiliza una algoritmo mucho más eficiente para localizar los valores del vector que valen más.",
+      "El algoritmo Heapsort tiene una complejidad $\\Omicron(n \\log n)$ en el caso peor, mejor que la complejidad $\\Omicron(n^2)$ del algoritmo de selección, porque Heapsort utiliza una algoritmo mucho más eficiente para localizar los valores del vector que valen más.",
+      "Por ello, los dos algoritmos tienen la misma complejidad en el caso peor, $\\Omicron(n^2)$, aunque la complejidad en el caso mejor de Heapsort es $\\Omicron(n \\log n)$."
     ],
     "correctAnswer": 1
   },
@@ -879,14 +891,14 @@
     "options": [
       "que ordenan el vector sin usar espacio adicional",
       "que aplican la estrategia divide y vencerás",
-      "que se ejecutan en $O(n)$"
+      "que se ejecutan en $\\Omicron(n)$"
     ],
     "correctAnswer": 1
   },
   {
     "id": 97,
     "question": "Cuando se resuelve usando backtracking un problema de n decisiones en el que siempre hay como mínimo 2 opciones para cada decisión, ¿cuál de las siguientes complejidades es la mejor que nos podemos encontrar?",
-    "options": ["$O(n!)$", "$O(n^2)$", "$O(2^n)$"],
+    "options": ["$\\Omicron(n!)$", "$\\Omicron(n^2)$", "$\\Omicron(2^n)$"],
     "correctAnswer": 2
   },
   {
@@ -927,16 +939,16 @@
   },
   {
     "id": 102,
-    "question": "Un problema de tamaño $n$ puede transformarse en tiempo $O(n^2)$ en nueve de tamaño $n/3$. Por otro lado, la solución al problema cuando la talla es $1$ requiere un tiempo constante. ¿Cuál de estas clases de coste temporal asintótico es la más ajustada?",
-    "options": ["O(n^2)", "O(n^2 log n)", "O(n log n)"],
+    "question": "Un problema de tamaño $n$ puede transformarse en tiempo $\\Omicron(n^2)$ en nueve de tamaño $n/3$. Por otro lado, la solución al problema cuando la talla es $1$ requiere un tiempo constante. ¿Cuál de estas clases de coste temporal asintótico es la más ajustada?",
+    "options": ["$\\Omicron(n^2)$", "$\\Omicron(n^2 \\log n)$", "$\\Omicron(n \\log n)$"],
     "correctAnswer": 1
   },
   {
     "id": 103,
     "question": "¿Podemos saber cuál sería el elemento en posición k cuando ordenáramos un vector de n elementos sin tener que ordenarlo?",
     "options": [
-      "Sí, y el algoritmo es $\\Omega(n)$ y $O(n^2)$, aunque la frecuencia de los casos peores disminuye muy rápidamente con n.",
-      "Sí, y el algoritmo es $\\Omega(n \\cdot \\log(n))$ y $O(n^2)$, aunque la frecuencia de los casos peores disminuye muy rápidamente con n.",
+      "Sí, y el algoritmo es $\\Omega(n)$ y $\\Omicron(n^2)$, aunque la frecuencia de los casos peores disminuye muy rápidamente con n.",
+      "Sí, y el algoritmo es $\\Omega(n \\cdot \\log(n))$ y $\\Omicron(n^2)$, aunque la frecuencia de los casos peores disminuye muy rápidamente con n.",
       "No. Debemos ordenarlo."
     ],
     "correctAnswer": 0
@@ -945,9 +957,9 @@
     "id": 104,
     "question": "De las siguientes expresiones, o bien dos son verdaderas y una es falsa, o bien dos son falsas y una es verdadera. Marca la que (en este sentido) es distinta a las otras dos.",
     "options": [
-      "$O(n^2) \\subset O(2^{\\log_2(n)}) \\subset O(2^n)$",
-      "$O(2^{\\log_2(n)}) \\subset O(n^2) \\subset O(n!)$",
-      "$O(4^{\\log_2(n)}) \\subset O(n) \\subset O(2^n)$"
+      "$\\Omicron(n^2) \\subset \\Omicron(2^{\\log_2(n)}) \\subset \\Omicron(2^n)$",
+      "$\\Omicron(2^{\\log_2(n)}) \\subset \\Omicron(n^2) \\subset \\Omicron(n!)$",
+      "$\\Omicron(4^{\\log_2(n)}) \\subset \\Omicron(n) \\subset \\Omicron(2^n)$"
     ],
     "correctAnswer": 1
   },
@@ -1006,7 +1018,7 @@
   },
   {
     "id": 110,
-    "question": "La serie de números de Fibonacci se define de la siguiente forma:$fib(n) = \\begin{cases} 1 & n \\leq 1 \\\\ fib(n-1) + fib(n-2) & n > 1 \\end{cases}$\n¿Qué implementación de entre las siguientes supone el menor coste?",
+    "question": "La serie de números de Fibonacci se define de la siguiente forma:\n$fib(n) = \\begin{cases} 1 & n \\leq 1 \\\\ fib(n-1) + fib(n-2) & n > 1 \\end{cases}$\n¿Qué implementación de entre las siguientes supone el menor coste?",
     "options": ["Divide y vencerás", "Programación dinámica", "Cualquiera de las dos anteriores"],
     "correctAnswer": 1
   },
@@ -1026,7 +1038,7 @@
     "options": [
       "Que ordenan el vector sin usar espacio adicional.",
       "Que aplican la estrategia de Divide y vencerás.",
-      "Que ejecutan en tiempo $O(n)$."
+      "Que ejecutan en tiempo $\\Omicron(n)$."
     ],
     "correctAnswer": 1
   },
@@ -1052,11 +1064,11 @@
   },
   {
     "id": 115,
-    "question": "¿Por qué muchos algoritmos voraces presentan complejidades temporales en $O(n \\log n)$?",
+    "question": "¿Por qué muchos algoritmos voraces presentan complejidades temporales en $\\Omicron(n \\log n)$?",
     "options": [
-      "Porque primero ordenan de alguna manera los elementos y porque una vez ordenados la complejidad temporal del proceso de selección de los elementos que se incorporarán a la solución está en $O(n \\log n)$.",
-      "Porque primero ordenan de alguna manera los elementos y porque una vez ordenados la complejidad temporal del proceso de selección de los elementos que se incorporarán a la solución es estrictamente inferior a $O(n \\log n)$.",
-      "Porque el proceso de selección de los elementos que se incorporarán a la solución es siempre $O(n \\log n)$."
+      "Porque primero ordenan de alguna manera los elementos y porque una vez ordenados la complejidad temporal del proceso de selección de los elementos que se incorporarán a la solución está en $\\Omicron(n \\log n)$.",
+      "Porque primero ordenan de alguna manera los elementos y porque una vez ordenados la complejidad temporal del proceso de selección de los elementos que se incorporarán a la solución es estrictamente inferior a $\\Omicron(n \\log n)$.",
+      "Porque el proceso de selección de los elementos que se incorporarán a la solución es siempre $\\Omicron(n \\log n)$."
     ],
     "correctAnswer": 0
   },
@@ -1083,7 +1095,7 @@
   },
   {
     "id": 118,
-    "question": "¿Qué cota se deduce de la siguiente relación de recurrencia?$f(n) = \\begin{cases} 1 & n = 1 \\\\ n + 4f(\\frac{n}{2}) & n > 1 \\end{cases}$",
+    "question": "¿Qué cota se deduce de la siguiente relación de recurrencia?\n$f(n) = \\begin{cases} 1 & n = 1 \\\\ n + 4f(\\frac{n}{2}) & n > 1 \\end{cases}$",
     "options": [
       "$f(n) \\in \\Theta(n^2)$",
       "$f(n) \\in \\Theta(n)$",
@@ -1114,7 +1126,7 @@
   {
     "id": 121,
     "question": "¿Cuál es la complejidad espacial del algoritmo Quicksort?",
-    "options": ["$O(n)$.", "$O(n \\log n)$.", "$O(1)$."],
+    "options": ["$\\Omicron(n)$.", "$\\Omicron(n \\log n)$.", "$\\Omicron(1)$."],
     "correctAnswer": 2
   },
   {
@@ -1127,7 +1139,7 @@
     "id": 123,
     "question": "Se quieren ordenar d números distintos comprendidos entre 1 y n. Para ello se usa un array de n booleanos que se inicializan primero a false. A continuación se recorren los d números cambiando los valores del elemento del vector de booleanos correspondiente a su número a true. Por último se recorre el vector de booleanos escribiendo los índices de los elementos del vector de booleanos que son true. ¿Es este algoritmo más rápido (asintóticamente) que el mergesort?",
     "options": [
-      "Sí, ya que el mergesort es $O(n \\log n)$ y este es $O(n)$.",
+      "Sí, ya que el mergesort es $\\Omicron(n \\log n)$ y este es $\\Omicron(n)$.",
       "Solo si $d \\log d > kn$ (donde k es una constante que depende de la implementación).",
       "No, ya que este algoritmo ha de recorrer varias veces el vector de booleanos."
     ],
@@ -1147,7 +1159,7 @@
     "id": 125,
     "question": "De las siguientes expresiones, o bien dos son verdaderas y una es falsa o bien al contrario: dos son falsas y una es verdadera. Marca la que en este sentido es distinta a las otras dos.",
     "options": [
-      "$2n^3 - 10n^2 + 1 \\in O(n^3)$",
+      "$2n^3 - 10n^2 + 1 \\in \\Omicron(n^3)$",
       "$n + n\\sqrt{n} \\in \\Omega(n)$",
       "$n + n\\sqrt{n} \\in \\Theta(n)$"
     ],
@@ -1157,7 +1169,7 @@
     "id": 126,
     "question": "Indicad cuál de estas tres expresiones es falsa",
     "options": [
-      "$\\Theta(n) \\subset O(n)$",
+      "$\\Theta(n) \\subset \\Omicron(n)$",
       "$\\Theta(n) \\subset \\Theta(n^2)$",
       "$\\Theta(n/2) = \\Theta(n)$"
     ],
@@ -1186,7 +1198,7 @@
   {
     "id": 129,
     "question": "Indica cuál es la complejidad, en función de $n$, del fragmento siguiente:```cpp\na = 0;\nfor (int i = 0; i < n * n; i++)\n  a += A[(i + j) % n];\n```",
-    "options": ["$O(n^2)$", "$O(n \\log(n))$", "$O(n)$"],
+    "options": ["$\\Omicron(n^2)$", "$\\Omicron(n \\log(n))$", "$\\Omicron(n)$"],
     "correctAnswer": 0
   },
   {
@@ -1202,7 +1214,7 @@
   {
     "id": 131,
     "question": "En una cuadrícula se quiere dibujar el contorno de un cuadrado de n casillas de lado, ¿cuál será la complejidad temporal del mejor algoritmo que pueda existir?",
-    "options": ["$O(n^2)$", "$O(\\sqrt{n})$", "$O(n)$"],
+    "options": ["$\\Omicron(n^2)$", "$\\Omicron(\\sqrt{n})$", "$\\Omicron(n)$"],
     "correctAnswer": 2
   },
   {
@@ -1302,7 +1314,7 @@
   {
     "id": 142,
     "question": "Un vector de enteros de tamaño n tiene sus elementos estructurados en forma de montículo (heap). ¿Cuál es la complejidad temporal en el peor de los casos de borrar el primer elemento del vector y reconstruirlo posteriormente para que siga manteniendo la estructura de montículo?",
-    "options": ["$O(n)$.", "$O(\\log n)$.", "$O(n \\log n)$."],
+    "options": ["$\\Omicron(n)$.", "$\\Omicron(\\log n)$.", "$\\Omicron(n \\log n)$."],
     "correctAnswer": 1
   },
   {
@@ -1326,7 +1338,7 @@
     "question": "Di cuál de estos resultados de coste temporal asintótico es falso",
     "options": [
       "La ordenación de un vector usando el algoritmo quicksort requiere en el peor caso $\\Omega(n^2)$.",
-      "La búsqueda binaria en un vector ordenado requiere en el peor caso un tiempo en $O(\\log n)$.",
+      "La búsqueda binaria en un vector ordenado requiere en el peor caso un tiempo en $\\Omicron(\\log n)$.",
       "La ordenación de un vector usando el algoritmo mergesort requiere en el peor caso un tiempo de $\\Omega(n^2)$."
     ],
     "correctAnswer": 2
@@ -1349,7 +1361,7 @@
   },
   {
     "id": 148,
-    "question": "Encargamos a un becario que elabore un algoritmo para sumar todos los números de un vector. Al cabo de un rato nos viene con un algoritmo cuya complejidad temporal es $O(\\log(n))$. ¿Qué hacemos?",
+    "question": "Encargamos a un becario que elabore un algoritmo para sumar todos los números de un vector. Al cabo de un rato nos viene con un algoritmo cuya complejidad temporal es $\\Omicron(\\log(n))$. ¿Qué hacemos?",
     "options": [
       "Despedimos al becario, eso es imposible.",
       "Subimos el sueldo al becario, ha encontrado un algoritmo innovador.",
@@ -1382,7 +1394,7 @@
     "id": 151,
     "question": "De las siguientes expresiones, o bien dos son verdaderas y una es falsa, o bien dos son falsas y una es verdadera. Marca la que (en este sentido) es distinta a las otras dos",
     "options": [
-      "$O(n^2) \\subset O(2^{\\log_2 n})$",
+      "$\\Omicron(n^2) \\subset \\Omicron(2^{\\log_2 n})$",
       "$n + n \\log_2 n \\in \\Omega(n + n \\log_2 n)$",
       "$\\Omega(n^2) \\subset \\Omega(n)$"
     ],
@@ -1397,24 +1409,24 @@
   {
     "id": 153,
     "question": "Qué complejidad temporal asintótica cabe esperar de un algoritmo divide y vencerás cuya función descomponer produce, en tiempo constante, dos subproblemas iguales de tamaño $n - 2$ cada uno y cuya función combinar es lineal con n, donde n es el tamaño del problema.",
-    "options": ["$O(n \\log n)$", "$O(2^n)$", "$O(n^2)$"],
+    "options": ["$\\Omicron(n \\log n)$", "$\\Omicron(2^n)$", "$\\Omicron(n^2)$"],
     "correctAnswer": 0
   },
   {
     "id": 154,
     "question": "Comparando los algoritmos de multiplicacion de matrices y warshall para un grafo no valuado G tenemos que",
     "options": [
-      "Tienen complejidad diferente la multiplicación de matrices tiene O(n^4) y warshall O(n^3) la multiplicación de matrices se basa en aplicaciones de espacio de búsqueda y warshall se basa en ir obteniendo caminos de longitud mayor",
+      "Tienen complejidad diferente la multiplicación de matrices tiene \\Omicron(n^4) y warshall \\Omicron(n^3) la multiplicación de matrices se basa en aplicaciones de espacio de búsqueda y warshall se basa en ir obteniendo caminos de longitud mayor",
       "Ambos tienen la misma complejidad, multiplicación de matrices se basa en ir obteniendo caminos de longitud mayor aplicaciones de espacio de búsqueda y warshall se basa en aplicaciones de espacio de búsqueda",
       "Ambos tienen la misma complejidad, multiplicación de matrices se basa en aplicaciones de espacio de búsqueda y warshall se basa en ir obteniendo caminos de longitud mayor",
-      "Tienen complejidad diferente la multiplicación de matrices tiene O(n^4) y warshall O(n^3) la multiplicación de matrices se basa en ir obteniendo caminos de longitud mayor y warshall se basa en aplicaciones de espacio de búsqueda"
+      "Tienen complejidad diferente la multiplicación de matrices tiene \\Omicron(n^4) y warshall \\Omicron(n^3) la multiplicación de matrices se basa en ir obteniendo caminos de longitud mayor y warshall se basa en aplicaciones de espacio de búsqueda"
     ],
     "correctAnswer": 3
   },
   {
     "id": 155,
     "question": "Cuando se resuelve, usando Backtracking, un problema de n decisiones, en el que siempre hay como mínimo dos opciones por decisión, cual de estas complejidades en el caso peor es la mejor que nos podemos encontrar",
-    "options": ["$O(n!)$", "$O(2^n)$", "$O(n^2)$"],
+    "options": ["$\\Omicron(n!)$", "$\\Omicron(2^n)$", "$\\Omicron(n^2)$"],
     "correctAnswer": 1
   },
   {
@@ -1429,7 +1441,7 @@
   },
   {
     "id": 157,
-    "question": "Dado el algoritmo el caso peor el numero de nodos procesados:```\nMódulo Ejercicio (ent A es ArbolBinario) devuelve entero\nvariables\nIzq, Der es ArbolBinario\ninicio\nsi no A.Vacio entonces\nA.HijoIzq (Izq);\nA.HijoDer (Der);\ndevolver (ejercicio(izq) + ejercicio(der) + 1)\nsi no\ndevolver (0)\nfinsi\nfin\n```",
+    "question": "Dado el algoritmo el caso peor el numero de nodos procesados:```text\nMódulo Ejercicio(ent A es ArbolBinario) devuelve entero\nvariables\n  Izq, Der es ArbolBinario\ninicio\n  si no A.Vacio entonces\n    A.HijoIzq(Izq);\n    A.HijoDer(Der);\n    devolver(ejercicio(izq) + ejercicio(der) + 1)\n  si no\n    devolver(0)\n  finsi\nfin\n```",
     "options": [
       "es proporcional al logaritmo siempre",
       "es proporcional a n*logn",
@@ -1442,7 +1454,7 @@
   {
     "id": 158,
     "question": "Se dispone de un conjunto de n valores numéricos dispuestos en forma de árbol binario y se desea obtener el valor de la suma de todos ellos. ¿Cuál es la complejidad temporal del mejor algoritmo que se puede escribir?",
-    "options": ["$O(\\log(n))$", "$O(n)$", "$O(n \\cdot \\log(n))$"],
+    "options": ["$\\Omicron(\\log(n))$", "$\\Omicron(n)$", "$\\Omicron(n \\cdot \\log(n))$"],
     "correctAnswer": 1
   },
   {
@@ -1497,7 +1509,7 @@
   },
   {
     "id": 164,
-    "question": "Sea la siguiente relacion de recurrencia:$T(n) = \\begin{cases} 1 & si\\,n \\le 1 \\\\ 8T(\\frac{n}{8}) + g(n) & en\\,otro\\, caso\\end{cases}$Si $T(n) \\in \\Theta(n^2)$\n, ¿en cuál de estos tres casos nos podemos encontrar?",
+    "question": "Sea la siguiente relacion de recurrencia:\n$T(n) = \\begin{cases} 1 & si\\,n \\le 1 \\\\ 8T(\\frac{n}{8}) + g(n) & en\\,otro\\, caso\\end{cases}$Si $T(n) \\in \\Theta(n^2)$\n, ¿en cuál de estos tres casos nos podemos encontrar?",
     "options": ["$g(n) = n^3$", "$g(n) = n^2$", "$g(n) = n$"],
     "correctAnswer": 1
   },
@@ -1535,9 +1547,9 @@
     "id": 168,
     "question": "Dado el siguiente programa recursivo:```cpp\nint f(int n) {\n  // Se asume que n >= 0\n  if (n == 0)\n    return 1;\n  return f(n - 1) + f(n - 2);\n}\n```\nsi quisiéramos mejorarlo haciendo uso de la técnica de programación dinámica, ¿cuáles serían las complejidades temporal y espacial más ajustadas del algoritmo resultante?",
     "options": [
-      "Respectivamente, $O(n)$ y $O(1)$",
-      "Ambas complejidades serían $O(1)$",
-      "Ambas complejidades serían $O(n)$"
+      "Respectivamente, $\\Omicron(n)$ y $\\Omicron(1)$",
+      "Ambas complejidades serían $\\Omicron(1)$",
+      "Ambas complejidades serían $\\Omicron(n)$"
     ],
     "correctAnswer": 0,
     "tags": ["Julio 2024"]
@@ -1562,9 +1574,9 @@
     "id": 171,
     "question": "Una de estas tres situaciones no es posible",
     "options": [
-      "$f(n) \\in O(n)$ y $f(n) \\in \\Omega(1)$",
-      "$f(n) \\in O(n)$ y $f(n) \\in O(n^2)$",
-      "$f(n) \\in \\Theta(n^2)$ y $f(n) \\in O(n)$"
+      "$f(n) \\in \\Omicron(n)$ y $f(n) \\in \\Omega(1)$",
+      "$f(n) \\in \\Omicron(n)$ y $f(n) \\in \\Omicron(n^2)$",
+      "$f(n) \\in \\Theta(n^2)$ y $f(n) \\in \\Omicron(n)$"
     ],
     "correctAnswer": 2
   },
@@ -1581,7 +1593,7 @@
   {
     "id": 173,
     "question": "Un programa con dos bucles anidados uno dentro de otro, cada uno de los cuales hace aproximadamente n iteraciones, tarda un tiempo",
-    "options": ["$O(n)$", "$O(n^2)$", "$O(2^n)$"],
+    "options": ["$\\Omicron(n)$", "$\\Omicron(n^2)$", "$\\Omicron(2^n)$"],
     "correctAnswer": 1
   },
   {
@@ -1603,7 +1615,7 @@
   },
   {
     "id": 176,
-    "question": "Sea $f(n) = 3n + 4$. Dos de las tres afirmaciones siguientes prueban que $f(n) \\in O(n)$. ¿Cuál es la que no?",
+    "question": "Sea $f(n) = 3n + 4$. Dos de las tres afirmaciones siguientes prueban que $f(n) \\in \\Omicron(n)$. ¿Cuál es la que no?",
     "options": [
       "Para todo $n > 4$ se cumple que $3n + 4 < 4n$",
       "Para todo $n > 4/(c-3)$, con $c > 3$, se cumple que $3n + 4 < cn$.",
@@ -1676,15 +1688,19 @@
   {
     "id": 184,
     "question": "Sea $T(n) = n + T(n - 1)$ para $n > 1$ y $T(1) = 1$. Una de las afirmaciones siguientes es cierta. ¿Cuál?",
-    "options": ["$T(n) \\in O(n^3)$", "$T(n) \\in O(n \\log n)$", "$T(n) \\in O(n)$"],
+    "options": [
+      "$T(n) \\in \\Omicron(n^3)$",
+      "$T(n) \\in \\Omicron(n \\log n)$",
+      "$T(n) \\in \\Omicron(n)$"
+    ],
     "correctAnswer": 0
   },
   {
     "id": 185,
-    "question": "Si $f \\notin O(g_1)$ y $f \\in O(g_2)$ entonces siempre se cumplirá:",
+    "question": "Si $f \\notin \\Omicron(g_1)$ y $f \\in \\Omicron(g_2)$ entonces siempre se cumplirá:",
     "options": [
       "$f \\in \\Omega(g_1 + g_2)$",
-      "$f \\notin O(\\max(g_1, g_2))$",
+      "$f \\notin \\Omicron(\\max(g_1, g_2))$",
       "$f \\in \\Omega(\\min(g_1, g_2))$"
     ],
     "correctAnswer": 2
@@ -1727,8 +1743,13 @@
   },
   {
     "id": 190,
-    "question": "La complejidad del algoritmo es:```cpp\nfunción recursiva(n : entero) : entero;\nvar i : entero;\n{\n  if (n <= 1)\n    then recursiva : = 1 else for (i = 1; i <= n; i++) writeln(i);\nrecursiva:\n  = recursiva(n / 2) + recursiva(n / 2)\n}\n```",
-    "options": ["$O(2^n)$", "$O(\\log^2(n))$", "$O(n \\cdot \\log(n))$", "$O(\\log(n))$"],
+    "question": "La complejidad del algoritmo es:```text\nfunción recursiva(n: entero): entero;\nvar i: entero;\n{\n  if (n <= 1) then\n    recursiva := 1\n  else\n    for (i = 1; i <= n; i++)\n      writeln(i);\n  recursiva := recursiva(n / 2) + recursiva(n / 2)\n}\n```",
+    "options": [
+      "$\\Omicron(2^n)$",
+      "$\\Omicron(\\log^2(n))$",
+      "$\\Omicron(n \\cdot \\log(n))$",
+      "$\\Omicron(\\log(n))$"
+    ],
     "correctAnswer": 2
   },
   {
@@ -1745,7 +1766,11 @@
   {
     "id": 192,
     "question": "Una de las afirmaciones siguientes es cierta y las otras dos falsas. Indicad cuál es la cierta.",
-    "options": ["$O(n^n) \\subset O(n!)$", "$O(3^n) \\subset O(2^n)$", "$O(2^n) \\subset O(n!)$"],
+    "options": [
+      "$\\Omicron(n^n) \\subset \\Omicron(n!)$",
+      "$\\Omicron(3^n) \\subset \\Omicron(2^n)$",
+      "$\\Omicron(2^n) \\subset \\Omicron(n!)$"
+    ],
     "correctAnswer": 2
   },
   {
@@ -1761,13 +1786,17 @@
   {
     "id": 194,
     "question": "Dado el polinomio $f(n)= a_mn^m + a_{m-1}n^{m-1} + … + a_0,$ con $a_m \\in{R^+}$ entonces f pertenece al orden:",
-    "options": ["$O(n^m)$.", "$\\Omega(n^m)$.", "Las dos respuestas anteriores son correctas."],
+    "options": [
+      "$\\Omicron(n^m)$.",
+      "$\\Omega(n^m)$.",
+      "Las dos respuestas anteriores son correctas."
+    ],
     "correctAnswer": 2
   },
   {
     "id": 195,
     "question": "El coste temporal asintótico de insertar un elemento en un vector ordenado de forma que continúe ordenado es...",
-    "options": ["...$O(n)$", "...$O(\\log n)$", "...$O(n^2)$"],
+    "options": ["...$\\Omicron(n)$", "...$\\Omicron(\\log n)$", "...$\\Omicron(n^2)$"],
     "correctAnswer": 0
   },
   {
@@ -1779,7 +1808,7 @@
   {
     "id": 197,
     "question": "Cuál de la siguientes es la complejidad temporal más ajustada para un algoritmo que calcula la potencia n-ésima de una matriz cuadrada, expresada en función de n?",
-    "options": ["$O(\\log n)$", "$O(n \\log n)$", "$O(n)$"],
+    "options": ["$\\Omicron(\\log n)$", "$\\Omicron(n \\log n)$", "$\\Omicron(n)$"],
     "correctAnswer": 2
   },
   {
@@ -1801,14 +1830,14 @@
   {
     "id": 200,
     "question": "¿Cuál es el coste temporal de crear un montículo a partir de un vector no ordenado?",
-    "options": ["$\\Theta(n)$", "$\\Theta(n \\log n)$", "$\\Omega(n \\log n)$ y $O(n^2)$."],
+    "options": ["$\\Theta(n)$", "$\\Theta(n \\log n)$", "$\\Omega(n \\log n)$ y $\\Omicron(n^2)$."],
     "correctAnswer": 0,
     "tags": ["Junio 2022"]
   },
   {
     "id": 201,
     "question": "¿Cuál es el coste temporal asintótico de la siguiente función?```cpp\nvoid f(int n, int arr[]) {\n  int i = 0, j = 0;\n  for (; i < n; ++i)\n    while (j < n && arr[i] < arr[j])\n      j++;\n}\n```",
-    "options": ["$O(n)$", "$O(n \\log n)$", "$O(n^2)$"],
+    "options": ["$\\Omicron(n)$", "$\\Omicron(n \\log n)$", "$\\Omicron(n^2)$"],
     "correctAnswer": 0
   },
   {
@@ -1839,15 +1868,15 @@
     "id": 205,
     "question": "Una de estas tres situaciones no es posible:",
     "options": [
-      "$f(n) \\in \\Omega(n^2)$ y $f(n) \\in O(n)$",
-      "$f(n) \\in O(n)$ y $f(n) \\in O(n^2)$",
-      "$f(n) \\in O(n)$ y $f(n) \\in \\Omega(1)$"
+      "$f(n) \\in \\Omega(n^2)$ y $f(n) \\in \\Omicron(n)$",
+      "$f(n) \\in \\Omicron(n)$ y $f(n) \\in \\Omicron(n^2)$",
+      "$f(n) \\in \\Omicron(n)$ y $f(n) \\in \\Omega(1)$"
     ],
     "correctAnswer": 0
   },
   {
     "id": 206,
-    "question": "$f(n) = 10n+7$ ¿ $f(n)$ pertenece a $O(n^2)$?",
+    "question": "$f(n) = 10n+7$ ¿ $f(n)$ pertenece a $\\Omicron(n^2)$?",
     "options": [
       "Si. Para c = 1 y a partir de un valor de n_0 =10.",
       "Sí Para cualquier valor de c positivo siempre existe un n_0 a partir del que se cumple.",
@@ -1877,7 +1906,7 @@
   },
   {
     "id": 209,
-    "question": "¿Cuál es la solución a la siguiente relación de recurrencia?$f(n) = \\begin{cases} \\Theta(1) & n = 0 \\\\ \\Theta(1) + f(n/3) & n > 0 \\end{cases}$",
+    "question": "¿Cuál es la solución a la siguiente relación de recurrencia?\n$f(n) = \\begin{cases} \\Theta(1) & n = 0 \\\\ \\Theta(1) + f(n/3) & n > 0 \\end{cases}$",
     "options": [
       "$f(n) \\in \\Theta(\\log(n))$.",
       "$f(n) \\in \\Theta(n/3)$.",
@@ -1919,10 +1948,10 @@
     "id": 213,
     "question": "Suponiendo la implementación mas eficiente para cada TAD, establecer el coste en el borrado del elemento menor en una lista ordenada, una lista desordenada un árbol binario ordenado y un montículo de mínimos respectivamente.",
     "options": [
-      "$O(1)$, $O(n)$, $O(n)$, $O(\\log n)$",
-      "$O(1)$, $O(n)$, $O(\\log n)$, $O(1)$",
-      "$O(\\log n)$, $O(n)$, $O(n)$, $O(1)$",
-      "$O(n)$, $O(1)$, $O(\\log n)$, $O(\\log n)$"
+      "$\\Omicron(1)$, $\\Omicron(n)$, $\\Omicron(n)$, $\\Omicron(\\log n)$",
+      "$\\Omicron(1)$, $\\Omicron(n)$, $\\Omicron(\\log n)$, $\\Omicron(1)$",
+      "$\\Omicron(\\log n)$, $\\Omicron(n)$, $\\Omicron(n)$, $\\Omicron(1)$",
+      "$\\Omicron(n)$, $\\Omicron(1)$, $\\Omicron(\\log n)$, $\\Omicron(\\log n)$"
     ],
     "correctAnswer": 0
   },
@@ -1991,7 +2020,7 @@
   {
     "id": 220,
     "question": "Se pretende implementar mediante programación dinámica iterativa la función recursiva: ¿Cuál es la mejor complejidad espacial que se puede conseguir?```cpp\nint f(int x, int y) {\n  if (x <= y)\n    return 1;\n  return x + f(x - 1, y);\n}\n```",
-    "options": ["$O(x^2)$", "$O(x)$", "$O(1)$"],
+    "options": ["$\\Omicron(x^2)$", "$\\Omicron(x)$", "$\\Omicron(1)$"],
     "correctAnswer": 2
   },
   {
@@ -2007,7 +2036,7 @@
   {
     "id": 222,
     "question": "Se pretende implementar mediante programación dinámica iterativa la función recursiva:```cpp\nunsigned f(unsigned x, unsigned v[]) {\n  if (x == 0)\n    return 0;\n  unsigned m = 0;\n  for (unsigned k = 0; k < x; k++)\n    m = max(m, v[k] + f(x - k, v));\n  return m;\n}\n```\n¿Cuál es la mejor complejidad espacial que se puede conseguir?",
-    "options": ["$O(x)$", "$O(1)$", "$O(x^2)$"],
+    "options": ["$\\Omicron(x)$", "$\\Omicron(1)$", "$\\Omicron(x^2)$"],
     "correctAnswer": 0
   },
   {
@@ -2029,7 +2058,7 @@
   {
     "id": 225,
     "question": "Se pretende implementar mediante programación dinámica iterativa la función recursiva: ¿Cuál es la mejor complejidad espacial que se puede conseguir?```cpp\nfloat f(unsigned x, int y) {\n  if (y < 0)\n    return 0;\n  float A = 0.0;\n  if (v1[y] <= x)\n    A = v2[y] + f(x - v1[y], y - 1);\n  float B = f(x, y - 1);\n  return min(A, 2 + B);\n}\n```",
-    "options": ["$O(1)$", "$O(y^2)$", "$O(y)$"],
+    "options": ["$\\Omicron(1)$", "$\\Omicron(y^2)$", "$\\Omicron(y)$"],
     "correctAnswer": 2
   },
   {
@@ -2067,7 +2096,7 @@
   },
   {
     "id": 230,
-    "question": "Si $f \\notin O(g_1)$ y $f \\in O(g_2)$ entonces siempre se cumplirá:",
+    "question": "Si $f \\notin \\Omicron(g_1)$ y $f \\in \\Omicron(g_2)$ entonces siempre se cumplirá:",
     "options": [
       "$f \\in \\Omega(\\min(g_1, g_2))$",
       "$f \\in \\Omega(g_1 + g_2)$",
@@ -2126,9 +2155,9 @@
     "id": 236,
     "question": "¿Qué se deduce de f(n) y g(n) si se cumple $\\lim_{n \\to \\infty} \\frac{f(n)}{g(n)} = K$, con K distinto de 0?",
     "options": [
-      "$f(n) \\in O(g(n))$ y $g(n) \\in O(f(n))$",
-      "$g(n) \\in O(f(n))$ pero $f(n) \\notin O(g(n))$",
-      "$f(n) \\in O(g(n))$ pero $g(n) \\notin O(f(n))$"
+      "$f(n) \\in \\Omicron(g(n))$ y $g(n) \\in \\Omicron(f(n))$",
+      "$g(n) \\in \\Omicron(f(n))$ pero $f(n) \\notin \\Omicron(g(n))$",
+      "$f(n) \\in \\Omicron(g(n))$ pero $g(n) \\notin \\Omicron(f(n))$"
     ],
     "correctAnswer": 0
   },
@@ -2144,8 +2173,8 @@
   },
   {
     "id": 238,
-    "question": "```cppunsigned f(unsigned y, unsigned x) {\n  // suponemos y >= x\n  if (x == 0 || y == x)\n    return 1;\n  return f(y - 1, x - 1) + f(y - 1, x);\n}\n```",
-    "options": ["$O(x-y)$", "$O(y)$", "$O(x)$"],
+    "question": "```cpp\nunsigned f(unsigned y, unsigned x) {\n  // suponemos y >= x\n  if (x == 0 || y == x)\n    return 1;\n  return f(y - 1, x - 1) + f(y - 1, x);\n}\n```",
+    "options": ["$\\Omicron(x-y)$", "$\\Omicron(y)$", "$\\Omicron(x)$"],
     "correctAnswer": 0
   },
   {
@@ -2210,7 +2239,7 @@
   },
   {
     "id": 245,
-    "question": "Di cuál de estos tres problemas de optimización no comporta, en el peor caso, tener que considerar $O(n!)$ posibles soluciones.",
+    "question": "Di cuál de estos tres problemas de optimización no comporta, en el peor caso, tener que considerar $\\Omicron(n!)$ posibles soluciones.",
     "options": [
       "El problema de la asignación de n tareas a n trabajadores de forma que cada trabajador hace exactamente una tarea y cada tarea es asignada a un trabajador exactamente, de forma que la suma de los costes de las tareas es mínimo.",
       "El problema del viajante de comercio (travelling salesman problem, o sea, el de encontrar un ciclo hamiltoniano de coste mínimo en un grafo conexo de n vértices donde cada arista tiene un coste asignado.",
@@ -2222,19 +2251,19 @@
     "id": 246,
     "question": "Marca la FALSA",
     "options": [
-      "La ordenación de un vector usando Mergesort requiere en el caso peor un tiempo de $O(n^2)$",
-      "La ordenación de un vector usando el algoritmo Quicksort requiere en el peor caso un tiempo $O(n^2)$",
-      "La búsqueda binaria en un vector ordenado requiere en el peor caso un tiempo de $O(\\log n)$"
+      "La ordenación de un vector usando Mergesort requiere en el caso peor un tiempo de $\\Omicron(n^2)$",
+      "La ordenación de un vector usando el algoritmo Quicksort requiere en el peor caso un tiempo $\\Omicron(n^2)$",
+      "La búsqueda binaria en un vector ordenado requiere en el peor caso un tiempo de $\\Omicron(\\log n)$"
     ],
     "correctAnswer": 0
   },
   {
     "id": 247,
-    "question": "Si $f(n) \\in O(n^3)$, ¿puede pasar que $f(n) \\in O(n^2)$?",
+    "question": "Si $f(n) \\in \\Omicron(n^3)$, ¿puede pasar que $f(n) \\in \\Omicron(n^2)$?",
     "options": [
       "Sólo para valores bajos de n.",
-      "Es perfectamente posible, ya que $O(n^2) \\subset O(n^3)$",
-      "No, porque $n^3 \\notin O(n^2)$."
+      "Es perfectamente posible, ya que $\\Omicron(n^2) \\subset \\Omicron(n^3)$",
+      "No, porque $n^3 \\notin \\Omicron(n^2)$."
     ],
     "correctAnswer": 1
   },
@@ -2261,7 +2290,11 @@
   {
     "id": 250,
     "question": "Se pretende ordenar un vector cuyos n elementos están organizados formando un montículo (Heap). Sin tener en cuenta el tiempo empleado para este preproceso, ¿Con qué coste temporal asintótico se podría realizar la ordenación?",
-    "options": ["$O(n)$.", "Ninguna de las otras dos opciones es la correcta.", "$O(n \\log n)$."],
+    "options": [
+      "$\\Omicron(n)$.",
+      "Ninguna de las otras dos opciones es la correcta.",
+      "$\\Omicron(n \\log n)$."
+    ],
     "correctAnswer": 2
   },
   {
@@ -2278,10 +2311,10 @@
     "id": 252,
     "question": "La búsqueda de un elemento dentro de un árbol tiene un coste de",
     "options": [
-      "Siempre constante, O(1)",
+      "Siempre constante, \\Omicron(1)",
       "Si es ABO es logarítmica siempre",
       "Si es un AVL es logarítmica siempre",
-      "Siempre lineal, O(n)",
+      "Siempre lineal, \\Omicron(n)",
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 4
@@ -2370,12 +2403,12 @@
   },
   {
     "id": 261,
-    "question": "Suponiendo que T1 E O(f) y que T2 E O(f) indicar cual de las siguientes afirmaciones es cierta",
+    "question": "Suponiendo que T1 E \\Omicron(f) y que T2 E \\Omicron(f) indicar cual de las siguientes afirmaciones es cierta",
     "options": [
       "I y II son ciertas",
-      "II T1 - T2 E O(f)",
+      "II T1 - T2 E \\Omicron(f)",
       "III Ninguna de las anteriores",
-      "I T1+T2 E O(f)"
+      "I T1+T2 E \\Omicron(f)"
     ],
     "correctAnswer": 0
   },
@@ -2391,7 +2424,7 @@
   },
   {
     "id": 263,
-    "question": "Sea la siguiente relación de recurrencia:$T(n) = \\begin{cases} 1 & \\text{si } n \\leq 1 \\\\ 2T(n/2) + g(n) & \\text{en otro caso} \\end{cases}$\nSi $T(n) \\in O(n^2)$, ¿en cuál de estos tres casos nos podemos encontrar?",
+    "question": "Sea la siguiente relación de recurrencia:\n$T(n) = \\begin{cases} 1 & \\text{si } n \\leq 1 \\\\ 2T(n/2) + g(n) & \\text{en otro caso} \\end{cases}$\nSi $T(n) \\in \\Omicron(n^2)$, ¿en cuál de estos tres casos nos podemos encontrar?",
     "options": ["$g(n) = 1$", "$g(n) = n$", "$g(n) = n^2$"],
     "correctAnswer": 2
   },
@@ -2408,7 +2441,12 @@
   {
     "id": 265,
     "question": "Suponiendo la implementación mas eficiente para cada TAD establecer el coste en el borrado del elemento menor en una lista ordenada una lista desordenada y un montículo de mínimos respectivamente",
-    "options": ["O(1),O(n),O(1)", "O(log n),O(n),O(1)", "O(1),O(n),O(log n)", "O(n),O(1),O(log n)"],
+    "options": [
+      "\\Omicron(1),\\Omicron(n),\\Omicron(1)",
+      "\\Omicron(log n),\\Omicron(n),\\Omicron(1)",
+      "\\Omicron(1),\\Omicron(n),\\Omicron(log n)",
+      "\\Omicron(n),\\Omicron(1),\\Omicron(log n)"
+    ],
     "correctAnswer": 2
   },
   {
@@ -2426,7 +2464,7 @@
     "question": "Sea $f(n) = n \\log(n) + n$.",
     "options": [
       "$f(n) \\in \\Omega(n \\log(n))$",
-      "$f(n) \\in O(n \\log(n))$",
+      "$f(n) \\in \\Omicron(n \\log(n))$",
       "Las otras dos opciones son ciertas"
     ],
     "correctAnswer": 2
@@ -2454,7 +2492,7 @@
   {
     "id": 270,
     "question": "Dada la siguiente función:```cpp\nint exa(string& cad, int pri, int ult) {\n  if (pri >= ult) {\n    return 1;\n  } else {\n    if (cad[pri] == cad[ult]) {\n      return exa(cad, pri + 1, ult - 1);\n    } else {\n      return 0;\n    }\n  }\n}\n```\n¿Cuál es su complejidad temporal asintótica?",
-    "options": ["$O(n)$", "$O(n \\log n)$", "$O(n^2)$"],
+    "options": ["$\\Omicron(n)$", "$\\Omicron(n \\log n)$", "$\\Omicron(n^2)$"],
     "correctAnswer": 0
   },
   {
@@ -2471,7 +2509,7 @@
   {
     "id": 272,
     "question": "¿Cuál de estas tres expresiones es falsa?",
-    "options": ["3n^2 + 1 ∈ O(n^3)", "n + n log(n) ∈ Ω(n)", "n + n log(n) ∈ Θ(n)"],
+    "options": ["3n^2 + 1 ∈ \\Omicron(n^3)", "n + n log(n) ∈ Ω(n)", "n + n log(n) ∈ Θ(n)"],
     "correctAnswer": 2
   },
   {
@@ -2518,9 +2556,9 @@
     "id": 277,
     "question": "Se pretende aplicar la técnica memoización a la siguiente función recursiva:```cpp\nint f(int x, int y) {\n  if (x > y)\n    return 1;\n  return x + f(x, y - 2);\n}\n```\nEn el caso más desfavorable, ¿qué complejidades temporal y espacial cabe esperar de la función resultante?",
     "options": [
-      "$O(x-y)$, tanto temporal como espacial.",
+      "$\\Omicron(x-y)$, tanto temporal como espacial.",
       "Ninguna de las otras dos opciones es correcta",
-      "Temporal $O(x-y)$ y espacial $O(1)$"
+      "Temporal $\\Omicron(x-y)$ y espacial $\\Omicron(1)$"
     ],
     "correctAnswer": 0
   },
@@ -2548,7 +2586,7 @@
     "id": 280,
     "question": "Los algoritmos de ordenación Quicksort y Mergesort tienen en común ...",
     "options": [
-      "... que se ejecutan en tiempo O(n).",
+      "... que se ejecutan en tiempo \\Omicron(n).",
       "... que ordenan el vector sin usar espacio adicional.",
       "... que aplican la estrategia de divide y vencerás."
     ],
@@ -2587,7 +2625,7 @@
   },
   {
     "id": 284,
-    "question": "Ordena de menor a mayor las siguientes complejidades \t1. O(1) \t2. O(n^2)3. O(nlgn)\n4. O(n!)",
+    "question": "Ordena de menor a mayor las siguientes complejidades \t1. \\Omicron(1) \t2. \\Omicron(n^2)3. \\Omicron(nlgn)\n4. \\Omicron(n!)",
     "options": ["3, 1, 2 y 4", "1, 3, 2 y 4", "1, 3, 4 y 2"],
     "correctAnswer": 1
   },
@@ -2614,7 +2652,7 @@
   {
     "id": 287,
     "question": "Sea A un árbol binario ordenado equilibrado de n elementos, en el que todos sus elementos son distintos, entonces la función búsqueda de un elemento que no esta en el árbol tendrá coste",
-    "options": ["O(log n)", "Ω(log n) y O(n)", "Θ(n)", "Θ(log n)"],
+    "options": ["\\Omicron(log n)", "Ω(log n) y \\Omicron(n)", "Θ(n)", "Θ(log n)"],
     "correctAnswer": 3
   },
   {
@@ -2622,7 +2660,7 @@
     "question": "Marca la falsa",
     "options": [
       "$n + n \\log(n) \\in \\Theta(n)$",
-      "$3n^2 + 1 \\in O(n^3)$",
+      "$3n^2 + 1 \\in \\Omicron(n^3)$",
       "$n + n \\log(n) \\in \\Omega(n)$"
     ],
     "correctAnswer": 0
@@ -2692,12 +2730,12 @@
   {
     "id": 296,
     "question": "Se pretende implementar mediante programación dinámica iterativa la función recursiva:```cpp\nint f(int x, int y) {\n  if (x <= y)\n    return 1;\n  return x + f(x - 1, y);\n}\n```\n¿Cuál es la mejor complejidad espacial que se puede conseguir?",
-    "options": ["$O(x)$", "$O(1)$", "$O(x^2)$"],
+    "options": ["$\\Omicron(x)$", "$\\Omicron(1)$", "$\\Omicron(x^2)$"],
     "correctAnswer": 1
   },
   {
     "id": 297,
-    "question": "La serie de números de Fibonacci se define de la siguiente forma:$fib(n) = \\begin{cases} 1 & n \\leq 1 \\\\ fib(n-1) + fib(n-2) & n > 1 \\end{cases}$\nPara implementar esta función podemos emplear:",
+    "question": "La serie de números de Fibonacci se define de la siguiente forma:\n$fib(n) = \\begin{cases} 1 & n \\leq 1 \\\\ fib(n-1) + fib(n-2) & n > 1 \\end{cases}$\nPara implementar esta función podemos emplear:",
     "options": ["Divide y vencerás", "Programación dinámica", "Cualquiera de las dos anteriores"],
     "correctAnswer": 2
   },
@@ -2777,9 +2815,9 @@
     "id": 306,
     "question": "De las siguientes expresiones, o bien dos son ciertas y una es falsa, o bien al contrario, una es cierta y dos son falsas. Marca la que en este sentido es diferente a las otras dos.",
     "options": [
-      "$\\sum_{i=1}^{n/2} \\sum_{j=1}^{i} 2^j \\in O(n \\log n)$",
-      "$\\sum_{i=1}^{n} \\sum_{j=1}^{\\log i} 2^j \\in O(n^2)$",
-      "$\\sum_{i=1}^{\\log n} \\sum_{j=1}^{n} 2^j \\in O(n \\log n)$"
+      "$\\sum_{i=1}^{n/2} \\sum_{j=1}^{i} 2^j \\in \\Omicron(n \\log n)$",
+      "$\\sum_{i=1}^{n} \\sum_{j=1}^{\\log i} 2^j \\in \\Omicron(n^2)$",
+      "$\\sum_{i=1}^{\\log n} \\sum_{j=1}^{n} 2^j \\in \\Omicron(n \\log n)$"
     ],
     "correctAnswer": 1,
     "tags": ["Junio 2023"]
@@ -2788,20 +2826,20 @@
     "id": 307,
     "question": "Sea un problema de optimización por selección discreta, con restricciones, en el que se deben tomar n decisiones booleanas para optimizar un indicador, y se abordará mediante un método de búsqueda y enumeración (vuelta atrás, ramificación y poda). ¿Cuál de las siguientes afirmaciones es correcta?",
     "options": [
-      "La complejidad temporal será como mucho $O(n \\log n)$ porque en general basta con ordenar adecuadamente las decisiones para convertir cualquier problema de este tipo en un problema de complejidad temporal lineal.",
+      "La complejidad temporal será como mucho $\\Omicron(n \\log n)$ porque en general basta con ordenar adecuadamente las decisiones para convertir cualquier problema de este tipo en un problema de complejidad temporal lineal.",
       "Puede haber problemas para los que la complejidad será exponencial o peor; ninguna estrategia de poda puede garantizar que esto no va a ocurrir.",
-      "La complejidad temporal en el peor caso será $O(n^2)$ ya que se toman n decisiones binarias."
+      "La complejidad temporal en el peor caso será $\\Omicron(n^2)$ ya que se toman n decisiones binarias."
     ],
     "correctAnswer": 1
   },
   {
     "id": 308,
-    "question": "Dadas las siguientes ecuaciones de recurrencia. Determinar el orden al que pertenece cada una de ellas:$T_1(n)=2T_1(n-1)+c_1$; $T_2(n)=T_2(n-1)+c_2$, $T_3(n)=T_3(n/2)+c_3$ y $T_4(n)=T_4(n+1)+n+c_4$",
+    "question": "Dadas las siguientes ecuaciones de recurrencia. Determinar el orden al que pertenece cada una de ellas:\n$T_1(n)=2T_1(n-1)+c_1$; $T_2(n)=T_2(n-1)+c_2$, $T_3(n)=T_3(n/2)+c_3$ y $T_4(n)=T_4(n+1)+n+c_4$",
     "options": [
-      "$T_1(n) \\in O(2^n)$, $T_2(n) \\in O(n)$, $T_3(n) \\in O(\\log n)$, $T_4(n) \\in O(n^2)$",
-      "$T_1(n) \\in O(n)$, $T_2(n) \\in O(n)$, $T_3(n) \\in O(\\log n)$, $T_4(n) \\in O(n^2)$",
-      "$T_1(n) \\in O(\\log n)$, $T_2(n) \\in O(n)$, $T_3(n) \\in O(\\log n)$, $T_4(n) \\in O(n^2)$",
-      "$T_1(n) \\in O(2^n)$, $T_2(n) \\in O(n)$, $T_3(n) \\in O(\\log n)$, $T_4(n) \\in O(2n)$"
+      "$T_1(n) \\in \\Omicron(2^n)$, $T_2(n) \\in \\Omicron(n)$, $T_3(n) \\in \\Omicron(\\log n)$, $T_4(n) \\in \\Omicron(n^2)$",
+      "$T_1(n) \\in \\Omicron(n)$, $T_2(n) \\in \\Omicron(n)$, $T_3(n) \\in \\Omicron(\\log n)$, $T_4(n) \\in \\Omicron(n^2)$",
+      "$T_1(n) \\in \\Omicron(\\log n)$, $T_2(n) \\in \\Omicron(n)$, $T_3(n) \\in \\Omicron(\\log n)$, $T_4(n) \\in \\Omicron(n^2)$",
+      "$T_1(n) \\in \\Omicron(2^n)$, $T_2(n) \\in \\Omicron(n)$, $T_3(n) \\in \\Omicron(\\log n)$, $T_4(n) \\in \\Omicron(2n)$"
     ],
     "correctAnswer": 0
   },
@@ -2828,7 +2866,7 @@
   {
     "id": 311,
     "question": "Tenemos un \"superprocesador\" que tiene una instrucción que permite la ordenación de 100 elementos en un tiempo constante. Para este superprocesador, adaptamos el algoritmo Mergesort de forma que cada vez que queremos ordenar menos de 100 elementos, en lugar de hacer las llamadas recursivas, llama a esta instrucción. ¿cuál sería la complejidad de este algoritmo?",
-    "options": ["$O(n \\log n)$", "$O(n)$", "$O(1)$"],
+    "options": ["$\\Omicron(n \\log n)$", "$\\Omicron(n)$", "$\\Omicron(1)$"],
     "correctAnswer": 0,
     "tags": ["Junio 2022"]
   },
@@ -2888,22 +2926,28 @@
     "id": 318,
     "question": "Indicad cuál de estas tres expresiones es cierta:",
     "options": [
-      "$O(n^2) \\subseteq O(2^{\\log(n)}) \\subset O(2^n)$",
-      "$O(n^2) \\subseteq O(2^{\\log(n)}) \\subseteq O(2^n)$",
-      "$O(2^{\\log(n)}) \\subseteq O(n^2) \\subseteq O(2^n)$"
+      "$\\Omicron(n^2) \\subseteq \\Omicron(2^{\\log(n)}) \\subset \\Omicron(2^n)$",
+      "$\\Omicron(n^2) \\subseteq \\Omicron(2^{\\log(n)}) \\subseteq \\Omicron(2^n)$",
+      "$\\Omicron(2^{\\log(n)}) \\subseteq \\Omicron(n^2) \\subseteq \\Omicron(2^n)$"
     ],
     "correctAnswer": 2
   },
   {
     "id": 319,
     "question": "Dado el siguiente código, calcule la complejidad del mismo:```cpp\nint sumaDigitos(int num) {\n  int s;\n  s = num % 10;\n  while (num >= 10) {\n    num = num / 10 s = s + (num % 10);\n  }\n  return (s);\n}\n```",
-    "options": ["$\\Omega(1)$ y $O(\\log n)$", "$O(n)$", "$O(10n)$", "$O(1)$", "$O(\\log n)$"],
+    "options": [
+      "$\\Omega(1)$ y $\\Omicron(\\log n)$",
+      "$\\Omicron(n)$",
+      "$\\Omicron(10n)$",
+      "$\\Omicron(1)$",
+      "$\\Omicron(\\log n)$"
+    ],
     "correctAnswer": 1
   },
   {
     "id": 320,
     "question": "$f(n) = n^2 + 3f(n/3)$",
-    "options": ["$O(n^2 \\log n)$", "$O(n^2)$", "$O(n)$"],
+    "options": ["$\\Omicron(n^2 \\log n)$", "$\\Omicron(n^2)$", "$\\Omicron(n)$"],
     "correctAnswer": 1
   },
   {
@@ -2916,9 +2960,9 @@
     "id": 322,
     "question": "¿Cuál de estas tres expresiones es cierta?",
     "options": [
-      "$O(n^2) \\subset O(2^{\\log n}) \\subset O(2^n)$",
-      "$O(2^{\\log n}) \\subset O(n^2) \\subset O(2^n)$",
-      "$O(n^2) \\subset O(2^{\\log n}) \\subset O(2^n)$"
+      "$\\Omicron(n^2) \\subset \\Omicron(2^{\\log n}) \\subset \\Omicron(2^n)$",
+      "$\\Omicron(2^{\\log n}) \\subset \\Omicron(n^2) \\subset \\Omicron(2^n)$",
+      "$\\Omicron(n^2) \\subset \\Omicron(2^{\\log n}) \\subset \\Omicron(2^n)$"
     ],
     "correctAnswer": 1
   },
@@ -2947,7 +2991,11 @@
   {
     "id": 326,
     "question": "$f(n) = 2f(n/2) + n$, $f(1) = 1$",
-    "options": ["$f(n) \\in O(n \\log(n))$", "$f(n) \\in O(n^2)$", "$f(n) \\in O(n)$"],
+    "options": [
+      "$f(n) \\in \\Omicron(n \\log(n))$",
+      "$f(n) \\in \\Omicron(n^2)$",
+      "$f(n) \\in \\Omicron(n)$"
+    ],
     "correctAnswer": 0
   },
   {
@@ -2982,7 +3030,7 @@
   },
   {
     "id": 330,
-    "question": "Sea la siguiente relación de recurrencia:$T(n) = 1$ si $n \\leq 1$; $2T(n/2) + g(n)$ en otro caso. Si $T(n) \\in O(n)$, ¿en cuál de estos tres casos nos podemos encontrar?",
+    "question": "Sea la siguiente relación de recurrencia:\n$T(n) = 1$ si $n \\leq 1$; $2T(n/2) + g(n)$ en otro caso. Si $T(n) \\in \\Omicron(n)$, ¿en cuál de estos tres casos nos podemos encontrar?",
     "options": ["$g(n) = \\log n$", "$g(n) = n^2$", "Las otras dos opciones son ambas ciertas."],
     "correctAnswer": 2
   },
@@ -3002,14 +3050,18 @@
     "options": [
       "$\\Omega(n) \\subset \\Omega(1)$",
       "$\\Theta(\\log(n^2)) = \\Theta(\\log(n^3))$",
-      "$O(n) \\subset O(1)$"
+      "$\\Omicron(n) \\subset \\Omicron(1)$"
     ],
     "correctAnswer": 2
   },
   {
     "id": 333,
     "question": "Si $\\lim_{n \\to \\infty} \\frac{f(n)}{g(n)} = \\infty$ entonces...",
-    "options": ["$f(n) \\in O(g(n))$", "$f(n) \\in \\Omega(g(n))$", "$f(n) \\in \\Theta(g(n))$"],
+    "options": [
+      "$f(n) \\in \\Omicron(g(n))$",
+      "$f(n) \\in \\Omega(g(n))$",
+      "$f(n) \\in \\Theta(g(n))$"
+    ],
     "correctAnswer": 1
   },
   {
@@ -3035,7 +3087,7 @@
   },
   {
     "id": 336,
-    "question": "El elemento n-ésimo de la serie tribonacci, $T(n)$, se define como sigue:$T(n) = T(n - 3) + T(n - 2) + T(n - 1)$ para $n > 3$; $T(0) = 0$; $T(1) = 1$ y $T(2) = 1$. ¿Cuál de estas afirmaciones es falsa?",
+    "question": "El elemento n-ésimo de la serie tribonacci, $T(n)$, se define como sigue:\n$T(n) = T(n - 3) + T(n - 2) + T(n - 1)$ para $n > 3$; $T(0) = 0$; $T(1) = 1$ y $T(2) = 1$. ¿Cuál de estas afirmaciones es falsa?",
     "options": [
       "Una implementación ingenua de la función $T(n)$, la cual llamaría a $T(n - 1)$, $T(n - 2)$ y $T(n - 3)$ tendría una complejidad prohibitiva por la repetición de cálculos que se produciría.",
       "Es posible una implementación de programación dinámica iterativa con complejidad $\\Theta(n)$.",
@@ -3046,7 +3098,11 @@
   {
     "id": 337,
     "question": "Una de las afirmaciones siguientes es cierta y las otras dos falsas. Indicad cuál es la cierta.",
-    "options": ["$O(2^n) \\in O(n!)$", "$O(3^n) \\in O(2^n)$", "$O(n^n) \\in O(n!)$"],
+    "options": [
+      "$\\Omicron(2^n) \\in \\Omicron(n!)$",
+      "$\\Omicron(3^n) \\in \\Omicron(2^n)$",
+      "$\\Omicron(n^n) \\in \\Omicron(n!)$"
+    ],
     "correctAnswer": 0
   },
   {
@@ -3074,14 +3130,14 @@
     "question": "En la solucion al problema de la mochila continua ¿por que es conveniente la ordenacion previa de los objetos?",
     "options": [
       "Porque si no se hace no es posible garantizar que la toma de decisiones siga un criterio voraz.",
-      "Para reducir la complejidad temporal en la toma de cada decision de $O(n)$ a $O(1)$, donde n es el numero de objetos a considerar.",
-      "Para reducir la complejidad temporal en la toma de cada decision: de $O(n^2)$ a $O(n \\log n)$, donde n es el numero de objetos a considerar."
+      "Para reducir la complejidad temporal en la toma de cada decision de $\\Omicron(n)$ a $\\Omicron(1)$, donde n es el numero de objetos a considerar.",
+      "Para reducir la complejidad temporal en la toma de cada decision: de $\\Omicron(n^2)$ a $\\Omicron(n \\log n)$, donde n es el numero de objetos a considerar."
     ],
     "correctAnswer": 1
   },
   {
     "id": 341,
-    "question": "Sea la siguiente relación de recurrencia:$T(n) = 1$ si $n \\leq 1$; $2T(n/2) + g(n)$ en otro caso. Si $T(n) \\in O(n^2)$, ¿en cuál de los casos nos podemos encontrar?",
+    "question": "Sea la siguiente relación de recurrencia:\n$T(n) = 1$ si $n \\leq 1$; $2T(n/2) + g(n)$ en otro caso. Si $T(n) \\in \\Omicron(n^2)$, ¿en cuál de los casos nos podemos encontrar?",
     "options": ["$g(n) = 1$", "$g(n) = n^2$", "$g(n) = n$"],
     "correctAnswer": 1
   },
@@ -3109,7 +3165,7 @@
     "id": 344,
     "question": "De las siguientes expresiones, o bien dos son verdaderas y una es falsa, o bien dos son falsas y una es verdadera. Marca la que (en este sentido) es distinta a las otras dos",
     "options": [
-      "$O(2^{\\log n}) \\subset O(n^2)$",
+      "$\\Omicron(2^{\\log n}) \\subset \\Omicron(n^2)$",
       "$n + n \\log n \\in \\Omega(n)$",
       "$\\Theta(n) \\subset \\Theta(n^2)$"
     ],
@@ -3148,7 +3204,7 @@
   {
     "id": 348,
     "question": "Se pretende implementar mediante programación dinámica iterativa la función recursiva:```cpp\nunsigned f(unsigned y, unsigned x) {\n  // suponemos y >= x\n  if (x == 0 || y == x)\n    return 1;\n  return f(y - 1, x - 1) + f(y - 1, x);\n}\n```\n¿Cuál es la mejor complejidad espacial que se puede conseguir?",
-    "options": ["$O(y^2)$", "$O(1)$", "$O(y)$"],
+    "options": ["$\\Omicron(y^2)$", "$\\Omicron(1)$", "$\\Omicron(y)$"],
     "correctAnswer": 2
   },
   {
@@ -3203,7 +3259,7 @@
   },
   {
     "id": 354,
-    "question": "Sea la siguiente relación de recurrencia:$T(n) = \\begin{cases} 1 & \\text{si } n \\leq 1 \\\\ 8T(n/8) + g(n) & \\text{en otro caso} \\end{cases}$\nSi $T(n) \\in \\Theta(n^2)$, ¿en cuál de estos tres casos nos podemos encontrar?",
+    "question": "Sea la siguiente relación de recurrencia:\n$T(n) = \\begin{cases} 1 & \\text{si } n \\leq 1 \\\\ 8T(n/8) + g(n) & \\text{en otro caso} \\end{cases}$\nSi $T(n) \\in \\Theta(n^2)$, ¿en cuál de estos tres casos nos podemos encontrar?",
     "options": ["$g(n) = n^2$", "$g(n) = n$", "$g(n) = n^3$"],
     "correctAnswer": 2
   },
@@ -3245,23 +3301,23 @@
   },
   {
     "id": 359,
-    "question": "¿Pertenece $3n^2 + 3$ a $O(n^3)$?",
+    "question": "¿Pertenece $3n^2 + 3$ a $\\Omicron(n^3)$?",
     "options": ["Solo para $c=1$ y $n_0 = 5$.", "No.", "Sí."],
     "correctAnswer": 2
   },
   {
     "id": 360,
-    "question": "Si $f(n) \\in O(g(n))$ ¿cuál de estas situaciones no es posible?",
+    "question": "Si $f(n) \\in \\Omicron(g(n))$ ¿cuál de estas situaciones no es posible?",
     "options": [
       "$f(n) \\in \\Omega(g(n))$",
       "$\\lim_{n \\to \\infty} g(n) / f(n) = 0$",
-      "$g(n) \\in O(f(n))$"
+      "$g(n) \\in \\Omicron(f(n))$"
     ],
     "correctAnswer": 1
   },
   {
     "id": 361,
-    "question": "Sea A un vector de n elementos y supongamos que todos los elementos de A son distintos. Considera el siguiente algoritmo:Nos interesa medir cuantas veces se ejecuta la instrucción nº 3 Entonces el caso mejor se obtiene cuando: ```módulo ordena ( var A es vector de n enteros);\nvariables i, j, x: es entero\nfor (i = 2; i<=N; i++) {\nX=A[i];\nA[0]=X;\nj=i-1;\nwhile ( X<A[j] ) { // (2)\nA[j+1]=A[j]; // (3)\nj = j - 1\n}\nA[j+1]=X;\n}\nfinmódulo\n```",
+    "question": "Sea A un vector de n elementos y supongamos que todos los elementos de A son distintos. Considera el siguiente algoritmo:Nos interesa medir cuantas veces se ejecuta la instrucción nº 3 Entonces el caso mejor se obtiene cuando: ```text\nmódulo ordena(var A es vector de n enteros);\nvariables i, j, x: es entero\nfor (i = 2; i <= N; i++) {\n  X = A[i];\n  A[0] = X;\n  j = i - 1;\n  while (X < A[j]) {  // (2)\n    A[j + 1] = A[j];  // (3)\n    j = j - 1;\n  }\n  A[j + 1] = X;\n}\nfinmódulo\n```",
     "options": [
       "Los datos vienen ordenados ascendentemente, que se ejecuta exactamente 0 veces",
       "Los datos vienen ordenados ascendentemente, que se ejecuta exactamente n^2 veces",
@@ -3314,23 +3370,27 @@
     "id": 366,
     "question": "Suponiendo la implementación mas eficiente para cada TAD establecer el coste de borrado de los elementos menor en una lista desordenada un árbol binario ordenado y un montículo de mínimos respectivamente",
     "options": [
-      "O(1),O(n),O(log n),O(1)",
-      "O(log n),O(n),O(n),O(1)",
-      "O(n),O(1),O(log n),O(log n)",
-      "O(1),O(n),O(n),O(log n)"
+      "\\Omicron(1),\\Omicron(n),\\Omicron(log n),\\Omicron(1)",
+      "\\Omicron(log n),\\Omicron(n),\\Omicron(n),\\Omicron(1)",
+      "\\Omicron(n),\\Omicron(1),\\Omicron(log n),\\Omicron(log n)",
+      "\\Omicron(1),\\Omicron(n),\\Omicron(n),\\Omicron(log n)"
     ],
     "correctAnswer": 0
   },
   {
     "id": 367,
-    "question": "Un problema de tamaño n puede transformarse en tiempo $O(n^2)$ en otro de tamaño n-1, por otro lado, la solución al problema cuando la talla es 1 requiere un tiempo constante, ¿cuál de estas clases de coste temporal asintótico es la más ajustada?",
-    "options": ["$O(n^3)$", "$O(n^2)$", "$O(2^n)$"],
+    "question": "Un problema de tamaño n puede transformarse en tiempo $\\Omicron(n^2)$ en otro de tamaño n-1, por otro lado, la solución al problema cuando la talla es 1 requiere un tiempo constante, ¿cuál de estas clases de coste temporal asintótico es la más ajustada?",
+    "options": ["$\\Omicron(n^3)$", "$\\Omicron(n^2)$", "$\\Omicron(2^n)$"],
     "correctAnswer": 0
   },
   {
     "id": 368,
     "question": "Si n es el número de elementos de un vector. La solución de menor coste al problema de encontrar su k-ésimo mínimo tiene la siguiente complejidad:",
-    "options": ["$\\Omega(n)$ y $O(n \\log n)$", "$\\Omega(n)$ y $O(n^2)$", "Ninguna de las dos"],
+    "options": [
+      "$\\Omega(n)$ y $\\Omicron(n \\log n)$",
+      "$\\Omega(n)$ y $\\Omicron(n^2)$",
+      "Ninguna de las dos"
+    ],
     "correctAnswer": 1
   },
   {
@@ -3346,7 +3406,7 @@
   {
     "id": 370,
     "question": "Indica cuál es la complejidad en función de n, donde k es una constante (no depende de n), del fragmento siguiente:```cpp\nfor (int i = k; i < n - k; i++) {\n  A[i] = 0;\n  for (int j = i - k; j < i + k; j++)\n    A[i] += B[j];\n}\n```",
-    "options": ["$O(n)$", "$O(n^2)$", "$O(n \\log n)$"],
+    "options": ["$\\Omicron(n)$", "$\\Omicron(n^2)$", "$\\Omicron(n \\log n)$"],
     "correctAnswer": 0
   },
   {
@@ -3413,13 +3473,13 @@
   {
     "id": 377,
     "question": "En una cuadrícula se quiere dibujar el contorno de un cuadrado de n casillas de lado. ¿cuál será la complejidad temporal del mejor algoritmo que pueda existir?",
-    "options": ["$O(n)$", "$O(n^2)$", "$O(\\sqrt{n})$"],
+    "options": ["$\\Omicron(n)$", "$\\Omicron(n^2)$", "$\\Omicron(\\sqrt{n})$"],
     "correctAnswer": 0
   },
   {
     "id": 378,
     "question": "Se pretende implementar mediante programacion dinamica iterativa la funcion recursiva:```cpp\nunsigned f(unsigned y, unsigned x) {  // suponemos y >= x\n  if (x == 0 || y == x)\n    return 1;\n  return f(y - 1, x - 1) + f(y - 1, x);\n}\n```\n¿Cual es la mejor complejidad espacial que se puede conseguir?",
-    "options": ["$O(1)$", "$O(y^2)$", "$O(y)$"],
+    "options": ["$\\Omicron(1)$", "$\\Omicron(y^2)$", "$\\Omicron(y)$"],
     "correctAnswer": 2
   },
   {
@@ -3444,9 +3504,9 @@
   },
   {
     "id": 381,
-    "question": "Si $f(n) \\in O(g(n))$ ¿cuál de estas situaciones no es posible?",
+    "question": "Si $f(n) \\in \\Omicron(g(n))$ ¿cuál de estas situaciones no es posible?",
     "options": [
-      "$g(n) \\in O(f(n))$",
+      "$g(n) \\in \\Omicron(f(n))$",
       "$\\lim_{n \\to \\infty} \\frac{g(n)}{f(n)} = 0$",
       "$f(n) \\in \\Omega(g(n))$"
     ],
@@ -3487,22 +3547,27 @@
     "id": 385,
     "question": "¿Cuál de las siguientes jerarquías de complejidades es la correcta?",
     "options": [
-      "$O(1) \\subset O(\\lg n) \\subset O(\\lg \\lg n) \\subset ...$",
-      "$... \\subset O(n!) \\subset O(2^n) \\subset O(n^n)$",
-      "$... \\subset O(2^n) \\subset O(n!) \\subset O(n^n)$"
+      "$\\Omicron(1) \\subset \\Omicron(\\lg n) \\subset \\Omicron(\\lg \\lg n) \\subset ...$",
+      "$... \\subset \\Omicron(n!) \\subset \\Omicron(2^n) \\subset \\Omicron(n^n)$",
+      "$... \\subset \\Omicron(2^n) \\subset \\Omicron(n!) \\subset \\Omicron(n^n)$"
     ],
     "correctAnswer": 2
   },
   {
     "id": 386,
     "question": "Considera el algoritmo descrito a continuacion. Si consideramos como medida significativa el numero de movimientos del vector instrucciones 1 y 3 entonces el algoritmo tiene un coste:```cpp\nfor (i = 1; i < N; i++) {\n  X = V[i];  // (1)\n  Izq = 0;\n  Der = i - 1;\n  while (Izq <= Der) {\n    Medio = (Izq + Der) / 2;\n    if (X < V[Medio])  // (2)\n      Der = Medio - 1;\n    else\n      Izq = Medio + 1;\n  }\n  for (j = i - 1; j >= Izq; j--) {\n    V[j + 1] = V[j];  // (3)\n  }\n  V[Izq] = X;\n}\n```",
-    "options": ["$\\Theta(n^2)$", "$O(n)$", "$\\Theta(n)$", "$\\Omega(n)$ y $O(n^2)$"],
+    "options": [
+      "$\\Theta(n^2)$",
+      "$\\Omicron(n)$",
+      "$\\Theta(n)$",
+      "$\\Omega(n)$ y $\\Omicron(n^2)$"
+    ],
     "correctAnswer": 3
   },
   {
     "id": 387,
     "question": "Dado un vector de tamaño n de números enteros. ¿Con qué complejidad temporal se puede determinar si sus elementos están dispuestos formando un montículo de mínimos?",
-    "options": ["$O(n)$", "$O(\\log n)$", "$O(1)$"],
+    "options": ["$\\Omicron(n)$", "$\\Omicron(\\log n)$", "$\\Omicron(1)$"],
     "correctAnswer": 0
   },
   {
@@ -3561,9 +3626,9 @@
     "id": 393,
     "question": "De las siguientes expresiones, o bien dos son verdaderas y una es falsa, o bien dos son falsas y una es verdadera. Marca la que (en este sentido) es distinta a las otras dos.",
     "options": [
-      "$(4^{\\log_2(n)}) \\subseteq O(n^2) \\subset O(2^n)$",
-      "$O(n^2) \\subset O(2^{\\log_2(n)}) \\subset O(2^n)$",
-      "$O(2^{\\log_2(n)}) \\subseteq O(n^2) \\subset O(n!)$"
+      "$(4^{\\log_2(n)}) \\subseteq \\Omicron(n^2) \\subset \\Omicron(2^n)$",
+      "$\\Omicron(n^2) \\subset \\Omicron(2^{\\log_2(n)}) \\subset \\Omicron(2^n)$",
+      "$\\Omicron(2^{\\log_2(n)}) \\subseteq \\Omicron(n^2) \\subset \\Omicron(n!)$"
     ],
     "correctAnswer": 1
   },
@@ -3666,8 +3731,8 @@
     "question": "Sea A una matriz cuadrada n x n. Se trata de buscar una permutación de las columnas tal que la suma de los elementos de la diagonal principal se mínima. Indica cuál de las siguientes afirmaciones es falsa:",
     "options": [
       "Si se construye una solución al problema basada en el esquema de ramificación y poda, una buena elección de cotas optimistas y pesimistas podría evitar la exploración de todas las permutaciones posibles.",
-      "La complejidad temporal de la mejor solución posible al problema es $O(n!)$.",
-      "La complejidad temporal de la mejor solución posible al problema es $O(n^2)$."
+      "La complejidad temporal de la mejor solución posible al problema es $\\Omicron(n!)$.",
+      "La complejidad temporal de la mejor solución posible al problema es $\\Omicron(n^2)$."
     ],
     "correctAnswer": 2
   },
@@ -3701,8 +3766,8 @@
     "id": 408,
     "question": "Sea A un árbol binario ordenado de n nodos, en el que todos sus elementos son distintos entonces la operación de búsqueda de un elemento que no esta en el árbol tendrá un coste",
     "options": [
-      "$O(\\log n)$",
-      "$\\Omega(\\log n)$ y $O(n)$",
+      "$\\Omicron(\\log n)$",
+      "$\\Omega(\\log n)$ y $\\Omicron(n)$",
       "$\\Theta(\\log n)$",
       "$\\Theta(n)$"
     ],
@@ -3710,8 +3775,14 @@
   },
   {
     "id": 409,
-    "question": "Resolviendo la ecuación de recurrencia del ejercicio siguiente se obtiene que su función de coste es:```\nFunción F (ent n: entero): entero\nvariables x, i: entero\nInicio\nsi (n>=1) entonces\nretorna 1\nsi no\npara i de 1 a n hacer\nx← 1\nmientras x<n hacer\nx← x*2\nfinmientras\nfinpara\nretorna F(n/2)+F(n/2)\nfinsi\nfin\n```",
-    "options": ["O(n*log^2 n)", "O(log n)", "O(2^n)", "O(n^2)", "O(n)"],
+    "question": "Resolviendo la ecuación de recurrencia del ejercicio siguiente se obtiene que su función de coste es:```text\nFunción F(ent n: entero): entero\nvariables x, i: entero\nInicio\n  si (n >= 1) entonces\n    retorna 1\n  si no\n    para i de 1 a n hacer\n      x ← 1\n      mientras x < n hacer\n        x ← x * 2\n      finmientras\n    finpara\n    retorna F(n/2) + F(n/2)\n  finsi\nfin\n```",
+    "options": [
+      "\\Omicron(n*log^2 n)",
+      "\\Omicron(log n)",
+      "\\Omicron(2^n)",
+      "\\Omicron(n^2)",
+      "\\Omicron(n)"
+    ],
     "correctAnswer": 0
   },
   {
@@ -3727,18 +3798,18 @@
   {
     "id": 411,
     "question": "Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función?```cpp\nvoid f(unsigned n) {\n  if (n < 2)\n    return;\n  for (int i = 0; i < pow(n, 2); i++)\n    cout << \"*\";\n  for (int i = 0; i < 5; i++)\n    f(n / 2);\n}\n```",
-    "options": ["$O(5^{\\log n})$", "$O(n^2 \\log n)$", "$O(n^2)$"],
+    "options": ["$\\Omicron(5^{\\log n})$", "$\\Omicron(n^2 \\log n)$", "$\\Omicron(n^2)$"],
     "correctAnswer": 0
   },
   {
     "id": 412,
     "question": "¿Cuál es la complejidad temporal de la siguiente función recursiva?```cpp\nunsigned desperdicio(unsigned n) {\n  if (n <= 1)\n    return 0;\n  unsigned sum = desperdicio(n / 2) + desperdicio(n / 2);\n  for (unsigned i = 1; i < n - 1; i++)\n    for (unsigned j = 1; j <= i; j++)\n      sum += i * j;\n  return sum;\n}\n```",
-    "options": ["$O(2^n)$", "$O(n^2)$", "$O(n^2 \\log n)$"],
+    "options": ["$\\Omicron(2^n)$", "$\\Omicron(n^2)$", "$\\Omicron(n^2 \\log n)$"],
     "correctAnswer": 1
   },
   {
     "id": 413,
-    "question": "El recorrido en profundidad de un grafo G no dirigido ha producido el arbol que se muestra en la figura, en el que cada nodo esta numerado siguiendo el orden de visita del recorrido en profundidad:```\n1\n/ | \\\n2  5  7\n/|  |\n3 4  6\n```",
+    "question": "El recorrido en profundidad de un grafo G no dirigido ha producido el arbol que se muestra en la figura, en el que cada nodo esta numerado siguiendo el orden de visita del recorrido en profundidad:```text\n1\n/ | \\\n2  5  7\n/|  |\n3 4  6\n```",
     "options": [
       "Los nodos 1 y 2 pueden ser adyacentes al nodo 4",
       "El nodo 2 es adyacente al nodo 3 y el nodo 3 puede ser adyacente al nodo 4",
@@ -3792,13 +3863,17 @@
   {
     "id": 418,
     "question": "Sea f(n) la solución de $f(n) = 2f(n/2) + n$, $f(1) = 1$",
-    "options": ["$f(n) \\in O(n)$", "$f(n) \\in O(n^2)$", "$f(n) \\in O(n \\log n)$"],
+    "options": [
+      "$f(n) \\in \\Omicron(n)$",
+      "$f(n) \\in \\Omicron(n^2)$",
+      "$f(n) \\in \\Omicron(n \\log n)$"
+    ],
     "correctAnswer": 2
   },
   {
     "id": 419,
-    "question": "```cppint f(int x, int y) {\n  if (x <= y)\n    return 1;\n  return x + f(x - 1, y);\n}\n```",
-    "options": ["$O(x^2)$", "$O(1)$", "$O(x)$"],
+    "question": "```cpp\nint f(int x, int y) {\n  if (x <= y)\n    return 1;\n  return x + f(x - 1, y);\n}\n```",
+    "options": ["$\\Omicron(x^2)$", "$\\Omicron(1)$", "$\\Omicron(x)$"],
     "correctAnswer": 1
   },
   {
@@ -3815,11 +3890,11 @@
   },
   {
     "id": 421,
-    "question": "Si $f \\notin O(g_1)$ y $f \\in O(g_2)$ entonces siempre se cumplirá:",
+    "question": "Si $f \\notin \\Omicron(g_1)$ y $f \\in \\Omicron(g_2)$ entonces siempre se cumplirá:",
     "options": [
       "$f \\in \\Omega(\\min(g_1,g_2))$",
       "$f \\in \\Omega(g_1 + g_2)$",
-      "$f \\notin O(\\max(g_1, g_2))$"
+      "$f \\notin \\Omicron(\\max(g_1, g_2))$"
     ],
     "correctAnswer": 0
   },
@@ -3858,14 +3933,14 @@
     "options": [
       "$n + n \\log n \\in \\Theta(n)$",
       "$n + n \\log n \\in \\Omega(n)$",
-      "$2n^2 + 3n + 1 \\in O(n^3)$"
+      "$2n^2 + 3n + 1 \\in \\Omicron(n^3)$"
     ],
     "correctAnswer": 2
   },
   {
     "id": 426,
-    "question": "Un problema de tamaño n puede transformarse en tiempo $O(n^2)$ en otro de tamaño n-1. Por otro lado, la solución al problema cuando la talla es 1 requiere un tiempo constante, ¿cuál de estas clases de coste temporal asintótico es la más ajustada?",
-    "options": ["$O(2^n)$", "$O(n^3)$", "$O(n^2)$"],
+    "question": "Un problema de tamaño n puede transformarse en tiempo $\\Omicron(n^2)$ en otro de tamaño n-1. Por otro lado, la solución al problema cuando la talla es 1 requiere un tiempo constante, ¿cuál de estas clases de coste temporal asintótico es la más ajustada?",
+    "options": ["$\\Omicron(2^n)$", "$\\Omicron(n^3)$", "$\\Omicron(n^2)$"],
     "correctAnswer": 1
   },
   {
@@ -3880,7 +3955,7 @@
   },
   {
     "id": 428,
-    "question": "Indica cuál de los siguientes conjuntos es el conjunto $O(f)$:",
+    "question": "Indica cuál de los siguientes conjuntos es el conjunto $\\Omicron(f)$:",
     "options": [
       "$\\{g : \\mathbb{N} \\to \\mathbb{R}^+ \\mid \\exists c > 0, \\exists n_0 \\in \\mathbb{N}, \\forall n > n_0, g(n) < c f(n)\\}$",
       "$\\{g : \\mathbb{N} \\to \\mathbb{R}^+ \\mid \\exists c > 0, \\exists n_0 \\in \\mathbb{N} : \\forall n > n_0, g(n) > c f(n)\\}$",
@@ -3892,9 +3967,9 @@
     "id": 429,
     "question": "La complejidad temporal del algoritmo Mergesort cuando se aplica a un vector de tamaño n es... (selecciona la más ajustada)",
     "options": [
-      "... $\\Omega(n)$ y $O(n^2)$.",
+      "... $\\Omega(n)$ y $\\Omicron(n^2)$.",
       "... $\\Theta(n \\cdot \\log(n))$.",
-      "... $\\Omega(n \\cdot \\log(n))$ y $O(n^2)$."
+      "... $\\Omega(n \\cdot \\log(n))$ y $\\Omicron(n^2)$."
     ],
     "correctAnswer": 1
   },
@@ -3920,14 +3995,14 @@
   },
   {
     "id": 432,
-    "question": "Un problema de tamaño $n$ puede transformarse en tiempo $O(1)$ en siete de tamaño $\\frac{n}{7}$; por otro lado, la solución al problema cuando la talla es 1 requiere un tiempo constante.¿Cuál de estas clases de coste temporal asintótico es la más ajustada?",
-    "options": ["$O(n^2)$", "$O(n)$", "$O(n \\log n)$"],
+    "question": "Un problema de tamaño $n$ puede transformarse en tiempo $\\Omicron(1)$ en siete de tamaño $\\frac{n}{7}$; por otro lado, la solución al problema cuando la talla es 1 requiere un tiempo constante.¿Cuál de estas clases de coste temporal asintótico es la más ajustada?",
+    "options": ["$\\Omicron(n^2)$", "$\\Omicron(n)$", "$\\Omicron(n \\log n)$"],
     "correctAnswer": 2
   },
   {
     "id": 433,
     "question": "Se pretende implementar mediante programación dinámica iterativa la función recursiva:```cpp\nint f(int x, int y) {\n  if (x <= y)\n    return 1;\n  return x + f(x - 1, y);\n}\n```\n¿Cuál es la mejor complejidad temporal que se puede conseguir?",
-    "options": ["$O(y)$", "$O(x)$", "$O(x \\cdot y)$"],
+    "options": ["$\\Omicron(y)$", "$\\Omicron(x)$", "$\\Omicron(x \\cdot y)$"],
     "correctAnswer": 1
   },
   {
@@ -3952,7 +4027,7 @@
   },
   {
     "id": 436,
-    "question": "¿Cuál de los siguientes algoritmos de ordenación necesita un espacio de almacenamiento adicional al vector que se ordena con complejidad O(n)?",
+    "question": "¿Cuál de los siguientes algoritmos de ordenación necesita un espacio de almacenamiento adicional al vector que se ordena con complejidad \\Omicron(n)?",
     "options": ["Mergesort.", "Quicksort.", "Bubblesort."],
     "correctAnswer": 0
   },
@@ -4047,7 +4122,7 @@
   {
     "id": 446,
     "question": "Sea A un árbol binario ordenado equilibrad de n elementos en el que todos sus elementos son distintos, entonces la operación de búsqueda de un elemento que no esta en el árbol tendrá un coste",
-    "options": ["Θ(n)", "O(log n)", "Ω(log n) y O(n)", "Θ(log n)"],
+    "options": ["Θ(n)", "\\Omicron(log n)", "Ω(log n) y \\Omicron(n)", "Θ(log n)"],
     "correctAnswer": 1
   },
   {
@@ -4080,9 +4155,9 @@
     "id": 450,
     "question": "De las expresiones siguientes, o bien dos son verdaderas y una es falsa, o bien dos son falsas y una es verdadera. Marca la que (en este sentido) es diferente de las otras dos.",
     "options": [
-      "Si $f \\in \\Theta(g)$ entonces $O(f) = O(g)$.",
-      "Si $f \\in O(g)$ entonces $g \\notin O(f)$.",
-      "Si $f \\notin \\Omega(g)$ entonces $O(f) = \\Omega(g)$."
+      "Si $f \\in \\Theta(g)$ entonces $\\Omicron(f) = \\Omicron(g)$.",
+      "Si $f \\in \\Omicron(g)$ entonces $g \\notin \\Omicron(f)$.",
+      "Si $f \\notin \\Omega(g)$ entonces $\\Omicron(f) = \\Omega(g)$."
     ],
     "correctAnswer": 0
   },
@@ -4161,13 +4236,19 @@
   {
     "id": 459,
     "question": "Calcular la complejidad del siguiente fragmento de codigo:```cpp\nfor (i = 1; i <= n; i++)\n  for (j = 1; j <= 10000; j++)\n    for (k = n - 1; k <= n; k++)\n      cout << i << j << k << endl;\n```",
-    "options": ["$O(n^2)$", "$O(n^3)$", "$O(2^n)$", "$O(n)$", "$O(n \\cdot \\log n)$"],
+    "options": [
+      "$\\Omicron(n^2)$",
+      "$\\Omicron(n^3)$",
+      "$\\Omicron(2^n)$",
+      "$\\Omicron(n)$",
+      "$\\Omicron(n \\cdot \\log n)$"
+    ],
     "correctAnswer": 3
   },
   {
     "id": 460,
     "question": "¿Cuál es la complejidad temporal en el caso mejor del algoritmo que, dado un vector, nos dice cuál de sus elementos quedaría en la posición k si lo ordenáramos por orden descendente de valor?",
-    "options": ["$O(\\log n)$", "$O(n)$", "$O(n \\log n)$"],
+    "options": ["$\\Omicron(\\log n)$", "$\\Omicron(n)$", "$\\Omicron(n \\log n)$"],
     "correctAnswer": 1
   },
   {
@@ -4182,7 +4263,7 @@
   },
   {
     "id": 462,
-    "question": "La complejidad del siguiente bucle es:```\nfor (i=1; i<=N; i++) {\nif (T[i] == x)\nAux=i;\n}\n```",
+    "question": "La complejidad del siguiente bucle es:```cpp\nfor (i = 1; i <= N; i++) {\n  if (T[i] == x)\n    Aux = i;\n}\n```",
     "options": [
       "IV I y II son correctas",
       "V ninguna de las anteriores",
@@ -4196,7 +4277,7 @@
     "id": 463,
     "question": "¿Cuál de estas tres expresiones es falsa?",
     "options": [
-      "$2n^3 - 10n^2 + 1 \\in O(n^3)$",
+      "$2n^3 - 10n^2 + 1 \\in \\Omicron(n^3)$",
       "$n + n \\sqrt{n} \\in \\Omega(n)$",
       "$n + n \\sqrt{n} \\in \\Theta(n)$"
     ],
@@ -4214,10 +4295,10 @@
   },
   {
     "id": 465,
-    "question": "Si $f(n) \\in O(n^2)$, ¿podemos decir siempre que $f(n) \\in O(n^3)$?",
+    "question": "Si $f(n) \\in \\Omicron(n^2)$, ¿podemos decir siempre que $f(n) \\in \\Omicron(n^3)$?",
     "options": [
-      "No, ya que $n^2 \\in O(n^3)$",
-      "Si ya que $n^2 \\in O(n^3)$",
+      "No, ya que $n^2 \\in \\Omicron(n^3)$",
+      "Si ya que $n^2 \\in \\Omicron(n^3)$",
       "Sólo para valores bajos de"
     ],
     "correctAnswer": 1
@@ -4245,7 +4326,11 @@
   {
     "id": 468,
     "question": "¿Cuál es el coste de monticulizar (heapify) un vector de tamaño N?",
-    "options": ["$O(N)$ y $\\Omega(1)$", "$O(N \\log N)$ y $\\Omega(N)$", "$\\Theta(N)$"],
+    "options": [
+      "$\\Omicron(N)$ y $\\Omega(1)$",
+      "$\\Omicron(N \\log N)$ y $\\Omega(N)$",
+      "$\\Theta(N)$"
+    ],
     "correctAnswer": 2
   },
   {
@@ -4283,7 +4368,11 @@
   {
     "id": 472,
     "question": "Se dispone de un conjunto de n valores numéricos dispuestos en un vector sin orden pre-establecido. Se desea escribir una función que reciba ese vector y un valor k ($n/2 \\leq k \\leq n$) y que devuelva los k valores más pequeños dispuestos en otro vector de manera ordenada. ¿Cuál es la complejidad temporal del mejor algoritmo que se puede escribir?",
-    "options": ["$O(kn)$", "Ninguna de las otras dos opciones es cierta.", "$O(k \\log n)$"],
+    "options": [
+      "$\\Omicron(kn)$",
+      "Ninguna de las otras dos opciones es cierta.",
+      "$\\Omicron(k \\log n)$"
+    ],
     "correctAnswer": 2
   },
   {
@@ -4346,7 +4435,7 @@
   {
     "id": 479,
     "question": "Considerad la función siguiente:```cpp\nint M(int i, int f) {\n  if (i == f)\n    return i;\n  else {\n    e = v[M(i, (i + f) / 2)];\n    f = v[M((i + f) / 2 + 1, f)];\n    if (e < f)\n      return e;\n    else\n      return f;\n  }\n}\n```\nSi la talla del problema viene dada por $n = f - i + 1$, ¿cuál es el coste temporal asintótico en el supuesto de que $n$ sea una potencia de 2?",
-    "options": ["$O(n)$.", "$O(n^2)$.", "$O(n \\log(n))$."],
+    "options": ["$\\Omicron(n)$.", "$\\Omicron(n^2)$.", "$\\Omicron(n \\log(n))$."],
     "correctAnswer": 0
   },
   {
@@ -4373,7 +4462,7 @@
   },
   {
     "id": 482,
-    "question": "Pertenece $3n^2 + 3$ a $O(n^3)$?",
+    "question": "Pertenece $3n^2 + 3$ a $\\Omicron(n^3)$?",
     "options": ["Solo para c = 1 y n_0 = 5.", "No.", "Sí."],
     "correctAnswer": 2
   },
@@ -4387,8 +4476,8 @@
     "id": 484,
     "question": "Se pretende aplicar la técnica memoización a la siguiente función recursiva:```cpp\nint f(int x, int y) {\n  if (x <= y)\n    return 1;\n  return x + f(x - 1, y);\n}\n```\nEn el caso más desfavorable, ¿qué complejidades temporal y espacial cabe esperar de la función resultante?",
     "options": [
-      "$O(x-y)$, tanto temporal como espacial.",
-      "Temporal $O(x-y)$ y espacial $O(1)$",
+      "$\\Omicron(x-y)$, tanto temporal como espacial.",
+      "Temporal $\\Omicron(x-y)$ y espacial $\\Omicron(1)$",
       "Ninguna de las otras dos opciones es correcta"
     ],
     "correctAnswer": 0
@@ -4396,7 +4485,7 @@
   {
     "id": 485,
     "question": "Cual es el coste espacial asintotico del siguiente algoritmo:```cpp\nint f(int n) {\n  int a = 1, r = 0;\n  for (int i = 0; i < n; i++) {\n    r = a + r;\n    a = 2 * r;\n  }\n}\n```",
-    "options": ["$O(n)$", "$O(\\log(n))$", "$O(1)$"],
+    "options": ["$\\Omicron(n)$", "$\\Omicron(\\log(n))$", "$\\Omicron(1)$"],
     "correctAnswer": 2
   },
   {
@@ -4442,7 +4531,7 @@
   },
   {
     "id": 490,
-    "question": "Estudiad la relación de recurrencia:$T(n) = \\begin{cases} 1 & \\text{si } n \\leq 1 \\\\ pT(n/q) + g(n) & \\text{en otro caso} \\end{cases}$ (donde p y q son enteros mayores que 1). Di cuál de los siguientes esquemas algorítmicos produce de manera natural relaciones de recurrencia así.",
+    "question": "Estudiad la relación de recurrencia:\n$T(n) = \\begin{cases} 1 & \\text{si } n \\leq 1 \\\\ pT(n/q) + g(n) & \\text{en otro caso} \\end{cases}$ (donde p y q son enteros mayores que 1). Di cuál de los siguientes esquemas algorítmicos produce de manera natural relaciones de recurrencia así.",
     "options": ["Divide y vencerás.", "Programación dinámica.", "Ramificación y poda."],
     "correctAnswer": 0
   },
@@ -4458,7 +4547,7 @@
   },
   {
     "id": 492,
-    "question": "Considera la función siguiente que es un algoritmo típico de búsquedaSupongamos que x esta en el vector y que todos los elementos son distintos. En este caso, el numero medio de comparaciones con la variable x es:```\nFunción pertenece (ent L: vector de enteros, ent x:entero):entero\nvariables: i, aux: entero\nInicio\naux← 0\npara i de 0 a n-1 hacer\nsi L[i]==x entonces\naux← i\nfinsi\nfinpara\nretorna aux\nFin\n```",
+    "question": "Considera la función siguiente que es un algoritmo típico de búsquedaSupongamos que x esta en el vector y que todos los elementos son distintos. En este caso, el numero medio de comparaciones con la variable x es:```text\nFunción pertenece(ent L: vector de enteros, ent x: entero): entero\nvariables: i, aux: entero\nInicio\n  aux ← 0\n  para i de 0 a n-1 hacer\n    si L[i] == x entonces\n      aux ← i\n    finsi\n  finpara\n  retorna aux\nFin\n```",
     "options": ["n", "(n+1)/2", "n/2", "1"],
     "correctAnswer": 0
   },
@@ -4502,7 +4591,7 @@
   },
   {
     "id": 498,
-    "question": "¿De qué clase de complejidad es la solución de la siguiente relación de recurrencia?```f(n) = n(n-1) + f(n-1) // si n>0\nf(0) = 1 // si n=0\n```",
+    "question": "¿De qué clase de complejidad es la solución de la siguiente relación de recurrencia?```text\nf(n) = n(n-1) + f(n-1)  // si n > 0\nf(0) = 1                 // si n = 0\n```",
     "options": [
       "$f(n) \\in \\Theta(n^3)$",
       "$f(n) \\in \\Theta(n^2)$",
@@ -4514,9 +4603,9 @@
     "id": 499,
     "question": "Se pretende obtener la complejidad temporal en el caso más desfavorable de la siguiente función.```cpp\nint exa(vector<int>& v) {\n  int i, sum = 0, n = v.size();\n  if (n > 0) {\n    int j = n;\n    while (sum < 100 and j != 0) {\n      j = j / 2;\n      sum = 0;\n      for (i = j; i < n; i++)\n        sum += v[i];\n    }\n    return j;\n  } else\n    return -1;\n}\n```",
     "options": [
-      "$C_s(n)=\\sum^{\\log(n+1)}_{k=1}(n-n/2^k)\\in O(n\\log n)$",
-      "$C_s(n)=\\sum^{\\log n}_{j=1}\\sum^{j}_{i=1}(1/2)^i \\in O(n\\log n)$",
-      "$C_s(n)=\\sum^{n/2}_{j=0}(1/2\\sum^{n}_{i=j}1) \\in O(n\\log n)$"
+      "$C_s(n)=\\sum^{\\log(n+1)}_{k=1}(n-n/2^k)\\in \\Omicron(n\\log n)$",
+      "$C_s(n)=\\sum^{\\log n}_{j=1}\\sum^{j}_{i=1}(1/2)^i \\in \\Omicron(n\\log n)$",
+      "$C_s(n)=\\sum^{n/2}_{j=0}(1/2\\sum^{n}_{i=j}1) \\in \\Omicron(n\\log n)$"
     ],
     "correctAnswer": 0
   },
@@ -4547,8 +4636,8 @@
     "question": "En la solución al problema de la mochila continua, ¿por qué es conveniente la ordenación previa de los objetos?",
     "options": [
       "Porque si no se hace no es posible garantizar que la toma de decisiones siga un criterio voraz",
-      "Para reducir la complejidad temporal en la toma de cada decisión de $O(n)$ a $O(1)$, donde n es el numero de objetos a considerar",
-      "Para reducir la complejidad temporal en la toma de cada decisión de $O(n^2)$ a $O(n\\log n)$, donde n es el numero de objetos a considerar"
+      "Para reducir la complejidad temporal en la toma de cada decisión de $\\Omicron(n)$ a $\\Omicron(1)$, donde n es el numero de objetos a considerar",
+      "Para reducir la complejidad temporal en la toma de cada decisión de $\\Omicron(n^2)$ a $\\Omicron(n\\log n)$, donde n es el numero de objetos a considerar"
     ],
     "correctAnswer": 1
   },
@@ -4566,8 +4655,8 @@
     "id": 504,
     "question": "En la solución al problema de la mochila continua, ¿por qué es conveniente la ordenación previa de los objetos?",
     "options": [
-      "Para reducir la complejidad temporal en la toma de cada decisión de $O(n)$ a $O(1)$, donde n es el numero de objetos a considerar",
-      "Para reducir la complejidad temporal en la toma de cada decisión de $O(n^2)$ a $O(n \\log n)$, donde n es el numero de objetos a considerar",
+      "Para reducir la complejidad temporal en la toma de cada decisión de $\\Omicron(n)$ a $\\Omicron(1)$, donde n es el numero de objetos a considerar",
+      "Para reducir la complejidad temporal en la toma de cada decisión de $\\Omicron(n^2)$ a $\\Omicron(n \\log n)$, donde n es el numero de objetos a considerar",
       "Porque si no se hace no es posible garantizar que la toma de decisiones siga un criterio voraz"
     ],
     "correctAnswer": 0
@@ -4586,7 +4675,7 @@
   {
     "id": 506,
     "question": "Indica cuál es la complejidad de la función siguiente:```cpp\nunsigned sum(const mat& A) {\n  // A es una matriz cuadrada\n  unsigned d = A.n_rows();\n  unsigned a = 0;\n  for (unsigned i = 0; i < d; i++)\n    for (unsigned j = 0; j < d; j++)\n      a += A(i, j);\n  return a;\n}\n```",
-    "options": ["$O(n^2)$", "$O(n)$", "$O(n \\log n)$"],
+    "options": ["$\\Omicron(n^2)$", "$\\Omicron(n)$", "$\\Omicron(n \\log n)$"],
     "correctAnswer": 1
   },
   {
@@ -4684,7 +4773,7 @@
   {
     "id": 517,
     "question": "En un programa con dos bucles anidados, cada uno de los cuáles hace n iteraciones tarda:",
-    "options": ["$O(n^2)$", "$O(n)$", "$O(2^n)$"],
+    "options": ["$\\Omicron(n^2)$", "$\\Omicron(n)$", "$\\Omicron(2^n)$"],
     "correctAnswer": 0
   },
   {
@@ -4752,7 +4841,7 @@
   },
   {
     "id": 524,
-    "question": "El recorrido en profundidad de un grafo G no dirigido ha producido el árbol que se muestra en el que cada nodo esta numerad siguiendo el orden de visita del recorrido en profundidad```\n1\n/|\\\n2 6 7\n/\n3\n/ \\\n4 5\n```",
+    "question": "El recorrido en profundidad de un grafo G no dirigido ha producido el árbol que se muestra en el que cada nodo esta numerad siguiendo el orden de visita del recorrido en profundidad```text\n1\n/|\\\n2 6 7\n/\n3\n/ \\\n4 5\n```",
     "options": [
       "El nodo 6 es adyacente al nodo 4",
       "Se trata de un grafo fuertemente conexo",
@@ -4802,7 +4891,7 @@
   {
     "id": 529,
     "question": "Complejidad de```cpp\nvoid f(int n, int arr[]) {\n  int i = 0, j = 0;\n  for (; i < n; ++i)\n    while (j < n && arr[i] < arr[j])\n      j++;\n}\n```",
-    "options": ["$O(n^2)$", "$O(n \\log n)$", "$O(n)$"],
+    "options": ["$\\Omicron(n^2)$", "$\\Omicron(n \\log n)$", "$\\Omicron(n)$"],
     "correctAnswer": 2
   },
   {
@@ -4863,8 +4952,8 @@
   },
   {
     "id": 536,
-    "question": "¿Qué complejidad se obtiene a partir de la relación de recurrencia $T(n) = 8T(n/2) + n^3$ con $T(1) = O(1)$?",
-    "options": ["$O(n \\log n)$", "$O(n^3 \\log n)$", "$O(n^3)$"],
+    "question": "¿Qué complejidad se obtiene a partir de la relación de recurrencia $T(n) = 8T(n/2) + n^3$ con $T(1) = \\Omicron(1)$?",
+    "options": ["$\\Omicron(n \\log n)$", "$\\Omicron(n^3 \\log n)$", "$\\Omicron(n^3)$"],
     "correctAnswer": 1
   },
   {
@@ -4932,7 +5021,7 @@
   {
     "id": 543,
     "question": "Un programa con dos bucles anidados, el primero hace n iteraciones y el segundo la mitad...",
-    "options": ["$O(n \\log(n))$", "$O(n\\sqrt{n})$", "$O(n^2)$"],
+    "options": ["$\\Omicron(n \\log(n))$", "$\\Omicron(n\\sqrt{n})$", "$\\Omicron(n^2)$"],
     "correctAnswer": 2
   },
   {
@@ -4958,8 +5047,8 @@
   },
   {
     "id": 546,
-    "question": "Un problema de tamaño n puede transformarse en tiempo $O(n^2)$ en otro de tamaño n - 1. Por otro lado, la solución al problema cuando la talla es 1 requiere tiempo constante. ¿cuál de estas clases de coste temporal asintótico es la más ajustada?",
-    "options": ["$O(n^3)$", "$O(2^n)$", "$O(n^2)$"],
+    "question": "Un problema de tamaño n puede transformarse en tiempo $\\Omicron(n^2)$ en otro de tamaño n - 1. Por otro lado, la solución al problema cuando la talla es 1 requiere tiempo constante. ¿cuál de estas clases de coste temporal asintótico es la más ajustada?",
+    "options": ["$\\Omicron(n^3)$", "$\\Omicron(2^n)$", "$\\Omicron(n^2)$"],
     "correctAnswer": 0
   },
   {
@@ -4974,7 +5063,7 @@
   },
   {
     "id": 548,
-    "question": "El recorrido en profundidad de un grafo G no dirigido ha producido el arbol que se muestra en la figura, en el que cada nodo esta numerado siguiendo el orden de visita del recorrido en profundidad:```\n1\n/ \\\n2   6\n/ \\   \\\n3   4   7\n/\n5\n```",
+    "question": "El recorrido en profundidad de un grafo G no dirigido ha producido el arbol que se muestra en la figura, en el que cada nodo esta numerado siguiendo el orden de visita del recorrido en profundidad:```text\n1\n/ \\\n2   6\n/ \\   \\\n3   4   7\n/\n5\n```",
     "options": [
       "El nodo 2 puede ser adyacente al nodo 5, y el nodo 4 puede ser adyacente al nodo 1",
       "El nodo 6 y 7 no son adyacentes y el nodo 5 y el nodo 7 si lo son",
@@ -4986,7 +5075,11 @@
   {
     "id": 549,
     "question": "Se pretende borrar todos los elementos de un vector cuyo valor es un número par. Si el tamaño del vector es n, ¿con qué coste temporal asintótico se podría realizar esa operación?",
-    "options": ["$O(n)$", "$O(n^2)$", "Ninguna de las otras dos opciones es la correcta."],
+    "options": [
+      "$\\Omicron(n)$",
+      "$\\Omicron(n^2)$",
+      "Ninguna de las otras dos opciones es la correcta."
+    ],
     "correctAnswer": 0
   },
   {
@@ -5002,11 +5095,11 @@
   },
   {
     "id": 551,
-    "question": "La siguiente relación de recurrencia expresa la complejidad de un algoritmo recursivo, donde g(n) es una función polinómica:$T(n) = \\begin{cases} 1 & \\text{si } n \\leq 1 \\\\ 2T(n/2) + g(n) & \\text{en otro caso} \\end{cases}$\nDi cuál de las siguientes afirmaciones es falsa:",
+    "question": "La siguiente relación de recurrencia expresa la complejidad de un algoritmo recursivo, donde g(n) es una función polinómica:\n$T(n) = \\begin{cases} 1 & \\text{si } n \\leq 1 \\\\ 2T(n/2) + g(n) & \\text{en otro caso} \\end{cases}$\nDi cuál de las siguientes afirmaciones es falsa:",
     "options": [
-      "Si $g(n) \\in O(1)$ la relación de recurrencia representa la complejidad temporal del algoritmo de búsqueda dicotómica.",
-      "Si $g(n) \\in O(n^2)$ la relación de recurrencia representa la complejidad temporal del algoritmo de búsqueda por inserción.",
-      "Si $g(n) \\in O(n)$ la relación de recurrencia representa la complejidad temporal del algoritmo de ordenación mergesort."
+      "Si $g(n) \\in \\Omicron(1)$ la relación de recurrencia representa la complejidad temporal del algoritmo de búsqueda dicotómica.",
+      "Si $g(n) \\in \\Omicron(n^2)$ la relación de recurrencia representa la complejidad temporal del algoritmo de búsqueda por inserción.",
+      "Si $g(n) \\in \\Omicron(n)$ la relación de recurrencia representa la complejidad temporal del algoritmo de ordenación mergesort."
     ],
     "correctAnswer": 1
   },
@@ -5072,7 +5165,7 @@
     "question": "Si el coste temporal de un algoritmo es T(n), ¿cuál de las siguientes situaciones es imposible?",
     "options": [
       "$T(n) \\in \\Omega(n)$ y $T(n) \\in \\Theta(n^2)$",
-      "$T(n) \\in O(n)$ y $T(n) \\in \\Theta(n)$",
+      "$T(n) \\in \\Omicron(n)$ y $T(n) \\in \\Theta(n)$",
       "$T(n) \\in \\Theta(n)$ y $T(n) \\in \\Omega(n^2)$"
     ],
     "correctAnswer": 2
@@ -5081,7 +5174,7 @@
     "id": 559,
     "question": "De las siguientes expresiones, o bien dos son verdaderas y una es falsa, o bien dos son falsas y una es verdadera. Marca la que (en este sentido) es distinta a las otras dos.",
     "options": [
-      "$O(n^2) \\subset O(2^{\\log_2 n})$",
+      "$\\Omicron(n^2) \\subset \\Omicron(2^{\\log_2 n})$",
       "$n + n \\log_2 n \\in \\Omega(n + n \\log_2 n)$",
       "$\\Omega(n^2) \\subset \\Omega(n)$"
     ],
@@ -5089,7 +5182,7 @@
   },
   {
     "id": 560,
-    "question": "La complejidad de la función TB es:```\nfunción TB (A: vector[λ]; iz , de : N) : N\nvar n,i:N;\nn=iz-de+1\nopcion\n(n < 1) : devuelve ( 0 ) ;\n(n = 1) : devuelve ( 1 ) ;\n(n > 1) : si (A[iz] = A[de]) entonces\ndevuelve (TB( A, iz + 1, de - 1 ) + 1);\nsino\ndevuelve (TB( A, iz + 1, de - 1 )) ;\nfinsi ;\nfopcion\nfin\n```",
+    "question": "La complejidad de la función TB es:```text\nfunción TB(A: vector[λ]; iz, de: N): N\nvar n, i: N;\nn = iz - de + 1\nopcion\n  (n < 1): devuelve(0);\n  (n = 1): devuelve(1);\n  (n > 1): si (A[iz] = A[de]) entonces\n             devuelve(TB(A, iz + 1, de - 1) + 1);\n           sino\n             devuelve(TB(A, iz + 1, de - 1));\n           finsi;\nfopcion\nfin\n```",
     "options": ["Θ (n)", "Θ (n · lg n)", "Θ (n^2 · lg n)"],
     "correctAnswer": 0
   },
@@ -5106,16 +5199,20 @@
   {
     "id": 562,
     "question": "Sea $f(n) = 2f(n/2) + 1$, $f(1) = 1$",
-    "options": ["$f(n) \\in O(n \\log(n))$", "$f(n) \\in O(n)$", "$f(n) \\in O(n^2)$"],
+    "options": [
+      "$f(n) \\in \\Omicron(n \\log(n))$",
+      "$f(n) \\in \\Omicron(n)$",
+      "$f(n) \\in \\Omicron(n^2)$"
+    ],
     "correctAnswer": 1
   },
   {
     "id": 563,
     "question": "Existen dos algoritmos que para ordenar un vector de n elementos, buscan el máximo de esos n elementos, lo intercambian con el n-ésimo elemento para ponerlo al final, y luego ordenan, usando el mismo algoritmo, el vector de las primeras n - 1 componentes. ¿Cuál de las afirmaciones siguientes es cierta?",
     "options": [
-      "Uno de los algoritmos es heapsort y el otro es una de las posibles maneras de realizar la ordenación por burbuja o bubblesort; el primero tiene un coste temporal $O(n \\cdot \\log(n))$ y el segundo, $O(n^2)$.",
-      "Uno de los algoritmos es heapsort y el otro es una de las posibles maneras de realizar la ordenación por selección; el primero tiene un coste temporal $O(n \\cdot \\log(n))$ y el segundo, $O(n^2)$.",
-      "Uno de los algoritmos es heapsort y el otro es una de las posibles maneras de realizar la ordenación por selección; el primero tiene un coste temporal $O(n)$ y el segundo, $O(n^2)$."
+      "Uno de los algoritmos es heapsort y el otro es una de las posibles maneras de realizar la ordenación por burbuja o bubblesort; el primero tiene un coste temporal $\\Omicron(n \\cdot \\log(n))$ y el segundo, $\\Omicron(n^2)$.",
+      "Uno de los algoritmos es heapsort y el otro es una de las posibles maneras de realizar la ordenación por selección; el primero tiene un coste temporal $\\Omicron(n \\cdot \\log(n))$ y el segundo, $\\Omicron(n^2)$.",
+      "Uno de los algoritmos es heapsort y el otro es una de las posibles maneras de realizar la ordenación por selección; el primero tiene un coste temporal $\\Omicron(n)$ y el segundo, $\\Omicron(n^2)$."
     ],
     "correctAnswer": 1
   },
@@ -5132,16 +5229,20 @@
   {
     "id": 565,
     "question": "$f(n) = \\sqrt{n} + 3f(n/3)$",
-    "options": ["$f(n) \\in O(n)$", "$f(n) \\in O(\\sqrt{n} \\log n)$", "$f(n) \\in O(n^3)$"],
+    "options": [
+      "$f(n) \\in \\Omicron(n)$",
+      "$f(n) \\in \\Omicron(\\sqrt{n} \\log n)$",
+      "$f(n) \\in \\Omicron(n^3)$"
+    ],
     "correctAnswer": 0
   },
   {
     "id": 566,
     "question": "De las siguientes situaciones, o bien dos son posibles y una no lo es, o bien al contrario, solo una es posible y las otras dos no lo son. Marca la que, en este sentido, es diferente a las demás.",
     "options": [
-      "$f(n) \\in O(n)$ y $f(n) \\in \\Omega(n^2)$.",
-      "$f(n) \\in O(n)$ y $f(n) \\in \\Omega(1)$.",
-      "$f(n) \\in O(n)$ y $f(n) \\in O(n^2)$."
+      "$f(n) \\in \\Omicron(n)$ y $f(n) \\in \\Omega(n^2)$.",
+      "$f(n) \\in \\Omicron(n)$ y $f(n) \\in \\Omega(1)$.",
+      "$f(n) \\in \\Omicron(n)$ y $f(n) \\in \\Omicron(n^2)$."
     ],
     "correctAnswer": 0,
     "tags": ["Junio 2022"]
@@ -5149,24 +5250,28 @@
   {
     "id": 567,
     "question": "Tenemos una lista ordenada de tamaño $n_o$ y una lista desordenada de tamaño $n_d$, queremos obtener una lista ordenada con todos los elementos, ¿Cual seria la complejidad de insertar uno a uno todos los elementos de la lista desordenada en la ordenada?",
-    "options": ["$O(n_o \\times n_d + n_d^2)$", "$O(n_d \\times n_o)$", "$O(n_d \\log n_o)$"],
+    "options": [
+      "$\\Omicron(n_o \\times n_d + n_d^2)$",
+      "$\\Omicron(n_d \\times n_o)$",
+      "$\\Omicron(n_d \\log n_o)$"
+    ],
     "correctAnswer": 0
   },
   {
     "id": 568,
     "question": "Cual es la complejidad de la función pertenece de un dato, en un árbol binario ordenado",
     "options": [
-      "$\\Omega(1)$ y $O(n)$",
+      "$\\Omega(1)$ y $\\Omicron(n)$",
       "$\\Theta(\\log n)$",
-      "$\\Omega(1)$ y $O(n^2)$",
+      "$\\Omega(1)$ y $\\Omicron(n^2)$",
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 0
   },
   {
     "id": 569,
-    "question": "Un problema de tamaño n puede transformarse en $O(n)$ en siete de tamaño n/7, por otro lado la solución al problema cuando la talla es 1 requiere tiempo constante ¿qué cota es más ajustada?",
-    "options": ["$O(n \\log n)$", "$O(n)$", "$O(n^2)$"],
+    "question": "Un problema de tamaño n puede transformarse en $\\Omicron(n)$ en siete de tamaño n/7, por otro lado la solución al problema cuando la talla es 1 requiere tiempo constante ¿qué cota es más ajustada?",
+    "options": ["$\\Omicron(n \\log n)$", "$\\Omicron(n)$", "$\\Omicron(n^2)$"],
     "correctAnswer": 0
   },
   {
@@ -5195,7 +5300,7 @@
     "options": [
       "$\\Omega(g) = \\{f: \\mathbb{N} \\to \\mathbb{R} \\mid g(n) \\leq cf(n)\\}$",
       "$\\Omega(g) = \\{f: \\mathbb{N} \\to \\mathbb{R} \\mid f(n) \\leq cg(n)\\}$",
-      "$O(g) = \\{f: \\mathbb{N} \\to \\mathbb{R} \\mid g(n) \\leq cf(n)\\}$"
+      "$\\Omicron(g) = \\{f: \\mathbb{N} \\to \\mathbb{R} \\mid g(n) \\leq cf(n)\\}$"
     ],
     "correctAnswer": 1
   },
@@ -5217,7 +5322,7 @@
   },
   {
     "id": 575,
-    "question": "¿Con que algoritmo de ordenación clásico se corresponde el pseudocodigo del siguiente ejemplo?:```\nmódulo ordena ( var A es vector de n enteros);\nvariables i, j, x: es entero\nfor (i = 2; i<=N; i++) {\nX=A[i];\nA[0]=X;\nj=i-1;\nwhile ( X<A[j] ) { // (2)\nA[j+1]=A[j]; // (3)\nj = j – 1\n}\nA[j+1]=X;\n}\nfinmódulo\n```",
+    "question": "¿Con que algoritmo de ordenación clásico se corresponde el pseudocodigo del siguiente ejemplo?:```text\nmódulo ordena(var A es vector de n enteros);\nvariables i, j, x: es entero\nfor (i = 2; i <= N; i++) {\n  X = A[i];\n  A[0] = X;\n  j = i - 1;\n  while (X < A[j]) {  // (2)\n    A[j + 1] = A[j];  // (3)\n    j = j - 1;\n  }\n  A[j + 1] = X;\n}\nfinmódulo\n```",
     "options": [
       "Ordenación por el método de la burbuja",
       "Ordenación por el método de selección directa",
@@ -5275,7 +5380,7 @@
   {
     "id": 581,
     "question": "¿Cuál es el coste temporal asintótico de la siguiente función?```cpp\nint f(int n) {\n  int count = 0;\n  for (int i = n; i > 0; i /= 2)\n    for (int j = 0; j < 2 * i; j++)\n      count += 1;\n  return count;\n}\n```",
-    "options": ["$O(n)$", "$O(n \\log n)$", "$O(n^2)$"],
+    "options": ["$\\Omicron(n)$", "$\\Omicron(n \\log n)$", "$\\Omicron(n^2)$"],
     "correctAnswer": 0
   },
   {
@@ -5294,7 +5399,7 @@
     "options": [
       "$\\Omega(n^2) \\subset \\Omega(n^3)$",
       "$\\Theta(n^2) \\subset \\Theta(n^3)$",
-      "$O(n^2) \\subset O(n^3)$"
+      "$\\Omicron(n^2) \\subset \\Omicron(n^3)$"
     ],
     "correctAnswer": 2
   },
@@ -5386,8 +5491,8 @@
     "id": 593,
     "question": "En cuanto a la complejidad temporal de la siguiente función, ¿cuál de las siguientes formulaciones expresa mejor su complejidad en el peor de los casos?```cpp\nint f(vector<int>& v) {\n  int n = v.size(), i = 2, k = 0;\n  while (i < n) {\n    int j = i;\n    while (v[j] != v[1]) {\n      k++;\n      j = j / 2;\n    }\n    i = i + 2;\n  }\n  return k;\n}\n```",
     "options": [
-      "$c_s(n) = \\sum_{k=1}^{\\lfloor \\frac{n-1}{2} \\rfloor} \\log_2 2k \\in O(n \\log n)$",
-      "$c_s(n) = \\sum_{k=1}^{\\lfloor \\frac{n-1}{2} \\rfloor} \\log_2 2k^2 \\in O(\\log^2 n)$",
+      "$c_s(n) = \\sum_{k=1}^{\\lfloor \\frac{n-1}{2} \\rfloor} \\log_2 2k \\in \\Omicron(n \\log n)$",
+      "$c_s(n) = \\sum_{k=1}^{\\lfloor \\frac{n-1}{2} \\rfloor} \\log_2 2k^2 \\in \\Omicron(\\log^2 n)$",
       "Las otras dos opciones son ambas falsas."
     ],
     "correctAnswer": 0
@@ -5410,7 +5515,7 @@
   },
   {
     "id": 596,
-    "question": "El algoritmo que se describe a continuación calcula:```\nFunción Ejercicio (ent A:ArbolBinarioGeneral):entero\nvariables Izq,Der: ArbolBinarioGeneral\ninicio\nsi NO A.Vacio entonces\nA.HijoIzq(Izq); A.HijoDer(Der);\nretorna(ejercicio(izq)+ejercicio(der)+1)\nsi no\nretorna (0)\nfinsi\nfin\n```",
+    "question": "El algoritmo que se describe a continuación calcula:```text\nFunción Ejercicio(ent A: ArbolBinarioGeneral): entero\nvariables Izq, Der: ArbolBinarioGeneral\ninicio\n  si NO A.Vacio entonces\n    A.HijoIzq(Izq);\n    A.HijoDer(Der);\n    retorna(ejercicio(izq) + ejercicio(der) + 1)\n  si no\n    retorna(0)\n  finsi\nfin\n```",
     "options": [
       "El nivel en el que se encuentra (hijo izquierdo + hijo derecho + 1) del árbol A",
       "Cuantos niveles distintos tiene el árbol A",
@@ -5424,18 +5529,18 @@
     "id": 597,
     "question": "Marca la CORRECTA",
     "options": [
-      "$O(n^2) \\subset O(2^{\\log(n)}) \\subset O(2^n)$",
-      "$O(n^2) \\subset O(2^{\\log(n)}) \\subset O(2^n)$",
-      "$O(2^{\\log(n)}) \\subset O(n^2) \\subset O(2^n)$"
+      "$\\Omicron(n^2) \\subset \\Omicron(2^{\\log(n)}) \\subset \\Omicron(2^n)$",
+      "$\\Omicron(n^2) \\subset \\Omicron(2^{\\log(n)}) \\subset \\Omicron(2^n)$",
+      "$\\Omicron(2^{\\log(n)}) \\subset \\Omicron(n^2) \\subset \\Omicron(2^n)$"
     ],
     "correctAnswer": 2
   },
   {
     "id": 598,
-    "question": "Si $f(n) \\in O(n^2)$, ¿podemos decir siempre que $f(n) \\in O(n^3)$?",
+    "question": "Si $f(n) \\in \\Omicron(n^2)$, ¿podemos decir siempre que $f(n) \\in \\Omicron(n^3)$?",
     "options": [
-      "Sí ya que $n^2 \\in O(n^3)$.",
-      "No, ya que $n^2 \\notin O(n^3)$.",
+      "Sí ya que $n^2 \\in \\Omicron(n^3)$.",
+      "No, ya que $n^2 \\notin \\Omicron(n^3)$.",
       "Solo para valores bajos de n."
     ],
     "correctAnswer": 0
@@ -5531,8 +5636,8 @@
   },
   {
     "id": 609,
-    "question": "Un problema de tamaño $n$ puede transformarse en tiempo $O(\\frac{n}{2})$ en nueve de tamaño $\\frac{n}{3}$; por otro lado, la solución al problema cuando la talla es 1 requiere un tiempo constante. ¿Cuál de estas clases de coste temporal asintótico es la más ajustada?",
-    "options": ["$O(n \\log n)$", "$O(n^2 \\log n)$", "$O(n^2)$"],
+    "question": "Un problema de tamaño $n$ puede transformarse en tiempo $\\Omicron(\\frac{n}{2})$ en nueve de tamaño $\\frac{n}{3}$; por otro lado, la solución al problema cuando la talla es 1 requiere un tiempo constante. ¿Cuál de estas clases de coste temporal asintótico es la más ajustada?",
+    "options": ["$\\Omicron(n \\log n)$", "$\\Omicron(n^2 \\log n)$", "$\\Omicron(n^2)$"],
     "correctAnswer": 1
   },
   {
@@ -5685,14 +5790,14 @@
     "options": [
       "el mergesort es siempre más rápido",
       "como su nombre indica, el quicksort",
-      "son los dos igual de rápidos: $O(n \\log(n))$"
+      "son los dos igual de rápidos: $\\Omicron(n \\log(n))$"
     ],
     "correctAnswer": 2
   },
   {
     "id": 626,
     "question": "Cuál es la complejidad temporal en función del tamaño del problema (n) de multiplicar dos matrices cuadradas?",
-    "options": ["$O(n^{3/2})$", "$O(n^2)$", "$O(n^3)$"],
+    "options": ["$\\Omicron(n^{3/2})$", "$\\Omicron(n^2)$", "$\\Omicron(n^3)$"],
     "correctAnswer": 0
   },
   {
@@ -5704,7 +5809,7 @@
   {
     "id": 628,
     "question": "Se pretende implementar mediante programación dinámica iterativa la función recursiva:```cpp\nfloat f(unsigned x, int y) {\n  if (y < 0)\n    return 0;\n  float A = 0.0;\n  if (v1[y] <= x)\n    A = v2[y] + f(x - v1[y], y - 1);\n  float B = f(x, y - 1);\n  return min(A, 2 + B);\n}\n```\n¿Cuál es la mejor complejidad temporal que se puede conseguir?",
-    "options": ["$O(y)$", "$O(x)$", "$O(x \\cdot y)$"],
+    "options": ["$\\Omicron(y)$", "$\\Omicron(x)$", "$\\Omicron(x \\cdot y)$"],
     "correctAnswer": 2
   },
   {
@@ -5761,9 +5866,9 @@
     "id": 634,
     "question": "Una de las afirmaciones siguientes es cierta y las otras dos falsas. Indicad cuál es la falsa.",
     "options": [
-      "$O(n^n) \\subset O(n!)$",
-      "La complejidad temporal de Quicksort es $O(n^2)$ y $\\Omega(n \\log n)$",
-      "$O(3^n) \\subset O(2^n)$"
+      "$\\Omicron(n^n) \\subset \\Omicron(n!)$",
+      "La complejidad temporal de Quicksort es $\\Omicron(n^2)$ y $\\Omega(n \\log n)$",
+      "$\\Omicron(3^n) \\subset \\Omicron(2^n)$"
     ],
     "correctAnswer": 1
   },
@@ -5771,9 +5876,9 @@
     "id": 635,
     "question": "Sea un problema de optimización por selección discreta, con restricciones, en el que se deben tomar n decisiones booleanas para optimizar un indicador, y se abordará mediante un método de búsqueda y enumeración (vuelta atrás, ramificación y poda). ¿Cuál de las siguientes afirmaciones es correcta?",
     "options": [
-      "La complejidad temporal será como mucho $O(n \\cdot \\log(n))$ porque en general basta con ordenar adecuadamente las decisiones para convertir cualquier problema de este tipo en un problema de complejidad temporal lineal.",
+      "La complejidad temporal será como mucho $\\Omicron(n \\cdot \\log(n))$ porque en general basta con ordenar adecuadamente las decisiones para convertir cualquier problema de este tipo en un problema de complejidad temporal lineal.",
       "Puede haber problemas para los que la complejidad será exponencial o peor; ninguna estrategia de poda puede garantizar que esto no va a ocurrir.",
-      "La complejidad temporal en el peor caso será $O(n^2)$ ya que se toman n decisiones binarias."
+      "La complejidad temporal en el peor caso será $\\Omicron(n^2)$ ya que se toman n decisiones binarias."
     ],
     "correctAnswer": 1
   },
@@ -5781,19 +5886,19 @@
     "id": 636,
     "question": "De las expresiones siguientes, o bien dos son verdaderas y una es falsa, o bien dos son falsas y una es verdadera. Marca la que (en este sentido) es diferente de las otras dos.",
     "options": [
-      "Si f no está en $\\Omega(g)$ entonces $O(f)$ es igual a $\\Omega(g)$",
-      "Si f está en $\\Theta(g)$ entonces $O(f)$ es igual a $O(g)$",
-      "Si f está en $O(g)$ entonces g no está en $O(f)$"
+      "Si f no está en $\\Omega(g)$ entonces $\\Omicron(f)$ es igual a $\\Omega(g)$",
+      "Si f está en $\\Theta(g)$ entonces $\\Omicron(f)$ es igual a $\\Omicron(g)$",
+      "Si f está en $\\Omicron(g)$ entonces g no está en $\\Omicron(f)$"
     ],
     "correctAnswer": 1
   },
   {
     "id": 637,
-    "question": "Si $f(n) \\in O(n^3)$, ¿puede pasar que $f(n) \\in O(n^2)$?",
+    "question": "Si $f(n) \\in \\Omicron(n^3)$, ¿puede pasar que $f(n) \\in \\Omicron(n^2)$?",
     "options": [
       "Solo para valores bajos de n.",
-      "Es perfectamente posible, ya que $O(n^2) \\subset O(n^3)$.",
-      "No, porque $n^3$ \"no incrementa\" $O(n^2)$."
+      "Es perfectamente posible, ya que $\\Omicron(n^2) \\subset \\Omicron(n^3)$.",
+      "No, porque $n^3$ \"no incrementa\" $\\Omicron(n^2)$."
     ],
     "correctAnswer": 1
   },
@@ -5809,7 +5914,7 @@
   },
   {
     "id": 639,
-    "question": "$f(n) = 5n+5$ ¿ $f(n)$ pertenece a $O(n)$?",
+    "question": "$f(n) = 5n+5$ ¿ $f(n)$ pertenece a $\\Omicron(n)$?",
     "options": [
       "Si. El valor de c es 5 y el valor mínimo de n_0 es de 3",
       "Si. El valor de c es 9 y el valor mínimo de n_0 es de 1",
@@ -5820,7 +5925,7 @@
   {
     "id": 640,
     "question": "El coste temporal del algoritmo de ordenación por inserción es",
-    "options": ["$O(n \\log n)$", "$O(n^2)$", "$O(n)$"],
+    "options": ["$\\Omicron(n \\log n)$", "$\\Omicron(n^2)$", "$\\Omicron(n)$"],
     "correctAnswer": 1
   },
   {
@@ -6011,7 +6116,7 @@
   {
     "id": 660,
     "question": "El coste temporal asintótico de insertar un elemento en un vector ordenado de forma que continúe ordenado es",
-    "options": ["$O(n)$", "$O(\\log n)$", "$O(n^2)$"],
+    "options": ["$\\Omicron(n)$", "$\\Omicron(\\log n)$", "$\\Omicron(n^2)$"],
     "correctAnswer": 0
   },
   {
@@ -6066,17 +6171,17 @@
   },
   {
     "id": 666,
-    "question": "¿Qué complejidad se obtiene a partir de la relación de recurrencia $T(n) = 9T(n/3) + n^3$ con $T(1) = O(1)$?",
-    "options": ["$O(n^3 \\log n)$", "$O(n \\log n)$", "$O(n^3)$"],
+    "question": "¿Qué complejidad se obtiene a partir de la relación de recurrencia $T(n) = 9T(n/3) + n^3$ con $T(1) = \\Omicron(1)$?",
+    "options": ["$\\Omicron(n^3 \\log n)$", "$\\Omicron(n \\log n)$", "$\\Omicron(n^3)$"],
     "correctAnswer": 2
   },
   {
     "id": 667,
     "question": "Di cuál de estos resultados de coste temporal asintótico es falsa:",
     "options": [
-      "La ordenación de un vector usando el algoritmo Quicksort requiere en el peor caso un tiempo en $O(n^2)$",
-      "La ordenación de un vector usando el algoritmo Mergesort requiere en el peor caso un tiempo en $O(n^2)$",
-      "La búsqueda binaria en un vector ordenado requiere en el peor caso un tiempo en $O(\\log n)$"
+      "La ordenación de un vector usando el algoritmo Quicksort requiere en el peor caso un tiempo en $\\Omicron(n^2)$",
+      "La ordenación de un vector usando el algoritmo Mergesort requiere en el peor caso un tiempo en $\\Omicron(n^2)$",
+      "La búsqueda binaria en un vector ordenado requiere en el peor caso un tiempo en $\\Omicron(\\log n)$"
     ],
     "correctAnswer": 1
   },
@@ -6084,16 +6189,20 @@
     "id": 668,
     "question": "En la solucion al problema de la mochila continua ¿por que es conveniente la ordenacion previa de los objetos?",
     "options": [
-      "Para reducir la complejidad temporal en la toma de cada decision: de $O(n^2)$ a $O(n \\log n)$, donde n es el numero de objetos a considerar.",
+      "Para reducir la complejidad temporal en la toma de cada decision: de $\\Omicron(n^2)$ a $\\Omicron(n \\log n)$, donde n es el numero de objetos a considerar.",
       "Porque si no se hace no es posible garantizar que la toma de decisiones siga un criterio voraz",
-      "Para reducir la complejidad temporal en la toma de cada decision: de $O(n)$ a $O(1)$, donde n es el numero de objetos a considerar."
+      "Para reducir la complejidad temporal en la toma de cada decision: de $\\Omicron(n)$ a $\\Omicron(1)$, donde n es el numero de objetos a considerar."
     ],
     "correctAnswer": 2
   },
   {
     "id": 669,
     "question": "Si n es el número de elementos del vector, el coste del algoritmo Mergesort es:",
-    "options": ["$O(n^2)$ y $\\Omega(n \\log n)$", "$\\Theta(n \\log n)$", "$\\Theta(n^2)$"],
+    "options": [
+      "$\\Omicron(n^2)$ y $\\Omega(n \\log n)$",
+      "$\\Theta(n \\log n)$",
+      "$\\Theta(n^2)$"
+    ],
     "correctAnswer": 1
   },
   {
@@ -6119,7 +6228,7 @@
   {
     "id": 672,
     "question": "Se dispone de un conjunto de n valores numéricos dispuestos en forma de montículo y se desea obtener el valor de la suma de todos los que al menos tienen un hijo (es decir, no son nodos hoja). ¿Cuál es la complejidad temporal del mejor algoritmo que se puede escribir?",
-    "options": ["$O(\\log n)$", "$O(n \\log n)$", "$O(n)$"],
+    "options": ["$\\Omicron(\\log n)$", "$\\Omicron(n \\log n)$", "$\\Omicron(n)$"],
     "correctAnswer": 2
   },
   {
@@ -6224,7 +6333,7 @@
     "options": [
       "Depende del algoritmo de volcado. Sera lineal si A se vuelca de forma lineal, y logarítmica si se sigue un algoritmo puro de back tracking para localizar el elemento x dentro del árbol.",
       "Depende del algoritmo de volcado del array. Sera lineal A si se vuelca de forma lineal, y logarítmica si se sigue una estrategia divide y vencerás, tomando como pivote A[N/2].",
-      "Es independiente del algoritmo de volcado del array. Siempre es logarítmica, pues en una búsqueda de ABO siempre tenemos una ecuación de recurrencia de la forma T(n)=(n/2)+1;T(1)=O(1), que al resolverla nos proporciona una complejidad logarítmica.",
+      "Es independiente del algoritmo de volcado del array. Siempre es logarítmica, pues en una búsqueda de ABO siempre tenemos una ecuación de recurrencia de la forma T(n)=(n/2)+1;T(1)=\\Omicron(1), que al resolverla nos proporciona una complejidad logarítmica.",
       "Depende del algoritmo de volcado. Si empieza desde el final será logarítmica y si empieza desde el principio será lineal."
     ],
     "correctAnswer": 1
@@ -6241,15 +6350,15 @@
   },
   {
     "id": 685,
-    "question": "Un problema de tamaño n puede transformarse en tiempo $O(n^2)$ en nueve de tamaño n/3, por otro lado la solución al problema cuando la talla es 1 requiere un tiempo constante, ¿cuál de estas clases de coste temporal asintótico es la más ajustada?",
-    "options": ["$O(n \\log n)$", "$O(n^2 \\log n)$", "$O(n^2)$"],
+    "question": "Un problema de tamaño n puede transformarse en tiempo $\\Omicron(n^2)$ en nueve de tamaño n/3, por otro lado la solución al problema cuando la talla es 1 requiere un tiempo constante, ¿cuál de estas clases de coste temporal asintótico es la más ajustada?",
+    "options": ["$\\Omicron(n \\log n)$", "$\\Omicron(n^2 \\log n)$", "$\\Omicron(n^2)$"],
     "correctAnswer": 1
   },
   {
     "id": 686,
-    "question": "Si $f \\notin O(g_1)$ y $f \\in O(g_2)$ entonces NO siempre se cumplira",
+    "question": "Si $f \\notin \\Omicron(g_1)$ y $f \\in \\Omicron(g_2)$ entonces NO siempre se cumplira",
     "options": [
-      "$f \\in O(\\max(g_1,g_2))$",
+      "$f \\in \\Omicron(\\max(g_1,g_2))$",
       "$f \\in \\Omega(g_1+g_2)$",
       "$f \\in \\Omega(\\min(g_1,g_2))$"
     ],
@@ -6267,11 +6376,11 @@
   },
   {
     "id": 688,
-    "question": "Sea un vector de n elementos y supongamos que todos los elementos de a son distintos, considera el siguiente algoritmo. Si consideramos como medida significativa el numero de comparaciones con respecto de los elementos del vector, entonces el algoritmo tiene una complejidad:```\nfunción Ordena (ent/sal a:vector): nada\nvariables: i,j,temp: entero\ninicio\npara i de 0 a n-2 hacer\npara j de n-1 a i+1 incr-1 hacer\nsi a[j-1]>a[j] entonces\ntemp← a[j]\na[j]← a[j-1]\na[j-1]← temp\nfinsi\nfinpara\nfinpara\nfin\n```",
+    "question": "Sea un vector de n elementos y supongamos que todos los elementos de a son distintos, considera el siguiente algoritmo. Si consideramos como medida significativa el numero de comparaciones con respecto de los elementos del vector, entonces el algoritmo tiene una complejidad:```text\nfunción Ordena(ent/sal a: vector): nada\nvariables: i, j, temp: entero\ninicio\n  para i de 0 a n-2 hacer\n    para j de n-1 a i+1 incr-1 hacer\n      si a[j-1] > a[j] entonces\n        temp ← a[j]\n        a[j] ← a[j-1]\n        a[j-1] ← temp\n      finsi\n    finpara\n  finpara\nfin\n```",
     "options": [
-      "$\\Omega(n)$ y $O(n^2)$",
+      "$\\Omega(n)$ y $\\Omicron(n^2)$",
       "$\\Theta(n^2)$",
-      "$\\Omega(1)$ y $O(n^2)$",
+      "$\\Omega(1)$ y $\\Omicron(n^2)$",
       "$\\Theta(n)$"
     ],
     "correctAnswer": 1
@@ -6297,7 +6406,7 @@
     "question": "Marca la falsa",
     "options": [
       "$n + n \\log(n) \\in \\Omega(n)$",
-      "$2n^2 + 3n + 1 \\in O(n^3)$",
+      "$2n^2 + 3n + 1 \\in \\Omicron(n^3)$",
       "$n + n \\log(n) \\in \\Theta(n)$"
     ],
     "correctAnswer": 2
@@ -6377,12 +6486,12 @@
   },
   {
     "id": 699,
-    "question": "Dadas las siguiente ecuaciones de recurrencia determinar el orden al que pertenecen cada una de ellas:$T_1(n)=2T_1(n/2)+c_1$, $T_2(n)=T_2(n-1) + n + c_2$, $T_3(n) = cT_3(n-1)+c_3$, $T_4(n) = T_4(n-1)+c_4$",
+    "question": "Dadas las siguiente ecuaciones de recurrencia determinar el orden al que pertenecen cada una de ellas:\n$T_1(n)=2T_1(n/2)+c_1$, $T_2(n)=T_2(n-1) + n + c_2$, $T_3(n) = cT_3(n-1)+c_3$, $T_4(n) = T_4(n-1)+c_4$",
     "options": [
-      "$T_1(n) \\in O(n)$, $T_2(n) \\in O(n^2)$, $T_3(n) \\in O(c^n)$ y $T_4(n) \\in O(n)$",
-      "$T_1(n) \\in O(n)$, $T_2(n) \\in O(n)$, $T_3(n) \\in O(n^2)$ y $T_4(n) \\in O(n^2)$",
-      "$T_1(n) \\in O(\\log n)$, $T_2(n) \\in O(2^n)$, $T_3(n) \\in O(c^n)$ y $T_4(n) \\in O(n)$",
-      "$T_1(n) \\in O(\\log n)$, $T_2(n) \\in O(n^2)$, $T_3(n) \\in O(n)$ y $T_4(n) \\in O(n)$"
+      "$T_1(n) \\in \\Omicron(n)$, $T_2(n) \\in \\Omicron(n^2)$, $T_3(n) \\in \\Omicron(c^n)$ y $T_4(n) \\in \\Omicron(n)$",
+      "$T_1(n) \\in \\Omicron(n)$, $T_2(n) \\in \\Omicron(n)$, $T_3(n) \\in \\Omicron(n^2)$ y $T_4(n) \\in \\Omicron(n^2)$",
+      "$T_1(n) \\in \\Omicron(\\log n)$, $T_2(n) \\in \\Omicron(2^n)$, $T_3(n) \\in \\Omicron(c^n)$ y $T_4(n) \\in \\Omicron(n)$",
+      "$T_1(n) \\in \\Omicron(\\log n)$, $T_2(n) \\in \\Omicron(n^2)$, $T_3(n) \\in \\Omicron(n)$ y $T_4(n) \\in \\Omicron(n)$"
     ],
     "correctAnswer": 0
   },
@@ -6409,7 +6518,7 @@
   {
     "id": 702,
     "question": "Indica cual es la complejidad, en función de n, del fragmento siguiente:```cpp\nint a = 0;\nfor (int i = 0; i < n; i++)\n  for (int j = i; j > 0; j /= 2)\n    a += a[i][j];\n```",
-    "options": ["O(n log n)", "O(n)", "O(n^2)"],
+    "options": ["\\Omicron(n log n)", "\\Omicron(n)", "\\Omicron(n^2)"],
     "correctAnswer": 0
   },
   {
@@ -6418,7 +6527,7 @@
     "options": [
       "$\\Theta(n/2) = \\Theta(n)$",
       "$\\Theta(n) \\subset \\Theta(n^2)$",
-      "$\\Theta(n) \\subset O(n)$"
+      "$\\Theta(n) \\subset \\Omicron(n)$"
     ],
     "correctAnswer": 1
   },
@@ -6431,13 +6540,17 @@
   {
     "id": 705,
     "question": "Tenemos un \"superprocesador\" que tiene una instrucción que permite la ordenación de 100 elementos en un tiempo constante. Para este superprocesador, adaptamos el algoritmo Mergesort de forma que cada vez que queremos ordenar menos de 100 elementos, en lugar de hacer las llamadas recursivas, llama a esta instrucción. ¿cuál sería la complejidad de este algoritmo?",
-    "options": ["$O(n \\cdot \\log(n))$", "$O(n)$", "$O(1)$"],
+    "options": ["$\\Omicron(n \\cdot \\log(n))$", "$\\Omicron(n)$", "$\\Omicron(1)$"],
     "correctAnswer": 0
   },
   {
     "id": 706,
-    "question": "La complejidad de la función A2 es:```\nFuncion A2 (n, a: entero):entero;\nVar r: entero; fvar\nsi (a² > n) devuelve 0\nsino\nr:= A2(n, 2a);\nopción\nn < a²: devuelve r;\nn ≥ a² : devuelve r + a;\nfopción\nfsi\nfin\n```",
-    "options": ["$O(\\sqrt{n} · a)$", "$O( \\sqrt{n} / a)$", "$O( n / \\sqrt{a} )$"],
+    "question": "La complejidad de la función A2 es:```text\nFuncion A2(n, a: entero): entero;\nVar r: entero;\nfvar\nsi (a² > n) devuelve 0\nsino\n  r := A2(n, 2a);\n  opción\n    n < a²: devuelve r;\n    n ≥ a²: devuelve r + a;\n  fopción\nfsi\nfin\n```",
+    "options": [
+      "$\\Omicron(\\sqrt{n} · a)$",
+      "$\\Omicron( \\sqrt{n} / a)$",
+      "$\\Omicron( n / \\sqrt{a} )$"
+    ],
     "correctAnswer": 1
   },
   {
@@ -6458,25 +6571,25 @@
   },
   {
     "id": 709,
-    "question": "El coste asociado a la siguiente ecuación de recurrencia es:$f(n) = \\begin{cases} 1 & n \\leq 1 \\\\ n + f(\\frac{n}{2}) + f(\\frac{n}{2}) & n > 1 \\end{cases}$",
+    "question": "El coste asociado a la siguiente ecuación de recurrencia es:\n$f(n) = \\begin{cases} 1 & n \\leq 1 \\\\ n + f(\\frac{n}{2}) + f(\\frac{n}{2}) & n > 1 \\end{cases}$",
     "options": ["$\\Theta(n \\lg n^2)$", "$\\Theta(n^2 \\lg n)$", "$\\Theta(n \\lg n)$"],
     "correctAnswer": 2
   },
   {
     "id": 710,
     "question": "Se pretende calcular el valor $2^n$, $n \\in \\mathbb{N}$, haciendo una transcripción literal de la expresión $2^n = 1 + \\sum_{i=0}^{n-1} \\prod_{j=1}^i 2$. ¿Cuál sería la complejidad temporal asintótica, en función de n, del algoritmo resultante?",
-    "options": ["$O(2^n)$", "$O(n^2)$", "$O(n)$"],
+    "options": ["$\\Omicron(2^n)$", "$\\Omicron(n^2)$", "$\\Omicron(n)$"],
     "correctAnswer": 1
   },
   {
     "id": 711,
     "question": "Indica cuál es la complejidad, en función de $n$, del fragmento siguiente:```cpp\nfor (int i = n; i > 0; i /= 2)\n  for (int j = n; j > 0; j /= 2)\n    a += A[i][j];\n```",
-    "options": ["$O(\\log^2(n))$", "$O(n \\log(n))$", "$O(n^2)$"],
+    "options": ["$\\Omicron(\\log^2(n))$", "$\\Omicron(n \\log(n))$", "$\\Omicron(n^2)$"],
     "correctAnswer": 0
   },
   {
     "id": 712,
-    "question": "Dada la suma de la recurrencia:$T(n) = \\begin{cases} 1 & n = 0 \\\\ \\sum_{k=0}^{n-1} T(k) & n > 0 \\end{cases}$\n¿cuál de las siguientes afirmaciones es cierta?",
+    "question": "Dada la suma de la recurrencia:\n$T(n) = \\begin{cases} 1 & n = 0 \\\\ \\sum_{k=0}^{n-1} T(k) & n > 0 \\end{cases}$\n¿cuál de las siguientes afirmaciones es cierta?",
     "options": ["$T(n) \\in \\Theta(n^2)$", "$T(n) \\in \\Theta(2^n)$", "$T(n) \\in \\Theta(n!)$"],
     "correctAnswer": 1
   },
@@ -6505,9 +6618,9 @@
     "id": 715,
     "question": "Una de las siguientes afirmaciones es falsa. ¿Cuál?",
     "options": [
-      "$O(2^n) = O(3^n)$",
-      "$O(n \\log n) \\subseteq O(n^2)$",
-      "$O(n^2 + 2n + 1) = O(n^2)$"
+      "$\\Omicron(2^n) = \\Omicron(3^n)$",
+      "$\\Omicron(n \\log n) \\subseteq \\Omicron(n^2)$",
+      "$\\Omicron(n^2 + 2n + 1) = \\Omicron(n^2)$"
     ],
     "correctAnswer": 0
   },
@@ -6524,7 +6637,7 @@
   {
     "id": 717,
     "question": "Un programa con dos bucles anidados uno dentro del otro, El primero hace $n$ iteraciones aproximadamente y el segundo la mitad, tarda un tiempo",
-    "options": ["$O(n \\log{n})$", "$O(n^2)$", "$O(n \\sqrt{n})$"],
+    "options": ["$\\Omicron(n \\log{n})$", "$\\Omicron(n^2)$", "$\\Omicron(n \\sqrt{n})$"],
     "correctAnswer": 1
   },
   {
@@ -6560,7 +6673,7 @@
   {
     "id": 721,
     "question": "El coste temporal del algoritmo de ordenación por inserción es",
-    "options": ["$O(n \\log(n))$", "$O(n^2)$", "$O(n)$"],
+    "options": ["$\\Omicron(n \\log(n))$", "$\\Omicron(n^2)$", "$\\Omicron(n)$"],
     "correctAnswer": 1
   },
   {
@@ -6582,13 +6695,17 @@
   {
     "id": 724,
     "question": "Se pretende calcular el valor $2^n$, $n \\in \\mathbb{N}$, haciendo una transcripción literal de la expresión de la imagen. ¿Cuál sería la complejidad temporal asintótica, en función de n, del algoritmo resultante? $2^n = 1 + \\sum_{i=0}^{n-1} \\prod_{j=1}^{i} 2$",
-    "options": ["$O(n)$", "$O(2^n)$", "$O(n^2)$"],
+    "options": ["$\\Omicron(n)$", "$\\Omicron(2^n)$", "$\\Omicron(n^2)$"],
     "correctAnswer": 2
   },
   {
     "id": 725,
     "question": "Sea n el numero de elementos que contienen los vectores w y v, ¿cual es la complejidad temporal asintotica en funcion de n asumiendo que la llamada inicial i toma valor n? `float f(vector<float> &w, vector<unsigned> &v)`",
-    "options": ["$\\Omega(n)$ y $O(n^2)$", "$\\Omega(n)$ y $O(2^n)$", "$\\Theta(2^n)$"],
+    "options": [
+      "$\\Omega(n)$ y $\\Omicron(n^2)$",
+      "$\\Omega(n)$ y $\\Omicron(2^n)$",
+      "$\\Theta(2^n)$"
+    ],
     "correctAnswer": 0
   },
   {
@@ -6597,7 +6714,7 @@
     "options": [
       "Que ordenan el vector sin usar espacio adicional",
       "Que aplican la estrategia divide y vencerás",
-      "Que se ejecutan en tiempo $O(n)$"
+      "Que se ejecutan en tiempo $\\Omicron(n)$"
     ],
     "correctAnswer": 1
   },
@@ -6661,8 +6778,8 @@
   },
   {
     "id": 734,
-    "question": "Sea v un vector de N elementos y supongamos que todos los elementos de v son distintos Considera el algoritmo siguiente Si tomamos como medida significativa el numero de comparaciones con elementos del vector(instrucción 2) entonces el algoritmo tiene un coste:```\nfor (i=1; i<N; i++) {\nX=V[i]; // (1)\nIzq=0;\nDer=i-1;\nwhile (Izq <= Der) {\nMedio = (Izq+Der)/2;\nif (X<V[Medio]) // (2)\nDer=Medio-1;\nelse\nIzq = Medio +1;\n}\nfor(j=i-1; j>=Izq; j--) {\nV[j+1] = V[j]; // (3)\n}\nV[Izq]=X;\n}\n```",
-    "options": ["Θ(n*log(n))", "O(log(n))", "Θ(n)", "Ω(log(n)) y O(n)"],
+    "question": "Sea v un vector de N elementos y supongamos que todos los elementos de v son distintos Considera el algoritmo siguiente Si tomamos como medida significativa el numero de comparaciones con elementos del vector(instrucción 2) entonces el algoritmo tiene un coste:```cpp\nfor (i = 1; i < N; i++) {\n  X = V[i];  // (1)\n  Izq = 0;\n  Der = i - 1;\n  while (Izq <= Der) {\n    Medio = (Izq + Der) / 2;\n    if (X < V[Medio])  // (2)\n      Der = Medio - 1;\n    else\n      Izq = Medio + 1;\n  }\n  for (j = i - 1; j >= Izq; j--) {\n    V[j + 1] = V[j];  // (3)\n  }\n  V[Izq] = X;\n}\n```",
+    "options": ["Θ(n*log(n))", "\\Omicron(log(n))", "Θ(n)", "Ω(log(n)) y \\Omicron(n)"],
     "correctAnswer": 0
   },
   {
@@ -6686,9 +6803,9 @@
     "id": 737,
     "question": "Una de estas tres situaciones no es posible. ¿Cuál es?",
     "options": [
-      "$f(n) \\in O(n)$ y $f(n) \\in \\Omega(1)$",
-      "$f(n) \\in \\Omega(n^2)$ y $f(n) \\in O(n)$",
-      "$f(n) \\in O(n)$ y $f(n) \\in O(n^2)$"
+      "$f(n) \\in \\Omicron(n)$ y $f(n) \\in \\Omega(1)$",
+      "$f(n) \\in \\Omega(n^2)$ y $f(n) \\in \\Omicron(n)$",
+      "$f(n) \\in \\Omicron(n)$ y $f(n) \\in \\Omicron(n^2)$"
     ],
     "correctAnswer": 1,
     "tags": ["Julio 2024"]
@@ -6706,7 +6823,7 @@
   },
   {
     "id": 739,
-    "question": "Su ecuación de recurrencia es:```\nFunción F (ent n: entero): entero\nvariables x, i: entero\nInicio\nsi (n>=1) entonces\nretorna 1\nsi no\npara i de 1 a n hacer\nx← 1\nmientras x<n hacer\nx← x*2\nfinmientras\nfinpara\nretorna F(n/2)+F(n/2)\nfinsi\nfin\n```",
+    "question": "Su ecuación de recurrencia es:```text\nFunción F(ent n: entero): entero\nvariables x, i: entero\nInicio\n  si (n >= 1) entonces\n    retorna 1\n  si no\n    para i de 1 a n hacer\n      x ← 1\n      mientras x < n hacer\n        x ← x * 2\n      finmientras\n    finpara\n    retorna F(n/2) + F(n/2)\n  finsi\nfin\n```",
     "options": [
       "$2 \\cdot T(n/2) + n \\cdot \\log n$",
       "$2 \\cdot T(n-1) + 1$",
@@ -6718,13 +6835,13 @@
   },
   {
     "id": 740,
-    "question": "¿Pertenece $3n^2 + 3$ a $O(n^3)$?",
+    "question": "¿Pertenece $3n^2 + 3$ a $\\Omicron(n^3)$?",
     "options": ["Solo para $c = 1$ y $n_0 = 5$", "Sí", "No"],
     "correctAnswer": 1
   },
   {
     "id": 741,
-    "question": "¿De qué clase de complejidad es la solución de la siguiente relación de recurrencia?$f(n) = \\begin{cases} 1 + f(n/b) & \\text{si } n > 1 \\\\ 1 & \\text{si } n = 1 \\end{cases}$, con $b \\in \\mathbb{N}$, $b > 1$",
+    "question": "¿De qué clase de complejidad es la solución de la siguiente relación de recurrencia?\n$f(n) = \\begin{cases} 1 + f(n/b) & \\text{si } n > 1 \\\\ 1 & \\text{si } n = 1 \\end{cases}$, con $b \\in \\mathbb{N}$, $b > 1$",
     "options": [
       "Depende del valor de $b$",
       "$f(n) \\in \\Theta(\\log n)$",
@@ -6769,14 +6886,18 @@
   {
     "id": 745,
     "question": "El algoritmo de ordenación Quicksort divide el problema en dos subproblemas. ¿Cuál es la complejidad temporal asintótica de realizar esa división?",
-    "options": ["$O(\\log n)$", "$O(n)$", "$O(n \\log n)$"],
+    "options": ["$\\Omicron(\\log n)$", "$\\Omicron(n)$", "$\\Omicron(n \\log n)$"],
     "correctAnswer": 1,
     "tags": ["Junio 2024"]
   },
   {
     "id": 746,
     "question": "¿Cuál es la complejidad temporal asintótica de la función $f$? (en la primera llamada, el parámetro $i$ toma valor $n-1$; el tamaño de los vectores $w$ y $v$ es $n$)```cpp\nfloat f(vector<float>& w, vector<unsigned>& v, unsigned P, int i) {\n  float S1 = 0, S2;\n  if (i >= 0) {\n    if (w[i] <= P)\n      S1 = v[i] + f(w, v, P - w[i], i - 1);\n    S2 = f(w, v, P, i - 1);\n    return max(S1, S2);\n  }\n  return 0;\n}\n```",
-    "options": ["$\\Omega(n)$ y $O(n^2)$", "$\\Omega(n)$ y $O(2^n)$", "$\\Theta(2^n)$"],
+    "options": [
+      "$\\Omega(n)$ y $\\Omicron(n^2)$",
+      "$\\Omega(n)$ y $\\Omicron(2^n)$",
+      "$\\Theta(2^n)$"
+    ],
     "correctAnswer": 1,
     "tags": ["Junio 2024"]
   },
@@ -6928,8 +7049,8 @@
     "question": "Dada la solución por programación dinámica recursiva de la versión restringida del problema del camino de coste mínimo, en general, ¿cuántas veces se llega al caso base de la recursión (la casilla inicial)?",
     "options": [
       "Solo una",
-      "Un valor que es $O(2^n)$, donde $n$ es el tamaño del mapa",
-      "Un valor que es $O(n)$, donde $n$ es el tamaño del mapa"
+      "Un valor que es $\\Omicron(2^n)$, donde $n$ es el tamaño del mapa",
+      "Un valor que es $\\Omicron(n)$, donde $n$ es el tamaño del mapa"
     ],
     "correctAnswer": 0,
     "tags": ["Junio 2024"]
@@ -7159,11 +7280,11 @@
   },
   {
     "id": 782,
-    "question": "Si $f(n) \\in \\Theta(2^n)$, ¿podemos decir siempre que $f(n) \\in O(n!)$?",
+    "question": "Si $f(n) \\in \\Theta(2^n)$, ¿podemos decir siempre que $f(n) \\in \\Omicron(n!)$?",
     "options": [
-      "Sí, ya que $2^n \\in O(n!)$",
+      "Sí, ya que $2^n \\in \\Omicron(n!)$",
       "Sí, ya que $2^n \\in \\Omega(n!)$",
-      "No, ya que $2^n \\notin O(n!)$"
+      "No, ya que $2^n \\notin \\Omicron(n!)$"
     ],
     "correctAnswer": 0,
     "tags": ["Julio 2024"]
@@ -7262,7 +7383,7 @@
   {
     "id": 792,
     "question": "El algoritmo de ordenación Mergesort divide el problema en dos subproblemas. ¿Cuál es la complejidad temporal asintótica de realizar esa división?",
-    "options": ["$O(\\log n)$", "$O(n)$", "$O(1)$"],
+    "options": ["$\\Omicron(\\log n)$", "$\\Omicron(n)$", "$\\Omicron(1)$"],
     "correctAnswer": 2,
     "tags": ["Julio 2024"]
   },
@@ -7319,7 +7440,7 @@
   {
     "id": 799,
     "question": "Si el coste espacial de un algoritmo viene dado por la recurrencia $T(n) = n + T(n/2)$ siendo $T(0) = 1$, donde $n$ es el tamaño del problema, ¿a qué clase de complejidad pertenece?",
-    "options": ["$O(n)$", "$O(n \\log n)$", "$O(n^2)$"],
+    "options": ["$\\Omicron(n)$", "$\\Omicron(n \\log n)$", "$\\Omicron(n^2)$"],
     "correctAnswer": 0,
     "tags": ["Julio 2024"]
   },
@@ -7452,7 +7573,7 @@
     "question": "Di cuál de estos resultados de coste temporal asintótico es falsa:",
     "options": [
       "La ordenación de un vector usando el algoritmo Mergesort requiere en el peor caso un tiempo en $\\Omega(n^2)$.",
-      "La búsqueda binaria en un vector ordenado requiere en el peor caso un tiempo en $O(\\log n)$.",
+      "La búsqueda binaria en un vector ordenado requiere en el peor caso un tiempo en $\\Omicron(\\log n)$.",
       "La ordenación de un vector usando el algoritmo Quicksort requiere en el peor caso un tiempo en $\\Omega(n^2)$."
     ],
     "correctAnswer": 0,
@@ -7461,7 +7582,7 @@
   {
     "id": 813,
     "question": "Cuál es el coste temporal asintótico de la siguiente función?```cpp\nint f(int n) {\n  int count = 0;\n  for (int i = n; i > 0; i -= 2)\n    for (int j = i; j > 0; j /= 2)\n      count += 1;\n  return count;\n}\n```",
-    "options": ["$O(n \\log n)$", "$O(\\log^2 n)$", "$O(n)$"],
+    "options": ["$\\Omicron(n \\log n)$", "$\\Omicron(\\log^2 n)$", "$\\Omicron(n)$"],
     "correctAnswer": 0,
     "tags": ["Junio 2025"]
   },
@@ -7479,7 +7600,11 @@
   {
     "id": 815,
     "question": "¿Cuál es la complejidad temporal de la aproximación voraz a la solución de la versión restringida del problema del laberinto?",
-    "options": ["Las otras dos opciones son ambas ciertas", "$O(\\max\\{n,m\\})$", "$O(n+m)$"],
+    "options": [
+      "Las otras dos opciones son ambas ciertas",
+      "$\\Omicron(\\max\\{n,m\\})$",
+      "$\\Omicron(n+m)$"
+    ],
     "correctAnswer": 0,
     "tags": ["Junio 2025"]
   },
@@ -7497,7 +7622,7 @@
   {
     "id": 817,
     "question": "La solución voraz del problema de la mochila continua, es decir, con objetos fraccionables, tiene una complejidad temporal asintótica de:",
-    "options": ["$O(n)$", "$O(n \\log n)$", "$O(\\log n)$"],
+    "options": ["$\\Omicron(n)$", "$\\Omicron(n \\log n)$", "$\\Omicron(\\log n)$"],
     "correctAnswer": 1,
     "tags": ["Junio 2025"]
   },
@@ -7526,7 +7651,7 @@
   {
     "id": 820,
     "question": "Dado el siguiente programa recursivo:```cpp\nint f(unsigned n) {\n  if (n == 0 || n == 1)\n    return n;\n  return f(n - 1) + f(n - 2);\n}\n```\nsi quisiéramos reescribirlo para usar programación dinámica ¿cuál la complejidad espacial más ajustada del algoritmo?",
-    "options": ["$O(n^2)$", "$O(n)$", "$O(1)$"],
+    "options": ["$\\Omicron(n^2)$", "$\\Omicron(n)$", "$\\Omicron(1)$"],
     "correctAnswer": 2,
     "tags": ["Junio 2025"]
   },
@@ -7546,8 +7671,8 @@
     "question": "Se pretende obtener la complejidad temporal en el caso más desfavorable de la siguiente función.```cpp\nint exa(vector<int>& v) {\n  int i, sum = 0, n = v.size();\n  if (n > 0) {\n    int j = n;\n    while (j > 0 && sum < 100) {\n      j = j / 2;\n      sum = 0;\n      for (i = j; i < n; i++)\n        sum += v[i];\n    }\n    return j;\n  } else\n    return -1;\n}\n```\n¿Cuál de las siguientes formulaciones expresa dicho coste?",
     "options": [
       "Las otras dos opciones son ciertas",
-      "$c_s(n) = \\sum_{k=1}^{\\log n+1} (n - n/2^k) \\in O(n \\log n)$",
-      "$c_s(n) = n \\sum_{j=1}^{\\log n} \\sum_{i=1}^{j} (1/2)^i \\in O(n \\log n)$"
+      "$c_s(n) = \\sum_{k=1}^{\\log n+1} (n - n/2^k) \\in \\Omicron(n \\log n)$",
+      "$c_s(n) = n \\sum_{j=1}^{\\log n} \\sum_{i=1}^{j} (1/2)^i \\in \\Omicron(n \\log n)$"
     ],
     "correctAnswer": 0,
     "tags": ["Junio 2025"]
@@ -7558,7 +7683,7 @@
     "options": [
       "$g(n) \\in \\Omega(n^2)$",
       "$g(n) \\in \\Theta(n^2)$",
-      "$g(n) \\in O(n^2 \\log n^2)$"
+      "$g(n) \\in \\Omicron(n^2 \\log n^2)$"
     ],
     "correctAnswer": 0,
     "tags": ["Junio 2025"]
@@ -7620,7 +7745,7 @@
   },
   {
     "id": 829,
-    "question": "Disponemos de dos funciones de coste $f(n)$ y $g(n)$ tal que $f \\in O(g)$. ¿Puede existir un valor $x$ para el que $f(x) > g(x)$?",
+    "question": "Disponemos de dos funciones de coste $f(n)$ y $g(n)$ tal que $f \\in \\Omicron(g)$. ¿Puede existir un valor $x$ para el que $f(x) > g(x)$?",
     "options": [
       "Sí, y además es posible que el valor $n_0$ tal que $\\forall_{n \\geq n_0} f(n) \\leq g(n)$ no exista.",
       "No, no puede existir ese valor $x$.",
@@ -7639,7 +7764,7 @@
   {
     "id": 831,
     "question": "Dada la siguiente función:```cpp\nint exa(string& cad, int pri, int ult) {\n  if (pri >= ult)\n    return 1;\n  else if (cad[pri] == cad[ult])\n    return exa(cad, pri + 1, ult - 1);\n  else\n    return 0;\n}\n```\n¿Cuál es su complejidad temporal asintótica en función de $n = ult - pri + 1$?",
-    "options": ["$O(n^2)$", "$O(n)$", "$O(\\log n)$"],
+    "options": ["$\\Omicron(n^2)$", "$\\Omicron(n)$", "$\\Omicron(\\log n)$"],
     "correctAnswer": 1,
     "tags": ["Junio 2025"]
   },
@@ -7669,9 +7794,9 @@
     "id": 834,
     "question": "Estamos resolviendo el problema del laberinto (versión general) mediante ramificación y poda empleando una estrategia dirigida de priorización de nodos basada en una cola de prioridad. Recuerda que cada iteración del bucle principal consiste en extraer el nodo de máxima prioridad de la cola, expandirlo, y para cada nodo expandible, añadirlo a la cola si es factible, actualizar la solución en curso con la cota pesimista, y añadirlo a la cola si es prometedor. La mejor complejidad asintótica que se puede conseguir para una iteración del bucle principal es:",
     "options": [
-      "$O(\\log n)$, siendo $n$ el número de nodos en la cola.",
-      "$O(n)$, siendo $n$ el número de nodos en la cola.",
-      "$O(1)$."
+      "$\\Omicron(\\log n)$, siendo $n$ el número de nodos en la cola.",
+      "$\\Omicron(n)$, siendo $n$ el número de nodos en la cola.",
+      "$\\Omicron(1)$."
     ],
     "correctAnswer": 0,
     "tags": ["Junio 2025"]
@@ -7704,7 +7829,7 @@
     "options": [
       "$T(n) \\in \\Omega(n)$ y $T(n) \\in \\Theta(n^2)$",
       "$T(n) \\in \\Theta(n)$ y $T(n) \\in \\Omega(n^2)$",
-      "$T(n) \\in O(n)$ y $T(n) \\in \\Theta(n)$"
+      "$T(n) \\in \\Omicron(n)$ y $T(n) \\in \\Theta(n)$"
     ],
     "correctAnswer": 1,
     "tags": ["Junio 2025"]
@@ -7812,9 +7937,9 @@
     "id": 847,
     "question": "De las siguientes igualdades, o bien dos son ciertas y una es falsa, o bien una es cierta y dos son falsas. Marca la que es diferente a las otras dos.",
     "options": [
-      "$\\Theta(n) = O(n) \\cup \\Omega(n)$",
-      "$\\Theta(n) = O(n) \\cap \\Omega(n)$",
-      "$O(n) = O(n) \\cap \\Theta(n)$"
+      "$\\Theta(n) = \\Omicron(n) \\cup \\Omega(n)$",
+      "$\\Theta(n) = \\Omicron(n) \\cap \\Omega(n)$",
+      "$\\Omicron(n) = \\Omicron(n) \\cap \\Theta(n)$"
     ],
     "correctAnswer": 2,
     "tags": ["Julio 2023"]
@@ -8189,7 +8314,7 @@
   },
   {
     "id": 884,
-    "question": "Sean dos funciones de coste $f : \\mathbb{N} \\to \\mathbb{R}^+$ y $g : \\mathbb{N} \\to \\mathbb{R}^+$ tales que $f \\in O(g)$. De las siguientes situaciones, o bien dos pueden suceder y la otra no, o bien dos no pueden suceder y la otra sí. Indica la que es diferente de las otras dos.",
+    "question": "Sean dos funciones de coste $f : \\mathbb{N} \\to \\mathbb{R}^+$ y $g : \\mathbb{N} \\to \\mathbb{R}^+$ tales que $f \\in \\Omicron(g)$. De las siguientes situaciones, o bien dos pueden suceder y la otra no, o bien dos no pueden suceder y la otra sí. Indica la que es diferente de las otras dos.",
     "options": [
       "$\\lim_{n \\to \\infty} \\frac{g(n)}{f(n)} = \\infty$",
       "$\\lim_{n \\to \\infty} \\frac{g(n)}{f(n)} = k, k \\in \\mathbb{R}^+, k \\neq 0$",
@@ -8203,7 +8328,7 @@
     "question": "Una de las siguientes afirmaciones es cierta. Di cuál.",
     "options": [
       "$\\Theta(2^n) \\neq \\Theta(3^n)$",
-      "$O(2^n) \\subset O(n^2)$",
+      "$\\Omicron(2^n) \\subset \\Omicron(n^2)$",
       "$\\Omega(2^n) \\subset \\Omega(n!)$"
     ],
     "correctAnswer": 0,
@@ -8245,13 +8370,13 @@
   {
     "id": 889,
     "question": "Se dispone de un conjunto de $n$ valores numéricos dispuestos en forma de montículo y se desea obtener el valor de la suma de todos los que al menos tienen un hijo (es decir, no son nodos hoja). ¿Cuál es la complejidad temporal del mejor algoritmo que se puede escribir?",
-    "options": ["$O(n)$", "$O(\\log n)$", "$O(n \\log n)$"],
+    "options": ["$\\Omicron(n)$", "$\\Omicron(\\log n)$", "$\\Omicron(n \\log n)$"],
     "correctAnswer": 0,
     "tags": ["Junio 2023"]
   },
   {
     "id": 890,
-    "question": "¿De qué clase de complejidad es la solución de la siguiente relación de recurrencia?$f(n) = n(n-1) + f(n-1)$ si $n > 0$\n$f(0) = 1$ si $n = 0$",
+    "question": "¿De qué clase de complejidad es la solución de la siguiente relación de recurrencia?\n$f(n) = n(n-1) + f(n-1)$ si $n > 0$\n$f(0) = 1$ si $n = 0$",
     "options": [
       "$f(n) \\in \\Theta(n^2)$",
       "$f(n) \\in \\Theta(n^3)$",
@@ -8303,7 +8428,11 @@
   {
     "id": 895,
     "question": "Se dispone de un conjunto de $n$ valores numéricos dispuestos en un vector sin orden preestablecido. Se desea escribir una función que reciba ese vector y un valor $k$ $(n/2 \\leq k \\leq n)$ y que devuelva los $k$ valores más pequeños dispuestos en otro vector de manera ordenada. ¿Cuál es la complejidad temporal del mejor algoritmo que se puede escribir?",
-    "options": ["$O(kn)$", "Ninguna de las otras dos opciones es cierta.", "$O(k \\log n)$"],
+    "options": [
+      "$\\Omicron(kn)$",
+      "Ninguna de las otras dos opciones es cierta.",
+      "$\\Omicron(k \\log n)$"
+    ],
     "correctAnswer": 1,
     "tags": ["Junio 2023"]
   },
@@ -8416,7 +8545,7 @@
   {
     "id": 906,
     "question": "Estamos resolviendo la versión restringida del problema del laberinto. Ya hemos obtenido el almacén de resultados parciales. ¿Con qué complejidad temporal podemos obtener un camino de salida de longitud mínima si es que existe?",
-    "options": ["$\\Theta(m + n)$", "$\\Omega(\\min(n, m))$ y $O(mn)$", "$\\Theta(mn)$"],
+    "options": ["$\\Theta(m + n)$", "$\\Omega(\\min(n, m))$ y $\\Omicron(mn)$", "$\\Theta(mn)$"],
     "correctAnswer": 0,
     "tags": ["Junio 2023"]
   },
@@ -8447,7 +8576,7 @@
     "question": "Un fontanero tiene una jornada de $Q$ cuartos de hora (es así como se organiza la agenda) y tiene $C$ clientes. El trabajo del cliente $i$ tarda $q_i$ cuartos de hora y el fontanero le cobra un precio $p_i$. Es posible que no pueda atender todos los clientes en la jornada, que nunca puede alargarse. Este problema tiene una solución bien conocida que permite elegir qué clientes visitar para que la suma cobrada al final de la jornada sea la máxima. ¿Qué podemos decir de esta solución?",
     "options": [
       "Que se ha de implementar forzosamente con un algoritmo de búsqueda y enumeración como el de vuelta atrás.",
-      "Que la organización de la agenda en cuartos de hora permite obtener una solución de complejidad temporal $\\Theta(QC)$ y complejidad espacial $O(Q)$.",
+      "Que la organización de la agenda en cuartos de hora permite obtener una solución de complejidad temporal $\\Theta(QC)$ y complejidad espacial $\\Omicron(Q)$.",
       "Que no se puede implementar con una solución de \"divide y vencerás\" con memoización."
     ],
     "correctAnswer": 1,
@@ -8474,7 +8603,11 @@
   {
     "id": 912,
     "question": "¿Cuál es el coste de monticulizar (heapify) un vector de tamaño $N$?",
-    "options": ["$O(N \\log N)$ y $\\Omega(N)$", "$\\Theta(N)$", "$O(N)$ y $\\Omega(1)$"],
+    "options": [
+      "$\\Omicron(N \\log N)$ y $\\Omega(N)$",
+      "$\\Theta(N)$",
+      "$\\Omicron(N)$ y $\\Omega(1)$"
+    ],
     "correctAnswer": 1,
     "tags": ["Junio 2023"]
   },
@@ -8502,7 +8635,7 @@
   },
   {
     "id": 915,
-    "question": "El problema de la moneda consiste a formar una suma $M$ con el número mínimo de monedas tomadas (con repetición) de un conjunto $C$ donde hay una cantidad suficientemente grande de monedas con cada posible valor facial $C = \\{c_1, c_2, \\ldots, c_{|C|}\\}$, con $c_1 = 1$. ¿Cuál de estas afirmaciones sobre un algoritmo recursivo de la forma:$n_{opt}(M) = 1 + \\min_{1 \\leq i \\leq |C|} n_{opt}(M - c_i); n_{opt}(0) = 0; n_{opt}(x) = \\infty$ para $x < 0$\nes falsa?",
+    "question": "El problema de la moneda consiste a formar una suma $M$ con el número mínimo de monedas tomadas (con repetición) de un conjunto $C$ donde hay una cantidad suficientemente grande de monedas con cada posible valor facial $C = \\{c_1, c_2, \\ldots, c_{|C|}\\}$, con $c_1 = 1$. ¿Cuál de estas afirmaciones sobre un algoritmo recursivo de la forma:\n$n_{opt}(M) = 1 + \\min_{1 \\leq i \\leq |C|} n_{opt}(M - c_i); n_{opt}(0) = 0; n_{opt}(x) = \\infty$ para $x < 0$\nes falsa?",
     "options": [
       "Dependiendo de cuáles sean los valores faciales y la suma, puede ser que el algoritmo recursivo no encuentre solución.",
       "Tiene un coste temporal prohibitivo, ya que puede calcular $n_{opt}(x)$ para el mismo valor de $x$ más de una vez.",
@@ -8542,7 +8675,7 @@
   },
   {
     "id": 919,
-    "question": "Sea $f(n) = 3n + 4$. Dos de las tres afirmaciones siguientes prueban que $f(n) \\in O(n)$. ¿Cuál es la que no?",
+    "question": "Sea $f(n) = 3n + 4$. Dos de las tres afirmaciones siguientes prueban que $f(n) \\in \\Omicron(n)$. ¿Cuál es la que no?",
     "options": [
       "Para todo $n > 4$ se cumple que $3n + 4 < 4n$",
       "Para todo $n > \\frac{4}{c-3}$, con $c > 3$, se cumple que $3n + 4 < cn$.",
@@ -8565,7 +8698,7 @@
   {
     "id": 921,
     "question": "¿Cuál es la complejidad temporal en el caso mejor del algoritmo que, dado un vector, nos dice cuál de sus elementos quedaría en la posición $k$ si lo ordenáramos por orden descendente de valor?",
-    "options": ["$O(\\log n)$", "$O(n)$", "$O(n \\log n)$"],
+    "options": ["$\\Omicron(\\log n)$", "$\\Omicron(n)$", "$\\Omicron(n \\log n)$"],
     "correctAnswer": 1,
     "tags": ["Junio 2022"]
   },
@@ -8604,7 +8737,7 @@
   },
   {
     "id": 925,
-    "question": "Indica cuál de los siguientes conjuntos es el conjunto $O(f)$:",
+    "question": "Indica cuál de los siguientes conjuntos es el conjunto $\\Omicron(f)$:",
     "options": [
       "$\\{g : \\mathbb{N} \\to \\mathbb{R}^+ | \\exists c > 0, \\exists n_0 \\in \\mathbb{N}, \\forall n \\geq n_0, g(n) \\leq cf(n)\\}$",
       "$\\{g : \\mathbb{N} \\to \\mathbb{R}^+ | \\exists c > 0, \\exists n_0 \\in \\mathbb{N} : \\forall n \\geq n_0, g(n) \\geq cf(n)\\}$",
@@ -8650,8 +8783,8 @@
     "id": 929,
     "question": "En cuanto a la complejidad temporal de la siguiente función, ¿cuál de las siguientes formulaciones expresa mejor su complejidad en el peor de los casos?```cpp\nint f(vector<int>& v) {\n  int n = v.size(), i = 2, k = 0;\n  while (i < n) {\n    int j = i;\n    while (v[j] != v[1]) {\n      k++;\n      j = j / 2;\n    }\n    i = i + 2;\n  }\n  return k;\n}\n```",
     "options": [
-      "$c_s(n) = \\sum_{k=1}^{\\lfloor \\frac{n-1}{2} \\rfloor} \\log_2 2k \\in O(n \\log n)$",
-      "$c_s(n) = \\sum_{k=1}^{\\lfloor \\frac{n-1}{2} \\rfloor} \\log_2 2k \\in O(\\log^2 n)$",
+      "$c_s(n) = \\sum_{k=1}^{\\lfloor \\frac{n-1}{2} \\rfloor} \\log_2 2k \\in \\Omicron(n \\log n)$",
+      "$c_s(n) = \\sum_{k=1}^{\\lfloor \\frac{n-1}{2} \\rfloor} \\log_2 2k \\in \\Omicron(\\log^2 n)$",
       "Las otras dos opciones son ambas falsas."
     ],
     "correctAnswer": 0,
@@ -8683,9 +8816,9 @@
     "id": 932,
     "question": "Existen dos algoritmos que para ordenar un vector de $n$ elementos, buscan el máximo de esos $n$ elementos, lo intercambian con el $n$-ésimo elemento para ponerlo al final, y luego ordenan, usando el mismo algoritmo, el vector de las primeras $n - 1$ componentes. ¿Cuál de las afirmaciones siguientes es cierta?",
     "options": [
-      "Uno de los algoritmos es heapsort y el otro es una de las posibles maneras de realizar la ordenación por selección; el primero tiene un coste temporal $O(n \\log n)$ y el segundo, $O(n^2)$.",
-      "Uno de los algoritmos es heapsort y el otro es una de las posibles maneras de realizar la ordenación por burbuja o bubblesort; el primero tiene un coste temporal $O(n \\log n)$ y el segundo, $O(n^2)$.",
-      "Uno de los algoritmos es heapsort y el otro es una de las posibles maneras de realizar la ordenación por selección; el primero tiene un coste temporal $O(n)$ y el segundo, $O(n^2)$."
+      "Uno de los algoritmos es heapsort y el otro es una de las posibles maneras de realizar la ordenación por selección; el primero tiene un coste temporal $\\Omicron(n \\log n)$ y el segundo, $\\Omicron(n^2)$.",
+      "Uno de los algoritmos es heapsort y el otro es una de las posibles maneras de realizar la ordenación por burbuja o bubblesort; el primero tiene un coste temporal $\\Omicron(n \\log n)$ y el segundo, $\\Omicron(n^2)$.",
+      "Uno de los algoritmos es heapsort y el otro es una de las posibles maneras de realizar la ordenación por selección; el primero tiene un coste temporal $\\Omicron(n)$ y el segundo, $\\Omicron(n^2)$."
     ],
     "correctAnswer": 0,
     "tags": ["Junio 2022"]
@@ -8693,7 +8826,7 @@
   {
     "id": 933,
     "question": "Cuál es la complejidad temporal en función del tamaño del problema ($n$) de multiplicar dos matrices cuadradas?",
-    "options": ["$O(n^2)$", "$O(n^{3/2})$", "$O(n^3)$"],
+    "options": ["$\\Omicron(n^2)$", "$\\Omicron(n^{3/2})$", "$\\Omicron(n^3)$"],
     "correctAnswer": 1,
     "tags": ["Junio 2022"]
   },
@@ -8787,7 +8920,7 @@
   },
   {
     "id": 942,
-    "question": "Hemos resuelto el problema del encaminamiento óptimo (versión simplificada) mediante un algoritmo de programación dinámica cuya complejidad espacial ha resultado ser $O(n)$. ¿Qué podemos asegurar de esta solución?",
+    "question": "Hemos resuelto el problema del encaminamiento óptimo (versión simplificada) mediante un algoritmo de programación dinámica cuya complejidad espacial ha resultado ser $\\Omicron(n)$. ¿Qué podemos asegurar de esta solución?",
     "options": [
       "Que no es correcta si lo que se pretende es encontrar el valor del tráfico estimado para la mejor disposición de las puertas de enlace.",
       "Que no podremos determinar dónde colocar las puertas de enlace.",
@@ -8800,9 +8933,9 @@
     "id": 943,
     "question": "Sea un problema de optimización por selección discreta, con restricciones, en el que se deben tomar $n$ decisiones booleanas para optimizar un indicador, y se abordará mediante un método de búsqueda y enumeración (vuelta atrás, ramificación y poda). ¿Cuál de las siguientes afirmaciones es correcta?",
     "options": [
-      "La complejidad temporal será como mucho $O(n \\log n)$ porque en general basta con ordenar adecuadamente las decisiones para convertir cualquier problema de este tipo en un problema de complejidad temporal lineal.",
+      "La complejidad temporal será como mucho $\\Omicron(n \\log n)$ porque en general basta con ordenar adecuadamente las decisiones para convertir cualquier problema de este tipo en un problema de complejidad temporal lineal.",
       "Puede haber problemas para los que la complejidad será exponencial o peor; ninguna estrategia de poda puede garantizar que esto no va a ocurrir.",
-      "La complejidad temporal en el peor caso será $O(n^2)$ ya que se toman $n$ decisiones binarias."
+      "La complejidad temporal en el peor caso será $\\Omicron(n^2)$ ya que se toman $n$ decisiones binarias."
     ],
     "correctAnswer": 1,
     "tags": ["Junio 2022"]
@@ -8832,7 +8965,7 @@
   {
     "id": 946,
     "question": "Se pretende calcular el valor $2^n$, $n \\in \\mathbb{N}$, haciendo una transcripción literal de la expresión $2^n = 1 + \\sum_{i=1}^{n-1} \\prod_{j=1}^{i} 2$. ¿Cuál sería la complejidad temporal asintótica, en función de $n$, del algoritmo resultante?",
-    "options": ["$O(2^n)$", "$O(n^2)$", "$O(n)$"],
+    "options": ["$\\Omicron(2^n)$", "$\\Omicron(n^2)$", "$\\Omicron(n)$"],
     "correctAnswer": 1,
     "tags": ["Junio 2022"]
   },

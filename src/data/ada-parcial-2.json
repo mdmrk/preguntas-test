@@ -28,7 +28,7 @@
   {
     "id": 4,
     "question": "Se pretende implementar mediante programación dinámica iterativa la función recursiva:```cpp\nunsigned f(unsigned x, unsigned v[]) {\n  if (x == 0)\n    return 0;\n  unsigned m = 0;\n  for (unsigned k = 0; k < x; k++)\n    m = max(m, v[k] + f(x - k, v));\n  return m;\n}\n```\n¿Cuál es la mejor complejidad espacial que se puede conseguir?",
-    "options": ["$O(1)$", "$O(x^2)$", "$O(x)$"],
+    "options": ["$\\Omicron(1)$", "$\\Omicron(x^2)$", "$\\Omicron(x)$"],
     "correctAnswer": 2
   },
   {
@@ -46,8 +46,8 @@
     "question": "En la solución al problema de la mochila continua, ¿por qué es conveniente la ordenación previa de los objetos?",
     "options": [
       "Porque si no se hace no es posible garantizar que la toma de decisiones siga un criterio voraz",
-      "Para reducir la complejidad temporal en la toma de cada decisión de $O(n)$ a $O(1)$, donde n es el numero de objetos a considerar",
-      "Para reducir la complejidad temporal en la toma de cada decisión de $O(n^2)$ a $O(n\\log n)$, donde n es el numero de objetos a considerar"
+      "Para reducir la complejidad temporal en la toma de cada decisión de $\\Omicron(n)$ a $\\Omicron(1)$, donde n es el numero de objetos a considerar",
+      "Para reducir la complejidad temporal en la toma de cada decisión de $\\Omicron(n^2)$ a $\\Omicron(n\\log n)$, donde n es el numero de objetos a considerar"
     ],
     "correctAnswer": 1
   },
@@ -123,8 +123,8 @@
   },
   {
     "id": 14,
-    "question": "```cpp\nunsigned f(unsigned y, unsigned x) {\n#suponemos y >= x if (x == 0 || y == x) return 1;\n  return f(y - 1, x - 1) + f(y - 1, x);\n}\n```",
-    "options": ["$O(x-y)$", "$O(y)$", "$O(x)$"],
+    "question": "```cpp\nunsigned f(unsigned y, unsigned x) {\n  // suponemos y >= x\n  if (x == 0 || y == x)\n    return 1;\n  return f(y - 1, x - 1) + f(y - 1, x);\n}\n```",
+    "options": ["$\\Omicron(x-y)$", "$\\Omicron(y)$", "$\\Omicron(x)$"],
     "correctAnswer": 0
   },
   {
@@ -171,15 +171,15 @@
     "id": 19,
     "question": "Se pretende aplicar la técnica memoización a la siguiente función recursiva:```cpp\nint f(int x, int y) {\n  if (x <= y)\n    return 1;\n  return x + f(x - 1, y);\n}\n```\nEn el caso más desfavorable, ¿qué complejidades temporal y espacial cabe esperar de la función resultante?",
     "options": [
-      "$O(x-y)$, tanto temporal como espacial.",
+      "$\\Omicron(x-y)$, tanto temporal como espacial.",
       "Ninguna de las otras dos opciones es correcta",
-      "Temporal $O(x-y)$ y espacial $O(1)$"
+      "Temporal $\\Omicron(x-y)$ y espacial $\\Omicron(1)$"
     ],
     "correctAnswer": 0
   },
   {
     "id": 20,
-    "question": "Se pretende implementar mediante programación dinámica iterativa la función recursiva:```cpp\nunsigned f(unsigned y, unsigned x) {\n#suponemos y >= x if (x == 0 || y == x) return 1;\n  return f(y - 1, x - 1) + f(y - 1, x);\n}\n```\n¿Cuál es la mejor estructura para el almacén?",
+    "question": "Se pretende implementar mediante programación dinámica iterativa la función recursiva:```cpp\nunsigned f(unsigned y, unsigned x) {\n  // suponemos y >= x\n  if (x == 0 || y == x)\n    return 1;\n  return f(y - 1, x - 1) + f(y - 1, x);\n}\n```\n¿Cuál es la mejor estructura para el almacén?",
     "options": ["`int A[]`", "`int A`", "`int A[][]`"],
     "correctAnswer": 1
   },
@@ -206,7 +206,7 @@
   {
     "id": 23,
     "question": "```cpp\nint f(int x, int y) {\n  if (x <= y)\n    return 1;\n  return x + f(x - 1, y);\n}\n```",
-    "options": ["$O(x^2)$", "$O(1)$", "$O(x)$"],
+    "options": ["$\\Omicron(x^2)$", "$\\Omicron(1)$", "$\\Omicron(x)$"],
     "correctAnswer": 1
   },
   {
@@ -231,8 +231,8 @@
   },
   {
     "id": 26,
-    "question": "Se pretende implementar mediante programación dinámica iterativa la función recursiva:```cpp\nunsigned f(unsigned y, unsigned x) {\n#suponemos y >= x if (x == 0 || y == x) return 1;\n  return f(y - 1, x - 1) + f(y - 1, x);\n}\n```\n¿Cuál es la mejor complejidad espacial que se puede conseguir?",
-    "options": ["$O(y^2)$", "$O(1)$", "$O(y)$"],
+    "question": "Se pretende implementar mediante programación dinámica iterativa la función recursiva:```cpp\nunsigned f(unsigned y, unsigned x) {\n  // suponemos y >= x\n  if (x == 0 || y == x)\n    return 1;\n  return f(y - 1, x - 1) + f(y - 1, x);\n}\n```\n¿Cuál es la mejor complejidad espacial que se puede conseguir?",
+    "options": ["$\\Omicron(y^2)$", "$\\Omicron(1)$", "$\\Omicron(y)$"],
     "correctAnswer": 2
   },
   {
@@ -287,14 +287,14 @@
   },
   {
     "id": 32,
-    "question": "Dada la suma de la recurrencia:$T(n) = \\begin{cases} 1 & n = 0 \\\\ \\sum_{k=0}^{n-1} T(k) & n > 0 \\end{cases}$\n¿cuál de las siguientes afirmaciones es cierta?",
+    "question": "Dada la suma de la recurrencia:\n$T(n) = \\begin{cases} 1 & n = 0 \\\\ \\sum_{k=0}^{n-1} T(k) & n > 0 \\end{cases}$\n¿cuál de las siguientes afirmaciones es cierta?",
     "options": ["$T(n) \\in \\Theta(n^2)$", "$T(n) \\in \\Theta(2^n)$", "$T(n) \\in \\Theta(n!)$"],
     "correctAnswer": 1
   },
   {
     "id": 33,
     "question": "Se pretende implementar mediante programación dinámica iterativa la función recursiva: ¿Cuál es la mejor complejidad espacial que se puede conseguir?```cpp\nfloat f(unsigned x, int y) {\n  if (y < 0)\n    return 0;\n  float A = 0.0;\n  if (v1[y] <= x)\n    A = v2[y] + f(x - v1[y], y - 1);\n  float B = f(x, y - 1);\n  return min(A, 2 + B);\n}\n```",
-    "options": ["$O(1)$", "$O(y^2)$", "$O(y)$"],
+    "options": ["$\\Omicron(1)$", "$\\Omicron(y^2)$", "$\\Omicron(y)$"],
     "correctAnswer": 2
   },
   {
@@ -310,7 +310,7 @@
   {
     "id": 35,
     "question": "Se pretende implementar mediante programación dinámica iterativa la función recursiva: ¿Cuál es la mejor complejidad espacial que se puede conseguir?```cpp\nint f(int x, int y) {\n  if (x <= y)\n    return 1;\n  return x + f(x - 1, y);\n}\n```",
-    "options": ["$O(x^2)$", "$O(x)$", "$O(1)$"],
+    "options": ["$\\Omicron(x^2)$", "$\\Omicron(x)$", "$\\Omicron(1)$"],
     "correctAnswer": 2
   },
   {
@@ -367,7 +367,7 @@
   },
   {
     "id": 42,
-    "question": "Dadas las siguientes funciones:```cpp\n#Precondición : {0 <= i < v.size(); i < j <= v.size() }\nunsigned f(const vector<unsigned>& v, unsigned i, unsigned j) {\n  if (i == j + 1)\n    return v[i];\n  unsigned sum = 0;\n  for (unsigned k = 0; k < j - i; k++)\n    sum += f(v, i, i + k + 1) + f(v, i + k + 1, j);\n  return sum;\n}\nunsigned g(const vector<unsigned>& v) {\n  return f(v, v.begin(), v.end());\n}\n```\nSe quiere reducir la complejidad temporal de la función g usando programación dinámica iterativa. ¿cuál sería la complejidad espacial?",
+    "question": "Dadas las siguientes funciones:```cpp\n// Precondición: {0 <= i < v.size(); i < j <= v.size() }\nunsigned f(const vector<unsigned>& v, unsigned i, unsigned j) {\n  if (i == j + 1)\n    return v[i];\n  unsigned sum = 0;\n  for (unsigned k = 0; k < j - i; k++)\n    sum += f(v, i, i + k + 1) + f(v, i + k + 1, j);\n  return sum;\n}\nunsigned g(const vector<unsigned>& v) {\n  return f(v, v.begin(), v.end());\n}\n```\nSe quiere reducir la complejidad temporal de la función g usando programación dinámica iterativa. ¿cuál sería la complejidad espacial?",
     "options": ["cúbica", "cuadrática", "exponencial"],
     "correctAnswer": 1
   },
@@ -432,18 +432,22 @@
   {
     "id": 50,
     "question": "Si n es el número de elementos del vector, el coste del algoritmo Mergesort es:",
-    "options": ["$O(n^2)$ y $\\Omega(n \\log n)$", "$\\Theta(n \\log n)$", "$\\Theta(n^2)$"],
+    "options": [
+      "$\\Omicron(n^2)$ y $\\Omega(n \\log n)$",
+      "$\\Theta(n \\log n)$",
+      "$\\Theta(n^2)$"
+    ],
     "correctAnswer": 1
   },
   {
     "id": 51,
-    "question": "La serie de números de Fibonacci se define de la siguiente forma:$fib(n) = \\begin{cases} 1 & n \\leq 1 \\\\ fib(n-1) + fib(n-2) & n > 1 \\end{cases}$\nPara implementar esta función podemos emplear:",
+    "question": "La serie de números de Fibonacci se define de la siguiente forma:\n$fib(n) = \\begin{cases} 1 & n \\leq 1 \\\\ fib(n-1) + fib(n-2) & n > 1 \\end{cases}$\nPara implementar esta función podemos emplear:",
     "options": ["Divide y vencerás", "Programación dinámica", "Cualquiera de las dos anteriores"],
     "correctAnswer": 2
   },
   {
     "id": 52,
-    "question": "La serie de números de Fibonacci se define de la siguiente forma:$fib(n) = \\begin{cases} 1 & n \\leq 1 \\\\ fib(n-1) + fib(n-2) & n > 1 \\end{cases}$\n¿Qué implementación de entre las siguientes supone el menor coste?",
+    "question": "La serie de números de Fibonacci se define de la siguiente forma:\n$fib(n) = \\begin{cases} 1 & n \\leq 1 \\\\ fib(n-1) + fib(n-2) & n > 1 \\end{cases}$\n¿Qué implementación de entre las siguientes supone el menor coste?",
     "options": ["Divide y vencerás", "Programación dinámica", "Cualquiera de las dos anteriores"],
     "correctAnswer": 1
   },
@@ -542,13 +546,17 @@
   {
     "id": 63,
     "question": "Si n es el número de elementos de un vector. La solución de menor coste al problema de encontrar su k-ésimo mínimo tiene la siguiente complejidad:",
-    "options": ["$\\Omega(n)$ y $O(n \\log n)$", "$\\Omega(n)$ y $O(n^2)$", "Ninguna de las dos"],
+    "options": [
+      "$\\Omega(n)$ y $\\Omicron(n \\log n)$",
+      "$\\Omega(n)$ y $\\Omicron(n^2)$",
+      "Ninguna de las dos"
+    ],
     "correctAnswer": 1
   },
   {
     "id": 64,
     "question": "Si n es el número de elementos de un vector. Podemos encontrar una solución al problema de encontrar su k-ésimo que esté acotada superiormente por:",
-    "options": ["$O(n^3)$", "$O(n)$", "Ninguna de las dos"],
+    "options": ["$\\Omicron(n^3)$", "$\\Omicron(n)$", "Ninguna de las dos"],
     "correctAnswer": 0
   },
   {
@@ -577,9 +585,9 @@
     "id": 68,
     "question": "Si n es el número de elementos de un vector. La solución de menor coste al problema de la búsqueda binaria tiene la siguiente complejidad:",
     "options": [
-      "$\\Omega(\\log n)$ y $O(n \\log n)$",
+      "$\\Omega(\\log n)$ y $\\Omicron(n \\log n)$",
       "$\\Theta(n \\log n)$",
-      "$\\Omega(1)$ y $O(\\log n)$"
+      "$\\Omega(1)$ y $\\Omicron(\\log n)$"
     ],
     "correctAnswer": 2
   },
@@ -598,13 +606,13 @@
   {
     "id": 71,
     "question": "Se pretende implementar mediante programación dinámica iterativa la función recursiva:```cpp\nfloat f(unsigned x, int y) {\n  if (y < 0)\n    return 0;\n  float A = 0.0;\n  if (v1[y] <= x)\n    A = v2[y] + f(x - v1[y], y - 1);\n  float B = f(x, y - 1);\n  return min(A, 2 + B);\n}\n```\n¿Cuál es la mejor complejidad temporal que se puede conseguir?",
-    "options": ["$O(y)$", "$O(x)$", "$O(x \\cdot y)$"],
+    "options": ["$\\Omicron(y)$", "$\\Omicron(x)$", "$\\Omicron(x \\cdot y)$"],
     "correctAnswer": 2
   },
   {
     "id": 72,
     "question": "Se pretende implementar mediante programación dinámica iterativa la función recursiva:```cpp\nint f(int x, int y) {\n  if (x <= y)\n    return 1;\n  return x + f(x - 1, y);\n}\n```\n¿Cuál es la mejor complejidad temporal que se puede conseguir?",
-    "options": ["$O(y)$", "$O(x)$", "$O(x \\cdot y)$"],
+    "options": ["$\\Omicron(y)$", "$\\Omicron(x)$", "$\\Omicron(x \\cdot y)$"],
     "correctAnswer": 1
   },
   {
@@ -621,9 +629,9 @@
     "id": 74,
     "question": "Se pretende aplicar la técnica memoización a la siguiente función recursiva:```cpp\nint f(int x, int y) {\n  if (x > y)\n    return 1;\n  return x + f(x, y - 2);\n}\n```\nEn el caso más desfavorable, ¿qué complejidades temporal y espacial cabe esperar de la función resultante?",
     "options": [
-      "$O(x-y)$, tanto temporal como espacial.",
+      "$\\Omicron(x-y)$, tanto temporal como espacial.",
       "Ninguna de las otras dos opciones es correcta",
-      "Temporal $O(x-y)$ y espacial $O(1)$"
+      "Temporal $\\Omicron(x-y)$ y espacial $\\Omicron(1)$"
     ],
     "correctAnswer": 0
   },
