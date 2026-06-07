@@ -1416,10 +1416,10 @@
     "id": 154,
     "question": "Comparando los algoritmos de multiplicacion de matrices y warshall para un grafo no valuado G tenemos que",
     "options": [
-      "Tienen complejidad diferente la multiplicación de matrices tiene \\Omicron(n^4) y warshall \\Omicron(n^3) la multiplicación de matrices se basa en aplicaciones de espacio de búsqueda y warshall se basa en ir obteniendo caminos de longitud mayor",
+      "Tienen complejidad diferente la multiplicación de matrices tiene $\\Omicron(n^4)$ y warshall $\\Omicron(n^3)$ la multiplicación de matrices se basa en aplicaciones de espacio de búsqueda y warshall se basa en ir obteniendo caminos de longitud mayor",
       "Ambos tienen la misma complejidad, multiplicación de matrices se basa en ir obteniendo caminos de longitud mayor aplicaciones de espacio de búsqueda y warshall se basa en aplicaciones de espacio de búsqueda",
       "Ambos tienen la misma complejidad, multiplicación de matrices se basa en aplicaciones de espacio de búsqueda y warshall se basa en ir obteniendo caminos de longitud mayor",
-      "Tienen complejidad diferente la multiplicación de matrices tiene \\Omicron(n^4) y warshall \\Omicron(n^3) la multiplicación de matrices se basa en ir obteniendo caminos de longitud mayor y warshall se basa en aplicaciones de espacio de búsqueda"
+      "Tienen complejidad diferente la multiplicación de matrices tiene $\\Omicron(n^4)$ y warshall $\\Omicron(n^3)$ la multiplicación de matrices se basa en ir obteniendo caminos de longitud mayor y warshall se basa en aplicaciones de espacio de búsqueda"
     ],
     "correctAnswer": 3
   },
@@ -2311,10 +2311,10 @@
     "id": 252,
     "question": "La búsqueda de un elemento dentro de un árbol tiene un coste de",
     "options": [
-      "Siempre constante, \\Omicron(1)",
+      "Siempre constante, $\\Omicron(1)$",
       "Si es ABO es logarítmica siempre",
       "Si es un AVL es logarítmica siempre",
-      "Siempre lineal, \\Omicron(n)",
+      "Siempre lineal, $\\Omicron(n)$",
       "Ninguna de las anteriores"
     ],
     "correctAnswer": 4
@@ -2403,12 +2403,12 @@
   },
   {
     "id": 261,
-    "question": "Suponiendo que T1 E \\Omicron(f) y que T2 E \\Omicron(f) indicar cual de las siguientes afirmaciones es cierta",
+    "question": "Suponiendo que T1 E $\\Omicron(f)$ y que T2 E $\\Omicron(f)$ indicar cual de las siguientes afirmaciones es cierta",
     "options": [
       "I y II son ciertas",
-      "II T1 - T2 E \\Omicron(f)",
+      "II T1 - T2 E $\\Omicron(f)$",
       "III Ninguna de las anteriores",
-      "I T1+T2 E \\Omicron(f)"
+      "I T1+T2 E $\\Omicron(f)$"
     ],
     "correctAnswer": 0
   },
@@ -2442,10 +2442,10 @@
     "id": 265,
     "question": "Suponiendo la implementación mas eficiente para cada TAD establecer el coste en el borrado del elemento menor en una lista ordenada una lista desordenada y un montículo de mínimos respectivamente",
     "options": [
-      "\\Omicron(1),\\Omicron(n),\\Omicron(1)",
-      "\\Omicron(log n),\\Omicron(n),\\Omicron(1)",
-      "\\Omicron(1),\\Omicron(n),\\Omicron(log n)",
-      "\\Omicron(n),\\Omicron(1),\\Omicron(log n)"
+      "$\\Omicron(1)$,$\\Omicron(n)$,$\\Omicron(1)$",
+      "$\\Omicron(log n)$,$\\Omicron(n)$,$\\Omicron(1)$",
+      "$\\Omicron(1)$,$\\Omicron(n)$,$\\Omicron(log n)$",
+      "$\\Omicron(n)$,$\\Omicron(1)$,$\\Omicron(log n)$"
     ],
     "correctAnswer": 2
   },
@@ -2509,7 +2509,7 @@
   {
     "id": 272,
     "question": "¿Cuál de estas tres expresiones es falsa?",
-    "options": ["3n^2 + 1 ∈ \\Omicron(n^3)", "n + n log(n) ∈ Ω(n)", "n + n log(n) ∈ Θ(n)"],
+    "options": ["3n^2 + 1 ∈ $\\Omicron(n^3)$", "n + n log(n) ∈ Ω(n)", "n + n log(n) ∈ Θ(n)"],
     "correctAnswer": 2
   },
   {
@@ -2586,7 +2586,7 @@
     "id": 280,
     "question": "Los algoritmos de ordenación Quicksort y Mergesort tienen en común ...",
     "options": [
-      "... que se ejecutan en tiempo \\Omicron(n).",
+      "... que se ejecutan en tiempo $\\Omicron(n)$.",
       "... que ordenan el vector sin usar espacio adicional.",
       "... que aplican la estrategia de divide y vencerás."
     ],
@@ -2625,7 +2625,7 @@
   },
   {
     "id": 284,
-    "question": "Ordena de menor a mayor las siguientes complejidades \t1. \\Omicron(1) \t2. \\Omicron(n^2)3. \\Omicron(nlgn)\n4. \\Omicron(n!)",
+    "question": "Ordena de menor a mayor las siguientes complejidades \t1. $\\Omicron(1)$ \t2. $\\Omicron(n^2)$3. $\\Omicron(nlgn)$\n4. $\\Omicron(n!)$",
     "options": ["3, 1, 2 y 4", "1, 3, 2 y 4", "1, 3, 4 y 2"],
     "correctAnswer": 1
   },
@@ -2652,7 +2652,7 @@
   {
     "id": 287,
     "question": "Sea A un árbol binario ordenado equilibrado de n elementos, en el que todos sus elementos son distintos, entonces la función búsqueda de un elemento que no esta en el árbol tendrá coste",
-    "options": ["\\Omicron(log n)", "Ω(log n) y \\Omicron(n)", "Θ(n)", "Θ(log n)"],
+    "options": ["$\\Omicron(log n)$", "Ω(log n) y $\\Omicron(n)$", "Θ(n)", "Θ(log n)"],
     "correctAnswer": 3
   },
   {
@@ -3370,10 +3370,10 @@
     "id": 366,
     "question": "Suponiendo la implementación mas eficiente para cada TAD establecer el coste de borrado de los elementos menor en una lista desordenada un árbol binario ordenado y un montículo de mínimos respectivamente",
     "options": [
-      "\\Omicron(1),\\Omicron(n),\\Omicron(log n),\\Omicron(1)",
-      "\\Omicron(log n),\\Omicron(n),\\Omicron(n),\\Omicron(1)",
-      "\\Omicron(n),\\Omicron(1),\\Omicron(log n),\\Omicron(log n)",
-      "\\Omicron(1),\\Omicron(n),\\Omicron(n),\\Omicron(log n)"
+      "$\\Omicron(1)$,$\\Omicron(n)$,$\\Omicron(log n)$,$\\Omicron(1)$",
+      "$\\Omicron(log n)$,$\\Omicron(n)$,$\\Omicron(n)$,$\\Omicron(1)$",
+      "$\\Omicron(n)$,$\\Omicron(1)$,$\\Omicron(log n)$,$\\Omicron(log n)$",
+      "$\\Omicron(1)$,$\\Omicron(n)$,$\\Omicron(n)$,$\\Omicron(log n)$"
     ],
     "correctAnswer": 0
   },
@@ -3777,11 +3777,11 @@
     "id": 409,
     "question": "Resolviendo la ecuación de recurrencia del ejercicio siguiente se obtiene que su función de coste es:```text\nFunción F(ent n: entero): entero\nvariables x, i: entero\nInicio\n  si (n >= 1) entonces\n    retorna 1\n  si no\n    para i de 1 a n hacer\n      x ← 1\n      mientras x < n hacer\n        x ← x * 2\n      finmientras\n    finpara\n    retorna F(n/2) + F(n/2)\n  finsi\nfin\n```",
     "options": [
-      "\\Omicron(n*log^2 n)",
-      "\\Omicron(log n)",
-      "\\Omicron(2^n)",
-      "\\Omicron(n^2)",
-      "\\Omicron(n)"
+      "$\\Omicron(n*log^2 n)$",
+      "$\\Omicron(log n)$",
+      "$\\Omicron(2^n)$",
+      "$\\Omicron(n^2)$",
+      "$\\Omicron(n)$"
     ],
     "correctAnswer": 0
   },
@@ -4027,7 +4027,7 @@
   },
   {
     "id": 436,
-    "question": "¿Cuál de los siguientes algoritmos de ordenación necesita un espacio de almacenamiento adicional al vector que se ordena con complejidad \\Omicron(n)?",
+    "question": "¿Cuál de los siguientes algoritmos de ordenación necesita un espacio de almacenamiento adicional al vector que se ordena con complejidad $\\Omicron(n)$?",
     "options": ["Mergesort.", "Quicksort.", "Bubblesort."],
     "correctAnswer": 0
   },
@@ -4122,7 +4122,7 @@
   {
     "id": 446,
     "question": "Sea A un árbol binario ordenado equilibrad de n elementos en el que todos sus elementos son distintos, entonces la operación de búsqueda de un elemento que no esta en el árbol tendrá un coste",
-    "options": ["Θ(n)", "\\Omicron(log n)", "Ω(log n) y \\Omicron(n)", "Θ(log n)"],
+    "options": ["Θ(n)", "$\\Omicron(log n)$", "Ω(log n) y $\\Omicron(n)$", "Θ(log n)"],
     "correctAnswer": 1
   },
   {
@@ -6333,7 +6333,7 @@
     "options": [
       "Depende del algoritmo de volcado. Sera lineal si A se vuelca de forma lineal, y logarítmica si se sigue un algoritmo puro de back tracking para localizar el elemento x dentro del árbol.",
       "Depende del algoritmo de volcado del array. Sera lineal A si se vuelca de forma lineal, y logarítmica si se sigue una estrategia divide y vencerás, tomando como pivote A[N/2].",
-      "Es independiente del algoritmo de volcado del array. Siempre es logarítmica, pues en una búsqueda de ABO siempre tenemos una ecuación de recurrencia de la forma T(n)=(n/2)+1;T(1)=\\Omicron(1), que al resolverla nos proporciona una complejidad logarítmica.",
+      "Es independiente del algoritmo de volcado del array. Siempre es logarítmica, pues en una búsqueda de ABO siempre tenemos una ecuación de recurrencia de la forma T(n)=(n/2)+1;T(1)=$\\Omicron(1)$, que al resolverla nos proporciona una complejidad logarítmica.",
       "Depende del algoritmo de volcado. Si empieza desde el final será logarítmica y si empieza desde el principio será lineal."
     ],
     "correctAnswer": 1
@@ -6518,7 +6518,7 @@
   {
     "id": 702,
     "question": "Indica cual es la complejidad, en función de n, del fragmento siguiente:```cpp\nint a = 0;\nfor (int i = 0; i < n; i++)\n  for (int j = i; j > 0; j /= 2)\n    a += a[i][j];\n```",
-    "options": ["\\Omicron(n log n)", "\\Omicron(n)", "\\Omicron(n^2)"],
+    "options": ["$\\Omicron(n log n)$", "$\\Omicron(n)$", "$\\Omicron(n^2)$"],
     "correctAnswer": 0
   },
   {
@@ -6779,7 +6779,7 @@
   {
     "id": 734,
     "question": "Sea v un vector de N elementos y supongamos que todos los elementos de v son distintos Considera el algoritmo siguiente Si tomamos como medida significativa el numero de comparaciones con elementos del vector(instrucción 2) entonces el algoritmo tiene un coste:```cpp\nfor (i = 1; i < N; i++) {\n  X = V[i];  // (1)\n  Izq = 0;\n  Der = i - 1;\n  while (Izq <= Der) {\n    Medio = (Izq + Der) / 2;\n    if (X < V[Medio])  // (2)\n      Der = Medio - 1;\n    else\n      Izq = Medio + 1;\n  }\n  for (j = i - 1; j >= Izq; j--) {\n    V[j + 1] = V[j];  // (3)\n  }\n  V[Izq] = X;\n}\n```",
-    "options": ["Θ(n*log(n))", "\\Omicron(log(n))", "Θ(n)", "Ω(log(n)) y \\Omicron(n)"],
+    "options": ["Θ(n*log(n))", "$\\Omicron(log(n))$", "Θ(n)", "Ω(log(n)) y $\\Omicron(n)$"],
     "correctAnswer": 0
   },
   {
