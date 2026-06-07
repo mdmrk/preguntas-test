@@ -64,6 +64,7 @@
       <TestQuestion
         v-if="currentQuestion && !testFinished"
         :question="currentQuestion"
+        :openExplanation="true"
         @answered="handleAnswer"
         @next="nextQuestion"
         :shuffle-answers="shouldShuffleAnswers"

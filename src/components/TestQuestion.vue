@@ -113,6 +113,7 @@ import TextRenderer from "./TextRenderer.vue"
 
 interface Props {
   question: Question
+  openExplanation: boolean
   readOnly?: boolean
   // biome-ignore lint/correctness/noVueDuplicateKeys: false positive, shadows local ref
   answered?: boolean
@@ -166,7 +167,7 @@ const selectedOption = ref<number | null>(getInitialSelectedOption())
 const answered = ref(props.answered || false)
 const copied = ref(false)
 const reportOpen = ref(false)
-const explanationOpen = ref(false)
+const explanationOpen = ref(props.explanationOpen)
 
 const isCorrect = computed(() => {
   if (selectedOption.value === null) return false

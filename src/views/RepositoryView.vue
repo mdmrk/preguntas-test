@@ -71,6 +71,7 @@
           </div>
           <TestQuestion
             :question="question"
+            :openExplanation="false"
             :answered="true"
             :readOnly="true"
             :shuffleAnswers="false"
