@@ -49,3 +49,7 @@ pre {
 .katex > span {
   @apply text-lg;
 }
+
+.katex-display {
+  @apply overflow-x-auto;
+}

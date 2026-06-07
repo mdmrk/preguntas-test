@@ -4,7 +4,7 @@
   </div>
 
   <div class="mb-6">
-    <div class="text-base font-semibold mb-3 flex-1 overflow-x-auto">
+    <div class="text-base font-semibold mb-3 flex-1 min-w-0">
       <TextRenderer :text="question.question" />
     </div>
   </div>
@@ -34,7 +34,7 @@
         </div>
 
         <div
-          class="text-base font-medium flex-1 min-w-0 overflow-x-auto"
+          class="text-base font-medium flex-1 min-w-0"
           :class="getTextClasses(shuffledIndex)"
         >
           <TextRenderer :text="option" />
