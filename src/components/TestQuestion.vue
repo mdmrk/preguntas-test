@@ -167,7 +167,7 @@ const selectedOption = ref<number | null>(getInitialSelectedOption())
 const answered = ref(props.answered || false)
 const copied = ref(false)
 const reportOpen = ref(false)
-const explanationOpen = ref(props.explanationOpen)
+const explanationOpen = ref(props.openExplanation)
 
 const isCorrect = computed(() => {
   if (selectedOption.value === null) return false
