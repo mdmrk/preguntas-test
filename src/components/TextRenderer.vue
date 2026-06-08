@@ -31,7 +31,11 @@ const renderedText = computed(() => {
     })
 
     result = result.replace(/\$([^$]+)\$/g, (_, math) => {
-      return katex.renderToString(deescapeHtml(math), { displayMode: false, throwOnError: false })
+      const rendered = katex.renderToString(deescapeHtml(math), {
+        displayMode: false,
+        throwOnError: false,
+      })
+      return `<span class="katex-inline">${rendered}</span>`
     })
 
     result = result.replace(/```(?:\w+)?\s*([\s\S]*?)\s*```/g, (_, code) => {
