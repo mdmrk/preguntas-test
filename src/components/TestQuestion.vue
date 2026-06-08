@@ -269,7 +269,7 @@ const copyQuestion = async () => {
 const resetQuestion = () => {
   selectedOption.value = getInitialSelectedOption()
   answered.value = props.answered || false
-  explanationOpen.value = false
+  explanationOpen.value = props.openExplanation
 }
 
 watch(() => props.question, resetQuestion)
