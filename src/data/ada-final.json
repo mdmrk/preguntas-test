@@ -8091,7 +8091,7 @@
       "El mejor de los casos ocurre cuando $n = 0$ y su complejidad temporal está en $\\Omega(1)$",
       "La complejidad temporal asintótica está en $\\Theta(n^2)$"
     ],
-    "correctAnswer": 0,
+    "correctAnswer": 1,
     "tags": ["Julio 2024"],
     "explanation": "La función hace 4 llamadas a $n/2$, así que $4T(n/2)\\in\\Theta(n^2)$. El tamaño del problema es el valor de $n$ (afirmación correcta); además, no presenta casos mejor/peor distintos para un mismo $n$."
   },
