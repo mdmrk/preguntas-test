@@ -2,7 +2,7 @@ export interface Question {
   id: number
   question: string
   options: string[]
-  correctAnswer: number
+  answer: number
   image?: string
   tags?: string[]
   explanation?: string

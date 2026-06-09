@@ -8,7 +8,7 @@
       "La cantidad de funcionalidad en un módulo.",
       "La capacidad de extender las clases en el sistema."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 2,
@@ -19,7 +19,7 @@
       "Un cambio en un módulo provoca modificaciones en varios otros.",
       "Los módulos comparten interfaces genéricas."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 3,
@@ -30,7 +30,7 @@
       "Mejora la legibilidad del sistema.",
       "Dificulta realizar cambios o pruebas aisladas."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 4,
@@ -41,7 +41,7 @@
       "Tiene dependencias externas que lo hacen más flexible.",
       "Puede cambiar por múltiples razones."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 5,
@@ -52,7 +52,7 @@
       "El módulo gestiona múltiples responsabilidades.",
       "Requiere cambios frecuentes en su interfaz."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 6,
@@ -63,7 +63,7 @@
       "Los cambios se producen principalmente dentro de los módulos afectados.",
       "Los módulos se vuelven rígidos ante el cambio."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 7,
@@ -74,7 +74,7 @@
       "Los módulos son independientes y fáciles de modificar.",
       "El código es altamente cohesivo."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 8,
@@ -85,7 +85,7 @@
       "Cambios en el código provocan errores inesperados en ejecución.",
       "Las interfaces son estables y bien definidas."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 9,
@@ -96,7 +96,7 @@
       "Fomenta la herencia múltiple.",
       "Es difícil reutilizar su código en otros contextos."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 10,
@@ -107,7 +107,7 @@
       "Es fácil realizar cambios pequeños en el diseño.",
       "La refactorización se realiza sin complicaciones."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 11,
@@ -118,7 +118,7 @@
       "Las interfaces deben ser pequeñas y específicas.",
       "Una clase debe cambiar por una única razón."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 12,
@@ -129,7 +129,7 @@
       "Una clase Usuario que valida credenciales.",
       "Una clase Logger que registra eventos en un archivo."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 13,
@@ -140,7 +140,7 @@
       "Las clases tienden a ser más grandes y manejan varias responsabilidades.",
       "Las interfaces públicas cambian frecuentemente."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 14,
@@ -151,7 +151,7 @@
       "Una clase que gestiona únicamente cálculos geométricos, como el área de figuras.",
       "Un sistema que basa su diseño en clases altamente acopladas."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 15,
@@ -162,7 +162,7 @@
       "Las clases deben estar abiertas para extensión pero cerradas para modificación.",
       "Las clases base no deben tener métodos abstractos."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 16,
@@ -173,7 +173,7 @@
       "Reducir el número de interfaces en el diseño.",
       "Limitar el uso de interfaces públicas."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 17,
@@ -184,7 +184,7 @@
       "Implementar una clase derivada que amplía las capacidades de una clase base.",
       "Cambiar directamente el código de una clase ya utilizada en producción."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 18,
@@ -195,7 +195,7 @@
       "Todas las dependencias del sistema están basadas en implementaciones concretas.",
       "Las clases no tienen interfaces públicas."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 19,
@@ -206,7 +206,7 @@
       "Las interfaces deben dividirse en varias más específicas.",
       "Los módulos de alto nivel no deben depender de detalles."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 20,
@@ -217,7 +217,7 @@
       "Una clase Figura extendida por Triángulo y Círculo.",
       "Una interfaz genérica implementada por varias clases concretas."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 21,
@@ -228,7 +228,7 @@
       "Cambiar el comportamiento de los métodos base si es necesario.",
       "Preservar el comportamiento esperado de la clase base en todos los contextos."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 22,
@@ -239,7 +239,7 @@
       "Un Mamífero que sirve como base para un Perro y un Gato.",
       "Una clase derivada que ignora completamente las restricciones de la clase base."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 23,
@@ -250,7 +250,7 @@
       "Las dependencias deben basarse en implementaciones concretas.",
       "Los métodos de las interfaces deben ser abstractos."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 24,
@@ -261,7 +261,7 @@
       "Una interfaz genérica que obliga a los clientes a implementar métodos innecesarios.",
       "Dos interfaces pequeñas y específicas para lectura y escritura, implementadas por clases separadas."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 25,
@@ -272,7 +272,7 @@
       "La falta de cohesión en las clases.",
       "La rigidez en la estructura jerárquica del código."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 26,
@@ -283,7 +283,7 @@
       "Tanto los módulos de alto como de bajo nivel deben depender de abstracciones.",
       "Las interfaces deben estar fuertemente relacionadas con las implementaciones."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 27,
@@ -294,7 +294,7 @@
       "Una clase Controlador que depende directamente de las clases concretas que gestiona.",
       "Un módulo de bajo nivel que accede directamente a un módulo de alto nivel."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 28,
@@ -305,7 +305,7 @@
       "Se eliminan completamente las dependencias en el sistema.",
       "Se facilita el reemplazo de implementaciones concretas sin modificar el código de alto nivel."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 29,
@@ -316,7 +316,7 @@
       "Hay un alto acoplamiento entre User y Database.",
       "La herencia no se usa correctamente."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 30,
@@ -327,7 +327,7 @@
       "Reducir el número de métodos en Database.",
       "Utilizar una interfaz o abstracción que User pueda depender en lugar de una implementación concreta."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 31,
@@ -338,7 +338,7 @@
       "Bajar el acoplamiento implica sacrificar la cohesión.",
       "Acoplamiento y cohesión son conceptos independientes y no relacionados."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 32,
@@ -349,7 +349,7 @@
       "Se optimiza el rendimiento al reducir llamadas entre clases.",
       "Se evita la herencia innecesaria en la clase Blog."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 33,
@@ -360,7 +360,7 @@
       "Se elimina la necesidad de herencia gracias a la clase Guitar.",
       "Se asegura que las instancias de SuperCoolGuitarWithFlames puedan reemplazar a Guitar."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 34,
@@ -371,7 +371,7 @@
       "Dificulta la extensión de nuevas funcionalidades.",
       "Hace que las clases base sean inmodificables."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 35,
@@ -382,7 +382,7 @@
       "El comportamiento de los métodos de la clase base no es consistente en la clase derivada.",
       "Los métodos del Cuadrado no cumplen con los contratos de la interfaz pública."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 36,
@@ -393,7 +393,7 @@
       "Agregar más métodos abstractos para asegurar compatibilidad.",
       "Redefinir los métodos en Cuadrado para que sean compatibles con Rectángulo."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 37,
@@ -404,7 +404,7 @@
       "Se eliminan métodos abstractos innecesarios.",
       "Los clientes solo dependen de los métodos que realmente utilizan."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 38,
@@ -415,7 +415,7 @@
       "Dividiendo las responsabilidades en múltiples interfaces específicas.",
       "Usando herencia para implementar interfaces más genéricas."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 39,
@@ -426,7 +426,7 @@
       "Dependiendo directamente de la clase Lamp en lugar de una interfaz.",
       "Asegurando que Lamp y Button compartan una base común."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 40,
@@ -437,7 +437,7 @@
       "Eliminar métodos abstractos de las clases base.",
       "Crear jerarquías profundas de herencia."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 41,
@@ -448,7 +448,7 @@
       "Porque User depende directamente de la implementación concreta de Database.",
       "Porque la clase Database no es reutilizable."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 42,
@@ -459,7 +459,7 @@
       "Se eliminarán completamente las dependencias entre las dos clases.",
       "Los métodos de Database se convertirán en estáticos."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 43,
@@ -470,7 +470,7 @@
       "Facilita la extensión del código para soportar tipos de posts más complejos.",
       "Evita la necesidad de usar colecciones."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 44,
@@ -481,7 +481,7 @@
       "Facilita la dependencia directa de los métodos de Blog.",
       "Permite gestionar mejor las responsabilidades del manejo de datos de cada post."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 45,
@@ -492,7 +492,7 @@
       "Principio Open-Closed (OCP).",
       "Principio de sustitución de Liskov (LSP)."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 46,
@@ -503,7 +503,7 @@
       "Porque añade nuevas funcionalidades sin interfaces adicionales.",
       "Porque utiliza composición en lugar de herencia."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 47,
@@ -514,7 +514,7 @@
       "Aumenta la cohesión de las clases.",
       "Permite añadir nuevos tipos de posts sin modificar las clases existentes."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 48,
@@ -525,7 +525,7 @@
       "Las subclases implementan los mismos métodos definidos en IPost.",
       "Las subclases pueden ignorar la estructura definida por la interfaz."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 49,
@@ -536,7 +536,7 @@
       "Se reduciría la cohesión dentro de ImagePost.",
       "Sería más sencillo gestionar la clase Blog."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 50,
@@ -547,7 +547,7 @@
       "Reduce la necesidad de herencia en el diseño.",
       "Permite que los métodos de Blog sean más genéricos."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 51,
@@ -558,7 +558,7 @@
       "Uso exclusivo de métodos estáticos.",
       "Inyección de dependencias para proporcionar implementaciones concretas."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 52,
@@ -569,7 +569,7 @@
       "Para cumplir con el principio de segregación de interfaces y aislar responsabilidades específicas.",
       "Para facilitar la implementación de herencia múltiple."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 53,
@@ -580,7 +580,7 @@
       "Se elimina la necesidad de usar interfaces.",
       "Aumenta el número de métodos abstractos en cada interfaz."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 54,
@@ -591,7 +591,7 @@
       "Tener interfaces pequeñas y bien definidas.",
       "Mantener un alto grado de cohesión entre sus componentes."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 55,
@@ -602,7 +602,7 @@
       "Los cambios generan errores inesperados en ejecución, aunque el código compile.",
       "Las clases base tienen demasiados métodos abstractos."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 56,
@@ -613,7 +613,7 @@
       "Se introduce un alto nivel de acoplamiento entre las clases.",
       "El código no se puede reutilizar fácilmente en nuevos contextos."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 57,
@@ -624,7 +624,7 @@
       "La necesidad de definir múltiples interfaces para implementar nuevas funcionalidades.",
       "La dependencia explícita de clases concretas."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 58,
@@ -635,7 +635,7 @@
       "Los cambios en el diseño provocan errores en ejecución.",
       "La clase tiene múltiples razones para cambiar, ya que mezcla responsabilidades geométricas y gráficas."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 59,
@@ -646,7 +646,7 @@
       "Una clase Logger que registra eventos sin depender de implementaciones concretas.",
       "Una clase Controlador que mezcla lógica de negocio y acceso a datos."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 60,
@@ -657,7 +657,7 @@
       "Redefiniendo la clase base con nuevos métodos abstractos.",
       "Dependiendo de métodos concretos en lugar de abstracciones."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 61,
@@ -668,7 +668,7 @@
       "Eliminar clases base y depender de clases concretas.",
       "Utilizar composición en lugar de herencia para añadir nuevas funcionalidades."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 62,
@@ -679,7 +679,7 @@
       "El comportamiento de la clase base no es consistente en la subclase.",
       "La clase base tiene atributos incompatibles con la subclase."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 63,
@@ -690,7 +690,7 @@
       "Implementando herencia múltiple para gestionar atributos conflictivos.",
       "Eliminando todos los métodos sobrescritos en el Square."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 64,
@@ -701,7 +701,7 @@
       "Los clientes deben implementar métodos que no necesitan.",
       "Los módulos de bajo nivel dependen de abstracciones innecesarias."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 65,
@@ -712,7 +712,7 @@
       "Se facilita la herencia múltiple para implementar nuevas clases.",
       "Cada clase solo implementa los métodos necesarios, reduciendo dependencias innecesarias."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 66,
@@ -723,7 +723,7 @@
       "Eliminando la interfaz Switchable para simplificar el diseño.",
       "Haciendo que Lamp dependa directamente de Button."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 67,
@@ -734,7 +734,7 @@
       "Las clases derivadas pueden sobrescribir métodos abstractos.",
       "Se facilita la herencia múltiple para reducir dependencias."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 68,
@@ -745,7 +745,7 @@
       "Un módulo de alto nivel que depende directamente de un módulo de bajo nivel.",
       "Una interfaz que define métodos compartidos entre múltiples clases."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 69,
@@ -756,7 +756,7 @@
       "Reduce las dependencias entre módulos.",
       "Hace que extender el código para añadir atributos adicionales sea más complejo."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 70,
@@ -767,7 +767,7 @@
       "Se eliminan completamente las dependencias entre Blog y Post.",
       "Se asegura que todos los métodos de Post sean abstractos."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 71,
@@ -778,7 +778,7 @@
       "Se dividen las responsabilidades de los posts en interfaces específicas como Identity y Printable.",
       "Se asegura que todas las clases implementen todos los métodos de la interfaz IPost."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 72,
@@ -789,7 +789,7 @@
       "Simplifica la implementación de interfaces compartidas.",
       "Reduce la necesidad de inyección de dependencias en el sistema."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 73,
@@ -800,7 +800,7 @@
       "Los cambios frecuentes en el código introducen errores inesperados.",
       "Las dependencias entre módulos están bien definidas."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 74,
@@ -811,7 +811,7 @@
       "Las funcionalidades están distribuidas entre múltiples módulos.",
       "No se puede reutilizar el código fácilmente en nuevos contextos."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 75,
@@ -822,7 +822,7 @@
       "Facilita la herencia múltiple para implementar nuevos tipos de posts.",
       "Elimina completamente las dependencias entre clases del sistema."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 76,
@@ -833,7 +833,7 @@
       "Una clase Servicio que implementa directamente todas sus dependencias.",
       "Una clase BaseDeDatos que depende únicamente de clases concretas."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 77,
@@ -844,7 +844,7 @@
       "Separa las responsabilidades de almacenar datos y gestionar la lógica de presentación.",
       "Permite que los posts dependan directamente de la clase Blog."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 78,
@@ -855,7 +855,7 @@
       "Permite modificar directamente las propiedades del post base.",
       "Cambia el comportamiento de los métodos heredados sin afectar al diseño general."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 79,
@@ -866,7 +866,7 @@
       "Se reduce el número total de clases en el sistema.",
       "Permite cambiar la implementación concreta del logger sin modificar el código que lo usa."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 80,
@@ -877,7 +877,7 @@
       "Facilita la prueba de las clases que dependen de Database.",
       "Reduce el número de interfaces necesarias en el diseño."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 81,
@@ -888,7 +888,7 @@
       "Asegura que todas las dependencias sean explícitas.",
       "Elimina la necesidad de herencia en el diseño."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 82,
@@ -899,7 +899,7 @@
       "Puede introducir dependencias innecesarias entre clases base y derivadas.",
       "Simplifica la implementación de nuevas funcionalidades."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 83,
@@ -910,7 +910,7 @@
       "Los cambios en un módulo requieren modificaciones en otros módulos relacionados.",
       "Las interfaces están bien definidas y desacopladas."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 84,
@@ -921,7 +921,7 @@
       "Depender de implementaciones concretas en lugar de interfaces.",
       "Crear métodos que manejen múltiples responsabilidades."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 85,
@@ -932,7 +932,7 @@
       "Puede cambiar por múltiples razones diferentes.",
       "Sus elementos están estrechamente relacionados y enfocados en una sola tarea."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 86,
@@ -943,7 +943,7 @@
       "Los módulos tienden a ser más complejos y difíciles de mantener.",
       "Los cambios en un módulo no afectan a otros módulos."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 87,
@@ -954,7 +954,7 @@
       "Puede provocar dependencias entre clases base y derivadas, dificultando los cambios.",
       "Aumenta la cohesión dentro del sistema."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 88,
@@ -965,7 +965,7 @@
       "Usar herencia múltiple para combinar funcionalidades de varias clases.",
       "Implementar métodos estáticos para reducir dependencias."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 89,
@@ -976,7 +976,7 @@
       "Eliminar métodos abstractos de la clase base.",
       "Cambiar el comportamiento de los métodos base según sea necesario."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 90,
@@ -987,7 +987,7 @@
       "Hacer que Square extienda Rectangle pero modifique el comportamiento de sus métodos.",
       "Definir clases independientes para Rectangle y Square con una interfaz común."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 91,
@@ -998,7 +998,7 @@
       "Los clientes no deben depender de métodos que no utilizan.",
       "Las interfaces deben ser lo suficientemente generales para ser reutilizables."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 92,
@@ -1009,7 +1009,7 @@
       "Las interfaces se vuelven más flexibles y reutilizables.",
       "Los módulos se vuelven independientes y fáciles de modificar."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 93,
@@ -1020,7 +1020,7 @@
       "Eliminando las interfaces para simplificar el diseño.",
       "Haciendo que Logger sea una clase concreta dependiente de FileLogger."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 94,
@@ -1031,7 +1031,7 @@
       "Elimina completamente las dependencias entre módulos.",
       "Permite modificar o sustituir implementaciones concretas sin afectar a los módulos de alto nivel."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 95,
@@ -1042,7 +1042,7 @@
       "Añade métodos específicos de ImagePost sin modificar la clase base.",
       "Depende directamente de los métodos de la clase Blog."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 96,
@@ -1053,7 +1053,7 @@
       "Separa las responsabilidades, permitiendo que las clases implementen solo lo necesario.",
       "Elimina la necesidad de definir interfaces adicionales en el diseño."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 97,
@@ -1064,7 +1064,7 @@
       "Para implementar un sistema de control de versiones centralizado.",
       "Para facilitar el desarrollo en equipos pequeños."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 98,
@@ -1075,7 +1075,7 @@
       "Dependencia de un servidor central para realizar commits.",
       "Capacidad de manejar proyectos grandes."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 99,
@@ -1086,7 +1086,7 @@
       "Los cambios en el repositorio remoto se reflejan automáticamente en los repositorios locales.",
       "Los desarrolladores no pueden crear ramas locales sin permiso del repositorio central."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 100,
@@ -1097,13 +1097,13 @@
       "Permiten realizar cambios en el repositorio remoto automáticamente.",
       "Los desarrolladores pueden hacer commits locales sin necesidad de conectarse al servidor central."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 101,
     "question": "¿Qué comando en Git permite mover cambios del área de trabajo al área de stage?",
     "options": ["git commit.", "git add.", "git push.", "git pull."],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 102,
@@ -1114,7 +1114,7 @@
       "Los cambios del área de trabajo se añaden al área de stage.",
       "Se eliminan los cambios no guardados del directorio de trabajo."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 103,
@@ -1125,7 +1125,7 @@
       "Los cambios se añaden al área de stage para ser incluidos en el próximo commit.",
       "El archivo se restaura a su estado anterior."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 104,
@@ -1136,13 +1136,13 @@
       "Para borrar cambios realizados en el directorio de trabajo.",
       "Para seleccionar qué cambios se incluirán en el próximo commit."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 105,
     "question": "¿Qué comando se utiliza para crear una nueva rama y moverse a ella?",
     "options": ["git branch.", "git switch.", "git checkout.", "git checkout -b."],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 106,
@@ -1153,7 +1153,7 @@
       "Se eliminan los commits de la rama fusionada.",
       "La rama base se rebasa automáticamente sobre la rama secundaria."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 107,
@@ -1164,7 +1164,7 @@
       "Git pausa el merge y marca los archivos conflictivos para que el usuario resuelva el problema.",
       "Git aplica automáticamente los cambios de ambas ramas sin intervención del usuario."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 108,
@@ -1175,13 +1175,13 @@
       "Comentando las líneas con el prefijo //.",
       "Copiando las líneas conflictivas en un archivo separado."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 109,
     "question": "¿Qué comando deshace un commit sin eliminar los cambios del área de trabajo?",
     "options": ["git revert.", "git reset HEAD^.", "git commit --amend.", "git reset --hard HEAD."],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 110,
@@ -1192,13 +1192,13 @@
       "git reset modifica el historial local, mientras que git revert crea un commit que revierte los cambios anteriores.",
       "git reset funciona solo en repositorios remotos."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 111,
     "question": "¿Qué comando se utiliza para aplicar un commit específico de una rama a otra sin fusionarlas completamente?",
     "options": ["git cherry-pick.", "git merge.", "git pull.", "git checkout."],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 112,
@@ -1209,7 +1209,7 @@
       "Permite trabajar sin conexión.",
       "Mantiene un historial de commits más lineal y limpio."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 113,
@@ -1220,7 +1220,7 @@
       "Integrar cambios rápidamente en una rama principal con múltiples ramas de larga duración.",
       "Evitar el uso de ramas en el desarrollo."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 114,
@@ -1231,7 +1231,7 @@
       "Solo se utiliza para resolver conflictos entre ramas.",
       "Permite revisar, discutir e integrar cambios realizados en una rama secundaria."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 115,
@@ -1242,7 +1242,7 @@
       "Mantener múltiples versiones en desarrollo simultáneamente.",
       "Evitar el uso de ramas y realizar todos los cambios directamente en el repositorio remoto."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 116,
@@ -1253,13 +1253,13 @@
       "Reduce los conflictos de integración al integrar cambios rápidamente en la rama principal.",
       "Evita la necesidad de realizar merges en el historial."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 117,
     "question": "¿Cuáles son las dos ramas principales de larga duración en GitFlow?",
     "options": ["feature y hotfix.", "main y feature.", "master y develop.", "develop y hotfix."],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 118,
@@ -1270,7 +1270,7 @@
       "Para realizar la integración continua de cambios en el sistema.",
       "Para realizar ajustes menores en la rama develop."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 119,
@@ -1281,13 +1281,13 @@
       "Solo en master.",
       "En feature y hotfix."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 120,
     "question": "¿Qué comando se utiliza para listar todas las ramas locales y remotas en Git?",
     "options": ["git branch -l.", "git log --branches.", "git status --all.", "git branch -vva."],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 121,
@@ -1298,7 +1298,7 @@
       "main.",
       "Una rama utilizada para mantener una versión antigua de software."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 122,
@@ -1309,7 +1309,7 @@
       "git rebase.",
       "git cherry-pick."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 123,
@@ -1320,7 +1320,7 @@
       "El merge elimina los conflictos automáticamente, mientras que el rebase los conserva.",
       "El rebase combina las ramas sin generar commits adicionales."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 124,
@@ -1331,7 +1331,7 @@
       "Un editor de texto o herramientas específicas como VS Code o GitHub Desktop.",
       "git rebase."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 125,
@@ -1342,7 +1342,7 @@
       "La rama remota tiene más commits que la rama local.",
       "Los cambios en ambas ramas afectan a diferentes líneas del mismo archivo."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 126,
@@ -1353,13 +1353,13 @@
       "Permiten mantener múltiples versiones de un software simultáneamente.",
       "Solo se crean después de realizar un pull request."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 127,
     "question": "¿Qué se utiliza para identificar versiones específicas en una rama de versiones?",
     "options": ["Ramas feature.", "Merges con --no-ff.", "Commits iniciales.", "Etiquetas (tags)."],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 128,
@@ -1370,7 +1370,7 @@
       "Eliminar commits antiguos de un repositorio.",
       "Crear nuevas ramas a partir de un commit específico."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 129,
@@ -1381,7 +1381,7 @@
       "Se crea un nuevo commit con los mismos cambios, pero con un identificador diferente.",
       "La rama original se fusiona completamente con la rama destino."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 130,
@@ -1392,7 +1392,7 @@
       "git tag <nombre_etiqueta>.",
       "git checkout <nombre_etiqueta>."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 131,
@@ -1403,13 +1403,13 @@
       "Un commit que no tiene dependencias en el grafo de commits.",
       "El commit actual en el que estás trabajando o la rama activa en tu repositorio local."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 132,
     "question": "¿Cuál de las siguientes NO es una forma válida de deshacer cambios en Git?",
     "options": ["git reset.", "git pull --force.", "git revert.", "git checkout."],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 133,
@@ -1420,7 +1420,7 @@
       "Usar git cherry-pick para mover los commits conflictivos a una nueva rama.",
       "Ejecutar git reset --hard HEAD en ambas ramas para sincronizar los cambios."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 134,
@@ -1431,7 +1431,7 @@
       "git pull.",
       "git push --rebase."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 135,
@@ -1442,7 +1442,7 @@
       "Se realiza automáticamente un rebase de los commits locales sobre los remotos.",
       "Git da un error, pidiendo que primero actualices tu repositorio local con pull o fetch."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 136,
@@ -1453,7 +1453,7 @@
       "Una rama de develop.",
       "Una rama de release."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 137,
@@ -1464,7 +1464,7 @@
       "Preparar y estabilizar el código para el lanzamiento de una nueva versión.",
       "Experimentar con cambios drásticos antes de integrarlos en master."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 138,
@@ -1475,7 +1475,7 @@
       "Se borra la rama master para evitar conflictos.",
       "Se reescribe el historial de commits en la rama develop."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 139,
@@ -1486,7 +1486,7 @@
       "Simplifican la resolución de conflictos entre ramas.",
       "Identifican de manera clara y permanente las versiones lanzadas."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 140,
@@ -1497,7 +1497,7 @@
       "El commit aparece dos veces en el historial, pero con diferentes identificadores.",
       "La rama original se elimina automáticamente después del merge."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 141,
@@ -1508,7 +1508,7 @@
       "Genera un historial no lineal que es difícil de seguir.",
       "Obliga a realizar múltiples commits adicionales durante el proceso."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 142,
@@ -1519,7 +1519,7 @@
       "Fusiona automáticamente las ramas involucradas en el rebase.",
       "Finaliza el rebase y borra el historial previo."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 143,
@@ -1530,7 +1530,7 @@
       "Cuando se han realizado múltiples commits en ambas ramas.",
       "Cuando se fusionan ramas de diferentes repositorios remotos."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 144,
@@ -1541,7 +1541,7 @@
       "Crea un nodo de merge explícito en el historial, dejando un rastro claro de la operación.",
       "Permite fusionar ramas sin resolver conflictos."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 145,
@@ -1552,7 +1552,7 @@
       "Reduce el tiempo necesario para realizar merges.",
       "Evita la necesidad de usar etiquetas en las versiones lanzadas."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 146,
@@ -1563,7 +1563,7 @@
       "Fusionando la rama master con develop.",
       "Usando un cherry-pick o un merge desde la rama de versión a develop."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 147,
@@ -1574,7 +1574,7 @@
       "El commit actual en el que estás trabajando.",
       "La rama remota conectada al repositorio local."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 148,
@@ -1585,7 +1585,7 @@
       "Aplicando un rebase al commit antes de etiquetarlo.",
       "Fusionando el commit en una nueva rama y etiquetándola."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 149,
@@ -1596,7 +1596,7 @@
       "git prune <rama>.",
       "git push origin --delete <rama>."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 150,
@@ -1607,7 +1607,7 @@
       "Las ramas de corta duración contienen los commits más antiguos del proyecto.",
       "Las ramas de larga duración siempre contienen los hotfix."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 151,
@@ -1618,7 +1618,7 @@
       "Confirmar los cambios con un nuevo commit.",
       "Usar git revert para descartar todos los conflictos automáticamente."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 152,
@@ -1629,7 +1629,7 @@
       "Resolución de conflictos en ramas antiguas sin crear nuevas ramas.",
       "Implementación de cambios rápidos directamente en la rama principal."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 153,
@@ -1640,7 +1640,7 @@
       "Genera automáticamente etiquetas para cada commit.",
       "Mantiene el historial limpio y libre de merges complejos."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 154,
@@ -1651,7 +1651,7 @@
       "Para asegurar que las correcciones aplicadas en producción también estén presentes en el desarrollo actual.",
       "Para generar una nueva etiqueta de versión en la rama develop."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 155,
@@ -1662,7 +1662,7 @@
       "El commit se aplica sin cambios, ignorando los conflictos.",
       "Git pausa el proceso, marca los archivos conflictivos y te permite resolverlos antes de continuar."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 156,
@@ -1673,7 +1673,7 @@
       "En la revolución industrial.",
       "En las técnicas de integración continua."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 157,
@@ -1684,7 +1684,7 @@
       "Eliminación de desperdicios y mejora continua.",
       "Uso de maquinaria especializada."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 158,
@@ -1695,7 +1695,7 @@
       "Eliminación de inventarios innecesarios.",
       "Foco en personal cualificado y creativo."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 159,
@@ -1706,7 +1706,7 @@
       "Contratación de trabajadores más cualificados.",
       "Flexibilidad y eliminación de desperdicios."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 160,
@@ -1717,7 +1717,7 @@
       "Desperdicio que no agrega valor al cliente.",
       "Tiempo dedicado a la formación de trabajadores."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 161,
@@ -1728,7 +1728,7 @@
       "Acumular inventarios en caso de aumento de la demanda.",
       "Delegar tareas entre trabajadores para aumentar eficiencia."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 162,
@@ -1739,7 +1739,7 @@
       "Dependencia total de supervisores humanos.",
       "Automatización con intervención humana para mejora continua."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 163,
@@ -1750,7 +1750,7 @@
       "Inventarios de materiales y recursos físicos.",
       "Mockups y diagramas de flujo."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 164,
@@ -1761,7 +1761,7 @@
       "Una tarea técnica que no está directamente relacionada con el cliente.",
       "Un elemento técnico que puede desarrollarse en varias iteraciones."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 165,
@@ -1772,7 +1772,7 @@
       "Los pasos y tiempos que agregan valor o generan desperdicios.",
       "La calidad de las historias de usuario del backlog."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 166,
@@ -1783,7 +1783,7 @@
       "Tiempo de espera entre etapas de desarrollo.",
       "Cantidad total de tareas en el backlog."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 167,
@@ -1794,7 +1794,7 @@
       "Asegurar que las etapas iniciales siempre estén ocupadas.",
       "Evitar acumulación excesiva y garantizar flujo constante."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 168,
@@ -1805,7 +1805,7 @@
       "Optimizar el conjunto.",
       "Incrementar el backlog."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 169,
@@ -1816,7 +1816,7 @@
       "Evitar decisiones críticas para agilizar el desarrollo.",
       "Asumir decisiones definitivas al inicio del proyecto."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 170,
@@ -1827,7 +1827,7 @@
       "Multi-tarea excesiva.",
       "Trabajo colaborativo en una misma funcionalidad."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 171,
@@ -1838,7 +1838,7 @@
       "Aumenta la deuda técnica acumulada.",
       "Impide realizar pruebas automatizadas de forma eficiente."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 172,
@@ -1849,7 +1849,7 @@
       "Facilita recibir feedback del cliente y adaptarse rápidamente.",
       "Garantiza la eliminación de toda deuda técnica acumulada."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 173,
@@ -1860,7 +1860,7 @@
       "Aumentando la cantidad de pruebas manuales.",
       "Reduciendo el tiempo dedicado a pruebas automatizadas."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 174,
@@ -1871,7 +1871,7 @@
       "Una representación del número de bugs corregidos por semana.",
       "Una visualización del progreso acumulado en las fases de desarrollo."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 175,
@@ -1882,7 +1882,7 @@
       "Crear hipótesis sobre el funcionamiento del software.",
       "Diseñar un backlog más optimizado y detallado."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 176,
@@ -1893,7 +1893,7 @@
       "Herramientas de automatización en pruebas de software.",
       "Historias de usuario bien documentadas y priorizadas."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 177,
@@ -1904,7 +1904,7 @@
       "Aumentar la cantidad de documentación para cada release.",
       "Entregar incrementos de valor regularmente y con ciclos cortos."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 178,
@@ -1915,7 +1915,7 @@
       "Una funcionalidad mínima para probar el sistema completo.",
       "Un diagrama para identificar problemas en el flujo de trabajo."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 179,
@@ -1926,7 +1926,7 @@
       "Priorizar tareas secundarias.",
       "Usar siempre decisiones tempranas."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 180,
@@ -1937,7 +1937,7 @@
       "Aumentar la documentación técnica en todas las etapas.",
       "Considerar el valor final del producto para el usuario."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 181,
@@ -1948,7 +1948,7 @@
       "Usar revisiones de código y pruebas automatizadas.",
       "Aumentar el tamaño del backlog para gestionar cambios."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 182,
@@ -1959,7 +1959,7 @@
       "Para asegurar que todas las características sean visibles al cliente.",
       "Porque permite evitar el uso de pruebas automatizadas."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 183,
@@ -1970,7 +1970,7 @@
       "El número de iteraciones necesarias para completar un proyecto.",
       "El tiempo promedio que toma completar una funcionalidad."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 184,
@@ -1981,7 +1981,7 @@
       "Ayuda a identificar cuellos de botella en el proceso.",
       "Evalúa exclusivamente el diseño arquitectónico del proyecto."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 185,
@@ -1992,7 +1992,7 @@
       "Se acumulan tareas en el backlog para procesos posteriores.",
       "Se maximiza el WIP en todas las etapas."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 186,
@@ -2003,7 +2003,7 @@
       "Reducir acumulaciones y mantener el flujo de trabajo.",
       "Aumentar la complejidad de las tareas individuales."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 187,
@@ -2014,7 +2014,7 @@
       "Completar todas las tareas del backlog al inicio del sprint.",
       "Usar entregas frecuentes para reducir opciones futuras."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 188,
@@ -2025,7 +2025,7 @@
       "Aumenta la dependencia entre las características implementadas.",
       "Simplifica el backlog al eliminar tareas no prioritarias."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 189,
@@ -2036,7 +2036,7 @@
       "Trabajo parcialmente hecho que no genera valor.",
       "Características prioritarias entregadas al cliente."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 190,
@@ -2047,7 +2047,7 @@
       "Refactorizaciones para mejorar la calidad del código.",
       "Características complejas que los usuarios no usan."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 191,
@@ -2058,7 +2058,7 @@
       "Tableros físicos de Kanban.",
       "Análisis de deuda técnica."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 192,
@@ -2069,7 +2069,7 @@
       "Identificar cuellos de botella en el flujo de trabajo.",
       "Comparar versiones de una funcionalidad para obtener retroalimentación."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 193,
@@ -2080,7 +2080,7 @@
       "Crear un entorno de trabajo sostenible y colaborativo.",
       "Aumentar la carga de trabajo para acelerar el tiempo de entrega."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 194,
@@ -2091,7 +2091,7 @@
       "Porque generalmente ralentizan los procesos de revisión de código.",
       "Para reducir el tiempo dedicado a reuniones de equipo."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 195,
@@ -2102,7 +2102,7 @@
       "Minimizar las pruebas del producto antes del despliegue.",
       "Considerar el impacto global del producto en los usuarios finales."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 196,
@@ -2113,7 +2113,7 @@
       "Reducir los tiempos de desarrollo en cada iteración.",
       "Evitar acumulaciones en el flujo de trabajo pull."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 197,
@@ -2124,7 +2124,7 @@
       "Reducir la planificación de sprints al inicio de cada iteración.",
       "Aumentar la deuda técnica para entregar rápido."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 198,
@@ -2135,7 +2135,7 @@
       "Se pueden probar alternativas y ajustar según la retroalimentación.",
       "Reduce la necesidad de revisar las decisiones de diseño futuras."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 199,
@@ -2146,7 +2146,7 @@
       "Expandirlo para incluir tareas a largo plazo.",
       "Utilizar pruebas continuas durante cada sprint."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 200,
@@ -2157,7 +2157,7 @@
       "Una funcionalidad que optimiza procesos internos.",
       "El incremento más pequeño que aporta valor al cliente final."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 201,
@@ -2168,7 +2168,7 @@
       "Las características implementadas pero no desplegadas.",
       "Los logs generados por los sistemas en producción."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 202,
@@ -2179,7 +2179,7 @@
       "Crear un sistema automatizado para generar reportes constantes de bugs.",
       "Aumentar el equipo de QA para reducir los reportes manuales."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 203,
@@ -2190,7 +2190,7 @@
       "Los elementos que han sido descartados por el equipo.",
       "El número máximo de ítems procesados simultáneamente en una etapa."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 204,
@@ -2201,7 +2201,7 @@
       "Que cada ítem del backlog tenga asignado un responsable.",
       "Que todas las funcionalidades pasen por pruebas automatizadas."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 205,
@@ -2212,7 +2212,7 @@
       "Implementar características de baja prioridad para probar.",
       "Evitar el uso de revisiones de código para acelerar ciclos."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 206,
@@ -2223,7 +2223,7 @@
       "Características descartadas antes de llegar a producción.",
       "Problemas de diseño o implementación que dificultan mantenimiento y ampliación."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 207,
@@ -2234,7 +2234,7 @@
       "Centralizar las decisiones del equipo en una única figura.",
       "Reducir el tiempo dedicado a las reuniones de planificación."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 208,
@@ -2245,7 +2245,7 @@
       "Los tiempos de trabajo y de espera en cada fase del proceso.",
       "La cantidad de pruebas automatizadas necesarias por funcionalidad."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 209,
@@ -2256,7 +2256,7 @@
       "La cantidad de ítems completados en cada etapa del proceso.",
       "La variabilidad de la productividad diaria del equipo."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 210,
@@ -2267,7 +2267,7 @@
       "Para priorizar tareas según su tamaño y complejidad.",
       "Para optimizar el backlog añadiendo nuevas funcionalidades."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 211,
@@ -2278,7 +2278,7 @@
       "Para asegurar que las tareas completadas no requieren revisión.",
       "Para deshacer cambios si se identifican problemas en producción."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 212,
@@ -2289,7 +2289,7 @@
       "Implementar sistemas de pruebas únicamente al final del desarrollo.",
       "Mantener una base de datos extensa con bugs no resueltos."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 213,
@@ -2300,7 +2300,7 @@
       "Respetar a las personas y potenciar la colaboración del equipo.",
       "Evitar la delegación para que todos los miembros sean autosuficientes."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 214,
@@ -2311,7 +2311,7 @@
       "Construir un entorno sostenible para evitar sobrecarga laboral.",
       "Potenciar la comunicación entre los miembros del equipo."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 215,
@@ -2322,7 +2322,7 @@
       "Decidir lo más tarde posible (Defer Commitment).",
       "Optimizar el conjunto (Optimize the Whole)."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 216,
@@ -2333,7 +2333,7 @@
       "Un prototipo que permite evaluar viabilidad técnica.",
       "La unidad mínima de funcionalidad que aporta valor al cliente."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 217,
@@ -2344,7 +2344,7 @@
       "Reduciendo la cantidad de historias de usuario creadas por sprint.",
       "Fomentando el uso de documentación extensa y detallada."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 218,
@@ -2355,7 +2355,7 @@
       "El tiempo necesario para completar una tarea individual en el backlog.",
       "El tiempo de inactividad en un proceso de desarrollo."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 219,
@@ -2366,7 +2366,7 @@
       "El tiempo transcurrido para completar una tarea desde que comienza su desarrollo.",
       "El tiempo total desde el inicio del backlog hasta el final del proyecto."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 220,
@@ -2377,7 +2377,7 @@
       "Minimiza la necesidad de pruebas automatizadas.",
       "Aumenta la cantidad de historias completadas en cada sprint."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 221,
@@ -2388,13 +2388,13 @@
       "Diagramas de flujo acumulado (Cumulative Flow Diagrams).",
       "Un diagrama de Gantt."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 222,
     "question": "¿Qué tipo de desperdicio corresponde a tareas simultáneas que causan cambios constantes de enfoque?",
     "options": ["Reaprendizaje.", "Delegación.", "Trabajo parcialmente hecho.", "Multi-tarea."],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 223,
@@ -2405,7 +2405,7 @@
       "Porque aumentan el tiempo necesario para las pruebas finales.",
       "Porque siempre generan conflictos en los sprints."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 224,
@@ -2416,7 +2416,7 @@
       "Asegurar que todo el proceso de desarrollo esté alineado con los objetivos finales.",
       "Incrementar la cantidad de tareas completadas por sprint."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 225,
@@ -2427,7 +2427,7 @@
       "Aumentar el backlog con más ítems pequeños.",
       "Priorizar tareas individuales sobre objetivos globales del producto."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 226,
@@ -2438,7 +2438,7 @@
       "Un tipo específico de desperdicio a eliminar.",
       "Una fase del flujo de trabajo de desarrollo."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 227,
@@ -2449,7 +2449,7 @@
       "Facilita la incorporación de nuevos integrantes al equipo.",
       "Prioriza tareas más complejas en cada fase."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 228,
@@ -2460,7 +2460,7 @@
       "Mantener opciones abiertas hasta tener suficiente información.",
       "Reducir el tiempo asignado a la planificación inicial."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 229,
@@ -2471,7 +2471,7 @@
       "Reducir la cantidad de revisiones de código.",
       "Usar un sistema de despliegue que permita revertir cambios fácilmente."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 230,
@@ -2482,7 +2482,7 @@
       "Tareas finalizadas pero no subidas al repositorio.",
       "Todas las anteriores."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 231,
@@ -2493,7 +2493,7 @@
       "Porque dificultan el mantenimiento y generan complejidad innecesaria.",
       "Todas las anteriores."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 232,
@@ -2504,7 +2504,7 @@
       "Las decisiones tomadas en etapas tempranas del desarrollo deben ser revisadas.",
       "Se acumulan bugs en las fases iniciales de desarrollo."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 233,
@@ -2515,7 +2515,7 @@
       "Las tareas son asignadas automáticamente por el gestor del proyecto.",
       "Se prioriza siempre el trabajo en paralelo para mayor velocidad."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 234,
@@ -2526,7 +2526,7 @@
       "El número de tareas que están listas para revisión.",
       "La cantidad de tareas pendientes en el backlog."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 235,
@@ -2537,7 +2537,7 @@
       "No permite identificar cuellos de botella.",
       "Limita la creatividad del equipo."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 236,
@@ -2548,7 +2548,7 @@
       "La cantidad de tareas completadas por semana.",
       "El tiempo necesario para corregir un defecto crítico."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 237,
@@ -2559,7 +2559,7 @@
       "Que el backlog está siendo constantemente actualizado.",
       "Que el equipo está cerrando tareas más rápido de lo esperado."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 238,
@@ -2570,7 +2570,7 @@
       "Facilita el seguimiento diario del equipo.",
       "Mejora la relación entre desarrolladores y product owners."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 239,
@@ -2581,7 +2581,7 @@
       "Dejar las decisiones importantes al product owner sin consulta previa.",
       "Tomar decisiones tempranas para evitar futuros conflictos."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 240,
@@ -2592,7 +2592,7 @@
       "Utilizar múltiples herramientas de diseño gráfico.",
       "Aumentar la cantidad de reuniones de planificación."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 241,
@@ -2603,7 +2603,7 @@
       "Un método de priorización de tareas en sistemas Kanban.",
       "Una técnica para optimizar el proceso de despliegue continuo."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 242,
@@ -2614,7 +2614,7 @@
       "Evitan completamente los sistemas pull.",
       "Se centran en grandes entregas a largo plazo."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 243,
@@ -2625,7 +2625,7 @@
       "Reducir las reuniones de planificación.",
       "Mantener un backlog más extenso."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 244,
@@ -2636,7 +2636,7 @@
       "Permite ajustar rápidamente el backlog del equipo.",
       "Reduce la necesidad de reuniones entre el equipo y el PO."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 245,
@@ -2647,7 +2647,7 @@
       "Lean Manufacturing y Kanban.",
       "Just-in-time y Jidoka."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 246,
@@ -2658,7 +2658,7 @@
       "Automatización con intervención humana para mejora continua.",
       "Eliminación de desperdicios en el proceso."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 247,
@@ -2669,7 +2669,7 @@
       "Aumentar la cantidad de tareas en progreso.",
       "Reducir el número de reuniones del equipo."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 248,
@@ -2680,7 +2680,7 @@
       "El tiempo máximo permitido para completar una tarea.",
       "La cantidad de tareas pendientes en el backlog."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 249,
@@ -2691,7 +2691,7 @@
       "Medir y optimizar el flujo (lead time o cycle time).",
       "Establecer sprints de duración fija."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 250,
@@ -2702,7 +2702,7 @@
       "Habrá una sobrecarga de trabajo y muchas tareas quedarán paradas.",
       "Se evita la multitarea excesiva."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 251,
@@ -2713,7 +2713,7 @@
       "Diagrama de Gantt.",
       "Gráfico de burndown."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 252,
@@ -2724,7 +2724,7 @@
       "El tiempo que una tarea permanece en una columna específica.",
       "El tiempo de inactividad entre tareas."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 253,
@@ -2735,7 +2735,7 @@
       "Evita la necesidad de establecer políticas explícitas.",
       "Evita sobrecargas y mejora el flujo de trabajo."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 254,
@@ -2746,7 +2746,7 @@
       "Dejar de empezar tareas y enfocarse en terminar las que ya están en progreso.",
       "Parar el trabajo cuando se detecta un error y reiniciar desde cero."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 255,
@@ -2757,7 +2757,7 @@
       "Criterios de aceptación.",
       "Tiempo estimado en horas para completar la tarea."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 256,
@@ -2768,7 +2768,7 @@
       "Eliminando la tarjeta del tablero.",
       "Creando una nueva tarjeta en la columna \"Backlog\"."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 257,
@@ -2779,7 +2779,7 @@
       "Facilita el trabajo en multitarea.",
       "Aumenta el límite de WIP permitido."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 258,
@@ -2790,7 +2790,7 @@
       "Maximizar el número de ítems terminados por unidad de tiempo.",
       "Incrementar el tamaño del equipo de desarrollo."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 259,
@@ -2801,7 +2801,7 @@
       "Forzar el movimiento de los ítems ignorando el límite de WIP.",
       "Eliminar ítems de menor prioridad para hacer espacio."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 260,
@@ -2812,7 +2812,7 @@
       "Experimentando, midiendo y ajustándolo empíricamente.",
       "Siempre fijándolo en un valor bajo para evitar sobrecargas."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 261,
@@ -2823,7 +2823,7 @@
       "Un tipo de clase de servicio.",
       "Una política explícita que define cuándo un ítem se considera terminado."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 262,
@@ -2834,7 +2834,7 @@
       "Evitar la visualización de tareas en progreso.",
       "Eliminar la medición del cycle time."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 263,
@@ -2845,7 +2845,7 @@
       "El tiempo que un ítem permanece en el backlog.",
       "El número de personas involucradas en completar una tarea."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 264,
@@ -2856,7 +2856,7 @@
       "Aumenta la multitarea entre los miembros del equipo.",
       "Disminuye el tiempo invertido en cambios de contexto y aumenta el rendimiento."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 265,
@@ -2867,7 +2867,7 @@
       "Workflow Integration Plan",
       "Work Implementation Procedure"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 266,
@@ -2878,7 +2878,7 @@
       "Elimina la necesidad de reuniones diarias.",
       "Incrementa automáticamente la velocidad de desarrollo."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 267,
@@ -2889,7 +2889,7 @@
       "Una representación visual del número de ítems en cada estado del flujo de trabajo a lo largo del tiempo.",
       "Un diagrama que muestra la jerarquía del equipo."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 268,
@@ -2900,7 +2900,7 @@
       "Se elimina la necesidad de establecer prioridades.",
       "Se mejora el enfoque en completar tareas antes de comenzar nuevas."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 269,
@@ -2911,7 +2911,7 @@
       "Deben ser ajustados empíricamente basándose en la capacidad del equipo.",
       "Una vez establecidos, no deben cambiarse durante el proyecto."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 270,
@@ -2922,7 +2922,7 @@
       "Una herramienta para medir el rendimiento del equipo.",
       "Un rol dentro del equipo Kanban."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 271,
@@ -2933,7 +2933,7 @@
       "Al reducir la comunicación entre miembros, se notan las demoras.",
       "Al eliminar las reuniones, se hace evidente dónde hay problemas."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 272,
@@ -2944,7 +2944,7 @@
       "Prefiere planificaciones just-in-time y adaptativas según el flujo de trabajo.",
       "Establece sprints de duración fija para planificar."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 273,
@@ -2955,7 +2955,7 @@
       "La finalización del proyecto.",
       "La asignación de una tarea a un nuevo miembro del equipo."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 274,
@@ -2966,7 +2966,7 @@
       "Trabajar individualmente sin colaboración.",
       "Implementar políticas explícitas y revisarlas regularmente."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 275,
@@ -2977,7 +2977,7 @@
       "El número de ítems completados por unidad de tiempo.",
       "La suma total de tareas en el backlog."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 276,
@@ -2988,7 +2988,7 @@
       "Para poder penalizar a quienes no siguen las reglas.",
       "Para evitar la necesidad de reuniones de seguimiento."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 277,
@@ -2999,7 +2999,7 @@
       "Planificar las tareas de las próximas semanas.",
       "Evaluar el desempeño individual de cada miembro."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 278,
@@ -3010,7 +3010,7 @@
       "Evitar la retroalimentación del equipo para no generar conflictos.",
       "Revisar y ajustar constantemente el proceso para optimizar el flujo."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 279,
@@ -3021,7 +3021,7 @@
       "Utilizando clases de servicio y políticas específicas para cada tipo.",
       "Limitando el WIP únicamente para ítems críticos."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 280,
@@ -3032,7 +3032,7 @@
       "El tiempo que un desarrollador dedica a una tarea específica.",
       "El tiempo que una tarea pasa en el backlog."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 281,
@@ -3043,7 +3043,7 @@
       "El flujo de trabajo es demasiado rápido.",
       "Se completan más tareas de las planificadas."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 282,
@@ -3054,7 +3054,7 @@
       "Reducir el límite de WIP en las fases anteriores.",
       "Aumentar el límite de WIP en la fase con el cuello de botella."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 283,
@@ -3065,7 +3065,7 @@
       "Eliminando la necesidad de estimaciones.",
       "Al medir y optimizar el lead time, haciendo que sea más constante."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 284,
@@ -3076,7 +3076,7 @@
       "Incrementar la complejidad del proceso para mejorar la calidad.",
       "Establecer políticas explícitas como la Definition of Done."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 285,
@@ -3087,7 +3087,7 @@
       "Un método para reducir el número de columnas en el tablero.",
       "Una estrategia para eliminar tareas duplicadas."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 286,
@@ -3098,7 +3098,7 @@
       "Hay muchas tareas en progreso pero pocas se completan.",
       "El flujo de trabajo es fluido y sin interrupciones."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 287,
@@ -3109,7 +3109,7 @@
       "Para aumentar el número de tareas que se pueden manejar simultáneamente.",
       "Para eliminar la necesidad de reuniones de retroalimentación."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 288,
@@ -3120,7 +3120,7 @@
       "Eliminando la tarjeta del tablero hasta que se resuelva el bloqueo.",
       "Asignando más personas a esa tarea para acelerarla."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 289,
@@ -3131,7 +3131,7 @@
       "Deben participar en el consenso para establecer y ajustar el límite.",
       "El equipo debe seguir el límite impuesto sin cuestionarlo."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 290,
@@ -3142,7 +3142,7 @@
       "Medir y optimizar el lead time.",
       "Asignar tareas sin considerar la capacidad actual del equipo."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 291,
@@ -3153,7 +3153,7 @@
       "Kanban solo se enfoca en la gestión de tareas, no en principios Lean.",
       "Kanban reemplaza completamente a Lean en la producción."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 292,
@@ -3164,7 +3164,7 @@
       "Dejar que cada miembro interprete las reglas a su manera.",
       "Evitar establecer procedimientos para fomentar la creatividad."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 293,
@@ -3175,7 +3175,7 @@
       "Puede reducir la eficiencia debido a cambios de contexto y multitarea.",
       "Facilita la identificación de tareas críticas."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 294,
@@ -3186,7 +3186,7 @@
       "Estimar el tiempo restante para completar el backlog.",
       "Conocer el tiempo que tarda una tarea en pasar por todo el flujo de trabajo."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 295,
@@ -3197,7 +3197,7 @@
       "Los usuarios no reportan errores después de la puesta en producción.",
       "El proceso es complejo y estresante, con pocas entregas al año y alto riesgo."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 296,
@@ -3208,7 +3208,7 @@
       "Se incrementa el riesgo al introducir cambios continuos.",
       "Se disminuye la necesidad de comunicación con el equipo de operaciones."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 297,
@@ -3219,7 +3219,7 @@
       "La distancia física entre el servidor y el usuario final.",
       "El tiempo que tarda en compilar el código fuente."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 298,
@@ -3230,7 +3230,7 @@
       "Integrar sus cambios diariamente y verificar con pruebas automatizadas.",
       "Esperar a que el equipo de operaciones valide su código antes de integrar."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 299,
@@ -3241,7 +3241,7 @@
       "Mayor aislamiento de los desarrolladores respecto al resto del equipo.",
       "Facilita la realización de pull requests y revisiones de código."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 300,
@@ -3252,7 +3252,7 @@
       "Editores de código como Visual Studio Code.",
       "Herramientas de seguimiento de tareas como Jira."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 301,
@@ -3263,7 +3263,7 @@
       "Un artefacto ejecutable que contiene todo lo necesario para correr una aplicación en cualquier entorno Docker.",
       "Un repositorio de código fuente para aplicaciones en contenedores."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 302,
@@ -3274,7 +3274,7 @@
       "Elimina la necesidad de pruebas automatizadas.",
       "Simplifica la gestión de bases de datos de producción."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 303,
@@ -3285,7 +3285,7 @@
       "Usar únicamente lenguajes de programación para configurar sistemas.",
       "Reemplazar completamente al equipo de operaciones con scripts automatizados."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 304,
@@ -3296,7 +3296,7 @@
       "Reducir la cantidad de pruebas para acelerar entregas.",
       "Tener el software en un estado que pueda ser puesto en producción en cualquier momento, con despliegues frecuentes y automatizados."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 305,
@@ -3307,7 +3307,7 @@
       "Un método para acelerar la compilación del software.",
       "Una herramienta para gestionar ramas en sistemas de control de versiones."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 306,
@@ -3318,7 +3318,7 @@
       "Un método para lanzar nuevas versiones a un pequeño grupo de usuarios antes de un despliegue completo.",
       "Un tipo de rama especial en Git para integraciones críticas."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 307,
@@ -3329,7 +3329,7 @@
       "Evitar cualquier modificación al esquema de la base de datos.",
       "Delegar todas las modificaciones al equipo de operaciones sin involucrar a los desarrolladores."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 308,
@@ -3340,7 +3340,7 @@
       "Se ejecuta una vez al final del proyecto.",
       "Automatiza el proceso de construcción, despliegue, prueba y lanzamiento del software."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 309,
@@ -3351,7 +3351,7 @@
       "Supervisan el rendimiento de la aplicación en producción.",
       "Facilitan la comunicación entre desarrolladores y clientes."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 310,
@@ -3362,7 +3362,7 @@
       "Para permitir que el mismo artefacto funcione en diferentes entornos sin recompilar.",
       "Para evitar el uso de variables de entorno en el sistema operativo."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 311,
@@ -3373,7 +3373,7 @@
       "Reducir la necesidad de pruebas automatizadas.",
       "Hacer que el proceso de despliegue sea más complejo y robusto."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 312,
@@ -3384,7 +3384,7 @@
       "Una copia de seguridad completa de la base de datos.",
       "La eliminación de datos antiguos para liberar espacio."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 313,
@@ -3395,7 +3395,7 @@
       "Permite a los desarrolladores trabajar sin conexión a internet.",
       "Asegura que las aplicaciones se ejecuten de manera consistente en diferentes entornos."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 314,
@@ -3406,7 +3406,7 @@
       "Reemplazar al equipo de operaciones por herramientas automatizadas.",
       "Dividir claramente las responsabilidades entre desarrollo y operaciones."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 315,
@@ -3417,7 +3417,7 @@
       "Integrar cambios frecuentemente y ejecutar pruebas automatizadas en cada integración.",
       "Trabajar en ramas aisladas durante largos periodos."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 316,
@@ -3428,7 +3428,7 @@
       "Son herramientas para el seguimiento de errores.",
       "Facilitan la comunicación entre el equipo y los clientes."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 317,
@@ -3439,7 +3439,7 @@
       "Para minimizar el uso de variables de entorno.",
       "Para facilitar la migración de datos entre bases de datos."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 318,
@@ -3450,7 +3450,7 @@
       "Un ejecutable compilado que puede ser desplegado en diferentes entornos.",
       "Un registro de cambios realizados en la base de datos."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 319,
@@ -3461,7 +3461,7 @@
       "Automatiza las pruebas unitarias de la aplicación.",
       "Orquesta múltiples contenedores y sus configuraciones para crear entornos completos."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 320,
@@ -3472,7 +3472,7 @@
       "Almacenar copias de seguridad de la base de datos.",
       "Actuar como entorno de pruebas unitarias."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 321,
@@ -3483,7 +3483,7 @@
       "Se ejecutan pruebas de aceptación e integración en un entorno similar al de producción.",
       "Se compila y construye el artefacto binario."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 322,
@@ -3494,7 +3494,7 @@
       "Un editor de código integrado.",
       "Un módulo para gestionar bases de datos."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 323,
@@ -3505,7 +3505,7 @@
       "Para minimizar el uso de recursos del servidor.",
       "Para evitar la necesidad de pruebas unitarias."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 324,
@@ -3516,7 +3516,7 @@
       "Que todos los desarrolladores integran cambios diariamente, promoviendo la detección temprana de problemas.",
       "Que los commits deben hacerse únicamente al final de la semana."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 325,
@@ -3527,7 +3527,7 @@
       "Para reducir el tamaño del repositorio.",
       "Para eliminar la necesidad de documentación."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 326,
@@ -3538,7 +3538,7 @@
       "No realizar copias de seguridad para ahorrar espacio.",
       "Automatizar la creación de esquemas de bases de datos usando scripts."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 327,
@@ -3549,13 +3549,13 @@
       "Ofrecen mayor seguridad que las máquinas virtuales.",
       "No necesitan un sistema operativo anfitrión."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 328,
     "question": "En Docker, ¿qué comando se utiliza para construir una imagen a partir de un Dockerfile?",
     "options": ["docker run", "docker image ls", "docker build", "docker start"],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 329,
@@ -3566,7 +3566,7 @@
       "Detiene un contenedor en ejecución.",
       "Ejecuta el contenedor nginx-example en segundo plano, mapeando el puerto 80 del host al puerto 80 del contenedor."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 330,
@@ -3577,7 +3577,7 @@
       "Editando directamente el código fuente dentro del contenedor.",
       "No es posible pasar variables de entorno a un contenedor."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 331,
@@ -3588,7 +3588,7 @@
       "Para evitar la necesidad de un equipo de operaciones.",
       "Para incrementar la complejidad del sistema y mejorar la seguridad."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 332,
@@ -3599,7 +3599,7 @@
       "La definición y configuración de infraestructura (servidores, redes, etc.) mediante código versionado.",
       "La externalización de la infraestructura a terceros."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 333,
@@ -3610,7 +3610,7 @@
       "Realizar despliegues manuales en entornos de producción.",
       "Evitar el uso de herramientas de virtualización."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 334,
@@ -3621,7 +3621,7 @@
       "Un método de despliegue para servidores alternativos.",
       "Una estrategia para eliminar ramas obsoletas en el control de versiones."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 335,
@@ -3632,7 +3632,7 @@
       "Reducir la comunicación entre los equipos para ganar eficiencia.",
       "Fomentar la colaboración entre desarrollo y operaciones para entregar software rápidamente y con calidad."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 336,
@@ -3643,7 +3643,7 @@
       "El ordenador personal de cada desarrollador.",
       "Un entorno idéntico a producción utilizado únicamente para copias de seguridad."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 337,
@@ -3654,7 +3654,7 @@
       "Para poder revertir cambios y entender la evolución del esquema de datos.",
       "Para eliminar la necesidad de pruebas en desarrollo."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 338,
@@ -3665,7 +3665,7 @@
       "Uso de múltiples ramas de características en producción.",
       "Eliminación de pruebas unitarias."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 339,
@@ -3676,7 +3676,7 @@
       "Reducir el número de pruebas necesarias en producción.",
       "Probar funcionalidades no relacionadas con el proyecto."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 340,
@@ -3687,19 +3687,19 @@
       "Reduce la capacidad de añadir funcionalidades grandes.",
       "Facilita la identificación de problemas y reduce el impacto de errores."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 341,
     "question": "En Docker, ¿cómo se llama el archivo donde se especifican los pasos para construir una imagen?",
     "options": ["docker-compose.yml", "Dockerbuild", "Dockerfile", "Docker.config"],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 342,
     "question": "¿Qué comando se utiliza para listar todos los contenedores, incluidos los detenidos?",
     "options": ["docker container ls", "docker container ls -a", "docker image ls", "docker ps"],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 343,
@@ -3710,7 +3710,7 @@
       "Para mantener el código privado y no compartirlo.",
       "Para retrasar la integración y evitar conflictos."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 344,
@@ -3721,7 +3721,7 @@
       "Sirven para monitorizar el rendimiento de aplicaciones.",
       "Facilitan la comunicación con el cliente."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 345,
@@ -3732,7 +3732,7 @@
       "Para detectar errores lo antes posible y mantener el código en un estado funcional.",
       "Para reducir el tamaño del repositorio."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 346,
@@ -3743,7 +3743,7 @@
       "Se facilita la detección de errores en el código.",
       "Se acelera el proceso de despliegue."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 347,
@@ -3754,7 +3754,7 @@
       "Se facilita la implementación de cambios pequeños.",
       "Se reducen los riesgos de conflictos de código."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 348,
@@ -3765,7 +3765,7 @@
       "Un sistema de despliegue automatizado.",
       "Un objeto simulado que imita el comportamiento de componentes reales para pruebas."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 349,
@@ -3776,7 +3776,7 @@
       "Permite que solo un desarrollador pueda compilar el proyecto.",
       "Reduce la necesidad de documentación."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 350,
@@ -3787,7 +3787,7 @@
       "Tener el software listo para desplegarse, pero requiere aprobación manual.",
       "Reducir la cantidad de pruebas para acelerar entregas."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 351,
@@ -3798,7 +3798,7 @@
       "En Entrega Continua, el software está listo para desplegarse en cualquier momento, pero el despliegue puede ser manual; en Despliegue Continuo, el despliegue a producción es automático.",
       "Despliegue Continuo se centra en pruebas manuales, mientras que Entrega Continua se enfoca en pruebas automatizadas."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 352,
@@ -3809,7 +3809,7 @@
       "Proceso de despliegue más rápido y predecible.",
       "Eliminar completamente la necesidad de pruebas."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 353,
@@ -3820,7 +3820,7 @@
       "Compilando una versión diferente de la aplicación para cada entorno.",
       "Usando únicamente variables de entorno sin archivos de configuración."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 354,
@@ -3831,7 +3831,7 @@
       "Facilitan la creación de artefactos consistentes que pueden ejecutarse en cualquier entorno con Docker.",
       "Hacen innecesarias las pruebas automatizadas."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 355,
@@ -3842,7 +3842,7 @@
       "Actuar como sistema de control de versiones.",
       "Facilitar la comunicación entre el equipo de desarrollo y los clientes."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 356,
@@ -3853,7 +3853,7 @@
       "La habilidad de desplegar múltiples versiones al mismo tiempo.",
       "La eliminación de la necesidad de copias de seguridad."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 357,
@@ -3864,7 +3864,7 @@
       "Implementación de despliegues de tipo \"blue-green\".",
       "Evitar el uso de pruebas automatizadas."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 358,
@@ -3875,7 +3875,7 @@
       "Un equipo de desarrolladores asignados a una tarea.",
       "Un repositorio de código fuente."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 359,
@@ -3886,7 +3886,7 @@
       "No es importante; cada entorno puede compilar su propia versión.",
       "Para garantizar que el mismo artefacto se use en todos los entornos, asegurando consistencia."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 360,
@@ -3897,7 +3897,7 @@
       "Un entorno donde se realizan pruebas funcionales y de interfaz, a veces manuales.",
       "Un entorno idéntico al de producción usado para copias de seguridad."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 361,
@@ -3908,7 +3908,7 @@
       "No pueden ser ejecutados en sistemas Windows.",
       "Requieren más recursos que las máquinas virtuales."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 362,
@@ -3919,7 +3919,7 @@
       "Lista todos los contenedores, incluyendo los detenidos.",
       "Inicia un nuevo contenedor."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 363,
@@ -3930,7 +3930,7 @@
       "Es una forma de hardware programable.",
       "Es el proceso de gestionar y aprovisionar infraestructuras mediante código, permitiendo reproducibilidad y control de versiones."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 364,
@@ -3941,7 +3941,7 @@
       "Evitar automatizar el proceso de despliegue.",
       "Hacer despliegues manuales durante fines de semana."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 365,
@@ -3952,7 +3952,7 @@
       "Pruebas que se ejecutan únicamente en producción.",
       "Pruebas realizadas por los usuarios finales."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 366,
@@ -3963,7 +3963,7 @@
       "Que se ejecuta únicamente en sistemas Windows.",
       "Que no necesita ser desplegada en un servidor."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 367,
@@ -3974,7 +3974,7 @@
       "Un servidor de integración continua de código abierto.",
       "Un lenguaje de programación orientado a objetos."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 368,
@@ -3985,7 +3985,7 @@
       "No es importante; las pruebas pueden tardar lo que sea necesario.",
       "Para proporcionar retroalimentación rápida y permitir integraciones frecuentes."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 369,
@@ -3996,7 +3996,7 @@
       "Un entorno utilizado para pruebas de rendimiento.",
       "Un entorno idéntico al de producción utilizado para pruebas finales."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 370,
@@ -4007,7 +4007,7 @@
       "Permiten realizar cambios en producción sin pruebas previas.",
       "Reemplazan completamente a los administradores de bases de datos."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 371,
@@ -4018,7 +4018,7 @@
       "Que puede repetirse de manera consistente obteniendo los mismos resultados.",
       "Que no requiere intervención humana."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 372,
@@ -4029,7 +4029,7 @@
       "Para reducir la necesidad de pruebas en entornos previos.",
       "No es necesario si se han pasado todas las pruebas previas."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 373,
@@ -4040,7 +4040,7 @@
       "Integrar cambios grandes y poco frecuentes.",
       "Evitar el uso de pruebas unitarias."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 374,
@@ -4051,7 +4051,7 @@
       "Almacena todo el código, configuraciones y scripts necesarios para construir y desplegar la aplicación, permitiendo rastrear cambios.",
       "Se usa únicamente para versiones finales del producto."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 375,
@@ -4062,7 +4062,7 @@
       "Un enfoque para gestionar bases de datos en producción.",
       "Una técnica de despliegue donde dos entornos idénticos se usan alternadamente para minimizar el tiempo de inactividad."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 376,
@@ -4073,7 +4073,7 @@
       "Evitan la necesidad de integrar código frecuentemente.",
       "Garantizan que todas las funcionalidades están siempre activas."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 377,
@@ -4084,7 +4084,7 @@
       "No es necesario; las pruebas pueden hacerse en cualquier entorno.",
       "Para permitir a los usuarios acceder a las pruebas."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 378,
@@ -4095,7 +4095,7 @@
       "El proceso de compilar código fuente y generar un artefacto ejecutable.",
       "Una estrategia de despliegue en producción."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 379,
@@ -4106,7 +4106,7 @@
       "No es importante; desarrollo y operaciones deben estar separados.",
       "Para reducir la necesidad de un equipo de operaciones."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 380,
@@ -4117,7 +4117,7 @@
       "Un tipo de prueba automatizada.",
       "Un despliegue en producción."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 381,
@@ -4128,7 +4128,7 @@
       "Separación estricta de responsabilidades entre desarrollo y operaciones.",
       "Enfoque en la entrega continua de valor."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 382,
@@ -4139,7 +4139,7 @@
       "Un sistema operativo para servidores.",
       "Una herramienta de control de versiones."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 383,
@@ -4150,7 +4150,7 @@
       "Para evitar la necesidad de pruebas en desarrollo.",
       "Para proteger los datos y asegurar que los cambios pueden ser revertidos si es necesario."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 384,
@@ -4161,6 +4161,6 @@
       "Reducir la necesidad de pruebas automatizadas.",
       "Evitar la integración continua."
     ],
-    "correctAnswer": 0
+    "answer": 0
   }
 ]

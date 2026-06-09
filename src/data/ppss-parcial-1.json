@@ -8,7 +8,7 @@
       "Se anota como categoría una interfaz",
       "Se anota como categoría una clase que contiene drivers"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 2,
@@ -19,7 +19,7 @@
       "Passed, si el metodoSUT() devuelve 0",
       "Failed, si el metodoSUT() provoca la excepción MiExecpcion.class"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 3,
@@ -30,7 +30,7 @@
       "Con los tres tipos siempre hay que invocar al método replay() de la librería.",
       "Con los tipos Mock y StrictMock se verifica el orden en el que se realizan las invocaciones al doble"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 4,
@@ -41,7 +41,7 @@
       "Las particiones pueden compartir elementos para mantener algunos datos de prueba redundantes",
       "Se deben probar todas las posibles combinaciones de las particiones"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 5,
@@ -52,7 +52,7 @@
       "todas las afirmaciones anteriores son falsas",
       "si no se encuentra en un repositorio remoto, se busca en el directorio .m2"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 6,
@@ -63,7 +63,7 @@
       "Podemos tener tres particiones válidas de dicha entrada",
       "Podemos tener tres particiones no válidas de dicha entrada"
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 7,
@@ -74,7 +74,7 @@
       "No se puede obtener si no se conocen las particiones de salida válidas y no válidas.",
       "6"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 8,
@@ -85,7 +85,7 @@
       "Se asocia a un caso de prueba con valores de entrada desconocidos",
       "Todas las afirmaciones del resto de opciones son falsas"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 9,
@@ -96,7 +96,7 @@
       "Si añadimos una factoría local, alteramos el comportamiento de la clase que contiene la SUT",
       "Si añadimos una clase factoría no se altera el código de producción"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 10,
@@ -107,7 +107,7 @@
       "En las líneas 7 y 12",
       "En las líneas 12 y 13"
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 11,
@@ -118,7 +118,7 @@
       "Se ejecuta desde el directorio donde se encuentra el fichero de configuración del proyecto Maven",
       "Se ejecuta desde el directorio src para compilar los ficheros fuentes y desde el directorio test para compilar los ficheros con las pruebas"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 12,
@@ -129,7 +129,7 @@
       "Con un método de caja negra se pueden alcanzar comportamientos del subconjunto 3",
       "Con un método de caja blanca se pueden alcanzar comportamientos del subconjunto 4"
     ],
-    "correctAnswer": 1,
+    "answer": 1,
 
     "image": "ppss001.png"
   },
@@ -142,7 +142,7 @@
       "Se ejecuta solo test3()",
       "Se ejecuta solo test1()"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 14,
@@ -153,7 +153,7 @@
       "Mvn clean test-compile surefire:test",
       "Mvn test-compile surefire:test"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 15,
@@ -164,7 +164,7 @@
       "Aunque probemos un código utilizando un conjunto de pruebas eficiente y efectivo y todos los test pasen, no podemos garantizar que el código no presenta ningún defecto",
       "Las pruebas pueden demostrar la ausencia de defectos"
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 16,
@@ -175,7 +175,7 @@
       "Es un método funcional y por lo tanto lo podemos aplicar en cualquier nivel de pruebas",
       "Representa las transiciones a partir de entradas y acciones"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 17,
@@ -186,7 +186,7 @@
       "no permite el uso de verify()",
       "permite chequear el orden de las invocaciones de un doble"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 18,
@@ -197,7 +197,7 @@
       "el método anotado con @BeforeAll se ejecuta una vez",
       "el método anotado con @AfterEach se ejecuta n-1 veces"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 19,
@@ -208,7 +208,7 @@
       "debemos elegir el conjunto mínimo de caminos para conseguir ejecutar todas las condiciones al menos una vez en cada caso de prueba",
       "debemos elegir todos los caminos del grafo"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 20,
@@ -219,7 +219,7 @@
       "el primer paso es identificar los seams que contiene la SUT",
       "no está permitido modificar la SUT de ninguna forma para realizar pruebas unitarias"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 21,
@@ -230,7 +230,7 @@
       "En las líneas 10 y 14",
       "En las líneas 11 y 18"
     ],
-    "correctAnswer": 3,
+    "answer": 3,
 
     "image": "ppss002.png"
   },
@@ -243,7 +243,7 @@
       "con n caminos",
       "con más de 2 caminos"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 23,
@@ -254,7 +254,7 @@
       "un doble reemplaza al código real de una dependencia externa durante las pruebas",
       "un SEAM es un punto de inyección doble"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 24,
@@ -265,13 +265,13 @@
       "No se puede obtener si no se conocen las particiones de salida válidas y no válidas.",
       "3"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 25,
     "question": "Indica cuál es la complejidad ciclomática del siguiente código:```java\nif (a > b && a < c || c < b)\n\ta = b;\nelse if (a < b || c > a)\n\tc = a;\nelse\n\tb = c;\n```",
     "options": ["6", "4", "3", "5"],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 26,
@@ -282,7 +282,7 @@
       "las pruebas unitarias son dinámicas y las pruebas de integración son estáticas",
       "todas las afirmaciones del resto de opciones son falsas"
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 27,
@@ -293,7 +293,7 @@
       "el mecanismo reactor de maven permite que un proyectos hijo hereden elementos de la configuración del proyecto padre",
       "todas las afirmaciones del resto de opciones son falsas"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 28,
@@ -304,7 +304,7 @@
       "el mecanismo reactor de maven permite que los proyectos hijo hereden elementos de la configuración del proyecto padre",
       "para establecer una relación de agregación entre proyectos maven, no es necesario usar la etiqueta <parent>"
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 29,
@@ -315,7 +315,7 @@
       "Las pruebas unitarias, integración, y sistema, se realizan siempre en ese orden",
       "Todas las afirmaciones del resto de opciones son falsas"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 30,
@@ -326,6 +326,6 @@
       "el código a probar es el mismo que en las pruebas del sistema",
       "todas las afirmaciones del resto de opciones son falsas"
     ],
-    "correctAnswer": 3
+    "answer": 3
   }
 ]

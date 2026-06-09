@@ -8,7 +8,7 @@
       "Centralizado en unos casos, distribuído en otros.",
       "Ninguna de las anteriores."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 2,
@@ -19,7 +19,7 @@
       "Traslada los cambios hechos en la copia de trabajo a un repositorio remoto.",
       "Clona repositorios."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 3,
@@ -30,7 +30,7 @@
       "Es la única que podemos usar para renombrar una rama.",
       "Ninguna de las anteriores."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 4,
@@ -41,7 +41,7 @@
       "Utilizamos la operación Git stash",
       "No se puede realizar una copia, el directorio de trabajo es único"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 5,
@@ -52,7 +52,7 @@
       "En un directorio único por proyecto",
       "En un archivo de configuración"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 6,
@@ -63,7 +63,7 @@
       "Git no permite modificar simultáneamente en un mismo archivo",
       "Ninguna de las anteriores"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 7,
@@ -74,7 +74,7 @@
       "Un conjunto de commits",
       "Cada commit"
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 8,
@@ -85,7 +85,7 @@
       "Es equivalente a pull",
       "Es equivalente a rebase"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 9,
@@ -96,7 +96,7 @@
       "Usaremos la orden git reset",
       "Usaremos la orden git rewind"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 10,
@@ -107,7 +107,7 @@
       "Debemos de hacer un checkout del archivo y luego usamos -amend",
       "Ninguna de las anteriores"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 11,
@@ -118,7 +118,7 @@
       "Sirve únicamente para actualizar la copia de trabajo con la versión del repositorio local",
       "Ninguna de las anteriores"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 12,
@@ -129,7 +129,7 @@
       "no tiene tipos",
       "ninguna de las anteriores"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 13,
@@ -140,7 +140,7 @@
       "todos los elementos deben ser del mismo tipo",
       "ninguna de las anteriores"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 14,
@@ -151,7 +151,7 @@
       "Las entidades de negocio no acceden directamente a las BBDD nunca",
       "Ninguna de las anteriores"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 15,
@@ -162,7 +162,7 @@
       "El componente de acceso a datos",
       "Ninguna de las anteriores"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 16,
@@ -173,7 +173,7 @@
       "Hacen crecer el ejecutable final",
       "Ninguna de las anteriores"
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 17,
@@ -184,7 +184,7 @@
       "todo lo que requiera la aplicación web debe localizarse en el cliente",
       "Todas son ciertas"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 18,
@@ -195,7 +195,7 @@
       "deben contener controles de usuario",
       "ninguna de las anteriores"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 19,
@@ -206,13 +206,13 @@
       "podemos crear una cookie como instancia de la clase HttpCookie",
       "podemos crear una cookie como instancia de la clase AspCookie"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 20,
     "question": "En asp la clase que representa un Email se llama",
     "options": ["Email", "SmtpClient", "MailMessage", "Mail"],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 21,
@@ -223,7 +223,7 @@
       "Este objeto se utiliza para leer las cookies creadas en el cliente",
       "Ninguna de las anteriores"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 22,
@@ -234,7 +234,7 @@
       "Tiene asociado una hoja de estilo CSS",
       "Optimiza el SEO del sitio web"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 23,
@@ -245,7 +245,7 @@
       "Con el método Read de la clase DataReader",
       "Con el método Read de la clase DataRow"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 24,
@@ -256,13 +256,13 @@
       "Al constructor de la clase ExecuteReader",
       "Al constructor de la clase SqlConnection"
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 25,
     "question": "La propiedad que indica si un control de validación es correcto se llama",
     "options": ["causesValidation", "isOK", "isValid", "isCorrect"],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 26,
@@ -273,7 +273,7 @@
       "Las dos anteriores son verdaderas",
       "Ninguna de las anteriores"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 27,
@@ -284,7 +284,7 @@
       "Las dos anteriores son verdaderas",
       "Ninguna de las anteriores"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 28,
@@ -295,13 +295,13 @@
       "Perdura hasta que el usuario la borre",
       "Ninguna de las anteriores"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 29,
     "question": "En el acceso desconectado la clase que está entre nuestra aplicación y la conexión de las BBDD se llama:",
     "options": ["DataReader", "DataSet", "DataAdapter", "Command"],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 30,
@@ -312,7 +312,7 @@
       "Contienen información sobre una columna",
       "Ninguna de las anteriores"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 31,
@@ -323,7 +323,7 @@
       "Debemos escribir el código necesario para gestionarla",
       "Se guarda una copia del dataset original y se compara la BBDD para ver si ha sido modificada"
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 32,
@@ -334,7 +334,7 @@
       "solo coinciden los tipos de datos de C# y F#",
       "ninguna de las anteriores"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 33,
@@ -345,7 +345,7 @@
       "debe ser implementado y sobrescrito en la clase derivada",
       "se identifica por un alias que representa la localización física en el servidor"
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 34,
@@ -356,7 +356,7 @@
       "hace referencia a código asp y C#",
       "ninguna de las anteriores"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 35,
@@ -367,7 +367,7 @@
       "Las dos con * son correctas",
       "Ninguna de las anteriores son correctas"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 36,
@@ -378,7 +378,7 @@
       "Depende del lenguaje de programación usado.",
       "Ninguna de las anteriores."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 37,
@@ -388,7 +388,7 @@
       "Es necesario inicializar las variables",
       "La conversion implicita tiene perdida de informacion"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 38,
@@ -398,7 +398,7 @@
       "Debemos destruir las variables manualmente",
       "Microsoft dice que esta basado en Java"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 39,
@@ -408,7 +408,7 @@
       "Se puede hacer un try sin catch",
       "El bloque finally se ejecuta siempre"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 40,
@@ -418,19 +418,19 @@
       "Con la conversion implicita perdemos datos",
       "Con la conversion explicita perdemos datos"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 41,
     "question": "En el modelo de capas:",
     "options": ["La Interfaz llama al EN", "El CAD llama al EN", "El EN llama a la Interfaz"],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 42,
     "question": "Donde se guarda la aplicacion WEB:",
     "options": ["En una Carpeta", "En un Directorio Virtual", "En LocalHost"],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 43,
@@ -440,7 +440,7 @@
       "Rapido Analisis y Desarrollo",
       "Rapido Diseño de Aplicaciones"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 44,
@@ -450,7 +450,7 @@
       "EI formulario lo envia el servidor",
       "EI formulario se debe procesar en el servidor"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 45,
@@ -460,7 +460,7 @@
       "Sirve para paginas web sencillas",
       "No podemos referenciar DLLs"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 46,
@@ -470,7 +470,7 @@
       "Proporcionan seguridad a la pagina",
       "Proporcionan coherencia a la pagina"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 47,
@@ -480,31 +480,31 @@
       "Hacemos referencia a otras paginas maestras",
       "Creamos el contenido de los contenedores"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 48,
     "question": "El enlace entre el mensaje del evento y el mensaje especifico se lleva a cabo mediante:",
     "options": ["Emisor de eventos", "Delegado de eventos", "Receptor de eventos"],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 49,
     "question": "Los delegados son:",
     "options": ["Puntero a funcion", "Puntero a mensaje", "Puntero a destino"],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 50,
     "question": "Un Boton es de tipo:",
     "options": ["No Postback", "Evento de cache", "Evento de envio"],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 51,
     "question": "Un Textbox es de tipo:",
     "options": ["Evento de cache", "No Postback", "Ambas son Correctas"],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 52,
@@ -514,7 +514,7 @@
       "Asignando AutoPostback = true",
       "Asignando PostBack = true"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 53,
@@ -524,7 +524,7 @@
       "No, tiene que existir este archivo",
       "Ninguna de las anteriores"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 54,
@@ -534,13 +534,13 @@
       "Solo podemos acceder a paginas en el directorio raiz",
       "Ninguna de las anteriores"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 55,
     "question": "Para leer parametros en la Web usamos:",
     "options": ["Commander", "Request", "Application"],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 56,
@@ -550,7 +550,7 @@
       "El control del menu es variable",
       "El control del menu esta expandido completamente"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 57,
@@ -560,19 +560,19 @@
       "Toda la estructura es siempre visible",
       "El control del menu esta espandido completamente"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 58,
     "question": "Con RequiredFieldValidator Validamos:",
     "options": ["La cadena sea numerica", "La cadena no sea vacia", "La cadena sea alfabetica"],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 59,
     "question": "Los controladores de validacion pueden ser:",
     "options": ["Estaticos", "Dinamicos", "Los dos"],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 60,
@@ -582,7 +582,7 @@
       "Se puede controlar una expresion",
       "Podemos definir nuestro propio control"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 61,
@@ -592,31 +592,31 @@
       "Al cerrar el navegador se borran los datos",
       "Ambas son correctas"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 62,
     "question": "Para cerrar sesion usamos:",
     "options": ["Session.Abandon", "Session.Remove", "Session.Close"],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 63,
     "question": "Cuales estan implementados como colecciones o conjuntos de pares nombre-valor:",
     "options": ["Session", "Application", "Ambas"],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 64,
     "question": "Si queremos asignar variables para todos los usuarios usaremos:",
     "options": ["Session", "Application", "Ambas"],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 65,
     "question": "Las variables application pueden ser bloqueadas:",
     "options": ["Si", "No", "Depende del criterio a seguir"],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 66,
@@ -626,7 +626,7 @@
       "Contiene etiquetas XML",
       "No contiene etiquetas ASP.NET"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 67,
@@ -636,37 +636,37 @@
       "Requieren compilacion de aplicacion",
       "Se ejecutan con normalidad"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 68,
     "question": "En el entorno conectado usaremos:",
     "options": ["Dataset", "Datareader", "Dataconect"],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 69,
     "question": "En el entorno desconectado usaremos:",
     "options": ["Dataset", "Datareader", "Dataconect"],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 70,
     "question": "Los Objetos Connection y Command:",
     "options": ["Tienen prefijo", "No tienen prefijo", "Tienen prefijo, como dataset"],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 71,
     "question": "El archivo web.config:",
     "options": ["Basado en ASP.NET", "Basado en HTML", "Basado en XML"],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 72,
     "question": "Para realizar un SELECT:",
     "options": ["ExecuteNonQuery", "ExecuteCommand", "ExecuteReader"],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 73,
@@ -676,7 +676,7 @@
       "La gestion por abrir y cerrar la BBDD es automatica",
       "La gestion por abrir y cerrar la BBDD es automatica utilizando CommandBuilder"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 74,
@@ -686,13 +686,13 @@
       "La gestion por insertar, borrar y actualizar la BBDD es automatica",
       "La gestion por insertar, borrar y actualizar la BBDD es automatica utilizando CommandBuilder"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 75,
     "question": "GridView:",
     "options": ["Con asistente", "Con codigo", "Los dos"],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 76,
@@ -702,7 +702,7 @@
       "Las filas estan disponibles para su lectura en todo momento, estas pueden ser leidas por distintos usuarios al mismo tiempo.",
       "Esta tecnica implica que no existe control. El ultimo cambio en escribirse es el que permanece."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 77,
@@ -712,7 +712,7 @@
       "Las filas estan disponibles para su lectura en todo momento, estas pueden ser leidas por distintos usuarios al mismo tiempo.",
       "Esta tecnica implica que no existe control. El ultimo cambio en escribirse es el que permanece."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 78,
@@ -722,19 +722,19 @@
       "Las filas estan disponibles para su lectura en todo momento, estas pueden ser leidas por distintos usuarios al mismo tiempo.",
       "Esta tecnica implica que no existe control. El ultimo cambio en escribirse es el que permanece."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 79,
     "question": "Cuando tenemos que hacer un acceso complicado usaremos:",
     "options": ["DataReader", "DataAdapter", "DataSet"],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 80,
     "question": "Si trabajamos con mas de una BBDD usaremos:",
     "options": ["DataSet", "DataReader", "DataAdapter"],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 81,
@@ -744,7 +744,7 @@
       "Las cookies no se pierden cuando se cierra el navegador (a no ser que el usuario las borre)",
       "Una cookie se representa por la clase Cookie"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 82,
@@ -754,19 +754,19 @@
       "Las cookies no se pueden borrar con fechas ya expiradas",
       "Una cookie se representa por la clase HttpCookie"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 83,
     "question": "La extension de los controles de usuario es:",
     "options": ["aspx", "ascx", "asdx"],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 84,
     "question": "En Git la operación pull equivale a:",
     "options": ["Fetch+merge", "Merge", "Push", "Rebase"],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 85,
@@ -777,7 +777,7 @@
       "podemos implementar páginas dinámicas y responsive",
       "es un lenguaje orientado a objetos"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 86,
@@ -788,7 +788,7 @@
       "es dónde se definen los eventos",
       "Esta etiqueta no existe"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 87,
@@ -799,7 +799,7 @@
       "en el elemento head de la página",
       "en el elemento form de la página"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 88,
@@ -810,7 +810,7 @@
       "es muy seguro para el envío de datos",
       "permite enviar una gran cantidad de datos"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 89,
@@ -821,7 +821,7 @@
       "Solo se incluye en los formularios aspnet",
       "Solo se incluye en los controles aspnet"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 90,
@@ -832,7 +832,7 @@
       "debemos usar divs y CSS",
       "debemos usar etiquetas de organización"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 91,
@@ -843,7 +843,7 @@
       "incluye siempre una directiva @Master",
       "se ejecuta en el cliente"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 92,
@@ -854,7 +854,7 @@
       "uso el método get",
       "no se pueden pasar parámetros"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 93,
@@ -865,7 +865,7 @@
       "tienen tres parámetros: this, args y data",
       "se conectan con los eventos en el main"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 94,
@@ -876,7 +876,7 @@
       "no se pueden reutilizar",
       "incluyen la directiva @Page"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 95,
@@ -887,7 +887,7 @@
       "se procesan en el cliente",
       "se originan en el cliente y se procesan en el servidor"
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 96,
@@ -898,7 +898,7 @@
       "envian datos a otra página",
       "tienen tres métodos de envio de datos"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 97,
@@ -909,19 +909,19 @@
       "incluyen un elemento runat=client",
       "podemos tener varios en una misma página"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 98,
     "question": "¿A qué método se invoca en el control Data Adapter para cargar el dataset generado?",
     "options": ["Fill()", "ExecuteQuery()", "Read()"],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 99,
     "question": "¿Cuál es el tipo del cual heredan todos los tipos de dato de la plataforma .NET?",
     "options": ["System.Object", "System.Type", "System.Class", "System.ValueType"],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 100,
@@ -932,25 +932,25 @@
       "Lenguaje de programación",
       "Lenguaje de programación de base de datos igual que SQL."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 101,
     "question": "¿Cuando una página .aspx es solicitada por el servidor web, el resultado será renderizado al browseren el siguiente formato?",
     "options": ["HTML", "XML", "WML", "JSP"],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 102,
     "question": "¿Cuál es la palabra reservada para crear una instancia de una clase?",
     "options": ["CreateObject", "New", "Create", "Ninguna de las opciones es correcta."],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 103,
     "question": "¿Cuál es el bloque que utiliza .NET para proveer administración estructurada de excepciones?",
     "options": ["If/Else", "OnError/Goto", "Try/Catch/Finally", "Throw"],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 104,
@@ -961,7 +961,7 @@
       "Relacionar las clases mediante una asociación bi-direccional",
       "Encapsular el comportamiento en una clase agregada"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 105,
@@ -971,7 +971,7 @@
       "Establezca la propiedad TextMode en Contraseña",
       "Tienes que agregar el control Password ASP.NET"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 106,
@@ -982,7 +982,7 @@
       "no permiten validar expresiones regulares",
       "solo permiten validar entradas de texto"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 107,
@@ -993,7 +993,7 @@
       "solo se pueden desarrollar en C#",
       "ninguna de las anteriores"
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 108,
@@ -1004,7 +1004,7 @@
       "git branch fichero",
       "git blame fichero"
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 109,
@@ -1015,7 +1015,7 @@
       "Puede contener un conjunto de proyectos.",
       "Ninguna de las anteriores."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 110,
@@ -1026,7 +1026,7 @@
       "se implementa mediante un delegado que es un puntero a función",
       "se implementa mediante un puntero a función"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 111,
@@ -1037,7 +1037,7 @@
       "es un control para mostrar usuarios",
       "sólo se usa con comandos select"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 112,
@@ -1048,7 +1048,7 @@
       "Los CAD llamarán a los EN",
       "La interfaz llamará a los CAD"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 113,
@@ -1059,7 +1059,7 @@
       "Cuando sea necesario tener un diseño y estética en la página web",
       "Cuando sean necesarias actualizaciones parciales de la página mostrando sólo las partes que han cambiado"
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 114,
@@ -1070,7 +1070,7 @@
       "Es correcto, utiliza un método de acceso conectado",
       "Es incorrecto, utiliza un método de acceso desconectado"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 115,
@@ -1081,7 +1081,7 @@
       "Es correcto, recuperamos la cadena de conexión del web.config y se actualiza la base de datos",
       "Es incorrecto, para insertar el usuario en la base datos se usaría el método ExecuteCommand"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 116,
@@ -1092,7 +1092,7 @@
       "Es incorrecto, para insertar el usuario en la base datos se usaría el método ExecuteCommand",
       "Es incorrecto, para recuperar la cadena de conexion del web.config se usaria el objeto webconfig"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 117,
@@ -1103,13 +1103,13 @@
       "No se puede, se produce una excepción 'EventWithoutHandler'",
       "No se puede, el evento es nulo en tal caso"
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 118,
     "question": "En una aplicación ASP.NET toda la computación se realiza:",
     "options": ["En el servidor y en el cliente", "En el servidor", "Ninguna", "En el cliente"],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 119,
@@ -1120,7 +1120,7 @@
       "Tengo todos mis cambios en foo.cs al dia en el repositorio local y en el remoto",
       "Tengo algunos cambios en el archivo foo.cs sin invluir en el repositorio local, que debo añadirlos al área de preparación o bien deshacer los cambios"
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 120,
@@ -1131,7 +1131,7 @@
       "Puede contener etiquetas HTM pero no ASP.NET",
       "Permite escribir cualquier tipo de código de aplicación"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 121,
@@ -1142,13 +1142,13 @@
       "Por cada CAD tiene que existir una tabla en la base de datos",
       "EI GridView tiene que obtener los datos directamente de los CAD"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 122,
     "question": "En mi página web tengo un asp:label que inicializo a una cadena vacía en el Page_Load únicamente si isPostBack es false. Adicionalmente, tengo un botón asociado a un evento que concatena una letra \"a\" al componente asp:label anterior. Si al lanzar la página, pulso tres veces el botón, ¿qué veré en el componente asp:Label?",
     "options": ["Nada", "\"aaa\"", "\"aa\"", "\"aa\""],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 123,
@@ -1159,7 +1159,7 @@
       "Es incorrecto, la propiedad MasterPageFile debería llamarse MasterPage e indicaría que está asociado a una página maestra llamada esqueleto.master",
       "Es correcto, la propiedad MasterPageFile indica que está asociado a una página maestra de nombre esqueleto.master"
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 124,
@@ -1170,7 +1170,7 @@
       "Ninguna",
       "Sea asíncrona"
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 125,
@@ -1181,7 +1181,7 @@
       "Las bibliotecas estáticas se enlazan en tiempo de compilación",
       "Las bibliotecas dinámicas permiten cambiar funcionalidad de una aplicación sin recompilar"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 126,
@@ -1192,7 +1192,7 @@
       "EI parámetro AttachDBFileName especifica el nombre del servidor, la cadena de conexión y el tiempo de espera máximo para establecer la conexión",
       "EI parámetro integrated security recibe como parámetro un valor entero"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 127,
@@ -1203,7 +1203,7 @@
       "Se puede hacer tanto en el constructor de SqlDataAdapter o iterando por el vector Rows del DataTable",
       "No es necesario comprobar. Se puede borrar la fila utilizando la sentencia Rows[id].Remove() del DataTable directamente."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 128,
@@ -1214,7 +1214,7 @@
       "Es el área previo donde se indexa y formatean los ficheros antes de la ejecución del commit y que además permite la compresión de los datos para enviarlos al repositorio remoto",
       "Es el repositorio donde se indexa y formatean los ficheros antes de la ejecución del commit"
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 129,
@@ -1225,7 +1225,7 @@
       "Es correcto: la llamada desde otro proyecto enlazado se realizará mediante la siguiente instrucción: Operaciones.Suma(23.8, 22,1);",
       "Es correcto, la llamada desde otro proyecto enlazado se realizará mediante la siguiente instrucción: double resultado= new Operaciones.suma (23.8, 22,1);"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 130,
@@ -1236,7 +1236,7 @@
       "Un callback es un puntero a una fucnión",
       "Un delegado es un tipo de dato que representa referencias a métodos"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 131,
@@ -1247,7 +1247,7 @@
       "Un hito debe ir asociado a una tarea",
       "Debo hacerlo desde la pestaña issues"
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 132,
@@ -1258,7 +1258,7 @@
       "Es incorrecto. Si el porcentaje de batería está por debajo del mínimo, lanzamos el evento. Le faltaría comprobar que hay manejadores asociados al evento bateriaMinimoExcedido asi: (bateriaMinExcedido != null)",
       "Es correcto. Si el porcentaje de batería está por encima del mínimo y el manejador del evento ha sido establecido, 10 lanzamos."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 133,
@@ -1269,7 +1269,7 @@
       "git checkout rama_examen",
       "git checkout -d rama_examen"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 134,
@@ -1280,7 +1280,7 @@
       "git fetch + git checkout origin/master -- <fichero>",
       "git pull origin/master -- <fichero>"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 135,
@@ -1291,7 +1291,7 @@
       "Siempre utilizaremos el objeto DataTable",
       "Utilizaremos el método Fill del objeto SqlDataAdapter, para insertar los datos en el DataSet."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 136,
@@ -1302,7 +1302,7 @@
       "Es correcto, una página sólo puede tener un form",
       "Es incorrecto, la etiqueta form debe ser webform"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 137,
@@ -1313,7 +1313,7 @@
       "Tiene su origen el el concepto de callback",
       "Para utilizarla necesitamos la biblioteca <stdlib.h>"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 138,
@@ -1324,7 +1324,7 @@
       "CADPedido",
       "Podría ir tanto en CADUsuario como en CADProducto (pero no en ambas)."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 139,
@@ -1335,7 +1335,7 @@
       "Tiene su origen en el concepto callback",
       "Sólo se puede implementar en lenguaje C."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 140,
@@ -1346,7 +1346,7 @@
       "Es incorrecto, este evento se produce al seleccionar una fila.",
       "Es correcto, se actualiza el GridView con métodos de acceso desconectado."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 141,
@@ -1357,7 +1357,7 @@
       "Es incorrecto, recuperamos la cadena de conexión del web.config pero no se actualiza el origen de datos.",
       "Es incorrecto, no se está mostrando el resultado en el GridView"
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 142,
@@ -1368,7 +1368,7 @@
       "Es correcto, sirve para definir un evento Ilamado cinturonQuitado",
       "Es correcto, sirve para definir un delegado llamado cinturonQuitado"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 143,
@@ -1379,7 +1379,7 @@
       "Ninguna de las anteriores.",
       "Se puede llamar igual que otra local"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 144,
@@ -1390,7 +1390,7 @@
       "Se añade automáticamente una referencia a los proyectos en los que lo estén empleando.",
       "Produce un ejecutable, no una DLL."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 145,
@@ -1401,7 +1401,7 @@
       "Debe llevar la propiedad autopostback=true",
       "Está compuesto de elementos listItem"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 146,
@@ -1412,7 +1412,7 @@
       "La capa IU llamará a los EN.",
       "La capa EN llamará a la capa IU."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 147,
@@ -1423,7 +1423,7 @@
       "Se invoca solo si la propiedad AutoEventWireup es true",
       "Es incorrecto, la signatura del evento es protected void Page_Load(object sender)"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 148,
@@ -1434,7 +1434,7 @@
       "Es incorrecto, la signatura del evento es protected void Page_Load (button sender, EventArgs e)",
       "Se invoca sólo si se pulsa un botón en la web y se lanza un evento."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 149,
@@ -1445,7 +1445,7 @@
       "Permite refrescar únicamente una parte concreta de la página.",
       "Puede ser activado mediante eventos producidos fuera del panel."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 150,
@@ -1456,7 +1456,7 @@
       "Utilizaré el método conectado",
       "Llamare al CADUsuario en el evento PageLoad."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 151,
@@ -1467,7 +1467,7 @@
       "Todos los registros se disponen en un array de tipo DataReader[]",
       "Todos los registros se disponen en un objeto DataTable."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 152,
@@ -1478,7 +1478,7 @@
       "Todos los registros se disponen en un array de tipo DataReader[]",
       "Todos los registros se disponen en un objeto DataTable."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 153,
@@ -1489,7 +1489,7 @@
       "los eventos postback se quedan en una cola en el cliente hasta que se realiza el envio al servidor",
       "la propiedad autopostback sirve para convertir un evento cached en postback"
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 154,
@@ -1500,7 +1500,7 @@
       "Los proyectos de librería siempre llevan asociados un proyecto de consola o interfaz grafica.",
       "Las bibliotecas se enlazan al poner el ejecutable en marcha"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 155,
@@ -1510,7 +1510,7 @@
       "mievento(this, new mieventoArgs(value));",
       "mievento(mieventoArgs);"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 156,
@@ -1521,7 +1521,7 @@
       "Componente de acceso a datos",
       "Ninguna de las opciones ofrecidas es correcta"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 157,
@@ -1532,7 +1532,7 @@
       "Es correcto, recuperamos la cadena de conexión del web.config e insertamos un usuario.",
       "Es correcto, recuperamos la cadena de conexión del web.xml y se actualiza la base de datos"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 158,
@@ -1543,7 +1543,7 @@
       "Ninguna opción ofrecida es correcta",
       "solo con BBDD Access en aplicaciones de consola/escritorio"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 159,
@@ -1554,7 +1554,7 @@
       "Le dice a git que archivos debe incluir bajo el control de versiones.",
       "Ninguna de las anteriores."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 160,
@@ -1565,7 +1565,7 @@
       "Si al menos uno de sus controles de validación es valido",
       "Ninguna opción ofrecida es correcta"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 161,
@@ -1576,13 +1576,13 @@
       "a un DataSet desde un DataAdapter",
       "a un DataTable desde un SQLCommand"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 162,
     "question": "¿Cómo puedo con git automatizar la búsqueda de un cambio que ha provocado errores en mi proyecto?",
     "options": ["git test", "git blame", "git bisect", "git log"],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 163,
@@ -1593,7 +1593,7 @@
       "Debe llevar el atributo action indicando la pagina aspnet destino",
       "No debe utilizarse en aspnet"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 164,
@@ -1604,7 +1604,7 @@
       "Es incorrecto, hay objetos que no pertenecen al entorno desconectado.",
       "Es correcto, este código devuelve un DataSet con todos los clientes"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 165,
@@ -1615,7 +1615,7 @@
       "Debo añadir una librería a visualStudio.",
       "Ninguna opción es correcta"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 166,
@@ -1626,7 +1626,7 @@
       "Utiliza el método Readline para leer el conjunto de resultados.",
       "Es la mejor elección para acceso a datos simple, por su buen rendimiento."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 167,
@@ -1637,7 +1637,7 @@
       "Se utiliza en el método manejador del evento Page init",
       "Devuelve true solo la primera vez que se carga la pagina"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 168,
@@ -1648,7 +1648,7 @@
       "Valida que el numero introducido este dentro de un rango definido",
       "Valida que el valor introducido por el usuario siga un patrón definido por el desarrollador"
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 169,
@@ -1659,7 +1659,7 @@
       "Sólo puede tener conectado un manejador.",
       "Puede tener conectados varios manejadores."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 170,
@@ -1670,7 +1670,7 @@
       "Se pueden cargar hasta un maximo de 30 imágenes",
       "No es necesario incorporar el componente ScriptManager."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 171,
@@ -1681,7 +1681,7 @@
       "Es incorrecto, los datos no se han enlazado.",
       "Ninguna de las respuestas ofrecidas es correcta"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 172,
@@ -1692,7 +1692,7 @@
       "Es correcto en caso de que listarClientesD() devuelva un datareader, este codigo asigna un DataReader a un GridView y lo muestra",
       "Es incorrecto, los datos no se han enlazado."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 173,
@@ -1703,7 +1703,7 @@
       "El método ExecuteQuery asociado devuelve true.",
       "El método ExecuteNonQuery asociado devuelve true."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 174,
@@ -1714,7 +1714,7 @@
       "private const int value;",
       "private readonly int value;"
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 175,
@@ -1725,7 +1725,7 @@
       "podemos atender las mismas peticiones simultáneas que con el acceso conectado",
       "el acceso desconectado solo esta disponible en la version professional de NET"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 176,
@@ -1736,7 +1736,7 @@
       "Como atributo estático y constante en cada CAD.",
       "En el archivo web.config"
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 177,
@@ -1747,7 +1747,7 @@
       "Es correcto, recuperamos la cadena de conexión del web.config y se obtienen los usuarios guardados en la base de datos.",
       "Es incorrecto, para consultar los usuarios en la base de datos se usaría el método ExecuteCommand"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 178,
@@ -1758,13 +1758,13 @@
       "Es incorrecto, la conexion no se abre correctamente",
       "Es incorrecto, no se está obteniendo correctamente la cadena de conexion"
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 179,
     "question": "En mi página web tengo un asp:Label que inicializo a cadena vacía en el Page.Load. Adicionalmente, tengo un botón asociado a un evento que concatena una letra \"a\" al componente asp:Label anterior. Si al lanzar la página, pulso tres veces el botón, ¿qué veré en el componente asp:Label?:",
     "options": ["\"aa\"", "\"aaa\"", "Nada", "\"a\""],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 180,
@@ -1775,7 +1775,7 @@
       "Significa que hay diferencias entre el directorio de trabajo y el staging area.",
       "Significa que hay diferencias entre el directorio de trabajo y el repositorio."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 181,
@@ -1786,7 +1786,7 @@
       "Obtendré los 15 últimos commits del repositorio.",
       "Obtendré hasta 15 ramas."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 182,
@@ -1797,7 +1797,7 @@
       "No pueden definirse con delegados",
       "Se definen única y exclusivamente con el operador lambda."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 183,
@@ -1808,7 +1808,7 @@
       "Todas las opciones ofrecidas son correctas.",
       "Sirve para definir la cadena de conexión a la BBDD."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 184,
@@ -1819,7 +1819,7 @@
       "Controles adicionales y extensores de controles para incluir nuevos comportamientos o propiedades a los ya existentes",
       "Los mismos controles de validación pero implementados con AJAX"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 185,
@@ -1830,7 +1830,7 @@
       "Necesitamos utilizar el objeto DataAdapter para ejecutar el comando SQL",
       "Siempre hay que realizar una select"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 186,
@@ -1841,7 +1841,7 @@
       "Tendremos un error de ejecución desde la segunda vez que ocurra",
       "Ninguna de las opciones ofrecidas es correcta."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 187,
@@ -1852,7 +1852,7 @@
       "No es posible realizar esta acción en git.",
       "git checkout HEAD~3 --file.html"
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 188,
@@ -1863,7 +1863,7 @@
       "debe realizarse siempre en el main",
       "no es obligatoria su conexión"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 189,
@@ -1874,7 +1874,7 @@
       "al constructor de la clase SqlDataReader",
       "al constructor de la clase SqlConnection"
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 190,
@@ -1885,7 +1885,7 @@
       "Solo es posible con la etiqueta label de HTML",
       "Ambos son posibles pero el componente asp:Label es más eficiente al ser tecnología de servidor."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 191,
@@ -1896,7 +1896,7 @@
       "Se ejecuta parte en el servidor y parte en el cliente",
       "Todas las anteriores son correctas"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 192,
@@ -1907,7 +1907,7 @@
       "Es correcto, sirve para definir un evento llamado cinturonQuitado",
       "Es correcto, sirve para definir un manejador llamado cinturonQuitado."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 193,
@@ -1918,7 +1918,7 @@
       "Se corrige en la rama principal directamente.",
       "Abro una rama nueva para corregirlo. Sólo puedo hacer un único commit para solucionar el bug, que se fusiona después con la rama principal."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 194,
@@ -1929,7 +1929,7 @@
       "git push origin --tags",
       "git pull origin v1.8."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 195,
@@ -1940,7 +1940,7 @@
       "con el metodo anotherRow de la clase DataReader",
       "con el método Read de la clase DataReader."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 196,
@@ -1951,7 +1951,7 @@
       "Un entorno de ejecución de código nativo y gestionado.",
       "Un entorno de ejecución de código no gestionado."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 197,
@@ -1962,7 +1962,7 @@
       "Funciona solo en Linux.",
       "Funciona solo en Mac OS."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 198,
@@ -1973,7 +1973,7 @@
       "Common Language Reader",
       "Common Language Reflection"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 199,
@@ -1984,7 +1984,7 @@
       "La clase System.IO.",
       "La clase System.InputOutput."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 200,
@@ -1995,7 +1995,7 @@
       "Representa una colección de objetos tipo FIFO.",
       "Representa una colección de objetos tipo LIFO."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 201,
@@ -2006,7 +2006,7 @@
       "Un array de objetos que puede crecer dinámicamente.",
       "Una colección pares clave/valor organizados por el valor hash code de la clave."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 202,
@@ -2017,7 +2017,7 @@
       "Un array de objetos que puede crecer dinámicamente.",
       "Una colección pares clave/valor organizados por el valor hash code de la clave."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 203,
@@ -2028,7 +2028,7 @@
       "Un array de objetos que puede crecer dinámicamente.",
       "Una colección pares clave/valor organizados por el valor hash code de la clave."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 204,
@@ -2039,7 +2039,7 @@
       "Componente de lógica de negocio",
       "No contesto(equivalente a no marcar ninguna)"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 205,
@@ -2050,7 +2050,7 @@
       "todos los objetos llevarán un prefijo diferente (Sql,OleDb..)",
       "el objeto DataSet y el objeto DataReader no llevan prefijo"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 206,
@@ -2061,7 +2061,7 @@
       "Compara el valor del control a validar con el de otro control",
       "Valida que el número introducido esté dentro de un rango definido"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 207,
@@ -2072,7 +2072,7 @@
       "no es necesario comprobarlo",
       "se realiza automáticamente"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 208,
@@ -2083,7 +2083,7 @@
       "Distribuidos y exclusivos",
       "Centralizados y exclusivos"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 209,
@@ -2094,7 +2094,7 @@
       "Es incorrecto",
       "Ninguna de las anteriores"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 210,
@@ -2105,7 +2105,7 @@
       "Es correcto, este método inserta un nuevo cliente y devuelve un DataSet",
       "Es incorrecto, se debe especificar una sentencia Update"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 211,
@@ -2116,7 +2116,7 @@
       "se realiza automáticamente",
       "*se implementa mediante un puntero a función"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 212,
@@ -2127,7 +2127,7 @@
       "Mediante el método ExecuteNonQuery de la siguiente manera sql.ExecuteNonQuery();",
       "Mediante el método ExecuteNonQuery de la siguiente manera com.ExecuteNonQuery(sql);"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 213,
@@ -2138,13 +2138,13 @@
       "Mediante el método ExecuteNonQuery de la siguiente manera com.ExecuteNonQuery(sql,c);",
       "Mediante el método ExecuteNonQuery de la siguiente manera sql.ExecuteNonQuery(com);"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 214,
     "question": "La validacion de un correo electronico es:",
     "options": ["\\S+@\\S+\\.\\S+", "\\w+@\\w+\\.\\w+", "\\D+@\\D+\\.\\D+"],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 215,
@@ -2155,7 +2155,7 @@
       "se tiene que comprobar antes de lanzar el evento",
       "se tiene que comprobar en el main"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 216,
@@ -2166,13 +2166,13 @@
       "Sólo valida que el número introducido esté dentro de un rango definido",
       "Realiza la validación en el servidor"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 217,
     "question": "En un modelo de tres capas, la interfaz y gestión de eventos se realizará por:",
     "options": ["La capa EN.", "La capa IU.", "La capa MVC.", "La capa CAD."],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 218,
@@ -2183,7 +2183,7 @@
       "Se utiliza un objeto XmlHttpRequest y JavaScript",
       "Todas las respuestas ofrecidas son incorrectas"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 219,
@@ -2194,7 +2194,7 @@
       "Aplicando una concurrencia positiva, de forma que se produce un error cuando se intenta modificar una fila ya modificada.",
       "Manteniendo el último cambio que se escribió."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 220,
@@ -2205,7 +2205,7 @@
       "Ninguna es correcta",
       "El método ExecuteNonQuery asociado devuelve el número de filas adectadas"
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 221,
@@ -2216,7 +2216,7 @@
       "Se puede hacer tanto en el constructor de SqlDataAdapter o iterando por el vector Rows del DataTable",
       "No es necesario comprobar nada"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 222,
@@ -2227,7 +2227,7 @@
       "La concurrencia pesimista permite leer cualquier fila en cualquier momento y devolvería error en caso de que la fila haya sido modificada tras su lectura si queremos actualizarla.",
       "La concurrencia positiva permite leer cualquier fila en cualquier momento y devolvería error en caso de que la fila haya sido modificada tras su lectura si queremos actualizarla."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 223,
@@ -2238,7 +2238,7 @@
       "A y B son correctas.",
       "Es correcto, recuperamos la cadena de conexión del web.config y leemos el usuario con el nif pasado como parámetro."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 224,
@@ -2249,7 +2249,7 @@
       "El metodo Read permite acceder tanto al registro siguiente como al registro anterior",
       "Los datos obtenidos son de lectura y escritura"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 225,
@@ -2260,7 +2260,7 @@
       "La BBDD debe ir en la carpeta de los CAD",
       "Cada capa debe ir en una carpeta diferente"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 226,
@@ -2271,7 +2271,7 @@
       "Las dos con * son ciertas",
       "*Controlar la seguridad y autorizacion"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 227,
@@ -2282,7 +2282,7 @@
       "SmtpClient.",
       "SendEmail, SmtpClient, MailMessage."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 228,
@@ -2293,13 +2293,13 @@
       "delegate int EventHandler(object sender, EventArgs e);",
       "delegate object EventHandler(object sender, EventArgs e);"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 229,
     "question": "Cuando estamos utilizando el comando bisect de Git. ¿con qué comando se indica el último estado bueno conocido, en el que el código funcionaba correctamente?: REVISADA",
     "options": ["git bisect start", "git bisect good", "git bisect SHA-I", "git bisect ok"],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 230,
@@ -2310,7 +2310,7 @@
       "git add git-file.html",
       "git commit —m \"git web file added\""
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
   {
     "id": 231,
@@ -2321,7 +2321,7 @@
       "Un sistema de control de versiones",
       "Una plataforma de repositorio remoto"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 232,
@@ -2332,6 +2332,6 @@
       "Verdadera.",
       "Depende. Si se inicializa el repositorio con el comando \"git init\" entonces la respuesta es Verdadera."
     ],
-    "correctAnswer": 1
+    "answer": 1
   }
 ]

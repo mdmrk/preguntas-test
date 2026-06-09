@@ -33,10 +33,7 @@
           </span>
         </div>
 
-        <div
-          class="text-base font-medium flex-1 min-w-0"
-          :class="getTextClasses(shuffledIndex)"
-        >
+        <div class="text-base font-medium flex-1 min-w-0" :class="getTextClasses(shuffledIndex)">
           <TextRenderer :text="option" />
         </div>
       </div>
@@ -157,7 +154,7 @@ const shuffledToOriginalIndex = computed(() => {
 
 const getInitialSelectedOption = () => {
   if (props.answered) {
-    const mappedIndex = originalToShuffledIndex.value[props.question.correctAnswer]
+    const mappedIndex = originalToShuffledIndex.value[props.question.answer]
     return mappedIndex !== undefined ? mappedIndex : null
   }
   return null
@@ -172,13 +169,13 @@ const explanationOpen = ref(props.openExplanation)
 const isCorrect = computed(() => {
   if (selectedOption.value === null) return false
   const originalIndex = shuffledToOriginalIndex.value[selectedOption.value]
-  return originalIndex === props.question.correctAnswer
+  return originalIndex === props.question.answer
 })
 
 const isCorrectOption = (shuffledIndex: number) => {
   if (!answered.value) return false
   const originalIndex = shuffledToOriginalIndex.value[shuffledIndex]
-  return originalIndex === props.question.correctAnswer
+  return originalIndex === props.question.answer
 }
 
 const isSelectedIncorrectOption = (shuffledIndex: number) =>

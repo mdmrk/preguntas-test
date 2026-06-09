@@ -7,7 +7,7 @@
       "Estimar los recursos que consumirá el algoritmo una vez implementado.",
       "Estimar la potencia y características del equipo informático necesarios para el correcto funcionamiento del algoritmo."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 2,
@@ -17,25 +17,25 @@
       "$\\ldots \\subset \\Omicron(n!) \\subset \\Omicron(2^n) \\subset \\Omicron(n^n)$",
       "$\\ldots \\subset \\Omicron(2^n) \\subset \\Omicron(n!) \\subset \\Omicron(n^n)$"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 3,
     "question": "¿Cuál de los siguientes algoritmos de ordenación tiene menor complejidad?",
     "options": ["Burbuja", "Inserción directa", "Mergesort"],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 4,
     "question": "¿El tiempo de ejecución de un algoritmo depende de la talla del problema?",
     "options": ["Sí, siempre", "No, nunca", "No necesariamente"],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 5,
     "question": "Ordena de menor a mayor las siguientes complejidades:\n1. $\\Omicron(1)$\n2. $\\Omicron(n^2)$\n3. $\\Omicron(n \\lg n)$\n4. $\\Omicron(n!)$",
     "options": ["3, 1, 2 y 4", "1, 3, 2 y 4", "1, 3, 4 y 2"],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
       "Las diferencias reales en tiempo de ejecución de algoritmos con diferente coste para tamaños grandes del problema no suelen ser muy significativas.",
       "Ninguna de las anteriores."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 7,
@@ -55,7 +55,7 @@
       "Para que la expresión del coste del algoritmo sea válida para cualquier entrada al mismo",
       "Para poder expresar el coste de un algoritmo mediante una expresión matemática"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 8,
@@ -65,13 +65,13 @@
       "El coste de dicho algoritmo en el peor de los casos.",
       "Ninguna de las anteriores."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 9,
     "question": "La complejidad de la función TB es:```text\nfunción TB(A: vector[λ]; iz, de: N): N\nvar n, i: N;\nn = iz - de + 1\nopcion\n  (n < 1): devuelve(0);\n  (n = 1): devuelve(1);\n  (n > 1): si (A[iz] = A[de]) entonces\n             devuelve(TB(A, iz + 1, de - 1) + 1);\n           sino\n             devuelve(TB(A, iz + 1, de - 1));\n           finsi;\nfopcion\nfin\n```",
     "options": ["$\\Theta(n)$", "$\\Theta(n \\cdot \\lg n)$", "$\\Theta(n^2 \\cdot \\lg n)$"],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 10,
@@ -81,7 +81,7 @@
       "$\\Omega(n^m)$.",
       "Las dos respuestas anteriores son correctas."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 11,
@@ -91,7 +91,7 @@
       "$f_1(n) \\cdot f_2(n) \\in \\Omicron(g_1(n) \\cdot g_2(n))$",
       "Ambas son correctas"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 12,
@@ -101,13 +101,13 @@
       "$f_1(n)+f_2(n) \\in \\Omicron(g_1(n)+g_2(n))$",
       "Ambas son correctas"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 13,
     "question": "Un algoritmo cuya talla es n y que tarda $40^n$ segundos en resolver cualquier instancia tiene una complejidad temporal:",
     "options": ["$\\Theta(n^n)$", "$\\Theta(4^n)$", "Ninguna de las anteriores"],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 14,
@@ -117,7 +117,7 @@
       "Necesitan exactamente el mismo tiempo para su ejecución.",
       "Ninguna de las anteriores"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 15,
@@ -127,7 +127,7 @@
       "Presentan una menor complejidad temporal y sus tiempos de ejecución absolutos son menores.",
       "Presentan una mayor complejidad temporal si bien sus tiempos de ejecución absolutos son menores."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 16,
@@ -137,7 +137,7 @@
       "Conjunto de valores asociados a la salida del problema.",
       "Conjunto de valores asociados a la entrada del problema."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 17,
@@ -147,19 +147,19 @@
       "Influye en su complejidad temporal.",
       "No influye en ninguna de sus complejidades."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 18,
     "question": "$f(n) = 5n+3m \\cdot n +11$ entonces $f(n)$ pertenece a:",
     "options": ["$\\Omicron(n \\cdot m)$.", "$\\Omicron(n^m)$.", "Las dos son correctas"],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 19,
     "question": "El sumatorio, desde $i=1$ hasta n, de $i^k$ pertenece a:",
     "options": ["$\\Omicron(n^{k+1})$", "$\\Omicron(n^k)$", "Ninguna de las anteriores"],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 20,
@@ -169,7 +169,7 @@
       "$\\Omicron(\\sqrt{n} / a)$",
       "$\\Omicron(n / \\sqrt{a})$"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 21,
@@ -179,7 +179,7 @@
       "Las cotas de complejidad se emplean cuando para diferentes tallas se obtienen diferentes complejidades dependiendo de la entrada al problema.",
       "Ninguna de las anteriores"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 22,
@@ -189,7 +189,7 @@
       "No se puede aplicar la técnica de paso de programa, ya que esta técnica es para calcular la complejidad a priori.",
       "Calculamos el máximo y mínimo coste que nos puede dar el algoritmo."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 23,
@@ -199,7 +199,7 @@
       "Si. El valor de c es 9 y el valor mínimo de $n_0$ es de 1",
       "Si. El valor de c es 6 y el valor mínimo de $n_0$ es de 5"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 24,
@@ -209,7 +209,7 @@
       "Sí Para cualquier valor de c positivo siempre existe un $n_0$ a partir del que se cumple.",
       "No."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 25,
@@ -219,13 +219,13 @@
       "$\\exists c, n_0 \\in \\mathbb{R}^+ : f(n) \\geq c \\cdot g(n) \\forall n$",
       "$\\exists c, n_0 \\in \\mathbb{R}^+ : f(n) \\leq c \\cdot g(n) \\forall n \\geq n_0$"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 26,
     "question": "El coste asociado a la siguiente ecuación de recurrencia es:\n$f(n) = \\begin{cases} 1 & n \\leq 1 \\\\ n + f(\\frac{n}{2}) + f(\\frac{n}{2}) & n > 1 \\end{cases}$",
     "options": ["$\\Theta(n \\lg n^2)$", "$\\Theta(n^2 \\lg n)$", "$\\Theta(n \\lg n)$"],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 27,
@@ -235,7 +235,7 @@
       "Las demás opciones son verdaderas.",
       "... nunca tendrá una complejidad exponencial."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 28,
@@ -245,7 +245,7 @@
       "$\\Theta(n) \\subseteq \\Theta(n^2)$",
       "$\\Theta(n) \\subseteq \\Theta(n)$"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 29,
@@ -255,19 +255,19 @@
       "$n + n \\log(n) \\in \\Omega(n)$",
       "$n + n \\log(n) \\in \\Theta(n)$"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 30,
     "question": "Indica cuál es la complejidad en el peor caso de la función replace:```cpp\nunsigned bound(const vector<int>& v) {\n  for (unsigned i = 0; i < v.size(); i++)\n    if (v[i] == '0')\n      return i;\n  return v.size();\n}\nvoid replace(vector<int>& v, int c) {\n  for (unsigned i = 0; i < bound(v); i++)\n    v[i] = c;\n}\n```",
     "options": ["$\\Omicron(n \\log n)$", "$\\Omicron(n^2)$", "$\\Omicron(n)$"],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 31,
     "question": "¿Cuál es la complejidad temporal de la siguiente función recursiva?```cpp\nunsigned desperdicio(unsigned n) {\n  if (n <= 1)\n    return 0;\n  unsigned sum = desperdicio(n / 2) + desperdicio(n / 2);\n  for (unsigned i = 1; i <= n - 1; i++)\n    for (unsigned j = 1; j <= i; j++)\n      sum += 1;\n  return sum;\n}\n```",
     "options": ["$\\Theta(n^2)$", "$\\Theta(2^n)$", "$\\Theta(n^2 \\log n)$"],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 32,
@@ -277,7 +277,7 @@
       "$f(n) \\in \\Theta(n^2)$",
       "$f(n) \\in \\Theta(n \\log n)$"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 33,
@@ -287,25 +287,25 @@
       "El coste temporal asintótico, tanto en el caso mejor como en el caso peor, de los dos programas es el mismo.",
       "El coste temporal asintótico del segundo programa en el caso peor es más alto que en el primero."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 34,
     "question": "Indica cual es la complejidad, en función de n, del fragmento siguiente:```cpp\nint a = 0;\nfor (int i = 0; i < n; i++)\n  for (int j = i; j > 0; j /= 2)\n    a += a[i][j];\n```",
     "options": ["$\\Omicron(n \\log n)$", "$\\Omicron(n)$", "$\\Omicron(n^2)$"],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 35,
     "question": "Indica cuál es la complejidad en función de n, donde K es una constante (no depende de n), del fragmento siguiente:```cpp\nfor (int i = K; i < n - K; i++) {\n  A[i] = 0;\n  for (int j = i - K; j < i + K; j++)\n    A[i] += B[j];\n}\n```",
     "options": ["$\\Omicron(n)$", "$\\Omicron(n \\log n)$", "$\\Omicron(n^2)$"],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 36,
     "question": "Pertenece $3n^2 + 3$ a $\\Omicron(n^3)$?",
     "options": ["Solo para c = 1 y $n_0 = 5$.", "No.", "Sí."],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 37,
@@ -315,7 +315,7 @@
       "... es el tiempo que tarda el algoritmo en resolver la talla más pequeña que se le puede presentar.",
       "... es una función de la talla que tiene que estar definida para todos los posibles valores de esta."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 38,
@@ -325,7 +325,7 @@
       "... se comporta peor cuando el vector ya está ordenado.",
       "... El hecho de que el vector estuviera previamente ordenado o no, no influye en la complejidad temporal de este algoritmo."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 39,
@@ -335,43 +335,43 @@
       "$f(n) \\in \\Theta(n^3)$",
       "$f(n) \\in \\Theta(\\sqrt{n} \\log n)$"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 40,
     "question": "Un problema de tamaño $n$ puede transformarse en tiempo $\\Omicron(n^2)$ en nueve de tamaño $n/3$. Por otro lado, la solución al problema cuando la talla es $1$ requiere un tiempo constante. ¿Cuál de estas clases de coste temporal asintótico es la más ajustada?",
     "options": ["$\\Omicron(n^2)$", "$\\Omicron(n^2 \\log n)$", "$\\Omicron(n \\log n)$"],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 41,
     "question": "Indica cuál es la complejidad, en función de $n$, del siguiente fragmento de código: `s=0; for(i=0;i<n;i++) for(j=i;j<n;j++) s+=i*j;`",
     "options": ["$\\Theta(n^2)$", "$\\Omicron(n^2)$ pero no $\\Omega(n^2)$", "$\\Theta(n)$"],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 42,
     "question": "Sea $f(n)$ la solución de la relación de recurrencia $f(n) = 2f(n-1)+1$ $f(1) = 1$. Indicad cuál de estas tres expresiones es cierta:",
     "options": ["$f(n) \\in \\Theta(n)$", "$f(n) \\in \\Theta(2^n)$", "$f(n) \\in \\Theta(n^2)$"],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 43,
     "question": "Un programa con dos bucles anidados uno dentro del otro, El primero hace $n$ iteraciones aproximadamente y el segundo la mitad, tarda un tiempo",
     "options": ["$\\Omicron(n \\log n)$", "$\\Omicron(n^2)$", "$\\Omicron(n \\sqrt{n})$"],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 44,
     "question": "Un problema de tamaño $n$ puede transformarse en tiempo $\\Omicron(\\frac{n}{2})$ en nueve de tamaño $\\frac{n}{3}$; por otro lado, la solución al problema cuando la talla es 1 requiere un tiempo constante. ¿Cuál de estas clases de coste temporal asintótico es la más ajustada?",
     "options": ["$\\Omicron(n \\log n)$", "$\\Omicron(n^2 \\log n)$", "$\\Omicron(n^2)$"],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 45,
     "question": "¿Cuál es la complejidad temporal de la siguiente función recursiva?```cpp\nunsigned desperdicio(unsigned n) {\n  if (n <= 1)\n    return 0;\n  unsigned sum = desperdicio(n / 2) + desperdicio(n / 2);\n  for (unsigned i = 1; i < n - 1; i++)\n    for (unsigned j = 1; j <= i; j++)\n      for (unsigned k = 1; k <= j; k++)\n        sum += i * j * k;\n  return sum;\n}\n```",
     "options": ["$\\Omicron(2^n)$", "$\\Omicron(n^3 \\log n)$", "$\\Omicron(n^3)$"],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 46,
@@ -381,13 +381,13 @@
       "... que ordenan el vector sin usar espacio adicional.",
       "... que aplican la estrategia de divide y vencerás."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 47,
     "question": "Indica cuál es la complejidad de la función siguiente:```cpp\nunsigned sum(const mat& A) {\n  // A es una matriz cuadrada\n  unsigned d = A.n_rows();\n  unsigned a = 0;\n  for (unsigned i = 0; i < d; i++)\n    for (unsigned j = 0; j < d; j++)\n      a += A(i, j);\n  return a;\n}\n```",
     "options": ["$\\Omicron(n^2)$", "$\\Omicron(n)$", "$\\Omicron(n \\log n)$"],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 48,
@@ -397,7 +397,7 @@
       "$\\Theta(n) \\subseteq \\Theta(n)$",
       "$\\Theta(n) \\subseteq \\Theta(n^2)$"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 49,
@@ -407,7 +407,7 @@
       "El problema de la mochila discreta o sin fraccionamiento.",
       "El problema de la mochila continua o con fraccionamiento."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 50,
@@ -417,7 +417,7 @@
       "... de que se puede ahorrar cálculos guardando resultados anteriores en un almacén.",
       "... de una estrategia trivial consistente en examinar todas las soluciones posibles."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 51,
@@ -427,7 +427,7 @@
       "Se repiten muchos cálculos y ello se puede evitar haciendo uso de una estrategia voraz.",
       "Se repiten muchos cálculos y ello se puede evitar usando programación dinámica."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 52,
@@ -437,7 +437,7 @@
       "$f(n) \\in \\Theta(n)$",
       "$f(n) \\in \\Theta(n \\log n)$"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 53,
@@ -447,7 +447,7 @@
       "... es condición necesaria que existan instancias distintas del problema con el mismo tamaño.",
       "... es condición suficiente que existan instancias distintas del problema con el mismo tamaño."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 54,
@@ -457,7 +457,7 @@
       "$\\Omicron(n^2) \\subseteq \\Omicron(2^{\\log(n)}) \\subseteq \\Omicron(2^n)$",
       "$\\Omicron(2^{\\log(n)}) \\subseteq \\Omicron(n^2) \\subseteq \\Omicron(2^n)$"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 55,
@@ -467,13 +467,13 @@
       "Las demás opciones son falsas.",
       "... siempre coincidirá con la complejidad temporal de las instancias que están en el caso base del algoritmo recursivo."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 56,
     "question": "Considerad la función siguiente:```cpp\nint M(int i, int f) {\n  if (i == f)\n    return i;\n  else {\n    e = v[M(i, (i + f) / 2)];\n    f = v[M((i + f) / 2 + 1, f)];\n    if (e < f)\n      return e;\n    else\n      return f;\n  }\n}\n```\nSi la talla del problema viene dada por $n = f - i + 1$, ¿cuál es el coste temporal asintótico en el supuesto de que $n$ sea una potencia de 2?",
     "options": ["$\\Omicron(n)$.", "$\\Omicron(n^2)$.", "$\\Omicron(n \\log(n))$."],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 57,
@@ -483,7 +483,7 @@
       "... el del segundo, menor que el del primero.",
       "... el del primero, menor que el del segundo."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 58,
@@ -493,7 +493,7 @@
       "... se comporta peor cuando el vector ya está ordenado.",
       "... El hecho de que el vector estuviera previamente ordenado o no, no influye en la complejidad temporal de este algoritmo."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 59,
@@ -503,7 +503,7 @@
       "... se comporta peor cuando el vector ya está ordenado.",
       "... no presenta casos mejor y peor distintos para instancias del mismo tamaño."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 60,
@@ -513,7 +513,7 @@
       "$f(n) \\in \\Theta(n^3)$",
       "$f(n) \\in \\Theta(n)$"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 61,
@@ -523,7 +523,7 @@
       "Las complejidades en los casos mejor y peor son distintas.",
       "El mejor de los casos se da cuando $n \\leq 1$ y en tal caso la complejidad es constante."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 62,
@@ -533,7 +533,7 @@
       "No tiene porqué, la complejidad temporal no depende únicamente del tamaño resultante de los subproblemas.",
       "Sí, siempre, en Divide y Vencerás la complejidad temporal depende únicamente del tamaño de los subproblemas."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 63,
@@ -543,7 +543,7 @@
       "$f(n) \\in \\Theta(n)$",
       "$f(n) \\in \\Theta(n \\log n)$"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 64,
@@ -553,7 +553,7 @@
       "$n + n \\sqrt{n} \\in \\Omega(n)$",
       "$n + n \\sqrt{n} \\in \\Theta(n)$"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 65,
@@ -563,13 +563,13 @@
       "$f(n) \\in \\Omicron(n \\log(n))$",
       "Las otras dos opciones son ciertas"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 66,
     "question": "¿Cuál es la complejidad temporal de la siguiente función?```cpp\nint ejemplo(vector<int>& v) {\n  int n = v.size();\n  int j, i = 2;\n  int sum = 0;\n  while (n > 0 && i < n) {\n    j = i;\n    while (v[j] != v[1]) {\n      sum += v[j];\n      j = j / 2;\n    }\n    i++;\n  }\n  return sum;\n}\n```",
     "options": ["$\\Theta(n \\log n)$", "$\\Theta(n^2)$", "$\\Omega(n)$"],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 67,
@@ -579,19 +579,19 @@
       "El mejor de los casos se da cuando $n = 0$, su complejidad es constante.",
       "Esta función no presenta casos mejor y peor puesto que solo puede haber una instancia para cada una de las posibles talla"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 68,
     "question": "Indica cuál es la complejidad, en función de $n$, del fragmento siguiente:```cpp\nfor (int i = n; i > 0; i /= 2)\n  for (int j = n; j > 0; j /= 2)\n    a += A[i][j];\n```",
     "options": ["$\\Omicron(\\log^2(n))$", "$\\Omicron(n \\log(n))$", "$\\Omicron(n^2)$"],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 69,
     "question": "Indica cuál es la complejidad, en función de $n$, del fragmento siguiente:```cpp\na = 0;\nfor (int i = 0; i < n * n; i++)\n  a += A[(i + j) % n];\n```",
     "options": ["$\\Omicron(n^2)$", "$\\Omicron(n \\log(n))$", "$\\Omicron(n)$"],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 70,
@@ -601,7 +601,7 @@
       "... es más eficiente si el vector ya está ordenado.",
       "... es la versión con mejor complejidad en el mejor de los casos."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 71,
@@ -611,13 +611,13 @@
       "... cuadrática en el peor de los casos.",
       "... lineal en el caso peor y constante en el caso mejor."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 72,
     "question": "Dada la siguiente relación de recurrencia, ¿Qué cota es verdadera?\n$f(n) = \\begin{cases} 1 & n = 1 \\\\ n + 2f(n-1) & n \\geq 1 \\end{cases}$",
     "options": ["$f(n) \\in \\Omega(2^n)$", "$f(n) \\in \\Theta(n^2)$", "$f(n) \\in \\Theta(2^n)$"],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 73,
@@ -627,7 +627,7 @@
       "$f(n) \\in \\Theta(n/3)$.",
       "Ninguna de las otras dos es cierta."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 74,
@@ -637,7 +637,7 @@
       "$n + n\\sqrt{n} \\in \\Omega(n)$",
       "$n + n\\sqrt{n} \\in \\Theta(n)$"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 75,
@@ -647,7 +647,7 @@
       "$f \\in \\Omega(g_1 \\cdot g_2)$",
       "$f \\in \\Omega(g_1 + g_2)$"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 76,
@@ -657,7 +657,7 @@
       "$T(n) = n + T(n/2)$ para $n > 1$ y $T(n) = 1$ para $n \\leq 1$",
       "$T(n) = n + 2T(n/2)$ para $n > 1$ y $T(n) = 1$ para $n \\leq 1$"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 77,
@@ -667,19 +667,19 @@
       "$\\Theta(\\log^2(n)) = \\Theta(\\log^3(n))$",
       "$\\Theta(\\log_2(n)) = \\Theta(\\log_3(n))$"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 78,
     "question": "Un problema de tamaño $n$ puede transformarse en tiempo $\\Omicron(1)$ en siete de tamaño $\\frac{n}{7}$; por otro lado, la solución al problema cuando la talla es 1 requiere un tiempo constante. ¿Cuál de estas clases de coste temporal asintótico es la más ajustada?",
     "options": ["$\\Omicron(n^2)$", "$\\Omicron(n)$", "$\\Omicron(n \\log n)$"],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 79,
     "question": "Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función?```cpp\nvoid f(unsigned n) {\n  if (n < 2)\n    return;\n  for (int i = 0; i < pow(n, 2); i++)\n    cout << \"*\";\n  for (int i = 0; i < 5; i++)\n    f(n / 2);\n}\n```",
     "options": ["$\\Omicron(5^{\\log n})$", "$\\Omicron(n^2 \\log n)$", "$\\Omicron(n^2)$"],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 80,
@@ -689,7 +689,7 @@
       "$C_s(n)=\\sum^{\\log n}_{j=1}\\sum^{j}_{i=1}(1/2)^i \\in \\Omicron(n\\log n)$",
       "$C_s(n)=\\sum^{n/2}_{j=0}(1/2\\sum^{n}_{i=j}1) \\in \\Omicron(n\\log n)$"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 81,
@@ -699,7 +699,7 @@
       "Las dos funciones son equivalentes en cuanto a coste temporal.",
       "La segunda, `pot2_2(n)`, es más eficiente que la otra."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 82,
@@ -709,7 +709,7 @@
       "Lineal con la longitud del vector",
       "Cuadrática con la longitud del vector"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 83,
@@ -719,7 +719,7 @@
       "un algoritmo voraz.",
       "un algoritmo del estilo de divide y vencerás."
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 84,
@@ -729,13 +729,13 @@
       "$f \\in \\Omega(g_1 + g_2)$",
       "$f \\notin \\Omicron(\\max(g_1, g_2))$"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 85,
     "question": "Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función?```cpp\nvoid f(unsigned n) {\n  if (n < 1)\n    return;\n  for (int i = 0; i < n; i++)\n    for (int j = 0; j < n; j++)\n      for (int k = 0; k < n; k++)\n        cout << \"*\";\n  for (int i = 0; i < 8; i++)\n    f(n / 2);\n}\n```",
     "options": ["$\\Theta(n^3 \\log n)$", "$\\Theta(n^3)$", "$\\Theta(n^2 \\log n)$"],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 86,
@@ -745,7 +745,7 @@
       "En el caso peor de ambos.",
       "Tanto en el caso peor como en el caso mejor de ambos"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 87,
@@ -755,7 +755,7 @@
       "La ordenación de un vector usando el algoritmo Mergesort requiere en el peor caso un tiempo en $\\Omicron(n^2)$",
       "La búsqueda binaria en un vector ordenado requiere en el peor caso un tiempo en $\\Omicron(\\log n)$"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 88,
@@ -765,7 +765,7 @@
       "$\\Omicron(2^{\\log_2(n)}) \\subset \\Omicron(n^2) \\subset \\Omicron(n!)$",
       "$\\Omicron(4^{\\log_2(n)}) \\subset \\Omicron(n) \\subset \\Omicron(2^n)$"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 89,
@@ -775,7 +775,7 @@
       "Insertar los elementos del vector desordenado (uno a uno) en el vector ordenado.",
       "Ordenar el desordenado y luego mezclar las listas."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 90,
@@ -785,25 +785,25 @@
       "... es una función de la talla, o tamaño del problema, que tiene que estar definida para todos los posibles valores de ésta",
       "... es el tiempo que tarda el algoritmo en resolver la talla más pequeña que se le puede presentar."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 91,
     "question": "Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función?```cpp\nvoid f(unsigned n) {\n  if (n < 1)\n    return;\n  for (int i = 0; i < n; i++)\n    for (int j = 0; j < n; j++)\n      for (int k = 0; k < n; k++)\n        cout << \"*\";\n  for (int i = 0; i < 8; i++)\n    if (n / 2)\n      ;\n}\n```",
     "options": ["$\\Theta(n^3)$", "$\\Theta(n^2 \\log n)$", "$\\Theta(n^3 \\log n)$"],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 92,
     "question": "Sea la siguiente relacion de recurrencia:\n$T(n) = \\begin{cases} 1 & \\text{si } n \\leq 1 \\\\ 8T(\\frac{n}{8}) + g(n) & \\text{en otro caso}\\end{cases}$\nSi $T(n) \\in \\Theta(n^2)$, ¿en cuál de estos tres casos nos podemos encontrar?",
     "options": ["$g(n) = n^3$", "$g(n) = n^2$", "$g(n) = n$"],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 93,
     "question": "¿Cuál de los siguientes algoritmos de ordenación necesita un espacio de almacenamiento adicional al vector que se ordena con complejidad $\\Omicron(n)$?",
     "options": ["Mergesort.", "Quicksort.", "Bubblesort."],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 94,
@@ -813,13 +813,13 @@
       "$f \\notin \\Omicron(\\max(g_1, g_2))$",
       "$f \\in \\Omega(\\min(g_1, g_2))$"
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 95,
     "question": "Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función?```cpp\nvoid f(unsigned n) {\n  if (n < 2)\n    return;\n  for (int i = 0; i < pow(n, 2); i++)\n    cout << \"*\";\n  f(n - 2);\n}\n```",
     "options": ["$\\Theta(n^2 \\log n)$", "$\\Theta(n^2)$", "$\\Theta(n^3)$"],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 96,
@@ -829,7 +829,7 @@
       "$f \\in \\Omega(g_1 + g_2)$",
       "$f \\notin \\Omega(\\max(g_1, g_2))$"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
   {
     "id": 97,
@@ -839,7 +839,7 @@
       "El coste temporal asintótico en el caso medio.",
       "En general, nada de interés."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 98,
@@ -849,13 +849,13 @@
       "Las dos funciones son equivalentes en cuanto a coste temporal.",
       "La primera, `pot2_1(n)`, es más eficiente que la otra."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 99,
     "question": "Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función?```cpp\nvoid f(unsigned n) {\n  if (n < 2)\n    return;\n  for (int i = 0; i < pow(n, 2); i++)\n    cout << \"*\";\n  for (int i = 0; i < 5; i++)\n    f(n / 2);\n}\n```",
     "options": ["$\\Theta(n^2)$", "$\\Theta(n^2 \\log n)$", "$\\Theta(5^{\\log n})$"],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 100,
@@ -865,7 +865,7 @@
       "como su nombre indica, el Quicksort.",
       "el Mergesort es siempre más rápido o igual (salvo una constante) que el Quicksort."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 101,
@@ -875,13 +875,13 @@
       "... puede construir un único árbol que va creciendo o bien construir un bosque de árboles que al final se injertan en un único árbol",
       "... se construye haciendo crecer un único árbol."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 102,
     "question": "Se pretende implementar mediante programación dinámica iterativa la función recursiva:```cpp\nint f(int x, int y) {\n  if (x <= y)\n    return 1;\n  return x + f(x - 1, y);\n}\n```\n¿Cuál es la mejor complejidad espacial que se puede conseguir?",
     "options": ["$\\Omicron(x)$", "$\\Omicron(1)$", "$\\Omicron(x^2)$"],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 103,
@@ -891,7 +891,7 @@
       "El fontanero diligente y el problema del cambio.",
       "La mochila discreta y la asignación de tareas."
     ],
-    "correctAnswer": 2
+    "answer": 2
   },
   {
     "id": 104,
@@ -901,7 +901,7 @@
       "El problema de la mochila sin fraccionamiento y sin restricciones en cuanto al dominio de los pesos de los objetos y de sus valores.",
       "El problema del cambio, o sea, el de encontrar la manera de entregar una cantidad de dinero usando el mínimo de monedas posibles."
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
   {
     "id": 105,
@@ -911,6 +911,6 @@
       "... las decisiones tomadas nunca se reconsideran.",
       "... con antelación, las posibles decisiones se ordenan de mejor a peor."
     ],
-    "correctAnswer": 1
+    "answer": 1
   }
 ]
