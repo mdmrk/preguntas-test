@@ -47,7 +47,7 @@
     <button
       type="button"
       class="w-full flex items-center justify-between px-4 py-3 text-sm font-medium text-left bg-gray-50 dark:bg-gray-700/50 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer"
-      @click="explanationOpen = !explanationOpen"
+      @click="toggleExplanation"
       :aria-expanded="explanationOpen"
     >
       <span>Explicación</span>
@@ -164,7 +164,21 @@ const selectedOption = ref<number | null>(getInitialSelectedOption())
 const answered = ref(props.answered || false)
 const copied = ref(false)
 const reportOpen = ref(false)
-const explanationOpen = ref(props.openExplanation)
+const EXPLANATION_PREF_KEY = "explanationOpen"
+
+const getExplanationPref = () => {
+  const saved = localStorage.getItem(EXPLANATION_PREF_KEY)
+  if (saved === "true") return true
+  if (saved === "false") return false
+  return props.openExplanation
+}
+
+const explanationOpen = ref(getExplanationPref())
+
+const toggleExplanation = () => {
+  explanationOpen.value = !explanationOpen.value
+  localStorage.setItem(EXPLANATION_PREF_KEY, String(explanationOpen.value))
+}
 
 const isCorrect = computed(() => {
   if (selectedOption.value === null) return false
@@ -266,7 +280,7 @@ const copyQuestion = async () => {
 const resetQuestion = () => {
   selectedOption.value = getInitialSelectedOption()
   answered.value = props.answered || false
-  explanationOpen.value = props.openExplanation
+  explanationOpen.value = getExplanationPref()
 }
 
 watch(() => props.question, resetQuestion)
