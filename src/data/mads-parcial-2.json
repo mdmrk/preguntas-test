@@ -9,7 +9,7 @@
       "La capacidad de extender las clases en el sistema."
     ],
     "answer": 1,
-    "explanation": "El acoplamiento es la dependencia entre los módulos o componentes del sistema."
+    "explanation": "Acoplamiento es el grado de dependencia entre módulos o componentes: cuánto necesita uno de los otros. No es la cohesión (relación interna), ni el volumen de funcionalidad, ni la extensibilidad de las clases."
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@
       "Los módulos comparten interfaces genéricas."
     ],
     "answer": 2,
-    "explanation": "El alto acoplamiento implica que un cambio en un módulo provoca modificaciones en varios otros."
+    "explanation": "Con alto acoplamiento, los módulos están tan entrelazados que tocar uno obliga a cambiar varios. Las otras opciones (independencia, cambios aislados, interfaces genéricas) describen el bajo acoplamiento."
   },
   {
     "id": 3,
@@ -33,7 +33,7 @@
       "Dificulta realizar cambios o pruebas aisladas."
     ],
     "answer": 3,
-    "explanation": "Un alto acoplamiento dificulta realizar cambios o pruebas de forma aislada."
+    "explanation": "Si todo depende de todo, cambiar o probar una parte de forma aislada se vuelve muy difícil. El alto acoplamiento no aumenta la cohesión, ni facilita reutilizar, ni mejora la legibilidad."
   },
   {
     "id": 4,
@@ -45,7 +45,7 @@
       "Puede cambiar por múltiples razones."
     ],
     "answer": 0,
-    "explanation": "Un módulo con alta cohesión agrupa elementos relacionados centrados en una única tarea."
+    "explanation": "Alta cohesión significa que los elementos de un módulo están relacionados y se centran en una única tarea. No estar acoplado a otros, depender de fuera ni cambiar por muchas razones (eso es baja cohesión)."
   },
   {
     "id": 5,
@@ -57,7 +57,7 @@
       "Requiere cambios frecuentes en su interfaz."
     ],
     "answer": 1,
-    "explanation": "Un síntoma de alta cohesión es que las modificaciones suelen limitarse al interior del módulo."
+    "explanation": "Con alta cohesión, los cambios suelen quedar contenidos dentro del propio módulo. Que afecten a otros módulos, que gestione varias responsabilidades o que cambie su interfaz a menudo son señales de baja cohesión."
   },
   {
     "id": 6,
@@ -69,7 +69,7 @@
       "Los módulos se vuelven rígidos ante el cambio."
     ],
     "answer": 2,
-    "explanation": "Con módulos cohesivos, los cambios se producen principalmente dentro de los módulos afectados."
+    "explanation": "Si los módulos son muy cohesivos, un cambio se queda casi siempre dentro del módulo afectado. No aumenta la dependencia entre módulos, ni mezcla funcionalidades, ni vuelve rígido el sistema."
   },
   {
     "id": 7,
@@ -81,7 +81,7 @@
       "El código es altamente cohesivo."
     ],
     "answer": 1,
-    "explanation": "En un diseño rígido, las dependencias hacen que los cambios requieran modificaciones en cascada."
+    "explanation": "En un diseño rígido las dependencias hacen que un cambio obligue a modificaciones en cascada por todo el sistema. Que los cambios no den errores, que los módulos sean independientes o que haya alta cohesión es lo contrario."
   },
   {
     "id": 8,
@@ -93,7 +93,7 @@
       "Las interfaces son estables y bien definidas."
     ],
     "answer": 2,
-    "explanation": "Un diseño frágil es aquel en que los cambios provocan errores inesperados en ejecución."
+    "explanation": "Un diseño frágil es el que, ante un cambio, provoca errores inesperados en sitios aparentemente no relacionados, en ejecución. No es difícil de reutilizar (eso es inmóvil), ni fácil de rastrear, ni de interfaces estables."
   },
   {
     "id": 9,
@@ -105,7 +105,7 @@
       "Es difícil reutilizar su código en otros contextos."
     ],
     "answer": 3,
-    "explanation": "Un diseño inmóvil es aquel cuyo código es difícil de reutilizar en otros contextos."
+    "explanation": "Un diseño inmóvil es aquel cuyo código es difícil de reutilizar en otros contextos por estar enredado con su entorno. No es que impida refactorizar, tenga dependencias implícitas ni fomente herencia múltiple."
   },
   {
     "id": 10,
@@ -117,7 +117,7 @@
       "La refactorización se realiza sin complicaciones."
     ],
     "answer": 0,
-    "explanation": "La viscosidad: aplicar los cambios correctos es más difícil que recurrir a soluciones rápidas y erróneas."
+    "explanation": "La viscosidad mide que aplicar el cambio correcto cueste más que un parche rápido y chapucero, empujando a las malas soluciones. No es exceso de dependencias, ni que los cambios sean fáciles, ni que refactorizar sea sencillo."
   },
   {
     "id": 11,
@@ -129,7 +129,7 @@
       "Una clase debe cambiar por una única razón."
     ],
     "answer": 3,
-    "explanation": "El principio de responsabilidad única establece que una clase debe cambiar por una única razón."
+    "explanation": "El principio de responsabilidad única (SRP) dice que una clase debe tener una sola razón para cambiar. No que maneje varias responsabilidades relacionadas, dependa solo de módulos cohesivos ni tenga interfaces pequeñas (eso es ISP)."
   },
   {
     "id": 12,
@@ -141,7 +141,7 @@
       "Una clase Logger que registra eventos en un archivo."
     ],
     "answer": 0,
-    "explanation": "Una clase Rectángulo que mezcla cálculos geométricos y representación gráfica viola el SRP."
+    "explanation": "Una clase Rectángulo que mezcla cálculos geométricos y representación gráfica tiene dos razones para cambiar, así que viola el SRP. Las otras clases (Post, Usuario, Logger) hacen una sola cosa."
   },
   {
     "id": 13,
@@ -153,7 +153,7 @@
       "Las interfaces públicas cambian frecuentemente."
     ],
     "answer": 1,
-    "explanation": "Con el SRP, cada clase tiene una tarea bien definida y aislada."
+    "explanation": "Con SRP cada clase tiene una tarea bien definida y aislada, con una única razón para cambiar. No genera dependencias explícitas, ni clases grandes con varias responsabilidades, ni interfaces que cambian a menudo."
   },
   {
     "id": 14,
@@ -165,7 +165,7 @@
       "Un sistema que basa su diseño en clases altamente acopladas."
     ],
     "answer": 2,
-    "explanation": "Una clase que gestiona únicamente cálculos geométricos aplica correctamente el SRP."
+    "explanation": "Una clase que solo gestiona cálculos geométricos (el área de figuras) tiene una única responsabilidad: aplica bien el SRP. Agrupar funcionalidades, mezclar negocio con GUI o acoplar clases lo violan."
   },
   {
     "id": 15,
@@ -177,7 +177,7 @@
       "Las clases base no deben tener métodos abstractos."
     ],
     "answer": 2,
-    "explanation": "El principio Open-Closed dice que las clases deben estar abiertas a extensión pero cerradas a modificación."
+    "explanation": "El principio Open-Closed (OCP) dice que las clases deben estar abiertas a extensión pero cerradas a modificación. Depender de abstracciones es DIP; interfaces pequeñas es ISP; lo de los métodos abstractos no es el OCP."
   },
   {
     "id": 16,
@@ -189,7 +189,7 @@
       "Limitar el uso de interfaces públicas."
     ],
     "answer": 1,
-    "explanation": "El OCP se implementa comúnmente extendiendo clases mediante herencia o composición."
+    "explanation": "El OCP se implementa extendiendo el comportamiento mediante herencia o composición, sin tocar el código existente. Modificar la clase base, reducir interfaces o limitarlas va en contra del principio."
   },
   {
     "id": 17,
@@ -201,7 +201,7 @@
       "Cambiar directamente el código de una clase ya utilizada en producción."
     ],
     "answer": 3,
-    "explanation": "Cambiar directamente el código de una clase ya usada en producción es un mal uso del OCP."
+    "explanation": "Cambiar directamente el código de una clase ya usada en producción para añadir algo viola el OCP (modificar en vez de extender). Crear subclases o usar interfaces para extender sí lo respetan."
   },
   {
     "id": 18,
@@ -213,7 +213,7 @@
       "Las clases no tienen interfaces públicas."
     ],
     "answer": 0,
-    "explanation": "Con OCP se pueden añadir funcionalidades nuevas sin modificar el código existente."
+    "explanation": "Con OCP se pueden añadir funcionalidades nuevas sin modificar el código que ya existe y funciona. No exige evitar la herencia, depender de implementaciones concretas ni prescindir de interfaces."
   },
   {
     "id": 19,
@@ -225,7 +225,7 @@
       "Los módulos de alto nivel no deben depender de detalles."
     ],
     "answer": 0,
-    "explanation": "El LSP establece que una clase derivada debe poder sustituir a su base sin alterar el comportamiento."
+    "explanation": "El principio de sustitución de Liskov (LSP) dice que una subclase debe poder sustituir a su clase base sin alterar el comportamiento del programa. Las otras frases describen otros principios (DIP, ISP)."
   },
   {
     "id": 20,
@@ -237,7 +237,7 @@
       "Una interfaz genérica implementada por varias clases concretas."
     ],
     "answer": 1,
-    "explanation": "Un Cuadrado que hereda de un Rectángulo es el ejemplo clásico que viola el principio de Liskov."
+    "explanation": "Un cuadrado obliga a ancho = alto, pero al heredar de Rectángulo recibe setAncho/setAlto independientes; usarlos rompe esa invariante y deja de ser sustituible por Rectángulo. Mamífero→Gato o Figura→Triángulo sí cumplen."
   },
   {
     "id": 21,
@@ -249,7 +249,7 @@
       "Preservar el comportamiento esperado de la clase base en todos los contextos."
     ],
     "answer": 3,
-    "explanation": "Una clase derivada debe preservar el comportamiento esperado de la clase base en todos los contextos."
+    "explanation": "Para cumplir el LSP, una subclase debe preservar el comportamiento esperado de la base en todos los contextos donde se use. No basta con copiar métodos, añadir nuevos ni, mucho menos, cambiar el comportamiento heredado."
   },
   {
     "id": 22,
@@ -261,7 +261,7 @@
       "Una clase derivada que ignora completamente las restricciones de la clase base."
     ],
     "answer": 2,
-    "explanation": "Un Mamífero como base de Perro y Gato es un diseño que respeta el principio de Liskov."
+    "explanation": "Un Mamífero como base de Perro y Gato respeta el LSP: cualquier subclase se comporta como la base. El Cuadrado que hereda de Rectángulo rompe sus invariantes, y las otras opciones no son ejemplos limpios de sustitución."
   },
   {
     "id": 23,
@@ -273,7 +273,7 @@
       "Los métodos de las interfaces deben ser abstractos."
     ],
     "answer": 1,
-    "explanation": "El principio de segregación de interfaces dice que los clientes no deben depender de interfaces que no usan."
+    "explanation": "El principio de segregación de interfaces (ISP) dice que los clientes no deben depender de interfaces (métodos) que no usan. No habla de clases pequeñas, dependencias concretas ni de métodos abstractos."
   },
   {
     "id": 24,
@@ -285,7 +285,7 @@
       "Dos interfaces pequeñas y específicas para lectura y escritura, implementadas por clases separadas."
     ],
     "answer": 3,
-    "explanation": "Dividir en dos interfaces específicas de lectura y escritura, implementadas por separado, aplica el ISP."
+    "explanation": "Dividir una interfaz en dos pequeñas y específicas (lectura y escritura) implementadas por clases separadas aplica el ISP. Una interfaz única con métodos que no se usan o que obliga a implementar lo innecesario lo viola."
   },
   {
     "id": 25,
@@ -297,7 +297,7 @@
       "La rigidez en la estructura jerárquica del código."
     ],
     "answer": 0,
-    "explanation": "El ISP resuelve la dependencia innecesaria de los clientes en métodos que no utilizan."
+    "explanation": "El ISP resuelve que los clientes dependan de métodos que no necesitan, obligados por una interfaz demasiado grande. No ataca el acoplamiento general, la cohesión ni la rigidez jerárquica."
   },
   {
     "id": 26,
@@ -309,7 +309,7 @@
       "Las interfaces deben estar fuertemente relacionadas con las implementaciones."
     ],
     "answer": 2,
-    "explanation": "El DIP establece que tanto los módulos de alto como de bajo nivel deben depender de abstracciones."
+    "explanation": "El DIP dice que tanto los módulos de alto nivel como los de bajo nivel deben depender de abstracciones, no entre sí. Que solo lo concreto dependa de abstracciones se queda corto; la clave es que lo hagan ambos."
   },
   {
     "id": 27,
@@ -321,7 +321,7 @@
       "Un módulo de bajo nivel que accede directamente a un módulo de alto nivel."
     ],
     "answer": 1,
-    "explanation": "Un Botón que usa la interfaz Switchable para controlar cualquier dispositivo sigue el DIP."
+    "explanation": "Un Botón que usa la interfaz Switchable para controlar cualquier dispositivo sigue el DIP: depende de una abstracción, no de una Lámpara concreta. Las otras opciones acoplan directamente a clases concretas."
   },
   {
     "id": 28,
@@ -333,7 +333,7 @@
       "Se facilita el reemplazo de implementaciones concretas sin modificar el código de alto nivel."
     ],
     "answer": 3,
-    "explanation": "El DIP facilita reemplazar implementaciones concretas sin modificar el código de alto nivel."
+    "explanation": "El DIP permite cambiar la implementación concreta sin tocar el código de alto nivel, porque este depende de una abstracción. No minimiza el código base, ni simplifica la herencia, ni elimina del todo las dependencias."
   },
   {
     "id": 29,
@@ -345,7 +345,7 @@
       "La herencia no se usa correctamente."
     ],
     "answer": 2,
-    "explanation": "En el ejemplo de User y Database se identifica un alto acoplamiento entre ambas clases."
+    "explanation": "En el ejemplo, User crea y usa directamente a Database: hay un alto acoplamiento entre ambas. No es falta de cohesión, mal uso de la herencia ni un problema de ISP."
   },
   {
     "id": 30,
@@ -357,7 +357,7 @@
       "Utilizar una interfaz o abstracción que User pueda depender en lugar de una implementación concreta."
     ],
     "answer": 3,
-    "explanation": "Se reduce el acoplamiento usando una interfaz o abstracción de la que User dependa en vez de la implementación."
+    "explanation": "Se reduce el acoplamiento haciendo que User dependa de una interfaz o abstracción, no de la implementación concreta de Database. Eliminar Database, subclasearla o reducir sus métodos no resuelve la dependencia."
   },
   {
     "id": 31,
@@ -369,7 +369,7 @@
       "Acoplamiento y cohesión son conceptos independientes y no relacionados."
     ],
     "answer": 0,
-    "explanation": "Un diseño con alta cohesión y bajo acoplamiento es más fácil de modificar y mantener."
+    "explanation": "Un diseño con alta cohesión y bajo acoplamiento es más fácil de modificar y mantener: cada parte hace una cosa y depende poco de las demás. Alto acoplamiento no es deseable, y ambos conceptos sí están relacionados."
   },
   {
     "id": 32,
@@ -381,7 +381,7 @@
       "Se evita la herencia innecesaria en la clase Blog."
     ],
     "answer": 1,
-    "explanation": "Mover la lógica del Post encapsula sus datos y comportamiento en un solo lugar, mejorando la cohesión."
+    "explanation": "Mover la lógica del Post a su propia clase reúne en un solo sitio sus datos y comportamiento: mejora la cohesión. No reduce dependencias entre módulos, ni el rendimiento, ni evita herencia."
   },
   {
     "id": 33,
@@ -393,7 +393,7 @@
       "Se asegura que las instancias de SuperCoolGuitarWithFlames puedan reemplazar a Guitar."
     ],
     "answer": 0,
-    "explanation": "Se extiende la clase Guitar con una subclase sin modificar el código original, aplicando el OCP."
+    "explanation": "Crear una subclase (SuperCoolGuitarWithFlames) que extiende Guitar sin tocar su código aplica el OCP: abierto a extensión, cerrado a modificación. No modifica la base, ni elimina la herencia, ni es un ejemplo de LSP."
   },
   {
     "id": 34,
@@ -405,7 +405,7 @@
       "Hace que las clases base sean inmodificables."
     ],
     "answer": 1,
-    "explanation": "Usar herencia para el OCP puede generar dependencias entre las clases base y las derivadas."
+    "explanation": "Usar herencia para el OCP puede generar dependencias rígidas entre la clase base y las derivadas (cambiar la base las afecta). No aumenta la cohesión, ni dificulta extender, ni vuelve inmodificable la base."
   },
   {
     "id": 35,
@@ -417,7 +417,7 @@
       "Los métodos del Cuadrado no cumplen con los contratos de la interfaz pública."
     ],
     "answer": 2,
-    "explanation": "Viola Liskov porque el comportamiento de los métodos de la base no es consistente en la clase derivada."
+    "explanation": "El Cuadrado viola el LSP porque el comportamiento de los métodos de Rectángulo no es consistente en él (alterar el ancho cambia el alto). No es por tener menos funciones, compartir IS-A ni por la interfaz pública."
   },
   {
     "id": 36,
@@ -429,7 +429,7 @@
       "Redefinir los métodos en Cuadrado para que sean compatibles con Rectángulo."
     ],
     "answer": 1,
-    "explanation": "La solución es no usar herencia y definir clases independientes con interfaces comunes si es necesario."
+    "explanation": "La solución es no forzar la herencia: definir clases independientes y, si hace falta, una interfaz común con comportamientos compatibles. Reescribir la base, añadir métodos abstractos o redefinir en Cuadrado no arregla la invariante."
   },
   {
     "id": 37,
@@ -441,7 +441,7 @@
       "Los clientes solo dependen de los métodos que realmente utilizan."
     ],
     "answer": 3,
-    "explanation": "Al dividir en LineReader y LineWriter, los clientes solo dependen de los métodos que realmente utilizan."
+    "explanation": "Dividir LineIO en LineReader y LineWriter hace que cada cliente dependa solo de los métodos que usa: aplica el ISP. No mejora el rendimiento, ni reduce acoplamiento general, ni elimina métodos abstractos por sí mismo."
   },
   {
     "id": 38,
@@ -453,7 +453,7 @@
       "Usando herencia para implementar interfaces más genéricas."
     ],
     "answer": 2,
-    "explanation": "El ISP se aplica dividiendo las responsabilidades en múltiples interfaces específicas."
+    "explanation": "El ISP se aplica dividiendo las responsabilidades en varias interfaces pequeñas y específicas. No reduciendo el número de clases, metiendo todo en una interfaz ni usando herencia para interfaces genéricas."
   },
   {
     "id": 39,
@@ -465,7 +465,7 @@
       "Asegurando que Lamp y Button compartan una base común."
     ],
     "answer": 0,
-    "explanation": "Se introduce la interfaz Switchable para desacoplar el botón de la implementación concreta de Lamp."
+    "explanation": "Se introduce la interfaz Switchable para que Button dependa de una abstracción, no de la Lamp concreta: eso es el DIP. No es usar herencia, depender directamente de Lamp ni darles una base común."
   },
   {
     "id": 40,
@@ -477,7 +477,7 @@
       "Crear jerarquías profundas de herencia."
     ],
     "answer": 1,
-    "explanation": "La inyección de dependencias se usa para implementar el DIP desacoplando las clases."
+    "explanation": "La inyección de dependencias (pasar las implementaciones desde fuera) es la técnica habitual para aplicar el DIP y desacoplar clases. No es reducir interfaces, quitar métodos abstractos ni hacer jerarquías profundas."
   },
   {
     "id": 41,
@@ -489,7 +489,7 @@
       "Porque la clase Database no es reutilizable."
     ],
     "answer": 2,
-    "explanation": "User es difícil de probar aislada porque depende directamente de la implementación concreta de Database."
+    "explanation": "User es difícil de probar aislada porque depende de la implementación concreta de Database, que no se puede sustituir por un doble en los tests. No es por carecer de métodos abstractos ni porque Database no sea reutilizable."
   },
   {
     "id": 42,
@@ -501,7 +501,7 @@
       "Los métodos de Database se convertirán en estáticos."
     ],
     "answer": 0,
-    "explanation": "Con una interfaz podemos sustituir Database por otra implementación sin modificar la clase User."
+    "explanation": "Con una interfaz, User depende de una abstracción y podemos sustituir Database por otra implementación (o un mock) sin tocar User. No reduce sus métodos, ni elimina del todo la dependencia, ni hace estáticos los métodos."
   },
   {
     "id": 43,
@@ -513,7 +513,7 @@
       "Evita la necesidad de usar colecciones."
     ],
     "answer": 1,
-    "explanation": "Almacenar los posts como cadenas complica el manejo de atributos adicionales, como los autores."
+    "explanation": "Guardar los posts como cadenas complica añadir atributos extra como el autor: no hay dónde ponerlos. No aumenta la cohesión de Blog, ni facilita extender, ni evita usar colecciones."
   },
   {
     "id": 44,
@@ -525,7 +525,7 @@
       "Permite gestionar mejor las responsabilidades del manejo de datos de cada post."
     ],
     "answer": 3,
-    "explanation": "Encapsular los datos en una clase Post permite gestionar mejor las responsabilidades de cada post."
+    "explanation": "Encapsular los datos del post en una clase Post reúne sus responsabilidades en un sitio y facilita gestionarlas. No aumenta el acoplamiento, ni reduce métodos, ni crea dependencia directa con Blog."
   },
   {
     "id": 45,
@@ -537,7 +537,7 @@
       "Principio de sustitución de Liskov (LSP)."
     ],
     "answer": 2,
-    "explanation": "El principio Open-Closed permite añadir un ImagePost sin modificar la clase Blog."
+    "explanation": "El principio Open-Closed permite añadir un ImagePost (extensión) sin modificar la clase Blog. No es el SRP, el ISP ni el LSP, que abordan responsabilidades, interfaces y sustituibilidad."
   },
   {
     "id": 46,
@@ -549,7 +549,7 @@
       "Porque utiliza composición en lugar de herencia."
     ],
     "answer": 1,
-    "explanation": "ImagePost cumple el OCP porque implementa la interfaz IPost sin modificar la clase Post."
+    "explanation": "ImagePost cumple el OCP porque implementa la interfaz IPost sin modificar la clase Post: se extiende sin tocar lo existente. No por extender métodos de Post, evitar interfaces ni usar composición."
   },
   {
     "id": 47,
@@ -561,7 +561,7 @@
       "Permite añadir nuevos tipos de posts sin modificar las clases existentes."
     ],
     "answer": 3,
-    "explanation": "Usar la interfaz IPost permite añadir nuevos tipos de posts sin modificar las clases existentes."
+    "explanation": "Depender de la interfaz IPost (no de Post directamente) permite añadir nuevos tipos de post sin modificar las clases existentes. No evita la herencia, ni los métodos en subclases, ni aumenta la cohesión por sí mismo."
   },
   {
     "id": 48,
@@ -573,7 +573,7 @@
       "Las subclases pueden ignorar la estructura definida por la interfaz."
     ],
     "answer": 2,
-    "explanation": "Post e ImagePost cumplen el LSP porque implementan los mismos métodos definidos en IPost."
+    "explanation": "Post e ImagePost cumplen el LSP porque ambas implementan los mismos métodos de IPost y se comportan como ella espera. No por añadir métodos extra, depender de detalles de la base ni ignorar la interfaz."
   },
   {
     "id": 49,
@@ -585,7 +585,7 @@
       "Sería más sencillo gestionar la clase Blog."
     ],
     "answer": 1,
-    "explanation": "Si ImagePost sobrescribe métodos de Post ajenos a IPost, podría violarse el principio de Liskov."
+    "explanation": "Si ImagePost sobrescribe métodos de Post ajenos a IPost y cambia su comportamiento, podría dejar de ser sustituible: viola el LSP. No facilita extender, ni reduce cohesión sin más, ni simplifica Blog."
   },
   {
     "id": 50,
@@ -597,7 +597,7 @@
       "Permite que los métodos de Blog sean más genéricos."
     ],
     "answer": 0,
-    "explanation": "Con ILogger, clases de alto nivel como Blog dependen de una abstracción en vez de una implementación concreta."
+    "explanation": "Con la interfaz ILogger, Blog (alto nivel) depende de una abstracción y no de un logger concreto: eso es el DIP. No hace que ILogger dependa del bajo nivel, ni reduce herencia, ni hace genéricos los métodos de Blog."
   },
   {
     "id": 51,
@@ -609,7 +609,7 @@
       "Inyección de dependencias para proporcionar implementaciones concretas."
     ],
     "answer": 3,
-    "explanation": "La inyección de dependencias complementa las interfaces para implementar el DIP aportando implementaciones concretas."
+    "explanation": "La inyección de dependencias complementa a las interfaces en el DIP: aporta la implementación concreta desde fuera. No es herencia múltiple, dependencia directa ni el uso de métodos estáticos."
   },
   {
     "id": 52,
@@ -621,7 +621,7 @@
       "Para facilitar la implementación de herencia múltiple."
     ],
     "answer": 2,
-    "explanation": "Se divide IPost en Identity y Printable para cumplir el ISP y aislar responsabilidades específicas."
+    "explanation": "Dividir IPost en Identity y Printable separa responsabilidades para que cada clase implemente solo lo que necesita: aplica el ISP. No reduce clases, elimina métodos de Post ni facilita herencia múltiple."
   },
   {
     "id": 53,
@@ -633,7 +633,7 @@
       "Aumenta el número de métodos abstractos en cada interfaz."
     ],
     "answer": 1,
-    "explanation": "Con el ISP, cada clase depende solo de las partes de la interfaz que realmente utiliza."
+    "explanation": "Con ISP cada clase depende solo de las partes de la interfaz que de verdad usa. No es que tengan menos métodos públicos, se eliminen las interfaces ni que crezcan los métodos abstractos."
   },
   {
     "id": 54,
@@ -645,7 +645,7 @@
       "Mantener un alto grado de cohesión entre sus componentes."
     ],
     "answer": 1,
-    "explanation": "Una aplicación rígida tiene dependencias que provocan cambios en cascada al modificar una parte."
+    "explanation": "Una aplicación rígida tiene dependencias que provocan cambios en cascada al modificar una parte. No es fácil de extender, ni tiene interfaces pequeñas, ni mantiene alta cohesión: es lo contrario."
   },
   {
     "id": 55,
@@ -657,7 +657,7 @@
       "Las clases base tienen demasiados métodos abstractos."
     ],
     "answer": 2,
-    "explanation": "La fragilidad implica que los cambios generan errores inesperados en ejecución, aunque el código compile."
+    "explanation": "La fragilidad es que los cambios generen errores inesperados en ejecución, aunque el código compile. No es dificultad por falta de herencia, interfaces demasiado específicas ni exceso de métodos abstractos."
   },
   {
     "id": 56,
@@ -669,7 +669,7 @@
       "El código no se puede reutilizar fácilmente en nuevos contextos."
     ],
     "answer": 3,
-    "explanation": "Un síntoma de inmovilidad es que el código no se puede reutilizar fácilmente en nuevos contextos."
+    "explanation": "Un síntoma de inmovilidad es que el código no se pueda reutilizar fácilmente en nuevos contextos. Rastrear errores por dependencias implícitas es fragilidad, y los parches rápidos son viscosidad."
   },
   {
     "id": 57,
@@ -681,7 +681,7 @@
       "La dependencia explícita de clases concretas."
     ],
     "answer": 0,
-    "explanation": "La viscosidad es la dificultad de aplicar cambios correctos frente a soluciones rápidas e incorrectas."
+    "explanation": "La viscosidad es la dificultad de aplicar el cambio correcto frente a una solución rápida e incorrecta, que acaba ganando. No es alta cohesión, definir muchas interfaces ni depender de clases concretas."
   },
   {
     "id": 58,
@@ -693,7 +693,7 @@
       "La clase tiene múltiples razones para cambiar, ya que mezcla responsabilidades geométricas y gráficas."
     ],
     "answer": 3,
-    "explanation": "Violar el SRP es un problema porque la clase tiene varias razones para cambiar al mezclar responsabilidades."
+    "explanation": "Violar el SRP es un problema porque la clase tiene varias razones para cambiar al mezclar responsabilidades geométricas y gráficas. No es que sea abstracta, incompatible con derivadas ni que falle en ejecución."
   },
   {
     "id": 59,
@@ -705,7 +705,7 @@
       "Una clase Controlador que mezcla lógica de negocio y acceso a datos."
     ],
     "answer": 2,
-    "explanation": "Una clase Logger que registra eventos sin depender de implementaciones concretas aplica bien el SRP."
+    "explanation": "Una clase Logger que registra eventos sin depender de implementaciones concretas tiene una sola responsabilidad: aplica bien el SRP. Utils con métodos variados, Figura con GUI o un Controlador que mezcla negocio y datos lo violan."
   },
   {
     "id": 60,
@@ -717,7 +717,7 @@
       "Dependiendo de métodos concretos en lugar de abstracciones."
     ],
     "answer": 1,
-    "explanation": "Se crea una subclase como SuperCoolGuitarWithFlames que añade atributos sin modificar la clase base."
+    "explanation": "Se crea una subclase como SuperCoolGuitarWithFlames que añade atributos sin tocar la clase base Guitar: así se extiende sin modificar (OCP). No cambiando el método base, redefiniendo la base ni dependiendo de concretas."
   },
   {
     "id": 61,
@@ -729,7 +729,7 @@
       "Utilizar composición en lugar de herencia para añadir nuevas funcionalidades."
     ],
     "answer": 3,
-    "explanation": "Una alternativa a la herencia para el OCP es usar composición para añadir nuevas funcionalidades."
+    "explanation": "Una alternativa a la herencia para el OCP es usar composición para añadir funcionalidades sin modificar la base. No reducir métodos públicos, usar herencia múltiple ni depender de clases concretas."
   },
   {
     "id": 62,
@@ -741,7 +741,7 @@
       "La clase base tiene atributos incompatibles con la subclase."
     ],
     "answer": 2,
-    "explanation": "El problema es que el comportamiento de la clase base no es consistente en la subclase Square."
+    "explanation": "El problema es que el comportamiento de Rectangle no se mantiene consistente en Square (cambiar un lado altera el otro): rompe el LSP. No es que añada métodos, falten implementaciones ni atributos incompatibles."
   },
   {
     "id": 63,
@@ -753,7 +753,7 @@
       "Eliminando todos los métodos sobrescritos en el Square."
     ],
     "answer": 1,
-    "explanation": "Se evita usando clases separadas o una interfaz común que defina comportamientos compatibles."
+    "explanation": "Se evita usando clases separadas o una interfaz común que defina comportamientos compatibles, sin forzar la herencia. Métodos privados, herencia múltiple o quitar las sobrescrituras no arreglan la invariante."
   },
   {
     "id": 64,
@@ -765,7 +765,7 @@
       "Los módulos de bajo nivel dependen de abstracciones innecesarias."
     ],
     "answer": 2,
-    "explanation": "Al violar el ISP, los clientes deben implementar métodos que en realidad no necesitan."
+    "explanation": "Al violar el ISP, los clientes se ven obligados a implementar métodos que no necesitan, por culpa de una interfaz demasiado grande. No aumenta la cohesión, ni impide reutilizar, ni hace que el bajo nivel dependa de abstracciones."
   },
   {
     "id": 65,
@@ -777,7 +777,7 @@
       "Cada clase solo implementa los métodos necesarios, reduciendo dependencias innecesarias."
     ],
     "answer": 3,
-    "explanation": "Dividir en LineReader y LineWriter hace que cada clase implemente solo los métodos necesarios."
+    "explanation": "Dividir LineIO en LineReader y LineWriter hace que cada clase implemente solo los métodos necesarios, reduciendo dependencias inútiles. No elimina dependencias entre clases, ni obliga a implementarlo todo, ni facilita herencia múltiple."
   },
   {
     "id": 66,
@@ -789,7 +789,7 @@
       "Haciendo que Lamp dependa directamente de Button."
     ],
     "answer": 0,
-    "explanation": "Se introduce la interfaz Switchable para que Button dependa de una abstracción y no de la implementación."
+    "explanation": "Se introduce la interfaz Switchable para que Button dependa de una abstracción y no de la Lamp concreta: baja el acoplamiento. No es redefinir Button con métodos de Lamp, quitar la interfaz ni que Lamp dependa de Button."
   },
   {
     "id": 67,
@@ -801,7 +801,7 @@
       "Se facilita la herencia múltiple para reducir dependencias."
     ],
     "answer": 1,
-    "explanation": "La inyección de dependencias evita que las clases de alto nivel dependan de implementaciones concretas."
+    "explanation": "La inyección de dependencias evita que las clases de alto nivel dependan de implementaciones concretas: se las pasan desde fuera. No elimina abstracciones, ni sobrescribe métodos, ni facilita herencia múltiple."
   },
   {
     "id": 68,
@@ -813,7 +813,7 @@
       "Una interfaz que define métodos compartidos entre múltiples clases."
     ],
     "answer": 2,
-    "explanation": "Un módulo de alto nivel que depende directamente de uno de bajo nivel viola el DIP."
+    "explanation": "Un módulo de alto nivel que depende directamente de uno de bajo nivel (concreto) viola el DIP. Depender de interfaces, definir métodos abstractos o compartir una interfaz no son violaciones."
   },
   {
     "id": 69,
@@ -825,7 +825,7 @@
       "Hace que extender el código para añadir atributos adicionales sea más complejo."
     ],
     "answer": 3,
-    "explanation": "Manejar los posts como cadenas hace más complejo extender el código para añadir atributos adicionales."
+    "explanation": "Manejar los posts como cadenas hace más complejo extender el código para añadir atributos extra (autor, fecha). No aumenta la cohesión de Blog, ni facilita nuevos tipos, ni reduce dependencias."
   },
   {
     "id": 70,
@@ -837,7 +837,7 @@
       "Se asegura que todos los métodos de Post sean abstractos."
     ],
     "answer": 1,
-    "explanation": "La interfaz IPost desacopla la lógica de Blog de la implementación específica de los posts."
+    "explanation": "La interfaz IPost desacopla la lógica de Blog de la implementación concreta de los posts. No reduce el número de clases, ni elimina del todo las dependencias, ni obliga a que todos los métodos sean abstractos."
   },
   {
     "id": 71,
@@ -849,7 +849,7 @@
       "Se asegura que todas las clases implementen todos los métodos de la interfaz IPost."
     ],
     "answer": 2,
-    "explanation": "El ISP se aplica dividiendo las responsabilidades de los posts en interfaces como Identity y Printable."
+    "explanation": "El ISP se aplica dividiendo las responsabilidades de los posts en interfaces específicas como Identity y Printable. No agrupando todo en una interfaz, evitando nuevas clases ni obligando a implementar todo IPost."
   },
   {
     "id": 72,
@@ -861,7 +861,7 @@
       "Reduce la necesidad de inyección de dependencias en el sistema."
     ],
     "answer": 0,
-    "explanation": "ImagePost cumple el OCP porque permite añadir nuevos tipos de posts sin modificar Post ni Blog."
+    "explanation": "ImagePost cumple el OCP porque permite añadir un nuevo tipo de post sin modificar el código de Post ni de Blog. No usa herencia múltiple, ni simplifica interfaces compartidas, ni reduce la inyección de dependencias."
   },
   {
     "id": 73,
@@ -873,7 +873,7 @@
       "Las dependencias entre módulos están bien definidas."
     ],
     "answer": 2,
-    "explanation": "Un síntoma de deuda técnica es que los cambios frecuentes en el código introducen errores inesperados."
+    "explanation": "Un síntoma de deuda técnica acumulada es que los cambios frecuentes introduzcan errores inesperados (fragilidad). Alta cohesión y bajo acoplamiento, interfaces por roles o dependencias bien definidas son lo contrario."
   },
   {
     "id": 74,
@@ -885,7 +885,7 @@
       "No se puede reutilizar el código fácilmente en nuevos contextos."
     ],
     "answer": 3,
-    "explanation": "Un diseño inmóvil no permite reutilizar el código fácilmente en nuevos contextos."
+    "explanation": "Un diseño inmóvil es el que no permite reutilizar el código fácilmente en nuevos contextos. Clases pequeñas, cambios sin afectar a otros o funcionalidades repartidas no describen la inmovilidad."
   },
   {
     "id": 75,
@@ -897,7 +897,7 @@
       "Elimina completamente las dependencias entre clases del sistema."
     ],
     "answer": 0,
-    "explanation": "La inyección de dependencias hace que Blog dependa de interfaces en lugar de implementaciones concretas."
+    "explanation": "La inyección de dependencias hace que Blog dependa de interfaces en lugar de implementaciones concretas, aplicando el DIP. No aumenta la cohesión entre niveles, ni facilita herencia múltiple, ni elimina del todo las dependencias."
   },
   {
     "id": 76,
@@ -909,7 +909,7 @@
       "Una clase BaseDeDatos que depende únicamente de clases concretas."
     ],
     "answer": 1,
-    "explanation": "Una clase Logger que recibe un objeto ILogger por su constructor aplica la inyección de dependencias."
+    "explanation": "Una clase Logger que recibe un objeto ILogger por su constructor aplica la inyección de dependencias: la implementación llega desde fuera. Instanciar las dependencias dentro o depender de clases concretas es lo contrario."
   },
   {
     "id": 77,
@@ -921,7 +921,7 @@
       "Permite que los posts dependan directamente de la clase Blog."
     ],
     "answer": 2,
-    "explanation": "Encapsular en Post separa las responsabilidades de almacenar datos y gestionar la lógica de presentación."
+    "explanation": "Encapsular en la clase Post separa la responsabilidad de almacenar datos de la de gestionar su presentación. No reduce métodos de Blog, ni da acceso directo a las propiedades, ni acopla los posts a Blog."
   },
   {
     "id": 78,
@@ -933,7 +933,7 @@
       "Cambia el comportamiento de los métodos heredados sin afectar al diseño general."
     ],
     "answer": 1,
-    "explanation": "print() en ImagePost cumple el LSP porque respeta la interfaz IPost y conserva el comportamiento esperado."
+    "explanation": "El print() de ImagePost cumple el LSP porque respeta la interfaz IPost y conserva el comportamiento esperado. No introduce métodos ajenos, ni modifica propiedades de la base, ni cambia el comportamiento heredado de forma incompatible."
   },
   {
     "id": 79,
@@ -945,7 +945,7 @@
       "Permite cambiar la implementación concreta del logger sin modificar el código que lo usa."
     ],
     "answer": 3,
-    "explanation": "La factoría permite cambiar la implementación concreta del logger sin modificar el código que lo usa."
+    "explanation": "Una factoría permite cambiar la implementación concreta del logger sin tocar el código que lo usa, que solo conoce la abstracción. No elimina dependencias, ni hace abstractos todos los métodos, ni reduce el número de clases."
   },
   {
     "id": 80,
@@ -957,7 +957,7 @@
       "Reduce el número de interfaces necesarias en el diseño."
     ],
     "answer": 0,
-    "explanation": "Depender de una clase concreta como Database dificulta reemplazarla o modificarla sin afectar a sus dependientes."
+    "explanation": "Depender de una clase concreta como Database dificulta reemplazarla o modificarla sin afectar a quienes la usan. No aumenta la cohesión, ni facilita las pruebas, ni reduce el número de interfaces."
   },
   {
     "id": 81,
@@ -969,7 +969,7 @@
       "Elimina la necesidad de herencia en el diseño."
     ],
     "answer": 1,
-    "explanation": "Un diseño basado en interfaces facilita la extensión del sistema y reduce el acoplamiento."
+    "explanation": "Un diseño basado en interfaces facilita extender el sistema y reduce el acoplamiento, al depender de abstracciones. No reduce sin más el número de clases, ni hace explícitas todas las dependencias, ni elimina la herencia."
   },
   {
     "id": 82,
@@ -981,7 +981,7 @@
       "Simplifica la implementación de nuevas funcionalidades."
     ],
     "answer": 2,
-    "explanation": "Usar herencia en vez de composición puede introducir dependencias innecesarias entre clases base y derivadas."
+    "explanation": "Usar herencia en vez de composición puede introducir dependencias rígidas entre la base y las derivadas. No aumenta la cohesión, ni reduce duplicación por sí mismo, ni simplifica añadir funcionalidades."
   },
   {
     "id": 83,
@@ -993,7 +993,7 @@
       "Las interfaces están bien definidas y desacopladas."
     ],
     "answer": 2,
-    "explanation": "Señal de alto acoplamiento: los cambios en un módulo requieren modificaciones en otros relacionados."
+    "explanation": "Señal de alto acoplamiento: un cambio en un módulo obliga a modificar otros relacionados. Que se reemplacen fácilmente, que el cambio afecte solo a su módulo o que las interfaces estén desacopladas indica bajo acoplamiento."
   },
   {
     "id": 84,
@@ -1005,7 +1005,7 @@
       "Crear métodos que manejen múltiples responsabilidades."
     ],
     "answer": 1,
-    "explanation": "Usar interfaces y abstracciones para comunicar los módulos ayuda a reducir el acoplamiento."
+    "explanation": "Usar interfaces y abstracciones para comunicar los módulos reduce el acoplamiento. Más herencia, depender de implementaciones concretas o métodos con varias responsabilidades lo aumentan."
   },
   {
     "id": 85,
@@ -1017,7 +1017,7 @@
       "Sus elementos están estrechamente relacionados y enfocados en una sola tarea."
     ],
     "answer": 3,
-    "explanation": "Hay alta cohesión cuando los elementos del módulo están estrechamente relacionados y enfocados en una tarea."
+    "explanation": "Hay alta cohesión cuando los elementos de un módulo están estrechamente relacionados y enfocados en una sola tarea. Depender de otros, mezclar datos no relacionados o cambiar por muchas razones es baja cohesión."
   },
   {
     "id": 86,
@@ -1029,7 +1029,7 @@
       "Los cambios en un módulo no afectan a otros módulos."
     ],
     "answer": 2,
-    "explanation": "Con baja cohesión, los módulos tienden a ser más complejos y difíciles de mantener."
+    "explanation": "Con baja cohesión, los módulos mezclan responsabilidades y se vuelven más complejos y difíciles de mantener. No son independientes, ni tienen un propósito claro, ni aíslan los cambios: eso es alta cohesión."
   },
   {
     "id": 87,
@@ -1041,7 +1041,7 @@
       "Aumenta la cohesión dentro del sistema."
     ],
     "answer": 2,
-    "explanation": "La herencia puede provocar dependencias entre clases base y derivadas, dificultando los cambios."
+    "explanation": "La herencia puede provocar dependencias rígidas entre la base y las derivadas, dificultando los cambios al aplicar el OCP. No reduce métodos de la base, ni la vuelve inmodificable, ni aumenta la cohesión."
   },
   {
     "id": 88,
@@ -1053,7 +1053,7 @@
       "Implementar métodos estáticos para reducir dependencias."
     ],
     "answer": 0,
-    "explanation": "Crear una subclase para añadir comportamiento sin modificar la clase base cumple el principio Open-Closed."
+    "explanation": "Crear una subclase que añade comportamiento sin modificar la clase base cumple el OCP. Modificar la base, usar herencia múltiple o métodos estáticos no son el ejemplo correcto."
   },
   {
     "id": 89,
@@ -1065,7 +1065,7 @@
       "Cambiar el comportamiento de los métodos base según sea necesario."
     ],
     "answer": 1,
-    "explanation": "Una subclase respeta el LSP si mantiene el comportamiento esperado de la base en todos los contextos."
+    "explanation": "Una subclase respeta el LSP si mantiene el comportamiento esperado de la base en todos los contextos donde se use. No basta con tener los mismos métodos, quitar abstractos ni cambiar el comportamiento según convenga."
   },
   {
     "id": 90,
@@ -1077,7 +1077,7 @@
       "Definir clases independientes para Rectangle y Square con una interfaz común."
     ],
     "answer": 3,
-    "explanation": "Se evita la violación definiendo clases independientes para Rectangle y Square con una interfaz común."
+    "explanation": "Se evita la violación definiendo clases independientes para Rectangle y Square con una interfaz común, sin forzar la herencia. Herencia múltiple, bloquear sobrescrituras o modificar el comportamiento heredado no arreglan la invariante."
   },
   {
     "id": 91,
@@ -1089,7 +1089,7 @@
       "Las interfaces deben ser lo suficientemente generales para ser reutilizables."
     ],
     "answer": 2,
-    "explanation": "El ISP establece que los clientes no deben depender de métodos que no utilizan."
+    "explanation": "El ISP establece que los clientes no deben depender de métodos que no utilizan. No que una interfaz incluya todo para todos, que se implementen interfaces abstractas ni que sean lo más genéricas posible."
   },
   {
     "id": 92,
@@ -1101,7 +1101,7 @@
       "Los módulos se vuelven independientes y fáciles de modificar."
     ],
     "answer": 1,
-    "explanation": "Al violar el ISP, los clientes se ven obligados a implementar métodos innecesarios."
+    "explanation": "Al violar el ISP con interfaces grandes, los clientes se ven obligados a implementar métodos innecesarios. No aumenta la cohesión, ni las hace más reutilizables, ni vuelve los módulos independientes."
   },
   {
     "id": 93,
@@ -1113,7 +1113,7 @@
       "Haciendo que Logger sea una clase concreta dependiente de FileLogger."
     ],
     "answer": 0,
-    "explanation": "Logger aplica el DIP al depender de la interfaz ILogger en lugar de una implementación concreta."
+    "explanation": "Logger aplica el DIP al depender de la interfaz ILogger en lugar de una implementación concreta (FileLogger). No por usar herencia, eliminar interfaces ni acoplarse a una clase concreta."
   },
   {
     "id": 94,
@@ -1125,7 +1125,7 @@
       "Permite modificar o sustituir implementaciones concretas sin afectar a los módulos de alto nivel."
     ],
     "answer": 3,
-    "explanation": "El DIP permite modificar o sustituir implementaciones concretas sin afectar a los módulos de alto nivel."
+    "explanation": "El DIP permite modificar o sustituir implementaciones concretas sin afectar a los módulos de alto nivel, que dependen de la abstracción. No elimina métodos, ni reduce el número de clases, ni quita todas las dependencias."
   },
   {
     "id": 95,
@@ -1137,7 +1137,7 @@
       "Depende directamente de los métodos de la clase Blog."
     ],
     "answer": 1,
-    "explanation": "ImagePost cumple el LSP implementando la interfaz IPost y manteniendo el comportamiento esperado de Post."
+    "explanation": "ImagePost cumple el LSP implementando la interfaz IPost y manteniendo el comportamiento esperado de Post. No por sobrescribir métodos a conveniencia, añadir métodos propios ni depender de métodos de Blog."
   },
   {
     "id": 96,
@@ -1149,7 +1149,7 @@
       "Elimina la necesidad de definir interfaces adicionales en el diseño."
     ],
     "answer": 2,
-    "explanation": "Dividir IPost en Identity y Printable separa responsabilidades, implementando solo lo necesario (ISP)."
+    "explanation": "Dividir IPost en Identity y Printable separa responsabilidades para que cada clase implemente solo lo que necesita: cumple el ISP. No reduce métodos de la base, ni aumenta dependencias, ni elimina interfaces."
   },
   {
     "id": 97,
@@ -1161,7 +1161,7 @@
       "Para facilitar el desarrollo en equipos pequeños."
     ],
     "answer": 1,
-    "explanation": "Git fue desarrollado en 2005 para gestionar el desarrollo del kernel de Linux."
+    "explanation": "Linus Torvalds creó Git en 2005 para gestionar el desarrollo del kernel de Linux tras perder el acceso a BitKeeper. No para reemplazar Mercurial (es posterior), ser centralizado ni solo para equipos pequeños."
   },
   {
     "id": 98,
@@ -1173,7 +1173,7 @@
       "Capacidad de manejar proyectos grandes."
     ],
     "answer": 2,
-    "explanation": "Git no depende de un servidor central para realizar commits; es un sistema distribuido."
+    "explanation": "Git es distribuido: cada clon tiene el historial completo y puedes hacer commits sin servidor. Por eso 'depender de un servidor central para commits' NO es suyo; velocidad, ramas y proyectos grandes sí lo son."
   },
   {
     "id": 99,
@@ -1185,7 +1185,7 @@
       "Los desarrolladores no pueden crear ramas locales sin permiso del repositorio central."
     ],
     "answer": 0,
-    "explanation": "En un sistema distribuido como Git, cada desarrollador tiene una copia completa del repositorio y su historial."
+    "explanation": "En un sistema distribuido cada desarrollador tiene el repositorio entero con su historial, así que trabaja en local. No depende de un servidor central, ni se sincroniza solo, ni necesita permiso para ramas locales."
   },
   {
     "id": 100,
@@ -1197,14 +1197,14 @@
       "Los desarrolladores pueden hacer commits locales sin necesidad de conectarse al servidor central."
     ],
     "answer": 3,
-    "explanation": "Ventaja distribuida: los desarrolladores pueden hacer commits locales sin conectarse al servidor central."
+    "explanation": "La ventaja clave es hacer commits en local sin conexión al servidor, gracias a tener el historial completo. No es ocupar menos disco (suele ser más), ni cambios remotos automáticos."
   },
   {
     "id": 101,
     "question": "¿Qué comando en Git permite mover cambios del área de trabajo al área de stage?",
     "options": ["git commit.", "git add.", "git push.", "git pull."],
     "answer": 1,
-    "explanation": "El comando git add mueve los cambios del área de trabajo al área de stage."
+    "explanation": "git add lleva los cambios del directorio de trabajo al área de stage (preparados para el commit). git commit los confirma, git push los sube y git pull los trae del remoto."
   },
   {
     "id": 102,
@@ -1216,7 +1216,7 @@
       "Se eliminan los cambios no guardados del directorio de trabajo."
     ],
     "answer": 0,
-    "explanation": "git commit confirma los cambios del área de stage en el repositorio local."
+    "explanation": "git commit confirma en el repositorio local lo que hay en el stage. No los sube al remoto (eso es push), ni mueve del trabajo al stage (eso es add), ni borra cambios."
   },
   {
     "id": 103,
@@ -1228,7 +1228,7 @@
       "El archivo se restaura a su estado anterior."
     ],
     "answer": 2,
-    "explanation": "git add añade los cambios al área de stage para incluirlos en el próximo commit."
+    "explanation": "git add coloca los cambios del archivo en el stage para el próximo commit. No los elimina, ni los sube al remoto, ni restaura el archivo a su estado anterior."
   },
   {
     "id": 104,
@@ -1240,14 +1240,14 @@
       "Para seleccionar qué cambios se incluirán en el próximo commit."
     ],
     "answer": 3,
-    "explanation": "La zona de stage sirve para seleccionar qué cambios se incluirán en el próximo commit."
+    "explanation": "El stage es una zona intermedia para elegir qué cambios entran en el próximo commit (puedes confirmar solo una parte). No es para descartar, mover entre ramas ni borrar cambios del trabajo."
   },
   {
     "id": 105,
     "question": "¿Qué comando se utiliza para crear una nueva rama y moverse a ella?",
     "options": ["git branch.", "git switch.", "git checkout.", "git checkout -b."],
     "answer": 3,
-    "explanation": "El comando git checkout -b crea una nueva rama y se mueve a ella en un solo paso."
+    "explanation": "git checkout -b crea la rama y cambia a ella en un solo paso. git branch solo la crea, git switch sin -c solo cambia y git checkout a secas cambia a una rama existente."
   },
   {
     "id": 106,
@@ -1259,7 +1259,7 @@
       "La rama base se rebasa automáticamente sobre la rama secundaria."
     ],
     "answer": 1,
-    "explanation": "Un merge fast-forward avanza la rama para apuntar al mismo commit que la otra, sin crear un commit adicional."
+    "explanation": "En un fast-forward, como no hay commits divergentes, la rama solo avanza su puntero al commit de la otra, sin crear un commit de merge. No genera commits extra, ni borra commits, ni rebasa nada."
   },
   {
     "id": 107,
@@ -1271,7 +1271,7 @@
       "Git aplica automáticamente los cambios de ambas ramas sin intervención del usuario."
     ],
     "answer": 2,
-    "explanation": "Ante un conflicto, Git pausa el merge y marca los archivos conflictivos para que el usuario los resuelva."
+    "explanation": "Ante un conflicto, Git pausa el merge y marca los archivos en conflicto para que tú decidas. No lo cancela y descarta, ni borra cambios del remoto, ni mezcla automáticamente ambas ramas."
   },
   {
     "id": 108,
@@ -1283,14 +1283,14 @@
       "Copiando las líneas conflictivas en un archivo separado."
     ],
     "answer": 0,
-    "explanation": "Los conflictos se marcan en el archivo con líneas como <<<<<<< HEAD y =======."
+    "explanation": "Git inserta marcadores en el archivo: <<<<<<< HEAD, ======= y >>>>>>> para separar las dos versiones. No borra las líneas, ni las comenta, ni las copia a otro archivo."
   },
   {
     "id": 109,
     "question": "¿Qué comando deshace un commit sin eliminar los cambios del área de trabajo?",
     "options": ["git revert.", "git reset HEAD^.", "git commit --amend.", "git reset --hard HEAD."],
     "answer": 1,
-    "explanation": "git reset HEAD^ deshace un commit sin eliminar los cambios del área de trabajo."
+    "explanation": "git reset HEAD^ (mixed por defecto) deshace el último commit pero conserva los cambios en el directorio de trabajo. git revert crea un commit inverso, --amend reescribe el commit y --hard sí borra los cambios."
   },
   {
     "id": 110,
@@ -1302,14 +1302,14 @@
       "git reset funciona solo en repositorios remotos."
     ],
     "answer": 2,
-    "explanation": "git reset modifica el historial local, mientras que git revert crea un commit que revierte los cambios anteriores."
+    "explanation": "git reset reescribe el historial local moviendo el puntero; git revert deja el historial y añade un commit que deshace los cambios (seguro en ramas compartidas). Las otras descripciones invierten o falsean eso."
   },
   {
     "id": 111,
     "question": "¿Qué comando se utiliza para aplicar un commit específico de una rama a otra sin fusionarlas completamente?",
     "options": ["git cherry-pick.", "git merge.", "git pull.", "git checkout."],
     "answer": 0,
-    "explanation": "git cherry-pick aplica un commit específico de una rama a otra sin fusionarlas completamente."
+    "explanation": "git cherry-pick copia un commit específico de otra rama sobre la actual, sin fusionar las ramas enteras. merge fusiona todo, pull trae del remoto y checkout cambia de rama."
   },
   {
     "id": 112,
@@ -1321,7 +1321,7 @@
       "Mantiene un historial de commits más lineal y limpio."
     ],
     "answer": 3,
-    "explanation": "git rebase mantiene un historial de commits más lineal y limpio que el merge."
+    "explanation": "Rebase reaplica tus commits sobre la otra rama, dejando un historial lineal y limpio sin commits de fusión. No resuelve mejor los conflictos, ni evita commits, ni es lo que permite trabajar offline."
   },
   {
     "id": 113,
@@ -1333,7 +1333,7 @@
       "Evitar el uso de ramas en el desarrollo."
     ],
     "answer": 0,
-    "explanation": "GitHub Flow facilita el desarrollo colaborativo mediante ramas de características y pull requests."
+    "explanation": "GitHub Flow se basa en ramas de característica cortas integradas vía pull requests, ideal para colaborar y desplegar a menudo. No mantiene varias versiones a la vez, ni ramas de larga duración, ni evita las ramas."
   },
   {
     "id": 114,
@@ -1345,7 +1345,7 @@
       "Permite revisar, discutir e integrar cambios realizados en una rama secundaria."
     ],
     "answer": 3,
-    "explanation": "Un pull request permite revisar, discutir e integrar los cambios realizados en una rama secundaria."
+    "explanation": "Un pull request es el punto donde se revisa, discute e integra el trabajo de una rama secundaria. No sube cambios directamente a la principal, ni es para ramas largas, ni solo para conflictos."
   },
   {
     "id": 115,
@@ -1357,7 +1357,7 @@
       "Evitar el uso de ramas y realizar todos los cambios directamente en el repositorio remoto."
     ],
     "answer": 1,
-    "explanation": "Trunk-Based Development integra cambios con frecuencia en una única rama principal de larga duración."
+    "explanation": "Trunk-Based integra los cambios con mucha frecuencia en una sola rama principal (el trunk). No usa solo ramas de característica, ni mantiene varias versiones a la vez, ni evita las ramas trabajando solo en el remoto."
   },
   {
     "id": 116,
@@ -1369,14 +1369,14 @@
       "Evita la necesidad de realizar merges en el historial."
     ],
     "answer": 2,
-    "explanation": "Trunk-Based Development reduce los conflictos de integración al integrar cambios rápidamente en la rama principal."
+    "explanation": "Al integrar a diario en una sola rama, las diferencias son pequeñas y los conflictos, mínimos. No facilita mantener varias versiones vivas, ni busca un historial lineal, ni evita los merges."
   },
   {
     "id": 117,
     "question": "¿Cuáles son las dos ramas principales de larga duración en GitFlow?",
     "options": ["feature y hotfix.", "main y feature.", "master y develop.", "develop y hotfix."],
     "answer": 2,
-    "explanation": "Las dos ramas de larga duración en GitFlow son master y develop."
+    "explanation": "En GitFlow las dos ramas permanentes son master (releases estables) y develop (integración del desarrollo). feature, hotfix y release son ramas temporales, no de larga duración."
   },
   {
     "id": 118,
@@ -1388,7 +1388,7 @@
       "Para realizar ajustes menores en la rama develop."
     ],
     "answer": 0,
-    "explanation": "Una rama de hotfix se utiliza para corregir bugs críticos en una versión ya lanzada."
+    "explanation": "Una rama hotfix sirve para arreglar bugs críticos de una versión ya en producción, partiendo de master. No para nuevas características (eso es feature/develop) ni para ajustes menores en develop."
   },
   {
     "id": 119,
@@ -1400,14 +1400,14 @@
       "En feature y hotfix."
     ],
     "answer": 1,
-    "explanation": "Los cambios de una rama release se mezclan tanto en master como en develop."
+    "explanation": "Al terminar, la rama release se fusiona en master (para publicar y etiquetar) y en develop (para no perder los arreglos). No solo en una de ellas, ni en feature o hotfix."
   },
   {
     "id": 120,
     "question": "¿Qué comando se utiliza para listar todas las ramas locales y remotas en Git?",
     "options": ["git branch -l.", "git log --branches.", "git status --all.", "git branch -vva."],
     "answer": 3,
-    "explanation": "git branch -vva lista todas las ramas locales y remotas del repositorio."
+    "explanation": "git branch -a (o -vva con detalle) lista las ramas locales y remotas. git branch -l solo locales, y git log --branches o git status --all no listan así las ramas."
   },
   {
     "id": 121,
@@ -1419,7 +1419,7 @@
       "Una rama utilizada para mantener una versión antigua de software."
     ],
     "answer": 1,
-    "explanation": "Una rama creada para desarrollar una nueva característica es una rama de corta duración."
+    "explanation": "Una rama de característica nace para una tarea concreta y se borra al integrarla: es de corta duración. master y main son permanentes, y una rama de mantenimiento de versión es de larga duración."
   },
   {
     "id": 122,
@@ -1431,7 +1431,7 @@
       "git cherry-pick."
     ],
     "answer": 1,
-    "explanation": "git merge --no-ff fuerza siempre la creación de un nodo de merge, aunque no sea necesario."
+    "explanation": "git merge --no-ff obliga a crear un commit de fusión aunque fuera posible un fast-forward, dejando rastro de la rama. --fast-forward, rebase o cherry-pick hacen lo contrario."
   },
   {
     "id": 123,
@@ -1443,7 +1443,7 @@
       "El rebase combina las ramas sin generar commits adicionales."
     ],
     "answer": 0,
-    "explanation": "El merge conserva el historial original, mientras que el rebase lo reescribe para crear un historial lineal."
+    "explanation": "merge conserva el historial real y añade un commit de fusión; rebase reescribe los commits sobre otra base para dejarlo lineal. Las demás opciones invierten o falsean ese comportamiento."
   },
   {
     "id": 124,
@@ -1455,7 +1455,7 @@
       "git rebase."
     ],
     "answer": 2,
-    "explanation": "Para resolver conflictos se usa un editor de texto o herramientas como VS Code o GitHub Desktop."
+    "explanation": "Los conflictos se resuelven editando el archivo a mano (editor) o con herramientas de merge como VS Code o GitHub Desktop. cherry-pick, checkout o rebase son comandos, no resuelven el conflicto por ti."
   },
   {
     "id": 125,
@@ -1467,7 +1467,7 @@
       "Los cambios en ambas ramas afectan a diferentes líneas del mismo archivo."
     ],
     "answer": 1,
-    "explanation": "Un conflicto marca cambios incompatibles en la misma línea del mismo archivo en ambas ramas."
+    "explanation": "Hay conflicto cuando ambas ramas tocaron la misma línea del mismo archivo de forma incompatible y Git no sabe cuál elegir. Si tocan líneas distintas suele fusionar solo; no afecta a todos los archivos ni va por número de commits."
   },
   {
     "id": 126,
@@ -1479,14 +1479,14 @@
       "Solo se crean después de realizar un pull request."
     ],
     "answer": 2,
-    "explanation": "Las ramas de versiones permiten mantener múltiples versiones de un software simultáneamente."
+    "explanation": "Las ramas de versión permiten mantener varias versiones del software a la vez (dar soporte a la 1.x mientras se desarrolla la 2.x). No se borran al corregir bugs, ni son solo para features, ni nacen de un PR."
   },
   {
     "id": 127,
     "question": "¿Qué se utiliza para identificar versiones específicas en una rama de versiones?",
     "options": ["Ramas feature.", "Merges con --no-ff.", "Commits iniciales.", "Etiquetas (tags)."],
     "answer": 3,
-    "explanation": "Las etiquetas (tags) sirven para identificar versiones específicas en una rama de versiones."
+    "explanation": "Las etiquetas (tags) marcan de forma permanente versiones concretas (v1.0, v2.1) en el historial. Ramas feature, merges --no-ff o el commit inicial no cumplen esa función."
   },
   {
     "id": 128,
@@ -1498,7 +1498,7 @@
       "Crear nuevas ramas a partir de un commit específico."
     ],
     "answer": 1,
-    "explanation": "git cherry-pick mueve un commit específico de una rama a otra sin fusionar completamente las ramas."
+    "explanation": "cherry-pick copia un commit concreto de una rama a otra sin fusionarlas enteras. No fusiona todo, ni borra commits antiguos, ni crea ramas a partir de un commit."
   },
   {
     "id": 129,
@@ -1510,7 +1510,7 @@
       "La rama original se fusiona completamente con la rama destino."
     ],
     "answer": 2,
-    "explanation": "El cherry-pick crea un nuevo commit con los mismos cambios pero con un identificador diferente."
+    "explanation": "cherry-pick reaplica los cambios creando un commit nuevo con distinto hash (mismo contenido, otra identidad). No borra el original, ni genera conflictos siempre, ni fusiona las ramas."
   },
   {
     "id": 130,
@@ -1522,7 +1522,7 @@
       "git checkout <nombre_etiqueta>."
     ],
     "answer": 2,
-    "explanation": "git tag <nombre_etiqueta> etiqueta un commit con un identificador específico."
+    "explanation": "git tag <nombre> crea una etiqueta sobre el commit actual. git tag -u firma con GPG (no es la forma básica), git annotate muestra autoría línea a línea y checkout cambia de referencia."
   },
   {
     "id": 131,
@@ -1534,14 +1534,14 @@
       "El commit actual en el que estás trabajando o la rama activa en tu repositorio local."
     ],
     "answer": 3,
-    "explanation": "HEAD es el commit actual en el que trabajas, o la rama activa en tu repositorio local."
+    "explanation": "HEAD es un puntero al commit o rama actual donde estás trabajando. No es la rama con más commits, el último de master ni un commit sin dependencias."
   },
   {
     "id": 132,
     "question": "¿Cuál de las siguientes NO es una forma válida de deshacer cambios en Git?",
     "options": ["git reset.", "git pull --force.", "git revert.", "git checkout."],
     "answer": 1,
-    "explanation": "git pull --force no es una forma válida de deshacer cambios en Git."
+    "explanation": "reset, revert y checkout sirven para deshacer cambios de distintas formas. 'git pull --force' no es una forma de deshacer cambios (ni un uso habitual de pull), por eso es la respuesta."
   },
   {
     "id": 133,
@@ -1553,7 +1553,7 @@
       "Ejecutar git reset --hard HEAD en ambas ramas para sincronizar los cambios."
     ],
     "answer": 0,
-    "explanation": "Se hace merge de master en la rama del PR, se resuelven los conflictos y se sube el commit con los cambios."
+    "explanation": "Se trae master a la rama del PR (merge), se resuelven los conflictos y se sube el commit resuelto. Borrar y recrear el PR, usar cherry-pick o un reset --hard en ambas ramas no es la vía correcta."
   },
   {
     "id": 134,
@@ -1565,7 +1565,7 @@
       "git push --rebase."
     ],
     "answer": 2,
-    "explanation": "git pull combina automáticamente un fetch y un merge."
+    "explanation": "git pull es, por defecto, un git fetch seguido de un git merge. 'git fetch-merge' no existe, checkout origin/<rama> solo cambia y push --rebase no combina así."
   },
   {
     "id": 135,
@@ -1577,7 +1577,7 @@
       "Git da un error, pidiendo que primero actualices tu repositorio local con pull o fetch."
     ],
     "answer": 3,
-    "explanation": "Git da un error y pide actualizar primero el repositorio local con pull o fetch."
+    "explanation": "Git rechaza el push (non-fast-forward) y pide que primero integres lo remoto con pull o fetch. No borra los commits remotos, ni los sobrescribe, ni hace un rebase automático."
   },
   {
     "id": 136,
@@ -1589,7 +1589,7 @@
       "Una rama de release."
     ],
     "answer": 1,
-    "explanation": "En GitFlow se usa una rama de hotfix para arreglar un bug crítico en una versión en producción."
+    "explanation": "En GitFlow, un bug crítico en producción se corrige en una rama hotfix que sale de master. feature es para nuevas funciones, develop para integrar y release para preparar una versión."
   },
   {
     "id": 137,
@@ -1601,7 +1601,7 @@
       "Experimentar con cambios drásticos antes de integrarlos en master."
     ],
     "answer": 2,
-    "explanation": "La rama de release sirve para preparar y estabilizar el código para el lanzamiento de una nueva versión."
+    "explanation": "La rama release sirve para estabilizar y ultimar una versión antes de publicarla (ajustes y bugs menores). No es para bugs de producción (hotfix), nuevas características (feature) ni experimentar."
   },
   {
     "id": 138,
@@ -1613,7 +1613,7 @@
       "Se reescribe el historial de commits en la rama develop."
     ],
     "answer": 0,
-    "explanation": "Al finalizar una rama release se etiqueta el commit final con el número de la versión."
+    "explanation": "Al cerrar una release se fusiona en master y se etiqueta el commit con el número de versión. No se fusiona con todas las features, ni se borra master, ni se reescribe el historial de develop."
   },
   {
     "id": 139,
@@ -1625,7 +1625,7 @@
       "Identifican de manera clara y permanente las versiones lanzadas."
     ],
     "answer": 3,
-    "explanation": "Las etiquetas identifican de manera clara y permanente las versiones lanzadas."
+    "explanation": "Las etiquetas marcan de forma clara y permanente cada versión publicada, fáciles de localizar después. No reducen ramas, ni hacen merges más eficientes, ni resuelven conflictos."
   },
   {
     "id": 140,
@@ -1637,7 +1637,7 @@
       "La rama original se elimina automáticamente después del merge."
     ],
     "answer": 2,
-    "explanation": "Tras un cherry-pick y un merge, el commit aparece dos veces en el historial con diferentes identificadores."
+    "explanation": "El commit cherry-picked y el original tienen distinto hash, así que tras el merge el mismo cambio aparece dos veces. Git no los deduplica, ni ignora conflictos, ni borra la rama original."
   },
   {
     "id": 141,
@@ -1649,7 +1649,7 @@
       "Obliga a realizar múltiples commits adicionales durante el proceso."
     ],
     "answer": 1,
-    "explanation": "El rebase reescribe el historial de commits, lo que puede causar problemas en repositorios compartidos."
+    "explanation": "Rebase reescribe el historial (cambia los hashes), lo que rompe a quienes ya tenían esos commits en un repo compartido. No introduce conflictos inexistentes, ni genera un historial no lineal, ni obliga a commits extra."
   },
   {
     "id": 142,
@@ -1661,7 +1661,7 @@
       "Finaliza el rebase y borra el historial previo."
     ],
     "answer": 0,
-    "explanation": "git rebase --continue continúa el proceso de rebase después de resolver un conflicto."
+    "explanation": "git rebase --continue retoma el rebase una vez resueltos los conflictos del paso actual. No descarta los conflictos, ni fusiona automáticamente, ni borra el historial previo."
   },
   {
     "id": 143,
@@ -1673,7 +1673,7 @@
       "Cuando se fusionan ramas de diferentes repositorios remotos."
     ],
     "answer": 1,
-    "explanation": "El fast-forward ocurre cuando no hay commits adicionales en la base desde que se creó la rama secundaria."
+    "explanation": "Hay fast-forward cuando la base no avanzó desde que salió la rama: basta mover el puntero, sin merge real. No ocurre con conflictos, commits en ambas ramas ni entre repos distintos."
   },
   {
     "id": 144,
@@ -1685,7 +1685,7 @@
       "Permite fusionar ramas sin resolver conflictos."
     ],
     "answer": 2,
-    "explanation": "--no-ff crea un nodo de merge explícito, dejando un rastro claro de la operación en el historial."
+    "explanation": "--no-ff fuerza un commit de fusión que deja constancia explícita de que existió una rama y cuándo se integró. No reduce commits, ni evita conflictos, ni permite fusionar sin resolverlos."
   },
   {
     "id": 145,
@@ -1697,7 +1697,7 @@
       "Evita la necesidad de usar etiquetas en las versiones lanzadas."
     ],
     "answer": 0,
-    "explanation": "Ramas separadas por versión permiten mantener versiones antiguas mientras se desarrolla una nueva."
+    "explanation": "Mantener una rama por versión permite parchear versiones antiguas mientras avanza la nueva. No simplifica la CI, ni acelera merges, ni evita el uso de etiquetas."
   },
   {
     "id": 146,
@@ -1709,7 +1709,7 @@
       "Usando un cherry-pick o un merge desde la rama de versión a develop."
     ],
     "answer": 3,
-    "explanation": "Los arreglos se propagan a develop usando un cherry-pick o un merge desde la rama de versión."
+    "explanation": "Los arreglos se llevan a develop con un cherry-pick del commit o un merge desde la rama de versión. No con un rebase, un PR directo desde esa rama ni fusionando master con develop."
   },
   {
     "id": 147,
@@ -1721,7 +1721,7 @@
       "La rama remota conectada al repositorio local."
     ],
     "answer": 2,
-    "explanation": "HEAD representa el commit actual en el que estás trabajando."
+    "explanation": "HEAD apunta al commit actual en el que trabajas. No es la última etiqueta de la rama principal, el commit más antiguo ni la rama remota."
   },
   {
     "id": 148,
@@ -1733,7 +1733,7 @@
       "Fusionando el commit en una nueva rama y etiquetándola."
     ],
     "answer": 1,
-    "explanation": "git tag <etiqueta> <commit> etiqueta un commit específico sin tener que moverte a él."
+    "explanation": "git tag <etiqueta> <commit> etiqueta un commit concreto sin necesidad de hacer checkout a él. Las otras opciones requieren moverse, rebasar o fusionar primero."
   },
   {
     "id": 149,
@@ -1745,7 +1745,7 @@
       "git push origin --delete <rama>."
     ],
     "answer": 3,
-    "explanation": "git push origin --delete <rama> elimina una rama remota que ya no necesitas."
+    "explanation": "git push origin --delete <rama> borra una rama en el remoto. git branch -d borra una local, y 'checkout --delete' o 'prune <rama>' no son la forma correcta."
   },
   {
     "id": 150,
@@ -1757,7 +1757,7 @@
       "Las ramas de larga duración siempre contienen los hotfix."
     ],
     "answer": 0,
-    "explanation": "Las ramas de corta duración se crean para una tarea específica y se eliminan al finalizarla."
+    "explanation": "Una rama de corta duración nace para una tarea y se borra al integrarla; las de larga duración (master, develop) persisten. Las otras opciones describen mal la sincronización, los commits o los hotfix."
   },
   {
     "id": 151,
@@ -1769,7 +1769,7 @@
       "Usar git revert para descartar todos los conflictos automáticamente."
     ],
     "answer": 3,
-    "explanation": "Usar git revert para descartar conflictos automáticamente es un paso incorrecto al resolverlos."
+    "explanation": "Editar los archivos, marcarlos resueltos con git add y confirmar con un commit son pasos correctos. Usar git revert para 'descartar conflictos automáticamente' no es válido: es el paso incorrecto."
   },
   {
     "id": 152,
@@ -1781,7 +1781,7 @@
       "Implementación de cambios rápidos directamente en la rama principal."
     ],
     "answer": 0,
-    "explanation": "GitHub Flow se usa para el desarrollo colaborativo en ramas de características integradas vía pull requests."
+    "explanation": "GitHub Flow se usa para desarrollo colaborativo en ramas de característica que se integran mediante pull requests. No gestiona varias versiones a la vez, ni resuelve conflictos en ramas viejas, ni mete cambios directos en la principal."
   },
   {
     "id": 153,
@@ -1793,7 +1793,7 @@
       "Mantiene el historial limpio y libre de merges complejos."
     ],
     "answer": 1,
-    "explanation": "Las ramas de versiones permiten mantener versiones anteriores mientras se desarrollan nuevas funcionalidades."
+    "explanation": "Las ramas de versión permiten parchear versiones anteriores mientras se desarrollan nuevas funcionalidades. No evitan los commits, ni generan etiquetas solas, ni garantizan un historial sin merges."
   },
   {
     "id": 154,
@@ -1805,7 +1805,7 @@
       "Para generar una nueva etiqueta de versión en la rama develop."
     ],
     "answer": 2,
-    "explanation": "Integrar el hotfix en develop asegura que la corrección de producción también esté en el desarrollo actual."
+    "explanation": "Tras fusionar el hotfix en master, se integra también en develop para que la corrección no se pierda en la próxima versión. No es para borrar la rama hotfix ni generar una nueva etiqueta en develop."
   },
   {
     "id": 155,
@@ -1817,7 +1817,7 @@
       "Git pausa el proceso, marca los archivos conflictivos y te permite resolverlos antes de continuar."
     ],
     "answer": 3,
-    "explanation": "Ante conflictos en cherry-pick, Git pausa, marca los archivos conflictivos y permite resolverlos antes de seguir."
+    "explanation": "Si el cherry-pick choca, Git pausa, marca los archivos en conflicto y espera a que los resuelvas antes de continuar. No descarta el commit, ni resuelve solo con la base, ni lo aplica ignorando el conflicto."
   },
   {
     "id": 156,
@@ -1829,7 +1829,7 @@
       "En las técnicas de integración continua."
     ],
     "answer": 0,
-    "explanation": "La filosofía lean aplicada al software tiene su origen en el sistema de producción de Toyota."
+    "explanation": "El lean nace del Sistema de Producción de Toyota (TPS), no del manifiesto ágil (posterior e inspirado en él), la revolución industrial ni la integración continua."
   },
   {
     "id": 157,
@@ -1841,7 +1841,7 @@
       "Uso de maquinaria especializada."
     ],
     "answer": 2,
-    "explanation": "Del lean se aplican al software la eliminación de desperdicios y la mejora continua."
+    "explanation": "Del lean se trasladan al software la eliminación de desperdicios y la mejora continua. La producción en masa, el adiestramiento repetitivo o la maquinaria especializada no se trasladan."
   },
   {
     "id": 158,
@@ -1853,7 +1853,7 @@
       "Foco en personal cualificado y creativo."
     ],
     "answer": 1,
-    "explanation": "El sistema de producción de Ford se define por su producción en masa estandarizada y rígida."
+    "explanation": "Ford se define por la producción en masa estandarizada y rígida (un modelo igual para todos). Adaptarse a la demanda, eliminar inventarios o el personal creativo son rasgos del enfoque de Toyota."
   },
   {
     "id": 159,
@@ -1865,7 +1865,7 @@
       "Flexibilidad y eliminación de desperdicios."
     ],
     "answer": 3,
-    "explanation": "Toyota superó a Ford gracias a su flexibilidad y a la eliminación de desperdicios."
+    "explanation": "Toyota triunfó por su flexibilidad y la eliminación de desperdicios, no por producir más rápido, automatizar más ni contratar gente más cualificada."
   },
   {
     "id": 160,
@@ -1877,7 +1877,7 @@
       "Tiempo dedicado a la formación de trabajadores."
     ],
     "answer": 2,
-    "explanation": "'Muda' es el desperdicio que no agrega valor al cliente en el contexto lean."
+    "explanation": "'Muda' es el desperdicio: toda actividad que consume recursos sin aportar valor al cliente. No es la automatización, la sobreproducción en concreto ni el tiempo de formación."
   },
   {
     "id": 161,
@@ -1889,7 +1889,7 @@
       "Delegar tareas entre trabajadores para aumentar eficiencia."
     ],
     "answer": 1,
-    "explanation": "El just-in-time consiste en fabricar solo lo necesario, en el momento necesario."
+    "explanation": "El just-in-time produce solo lo necesario justo cuando se necesita, evitando inventario. No es fabricar en grandes lotes, acumular stock ni repartir tareas para ganar eficiencia."
   },
   {
     "id": 162,
@@ -1901,7 +1901,7 @@
       "Automatización con intervención humana para mejora continua."
     ],
     "answer": 3,
-    "explanation": "Jidoka es la automatización con intervención humana para la mejora continua."
+    "explanation": "Jidoka es 'automatización con un toque humano': la máquina se detiene ante un defecto y una persona interviene para mejorar. No es automatización total, procesos rígidos ni depender de supervisores."
   },
   {
     "id": 163,
@@ -1913,7 +1913,7 @@
       "Mockups y diagramas de flujo."
     ],
     "answer": 0,
-    "explanation": "En software, las 'entradas' del proceso lean son las historias de usuario y el software existente."
+    "explanation": "En software, las entradas del proceso lean son las historias de usuario y el software ya existente que se transforma. No el producto final desplegado, inventarios físicos ni mockups."
   },
   {
     "id": 164,
@@ -1925,7 +1925,7 @@
       "Un elemento técnico que puede desarrollarse en varias iteraciones."
     ],
     "answer": 1,
-    "explanation": "Un Minimal Marketable Feature es la unidad más pequeña de funcionalidad con valor para el cliente."
+    "explanation": "Un Minimal Marketable Feature es la unidad más pequeña de funcionalidad que ya aporta valor al cliente. No una función completa y compleja, una tarea técnica interna ni algo invisible para él."
   },
   {
     "id": 165,
@@ -1937,7 +1937,7 @@
       "La calidad de las historias de usuario del backlog."
     ],
     "answer": 2,
-    "explanation": "Un value stream map identifica los pasos y tiempos que agregan valor o que generan desperdicios."
+    "explanation": "El value stream map identifica cada paso y sus tiempos, distinguiendo lo que aporta valor de lo que es desperdicio (esperas). No mide herramientas, costes por fase ni la calidad de las historias."
   },
   {
     "id": 166,
@@ -1949,7 +1949,7 @@
       "Cantidad total de tareas en el backlog."
     ],
     "answer": 1,
-    "explanation": "El WIP es la cantidad de trabajo en progreso en una etapa del proceso."
+    "explanation": "WIP es la cantidad de trabajo en curso en una etapa, lo empezado y no terminado. No es el tiempo de ciclo, el tiempo de espera ni el total de tareas del backlog."
   },
   {
     "id": 167,
@@ -1961,7 +1961,7 @@
       "Evitar acumulación excesiva y garantizar flujo constante."
     ],
     "answer": 3,
-    "explanation": "Limitar el WIP evita la acumulación excesiva y garantiza un flujo de trabajo constante."
+    "explanation": "Limitar el WIP evita que se acumule trabajo y mantiene un flujo constante, exponiendo cuellos de botella. No reduce desarrolladores, ni busca completar más tareas a la vez, ni mantener ocupadas las etapas iniciales."
   },
   {
     "id": 168,
@@ -1973,7 +1973,7 @@
       "Incrementar el backlog."
     ],
     "answer": 3,
-    "explanation": "'Incrementar el backlog' no es un principio del desarrollo de software lean."
+    "explanation": "Eliminar desperdicios, crear calidad y optimizar el conjunto sí son principios lean. 'Incrementar el backlog' va en contra: acumular trabajo sin entregar es justo un desperdicio."
   },
   {
     "id": 169,
@@ -1985,7 +1985,7 @@
       "Asumir decisiones definitivas al inicio del proyecto."
     ],
     "answer": 1,
-    "explanation": "'Decidir lo más tarde posible' implica tomar las decisiones importantes con la máxima información disponible."
+    "explanation": "Posponer la decisión hasta el último momento responsable busca decidir con la máxima información, no con suposiciones tempranas. No es dejar todo para después del lanzamiento, evitar decisiones ni fijarlas al inicio."
   },
   {
     "id": 170,
@@ -1997,7 +1997,7 @@
       "Trabajo colaborativo en una misma funcionalidad."
     ],
     "answer": 2,
-    "explanation": "La multitarea excesiva se considera un desperdicio según el enfoque lean."
+    "explanation": "La multitarea excesiva es desperdicio: cambiar de contexto continuamente cuesta tiempo y errores. Refactorizar, automatizar pruebas o colaborar en una funcionalidad sí aportan valor."
   },
   {
     "id": 171,
@@ -2009,7 +2009,7 @@
       "Impide realizar pruebas automatizadas de forma eficiente."
     ],
     "answer": 0,
-    "explanation": "El trabajo parcialmente hecho retrasa otros procesos y dificulta recibir feedback útil."
+    "explanation": "El trabajo a medias bloquea pasos posteriores y, al no estar terminado, no da feedback útil. No es sobre todo que reduzca la capacidad del equipo, aumente la deuda técnica o impida pruebas."
   },
   {
     "id": 172,
@@ -2021,7 +2021,7 @@
       "Garantiza la eliminación de toda deuda técnica acumulada."
     ],
     "answer": 2,
-    "explanation": "Las entregas rápidas facilitan recibir feedback del cliente y adaptarse con rapidez."
+    "explanation": "Entregar rápido permite recoger feedback del cliente pronto y adaptarse. No reduce por sí mismo los bugs, ni evita cambios en el backlog, ni elimina toda la deuda técnica."
   },
   {
     "id": 173,
@@ -2033,7 +2033,7 @@
       "Reduciendo el tiempo dedicado a pruebas automatizadas."
     ],
     "answer": 1,
-    "explanation": "La deuda técnica se minimiza refactorizando el código de forma constante."
+    "explanation": "La deuda técnica se contiene refactorizando de forma constante, manteniendo el código sano. No retrasando la integración, ni con más pruebas manuales, ni reduciendo las automatizadas."
   },
   {
     "id": 174,
@@ -2045,7 +2045,7 @@
       "Una visualización del progreso acumulado en las fases de desarrollo."
     ],
     "answer": 3,
-    "explanation": "El diagrama de flujo acumulado visualiza el progreso acumulado en las fases de desarrollo."
+    "explanation": "El cumulative flow diagram visualiza cuántos ítems hay en cada fase a lo largo del tiempo, mostrando el progreso y los cuellos de botella. No es la arquitectura, la calidad del código ni los bugs por semana."
   },
   {
     "id": 175,
@@ -2057,7 +2057,7 @@
       "Diseñar un backlog más optimizado y detallado."
     ],
     "answer": 1,
-    "explanation": "La técnica de los '5 por qués' identifica la causa raíz de un problema mediante la reflexión."
+    "explanation": "Preguntar '¿por qué?' cinco veces busca llegar a la causa raíz de un problema, no a soluciones superficiales. No es proponer parches rápidos, crear hipótesis del software ni optimizar el backlog."
   },
   {
     "id": 176,
@@ -2069,7 +2069,7 @@
       "Historias de usuario bien documentadas y priorizadas."
     ],
     "answer": 1,
-    "explanation": "Un backlog de características que nunca se implementan es un ejemplo de inventario innecesario."
+    "explanation": "Un backlog lleno de características que nunca se construyen es inventario que ocupa y no aporta valor. Las funciones prioritarias, las herramientas de automatización o las historias bien documentadas no lo son."
   },
   {
     "id": 177,
@@ -2081,7 +2081,7 @@
       "Entregar incrementos de valor regularmente y con ciclos cortos."
     ],
     "answer": 3,
-    "explanation": "La entrega continua entrega incrementos de valor de forma regular y con ciclos cortos."
+    "explanation": "La entrega continua entrega incrementos de valor con frecuencia y ciclos cortos. No evita despliegues, ni maximiza el inventario del backlog, ni aumenta la documentación por release."
   },
   {
     "id": 178,
@@ -2093,7 +2093,7 @@
       "Un diagrama para identificar problemas en el flujo de trabajo."
     ],
     "answer": 2,
-    "explanation": "Una trace bullet es una funcionalidad mínima que sirve para probar el sistema completo."
+    "explanation": "Una tracer bullet (bala trazadora) es una funcionalidad mínima que atraviesa todas las capas para probar el sistema de extremo a extremo. No es una línea que marca un bug, un backlog ni un diagrama."
   },
   {
     "id": 179,
@@ -2105,7 +2105,7 @@
       "Usar siempre decisiones tempranas."
     ],
     "answer": 0,
-    "explanation": "Para Mary Poppendieck, un principio clave del desarrollo lean es eliminar los desperdicios."
+    "explanation": "Para Poppendieck, eliminar desperdicios es un principio lean central. Reducir el backlog, priorizar tareas secundarias o decidir siempre pronto no son principios lean."
   },
   {
     "id": 180,
@@ -2117,7 +2117,7 @@
       "Considerar el valor final del producto para el usuario."
     ],
     "answer": 3,
-    "explanation": "'Optimizar el conjunto' implica considerar el valor final del producto para el usuario."
+    "explanation": "Optimizar el conjunto es mirar el valor final para el usuario y no optimizar partes aisladas a costa del todo. No es reducir herramientas, priorizar funciones sueltas ni añadir documentación."
   },
   {
     "id": 181,
@@ -2129,7 +2129,7 @@
       "Aumentar el tamaño del backlog para gestionar cambios."
     ],
     "answer": 2,
-    "explanation": "Para construir calidad en el software se usan revisiones de código y pruebas automatizadas."
+    "explanation": "La calidad se construye con revisiones de código y pruebas automatizadas que evitan defectos desde el inicio. No evitando refactorizar, sumando pasos manuales ni agrandando el backlog."
   },
   {
     "id": 182,
@@ -2141,7 +2141,7 @@
       "Porque permite evitar el uso de pruebas automatizadas."
     ],
     "answer": 1,
-    "explanation": "Hay que minimizar la deuda técnica porque los problemas acumulados afectan a la evolución futura."
+    "explanation": "La deuda técnica acumulada frena la evolución futura del software, haciéndola más lenta y arriesgada. No se trata de reducir documentación, dar visibilidad al cliente ni evitar pruebas."
   },
   {
     "id": 183,
@@ -2153,7 +2153,7 @@
       "El tiempo promedio que toma completar una funcionalidad."
     ],
     "answer": 3,
-    "explanation": "El cycle time mide el tiempo promedio que toma completar una funcionalidad."
+    "explanation": "El cycle time mide el tiempo medio en completar una funcionalidad (desde que empieza su desarrollo). No es tareas por sprint, tiempo corrigiendo bugs ni número de iteraciones."
   },
   {
     "id": 184,
@@ -2165,7 +2165,7 @@
       "Evalúa exclusivamente el diseño arquitectónico del proyecto."
     ],
     "answer": 2,
-    "explanation": "El diagrama de flujo acumulado ayuda a identificar cuellos de botella en el proceso."
+    "explanation": "El cumulative flow diagram revela cuellos de botella cuando una banda (fase) se ensancha porque se acumula trabajo. No predice el tiempo de cada tarea, ni cuenta bugs, ni evalúa solo la arquitectura."
   },
   {
     "id": 185,
@@ -2177,7 +2177,7 @@
       "Se maximiza el WIP en todas las etapas."
     ],
     "answer": 1,
-    "explanation": "En un sistema pull, el trabajo avanza según las demandas del cliente o del proceso."
+    "explanation": "En un sistema pull el trabajo se 'tira' según la demanda: cada etapa toma trabajo cuando tiene capacidad. No produce por estimaciones, ni acumula en el backlog, ni maximiza el WIP."
   },
   {
     "id": 186,
@@ -2189,7 +2189,7 @@
       "Aumentar la complejidad de las tareas individuales."
     ],
     "answer": 2,
-    "explanation": "Limitar el WIP reduce las acumulaciones y mantiene el flujo de trabajo."
+    "explanation": "Limitar el WIP evita acumulaciones y mantiene el flujo fluido, además de exponer bloqueos. No es evitar conflictos entre personas, acelerar la entrega final sin más ni aumentar la complejidad."
   },
   {
     "id": 187,
@@ -2201,7 +2201,7 @@
       "Usar entregas frecuentes para reducir opciones futuras."
     ],
     "answer": 0,
-    "explanation": "El 'option thinking' consiste en mantener abiertas las opciones para decidir en el último momento."
+    "explanation": "Option thinking es mantener opciones abiertas para decidir en el último momento responsable, cuando se sabe más. No es decidir rápido, completar todo al inicio del sprint ni reducir opciones futuras."
   },
   {
     "id": 188,
@@ -2213,7 +2213,7 @@
       "Simplifica el backlog al eliminar tareas no prioritarias."
     ],
     "answer": 1,
-    "explanation": "El enfoque incremental permite entregar funcionalidades valiosas desde etapas tempranas."
+    "explanation": "Lo incremental entrega funcionalidades valiosas pronto, sin esperar al final. No reduce la necesidad de pruebas, ni aumenta dependencias entre características, ni simplifica el backlog quitando tareas."
   },
   {
     "id": 189,
@@ -2225,7 +2225,7 @@
       "Características prioritarias entregadas al cliente."
     ],
     "answer": 2,
-    "explanation": "El trabajo parcialmente hecho que no genera valor se considera un desperdicio."
+    "explanation": "El trabajo a medias que no se entrega es desperdicio: ocupa y no da valor ni feedback. Los ítems listos para el sprint, la documentación mínima o las funciones prioritarias entregadas no lo son."
   },
   {
     "id": 190,
@@ -2237,7 +2237,7 @@
       "Características complejas que los usuarios no usan."
     ],
     "answer": 3,
-    "explanation": "Las características complejas que los usuarios no usan son un ejemplo de funcionalidades 'de más'."
+    "explanation": "Construir funciones complejas que nadie usa es esfuerzo desperdiciado ('de más'). El MVP mínimo, las mejoras según feedback o las refactorizaciones sí aportan."
   },
   {
     "id": 191,
@@ -2249,7 +2249,7 @@
       "Análisis de deuda técnica."
     ],
     "answer": 0,
-    "explanation": "Los diagramas de flujo acumulado permiten medir la velocidad del desarrollo en un proyecto."
+    "explanation": "El cumulative flow diagram permite medir el ritmo de entrega y detectar problemas de flujo. Las pruebas A/B miden el valor de funciones, el tablero físico organiza y la deuda técnica es otra cosa."
   },
   {
     "id": 192,
@@ -2261,7 +2261,7 @@
       "Comparar versiones de una funcionalidad para obtener retroalimentación."
     ],
     "answer": 3,
-    "explanation": "Una prueba A/B compara versiones de una funcionalidad para obtener retroalimentación."
+    "explanation": "Una prueba A/B muestra dos versiones a distintos usuarios y compara su comportamiento para decidir con datos. No reduce el backlog, ni implementa entregas rápidas, ni detecta cuellos de botella."
   },
   {
     "id": 193,
@@ -2273,7 +2273,7 @@
       "Aumentar la carga de trabajo para acelerar el tiempo de entrega."
     ],
     "answer": 2,
-    "explanation": "'Potenciar al equipo' implica crear un entorno de trabajo sostenible y colaborativo."
+    "explanation": "Potenciar al equipo (empower) es crear un entorno sostenible y colaborativo donde la gente decide y mejora. No es evitar revisiones, delegar todo en la dirección ni subir la carga de trabajo."
   },
   {
     "id": 194,
@@ -2285,7 +2285,7 @@
       "Para reducir el tiempo dedicado a reuniones de equipo."
     ],
     "answer": 1,
-    "explanation": "Evitar depender de 'héroes' fomenta la responsabilidad compartida y evita dependencias."
+    "explanation": "Depender de 'héroes' crea un punto único de fallo; repartir la responsabilidad hace al equipo robusto. No es que tomen malas decisiones, ralenticen revisiones ni para reducir reuniones."
   },
   {
     "id": 195,
@@ -2297,7 +2297,7 @@
       "Considerar el impacto global del producto en los usuarios finales."
     ],
     "answer": 3,
-    "explanation": "'Optimizar el conjunto' es considerar el impacto global del producto en los usuarios finales."
+    "explanation": "Optimizar el conjunto mira el impacto global del producto en el usuario, no maximizar partes sueltas. No es priorizar desarrollo sobre pruebas, lo individual sobre lo colectivo ni reducir las pruebas."
   },
   {
     "id": 196,
@@ -2309,7 +2309,7 @@
       "Evitar acumulaciones en el flujo de trabajo pull."
     ],
     "answer": 0,
-    "explanation": "La técnica de los '5 por qués' busca identificar la causa raíz de un problema en el proceso."
+    "explanation": "Los '5 por qués' buscan la causa raíz de un problema preguntando repetidamente. No justifican cambios del backlog, ni reducen tiempos de desarrollo, ni evitan acumulaciones del flujo."
   },
   {
     "id": 197,
@@ -2321,7 +2321,7 @@
       "Aumentar la deuda técnica para entregar rápido."
     ],
     "answer": 1,
-    "explanation": "Decidir en el 'último momento responsable' se relaciona con Defer Commitment (posponer el compromiso)."
+    "explanation": "Decidir en el último momento responsable es el principio Defer Commitment (posponer el compromiso). No es minimizar reuniones, reducir la planificación ni aumentar la deuda técnica."
   },
   {
     "id": 198,
@@ -2333,7 +2333,7 @@
       "Reduce la necesidad de revisar las decisiones de diseño futuras."
     ],
     "answer": 2,
-    "explanation": "Mantener opciones abiertas permite probar alternativas y ajustar según la retroalimentación."
+    "explanation": "Mantener opciones abiertas permite probar alternativas y ajustar según el feedback antes de comprometerse. No es para evitar pruebas de regresión, reducir el desarrollo inicial ni evitar revisar decisiones."
   },
   {
     "id": 199,
@@ -2345,7 +2345,7 @@
       "Utilizar pruebas continuas durante cada sprint."
     ],
     "answer": 0,
-    "explanation": "Limitar el backlog a las características prioritarias de uno o dos meses minimiza su tamaño."
+    "explanation": "Se reduce el backlog limitándolo a las características prioritarias de uno o dos meses, evitando acumular trabajo no entregado. No es crear versiones alternativas, expandirlo a largo plazo ni usar pruebas continuas."
   },
   {
     "id": 200,
@@ -2357,7 +2357,7 @@
       "El incremento más pequeño que aporta valor al cliente final."
     ],
     "answer": 3,
-    "explanation": "Un MMF es el incremento más pequeño que aporta valor al cliente final."
+    "explanation": "Un Minimal Marketable Feature es el incremento más pequeño que ya aporta valor al cliente final. No es una característica descartada, un componente técnico invisible ni una mejora solo interna."
   },
   {
     "id": 201,
@@ -2369,7 +2369,7 @@
       "Los logs generados por los sistemas en producción."
     ],
     "answer": 2,
-    "explanation": "Las características implementadas pero no desplegadas son inventario que debe minimizarse."
+    "explanation": "Las funciones ya implementadas pero sin desplegar son inventario que no genera valor hasta llegar al usuario. Las pruebas automatizadas, las funciones desplegadas y en uso o los logs no son ese inventario."
   },
   {
     "id": 202,
@@ -2381,7 +2381,7 @@
       "Aumentar el equipo de QA para reducir los reportes manuales."
     ],
     "answer": 0,
-    "explanation": "Un sistema de triaje para priorizar y cerrar bugs no críticos ayuda a minimizar la base de datos de bugs."
+    "explanation": "Un triaje que prioriza y cierra los bugs no críticos evita que la base de datos de bugs crezca sin control (es inventario). Ampliar el backlog, generar más reportes o más QA no la reduce."
   },
   {
     "id": 203,
@@ -2393,7 +2393,7 @@
       "El número máximo de ítems procesados simultáneamente en una etapa."
     ],
     "answer": 3,
-    "explanation": "El WIP es el número máximo de ítems procesados simultáneamente en una etapa."
+    "explanation": "El WIP es el número máximo de ítems que se procesan a la vez en una etapa, que se limita a propósito. No es el total del backlog, el número de iteraciones ni los ítems descartados."
   },
   {
     "id": 204,
@@ -2405,7 +2405,7 @@
       "Que todas las funcionalidades pasen por pruebas automatizadas."
     ],
     "answer": 1,
-    "explanation": "El límite de WIP asegura que las etapas del flujo de trabajo no se saturen."
+    "explanation": "El límite de WIP impide que una etapa se sature de trabajo, manteniendo el flujo. No asegura que todo sea de alta prioridad, que cada ítem tenga responsable ni que todo pase por pruebas."
   },
   {
     "id": 205,
@@ -2417,7 +2417,7 @@
       "Evitar el uso de revisiones de código para acelerar ciclos."
     ],
     "answer": 0,
-    "explanation": "Refactorizar el código para evitar acumular deuda técnica fomenta la calidad."
+    "explanation": "Refactorizar de continuo evita acumular deuda técnica y mantiene la calidad. Minimizar pruebas, meter funciones de baja prioridad o evitar revisiones de código la empeoran."
   },
   {
     "id": 206,
@@ -2429,7 +2429,7 @@
       "Problemas de diseño o implementación que dificultan mantenimiento y ampliación."
     ],
     "answer": 3,
-    "explanation": "La deuda técnica son problemas de diseño o implementación que dificultan el mantenimiento y la ampliación."
+    "explanation": "La deuda técnica son problemas de diseño o implementación que encarecen el mantenimiento y la ampliación futuros. No son costes de herramientas, tiempo de documentación ni características descartadas."
   },
   {
     "id": 207,
@@ -2441,7 +2441,7 @@
       "Reducir el tiempo dedicado a las reuniones de planificación."
     ],
     "answer": 1,
-    "explanation": "Un Value Stream Map identifica las actividades que no generan valor para poder eliminarlas."
+    "explanation": "Un Value Stream Map mapea el proceso para detectar las actividades que no aportan valor (esperas, retrabajo) y eliminarlas. No es paralelizar tareas, centralizar decisiones ni reducir reuniones."
   },
   {
     "id": 208,
@@ -2453,7 +2453,7 @@
       "La cantidad de pruebas automatizadas necesarias por funcionalidad."
     ],
     "answer": 2,
-    "explanation": "En un Value Stream Map se analizan los tiempos de trabajo y de espera en cada fase del proceso."
+    "explanation": "El Value Stream Map analiza los tiempos de trabajo y de espera de cada fase, para ver dónde se pierde tiempo. No los costes financieros, las personas por tarea ni las pruebas por funcionalidad."
   },
   {
     "id": 209,
@@ -2465,7 +2465,7 @@
       "La variabilidad de la productividad diaria del equipo."
     ],
     "answer": 2,
-    "explanation": "El diagrama de flujo acumulado muestra la cantidad de ítems completados en cada etapa del proceso."
+    "explanation": "El cumulative flow diagram muestra cuántos ítems hay o se completan en cada etapa a lo largo del tiempo. No la deuda técnica semanal, los bugs por sprint ni la productividad diaria."
   },
   {
     "id": 210,
@@ -2477,7 +2477,7 @@
       "Para optimizar el backlog añadiendo nuevas funcionalidades."
     ],
     "answer": 1,
-    "explanation": "El diagrama de flujo acumulado se usa para identificar cuellos de botella en el flujo de trabajo."
+    "explanation": "Se usa para detectar cuellos de botella: una banda que se ensancha indica acumulación en esa fase. No para asignar tareas en tiempo real, priorizar por tamaño ni añadir funcionalidades al backlog."
   },
   {
     "id": 211,
@@ -2489,7 +2489,7 @@
       "Para deshacer cambios si se identifican problemas en producción."
     ],
     "answer": 3,
-    "explanation": "Las decisiones reversibles permiten deshacer cambios si se identifican problemas en producción."
+    "explanation": "Las decisiones reversibles permiten deshacer cambios si algo va mal en producción, reduciendo el riesgo. No es para acortar el diseño inicial, evitar decisiones en el sprint ni que las tareas no requieran revisión."
   },
   {
     "id": 212,
@@ -2501,7 +2501,7 @@
       "Mantener una base de datos extensa con bugs no resueltos."
     ],
     "answer": 0,
-    "explanation": "Usar un sistema de control de versiones efectivo ayuda a garantizar decisiones reversibles."
+    "explanation": "Un buen control de versiones permite volver a un estado anterior, garantizando la reversibilidad. No reducir el tamaño de los sprints, probar solo al final ni mantener una base de bugs sin resolver."
   },
   {
     "id": 213,
@@ -2513,7 +2513,7 @@
       "Evitar la delegación para que todos los miembros sean autosuficientes."
     ],
     "answer": 2,
-    "explanation": "Los equipos lean fomentan respetar a las personas y potenciar la colaboración del equipo."
+    "explanation": "Lean fomenta respetar a las personas y potenciar la colaboración del equipo. No aumentar el trabajo en paralelo, reducir reuniones a toda costa ni evitar la delegación."
   },
   {
     "id": 214,
@@ -2525,7 +2525,7 @@
       "Potenciar la comunicación entre los miembros del equipo."
     ],
     "answer": 1,
-    "explanation": "Crear una dependencia excesiva en 'héroes' para resolver problemas contradice los principios lean."
+    "explanation": "Depender de 'héroes' contradice lean: crea un punto único de fallo y mina la responsabilidad compartida. Transparencia, entorno sostenible y comunicación sí son lean."
   },
   {
     "id": 215,
@@ -2537,7 +2537,7 @@
       "Optimizar el conjunto (Optimize the Whole)."
     ],
     "answer": 0,
-    "explanation": "'Entregar rápido' es el principio lean alineado con entregar software funcionando frecuentemente."
+    "explanation": "Entregar rápido (Deliver Fast) es el principio lean que se alinea con la entrega frecuente de software ágil. Respetar a las personas, posponer el compromiso u optimizar el conjunto apuntan a otra cosa."
   },
   {
     "id": 216,
@@ -2549,7 +2549,7 @@
       "La unidad mínima de funcionalidad que aporta valor al cliente."
     ],
     "answer": 3,
-    "explanation": "Un Minimal Marketable Feature es la unidad mínima de funcionalidad que aporta valor al cliente."
+    "explanation": "Un Minimal Marketable Feature es la unidad mínima de funcionalidad que ya aporta valor al cliente. No la característica más compleja, una función para pruebas internas ni un prototipo de viabilidad."
   },
   {
     "id": 217,
@@ -2561,7 +2561,7 @@
       "Fomentando el uso de documentación extensa y detallada."
     ],
     "answer": 0,
-    "explanation": "El MMF ayuda priorizando funcionalidades pequeñas que aporten valor rápidamente."
+    "explanation": "El MMF ayuda priorizando funcionalidades pequeñas que entregan valor cuanto antes. No asegura desarrollar todo el backlog, reducir historias por sprint ni fomentar documentación extensa."
   },
   {
     "id": 218,
@@ -2573,7 +2573,7 @@
       "El tiempo de inactividad en un proceso de desarrollo."
     ],
     "answer": 1,
-    "explanation": "El lead time es el tiempo total desde la solicitud de una funcionalidad hasta su entrega."
+    "explanation": "El lead time es el tiempo total desde que se solicita una funcionalidad hasta que se entrega (incluye esperas). No es solo el tiempo de pruebas, el de una tarea concreta ni la inactividad."
   },
   {
     "id": 219,
@@ -2585,7 +2585,7 @@
       "El tiempo total desde el inicio del backlog hasta el final del proyecto."
     ],
     "answer": 2,
-    "explanation": "El cycle time mide el tiempo para completar una tarea desde que comienza su desarrollo."
+    "explanation": "El cycle time mide el tiempo desde que una tarea empieza a desarrollarse hasta que se completa (sin la espera previa). No es el del proyecto entero, el de resolver conflictos ni el del backlog completo."
   },
   {
     "id": 220,
@@ -2597,7 +2597,7 @@
       "Aumenta la cantidad de historias completadas en cada sprint."
     ],
     "answer": 0,
-    "explanation": "Entregar rápido permite obtener feedback del cliente con rapidez."
+    "explanation": "Entregar rápido permite recoger feedback del cliente cuanto antes y corregir el rumbo. No reduce los costes generales, ni minimiza pruebas, ni se trata de completar más historias por sprint."
   },
   {
     "id": 221,
@@ -2609,14 +2609,14 @@
       "Un diagrama de Gantt."
     ],
     "answer": 2,
-    "explanation": "Los diagramas de flujo acumulado son la herramienta más útil para analizar los tiempos de entrega."
+    "explanation": "El cumulative flow diagram es lo más útil para analizar tiempos de entrega y flujo (lead/cycle time). El backlog lista trabajo, una matriz de decisiones elige opciones y un Gantt planifica fechas."
   },
   {
     "id": 222,
     "question": "¿Qué tipo de desperdicio corresponde a tareas simultáneas que causan cambios constantes de enfoque?",
     "options": ["Reaprendizaje.", "Delegación.", "Trabajo parcialmente hecho.", "Multi-tarea."],
     "answer": 3,
-    "explanation": "La multitarea es el desperdicio de tareas simultáneas que provocan cambios constantes de enfoque."
+    "explanation": "Hacer varias tareas a la vez (multitarea) obliga a cambiar de contexto constantemente: ese es el desperdicio. Reaprendizaje, delegación o trabajo a medias son otros desperdicios distintos."
   },
   {
     "id": 223,
@@ -2628,7 +2628,7 @@
       "Porque siempre generan conflictos en los sprints."
     ],
     "answer": 0,
-    "explanation": "Las características no utilizadas son desperdicio porque no aportan valor y consumen recursos."
+    "explanation": "Las funciones no usadas consumen esfuerzo y mantenimiento sin dar valor al cliente: puro desperdicio. No es que sean las más difíciles de mantener, alarguen las pruebas ni generen conflictos siempre."
   },
   {
     "id": 224,
@@ -2640,7 +2640,7 @@
       "Incrementar la cantidad de tareas completadas por sprint."
     ],
     "answer": 2,
-    "explanation": "'Optimizar el conjunto' busca que todo el proceso de desarrollo esté alineado con los objetivos finales."
+    "explanation": "Optimizar el conjunto alinea todo el proceso con los objetivos finales, en vez de mejorar fases sueltas a costa del todo. No es reducir pruebas, evitar deuda técnica sin más ni completar más tareas por sprint."
   },
   {
     "id": 225,
@@ -2652,7 +2652,7 @@
       "Priorizar tareas individuales sobre objetivos globales del producto."
     ],
     "answer": 1,
-    "explanation": "Usar la técnica de los '5 por qués' para analizar problemas es un ejemplo práctico de optimizar el conjunto."
+    "explanation": "Usar los '5 por qués' para llegar a la causa raíz mejora el sistema completo, no un parche local: encaja con optimizar el conjunto. Reducir reuniones, agrandar el backlog o priorizar tareas sueltas no."
   },
   {
     "id": 226,
@@ -2664,7 +2664,7 @@
       "Una fase del flujo de trabajo de desarrollo."
     ],
     "answer": 3,
-    "explanation": "Cada columna de un tablero Kanban representa una fase del flujo de trabajo de desarrollo."
+    "explanation": "Cada columna del tablero representa una fase del flujo de trabajo (por hacer, en curso, en pruebas, hecho). No es una iteración, una prioridad ni un tipo de desperdicio."
   },
   {
     "id": 227,
@@ -2676,7 +2676,7 @@
       "Prioriza tareas más complejas en cada fase."
     ],
     "answer": 0,
-    "explanation": "Limitar el WIP reduce la sobrecarga y mejora la eficiencia del equipo."
+    "explanation": "Limitar el WIP reduce la sobrecarga y los cambios de contexto, mejorando la eficiencia y el flujo. No aumenta tareas simultáneas, ni facilita incorporar gente, ni prioriza lo complejo."
   },
   {
     "id": 228,
@@ -2688,7 +2688,7 @@
       "Reducir el tiempo asignado a la planificación inicial."
     ],
     "answer": 2,
-    "explanation": "'Decidir lo más tarde posible' es mantener las opciones abiertas hasta tener suficiente información."
+    "explanation": "Es mantener opciones abiertas y decidir cuando se tiene suficiente información, en el último momento responsable. No es tomar decisiones rápidas, evitarlas en el sprint ni recortar la planificación inicial."
   },
   {
     "id": 229,
@@ -2700,7 +2700,7 @@
       "Usar un sistema de despliegue que permita revertir cambios fácilmente."
     ],
     "answer": 3,
-    "explanation": "Un sistema de despliegue que permita revertir cambios fácilmente fomenta la reversibilidad de decisiones."
+    "explanation": "Un sistema de despliegue que permite revertir rápido hace las decisiones reversibles y reduce el riesgo. Ampliar el backlog, usar Gantt o reducir revisiones no aportan reversibilidad."
   },
   {
     "id": 230,
@@ -2712,7 +2712,7 @@
       "Todas las anteriores."
     ],
     "answer": 3,
-    "explanation": "El trabajo parcialmente hecho incluye código sin desplegar, código no testeado y tareas sin subir al repo."
+    "explanation": "Trabajo parcialmente hecho engloba código listo sin desplegar, documentación o código no testeado y tareas sin subir al repo: todas son trabajo a medias. Por eso la respuesta es 'todas las anteriores'."
   },
   {
     "id": 231,
@@ -2724,7 +2724,7 @@
       "Todas las anteriores."
     ],
     "answer": 3,
-    "explanation": "Las características de más son desperdicio: poco usadas, añaden complejidad y dificultan el mantenimiento."
+    "explanation": "Las funciones 'de más' ocupan espacio, rara vez se usan y añaden complejidad de mantenimiento: todas esas razones aplican, de ahí 'todas las anteriores'."
   },
   {
     "id": 232,
@@ -2736,7 +2736,7 @@
       "Se acumulan bugs en las fases iniciales de desarrollo."
     ],
     "answer": 1,
-    "explanation": "El reaprendizaje ocurre cuando la falta de comunicación obliga al equipo a reaprender algo que ya conocía."
+    "explanation": "El reaprendizaje ocurre cuando, por mala comunicación o documentación, el equipo tiene que volver a aprender algo que ya sabía. No es solo retomar tras inactividad, revisar decisiones tempranas ni acumular bugs."
   },
   {
     "id": 233,
@@ -2748,7 +2748,7 @@
       "Se prioriza siempre el trabajo en paralelo para mayor velocidad."
     ],
     "answer": 1,
-    "explanation": "En un sistema pull, las tareas avanzan a la siguiente fase solo cuando hay capacidad disponible."
+    "explanation": "En pull, una tarea pasa a la siguiente fase solo cuando esa fase tiene capacidad: el trabajo se 'tira', no se empuja. No es trabajar sin límites, asignar tareas automáticamente ni priorizar siempre el paralelismo."
   },
   {
     "id": 234,
@@ -2760,7 +2760,7 @@
       "La cantidad de tareas pendientes en el backlog."
     ],
     "answer": 1,
-    "explanation": "En un tablero Kanban, el WIP es la cantidad máxima de tareas permitidas en una columna."
+    "explanation": "En el tablero, el WIP es el máximo de tareas permitidas a la vez en una columna. No es el tiempo medio por tarea, las listas para revisión ni el total del backlog."
   },
   {
     "id": 235,
@@ -2772,7 +2772,7 @@
       "Limita la creatividad del equipo."
     ],
     "answer": 0,
-    "explanation": "El sistema push, frente al pull, genera acumulación de trabajo en las fases intermedias del proceso."
+    "explanation": "Un sistema push empuja trabajo aunque la siguiente fase no pueda con él, acumulándolo en las fases intermedias. No es que promueva entregas sin calidad, impida ver cuellos de botella ni limite la creatividad."
   },
   {
     "id": 236,
@@ -2784,7 +2784,7 @@
       "El tiempo necesario para corregir un defecto crítico."
     ],
     "answer": 0,
-    "explanation": "El lead time es el tiempo total que tarda un elemento desde que se inicia hasta que se entrega."
+    "explanation": "El lead time mide el tiempo total de un elemento desde que se inicia hasta que se entrega (incluye esperas). No es el tiempo en el backlog, las tareas por semana ni el tiempo de corregir un defecto."
   },
   {
     "id": 237,
@@ -2796,7 +2796,7 @@
       "Que el equipo está cerrando tareas más rápido de lo esperado."
     ],
     "answer": 1,
-    "explanation": "Una separación creciente entre líneas indica acumulación de tareas en una fase: un cuello de botella."
+    "explanation": "Si la banda entre dos fases se ensancha, hay tareas acumulándose ahí: un cuello de botella. No indica que la velocidad suba, que se actualice el backlog ni que se cierren tareas más rápido."
   },
   {
     "id": 238,
@@ -2808,7 +2808,7 @@
       "Mejora la relación entre desarrolladores y product owners."
     ],
     "answer": 1,
-    "explanation": "El value stream mapping identifica las fases del proceso donde hay tiempos muertos o desperdicios."
+    "explanation": "El value stream mapping localiza las fases con tiempos muertos o desperdicios para eliminarlos. No prioriza el backlog, ni hace el seguimiento diario, ni mejora la relación con el PO."
   },
   {
     "id": 239,
@@ -2820,7 +2820,7 @@
       "Tomar decisiones tempranas para evitar futuros conflictos."
     ],
     "answer": 0,
-    "explanation": "Según 'Decidir lo más tarde posible', se retrasan las decisiones críticas hasta tener la información necesaria."
+    "explanation": "Se posponen las decisiones críticas hasta tener la información necesaria, en el último momento responsable. No es completar todo el backlog antes, dejarlas al PO sin consulta ni decidir pronto para evitar conflictos."
   },
   {
     "id": 240,
@@ -2832,7 +2832,7 @@
       "Aumentar la cantidad de reuniones de planificación."
     ],
     "answer": 0,
-    "explanation": "Construir calidad desde el principio se logra con refactorización constante y revisión de código."
+    "explanation": "Construir calidad desde el inicio se logra con refactorización constante y revisión de código. No con documentación extensa, herramientas de diseño gráfico ni más reuniones de planificación."
   },
   {
     "id": 241,
@@ -2844,7 +2844,7 @@
       "Una técnica para optimizar el proceso de despliegue continuo."
     ],
     "answer": 0,
-    "explanation": "Una tracer bullet es una pequeña funcionalidad que permite probar todas las capas del sistema."
+    "explanation": "Una tracer bullet es una funcionalidad mínima que atraviesa todas las capas para validar la arquitectura de extremo a extremo. No es una herramienta de rastreo de errores, un método de priorización ni de despliegue."
   },
   {
     "id": 242,
@@ -2856,7 +2856,7 @@
       "Se centran en grandes entregas a largo plazo."
     ],
     "answer": 0,
-    "explanation": "Kanban y los sistemas lean comparten que permiten identificar desperdicios en el flujo de trabajo."
+    "explanation": "Kanban y lean comparten que, al visualizar el flujo, dejan ver los desperdicios (esperas, acumulaciones). No priorizan el paralelismo, ni evitan el sistema pull, ni se centran en grandes entregas."
   },
   {
     "id": 243,
@@ -2868,7 +2868,7 @@
       "Mantener un backlog más extenso."
     ],
     "answer": 0,
-    "explanation": "Para limitar el WIP se evita añadir tareas nuevas hasta terminar las actuales."
+    "explanation": "Para limitar el WIP, se evita empezar tareas nuevas hasta terminar las que están en curso ('stop starting, start finishing'). No es agrandar el equipo, reducir reuniones ni mantener un backlog más extenso."
   },
   {
     "id": 244,
@@ -2880,7 +2880,7 @@
       "Reduce la necesidad de reuniones entre el equipo y el PO."
     ],
     "answer": 1,
-    "explanation": "Implementar límites de WIP facilita la detección de cuellos de botella en el proceso."
+    "explanation": "Los límites de WIP hacen visibles los cuellos de botella: si una columna se llena y bloquea, ahí está el problema. No aumentan el paralelismo, ni ajustan el backlog, ni reducen reuniones."
   },
   {
     "id": 245,
@@ -2892,7 +2892,7 @@
       "Just-in-time y Jidoka."
     ],
     "answer": 3,
-    "explanation": "Los dos principios básicos del sistema de producción de Toyota son just-in-time y jidoka."
+    "explanation": "Los dos pilares del Sistema de Producción de Toyota son just-in-time y jidoka. Kaizen y Lean Manufacturing son conceptos relacionados, pero no los dos pilares que pregunta."
   },
   {
     "id": 246,
@@ -2904,7 +2904,7 @@
       "Eliminación de desperdicios en el proceso."
     ],
     "answer": 2,
-    "explanation": "Jidoka es la automatización con intervención humana orientada a la mejora continua."
+    "explanation": "Jidoka es automatizar con intervención humana: parar ante un defecto para corregirlo y mejorar. No es automatización total sin personas, producción en masa ni solo eliminar desperdicios."
   },
   {
     "id": 247,
@@ -2916,7 +2916,7 @@
       "Reducir el número de reuniones del equipo."
     ],
     "answer": 0,
-    "explanation": "Visualizar el flujo muestra en qué está trabajando el equipo en un momento dado."
+    "explanation": "Visualizar el flujo muestra de un vistazo en qué trabaja el equipo y dónde está cada ítem. No es controlar el tiempo por persona, aumentar el trabajo en progreso ni reducir reuniones."
   },
   {
     "id": 248,
@@ -2928,7 +2928,7 @@
       "La cantidad de tareas pendientes en el backlog."
     ],
     "answer": 1,
-    "explanation": "El límite de WIP es el número máximo de elementos que puede haber en un estado del flujo de trabajo."
+    "explanation": "Un límite de WIP es el máximo de ítems permitidos a la vez en un estado o columna. No es un mínimo por columna, el tiempo máximo por tarea ni el total del backlog."
   },
   {
     "id": 249,
@@ -2940,7 +2940,7 @@
       "Establecer sprints de duración fija."
     ],
     "answer": 3,
-    "explanation": "Establecer sprints de duración fija no es una de las tres prácticas fundamentales de Kanban."
+    "explanation": "Visualizar el flujo, limitar el WIP y medir/optimizar el flujo sí son prácticas de Kanban. Los sprints de duración fija son de Scrum; Kanban es de flujo continuo, por eso no encaja."
   },
   {
     "id": 250,
@@ -2952,7 +2952,7 @@
       "Se evita la multitarea excesiva."
     ],
     "answer": 2,
-    "explanation": "Un límite de WIP demasiado alto provoca sobrecarga de trabajo y muchas tareas paradas."
+    "explanation": "Un WIP demasiado alto permite empezar mucho a la vez: sobrecarga, cambios de contexto y tareas paradas sin terminar. No hace el flujo lento por ociosidad (eso es un WIP muy bajo), ni maximiza la eficiencia, ni evita la multitarea."
   },
   {
     "id": 251,
@@ -2964,7 +2964,7 @@
       "Gráfico de burndown."
     ],
     "answer": 0,
-    "explanation": "El diagrama de flujo acumulado mide los ítems que salen de cada columna por unidad de tiempo."
+    "explanation": "El cumulative flow diagram muestra cuántos ítems salen de cada columna por unidad de tiempo (throughput) y el flujo. Un histograma, un Gantt o un burndown no dan esa lectura."
   },
   {
     "id": 252,
@@ -2976,7 +2976,7 @@
       "El tiempo de inactividad entre tareas."
     ],
     "answer": 1,
-    "explanation": "El cycle/lead time es el tiempo medio para terminar un elemento desde que entra hasta que se completa."
+    "explanation": "Mide el tiempo medio que tarda un elemento desde que entra hasta que se completa. No es solo el tiempo de un desarrollador, el de una columna concreta ni el de inactividad."
   },
   {
     "id": 253,
@@ -2988,7 +2988,7 @@
       "Evita sobrecargas y mejora el flujo de trabajo."
     ],
     "answer": 3,
-    "explanation": "Limitar el WIP evita sobrecargas y mejora el flujo de trabajo."
+    "explanation": "Limitar el WIP evita sobrecargas y mantiene el flujo fluido. No aumenta el multitasking, ni genera más trabajo en la cadena, ni evita definir políticas."
   },
   {
     "id": 254,
@@ -3000,7 +3000,7 @@
       "Parar el trabajo cuando se detecta un error y reiniciar desde cero."
     ],
     "answer": 2,
-    "explanation": "'Stop starting, start finishing' es dejar de empezar tareas y enfocarse en terminar las que ya están en curso."
+    "explanation": "El lema invita a dejar de abrir tareas nuevas y centrarse en terminar las que ya están en curso, para mejorar el flujo. No es centrarse en tareas antiguas concretas, esperar a todo el equipo ni reiniciar ante un error."
   },
   {
     "id": 255,
@@ -3012,7 +3012,7 @@
       "Tiempo estimado en horas para completar la tarea."
     ],
     "answer": 3,
-    "explanation": "El tiempo estimado en horas no es un componente típico de una tarjeta Kanban."
+    "explanation": "Nombre, descripción breve y criterios de aceptación son típicos de una tarjeta. El tiempo estimado en horas no lo es: Kanban se centra en el flujo, no en estimar horas, por eso es la respuesta."
   },
   {
     "id": 256,
@@ -3024,7 +3024,7 @@
       "Creando una nueva tarjeta en la columna \"Backlog\"."
     ],
     "answer": 1,
-    "explanation": "Un ítem con un defecto se suele marcar con un pos-it rojo o una marca en la tarjeta."
+    "explanation": "Un defecto se suele señalar con una marca visible en la tarjeta (un pos-it rojo). No se mueve a 'Completado', ni se elimina del tablero, ni se crea otra en el backlog."
   },
   {
     "id": 257,
@@ -3036,7 +3036,7 @@
       "Aumenta el límite de WIP permitido."
     ],
     "answer": 0,
-    "explanation": "Las tarjetas para estados no secuenciales dan flexibilidad para representar pruebas y validaciones sin orden fijo."
+    "explanation": "Marcar estados no secuenciales en la tarjeta da flexibilidad para reflejar pruebas o validaciones que no van en orden fijo. No reduce la necesidad de políticas, ni fomenta el multitasking, ni sube el límite de WIP."
   },
   {
     "id": 258,
@@ -3048,7 +3048,7 @@
       "Incrementar el tamaño del equipo de desarrollo."
     ],
     "answer": 2,
-    "explanation": "Medir y optimizar el flujo busca maximizar el número de ítems terminados por unidad de tiempo."
+    "explanation": "Medir y optimizar el flujo busca aumentar el throughput: más ítems terminados por unidad de tiempo. No aumentar el WIP, reducir reuniones ni agrandar el equipo."
   },
   {
     "id": 259,
@@ -3060,7 +3060,7 @@
       "Eliminar ítems de menor prioridad para hacer espacio."
     ],
     "answer": 1,
-    "explanation": "Si una columna alcanza su límite de WIP, los ítems terminados esperan en la columna anterior hasta que haya espacio."
+    "explanation": "Si una columna está llena, los ítems ya terminados esperan en la columna anterior hasta que se libere espacio (eso revela el cuello de botella). No se sube el límite a la ligera, ni se fuerza el movimiento, ni se borran ítems."
   },
   {
     "id": 260,
@@ -3072,7 +3072,7 @@
       "Siempre fijándolo en un valor bajo para evitar sobrecargas."
     ],
     "answer": 2,
-    "explanation": "El límite de WIP óptimo se determina experimentando, midiendo y ajustándolo empíricamente."
+    "explanation": "El límite de WIP óptimo se halla experimentando, midiendo el flujo y ajustando: es empírico. No hay una fórmula fija, ni se deja constante todo el proyecto, ni se pone siempre lo más bajo posible."
   },
   {
     "id": 261,
@@ -3084,7 +3084,7 @@
       "Una política explícita que define cuándo un ítem se considera terminado."
     ],
     "answer": 3,
-    "explanation": "La Definition of Done es una política explícita que define cuándo un ítem se considera terminado."
+    "explanation": "La Definition of Done es una política explícita que fija cuándo un ítem está realmente terminado. No es una lista de pendientes, una política de RRHH ni una clase de servicio."
   },
   {
     "id": 262,
@@ -3096,7 +3096,7 @@
       "Eliminar la medición del cycle time."
     ],
     "answer": 0,
-    "explanation": "Realizar reuniones diarias de pie es una práctica recomendada en Kanban para mejorar el flujo."
+    "explanation": "Las reuniones diarias de pie ayudan a sincronizar y desbloquear el flujo. Subir el WIP sin parar, no visualizar el trabajo o dejar de medir el cycle time son malas prácticas."
   },
   {
     "id": 263,
@@ -3108,7 +3108,7 @@
       "El número de personas involucradas en completar una tarea."
     ],
     "answer": 1,
-    "explanation": "La eficiencia mide el porcentaje de tiempo trabajado activamente sobre el tiempo total de la tarea."
+    "explanation": "La eficiencia de flujo es el porcentaje de tiempo de trabajo activo frente al tiempo total (incluyendo esperas) de una tarea. No es el total de tareas completadas, el tiempo en el backlog ni las personas implicadas."
   },
   {
     "id": 264,
@@ -3120,7 +3120,7 @@
       "Disminuye el tiempo invertido en cambios de contexto y aumenta el rendimiento."
     ],
     "answer": 3,
-    "explanation": "Reducir el WIP disminuye el tiempo invertido en cambios de contexto y aumenta el rendimiento."
+    "explanation": "Con menos WIP hay menos cambios de contexto, así que el rendimiento real sube. No aumenta el tiempo por tarea, ni genera más tareas, ni fomenta la multitarea."
   },
   {
     "id": 265,
@@ -3132,7 +3132,7 @@
       "Work Implementation Procedure"
     ],
     "answer": 1,
-    "explanation": "WIP significa Work In Progress (trabajo en progreso)."
+    "explanation": "WIP significa Work In Progress (trabajo en progreso). Las demás opciones son siglas inventadas que no corresponden al término."
   },
   {
     "id": 266,
@@ -3144,7 +3144,7 @@
       "Incrementa automáticamente la velocidad de desarrollo."
     ],
     "answer": 0,
-    "explanation": "Visualizar el flujo permite al equipo ver en qué trabaja cada miembro en tiempo real."
+    "explanation": "Visualizar el flujo deja ver en tiempo real en qué trabaja cada miembro y dónde hay bloqueos. No reduce la comunicación, ni elimina las reuniones, ni acelera el desarrollo por arte de magia."
   },
   {
     "id": 267,
@@ -3156,7 +3156,7 @@
       "Un diagrama que muestra la jerarquía del equipo."
     ],
     "answer": 2,
-    "explanation": "El diagrama de flujo acumulado representa el número de ítems en cada estado del flujo a lo largo del tiempo."
+    "explanation": "El cumulative flow diagram representa cuántos ítems hay en cada estado del flujo a lo largo del tiempo. No es el rendimiento individual, un calendario de hitos ni la jerarquía del equipo."
   },
   {
     "id": 268,
@@ -3168,7 +3168,7 @@
       "Se mejora el enfoque en completar tareas antes de comenzar nuevas."
     ],
     "answer": 3,
-    "explanation": "Limitar el WIP mejora el enfoque en completar las tareas antes de comenzar otras nuevas."
+    "explanation": "Limitar el WIP empuja a terminar lo empezado antes de abrir tareas nuevas, mejorando el foco y el flujo. No aumenta la carga por persona, ni permite trabajarlo todo a la vez, ni elimina las prioridades."
   },
   {
     "id": 269,
@@ -3180,7 +3180,7 @@
       "Una vez establecidos, no deben cambiarse durante el proyecto."
     ],
     "answer": 2,
-    "explanation": "Los límites de WIP deben ajustarse empíricamente basándose en la capacidad del equipo."
+    "explanation": "Los límites de WIP se ajustan empíricamente según la capacidad real del equipo, observando el flujo. No los fija la gerencia sin consultar, ni se suben siempre, ni se dejan inamovibles."
   },
   {
     "id": 270,
@@ -3192,7 +3192,7 @@
       "Un rol dentro del equipo Kanban."
     ],
     "answer": 1,
-    "explanation": "Una clase de servicio es una categoría que define tipos de ítems de trabajo con políticas específicas."
+    "explanation": "Una clase de servicio agrupa ítems de un mismo tipo (urgente, fecha fija, estándar) con sus propias políticas de gestión. No es una reunión, una herramienta de medición ni un rol del equipo."
   },
   {
     "id": 271,
@@ -3204,7 +3204,7 @@
       "Al eliminar las reuniones, se hace evidente dónde hay problemas."
     ],
     "answer": 0,
-    "explanation": "Al visualizar el flujo se ven las columnas donde se acumulan las tareas, revelando cuellos de botella."
+    "explanation": "Al visualizar el flujo, los cuellos de botella saltan a la vista: la columna donde se amontonan las tarjetas. No se detectan subiendo el WIP, reduciendo la comunicación ni eliminando reuniones."
   },
   {
     "id": 272,
@@ -3216,7 +3216,7 @@
       "Establece sprints de duración fija para planificar."
     ],
     "answer": 2,
-    "explanation": "Kanban prefiere planificaciones just-in-time y adaptativas según el flujo de trabajo."
+    "explanation": "Kanban prefiere planificar just-in-time, de forma adaptativa según el flujo, en lugar de grandes planificaciones por adelantado. No exige planificación inicial extensa, ni la elimina, ni usa sprints fijos."
   },
   {
     "id": 273,
@@ -3228,7 +3228,7 @@
       "La asignación de una tarea a un nuevo miembro del equipo."
     ],
     "answer": 1,
-    "explanation": "Mover una tarjeta entre columnas representa el cambio de estado de un ítem de trabajo en el flujo."
+    "explanation": "Mover una tarjeta de columna representa que el ítem cambia de estado en el flujo (de 'en curso' a 'en pruebas', etc.). No es necesariamente iniciar una tarea nueva, terminar el proyecto ni reasignarla."
   },
   {
     "id": 274,
@@ -3240,7 +3240,7 @@
       "Implementar políticas explícitas y revisarlas regularmente."
     ],
     "answer": 3,
-    "explanation": "Implementar políticas explícitas y revisarlas con regularidad complementa a Kanban."
+    "explanation": "Hacer las políticas explícitas y revisarlas con regularidad complementa Kanban y mejora la eficiencia. Subir el WIP, evitar documentación o trabajar en solitario son lo contrario."
   },
   {
     "id": 275,
@@ -3252,7 +3252,7 @@
       "La suma total de tareas en el backlog."
     ],
     "answer": 2,
-    "explanation": "El throughput es el número de ítems completados por unidad de tiempo."
+    "explanation": "El throughput es el número de ítems completados por unidad de tiempo (el ritmo de salida). No es el tiempo en una columna, las tareas iniciadas ni el total del backlog."
   },
   {
     "id": 276,
@@ -3264,7 +3264,7 @@
       "Para evitar la necesidad de reuniones de seguimiento."
     ],
     "answer": 0,
-    "explanation": "Hacer explícitas las políticas permite que todos los miembros entiendan cómo funciona el flujo de trabajo."
+    "explanation": "Hacer explícitas las políticas asegura que todos entiendan cómo funciona el flujo y cuándo avanza un ítem. No es para reducir formación, penalizar a nadie ni evitar reuniones de seguimiento."
   },
   {
     "id": 277,
@@ -3276,7 +3276,7 @@
       "Evaluar el desempeño individual de cada miembro."
     ],
     "answer": 1,
-    "explanation": "Las Daily Standups sirven para compartir rápido el estado del trabajo y resolver impedimentos."
+    "explanation": "El daily sirve para compartir rápido el estado del trabajo y desbloquear impedimentos. No es revisar el código en detalle, planificar varias semanas ni evaluar el desempeño individual."
   },
   {
     "id": 278,
@@ -3288,7 +3288,7 @@
       "Revisar y ajustar constantemente el proceso para optimizar el flujo."
     ],
     "answer": 3,
-    "explanation": "La mejora continua consiste en revisar y ajustar constantemente el proceso para optimizar el flujo."
+    "explanation": "La mejora continua revisa y ajusta el proceso de continuo para optimizar el flujo. No es completar más de lo que se puede, mantener el proceso fijo ni evitar el feedback."
   },
   {
     "id": 279,
@@ -3300,7 +3300,7 @@
       "Limitando el WIP únicamente para ítems críticos."
     ],
     "answer": 2,
-    "explanation": "Kanban gestiona distintos ítems usando clases de servicio y políticas específicas para cada tipo."
+    "explanation": "Kanban gestiona los distintos tipos de trabajo con clases de servicio y políticas específicas para cada uno. No los trata por igual, ni necesita un tablero por tipo, ni limita el WIP solo a los críticos."
   },
   {
     "id": 280,
@@ -3312,7 +3312,7 @@
       "El tiempo que una tarea pasa en el backlog."
     ],
     "answer": 1,
-    "explanation": "El lead time es el tiempo desde que se solicita una tarea hasta que se entrega al cliente."
+    "explanation": "El lead time va desde que se solicita la tarea hasta que se entrega al cliente (la espera del cliente). No es del desarrollo a la prueba, el tiempo de un dev ni el que pasa en una columna."
   },
   {
     "id": 281,
@@ -3324,7 +3324,7 @@
       "Se completan más tareas de las planificadas."
     ],
     "answer": 0,
-    "explanation": "Un límite de WIP demasiado bajo deja a los miembros del equipo ociosos esperando tareas."
+    "explanation": "Si el WIP es muy bajo, la gente se queda ociosa esperando a poder coger trabajo. Acumular tareas, ir muy rápido o completar de más son señales de otra cosa."
   },
   {
     "id": 282,
@@ -3336,7 +3336,7 @@
       "Aumentar el límite de WIP en la fase con el cuello de botella."
     ],
     "answer": 1,
-    "explanation": "Ante un cuello de botella, conviene reasignar recursos para aliviar la carga en esa fase."
+    "explanation": "Ante un cuello de botella conviene reasignar gente para aliviar esa fase (que el equipo 'acuda' al bloqueo). No es ignorarlo, reducir el WIP de fases anteriores sin más ni subir el WIP del propio cuello."
   },
   {
     "id": 283,
@@ -3348,7 +3348,7 @@
       "Al medir y optimizar el lead time, haciendo que sea más constante."
     ],
     "answer": 3,
-    "explanation": "Kanban mejora la predictibilidad al medir y optimizar el lead time para hacerlo más constante."
+    "explanation": "Kanban mejora la predictibilidad midiendo y estabilizando el lead time, lo que permite prever entregas. No subiendo el WIP, reduciendo el contacto con el cliente ni eliminando estimaciones."
   },
   {
     "id": 284,
@@ -3360,7 +3360,7 @@
       "Establecer políticas explícitas como la Definition of Done."
     ],
     "answer": 2,
-    "explanation": "Incrementar la complejidad del proceso no es un objetivo de Kanban."
+    "explanation": "Ritmo sostenible, visualizar el flujo y políticas explícitas (como la DoD) sí son objetivos de Kanban. Incrementar la complejidad del proceso no lo es: Kanban busca simplicidad y flujo."
   },
   {
     "id": 285,
@@ -3372,7 +3372,7 @@
       "Una estrategia para eliminar tareas duplicadas."
     ],
     "answer": 1,
-    "explanation": "El patrón expandir-colapsar maneja la jerarquía entre historias de usuario e ítems de trabajo."
+    "explanation": "Expandir-colapsar gestiona la jerarquía entre historias grandes e ítems pequeños, mostrándolos u ocultándolos. No es agrupar tareas similares, reducir columnas ni eliminar duplicados."
   },
   {
     "id": 286,
@@ -3384,7 +3384,7 @@
       "El flujo de trabajo es fluido y sin interrupciones."
     ],
     "answer": 2,
-    "explanation": "Una señal de WIP demasiado alto es tener muchas tareas en progreso pero pocas completadas."
+    "explanation": "Un WIP demasiado alto se nota en muchas tareas empezadas y pocas terminadas (todo a medias). Pocas tareas asignadas o un lead time corto y constante indican lo contrario."
   },
   {
     "id": 287,
@@ -3396,7 +3396,7 @@
       "Para eliminar la necesidad de reuniones de retroalimentación."
     ],
     "answer": 0,
-    "explanation": "Estandarizar el proceso asegura que todos sigan las mismas prácticas y mejora la eficiencia."
+    "explanation": "Estandarizar el proceso hace que todos sigan las mismas prácticas, lo que mejora la eficiencia y la previsibilidad. No es para reducir la comunicación, aumentar el trabajo simultáneo ni evitar retrospectivas."
   },
   {
     "id": 288,
@@ -3408,7 +3408,7 @@
       "Asignando más personas a esa tarea para acelerarla."
     ],
     "answer": 1,
-    "explanation": "Un ítem bloqueado se representa con una marca o señal en la tarjeta, como un icono de bloqueo."
+    "explanation": "Un ítem bloqueado se marca con una señal en la tarjeta (un icono de bloqueo) para hacerlo visible. No se mueve a 'Completado', ni se elimina, ni se le asigna más gente sin más."
   },
   {
     "id": 289,
@@ -3420,7 +3420,7 @@
       "El equipo debe seguir el límite impuesto sin cuestionarlo."
     ],
     "answer": 2,
-    "explanation": "El equipo debe participar en el consenso para establecer y ajustar el límite de WIP."
+    "explanation": "El equipo participa en el consenso para fijar y ajustar el límite de WIP, porque conoce su capacidad. No es decisión exclusiva de la gerencia, ni solo de sugerencia, ni algo que se acate sin cuestionar."
   },
   {
     "id": 290,
@@ -3432,7 +3432,7 @@
       "Asignar tareas sin considerar la capacidad actual del equipo."
     ],
     "answer": 3,
-    "explanation": "Asignar tareas sin considerar la capacidad actual del equipo no se recomienda en Kanban."
+    "explanation": "Visualizar, limitar el WIP y medir el lead time son buenas prácticas. Asignar tareas sin mirar la capacidad del equipo no se recomienda: rompe el flujo y satura, por eso es la respuesta."
   },
   {
     "id": 291,
@@ -3444,7 +3444,7 @@
       "Kanban reemplaza completamente a Lean en la producción."
     ],
     "answer": 0,
-    "explanation": "Kanban aplica los principios Lean al desarrollo de software."
+    "explanation": "Kanban aplica los principios Lean (flujo, eliminar desperdicio, mejora continua) al desarrollo. No son opuestos, ni Kanban ignora Lean, ni lo reemplaza."
   },
   {
     "id": 292,
@@ -3456,7 +3456,7 @@
       "Evitar establecer procedimientos para fomentar la creatividad."
     ],
     "answer": 1,
-    "explanation": "Hacer explícitas las políticas es definir y documentar claramente las reglas y procedimientos del equipo."
+    "explanation": "Hacer explícitas las políticas es definir y documentar claramente las reglas del equipo (cuándo avanza un ítem, la DoD). No es dejarlas implícitas, que cada uno las interprete ni evitar procedimientos."
   },
   {
     "id": 293,
@@ -3468,7 +3468,7 @@
       "Facilita la identificación de tareas críticas."
     ],
     "answer": 2,
-    "explanation": "Demasiadas tareas en progreso reducen la eficiencia por los cambios de contexto y la multitarea."
+    "explanation": "Demasiado WIP obliga a cambiar de contexto y hacer multitarea, lo que reduce la eficiencia real. No la mejora aprovechando recursos, ni es indiferente, ni ayuda a ver lo crítico."
   },
   {
     "id": 294,
@@ -3480,7 +3480,7 @@
       "Conocer el tiempo que tarda una tarea en pasar por todo el flujo de trabajo."
     ],
     "answer": 3,
-    "explanation": "El cycle time mide el tiempo que tarda una tarea en pasar por todo el flujo de trabajo."
+    "explanation": "El cycle time mide cuánto tarda una tarea en recorrer todo el flujo, para predecir y mejorar. No es la vida del proyecto, el tiempo total del equipo ni lo que falta del backlog."
   },
   {
     "id": 295,
@@ -3492,7 +3492,7 @@
       "El proceso es complejo y estresante, con pocas entregas al año y alto riesgo."
     ],
     "answer": 3,
-    "explanation": "En empresas tradicionales, poner software en producción es complejo y estresante, con pocas entregas y alto riesgo."
+    "explanation": "En lo tradicional, desplegar es un proceso manual, complejo y arriesgado, con pocas entregas al año. No es por entregas demasiado frecuentes, automatización con errores ni falta de reportes."
   },
   {
     "id": 296,
@@ -3504,7 +3504,7 @@
       "Se disminuye la necesidad de comunicación con el equipo de operaciones."
     ],
     "answer": 0,
-    "explanation": "Las entregas frecuentes aportan retroalimentación rápida del cliente para validar funcionalidades."
+    "explanation": "Entregar a menudo da feedback rápido del cliente para validar lo construido. No reduce las pruebas automatizadas, ni aumenta el riesgo (lo baja), ni disminuye la comunicación con operaciones."
   },
   {
     "id": 297,
@@ -3516,7 +3516,7 @@
       "El tiempo que tarda en compilar el código fuente."
     ],
     "answer": 1,
-    "explanation": "La 'última milla' son los pasos para poner el sistema en producción, del código al entorno productivo."
+    "explanation": "La 'última milla' son los pasos para llevar el código hasta el entorno productivo (build, configuración, despliegue). No son los últimos usuarios, la distancia física ni el tiempo de compilación."
   },
   {
     "id": 298,
@@ -3528,7 +3528,7 @@
       "Esperar a que el equipo de operaciones valide su código antes de integrar."
     ],
     "answer": 2,
-    "explanation": "En la Integración Continua, los desarrolladores integran sus cambios a diario y los verifican con pruebas automatizadas."
+    "explanation": "En CI se espera que cada dev integre sus cambios a diario y los valide con pruebas automatizadas. No trabajar en ramas largas, integrar solo semanalmente ni esperar la validación de operaciones."
   },
   {
     "id": 299,
@@ -3540,7 +3540,7 @@
       "Facilita la realización de pull requests y revisiones de código."
     ],
     "answer": 1,
-    "explanation": "Trunk Based ofrece integraciones más frecuentes que facilitan la detección temprana de errores."
+    "explanation": "Trunk Based integra con más frecuencia, así que los errores se detectan antes. No aísla más a los devs, ni busca menos interrupciones, ni se basa en pull requests largos."
   },
   {
     "id": 300,
@@ -3552,7 +3552,7 @@
       "Herramientas de seguimiento de tareas como Jira."
     ],
     "answer": 0,
-    "explanation": "Servidores de CI como Jenkins o GitHub Actions automatizan la compilación y el lanzamiento de pruebas."
+    "explanation": "Los servidores de CI (Jenkins, GitHub Actions) automatizan la compilación y la ejecución de pruebas ante cada cambio. Git versiona, VS Code edita y Jira hace seguimiento de tareas."
   },
   {
     "id": 301,
@@ -3564,7 +3564,7 @@
       "Un repositorio de código fuente para aplicaciones en contenedores."
     ],
     "answer": 2,
-    "explanation": "Una imagen Docker es un artefacto ejecutable con todo lo necesario para correr una app en cualquier entorno Docker."
+    "explanation": "Una imagen Docker es un artefacto que empaqueta la app con todo lo necesario para ejecutarla en cualquier entorno Docker. No es un contenedor en ejecución (eso es la instancia), un archivo de configuración ni un repositorio."
   },
   {
     "id": 302,
@@ -3576,7 +3576,7 @@
       "Simplifica la gestión de bases de datos de producción."
     ],
     "answer": 1,
-    "explanation": "Docker permite construir una vez la aplicación y ejecutarla en múltiples entornos sin cambios."
+    "explanation": "Docker permite construir la imagen una vez y ejecutarla igual en cualquier entorno ('build once, run anywhere'). No es que use menos disco, elimine las pruebas ni simplifique la base de datos."
   },
   {
     "id": 303,
@@ -3588,7 +3588,7 @@
       "Reemplazar completamente al equipo de operaciones con scripts automatizados."
     ],
     "answer": 0,
-    "explanation": "'Infraestructura como código' es definir y gestionar la configuración de servidores y entornos con código versionado."
+    "explanation": "Infraestructura como código define y gestiona servidores y entornos con código versionado, reproducible. No es contratar perfiles mixtos, usar solo lenguajes de programación ni reemplazar a operaciones con scripts."
   },
   {
     "id": 304,
@@ -3600,7 +3600,7 @@
       "Tener el software en un estado que pueda ser puesto en producción en cualquier momento, con despliegues frecuentes y automatizados."
     ],
     "answer": 3,
-    "explanation": "La Entrega Continua mantiene el software listo para producción, con despliegues frecuentes y automatizados."
+    "explanation": "La Entrega Continua mantiene el software siempre listo para producción, con despliegues frecuentes y automatizados (el salto final puede ser manual). No es desplegar sin intervención, integrar una vez al mes ni reducir pruebas."
   },
   {
     "id": 305,
@@ -3612,7 +3612,7 @@
       "Una herramienta para gestionar ramas en sistemas de control de versiones."
     ],
     "answer": 1,
-    "explanation": "Un feature toggle permite activar o desactivar funcionalidades en tiempo de ejecución."
+    "explanation": "Un feature toggle activa o desactiva funcionalidades en tiempo de ejecución, sin desplegar de nuevo. No elimina código obsoleto, ni acelera la compilación, ni gestiona ramas."
   },
   {
     "id": 306,
@@ -3624,7 +3624,7 @@
       "Un tipo de rama especial en Git para integraciones críticas."
     ],
     "answer": 2,
-    "explanation": "Un canary release lanza la nueva versión a un pequeño grupo de usuarios antes del despliegue completo."
+    "explanation": "Un canary release expone la nueva versión a un grupo reducido de usuarios para validarla antes del despliegue total. No es desplegar a todos a la vez, una suite de tests ni una rama especial de Git."
   },
   {
     "id": 307,
@@ -3636,7 +3636,7 @@
       "Delegar todas las modificaciones al equipo de operaciones sin involucrar a los desarrolladores."
     ],
     "answer": 0,
-    "explanation": "Buena práctica: automatizar las migraciones y mantener un historial de cambios versionado de la base de datos."
+    "explanation": "Lo recomendado es automatizar las migraciones y versionar su historial, para reproducirlas y revertirlas. No cambiar directo en producción sin pruebas, evitar todo cambio de esquema ni delegarlo todo en operaciones."
   },
   {
     "id": 308,
@@ -3648,7 +3648,7 @@
       "Automatiza el proceso de construcción, despliegue, prueba y lanzamiento del software."
     ],
     "answer": 3,
-    "explanation": "Un pipeline de despliegue automatiza la construcción, el despliegue, la prueba y el lanzamiento del software."
+    "explanation": "Un pipeline de despliegue automatiza build, pruebas, despliegue y lanzamiento de forma encadenada. No requiere intervención manual en cada etapa, ni es solo de producción, ni se ejecuta una sola vez al final."
   },
   {
     "id": 309,
@@ -3660,7 +3660,7 @@
       "Facilitan la comunicación entre desarrolladores y clientes."
     ],
     "answer": 1,
-    "explanation": "Herramientas como Maven o Gradle automatizan la construcción del proyecto y la generación de artefactos desplegables."
+    "explanation": "Maven y Gradle automatizan la construcción del proyecto y generan los artefactos desplegables. No gestionan el código fuente (eso es Git), ni monitorizan producción, ni comunican con el cliente."
   },
   {
     "id": 310,
@@ -3672,7 +3672,7 @@
       "Para evitar el uso de variables de entorno en el sistema operativo."
     ],
     "answer": 2,
-    "explanation": "Externalizar la configuración permite que el mismo artefacto funcione en distintos entornos sin recompilar."
+    "explanation": "Externalizar la configuración deja usar el mismo artefacto en distintos entornos sin recompilar, solo cambiando ajustes. No es para el rendimiento, reducir el tamaño ni evitar variables de entorno."
   },
   {
     "id": 311,
@@ -3684,7 +3684,7 @@
       "Hacer que el proceso de despliegue sea más complejo y robusto."
     ],
     "answer": 1,
-    "explanation": "Reducir el tamaño de los cambios minimiza el riesgo y facilita identificar y corregir errores."
+    "explanation": "Desplegar cambios pequeños minimiza el riesgo y, si algo falla, es fácil aislar la causa. No aumenta las funciones por release, ni reduce las pruebas, ni complica el proceso."
   },
   {
     "id": 312,
@@ -3696,7 +3696,7 @@
       "La eliminación de datos antiguos para liberar espacio."
     ],
     "answer": 0,
-    "explanation": "Una migración es un cambio estructural en la base de datos para adaptarla a nuevas necesidades de la aplicación."
+    "explanation": "Una migración es un cambio estructural del esquema de la BD para adaptarlo a la aplicación, versionado y reproducible. No es mover la BD de servidor, una copia de seguridad ni borrar datos antiguos."
   },
   {
     "id": 313,
@@ -3708,7 +3708,7 @@
       "Asegura que las aplicaciones se ejecuten de manera consistente en diferentes entornos."
     ],
     "answer": 3,
-    "explanation": "Docker asegura que las aplicaciones se ejecuten de manera consistente en diferentes entornos."
+    "explanation": "Docker garantiza que la app se ejecute igual en todos los entornos al empaquetar sus dependencias. No reduce líneas de código, ni elimina las pruebas de integración, ni permite trabajar offline."
   },
   {
     "id": 314,
@@ -3720,7 +3720,7 @@
       "Dividir claramente las responsabilidades entre desarrollo y operaciones."
     ],
     "answer": 1,
-    "explanation": "DevOps busca fomentar la colaboración entre desarrollo y operaciones para entregar software de calidad rápido y fiable."
+    "explanation": "DevOps busca que desarrollo y operaciones colaboren para entregar software de calidad rápido y fiable. No acelerar sin importar la estabilidad, reemplazar operaciones con herramientas ni separar responsabilidades."
   },
   {
     "id": 315,
@@ -3732,7 +3732,7 @@
       "Trabajar en ramas aisladas durante largos periodos."
     ],
     "answer": 2,
-    "explanation": "Una práctica clave de CI es integrar cambios con frecuencia y ejecutar pruebas automatizadas en cada integración."
+    "explanation": "La práctica clave de CI es integrar a menudo y correr pruebas automatizadas en cada integración. No desplegar sin pruebas, evitar integrar para no chocar ni trabajar aislado mucho tiempo."
   },
   {
     "id": 316,
@@ -3744,7 +3744,7 @@
       "Facilitan la comunicación entre el equipo y los clientes."
     ],
     "answer": 0,
-    "explanation": "Jenkins automatiza la construcción, las pruebas y el despliegue de aplicaciones ante cambios en el código."
+    "explanation": "Jenkins automatiza build, pruebas y despliegue cuando hay cambios en el código. No es un repositorio de código, una herramienta de bugs ni de comunicación con clientes."
   },
   {
     "id": 317,
@@ -3756,7 +3756,7 @@
       "Para facilitar la migración de datos entre bases de datos."
     ],
     "answer": 1,
-    "explanation": "Que funcione en distintos entornos sin recompilar permite el despliegue automático con el mismo artefacto."
+    "explanation": "Que funcione sin recompilar permite desplegar el mismo artefacto en varios entornos de forma automática. No es para reducir el tiempo de compilación, minimizar variables de entorno ni migrar datos."
   },
   {
     "id": 318,
@@ -3768,7 +3768,7 @@
       "Un registro de cambios realizados en la base de datos."
     ],
     "answer": 2,
-    "explanation": "Un artefacto binario es un ejecutable compilado que puede desplegarse en diferentes entornos."
+    "explanation": "Un artefacto binario es el ejecutable ya compilado, listo para desplegarse en distintos entornos. No es el código fuente, un archivo de configuración ni un registro de cambios de la BD."
   },
   {
     "id": 319,
@@ -3780,7 +3780,7 @@
       "Orquesta múltiples contenedores y sus configuraciones para crear entornos completos."
     ],
     "answer": 3,
-    "explanation": "Docker Compose orquesta múltiples contenedores y sus configuraciones para crear entornos completos."
+    "explanation": "Docker Compose orquesta varios contenedores y su configuración (app, BD, cache) para levantar un entorno completo con un comando. No simplifica el Dockerfile, ni evita Docker Engine, ni automatiza pruebas unitarias."
   },
   {
     "id": 320,
@@ -3792,7 +3792,7 @@
       "Actuar como entorno de pruebas unitarias."
     ],
     "answer": 1,
-    "explanation": "Los entornos de staging prueban la aplicación en un entorno casi idéntico al de producción antes del despliegue."
+    "explanation": "Staging replica producción para probar la app en condiciones reales antes del despliegue final. No es el entorno de desarrollo, un almacén de backups ni un entorno de pruebas unitarias."
   },
   {
     "id": 321,
@@ -3804,7 +3804,7 @@
       "Se compila y construye el artefacto binario."
     ],
     "answer": 2,
-    "explanation": "En la fase de aceptación se ejecutan pruebas de aceptación e integración en un entorno similar al de producción."
+    "explanation": "En la fase de aceptación se corren pruebas de aceptación e integración en un entorno parecido a producción. No es donde se hacen las de rendimiento/carga, se despliega a producción ni se compila el binario."
   },
   {
     "id": 322,
@@ -3816,7 +3816,7 @@
       "Un módulo para gestionar bases de datos."
     ],
     "answer": 0,
-    "explanation": "Un pipeline dashboard es una interfaz visual que muestra el estado y progreso de cada etapa del despliegue."
+    "explanation": "Un pipeline dashboard muestra visualmente el estado y progreso de cada etapa del pipeline. No es un gestor de tickets, un editor de código ni un módulo de bases de datos."
   },
   {
     "id": 323,
@@ -3828,7 +3828,7 @@
       "Para evitar la necesidad de pruebas unitarias."
     ],
     "answer": 1,
-    "explanation": "Una compilación rápida da retroalimentación rápida sobre el estado del código y detecta errores pronto."
+    "explanation": "Una build rápida da feedback inmediato sobre el estado del código y detecta errores cuanto antes. No es para reducir el tamaño del fuente, ahorrar recursos del servidor ni evitar las pruebas unitarias."
   },
   {
     "id": 324,
@@ -3840,7 +3840,7 @@
       "Que los commits deben hacerse únicamente al final de la semana."
     ],
     "answer": 2,
-    "explanation": "Integrar a diario en la rama principal promueve la detección temprana de problemas."
+    "explanation": "Implica que todos integran a diario en la rama principal, lo que detecta los problemas pronto. No que solo uno pueda hacer commit, que se eviten commits frecuentes ni que se hagan solo al final de la semana."
   },
   {
     "id": 325,
@@ -3852,7 +3852,7 @@
       "Para eliminar la necesidad de documentación."
     ],
     "answer": 0,
-    "explanation": "Versionar las configuraciones permite controlar su evolución y sus cambios igual que el código fuente."
+    "explanation": "Versionar las configuraciones permite seguir su evolución y revertirlas igual que el código. No es para ocultar datos sensibles, reducir el repositorio ni eliminar documentación."
   },
   {
     "id": 326,
@@ -3864,7 +3864,7 @@
       "Automatizar la creación de esquemas de bases de datos usando scripts."
     ],
     "answer": 3,
-    "explanation": "Buena práctica: automatizar la creación de esquemas de bases de datos usando scripts."
+    "explanation": "La buena práctica es automatizar la creación y migración de esquemas con scripts versionados. No cambiar directo en producción, evitar BD en desarrollo ni dejar de hacer copias de seguridad."
   },
   {
     "id": 327,
@@ -3876,14 +3876,14 @@
       "No necesitan un sistema operativo anfitrión."
     ],
     "answer": 1,
-    "explanation": "Los contenedores son más ligeros y rápidos de iniciar que las máquinas virtuales y consumen menos recursos."
+    "explanation": "Los contenedores comparten el kernel del host, así que son más ligeros, arrancan en segundos y gastan menos recursos que una VM. No dan más aislamiento ni seguridad, y sí necesitan un SO anfitrión."
   },
   {
     "id": 328,
     "question": "En Docker, ¿qué comando se utiliza para construir una imagen a partir de un Dockerfile?",
     "options": ["docker run", "docker image ls", "docker build", "docker start"],
     "answer": 2,
-    "explanation": "El comando docker build construye una imagen a partir de un Dockerfile."
+    "explanation": "docker build construye una imagen a partir de un Dockerfile. docker run ejecuta un contenedor, docker image ls lista imágenes y docker start arranca uno detenido."
   },
   {
     "id": 329,
@@ -3895,7 +3895,7 @@
       "Ejecuta el contenedor nginx-example en segundo plano, mapeando el puerto 80 del host al puerto 80 del contenedor."
     ],
     "answer": 3,
-    "explanation": "Ese comando ejecuta el contenedor nginx-example en segundo plano, mapeando el puerto 80 del host al del contenedor."
+    "explanation": "El comando lanza nginx-example en segundo plano (-d) y mapea el puerto 80 del host al 80 del contenedor (-p 80:80). No es modo interactivo, ni construye una imagen, ni detiene un contenedor."
   },
   {
     "id": 330,
@@ -3907,7 +3907,7 @@
       "No es posible pasar variables de entorno a un contenedor."
     ],
     "answer": 0,
-    "explanation": "Se pasan variables de entorno a un contenedor con el flag -e en el comando docker run."
+    "explanation": "Se pasan variables de entorno con el flag -e en docker run (p. ej. -e CLAVE=valor). No editando el Dockerfile tras construir, ni el código dentro del contenedor, y sí es posible hacerlo."
   },
   {
     "id": 331,
@@ -3919,7 +3919,7 @@
       "Para incrementar la complejidad del sistema y mejorar la seguridad."
     ],
     "answer": 1,
-    "explanation": "Automatizar el despliegue minimiza los errores humanos y hace el proceso reproducible y fiable."
+    "explanation": "Automatizar el despliegue quita el error humano y lo hace reproducible y fiable. No es para reducir costes de licencias, eliminar el equipo de operaciones ni aumentar la complejidad."
   },
   {
     "id": 332,
@@ -3931,7 +3931,7 @@
       "La externalización de la infraestructura a terceros."
     ],
     "answer": 2,
-    "explanation": "Infrastructure-as-code es definir y configurar la infraestructura (servidores, redes) mediante código versionado."
+    "explanation": "Infrastructure-as-code define la infraestructura (servidores, redes) con código versionado, reproducible y revisable. No es usar solo código fuente para la app, crear entornos a mano ni externalizar la infra."
   },
   {
     "id": 333,
@@ -3943,7 +3943,7 @@
       "Evitar el uso de herramientas de virtualización."
     ],
     "answer": 0,
-    "explanation": "Buena práctica: automatizar tanto la gestión de entornos como la instalación y ejecución de la aplicación."
+    "explanation": "Se recomienda automatizar la gestión de entornos y la instalación/ejecución de la app, para que sea reproducible. No mantener configuraciones distintas sin documentar, desplegar a mano ni evitar la virtualización."
   },
   {
     "id": 334,
@@ -3955,7 +3955,7 @@
       "Una estrategia para eliminar ramas obsoletas en el control de versiones."
     ],
     "answer": 1,
-    "explanation": "Una prueba A/B presenta dos versiones de una funcionalidad a distintos usuarios para comparar resultados."
+    "explanation": "Una prueba A/B presenta dos versiones a distintos grupos de usuarios y compara resultados para decidir con datos. No es una prueba unitaria, un despliegue en servidores alternos ni una limpieza de ramas."
   },
   {
     "id": 335,
@@ -3967,7 +3967,7 @@
       "Fomentar la colaboración entre desarrollo y operaciones para entregar software rápidamente y con calidad."
     ],
     "answer": 3,
-    "explanation": "DevOps busca fomentar la colaboración entre desarrollo y operaciones para entregar software rápido y con calidad."
+    "explanation": "DevOps busca que desarrollo y operaciones colaboren para entregar software rápido y con calidad. No mantenerlos separados, acelerar sin importar la estabilidad ni reducir la comunicación."
   },
   {
     "id": 336,
@@ -3979,7 +3979,7 @@
       "Un entorno idéntico a producción utilizado únicamente para copias de seguridad."
     ],
     "answer": 1,
-    "explanation": "Un entorno de integración integra y prueba componentes con servicios reales pero datos de prueba."
+    "explanation": "Un entorno de integración conecta los componentes con servicios reales pero datos de prueba, para validar que encajan. No es el de los clientes finales, el PC del dev ni un clon de producción solo para backups."
   },
   {
     "id": 337,
@@ -3991,7 +3991,7 @@
       "Para eliminar la necesidad de pruebas en desarrollo."
     ],
     "answer": 2,
-    "explanation": "El registro histórico de migraciones permite revertir cambios y entender la evolución del esquema de datos."
+    "explanation": "Versionar las migraciones permite revertir cambios y entender cómo ha evolucionado el esquema. No aumenta el rendimiento, ni reduce backups, ni elimina la necesidad de pruebas."
   },
   {
     "id": 338,
@@ -4003,7 +4003,7 @@
       "Eliminación de pruebas unitarias."
     ],
     "answer": 0,
-    "explanation": "Combinar interruptores de características con canary releases muestra una funcionalidad solo a ciertos usuarios."
+    "explanation": "Combinar feature toggles con canary releases permite activar la función solo para un subconjunto de usuarios. No el despliegue simultáneo en todo, varias ramas en producción ni quitar pruebas."
   },
   {
     "id": 339,
@@ -4015,7 +4015,7 @@
       "Probar funcionalidades no relacionadas con el proyecto."
     ],
     "answer": 1,
-    "explanation": "Las pruebas en preproducción validan que la app funcione en un entorno similar a producción antes del lanzamiento."
+    "explanation": "Preproducción valida la app en condiciones casi idénticas a producción antes de lanzar, reduciendo sorpresas. No es acelerar sin calidad, recortar pruebas en producción ni probar cosas ajenas al proyecto."
   },
   {
     "id": 340,
@@ -4027,21 +4027,21 @@
       "Facilita la identificación de problemas y reduce el impacto de errores."
     ],
     "answer": 3,
-    "explanation": "Desplegar pequeños cambios con frecuencia facilita identificar problemas y reduce el impacto de los errores."
+    "explanation": "Con cambios pequeños y frecuentes, si algo falla es fácil identificar la causa y el impacto es menor. No aumenta el riesgo, ni dificulta versionar, ni impide añadir funciones grandes (se hacen por partes)."
   },
   {
     "id": 341,
     "question": "En Docker, ¿cómo se llama el archivo donde se especifican los pasos para construir una imagen?",
     "options": ["docker-compose.yml", "Dockerbuild", "Dockerfile", "Docker.config"],
     "answer": 2,
-    "explanation": "El Dockerfile es el archivo donde se especifican los pasos para construir una imagen."
+    "explanation": "El Dockerfile contiene las instrucciones para construir la imagen. docker-compose.yml orquesta contenedores, y 'Dockerbuild' o 'Docker.config' no existen como tal."
   },
   {
     "id": 342,
     "question": "¿Qué comando se utiliza para listar todos los contenedores, incluidos los detenidos?",
     "options": ["docker container ls", "docker container ls -a", "docker image ls", "docker ps"],
     "answer": 1,
-    "explanation": "docker container ls -a lista todos los contenedores, incluidos los detenidos."
+    "explanation": "docker container ls -a lista todos los contenedores, también los detenidos (sin -a solo muestra los activos). docker image ls lista imágenes y docker ps muestra solo los que están en ejecución."
   },
   {
     "id": 343,
@@ -4053,7 +4053,7 @@
       "Para retrasar la integración y evitar conflictos."
     ],
     "answer": 0,
-    "explanation": "Probar el código en espacios privados antes de integrar detecta y corrige errores antes de afectar al equipo."
+    "explanation": "Probar en local antes de integrar evita meter errores que afecten al resto del equipo. No es para evitar tests unitarios, mantener el código privado ni retrasar la integración."
   },
   {
     "id": 344,
@@ -4065,7 +4065,7 @@
       "Facilitan la comunicación con el cliente."
     ],
     "answer": 1,
-    "explanation": "Flyway y Liquibase ayudan a gestionar y automatizar las migraciones de bases de datos."
+    "explanation": "Flyway y Liquibase gestionan y automatizan las migraciones de BD, versionando los cambios de esquema. No son editores de código, ni monitorizan rendimiento, ni comunican con el cliente."
   },
   {
     "id": 345,
@@ -4077,7 +4077,7 @@
       "Para reducir el tamaño del repositorio."
     ],
     "answer": 2,
-    "explanation": "Probar cada commit automáticamente detecta errores cuanto antes y mantiene el código en un estado funcional."
+    "explanation": "Probar cada commit detecta los errores cuanto antes y mantiene la rama siempre funcional. No es para aumentar el número de commits, evitar pruebas locales ni reducir el repositorio."
   },
   {
     "id": 346,
@@ -4089,7 +4089,7 @@
       "Se acelera el proceso de despliegue."
     ],
     "answer": 1,
-    "explanation": "Si no se integra con frecuencia, es más probable que surjan conflictos al integrar cambios grandes."
+    "explanation": "Si no integra a menudo, los cambios divergen y, al integrar mucho de golpe, surgen más conflictos y problemas. No es indiferente, ni facilita detectar errores, ni acelera el despliegue."
   },
   {
     "id": 347,
@@ -4101,7 +4101,7 @@
       "Se reducen los riesgos de conflictos de código."
     ],
     "answer": 0,
-    "explanation": "Las ramas de larga duración dificultan integrar por las divergencias significativas con la rama principal."
+    "explanation": "Las ramas largas divergen mucho de la principal, así que integrarlas se vuelve difícil y conflictivo. No aumentan la colaboración, ni facilitan cambios pequeños, ni reducen el riesgo de conflictos."
   },
   {
     "id": 348,
@@ -4113,7 +4113,7 @@
       "Un objeto simulado que imita el comportamiento de componentes reales para pruebas."
     ],
     "answer": 3,
-    "explanation": "Un mock es un objeto simulado que imita el comportamiento de componentes reales para las pruebas."
+    "explanation": "Un mock es un objeto simulado que imita a un componente real para aislar lo que se prueba. No es una herramienta de rendimiento, un tipo de error ni un sistema de despliegue."
   },
   {
     "id": 349,
@@ -4125,7 +4125,7 @@
       "Reduce la necesidad de documentación."
     ],
     "answer": 1,
-    "explanation": "Usar las herramientas de compilación desde línea de comandos facilita automatizarlas e integrarlas en scripts."
+    "explanation": "Que se usen por línea de comandos permite automatizarlas e integrarlas en scripts de build y despliegue (CI). No es para evitar interfaces gráficas, restringir quién compila ni reducir documentación."
   },
   {
     "id": 350,
@@ -4137,7 +4137,7 @@
       "Reducir la cantidad de pruebas para acelerar entregas."
     ],
     "answer": 0,
-    "explanation": "El Despliegue Continuo automatiza el proceso, llevando los cambios a producción tras pasar todas las pruebas."
+    "explanation": "El Despliegue Continuo lleva a producción de forma automática todo cambio que pase las pruebas, sin paso manual. No es integrar una vez al mes, requerir aprobación manual (eso es Entrega Continua) ni reducir pruebas."
   },
   {
     "id": 351,
@@ -4149,7 +4149,7 @@
       "Despliegue Continuo se centra en pruebas manuales, mientras que Entrega Continua se enfoca en pruebas automatizadas."
     ],
     "answer": 2,
-    "explanation": "En Entrega Continua el despliegue a producción puede ser manual; en Despliegue Continuo es automático."
+    "explanation": "En ambas el software está siempre listo y las pruebas son automáticas; la diferencia es el último paso: en Entrega Continua el salto a producción puede ser manual, en Despliegue Continuo es automático. Las otras opciones lo invierten."
   },
   {
     "id": 352,
@@ -4161,7 +4161,7 @@
       "Eliminar completamente la necesidad de pruebas."
     ],
     "answer": 3,
-    "explanation": "Eliminar por completo la necesidad de pruebas no es un beneficio de la Entrega Continua."
+    "explanation": "La Entrega Continua da despliegues menos arriesgados, más frecuentes y más predecibles. 'Eliminar la necesidad de pruebas' no es un beneficio: precisamente se apoya en pruebas automatizadas, por eso es la respuesta."
   },
   {
     "id": 353,
@@ -4173,7 +4173,7 @@
       "Usando únicamente variables de entorno sin archivos de configuración."
     ],
     "answer": 1,
-    "explanation": "En Spring Boot se manejan distintos entornos con perfiles y archivos de propiedades específicos."
+    "explanation": "Spring Boot maneja entornos con perfiles y archivos de propiedades específicos (application-dev, application-prod). No reescribiendo el código, compilando una versión por entorno ni usando solo variables de entorno."
   },
   {
     "id": 354,
@@ -4185,7 +4185,7 @@
       "Hacen innecesarias las pruebas automatizadas."
     ],
     "answer": 2,
-    "explanation": "Las imágenes Docker facilitan crear artefactos consistentes que se ejecutan en cualquier entorno con Docker."
+    "explanation": "Las imágenes Docker dan artefactos consistentes que corren igual en cualquier entorno con Docker, clave para la Entrega Continua. No es que usen menos memoria, eviten el control de versiones ni hagan innecesarias las pruebas."
   },
   {
     "id": 355,
@@ -4197,7 +4197,7 @@
       "Facilitar la comunicación entre el equipo de desarrollo y los clientes."
     ],
     "answer": 1,
-    "explanation": "Kubernetes gestiona y escala aplicaciones basadas en contenedores en entornos de producción."
+    "explanation": "Kubernetes orquesta: gestiona y escala aplicaciones en contenedores en producción (despliegue, recuperación, balanceo). No reemplaza a Docker, ni es un control de versiones, ni comunica con clientes."
   },
   {
     "id": 356,
@@ -4209,7 +4209,7 @@
       "La eliminación de la necesidad de copias de seguridad."
     ],
     "answer": 0,
-    "explanation": "La reversibilidad es la capacidad de revertir cambios y despliegues si se detectan problemas."
+    "explanation": "La reversibilidad es poder deshacer cambios y despliegues si algo falla, volviendo a un estado estable. No es cambiar de lenguaje, desplegar varias versiones a la vez ni eliminar los backups."
   },
   {
     "id": 357,
@@ -4221,7 +4221,7 @@
       "Evitar el uso de pruebas automatizadas."
     ],
     "answer": 2,
-    "explanation": "Los despliegues blue-green permiten desplegar una nueva versión sin interrumpir el servicio a los usuarios."
+    "explanation": "El despliegue blue-green levanta la nueva versión en un entorno paralelo y conmuta el tráfico, sin cortar el servicio. Un 'despliegue en caliente' vago, las ramas de característica o evitar pruebas no logran eso."
   },
   {
     "id": 358,
@@ -4233,7 +4233,7 @@
       "Un repositorio de código fuente."
     ],
     "answer": 1,
-    "explanation": "Un pipeline es una secuencia automatizada de pasos desde el commit del código hasta el despliegue en producción."
+    "explanation": "Un pipeline es la secuencia automatizada de pasos del commit al despliegue (build, test, deploy). No es un documento de pasos, un equipo ni un repositorio."
   },
   {
     "id": 359,
@@ -4245,7 +4245,7 @@
       "Para garantizar que el mismo artefacto se use en todos los entornos, asegurando consistencia."
     ],
     "answer": 3,
-    "explanation": "Binarios inmutables en un repositorio central garantizan usar el mismo artefacto en todos los entornos."
+    "explanation": "Un binario inmutable en un repositorio central asegura que se despliega exactamente el mismo artefacto en todos los entornos: consistencia. No es para modificarlos, evitar recompilar sin más ni que cada entorno compile el suyo."
   },
   {
     "id": 360,
@@ -4257,7 +4257,7 @@
       "Un entorno idéntico al de producción usado para copias de seguridad."
     ],
     "answer": 2,
-    "explanation": "El entorno de testing/QA es donde se hacen pruebas funcionales y de interfaz, a veces de forma manual."
+    "explanation": "El entorno de testing/QA es donde se hacen pruebas funcionales y de interfaz, a veces manuales. No es el de los usuarios finales, el PC del dev ni un clon de producción para backups."
   },
   {
     "id": 361,
@@ -4269,7 +4269,7 @@
       "Requieren más recursos que las máquinas virtuales."
     ],
     "answer": 1,
-    "explanation": "Los contenedores Docker son más ligeros que las máquinas virtuales y comparten el kernel del SO anfitrión."
+    "explanation": "Los contenedores son ligeros y comparten el kernel del host, por eso arrancan rápido. No requieren una VM, sí funcionan en Windows (con la capa adecuada) y consumen menos recursos que una VM, no más."
   },
   {
     "id": 362,
@@ -4281,7 +4281,7 @@
       "Inicia un nuevo contenedor."
     ],
     "answer": 0,
-    "explanation": "El comando docker container ls lista los contenedores en ejecución."
+    "explanation": "docker container ls (sin -a) muestra solo los contenedores en ejecución. Con -a saldrían también los detenidos; no lista imágenes ni inicia contenedores."
   },
   {
     "id": 363,
@@ -4293,7 +4293,7 @@
       "Es el proceso de gestionar y aprovisionar infraestructuras mediante código, permitiendo reproducibilidad y control de versiones."
     ],
     "answer": 3,
-    "explanation": "La Infraestructura como Código aprovisiona la infraestructura con código, dando reproducibilidad y control de versiones."
+    "explanation": "Infraestructura como Código aprovisiona la infra mediante código, dando reproducibilidad y control de versiones. No es una forma de escribir código más eficiente, solo documentar la infra ni hardware programable."
   },
   {
     "id": 364,
@@ -4305,7 +4305,7 @@
       "Hacer despliegues manuales durante fines de semana."
     ],
     "answer": 1,
-    "explanation": "Para minimizar riesgos conviene desplegar pequeños cambios con frecuencia y automatizar las pruebas."
+    "explanation": "Para minimizar riesgos se despliegan cambios pequeños y frecuentes con pruebas automatizadas. Grandes cambios poco frecuentes, no automatizar o desplegar a mano en fin de semana aumentan el riesgo."
   },
   {
     "id": 365,
@@ -4317,7 +4317,7 @@
       "Pruebas realizadas por los usuarios finales."
     ],
     "answer": 0,
-    "explanation": "Las pruebas de regresión aseguran que los nuevos cambios no introducen errores en funcionalidades existentes."
+    "explanation": "Las pruebas de regresión comprueban que los cambios nuevos no rompan funcionalidades que ya funcionaban. No miden el rendimiento, ni se ejecutan solo en producción, ni las hacen los usuarios finales."
   },
   {
     "id": 366,
@@ -4329,7 +4329,7 @@
       "Que no necesita ser desplegada en un servidor."
     ],
     "answer": 1,
-    "explanation": "Una app auto-contenida incluye todo lo necesario para ejecutarse sin depender de componentes externos en ejecución."
+    "explanation": "Una aplicación auto-contenida incluye todo lo necesario para ejecutarse, sin depender de componentes externos en runtime. No es solo que compile sin herramientas, que corra solo en Windows ni que no necesite servidor."
   },
   {
     "id": 367,
@@ -4341,7 +4341,7 @@
       "Un lenguaje de programación orientado a objetos."
     ],
     "answer": 2,
-    "explanation": "Jenkins es un servidor de integración continua de código abierto."
+    "explanation": "Jenkins es un servidor de integración continua de código abierto que automatiza build, pruebas y despliegue. No es un control de versiones, una herramienta de bugs ni un lenguaje de programación."
   },
   {
     "id": 368,
@@ -4353,7 +4353,7 @@
       "Para proporcionar retroalimentación rápida y permitir integraciones frecuentes."
     ],
     "answer": 3,
-    "explanation": "Las pruebas automatizadas rápidas dan retroalimentación rápida y permiten integraciones frecuentes."
+    "explanation": "Pruebas rápidas dan feedback inmediato y permiten integrar a menudo sin esperas. No es por ahorrar energía, minimizar disco ni da igual lo que tarden."
   },
   {
     "id": 369,
@@ -4365,7 +4365,7 @@
       "Un entorno idéntico al de producción utilizado para pruebas finales."
     ],
     "answer": 0,
-    "explanation": "El entorno local es el entorno de trabajo en el ordenador del desarrollador."
+    "explanation": "El entorno local es el del ordenador del propio desarrollador, donde codifica y prueba primero. No es un servidor de producción, uno de rendimiento ni un clon de producción para pruebas finales."
   },
   {
     "id": 370,
@@ -4377,7 +4377,7 @@
       "Reemplazan completamente a los administradores de bases de datos."
     ],
     "answer": 1,
-    "explanation": "Flyway o Liquibase automatizan la migración y mantienen un historial versionado de los cambios."
+    "explanation": "Flyway y Liquibase automatizan las migraciones y guardan un historial versionado de los cambios de esquema. No eliminan los scripts SQL, ni permiten cambiar en producción sin pruebas, ni sustituyen al DBA."
   },
   {
     "id": 371,
@@ -4389,7 +4389,7 @@
       "Que no requiere intervención humana."
     ],
     "answer": 2,
-    "explanation": "Un proceso reproducible puede repetirse de manera consistente obteniendo los mismos resultados."
+    "explanation": "Reproducible significa que el proceso, repetido, da siempre el mismo resultado. No es que corra en cualquier SO, que sea muy rápido ni que no necesite intervención humana."
   },
   {
     "id": 372,
@@ -4401,7 +4401,7 @@
       "No es necesario si se han pasado todas las pruebas previas."
     ],
     "answer": 1,
-    "explanation": "Monitorizar en producción detecta problemas y errores en tiempo real y asegura la disponibilidad del servicio."
+    "explanation": "Monitorizar producción detecta problemas en tiempo real y mantiene la disponibilidad del servicio. No es para aumentar el consumo de recursos, reducir pruebas previas ni innecesario tras pasar las pruebas."
   },
   {
     "id": 373,
@@ -4413,7 +4413,7 @@
       "Evitar el uso de pruebas unitarias."
     ],
     "answer": 0,
-    "explanation": "Hacer revisiones de código y aplicar estándares de codificación mejora la calidad del código en CI."
+    "explanation": "Las revisiones de código y aplicar estándares de codificación elevan la calidad. Evitar documentación, integrar cambios grandes y poco frecuentes o saltarse los tests unitarios la empeoran."
   },
   {
     "id": 374,
@@ -4425,7 +4425,7 @@
       "Se usa únicamente para versiones finales del producto."
     ],
     "answer": 2,
-    "explanation": "El control de versiones almacena código, configuraciones y scripts para construir y desplegar, y rastrea los cambios."
+    "explanation": "En Entrega Continua, el control de versiones guarda código, configuraciones y scripts de build/deploy, y rastrea los cambios. No solo el código fuente, no es prescindible y no es solo para versiones finales."
   },
   {
     "id": 375,
@@ -4437,7 +4437,7 @@
       "Una técnica de despliegue donde dos entornos idénticos se usan alternadamente para minimizar el tiempo de inactividad."
     ],
     "answer": 3,
-    "explanation": "El Blue-Green Deployment usa dos entornos idénticos alternándolos para minimizar el tiempo de inactividad."
+    "explanation": "Blue-Green usa dos entornos idénticos (uno activo, otro en espera) y conmuta entre ellos para desplegar sin apenas downtime. No es optimizar recursos en la nube, una técnica de pruebas unitarias ni de gestión de BD."
   },
   {
     "id": 376,
@@ -4449,7 +4449,7 @@
       "Garantizan que todas las funcionalidades están siempre activas."
     ],
     "answer": 1,
-    "explanation": "Los feature flags permiten activar o desactivar características en producción sin desplegar código nuevo."
+    "explanation": "Los feature flags activan o desactivan funciones en producción sin desplegar de nuevo, útiles para pruebas y rollouts graduales. No reducen pruebas, ni evitan integrar a menudo, ni mantienen todo siempre activo."
   },
   {
     "id": 377,
@@ -4461,7 +4461,7 @@
       "Para permitir a los usuarios acceder a las pruebas."
     ],
     "answer": 0,
-    "explanation": "Entornos de pruebas similares a producción detectan problemas que surgirían allí y hacen las pruebas representativas."
+    "explanation": "Entornos parecidos a producción detectan los problemas que aparecerían allí y hacen las pruebas representativas. No es para reducir costes, da igual el entorno ni para dar acceso a los usuarios."
   },
   {
     "id": 378,
@@ -4473,7 +4473,7 @@
       "Una estrategia de despliegue en producción."
     ],
     "answer": 2,
-    "explanation": "Un Build es el proceso de compilar el código fuente y generar un artefacto ejecutable."
+    "explanation": "Un Build es el proceso de compilar el código fuente y generar el artefacto ejecutable. No es un repositorio, una herramienta de bugs ni una estrategia de despliegue."
   },
   {
     "id": 379,
@@ -4485,7 +4485,7 @@
       "Para reducir la necesidad de un equipo de operaciones."
     ],
     "answer": 1,
-    "explanation": "Conocer operaciones ayuda al desarrollador a entender cómo sus decisiones afectan la producción y a colaborar mejor."
+    "explanation": "Conocer operaciones ayuda al dev a entender cómo sus decisiones impactan en producción y a colaborar mejor (la esencia de DevOps). No es para sustituir a operaciones, asumir su rol ni eliminar el equipo."
   },
   {
     "id": 380,
@@ -4497,7 +4497,7 @@
       "Un despliegue en producción."
     ],
     "answer": 0,
-    "explanation": "Un commit es la acción de guardar cambios en el sistema de control de versiones."
+    "explanation": "Un commit es la acción de guardar (registrar) cambios en el control de versiones. No es un error del código, un tipo de prueba ni un despliegue en producción."
   },
   {
     "id": 381,
@@ -4509,7 +4509,7 @@
       "Enfoque en la entrega continua de valor."
     ],
     "answer": 2,
-    "explanation": "La separación estricta de responsabilidades entre desarrollo y operaciones no es un principio del manifiesto DevOps."
+    "explanation": "Cultura de colaboración, automatización y entrega continua de valor sí son principios DevOps. La separación estricta entre desarrollo y operaciones es justo lo que DevOps quiere romper, por eso no lo es."
   },
   {
     "id": 382,
@@ -4521,7 +4521,7 @@
       "Una herramienta de control de versiones."
     ],
     "answer": 1,
-    "explanation": "Kubernetes es una plataforma de código abierto para automatizar el despliegue, escalado y gestión de contenedores."
+    "explanation": "Kubernetes es una plataforma de código abierto que automatiza el despliegue, escalado y gestión de apps en contenedores. No es un lenguaje, un sistema operativo de servidores ni una herramienta de control de versiones."
   },
   {
     "id": 383,
@@ -4533,7 +4533,7 @@
       "Para proteger los datos y asegurar que los cambios pueden ser revertidos si es necesario."
     ],
     "answer": 3,
-    "explanation": "Las políticas de respaldo y control de cambios protegen los datos y permiten revertir cambios si es necesario."
+    "explanation": "Respaldar y controlar los cambios de la BD protege los datos y permite revertir si algo sale mal. No es para aumentar el rendimiento, es importante en Entrega Continua y no evita las pruebas en desarrollo."
   },
   {
     "id": 384,
@@ -4545,6 +4545,6 @@
       "Evitar la integración continua."
     ],
     "answer": 0,
-    "explanation": "Los Canary Releases despliegan nuevas versiones a un subconjunto de usuarios para validar cambios antes del despliegue completo."
+    "explanation": "Un Canary Release despliega la nueva versión a un subconjunto de usuarios para validarla antes del despliegue total, limitando el riesgo. No es desplegar a la vez en todos los entornos, reducir pruebas ni evitar la CI."
   }
 ]
