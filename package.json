@@ -15,6 +15,7 @@
     "format": "biome format --write ."
   },
   "dependencies": {
+    "@hiseb/confetti": "^2.1.0",
     "@tailwindcss/vite": "^4.3.1",
     "@types/katex": "^0.16.8",
     "@unhead/vue": "^3.1.4",

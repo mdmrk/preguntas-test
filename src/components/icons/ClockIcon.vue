@@ -16,3 +16,5 @@
     <path d="M12 7v5l3 3" />
   </svg>
 </template>
+
+<script lang="ts" setup></script>

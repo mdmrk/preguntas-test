@@ -15,9 +15,9 @@
       :key="shuffledIndex"
       class="flex items-center px-4 py-3 rounded-lg border outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
       :class="getOptionClasses(shuffledIndex)"
-      @click="selectAnswer(shuffledIndex)"
-      @keydown.enter.prevent="selectAnswer(shuffledIndex)"
-      @keydown.space.prevent="selectAnswer(shuffledIndex)"
+      @click="selectAnswer(shuffledIndex, $event)"
+      @keydown.enter.prevent="selectAnswer(shuffledIndex, $event)"
+      @keydown.space.prevent="selectAnswer(shuffledIndex, $event)"
       role="radio"
       :aria-checked="selectedOption === shuffledIndex"
       :tabindex="answered ? -1 : 0"
@@ -98,6 +98,7 @@
 </template>
 
 <script setup lang="ts">
+import confetti from "@hiseb/confetti"
 import { computed, ref, watch } from "vue"
 import type { Question } from "@/types/test"
 import { shuffle } from "@/utils"
@@ -242,7 +243,7 @@ const getTextClasses = (shuffledIndex: number) => {
   return "text-gray-900 dark:text-gray-50"
 }
 
-const selectAnswer = (shuffledIndex: number) => {
+const selectAnswer = (shuffledIndex: number, event?: Event) => {
   if (answered.value || props.readOnly) return
 
   selectedOption.value = shuffledIndex
@@ -250,6 +251,14 @@ const selectAnswer = (shuffledIndex: number) => {
 
   const originalIndex = shuffledToOriginalIndex.value[shuffledIndex]
   if (originalIndex === undefined) return
+
+  if (isCorrect.value) {
+    const target = event?.currentTarget as HTMLElement | undefined
+    const rect = target?.getBoundingClientRect()
+    confetti(
+      rect ? { position: { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 } } : {},
+    )
+  }
 
   emit("answered", {
     questionId: props.question.id,

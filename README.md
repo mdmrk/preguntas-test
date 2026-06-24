@@ -25,13 +25,13 @@ A file is an array of question objects:
 
 ```jsonc
 {
-  "id": 1,                          // unique number within the file
-  "question": "Question text",      // supports KaTeX math and code blocks
-  "options": ["A", "B", "C", "D"],  // 2+ choices
-  "answer": 0,                      // 0-based index of the correct option
+  "id": 1, // unique number within the file
+  "question": "Question text", // supports KaTeX math and code blocks
+  "options": ["A", "B", "C", "D"], // 2+ choices
+  "answer": 0, // 0-based index of the correct option
   "explanation": "Why it's right.", // optional
-  "image": "gpi001.png",            // optional, see below
-  "tags": ["Enero 2025"]            // optional, see below
+  "image": "gpi001.png", // optional, see below
+  "tags": ["Enero 2025"], // optional, see below
 }
 ```
 
