@@ -100,6 +100,7 @@
 <script setup lang="ts">
 import confetti from "@hiseb/confetti"
 import { computed, ref, watch } from "vue"
+import { useConfettiEnabled } from "@/composables/useConfettiEnabled"
 import type { Question } from "@/types/test"
 import { shuffle } from "@/utils"
 import ChevronDownIcon from "./icons/ChevronDownIcon.vue"
@@ -126,6 +127,8 @@ interface Emits {
 const props = defineProps<Props>()
 
 const emit = defineEmits<Emits>()
+
+const { confettiEnabled } = useConfettiEnabled()
 
 const optionIndices = computed(() => props.question.options.map((_, index) => index))
 
@@ -252,7 +255,7 @@ const selectAnswer = (shuffledIndex: number, event?: Event) => {
   const originalIndex = shuffledToOriginalIndex.value[shuffledIndex]
   if (originalIndex === undefined) return
 
-  if (isCorrect.value) {
+  if (isCorrect.value && confettiEnabled.value) {
     const target = event?.currentTarget as HTMLElement | undefined
     const rect = target?.getBoundingClientRect()
     confetti(

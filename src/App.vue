@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useHead } from "@unhead/vue"
+import ConfettiToggle from "@/components/ConfettiToggle.vue"
 import GitHubLink from "@/components/GitHubLink.vue"
 import HomeButton from "@/components/HomeButton.vue"
 import LastUpdated from "@/components/LastUpdated.vue"
@@ -14,6 +15,7 @@ useHead({
 <template>
   <header class="flex justify-end space-x-3 mb-4">
     <HomeButton />
+    <ConfettiToggle />
     <ThemeManager />
   </header>
   <RouterView />
