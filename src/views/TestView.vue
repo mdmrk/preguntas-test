@@ -9,7 +9,7 @@
       <div
         class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 mb-6"
       >
-        <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center justify-between">
           <h1 class="text-lg font-semibold">{{ testTitle }}</h1>
 
           <div class="flex items-center space-x-4">
@@ -21,11 +21,11 @@
 
             <div class="flex items-center space-x-4 text-sm font-medium">
               <div class="flex items-center space-x-1">
-                <div class="w-3 h-3 rounded-full bg-green-500" />
+                <div class="w-2.5 h-2.5 rounded-full bg-green-500" />
                 <span class="text-green-600 dark:text-green-400">{{ stats.correct }}</span>
               </div>
               <div class="flex items-center space-x-1">
-                <div class="w-3 h-3 rounded-full bg-red-500" />
+                <div class="w-2.5 h-2.5 rounded-full bg-red-500" />
                 <span class="text-red-600 dark:text-red-400">{{ stats.incorrect }}</span>
               </div>
               <span class="text-blue-600 dark:text-blue-400">{{
@@ -33,31 +33,6 @@
               }}</span>
             </div>
           </div>
-        </div>
-
-        <div
-          class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 flex overflow-hidden"
-          role="progressbar"
-          aria-label="Progreso del test"
-          :aria-valuenow="Math.round(stats.percentage)"
-          aria-valuemin="0"
-          aria-valuemax="100"
-        >
-          <div
-            v-if="stats.answered > 0"
-            class="bg-green-500 dark:bg-green-400 transition-all duration-300"
-            :class="progressBarClasses"
-            :style="{ width: `${stats.percentage}%` }"
-          />
-          <div
-            v-if="stats.incorrect > 0"
-            class="bg-red-500 dark:bg-red-400 transition-all duration-300 rounded-r-full"
-            :style="{ width: `${stats.incorrectPercentage}%` }"
-          />
-          <div
-            v-if="stats.answered === 0"
-            class="bg-gray-300 dark:bg-gray-600 flex-1 rounded-full"
-          />
         </div>
       </div>
 
