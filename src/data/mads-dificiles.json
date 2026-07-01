@@ -1,0 +1,892 @@
+[
+  {
+    "id": 1,
+    "question": "Según Frederick Brooks, ¿cuál es la tarea esencial en el desarrollo de software?",
+    "options": [
+      "La compilación del software.",
+      "La depuración del código.",
+      "La generación de la documentación.",
+      "La formulación de construcciones conceptuales."
+    ],
+    "answer": 3,
+    "explanation": "Para Brooks la tarea esencial es formular las construcciones conceptuales: diseñar el modelo abstracto del sistema. Compilar, depurar o documentar son tareas accidentales (la representación), no la dificultad de fondo del software."
+  },
+  {
+    "id": 2,
+    "question": "¿Cuál de las siguientes NO es una característica esencial del software según Brooks?",
+    "options": ["Complejidad.", "Cambiabilidad.", "Invisibilidad.", "Predictibilidad."],
+    "answer": 3,
+    "explanation": "Brooks define cuatro características esenciales del software: complejidad, conformidad, cambiabilidad e invisibilidad. La predictibilidad NO es una de ellas; al contrario, el software es esencialmente impredecible y difícil de planificar."
+  },
+  {
+    "id": 3,
+    "question": "¿Qué propone Brooks para lidiar con la complejidad del desarrollo de software?",
+    "options": [
+      "Usar mejores lenguajes de programación.",
+      "Comprar o reutilizar software ya existente.",
+      "Invertir en hardware de alto rendimiento.",
+      "Contratar más desarrolladores."
+    ],
+    "answer": 1,
+    "explanation": "Brooks sugiere que la mejor forma de atacar la complejidad es comprar o reutilizar software existente en vez de construirlo todo: el código que no escribes es el que menos complejidad y errores añade. No hay 'bala de plata' que la elimine."
+  },
+  {
+    "id": 4,
+    "question": "¿Qué ventaja competitiva menciona Mary Poppendieck sobre el cambio de última hora en el desarrollo de software?",
+    "options": [
+      "Permite mantener los plazos sin ajustes.",
+      "Facilita una mejor gestión del equipo.",
+      "Permite al cliente adaptarse a cambios en el entorno y ganar ventaja sobre la competencia.",
+      "Reduce el costo de desarrollo."
+    ],
+    "answer": 2,
+    "explanation": "Mary Poppendieck (Lean) defiende que aceptar cambios de última hora es una ventaja competitiva: permite al cliente adaptarse al entorno y adelantarse a la competencia. El cambio tardío no es un fallo, es una oportunidad de negocio."
+  },
+  {
+    "id": 5,
+    "question": "¿Qué porcentaje de los encuestados en 2020 ocupa el rol de Scrum Master o Agile Coach?",
+    "options": ["Cerca del 40%.", "Un 25%.", "Un 60%.", "Un 10%."],
+    "answer": 0,
+    "explanation": "Cerca del 40% de los encuestados de 2020 son Scrum Masters o Agile Coaches. Este dato revela el sesgo del informe: lo responden sobre todo roles de gestión y coaching, no quienes programan, lo que condiciona sus conclusiones."
+  },
+  {
+    "id": 6,
+    "question": "¿Qué porcentaje de los encuestados en el State of Agile 2020 son miembros de equipos de desarrollo?",
+    "options": ["Un 30%.", "Un 50%.", "Un 7%.", "Un 20%."],
+    "answer": 2,
+    "explanation": "Solo un 7% de los encuestados pertenece a equipos de desarrollo; el resto son roles de gestión y coaching. De ahí el sesgo del informe: refleja más la visión de quienes gestionan Agile que la de quienes programan a diario."
+  },
+  {
+    "id": 7,
+    "question": "¿Qué porcentaje de empresas usa iteraciones cortas en sus procesos ágiles?",
+    "options": ["80%", "75%", "90%", "64%"],
+    "answer": 3,
+    "explanation": "Según el informe, un 64% de las empresas usa iteraciones cortas. Es una de las prácticas ágiles más extendidas porque permite entregar y obtener feedback con frecuencia, aunque no la aplican todas las organizaciones."
+  },
+  {
+    "id": 8,
+    "question": "¿Qué porcentaje de empresas usa únicamente Scrum, según el informe State of Agile?",
+    "options": ["58%", "76%", "40%", "23%"],
+    "answer": 0,
+    "explanation": "Según el informe, un 58% de las empresas usa únicamente Scrum. Refleja su dominio frente a otros marcos, gracias a su estructura clara de roles, ceremonias y artefactos, fácil de adoptar en muchas organizaciones."
+  },
+  {
+    "id": 9,
+    "question": "¿Qué práctica de ingeniería ágil es usada en un 67% de las empresas según el informe?",
+    "options": ["Refactorización.", "Pair programming.", "Unit testing.", "Continuous deployment."],
+    "answer": 2,
+    "explanation": "Según el informe, el unit testing (pruebas unitarias) lo usa un 67% de las empresas: es la práctica de ingeniería ágil más extendida. Otras como refactorización, pair programming o despliegue continuo se adoptan bastante menos."
+  },
+  {
+    "id": 10,
+    "question": "¿Qué crítica hace Kent Beck a las certificaciones ágiles en su entrevista “Leaving Facebook”?",
+    "options": [
+      "Que certifican solo a los líderes de equipo.",
+      "Que promueven roles rígidos en Agile.",
+      "Que no son reconocidas fuera de EE.UU.",
+      "Que tras un curso breve no es posible dominar Agile, y el título de \"Master\" es engañoso."
+    ],
+    "answer": 3,
+    "explanation": "Kent Beck (creador de XP) critica que tras un curso breve no se puede dominar Agile, y que llamarse 'Master' es engañoso: sugiere maestría donde solo hay conocimiento inicial. La crítica apunta al negocio de certificar agilidad."
+  },
+  {
+    "id": 11,
+    "question": "¿Qué significa el concepto de Dark Scrum según Ron Jeffries?",
+    "options": [
+      "Uso de Scrum en proyectos pequeños.",
+      "Aplicación de Scrum sin el uso de sprints.",
+      "Uso superficial de Scrum sin entender ni aplicar la filosofía ágil.",
+      "Incorporación de técnicas avanzadas de XP en Scrum."
+    ],
+    "answer": 2,
+    "explanation": "Para Ron Jeffries, Dark Scrum es usar Scrum solo en apariencia, sin comprender ni aplicar la filosofía ágil. Se siguen los rituales (sprints, dailies) pero sin autonomía ni mejora: Scrum vacío que puede acabar perjudicando al equipo."
+  },
+  {
+    "id": 12,
+    "question": "¿Qué caracteriza el Agile Industrial Complex mencionado en la sesión?",
+    "options": [
+      "La comercialización de cursos y certificaciones de Scrum.",
+      "La creación de equipos ágiles en grandes empresas.",
+      "La estandarización de las prácticas ágiles en todos los sectores.",
+      "El uso exclusivo de Scrum para todo tipo de proyectos."
+    ],
+    "answer": 0,
+    "explanation": "El Agile Industrial Complex es la comercialización masiva de cursos y certificaciones (sobre todo de Scrum): una industria que vende 'agilidad' como producto. La crítica es que prioriza vender formación sobre lograr agilidad real."
+  },
+  {
+    "id": 13,
+    "question": "¿Qué es el Taylorismo en relación con los procesos rígidos?",
+    "options": [
+      "Un modelo que optimiza el trabajo al tratar a los trabajadores como engranajes del proceso.",
+      "Un enfoque de Agile que mejora la auto-organización.",
+      "Una metodología de planificación iterativa.",
+      "Una práctica ágil centrada en el feedback continuo."
+    ],
+    "answer": 0,
+    "explanation": "El taylorismo optimiza el trabajo dividiéndolo en tareas y tratando a las personas como engranajes intercambiables de un proceso fijo. Es lo opuesto a Agile, que confía en equipos autónomos que piensan y mejoran su forma de trabajar."
+  },
+  {
+    "id": 14,
+    "question": "¿Qué tipo de métricas ayudan a monitorizar la estabilidad y resiliencia de un sistema en producción?",
+    "options": [
+      "Velocidad de las iteraciones.",
+      "Cantidad de daily standups.",
+      "Métricas de soporte, como MTBF y MTTR.",
+      "Número de pull requests realizados."
+    ],
+    "answer": 2,
+    "explanation": "La estabilidad y resiliencia en producción se monitorizan con métricas de soporte como MTBF (tiempo entre fallos) y MTTR (tiempo de recuperación): juntas indican con qué frecuencia falla el sistema y cuán rápido se recupera."
+  },
+  {
+    "id": 15,
+    "question": "¿Quién propuso por primera vez el desarrollo iterativo en software en los años 70?",
+    "options": ["Kent Beck", "Martin Fowler", "Tom Gilb", "Barry Boehm"],
+    "answer": 2,
+    "explanation": "Tom Gilb propuso el desarrollo iterativo en los años 70, anticipando ideas que Agile popularizaría décadas después: avanzar en ciclos en lugar de una sola pasada secuencial. Beck, Fowler y Boehm llegaron después con sus aportes."
+  },
+  {
+    "id": 16,
+    "question": "¿Dónde tuvo lugar la reunión en la que se desarrolló el Manifiesto Ágil?",
+    "options": ["Silicon Valley", "Nueva York", "Washington, D.C.", "Snowbird, Utah"],
+    "answer": 3,
+    "explanation": "El Manifiesto Ágil se redactó en Snowbird, Utah, en una estación de esquí donde 17 representantes de métodos ligeros se reunieron en 2001. Allí acordaron los valores y principios que definirían el movimiento ágil."
+  },
+  {
+    "id": 17,
+    "question": "¿Cuál fue uno de los términos alternativos considerados antes de decidir \"Ágil\"?",
+    "options": ["Flexible", "Adaptativo", "Ligero", "Modular"],
+    "answer": 2,
+    "explanation": "Antes de elegir 'ágil', se barajó el término 'ligero' (lightweight), por la naturaleza poco burocrática de estos métodos. Se descartó porque sonaba a 'flojo' o sin sustancia, y 'ágil' transmitía mejor adaptación y dinamismo."
+  },
+  {
+    "id": 18,
+    "question": "¿Quiénes son los firmantes principales del Manifiesto Ágil relacionados con Extreme Programming (XP)?",
+    "options": [
+      "Jeff Sutherland y Mike Beedle",
+      "Kent Beck, Ward Cunningham y Martin Fowler",
+      "Arie van Bennekum y Ken Schwaber",
+      "Steve Mellor y Jon Kern"
+    ],
+    "answer": 1,
+    "explanation": "Kent Beck, Ward Cunningham y Martin Fowler, ligados a XP, firmaron el Manifiesto. Sutherland, Beedle y Schwaber venían de Scrum; el Manifiesto reunió a representantes de varias metodologías ligeras distintas."
+  },
+  {
+    "id": 19,
+    "question": "¿Cuál de estos NO es uno de los valores del Manifiesto Ágil?",
+    "options": [
+      "Individuos e interacciones sobre procesos y herramientas",
+      "Software en funcionamiento sobre documentación exhaustiva",
+      "Colaboración con el cliente sobre negociación de contratos",
+      "Seguimiento de un plan sobre responder al cambio"
+    ],
+    "answer": 3,
+    "explanation": "Los cuatro valores del Manifiesto priorizan: personas sobre procesos, software funcionando sobre documentación, colaboración con el cliente sobre contratos y responder al cambio sobre seguir un plan. 'El plan sobre el cambio' es lo contrario."
+  },
+  {
+    "id": 20,
+    "question": "¿Qué se entiende por \"simplicidad\" en el contexto del Manifiesto Ágil?",
+    "options": [
+      "Reducir la cantidad de pruebas necesarias en el desarrollo",
+      "Crear un diseño complejo y completo al inicio del proyecto",
+      "Maximizar la cantidad de trabajo no realizado",
+      "Desarrollar toda la funcionalidad en una sola fase"
+    ],
+    "answer": 2,
+    "explanation": "En Agile, la simplicidad es 'el arte de maximizar el trabajo no realizado': hacer solo lo imprescindible y evitar lo superfluo. Menos funcionalidades innecesarias significa menos complejidad, menos deuda y más foco en el valor."
+  },
+  {
+    "id": 21,
+    "question": "¿En qué proyecto se popularizó inicialmente la metodología de Extreme Programming (XP)?",
+    "options": [
+      "En el proyecto de creación de Smalltalk.",
+      "En el proyecto Chrysler Comprehensive Compensation System (C3).",
+      "En el desarrollo del primer libro de XP.",
+      "En la creación de la wiki de XP."
+    ],
+    "answer": 1,
+    "explanation": "XP se popularizó en el proyecto Chrysler Comprehensive Compensation System (C3), donde Kent Beck aplicó y refinó sus prácticas. Ese proyecto fue el laboratorio real donde XP tomó forma como metodología."
+  },
+  {
+    "id": 22,
+    "question": "¿Cuál de los siguientes valores NO forma parte de los valores fundamentales de XP?",
+    "options": ["Productividad.", "Simplicidad.", "Comunicación.", "Respeto."],
+    "answer": 0,
+    "explanation": "'Productividad' no es un valor de XP. Sus valores son comunicación, simplicidad, retroalimentación, valentía y respeto. XP busca la productividad como consecuencia de esos valores, no como un valor en sí mismo."
+  },
+  {
+    "id": 23,
+    "question": "¿Qué práctica de XP se refiere a la automatización de la construcción del sistema y la ejecución de todos los tests en menos de diez minutos?",
+    "options": [
+      "Ten-Minute Build.",
+      "Weekly Cycle.",
+      "Continuous Integration.",
+      "Test-First Programming."
+    ],
+    "answer": 0,
+    "explanation": "El 'Ten-Minute Build' automatiza compilar el sistema y ejecutar todos los tests en menos de diez minutos. Un build rápido anima a integrar y probar a menudo; si tardara horas, el equipo dejaría de hacerlo y perdería el feedback."
+  },
+  {
+    "id": 24,
+    "question": "¿Cuál es el objetivo de la práctica de \"Slack\" en XP?",
+    "options": [
+      "Aumentar la carga de trabajo del equipo para cumplir deadlines.",
+      "Implementar historias adicionales al final del proyecto.",
+      "Incluir siempre historias de mayor complejidad en la planificación.",
+      "Incluir tareas menores que puedan ser abandonadas si es necesario para cumplir con la fecha de entrega."
+    ],
+    "answer": 3,
+    "explanation": "El 'Slack' consiste en incluir tareas menores y prescindibles que pueden abandonarse si peligra la fecha de entrega. Ese 'colchón' permite cumplir compromisos sin trabajar bajo presión extrema ni sacrificar lo importante."
+  },
+  {
+    "id": 25,
+    "question": "¿Qué técnica originada en la comunidad Smalltalk utilizan Kent Beck y Ward Cunningham en XP para definir las responsabilidades de las clases?",
+    "options": ["Diagramas de flujo", "Tarjetas CRC", "Pruebas unitarias", "Historias de usuario"],
+    "answer": 1,
+    "explanation": "Las tarjetas CRC (Clase-Responsabilidad-Colaboración), nacidas en la comunidad Smalltalk, las usan Beck y Cunningham para definir de forma sencilla las responsabilidades de las clases y cómo colaboran, sin diseñar de más por adelantado."
+  },
+  {
+    "id": 26,
+    "question": "¿Cuál es el enfoque de XP sobre los contratos de trabajo, como se refleja en la práctica \"Negotiated Scope Contract\"?",
+    "options": [
+      "Fijar tiempo, costo y calidad, dejando el alcance negociable",
+      "Fijar todas las variables del proyecto al inicio",
+      "Priorizar el contrato por sobre las necesidades del cliente",
+      "Modificar el contrato solo en circunstancias excepcionales"
+    ],
+    "answer": 0,
+    "explanation": "El 'Negotiated Scope Contract' fija tiempo, coste y calidad, dejando el alcance abierto a negociación. Reconoce que los requisitos cambiarán: en vez de blindarlo todo, se ajusta qué se construye dentro de un marco estable de tiempo y coste."
+  },
+  {
+    "id": 27,
+    "question": "¿Qué significa que una historia de usuario debe ser negociable según el modelo INVEST?",
+    "options": [
+      "Que puede ser modificada o discutida con el cliente",
+      "Que el cliente debe aceptar cualquier cambio",
+      "Que no se debe modificar bajo ningún concepto",
+      "Que debe ser estimada rápidamente"
+    ],
+    "answer": 0,
+    "explanation": "Que una historia sea 'negociable' (la N de INVEST) significa que puede discutirse y modificarse con el cliente: no es un contrato cerrado. Sus detalles se acuerdan en conversación, dejando margen para encontrar la mejor solución juntos."
+  },
+  {
+    "id": 28,
+    "question": "¿Cuál de las siguientes opciones NO es una de las tres Cs de una historia de usuario?",
+    "options": ["Card", "Confirmation", "Creation", "Conversation"],
+    "answer": 2,
+    "explanation": "Las tres C de una historia son Card (tarjeta), Conversation (conversación) y Confirmation (confirmación). 'Creation' no es una de ellas: el ciclo va de anotar la idea, hablarla y confirmar con criterios de aceptación cuándo está hecha."
+  },
+  {
+    "id": 29,
+    "question": "¿Qué representa el eje horizontal en el Mapa de Historias de Usuario propuesto por Jeff Patton?",
+    "options": [
+      "La prioridad de cada historia en el proyecto",
+      "La importancia del equipo de desarrollo",
+      "La secuencia temporal de las actividades del usuario",
+      "La cantidad de pruebas necesarias"
+    ],
+    "answer": 2,
+    "explanation": "En el Story Mapping de Jeff Patton, el eje horizontal representa la secuencia temporal de las actividades del usuario: el flujo de izquierda a derecha de lo que hace para lograr su objetivo. Ordena la 'columna vertebral' del producto."
+  },
+  {
+    "id": 30,
+    "question": "¿Cuál es el objetivo de identificar un esqueleto andante (walking skeleton) en el Mapa de Historias de Usuario?",
+    "options": [
+      "Tener una versión mínima y funcional de la aplicación",
+      "Establecer un estándar de calidad de las pruebas",
+      "Establecer una lista de mejoras futuras",
+      "Crear una historia principal que englobe todas las funcionalidades"
+    ],
+    "answer": 0,
+    "explanation": "El 'walking skeleton' (esqueleto andante) es una versión mínima pero funcional de la aplicación que recorre el flujo principal de extremo a extremo. Permite tener algo que funciona pronto y sobre lo que ir añadiendo el resto."
+  },
+  {
+    "id": 31,
+    "question": "¿En qué se diferencia una épica de una historia de usuario típica?",
+    "options": [
+      "La épica es una tarea técnica y la historia es funcional",
+      "La épica no tiene criterios de aceptación",
+      "La historia es más pequeña y puede dividirse en varias épicas",
+      "La épica es una historia grande que debe dividirse en historias más pequeñas"
+    ],
+    "answer": 3,
+    "explanation": "Una épica es una historia grande que abarca demasiado y debe dividirse en historias más pequeñas y manejables. La diferencia es de tamaño y alcance: la épica engloba muchas historias, no al revés, y ambas son funcionales, no técnicas."
+  },
+  {
+    "id": 32,
+    "question": "¿Qué se entiende por el término \"triangulación\" en TDD?",
+    "options": [
+      "Definir el algoritmo principal antes de escribir tests",
+      "Hacer una refactorización completa del código",
+      "Escribir un test para todo el sistema antes de empezar a programar",
+      "Añadir más ejemplos en los tests para obligar a generalizar el código"
+    ],
+    "answer": 3,
+    "explanation": "La 'triangulación' consiste en añadir más ejemplos en los tests para forzar a que el código se generalice. Si una solución 'tramposa' pasa un test, un segundo ejemplo distinto la rompe y obliga a escribir la lógica real y general."
+  },
+  {
+    "id": 33,
+    "question": "¿En qué consiste la técnica TCR (Test && Commit || Revert)?",
+    "options": [
+      "Permite realizar grandes cambios sin tests",
+      "Hace commits automáticamente sin pruebas previas",
+      "Si el test pasa, hace un commit; si falla, revierte al último commit",
+      "Permite omitir tests de funcionalidad en ciertos momentos"
+    ],
+    "answer": 2,
+    "explanation": "TCR (Test && Commit || Revert): si los tests pasan, se hace commit automáticamente; si fallan, el código se revierte al último commit. Castiga los pasos demasiado grandes y obliga a avanzar en incrementos pequeños y siempre en verde."
+  },
+  {
+    "id": 34,
+    "question": "¿Qué significa el concepto \"Make the change easy and then make the easy change\"?",
+    "options": [
+      "Escribir primero el cambio y después refactorizarlo",
+      "Refactorizar el código para facilitar un cambio antes de implementarlo",
+      "Crear cambios complejos que sean fáciles de probar",
+      "Realizar un único cambio grande en el código"
+    ],
+    "answer": 1,
+    "explanation": "'Make the change easy and then make the easy change' (Kent Beck): primero refactoriza el código para que el cambio que quieres sea sencillo, y luego haz ese cambio ya fácil. Separa preparar el terreno de añadir la funcionalidad."
+  },
+  {
+    "id": 35,
+    "question": "¿Qué afirma David Heinemeir Hanson en su crítica a TDD?",
+    "options": [
+      "Que TDD facilita la creación de código complejo y de difícil mantenimiento",
+      "Que TDD ha llevado a una complejidad excesiva en la arquitectura",
+      "Que TDD mejora la gestión de la base de datos",
+      "Que TDD solo es útil en equipos de desarrollo grandes"
+    ],
+    "answer": 1,
+    "explanation": "David Heinemeier Hansson (creador de Rails) critica que TDD ha llevado a una complejidad excesiva en la arquitectura: tanto aislar para poder testear genera capas e indirecciones artificiales. Su 'TDD is dead' reabrió el debate sobre sus excesos."
+  },
+  {
+    "id": 36,
+    "question": "¿Por qué es útil el patrón \"value object\" en el contexto de TDD?",
+    "options": [
+      "Permite hacer que el código pase sin cambios",
+      "Evita la creación de nuevos objetos en el sistema",
+      "Simplifica la estructura de las clases en general",
+      "Asegura que los objetos se comparen por valor en lugar de por identidad"
+    ],
+    "answer": 3,
+    "explanation": "Un 'value object' es útil porque hace que los objetos se comparen por su valor, no por su identidad: dos monedas de 5€ son iguales aunque sean instancias distintas. Eso simplifica los tests y modela mejor conceptos que se definen por su valor."
+  },
+  {
+    "id": 37,
+    "question": "Según Michael Feathers, ¿cuál es el propósito de realizar refactorizaciones en el código?",
+    "options": [
+      "Simplificar el código para futuros desarrolladores",
+      "Mantener la conducta del código mientras mejora su diseño y mantenibilidad",
+      "Minimizar la cantidad de líneas de código en el programa",
+      "Aumentar la eficiencia del programa en términos de rendimiento"
+    ],
+    "answer": 1,
+    "explanation": "Para Michael Feathers, refactorizar mantiene la conducta del código mientras mejora su diseño y mantenibilidad: no se trata de hacerlo más rápido ni más corto, sino más fácil de entender y cambiar sin alterar lo que hace."
+  },
+  {
+    "id": 38,
+    "question": "¿Qué problema intenta resolver \"Replace Conditional with Polymorphism\"?",
+    "options": [
+      "Duplicación de código en varias funciones",
+      "El uso excesivo de estructuras condicionales basadas en tipos",
+      "Bajo rendimiento en funciones con muchos parámetros",
+      "Funciones demasiado cortas"
+    ],
+    "answer": 1,
+    "explanation": "'Replace Conditional with Polymorphism' ataca el abuso de condicionales que ramifican según el tipo (if/switch sobre 'tipo'). Se crea una clase por caso y cada una implementa su comportamiento, eliminando los condicionales repartidos."
+  },
+  {
+    "id": 39,
+    "question": "¿Qué tipo de código se considera \"Feature Envy\"?",
+    "options": [
+      "Código que tiene múltiples parámetros",
+      "Código que está altamente acoplado",
+      "Código que contiene muchos condicionales",
+      "Código que accede a datos de otra clase en exceso"
+    ],
+    "answer": 3,
+    "explanation": "'Feature Envy' es código que accede en exceso a los datos de otra clase, más que a los suyos: 'envidia' las funciones de esa otra clase. Suele resolverse moviendo el método a la clase cuyos datos usa, acercando comportamiento y datos."
+  },
+  {
+    "id": 40,
+    "question": "¿Cuál es una característica común de una clase que se considera un \"code smell\" de tipo \"God Class\"?",
+    "options": [
+      "Tiene muy pocos métodos y atributos",
+      "Tiene demasiadas responsabilidades y es compleja de entender",
+      "Es una clase que no se utiliza",
+      "Contiene funciones innecesariamente cortas"
+    ],
+    "answer": 1,
+    "explanation": "Una 'God Class' (clase dios) es un code smell: una clase con demasiadas responsabilidades, enorme y difícil de entender, que concentra gran parte de la lógica. Conviene repartir sus responsabilidades en clases más pequeñas y cohesionadas."
+  },
+  {
+    "id": 41,
+    "question": "¿Cuál es un ejemplo de \"bad smell\" que indica una mala organización de clases?",
+    "options": ["Mysterious Name", "Inline Method", "Push Down Method", "Divergent Change"],
+    "answer": 3,
+    "explanation": "'Divergent Change' es un bad smell de mala organización: una misma clase se modifica por motivos muy distintos (varios ejes de cambio). Indica que asume responsabilidades dispares que convendría separar en clases diferentes."
+  },
+  {
+    "id": 42,
+    "question": "¿Qué describe mejor la viscosidad en un mal diseño?",
+    "options": [
+      "Los cambios correctos son más difíciles de aplicar que soluciones rápidas y erróneas.",
+      "Las clases tienen demasiadas dependencias externas.",
+      "Es fácil realizar cambios pequeños en el diseño.",
+      "La refactorización se realiza sin complicaciones."
+    ],
+    "answer": 0,
+    "explanation": "La viscosidad describe un diseño donde hacer las cosas bien cuesta más que hacer un parche rápido y sucio. Si la solución correcta es más laboriosa que el atajo, el entorno empuja a degradar el diseño con cada cambio."
+  },
+  {
+    "id": 43,
+    "question": "Cuando un diseño es inmóvil, se refiere a:",
+    "options": [
+      "No permite refactorización.",
+      "Tiene dependencias implícitas.",
+      "Fomenta la herencia múltiple.",
+      "Es difícil reutilizar su código en otros contextos."
+    ],
+    "answer": 3,
+    "explanation": "Un diseño inmóvil es aquel cuyo código es difícil de reutilizar en otros contextos: está tan enredado con su entorno que no se puede extraer y aprovechar en otra parte. La inmovilidad impide rentabilizar el trabajo ya hecho."
+  },
+  {
+    "id": 44,
+    "question": "¿Qué describe mejor la fragilidad en un diseño?",
+    "options": [
+      "Es difícil modificar las clases debido a la falta de herencia.",
+      "Las interfaces son demasiado específicas para cada cliente.",
+      "Los cambios generan errores inesperados en ejecución, aunque el código compile.",
+      "Las clases base tienen demasiados métodos abstractos."
+    ],
+    "answer": 2,
+    "explanation": "La fragilidad se da cuando un cambio genera errores inesperados en ejecución, aunque el código compile sin problema. Indica dependencias ocultas: al tocar algo, se rompen cosas en zonas aparentemente no relacionadas."
+  },
+  {
+    "id": 45,
+    "question": "¿Cuál de los siguientes ejemplos viola el principio de sustitución de Liskov?",
+    "options": [
+      "Un Mamífero como clase base de Gato y Caballo.",
+      "Un Rectángulo como clase base de un Cuadrado.",
+      "Una clase Figura extendida por Triángulo y Círculo.",
+      "Una interfaz genérica implementada por varias clases concretas."
+    ],
+    "answer": 1,
+    "explanation": "Un Cuadrado que hereda de Rectángulo viola el LSP: al forzar ancho=alto, rompe el comportamiento esperado de un rectángulo (cambiar el ancho sin afectar al alto). El subtipo no es sustituible por la base sin sorpresas."
+  },
+  {
+    "id": 46,
+    "question": "El principio de segregación de interfaces establece que:",
+    "options": [
+      "Las clases deben ser pequeñas y cohesivas.",
+      "Los clientes no deben depender de interfaces que no usan.",
+      "Las dependencias deben basarse en implementaciones concretas.",
+      "Los métodos de las interfaces deben ser abstractos."
+    ],
+    "answer": 1,
+    "explanation": "El Principio de Segregación de Interfaces (ISP) dice que los clientes no deben depender de interfaces que no usan. Mejor varias interfaces pequeñas y específicas que una grande que obligue a implementar métodos irrelevantes."
+  },
+  {
+    "id": 47,
+    "question": "El principio de inversión de dependencias establece que:",
+    "options": [
+      "Los módulos de bajo nivel deben depender de módulos de alto nivel.",
+      "Las clases concretas deben depender de abstracciones.",
+      "Tanto los módulos de alto como de bajo nivel deben depender de abstracciones.",
+      "Las interfaces deben estar fuertemente relacionadas con las implementaciones."
+    ],
+    "answer": 2,
+    "explanation": "El Principio de Inversión de Dependencias (DIP) dice que tanto los módulos de alto nivel como los de bajo nivel deben depender de abstracciones, no de detalles concretos. La política no debe atarse a la implementación, sino ambas a una interfaz."
+  },
+  {
+    "id": 48,
+    "question": "¿Qué técnica suele usarse para implementar el principio DIP en un sistema?",
+    "options": [
+      "Reducir el uso de interfaces en el diseño.",
+      "Inyección de dependencias para desacoplar clases.",
+      "Eliminar métodos abstractos de las clases base.",
+      "Crear jerarquías profundas de herencia."
+    ],
+    "answer": 1,
+    "explanation": "Para implementar el DIP se suele usar la inyección de dependencias: en vez de que una clase cree sus dependencias concretas, se le pasan (vía interfaz) desde fuera. Eso desacopla las clases y facilita sustituir o simular implementaciones."
+  },
+  {
+    "id": 49,
+    "question": "¿Cuál es un problema potencial al usar herencia en lugar de composición?",
+    "options": [
+      "Incrementa la cohesión entre las clases.",
+      "Reduce la cantidad de código duplicado en las clases derivadas.",
+      "Puede introducir dependencias innecesarias entre clases base y derivadas.",
+      "Simplifica la implementación de nuevas funcionalidades."
+    ],
+    "answer": 2,
+    "explanation": "Un riesgo de la herencia frente a la composición es que introduce dependencias fuertes entre base y derivadas: un cambio en la superclase puede romper todas las subclases (clase base frágil). La composición acopla menos y da más flexibilidad."
+  },
+  {
+    "id": 50,
+    "question": "¿Por qué fue desarrollado Git originalmente?",
+    "options": [
+      "Para reemplazar sistemas de control de versiones como Mercurial.",
+      "Para gestionar el desarrollo del kernel de Linux en 2005.",
+      "Para implementar un sistema de control de versiones centralizado.",
+      "Para facilitar el desarrollo en equipos pequeños."
+    ],
+    "answer": 1,
+    "explanation": "Git fue creado en 2005 por Linus Torvalds para gestionar el desarrollo del kernel de Linux, tras perder el acceso a la herramienta que usaban (BitKeeper). Necesitaban algo rápido, distribuido y capaz de manejar un proyecto enorme."
+  },
+  {
+    "id": 51,
+    "question": "¿Qué significa que un merge sea un \"fast forward\"?",
+    "options": [
+      "Se crean nuevos commits de merge automáticamente.",
+      "La rama se adelanta para apuntar al mismo commit que la otra sin generar un commit adicional.",
+      "Se eliminan los commits de la rama fusionada.",
+      "La rama base se rebasa automáticamente sobre la rama secundaria."
+    ],
+    "answer": 1,
+    "explanation": "Un merge 'fast-forward' ocurre cuando la rama base no ha avanzado desde que salió la otra: Git solo adelanta el puntero al último commit, sin crear un commit de merge. El historial queda lineal, como si nunca hubiera habido rama."
+  },
+  {
+    "id": 52,
+    "question": "¿Cuál es la diferencia principal entre git reset y git revert?",
+    "options": [
+      "git reset crea un nuevo commit con los cambios revertidos.",
+      "git revert elimina commits previos del historial.",
+      "git reset modifica el historial local, mientras que git revert crea un commit que revierte los cambios anteriores.",
+      "git reset funciona solo en repositorios remotos."
+    ],
+    "answer": 2,
+    "explanation": "Diferencia clave: 'git reset' reescribe el historial local moviendo el puntero hacia atrás, mientras que 'git revert' crea un commit nuevo que deshace los cambios sin borrar nada. Revert es seguro en ramas compartidas; reset, no."
+  },
+  {
+    "id": 53,
+    "question": "¿Qué comando asegura que siempre se cree un nodo de merge en el historial, incluso si no es necesario?",
+    "options": [
+      "git merge --fast-forward.",
+      "git merge --no-ff.",
+      "git rebase.",
+      "git cherry-pick."
+    ],
+    "answer": 1,
+    "explanation": "'git merge --no-ff' fuerza siempre la creación de un commit de merge, aunque pudiera hacerse fast-forward. Así queda un nodo explícito que marca dónde se integró la rama, dejando rastro claro de la operación en el historial."
+  },
+  {
+    "id": 54,
+    "question": "¿Cuál es una desventaja potencial de usar rebase en lugar de merge?",
+    "options": [
+      "Introduce conflictos que no existen en el historial original.",
+      "Reescribe el historial de commits, lo que puede causar problemas en repositorios compartidos.",
+      "Genera un historial no lineal que es difícil de seguir.",
+      "Obliga a realizar múltiples commits adicionales durante el proceso."
+    ],
+    "answer": 1,
+    "explanation": "Una desventaja del rebase es que reescribe el historial de commits (cambia sus hashes), lo que causa problemas en ramas compartidas: otros ya tendrían los commits originales. Por eso no se rebasa lo ya publicado y compartido."
+  },
+  {
+    "id": 55,
+    "question": "¿Cuáles son las dos ramas principales de larga duración en GitFlow?",
+    "options": ["feature y hotfix.", "main y feature.", "master y develop.", "develop y hotfix."],
+    "answer": 2,
+    "explanation": "En GitFlow las dos ramas de larga duración son master (el código en producción) y develop (la integración del desarrollo). Las demás (feature, release, hotfix) son temporales y nacen y mueren alrededor de estas dos."
+  },
+  {
+    "id": 56,
+    "question": "¿En qué ramas se mezclan los cambios realizados en una rama de release en GitFlow?",
+    "options": [
+      "Solo en develop.",
+      "En master y develop.",
+      "Solo en master.",
+      "En feature y hotfix."
+    ],
+    "answer": 1,
+    "explanation": "En GitFlow, una rama de release se fusiona al terminar tanto en master (para lanzar la versión) como en develop (para que el desarrollo siga incluyendo esos ajustes). Así ambas ramas de larga duración quedan al día."
+  },
+  {
+    "id": 57,
+    "question": "¿Cuál es el origen de la filosofía lean aplicada al desarrollo de software?",
+    "options": [
+      "En el sistema de producción de Toyota.",
+      "En el manifiesto ágil.",
+      "En la revolución industrial.",
+      "En las técnicas de integración continua."
+    ],
+    "answer": 0,
+    "explanation": "La filosofía lean aplicada al software nace del sistema de producción de Toyota (TPS): eliminar desperdicios y mejorar de forma continua. Mary y Tom Poppendieck trasladaron esas ideas de la fábrica al desarrollo de software."
+  },
+  {
+    "id": 58,
+    "question": "¿Cuáles son los dos principios básicos del sistema de producción de Toyota (TPS)?",
+    "options": [
+      "Just-in-time y Lean Manufacturing.",
+      "Jidoka y Kaizen.",
+      "Lean Manufacturing y Kanban.",
+      "Just-in-time y Jidoka."
+    ],
+    "answer": 3,
+    "explanation": "Los dos pilares del sistema de producción de Toyota (TPS) son el just-in-time (fabricar solo lo necesario cuando se necesita) y el jidoka (automatización con criterio humano que se detiene ante defectos). Sobre ellos se construye todo el lean."
+  },
+  {
+    "id": 59,
+    "question": "¿Qué caracteriza al concepto de jidoka en el sistema lean?",
+    "options": [
+      "Uso de maquinaria completamente automatizada.",
+      "Procesos rígidos y repetitivos para evitar errores.",
+      "Dependencia total de supervisores humanos.",
+      "Automatización con intervención humana para mejora continua."
+    ],
+    "answer": 3,
+    "explanation": "'Jidoka' es la automatización con un toque humano: las máquinas (o procesos) se detienen al detectar un problema para que las personas lo corrijan y mejoren. Combina automatización con criterio humano para no propagar defectos."
+  },
+  {
+    "id": 60,
+    "question": "¿Qué significa el término \"muda\" en el contexto lean?",
+    "options": [
+      "Automatización del trabajo humano.",
+      "Producción en exceso.",
+      "Desperdicio que no agrega valor al cliente.",
+      "Tiempo dedicado a la formación de trabajadores."
+    ],
+    "answer": 2,
+    "explanation": "'Muda' significa desperdicio: cualquier actividad o recurso que consume esfuerzo sin aportar valor al cliente. Identificar y eliminar la muda es el corazón del pensamiento lean, también en el desarrollo de software."
+  },
+  {
+    "id": 61,
+    "question": "¿Qué es una Minimal Marketable Feature (MMF) en el contexto de lean?",
+    "options": [
+      "Una característica prioritaria descartada por el equipo.",
+      "Un componente técnico necesario pero invisible para el cliente.",
+      "Una funcionalidad que optimiza procesos internos.",
+      "El incremento más pequeño que aporta valor al cliente final."
+    ],
+    "answer": 3,
+    "explanation": "Una Minimal Marketable Feature (MMF) es el incremento más pequeño que ya aporta valor al cliente final y podría entregarse. Trocear en MMFs permite liberar valor cuanto antes, en lugar de esperar a completar grandes funcionalidades."
+  },
+  {
+    "id": 62,
+    "question": "¿Qué es una tracer bullet en el desarrollo lean?",
+    "options": [
+      "Una línea de código que identifica un bug crítico.",
+      "Un backlog refinado con tareas mínimas.",
+      "Una funcionalidad mínima para probar el sistema completo.",
+      "Un diagrama para identificar problemas en el flujo de trabajo."
+    ],
+    "answer": 2,
+    "explanation": "Una 'tracer bullet' (bala trazadora) es una funcionalidad mínima que atraviesa el sistema completo de extremo a extremo para probar que la arquitectura funciona. Da pronto un esqueleto que recorre todas las capas, sobre el que iterar."
+  },
+  {
+    "id": 63,
+    "question": "¿Cuál es el objetivo de la técnica de los \"5 por qués\"?",
+    "options": [
+      "Proponer soluciones rápidas y directas a problemas del sistema.",
+      "Identificar la causa raíz de un problema mediante reflexión.",
+      "Crear hipótesis sobre el funcionamiento del software.",
+      "Diseñar un backlog más optimizado y detallado."
+    ],
+    "answer": 1,
+    "explanation": "La técnica de los '5 por qués' busca la causa raíz de un problema preguntando 'por qué' repetidamente hasta llegar al origen real, no al síntoma. Evita parchear lo superficial y ataca lo que de verdad provoca el fallo."
+  },
+  {
+    "id": 64,
+    "question": "¿Qué representa el lead time en el desarrollo lean?",
+    "options": [
+      "El tiempo dedicado exclusivamente a pruebas de una funcionalidad.",
+      "El tiempo total desde la solicitud de una funcionalidad hasta su entrega.",
+      "El tiempo necesario para completar una tarea individual en el backlog.",
+      "El tiempo de inactividad en un proceso de desarrollo."
+    ],
+    "answer": 1,
+    "explanation": "El lead time es el tiempo total desde que se solicita una funcionalidad hasta que se entrega, incluyendo esperas. Mide la experiencia del cliente ('cuánto tardo en recibir lo que pedí'), no solo el tiempo activo de desarrollo (cycle time)."
+  },
+  {
+    "id": 65,
+    "question": "¿Qué significa la idea de \"option thinking\" en lean?",
+    "options": [
+      "Mantener abiertas las opciones para decidir en el último momento.",
+      "Priorizar decisiones rápidas sobre las funcionalidades.",
+      "Completar todas las tareas del backlog al inicio del sprint.",
+      "Usar entregas frecuentes para reducir opciones futuras."
+    ],
+    "answer": 0,
+    "explanation": "El 'option thinking' (pensamiento de opciones) consiste en mantener abiertas varias alternativas para decidir en el último momento responsable, con más información. Cada opción tiene valor; cerrarlas pronto puede salir caro."
+  },
+  {
+    "id": 66,
+    "question": "¿Cuál de las siguientes NO es una de las tres prácticas fundamentales de Kanban?",
+    "options": [
+      "Visualizar el flujo de trabajo.",
+      "Limitar el WIP (Work In Progress).",
+      "Medir y optimizar el flujo (lead time o cycle time).",
+      "Establecer sprints de duración fija."
+    ],
+    "answer": 3,
+    "explanation": "Establecer sprints de duración fija NO es una práctica de Kanban (es propio de Scrum): Kanban gestiona un flujo continuo. Sus prácticas fundamentales son visualizar el flujo, limitar el WIP y medir/optimizar el flujo (lead/cycle time)."
+  },
+  {
+    "id": 67,
+    "question": "¿Qué es el \"throughput\" en el contexto de Kanban?",
+    "options": [
+      "El tiempo que una tarea permanece en una columna específica.",
+      "La cantidad de tareas iniciadas en un período de tiempo.",
+      "El número de ítems completados por unidad de tiempo.",
+      "La suma total de tareas en el backlog."
+    ],
+    "answer": 2,
+    "explanation": "El 'throughput' es el número de ítems completados por unidad de tiempo: mide cuánto valor termina y sale del sistema. No es el tiempo en una columna ni las tareas iniciadas, sino el ritmo real de finalización."
+  },
+  {
+    "id": 68,
+    "question": "¿Qué es una \"clase de servicio\" en Kanban?",
+    "options": [
+      "Un tipo de reunión para evaluar el progreso.",
+      "Una categoría que define diferentes tipos de ítems de trabajo con políticas específicas.",
+      "Una herramienta para medir el rendimiento del equipo.",
+      "Un rol dentro del equipo Kanban."
+    ],
+    "answer": 1,
+    "explanation": "Una 'clase de servicio' en Kanban es una categoría de ítems de trabajo con políticas propias (p. ej. urgente, estándar, fecha fija). Permite tratar de forma distinta tipos de trabajo con distinta prioridad o urgencia."
+  },
+  {
+    "id": 69,
+    "question": "En Kanban, ¿qué significa el lema \"Stop starting, start finishing\"?",
+    "options": [
+      "Dejar de trabajar en tareas nuevas y centrarse en tareas antiguas.",
+      "Evitar el inicio de tareas hasta que todo el equipo esté disponible.",
+      "Dejar de empezar tareas y enfocarse en terminar las que ya están en progreso.",
+      "Parar el trabajo cuando se detecta un error y reiniciar desde cero."
+    ],
+    "answer": 2,
+    "explanation": "'Stop starting, start finishing' significa dejar de abrir tareas nuevas y centrarse en terminar las que ya están en curso. Acumular trabajos a medias no entrega valor; lo que cuenta es completar y liberar lo empezado."
+  },
+  {
+    "id": 70,
+    "question": "¿Qué es la \"última milla\" en el contexto del despliegue de software?",
+    "options": [
+      "Los últimos usuarios en adoptar el software.",
+      "Los pasos necesarios para poner en producción el sistema, desde el código hasta el entorno productivo.",
+      "La distancia física entre el servidor y el usuario final.",
+      "El tiempo que tarda en compilar el código fuente."
+    ],
+    "answer": 1,
+    "explanation": "La 'última milla' es el conjunto de pasos necesarios para llevar el código a producción: build, pruebas, configuración y despliegue en el entorno real. Es donde tradicionalmente fallan las cosas, de ahí que se busque automatizarla."
+  },
+  {
+    "id": 71,
+    "question": "¿Cuál es una diferencia clave entre \"Entrega Continua\" y \"Despliegue Continuo\"?",
+    "options": [
+      "No hay diferencias significativas entre ambos términos.",
+      "Entrega Continua implica despliegues automáticos en producción, mientras que Despliegue Continuo no.",
+      "En Entrega Continua, el software está listo para desplegarse en cualquier momento, pero el despliegue puede ser manual; en Despliegue Continuo, el despliegue a producción es automático.",
+      "Despliegue Continuo se centra en pruebas manuales, mientras que Entrega Continua se enfoca en pruebas automatizadas."
+    ],
+    "answer": 2,
+    "explanation": "Diferencia clave: en Entrega Continua el software está siempre listo para desplegarse, pero el paso a producción puede ser manual; en Despliegue Continuo ese paso es automático tras superar las pruebas. La frontera está en si un humano da el último 'ok'."
+  },
+  {
+    "id": 72,
+    "question": "En el contexto de Docker, ¿qué es una imagen Docker?",
+    "options": [
+      "Un contenedor en ejecución.",
+      "Un archivo de configuración de la aplicación.",
+      "Un artefacto ejecutable que contiene todo lo necesario para correr una aplicación en cualquier entorno Docker.",
+      "Un repositorio de código fuente para aplicaciones en contenedores."
+    ],
+    "answer": 2,
+    "explanation": "Una imagen Docker es un artefacto ejecutable que empaqueta todo lo necesario (código, dependencias, configuración) para correr una aplicación en cualquier entorno con Docker. Es la plantilla inmutable; el contenedor es esa imagen en ejecución."
+  },
+  {
+    "id": 73,
+    "question": "¿Cuál es una ventaja de los contenedores sobre las máquinas virtuales?",
+    "options": [
+      "Requieren más recursos, proporcionando mayor aislamiento.",
+      "Son más ligeros y rápidos de iniciar, consumiendo menos recursos.",
+      "Ofrecen mayor seguridad que las máquinas virtuales.",
+      "No necesitan un sistema operativo anfitrión."
+    ],
+    "answer": 1,
+    "explanation": "Los contenedores son más ligeros y rápidos de iniciar que las máquinas virtuales y consumen menos recursos, porque comparten el kernel del sistema anfitrión en lugar de incluir un SO completo. Por eso arrancan en segundos y se despliegan con agilidad."
+  },
+  {
+    "id": 74,
+    "question": "¿Qué significa el comando docker run -p 80:80 -d nginx-example?",
+    "options": [
+      "Ejecuta un contenedor en modo interactivo.",
+      "Construye una imagen llamada nginx-example.",
+      "Detiene un contenedor en ejecución.",
+      "Ejecuta el contenedor nginx-example en segundo plano, mapeando el puerto 80 del host al puerto 80 del contenedor."
+    ],
+    "answer": 3,
+    "explanation": "'docker run -p 80:80 -d nginx-example' ejecuta el contenedor nginx-example en segundo plano (-d) y mapea el puerto 80 del host al 80 del contenedor (-p). Así el servicio del contenedor queda accesible desde el puerto 80 de la máquina."
+  },
+  {
+    "id": 75,
+    "question": "¿Cuál es el propósito de una herramienta de orquestación como Kubernetes en el despliegue de aplicaciones?",
+    "options": [
+      "Reemplazar a Docker en la gestión de contenedores.",
+      "Gestionar y escalar aplicaciones basadas en contenedores en entornos de producción.",
+      "Actuar como sistema de control de versiones.",
+      "Facilitar la comunicación entre el equipo de desarrollo y los clientes."
+    ],
+    "answer": 1,
+    "explanation": "Kubernetes es un orquestador: gestiona y escala automáticamente aplicaciones basadas en contenedores en producción (despliegue, balanceo, recuperación ante fallos). No reemplaza a Docker, sino que coordina muchos contenedores a gran escala."
+  },
+  {
+    "id": 76,
+    "question": "¿Qué significa \"Infraestructura como código\" en el contexto de DevOps?",
+    "options": [
+      "Definir y gestionar la configuración de servidores y entornos mediante código versionado.",
+      "Contratar desarrolladores que también sean expertos en operaciones.",
+      "Usar únicamente lenguajes de programación para configurar sistemas.",
+      "Reemplazar completamente al equipo de operaciones con scripts automatizados."
+    ],
+    "answer": 0,
+    "explanation": "'Infraestructura como código' es definir y gestionar servidores y entornos mediante código versionado, en lugar de configurarlos a mano. Así la infraestructura es reproducible, revisable y se versiona igual que el software."
+  },
+  {
+    "id": 77,
+    "question": "¿Qué es un \"interruptor de características\" o \"feature toggle\"?",
+    "options": [
+      "Un mecanismo para eliminar código obsoleto del sistema.",
+      "Una técnica que permite activar o desactivar funcionalidades en tiempo de ejecución.",
+      "Un método para acelerar la compilación del software.",
+      "Una herramienta para gestionar ramas en sistemas de control de versiones."
+    ],
+    "answer": 1,
+    "explanation": "Un 'feature toggle' (interruptor de características) permite activar o desactivar funcionalidades en tiempo de ejecución sin desplegar de nuevo. Así se puede subir código a producción 'apagado' y encenderlo cuando convenga, o probarlo con pocos usuarios."
+  },
+  {
+    "id": 78,
+    "question": "En el contexto de despliegue, ¿qué es un canary release?",
+    "options": [
+      "Una estrategia para desplegar todas las funcionalidades a todos los usuarios al mismo tiempo.",
+      "Un sistema de pruebas unitarias más robusto.",
+      "Un método para lanzar nuevas versiones a un pequeño grupo de usuarios antes de un despliegue completo.",
+      "Un tipo de rama especial en Git para integraciones críticas."
+    ],
+    "answer": 2,
+    "explanation": "Un 'canary release' lanza la nueva versión primero a un pequeño grupo de usuarios antes del despliegue completo. Si todo va bien, se amplía; si falla, afecta a pocos. Reduce el riesgo de un cambio en producción, como el canario en la mina."
+  },
+  {
+    "id": 79,
+    "question": "¿Qué se entiende por \"Despliegue Azul-Verde\" (Blue-Green Deployment)?",
+    "options": [
+      "Un método para optimizar el uso de recursos en la nube.",
+      "Una estrategia para implementar pruebas unitarias.",
+      "Un enfoque para gestionar bases de datos en producción.",
+      "Una técnica de despliegue donde dos entornos idénticos se usan alternadamente para minimizar el tiempo de inactividad."
+    ],
+    "answer": 3,
+    "explanation": "El Despliegue Azul-Verde usa dos entornos idénticos (azul y verde): uno sirve el tráfico mientras el otro recibe la nueva versión, y luego se conmuta. Minimiza el tiempo de inactividad y permite volver atrás al instante si algo falla."
+  },
+  {
+    "id": 80,
+    "question": "¿Qué papel juegan las herramientas como Flyway o Liquibase?",
+    "options": [
+      "Son editores de código para lenguajes específicos.",
+      "Ayudan a gestionar y automatizar migraciones de bases de datos.",
+      "Sirven para monitorizar el rendimiento de aplicaciones.",
+      "Facilitan la comunicación con el cliente."
+    ],
+    "answer": 1,
+    "explanation": "Herramientas como Flyway o Liquibase gestionan y automatizan las migraciones de base de datos: versionan los cambios de esquema y los aplican de forma controlada y reproducible en cada entorno. Hacen con la BBDD lo que Git con el código."
+  }
+]
