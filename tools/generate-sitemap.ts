@@ -47,4 +47,4 @@ Sitemap: ${BASE_URL}/sitemap.xml
   }
 }
 
-main()
+void main()

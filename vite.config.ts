@@ -2,12 +2,18 @@ import { fileURLToPath, URL } from "node:url"
 import tailwindcss from "@tailwindcss/vite"
 import vue from "@vitejs/plugin-vue"
 import { visualizer } from "rollup-plugin-visualizer"
-import { defineConfig } from "vite"
+import { defineConfig, lazyPlugins } from "vite-plus"
 import viteCompression from "vite-plugin-compression"
 import vueDevTools from "vite-plugin-vue-devtools"
 
 export default defineConfig({
-  plugins: [
+  fmt: { printWidth: 100, semi: false },
+  lint: {
+    jsPlugins: [{ name: "vite-plus", specifier: "vite-plus/oxlint-plugin" }],
+    rules: { "vite-plus/prefer-vite-plus-imports": "error" },
+    options: { typeAware: true, typeCheck: true },
+  },
+  plugins: lazyPlugins(() => [
     vue({
       template: {
         compilerOptions: {
@@ -29,7 +35,7 @@ export default defineConfig({
       brotliSize: true,
       open: false,
     }),
-  ],
+  ]),
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),

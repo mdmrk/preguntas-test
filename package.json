@@ -4,15 +4,16 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "generate-sitemap": "bun tools/generate-sitemap.ts",
-    "build": "bun run generate-sitemap && VITE_BUILD_TIME=$(date -u +%Y-%m-%dT%H:%M:%S.%3NZ) run-p type-check \"build-only {@}\" --",
-    "preview": "vite preview",
-    "build-only": "vite build",
+    "dev": "vp dev",
+    "generate-sitemap": "node tools/generate-sitemap.ts",
+    "build": "vp run generate-sitemap && VITE_BUILD_TIME=$(date -u +%Y-%m-%dT%H:%M:%S.%3NZ) run-p type-check \"build-only {@}\" --",
+    "preview": "vp preview",
+    "build-only": "vp build",
     "type-check": "vue-tsc --build",
-    "lint": "biome check .",
-    "lint:fix": "biome check --write .",
-    "format": "biome format --write ."
+    "check": "vp check",
+    "lint": "vp lint",
+    "lint:fix": "vp lint --fix",
+    "format": "vp fmt --write"
   },
   "dependencies": {
     "@hiseb/confetti": "^2.1.0",
@@ -27,7 +28,6 @@
     "vue-router": "^5.1.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.5.1",
     "@tsconfig/node22": "^22.0.5",
     "@types/node": "^26.0.1",
     "@vitejs/plugin-vue": "^6.0.7",
@@ -36,9 +36,11 @@
     "npm-run-all2": "^9.0.2",
     "terser": "^5.48.0",
     "typescript": "~6.0.3",
-    "vite": "^8.1.0",
+    "vite": "catalog:",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-vue-devtools": "^8.1.5",
+    "vite-plus": "catalog:",
     "vue-tsc": "^3.3.5"
-  }
+  },
+  "packageManager": "pnpm@11.3.0"
 }
