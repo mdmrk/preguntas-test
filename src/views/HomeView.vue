@@ -41,7 +41,6 @@ useHead({
           <MainButton bg="gradient-lime" class="relative" text="MADS">
             <MainButton id="mads-parcial-1" bg="gradient-lime" text="parcial 1" />
             <MainButton id="mads-parcial-2" bg="gradient-lime" text="parcial 2" />
-            <MainButton id="mads-dificiles" bg="gradient-lime" text="difíciles" />
           </MainButton>
         </li>
         <li class="w-full"><MainButton id="dca" bg="gradient-teal" text="DCA" /></li>
