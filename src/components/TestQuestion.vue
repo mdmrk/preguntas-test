@@ -259,7 +259,9 @@ const selectAnswer = (shuffledIndex: number, event?: Event) => {
     const target = event?.currentTarget as HTMLElement | undefined
     const rect = target?.getBoundingClientRect()
     confetti(
-      rect ? { position: { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 } } : {},
+      rect
+        ? { position: { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 }, fade: true }
+        : {},
     )
   }
 
