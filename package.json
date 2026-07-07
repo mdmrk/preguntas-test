@@ -17,19 +17,19 @@
   },
   "dependencies": {
     "@hiseb/confetti": "^2.1.0",
-    "@tailwindcss/vite": "^4.3.1",
+    "@tailwindcss/vite": "^4.3.2",
     "@types/katex": "^0.16.8",
-    "@unhead/vue": "^3.1.6",
+    "@unhead/vue": "^3.1.7",
     "highlight.js": "^11.11.1",
     "katex": "^0.17.0",
     "rollup-plugin-visualizer": "^7.0.1",
-    "tailwindcss": "^4.3.1",
+    "tailwindcss": "^4.3.2",
     "vue": "^3.5.39",
     "vue-router": "^5.1.0"
   },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.5",
-    "@types/node": "^26.0.1",
+    "@types/node": "^26.1.0",
     "@vitejs/plugin-vue": "^6.0.7",
     "@vue/tsconfig": "^0.9.1",
     "jiti": "^2.7.0",
@@ -40,7 +40,7 @@
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-vue-devtools": "^8.1.5",
     "vite-plus": "catalog:",
-    "vue-tsc": "^3.3.5"
+    "vue-tsc": "^3.3.6"
   },
   "packageManager": "pnpm@11.3.0"
 }
