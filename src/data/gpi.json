@@ -1985,5 +1985,2707 @@
     ],
     "answer": 3,
     "image": "gpi011.png"
+  },
+  {
+    "id": 209,
+    "question": "Según el temario, las tres claves para una buena gestión de un proyecto informático son:",
+    "options": [
+      "Personal, problema y proceso",
+      "Presupuesto, plazo y calidad",
+      "Planificación, ejecución y control",
+      "Coste, alcance y tiempo"
+    ],
+    "answer": 0,
+    "explanation": "El Tema 1 resume las claves de una buena gestión en Personal (esfuerzo humano), Problema (comunicación con el cliente) y Proceso (métodos y herramientas)."
+  },
+  {
+    "id": 210,
+    "question": "¿Cuál de las siguientes NO es una característica especial del software que dificulta su gestión?",
+    "options": [
+      "Es un producto intangible",
+      "No existe un entendimiento claro sobre el proceso del software",
+      "Su coste de replicación (copia) es muy elevado",
+      "Los grandes sistemas software suelen ser únicos"
+    ],
+    "answer": 2,
+    "explanation": "Las características especiales son: producto intangible, falta de entendimiento claro del proceso y unicidad de los grandes sistemas. El coste de copiar software es casi nulo, no elevado."
+  },
+  {
+    "id": 211,
+    "question": "El rendimiento de un equipo de desarrollo, según el temario, es:",
+    "options": [
+      "Directamente proporcional a la cantidad de comunicación necesaria",
+      "Inversamente proporcional a la cantidad de comunicación que deba entablarse",
+      "Independiente de la comunicación entre sus miembros",
+      "Proporcional al número de personas del equipo"
+    ],
+    "answer": 1,
+    "explanation": "A mayor comunicación necesaria, menor rendimiento; por eso interesa modularizar para reducir la comunicación entre miembros."
+  },
+  {
+    "id": 212,
+    "question": "La duración de un proyecto (TDEV en COCOMO 2), según el temario:",
+    "options": [
+      "Depende del esfuerzo total y es independiente del número de personas que trabajen",
+      "Es proporcional al número de personas asignadas",
+      "Se reduce siempre a la mitad al duplicar el personal",
+      "No puede estimarse hasta finalizar el diseño"
+    ],
+    "answer": 0,
+    "explanation": "El tiempo para completar un proyecto no es proporcional al número de personas; TDEV depende del esfuerzo (PM) total invertido."
+  },
+  {
+    "id": 213,
+    "question": "Los puntos de función sirven para estimar líneas de código (LOC) mediante el factor AVC. Dicho factor:",
+    "options": [
+      "Es constante para todos los lenguajes",
+      "Sólo se aplica a lenguajes ensambladores",
+      "Depende del lenguaje de programación empleado",
+      "Mide la productividad del equipo"
+    ],
+    "answer": 2,
+    "explanation": "LOC = AVC × nº de puntos de función. AVC depende del lenguaje: ~200–300 en ensamblador y 2–40 en un 4GL."
+  },
+  {
+    "id": 214,
+    "question": "¿Qué multiplicador (conductor de coste) con un valor alto REDUCIRÍA el esfuerzo estimado en COCOMO?",
+    "options": [
+      "La complejidad del producto",
+      "La experiencia del personal",
+      "Las restricciones de memoria",
+      "La fiabilidad requerida"
+    ],
+    "answer": 1,
+    "explanation": "Mayor experiencia del personal reduce el esfuerzo (multiplicador < 1). Complejidad, memoria y fiabilidad exigida lo aumentan."
+  },
+  {
+    "id": 215,
+    "question": "Un riesgo que afecta a la agenda o a los recursos del proyecto se clasifica como riesgo:",
+    "options": ["Del producto", "Del negocio", "Tecnológico", "Del proyecto"],
+    "answer": 3,
+    "explanation": "Riesgos del proyecto → afectan a agenda/recursos; del producto → a la calidad/desarrollo; del negocio → a la organización."
+  },
+  {
+    "id": 216,
+    "question": "¿Cuál es el orden correcto de las actividades del proceso de gestión de riesgos?",
+    "options": [
+      "Identificación → Análisis → Planificación → Monitorización",
+      "Análisis → Identificación → Planificación → Monitorización",
+      "Identificación → Planificación → Análisis → Monitorización",
+      "Planificación → Identificación → Análisis → Monitorización"
+    ],
+    "answer": 0,
+    "explanation": "Primero se identifican los riesgos, se analizan (probabilidad/efectos), se planifican medidas de previsión y contingencia y se monitorizan."
+  },
+  {
+    "id": 217,
+    "question": "El método de planificación PERT se define como:",
+    "options": [
+      "Un diagrama de barras que muestra la duración de cada tarea",
+      "Una técnica de estimación de costes basada en líneas de código",
+      "Una red (grafo dirigido) de dependencias de tareas que llevan al final del proyecto",
+      "Un plan de gestión de la configuración"
+    ],
+    "answer": 2,
+    "explanation": "PERT es una red/grafo dirigido de dependencias entre tareas hacia el final del proyecto. El de barras es el diagrama de Gantt."
+  },
+  {
+    "id": 218,
+    "question": "En la pirámide de Maslow, ¿dónde se sitúa la mayoría de los jefes de proyecto según el temario?",
+    "options": [
+      "Necesidades fisiológicas",
+      "Necesidades de autorrealización",
+      "Necesidades de seguridad",
+      "Necesidades sociales"
+    ],
+    "answer": 1,
+    "explanation": "El material sitúa a la mayoría de jefes de proyecto en el nivel de autorrealización de la pirámide de Maslow."
+  },
+  {
+    "id": 219,
+    "question": "¿Qué es la refactorización en eXtreme Programming (XP)?",
+    "options": [
+      "La escritura de pruebas antes que el código",
+      "La programación en parejas",
+      "La entrega continua al cliente",
+      "La simplificación del código sin modificar su comportamiento"
+    ],
+    "answer": 3,
+    "explanation": "Refactorizar es reestructurar/simplificar el código manteniendo el mismo comportamiento externo."
+  },
+  {
+    "id": 220,
+    "question": "¿Cuál de las siguientes NO es una tarea propia de la Gestión de la Configuración del Software?",
+    "options": [
+      "Control de versiones",
+      "Control de cambios",
+      "Estimación del esfuerzo mediante puntos de función",
+      "Auditorías e informes"
+    ],
+    "answer": 2,
+    "explanation": "La GC comprende identificación, control de versiones, control de cambios y auditorías/informes. La estimación por puntos de función es del Tema 2."
+  },
+  {
+    "id": 221,
+    "question": "El plan original que se guarda y se usa como referencia para monitorizar y controlar el progreso se denomina:",
+    "options": ["Camino crítico", "Línea base", "Holgura total", "Valor acumulado"],
+    "answer": 1,
+    "explanation": "La línea base (baseline) es el plan original de referencia frente al que se compara lo programado y lo real."
+  },
+  {
+    "id": 222,
+    "question": "La secuencia de actividades con holgura total 0 que determina la duración mínima del proyecto es:",
+    "options": ["El cronograma", "La línea base", "El diagrama de Gantt", "El camino crítico"],
+    "answer": 3,
+    "explanation": "El camino crítico es la secuencia de actividades con holgura total 0; cualquier retraso en él retrasa el proyecto."
+  },
+  {
+    "id": 223,
+    "question": "La holgura total (HT) de una actividad es:",
+    "options": [
+      "El tiempo que puede retrasarse sin retrasar el proyecto",
+      "El tiempo que puede retrasarse permitiendo que las siguientes empiecen lo antes posible",
+      "La duración total de la actividad",
+      "El tiempo que la actividad adelanta al proyecto"
+    ],
+    "answer": 0,
+    "explanation": "HT = margen de retraso sin afectar al fin del proyecto. La segunda definición corresponde a la holgura libre (HL)."
+  },
+  {
+    "id": 224,
+    "question": "En el análisis EVA, el indicador CPI (Índice de Rendimiento del Coste, IRC) se calcula como:",
+    "options": ["BCWP − ACWP", "BCWP / BCWS", "BCWP / ACWP", "BCWS − BCWP"],
+    "answer": 2,
+    "explanation": "CPI = BCWP/ACWP (valor acumulado entre coste real). BCWP−ACWP es la variación de coste (CV); BCWP/BCWS es el SPI."
+  },
+  {
+    "id": 225,
+    "question": "En el análisis EVA, la tarea/proyecto va ADELANTADA respecto a la agenda si:",
+    "options": ["BCWP < BCWS", "BCWP > BCWS", "ACWP > BCWP", "ACWP < BCWP"],
+    "answer": 1,
+    "explanation": "Si el valor acumulado (BCWP) supera al planificado (BCWS), SV>0 y SPI>1: se ha hecho más trabajo del previsto → adelantado."
+  },
+  {
+    "id": 226,
+    "question": "¿Qué podemos decir de una tarea si BCWS = BCWP = 0 y ACWP = 800?",
+    "options": [
+      "La tarea está terminada",
+      "La tarea va adelantada",
+      "La tarea va según lo previsto",
+      "El valor ACWP es erróneo"
+    ],
+    "answer": 3,
+    "explanation": "Si no había trabajo planificado ni realizado (BCWS=BCWP=0), no puede existir coste real de ese trabajo: ACWP=800 es incoherente."
+  },
+  {
+    "id": 227,
+    "question": "Según la LOPDGDD (L.O. 3/2018), ¿a partir de qué edad puede un menor prestar su consentimiento para el tratamiento de sus datos en España?",
+    "options": ["14 años", "12 años", "16 años", "18 años"],
+    "answer": 0,
+    "explanation": "La LOPDGDD fija la edad de consentimiento en 14 años (el RGPD permite hasta 16, pero España concreta 14)."
+  },
+  {
+    "id": 228,
+    "question": "La figura que supervisa de forma independiente el cumplimiento de la normativa de protección de datos dentro de una organización es:",
+    "options": [
+      "El responsable del tratamiento",
+      "El encargado del tratamiento",
+      "El Delegado de Protección de Datos (DPD)",
+      "El interesado"
+    ],
+    "answer": 2,
+    "explanation": "El DPD asesora, supervisa y coopera con la autoridad de control de forma independiente. Su nombramiento es obligatorio en ciertos casos."
+  },
+  {
+    "id": 229,
+    "question": "¿Cuál de los siguientes NO es un derecho del interesado según el RGPD?",
+    "options": [
+      "Acceso",
+      "Cesión obligatoria a terceros",
+      "Rectificación",
+      "Supresión (derecho al olvido)"
+    ],
+    "answer": 1,
+    "explanation": "Los derechos son: acceso, rectificación, supresión, limitación, oposición y portabilidad. La cesión obligatoria a terceros no es un derecho del interesado."
+  },
+  {
+    "id": 230,
+    "question": "En España, el organismo público independiente que supervisa la normativa de protección de datos e impone sanciones es:",
+    "options": [
+      "El Comité Europeo de Protección de Datos (CEPD)",
+      "El Ministerio de Cultura",
+      "El Consejo General de Colegios de Ingeniería en Informática",
+      "La Agencia Española de Protección de Datos (AEPD)"
+    ],
+    "answer": 3,
+    "explanation": "La AEPD es la autoridad de control en España (reclamaciones, inspecciones, sanciones). El CEPD opera a nivel europeo."
+  },
+  {
+    "id": 231,
+    "question": "En España, la ley que regula la propiedad intelectual del software es:",
+    "options": [
+      "La Ley de Propiedad Intelectual (Real Decreto Legislativo 1/1996)",
+      "El Reglamento General de Protección de Datos (RGPD)",
+      "La LOPDGDD (Ley Orgánica 3/2018)",
+      "La Ley 2/1974 de Colegios Profesionales"
+    ],
+    "answer": 0,
+    "explanation": "El software se protege como propiedad intelectual mediante el RDL 1/1996. El RGPD/LOPDGDD regulan datos personales."
+  },
+  {
+    "id": 232,
+    "question": "Los derechos morales del autor (paternidad, integridad), según la Ley de Propiedad Intelectual, son:",
+    "options": [
+      "Transferibles mediante contrato de cesión",
+      "Válidos sólo durante 70 años",
+      "Irrenunciables, intransferibles y perpetuos",
+      "Exclusivos de las personas jurídicas"
+    ],
+    "answer": 2,
+    "explanation": "Los derechos morales son irrenunciables, intransferibles y perpetuos (Art. 14). Los patrimoniales (reproducción, distribución…) sí pueden cederse."
+  },
+  {
+    "id": 233,
+    "question": "Una licencia de tipo copyleft (por ejemplo, la GPL) se caracteriza por:",
+    "options": [
+      "Permitir vincular el código con software propietario sin restricciones",
+      "Ser una licencia de software propietario",
+      "No exigir la atribución al autor",
+      "Obligar a mantener la misma licencia en las obras derivadas"
+    ],
+    "answer": 3,
+    "explanation": "El copyleft (GPL) obliga a que las obras derivadas conserven la misma licencia. La vinculación flexible con propietario es del copyleft débil (LGPL, MPL)."
+  },
+  {
+    "id": 234,
+    "question": "¿Cuál es la situación de la Ingeniería Informática como profesión en España, según el temario?",
+    "options": [
+      "Es una profesión NO regulada, con colegiación voluntaria y ejercicio en libre competencia",
+      "Es una profesión regulada con atribuciones reservadas",
+      "La colegiación es obligatoria para todos los informáticos",
+      "Está regulada por el RGPD"
+    ],
+    "answer": 0,
+    "explanation": "En España es una profesión no regulada, sin atribuciones reservadas, con colegiación voluntaria y ejercicio en libre competencia."
+  },
+  {
+    "id": 235,
+    "question": "¿Cuál de los siguientes NO es un factor a tener en cuenta para seleccionar al personal de un equipo de software?",
+    "options": [
+      "Experiencia en el dominio de la aplicación",
+      "Capacidad de comunicación",
+      "El estado civil",
+      "Adaptabilidad"
+    ],
+    "answer": 2,
+    "explanation": "El temario cita como factores la experiencia en el dominio, la capacidad de comunicación, la adaptabilidad, la actitud y la personalidad. El estado civil no es un criterio de selección."
+  },
+  {
+    "id": 236,
+    "question": "Además de la planificación y la estimación, ¿cuál es otra de las tareas MÁS significativas del gestor de un proyecto software?",
+    "options": [
+      "La confección de agendas (scheduling)",
+      "La redacción del código fuente",
+      "El diseño de la interfaz de usuario",
+      "La compra del hardware"
+    ],
+    "answer": 0,
+    "explanation": "El Tema 1 señala que las tareas más significativas del gestor son la planificación, la estimación y la confección de agendas (scheduling)."
+  },
+  {
+    "id": 237,
+    "question": "El modelo de proceso en el que el producto se desarrolla y entrega en sucesivos incrementos, cada uno añadiendo funcionalidad, se denomina modelo:",
+    "options": ["En cascada puro", "De caja negra", "De prototipado desechable", "Incremental"],
+    "answer": 3,
+    "explanation": "El modelo de desarrollo incremental entrega el software en incrementos sucesivos que van añadiendo funcionalidad, frente al cascada, que es secuencial."
+  },
+  {
+    "id": 238,
+    "question": "¿En qué consiste la estimación de costes de un proyecto software?",
+    "options": [
+      "En calcular el número exacto de errores del programa",
+      "En predecir los recursos (monetarios, temporales, humanos, materiales…) necesarios para el desarrollo",
+      "En diseñar la arquitectura del sistema",
+      "En redactar el manual de usuario"
+    ],
+    "answer": 1,
+    "explanation": "Estimar costes es predecir los recursos (monetarios, temporales, humanos, materiales…) necesarios para llevar a cabo el desarrollo del software."
+  },
+  {
+    "id": 239,
+    "question": "Los puntos de objeto, frente a los puntos de función, se caracterizan por:",
+    "options": [
+      "Ser más difíciles de calcular en fases tempranas",
+      "Considerar únicamente líneas de código fuente",
+      "Ser más fáciles de estimar, pues sólo consideran pantallas, informes y módulos 3GL",
+      "No poder usarse en el modelo COCOMO 2"
+    ],
+    "answer": 2,
+    "explanation": "Los puntos de objeto son más fáciles de estimar a partir de una especificación porque sólo consideran pantallas, informes y módulos 3GL; por eso son útiles en fases tempranas."
+  },
+  {
+    "id": 240,
+    "question": "Según el temario, ¿qué le ocurre a la incertidumbre de una estimación conforme avanza el proyecto (viabilidad → requisitos → diseño → código → entrega)?",
+    "options": [
+      "Disminuye, estrechándose hacia el valor real",
+      "Aumenta progresivamente",
+      "Se mantiene constante",
+      "Es máxima justo en la entrega"
+    ],
+    "answer": 0,
+    "explanation": "La gráfica de incertidumbre muestra que el margen (de 4x a 0,25x) se va estrechando hacia el valor real a medida que avanza el proyecto."
+  },
+  {
+    "id": 241,
+    "question": "En COCOMO 2, el nivel que realiza las estimaciones basándose en líneas de código fuente es el nivel:",
+    "options": [
+      "Inicial de prototipado (puntos de objeto)",
+      "Inicial de diseño (puntos de función)",
+      "De mantenimiento",
+      "Post-arquitectura"
+    ],
+    "answer": 3,
+    "explanation": "COCOMO 2 tiene tres niveles; el post-arquitectura estima a partir de líneas de código fuente. El inicial de prototipado usa puntos de objeto y el inicial de diseño, puntos de función."
+  },
+  {
+    "id": 242,
+    "question": "Un riesgo que afecta a la organización que desarrolla o gestiona el proyecto (p. ej., un competidor lanza antes su producto) se denomina riesgo:",
+    "options": ["Del proyecto", "Del negocio", "Del producto", "Tecnológico"],
+    "answer": 1,
+    "explanation": "Los riesgos del negocio afectan a la organización que desarrolla o gestiona el proyecto; los del proyecto a agenda/recursos y los del producto a la calidad/desarrollo."
+  },
+  {
+    "id": 243,
+    "question": "¿Cuál de los siguientes NO es un apartado de la estructura del plan del proyecto según el temario?",
+    "options": [
+      "Análisis de riesgos",
+      "Estimaciones",
+      "Código fuente comentado",
+      "Mecanismos de monitorización y control"
+    ],
+    "answer": 2,
+    "explanation": "La estructura del plan incluye introducción (requisitos y restricciones), estimaciones, análisis de riesgos, mecanismos de monitorización y control, recursos y agenda. El código fuente no forma parte del plan."
+  },
+  {
+    "id": 244,
+    "question": "En el análisis de riesgos, cada riesgo identificado se evalúa fundamentalmente según:",
+    "options": [
+      "Su probabilidad y sus efectos",
+      "Su coste de licencia",
+      "El número de líneas de código afectadas",
+      "La edad del equipo de desarrollo"
+    ],
+    "answer": 0,
+    "explanation": "El análisis de riesgos valora cada riesgo por su probabilidad (baja/moderada/alta) y sus efectos (tolerable/serio/catastrófico)."
+  },
+  {
+    "id": 245,
+    "question": "Según el temario, la motivación de las personas de un equipo:",
+    "options": [
+      "Depende únicamente del salario",
+      "Es siempre constante e independiente del entorno",
+      "No es tarea del gestor del proyecto",
+      "Puede basarse en necesidades básicas, personales y sociales"
+    ],
+    "answer": 3,
+    "explanation": "La motivación puede basarse en necesidades básicas (comer, dormir), personales (respeto, autoestima) y sociales (ser aceptado en un grupo), y varía según circunstancias externas."
+  },
+  {
+    "id": 246,
+    "question": "El modelo CMM aplicado a la gestión del personal sirve para:",
+    "options": [
+      "Estimar el número de líneas de código",
+      "Ayudar a atraer, motivar, desarrollar y retener el talento",
+      "Controlar las versiones del software",
+      "Calcular el camino crítico"
+    ],
+    "answer": 1,
+    "explanation": "El “Modelo de madurez de la capacidad de gestión del personal” ayuda a atraer, aumentar, motivar, desplegar y retener el talento (reclutamiento, selección, formación, retribución, carrera…)."
+  },
+  {
+    "id": 247,
+    "question": "¿Cuál de las siguientes es una práctica característica de eXtreme Programming (XP)?",
+    "options": [
+      "La estimación por puntos de función",
+      "El diagrama de Gantt",
+      "La programación en parejas",
+      "La auditoría de configuración"
+    ],
+    "answer": 2,
+    "explanation": "La programación en parejas (pair programming) es una práctica típica de XP. Las otras opciones pertenecen a estimación de costes, planificación temporal y gestión de la configuración."
+  },
+  {
+    "id": 248,
+    "question": "La configuración del software, según el temario, está formada por:",
+    "options": [
+      "Programas, documentos y datos",
+      "Únicamente el código fuente",
+      "Sólo los ejecutables entregados al cliente",
+      "El hardware del servidor"
+    ],
+    "answer": 0,
+    "explanation": "La configuración del software comprende programas, documentos y datos (todos los elementos de configuración del software, ECS)."
+  },
+  {
+    "id": 249,
+    "question": "Una auditoría de configuración sirve para responder, entre otras, a la pregunta:",
+    "options": [
+      "¿Cuántas personas faltan en el proyecto?",
+      "¿Cuál es el coste total del proyecto?",
+      "¿Qué lenguaje de programación conviene usar?",
+      "¿Se ha hecho el cambio especificado y se han seguido los estándares?"
+    ],
+    "answer": 3,
+    "explanation": "La auditoría de configuración verifica si se hizo el cambio especificado, si se siguieron los estándares de IS y los procedimientos y si se actualizaron los ECS relacionados."
+  },
+  {
+    "id": 250,
+    "question": "La holgura libre (HL) de una actividad es:",
+    "options": [
+      "El tiempo que puede retrasarse sin retrasar el proyecto",
+      "El tiempo que puede retrasarse permitiendo que las actividades siguientes empiecen lo antes posible",
+      "La suma de las duraciones del camino crítico",
+      "El coste real del trabajo realizado"
+    ],
+    "answer": 1,
+    "explanation": "La HL es el tiempo que una actividad puede retrasarse permitiendo que las siguientes comiencen lo más pronto posible; la HT, en cambio, mira el fin del proyecto."
+  },
+  {
+    "id": 251,
+    "question": "En el análisis EVA, el indicador SPI (Índice de Rendimiento de la Planificación, IRP) se calcula como:",
+    "options": ["BCWP / ACWP", "BCWP − BCWS", "BCWP / BCWS", "ACWP − BCWP"],
+    "answer": 2,
+    "explanation": "SPI = BCWP/BCWS (valor acumulado entre valor planificado). BCWP/ACWP es el CPI y BCWP−BCWS es la variación de la planificación (SV)."
+  },
+  {
+    "id": 252,
+    "question": "Si en una tarea el coste real (ACWP) es mayor que el valor acumulado (BCWP), podemos afirmar que la tarea:",
+    "options": [
+      "Está gastando más de lo previsto",
+      "Está gastando menos de lo previsto",
+      "Va adelantada respecto a la agenda",
+      "Ha terminado antes de tiempo"
+    ],
+    "answer": 0,
+    "explanation": "Si ACWP > BCWP, la variación de coste (CV = BCWP − ACWP) es negativa y CPI < 1: se gasta más de lo previsto para el trabajo realizado."
+  },
+  {
+    "id": 253,
+    "question": "Ante un retraso en una actividad, ¿cuál de estas medidas afectaría MENOS a la agenda del proyecto?",
+    "options": [
+      "Retrasar todo el proyecto",
+      "Añadir la tarea al camino crítico",
+      "Eliminar sus precedencias",
+      "Retrasarla dentro de su holgura libre"
+    ],
+    "answer": 3,
+    "explanation": "Consumir la holgura libre permite absorber el retraso sin afectar al proyecto ni al inicio de las tareas siguientes."
+  },
+  {
+    "id": 254,
+    "question": "Según el temario, ¿cuál de las siguientes NO es una tarea que pueda realizarse con Microsoft Project?",
+    "options": [
+      "La planificación detallada del proyecto",
+      "La redacción automática del código de la aplicación",
+      "El seguimiento del proyecto",
+      "La estimación del proyecto"
+    ],
+    "answer": 1,
+    "explanation": "Con Ms Project se puede planificar, estimar y hacer seguimiento del proyecto, pero no genera el código de la aplicación."
+  },
+  {
+    "id": 255,
+    "question": "El Reglamento General de Protección de Datos (RGPD) es una norma de ámbito:",
+    "options": [
+      "Únicamente español",
+      "Mundial, de la ONU",
+      "Europeo (Parlamento y Consejo de la UE)",
+      "Autonómico"
+    ],
+    "answer": 2,
+    "explanation": "El RGPD fue emitido por el Parlamento y el Consejo Europeo (2016) y es aplicable en toda la UE desde 2018; la LOPDGDD lo adapta en España."
+  },
+  {
+    "id": 256,
+    "question": "Ante una brecha de seguridad que afecte a datos personales, ¿en qué plazo debe notificarse según el RGPD?",
+    "options": ["72 horas", "30 días", "6 meses", "1 año"],
+    "answer": 0,
+    "explanation": "La detección y notificación de brechas de seguridad debe realizarse en un plazo de 72 horas."
+  },
+  {
+    "id": 257,
+    "question": "¿Qué figura decide sobre los fines y los medios del tratamiento de los datos personales?",
+    "options": [
+      "El encargado del tratamiento",
+      "El interesado",
+      "La autoridad de control",
+      "El responsable del tratamiento"
+    ],
+    "answer": 3,
+    "explanation": "El responsable del tratamiento determina los fines y los medios; el encargado los trata por cuenta del responsable."
+  },
+  {
+    "id": 258,
+    "question": "La Evaluación de Impacto en la Protección de Datos (EIPD) es obligatoria cuando el tratamiento:",
+    "options": [
+      "Afecta a menos de diez personas",
+      "Implica un alto riesgo para los derechos y libertades",
+      "Se realiza en papel",
+      "Dura menos de un mes"
+    ],
+    "answer": 1,
+    "explanation": "La EIPD (Art. 35 RGPD) es obligatoria cuando el tratamiento implica un alto riesgo: evaluación sistemática, categorías especiales a gran escala u observación sistemática de zonas públicas."
+  },
+  {
+    "id": 259,
+    "question": "¿Cuál de las siguientes NO está protegida por la Ley de Propiedad Intelectual?",
+    "options": [
+      "Un programa de ordenador",
+      "Una base de datos",
+      "Una idea abstracta no plasmada en ninguna obra",
+      "Una página web (multimedia)"
+    ],
+    "answer": 2,
+    "explanation": "La LPI protege obras concretas (software, bases de datos, webs, obras artísticas/científicas/literarias), pero no las ideas abstractas en sí mismas."
+  },
+  {
+    "id": 260,
+    "question": "Los derechos patrimoniales del autor (reproducción, distribución, transformación):",
+    "options": [
+      "Pueden cederse o transmitirse (p. ej., por contrato de cesión)",
+      "Son irrenunciables y no pueden cederse nunca",
+      "No existen en la legislación española",
+      "Sólo afectan al software libre"
+    ],
+    "answer": 0,
+    "explanation": "A diferencia de los derechos morales, los patrimoniales (explotación) pueden cederse o transmitirse, por ejemplo mediante contrato de cesión."
+  },
+  {
+    "id": 261,
+    "question": "Las licencias MIT y BSD se clasifican como licencias:",
+    "options": ["Copyleft fuerte", "De software propietario", "De documentación", "Permisivas"],
+    "answer": 3,
+    "explanation": "MIT, BSD y Apache 2.0 son licencias permisivas: máxima libertad de uso y redistribución, con mínimas restricciones."
+  },
+  {
+    "id": 262,
+    "question": "¿Dónde se registra el software como propiedad intelectual en España?",
+    "options": [
+      "En la Agencia Española de Protección de Datos",
+      "En el Registro de la Propiedad Intelectual (Ministerio de Cultura y CC. AA.)",
+      "En la Oficina Europea de Patentes",
+      "En el colegio profesional de informática"
+    ],
+    "answer": 1,
+    "explanation": "El software se registra en el Registro de la Propiedad Intelectual, gestionado por el Ministerio de Cultura y los órganos de las comunidades autónomas."
+  },
+  {
+    "id": 263,
+    "question": "Un Colegio Profesional es, según el temario:",
+    "options": [
+      "Una empresa privada con ánimo de lucro",
+      "Un sindicato de trabajadores",
+      "Una corporación de derecho público con personalidad jurídica propia",
+      "Un departamento de la universidad"
+    ],
+    "answer": 2,
+    "explanation": "Un colegio profesional es una corporación de derecho público, con personalidad jurídica propia, cuya finalidad es asegurar un ejercicio profesional de calidad y ético al servicio de la sociedad."
+  },
+  {
+    "id": 264,
+    "question": "¿Cuál de las siguientes es una competencia TÉCNICA o específica de la Ingeniería Informática (frente a las transversales)?",
+    "options": [
+      "El diseño y evaluación de aplicaciones y sistemas informáticos",
+      "La comunicación oral y escrita",
+      "El trabajo en equipo y liderazgo",
+      "El aprendizaje autónomo"
+    ],
+    "answer": 0,
+    "explanation": "Las competencias técnicas son propias de la titulación (diseño/evaluación de sistemas, gestión de proyectos informáticos…); comunicación, trabajo en equipo y aprendizaje autónomo son transversales."
+  },
+  {
+    "id": 265,
+    "question": "¿Cuál de las siguientes NO es una característica deseable del jefe de equipo según el temario?",
+    "options": [
+      "Habilidad para motivar",
+      "Capacidad para crear un equipo cohesionado",
+      "Dotes de gestión",
+      "Escribir personalmente todo el código del proyecto"
+    ],
+    "answer": 3,
+    "explanation": "El temario describe al jefe de equipo por su habilidad para motivar, moldear procesos, incentivar la creatividad, sus dotes de gestión y su capacidad de crear un equipo cohesionado; no por programar personalmente."
+  },
+  {
+    "id": 266,
+    "question": "El modelo de proceso “codificar y corregir” se caracteriza por:",
+    "options": [
+      "Realizar un análisis de riesgos en cada ciclo",
+      "Empezar a codificar tras una especificación mínima, sin fases de análisis y diseño estructuradas",
+      "Entregar el producto en incrementos planificados",
+      "Basarse en la programación en parejas"
+    ],
+    "answer": 1,
+    "explanation": "El modelo “codificar y corregir” parte de una especificación mínima y pasa directamente a codificar y corregir, sin fases estructuradas de análisis/diseño."
+  },
+  {
+    "id": 267,
+    "question": "¿Cuál de las siguientes NO es una actividad de gestión del proyecto según el temario?",
+    "options": [
+      "Estimación de costes",
+      "Evaluación del riesgo",
+      "La codificación de los módulos del sistema",
+      "Monitorización del proyecto"
+    ],
+    "answer": 2,
+    "explanation": "Entre las actividades de gestión figuran la calidad del producto, la evaluación del riesgo, la estimación de costes, la confección de agendas, la comunicación con el cliente y la monitorización. Codificar módulos es una actividad de desarrollo, no de gestión."
+  },
+  {
+    "id": 268,
+    "question": "Según el temario, ¿cuál es el componente de coste dominante casi siempre en un proyecto software?",
+    "options": [
+      "Los costes de esfuerzo (personal)",
+      "Los costes de hardware y software",
+      "Los costes de viajes y aprendizaje",
+      "Los costes de alquiler, calefacción y luz"
+    ],
+    "answer": 0,
+    "explanation": "Los costes de esfuerzo (sueldos de los ingenieros, seguros, seguridad social) son el factor dominante casi siempre."
+  },
+  {
+    "id": 269,
+    "question": "La estimación descendente (top-down) se caracteriza por:",
+    "options": [
+      "Comenzar a nivel de componentes y sumar sus esfuerzos",
+      "No tener en cuenta la integración ni la documentación",
+      "Requerir siempre el código ya terminado",
+      "Poder usarse sin conocer la arquitectura ni los componentes del sistema"
+    ],
+    "answer": 3,
+    "explanation": "La estimación descendente comienza a nivel de sistema y puede usarse sin conocer la arquitectura ni los componentes; tiene en cuenta integración, configuración y documentación (la ascendente, en cambio, suma el esfuerzo de cada componente)."
+  },
+  {
+    "id": 270,
+    "question": "La técnica de estimación conocida como “Ley de Parkinson” establece que:",
+    "options": [
+      "El coste depende de lo que el cliente esté dispuesto a pagar",
+      "El coste está en función de los recursos disponibles, utilizando todo el tiempo permitido",
+      "El coste se calcula por analogía con proyectos anteriores",
+      "El coste se obtiene siempre por juicio experto"
+    ],
+    "answer": 1,
+    "explanation": "Según la Ley de Parkinson, los costes se ajustan a los recursos disponibles usando todo el tiempo permitido; evita presupuestos abultados pero el sistema suele no terminarse."
+  },
+  {
+    "id": 271,
+    "question": "En la estimación mediante “pricing to win”, el coste del proyecto se fija en función de:",
+    "options": [
+      "El número de líneas de código",
+      "Los recursos disponibles y el tiempo permitido",
+      "Lo que el cliente está dispuesto a pagar",
+      "La productividad media del equipo"
+    ],
+    "answer": 2,
+    "explanation": "En “pricing to win” el coste se fija según lo que el cliente puede pagar; la empresa consigue el contrato, pero los costes no reflejan el trabajo real."
+  },
+  {
+    "id": 272,
+    "question": "¿Cuál de los siguientes NO es uno de los tipos de plan de proyecto que cita el temario?",
+    "options": [
+      "Plan de marketing del producto",
+      "Plan de calidad",
+      "Plan de validación",
+      "Plan de gestión de personal"
+    ],
+    "answer": 0,
+    "explanation": "El temario enumera plan de calidad, de validación, de gestión de configuraciones, de mantenimiento y de gestión de personal. El plan de marketing no aparece."
+  },
+  {
+    "id": 273,
+    "question": "En un diagrama de Gantt, ¿qué se representa en el eje de abscisas (horizontal)?",
+    "options": [
+      "Las actividades o recursos",
+      "El coste acumulado",
+      "La probabilidad de riesgo",
+      "El tiempo"
+    ],
+    "answer": 3,
+    "explanation": "En el diagrama de Gantt el eje de ordenadas recoge actividades/recursos y el de abscisas, el tiempo; permite observar la evolución del proyecto."
+  },
+  {
+    "id": 274,
+    "question": "Elaborar planes de contingencia y estrategias de minimización para los riesgos identificados corresponde a la fase de:",
+    "options": [
+      "Identificación de riesgos",
+      "Planificación de riesgos",
+      "Análisis de riesgos",
+      "Monitorización de riesgos"
+    ],
+    "answer": 1,
+    "explanation": "La planificación de riesgos define las estrategias (evitación, minimización y planes de contingencia) frente a cada riesgo. Antes se identifican y se analizan; después se monitorizan."
+  },
+  {
+    "id": 275,
+    "question": "Además de la jerarquía de necesidades, el temario clasifica la personalidad de las personas en orientadas a:",
+    "options": [
+      "El corto, medio y largo plazo",
+      "El hardware, el software y los datos",
+      "La tarea, a sí mismas y a la interacción",
+      "La dirección, la gestión y la operación"
+    ],
+    "answer": 2,
+    "explanation": "El temario distingue personalidades orientadas a la tarea, a sí mismas y a la interacción, matizando que la jerarquía de necesidades es una simplificación."
+  },
+  {
+    "id": 276,
+    "question": "Según el temario, una ventaja de un grupo cohesionado es que:",
+    "options": [
+      "Se pueden desarrollar estándares de calidad del grupo y practicar la ‘programación sin ego’",
+      "Cada miembro trabaja de forma totalmente aislada",
+      "Desaparece la necesidad de comunicación",
+      "El proyecto no necesita jefe"
+    ],
+    "answer": 0,
+    "explanation": "En un grupo cohesionado se desarrollan estándares de calidad, los miembros aprenden unos de otros y se practica la ‘programación sin ego’."
+  },
+  {
+    "id": 277,
+    "question": "En una organización de grupo democrática y descentralizada:",
+    "options": [
+      "El jefe asigna todas las tareas de forma jerárquica",
+      "No se reparte el trabajo según la experiencia",
+      "Sólo funciona con grupos muy grandes e inexpertos",
+      "Las decisiones se toman por consenso y el líder actúa como enlace externo"
+    ],
+    "answer": 3,
+    "explanation": "En la organización democrática las decisiones se toman por consenso, el líder es un enlace externo y el trabajo se reparte según la habilidad y experiencia; funciona con miembros competentes."
+  },
+  {
+    "id": 278,
+    "question": "El control de versiones dentro de la gestión de la configuración implica:",
+    "options": [
+      "Estimar el coste del proyecto en puntos de función",
+      "Identificar y seguir las diferentes versiones y releases del sistema, evitando cambios accidentales",
+      "Redactar el plan de calidad",
+      "Calcular el camino crítico del proyecto"
+    ],
+    "answer": 1,
+    "explanation": "El control de versiones identifica y sigue las distintas versiones y releases, asegurando que puedan recuperarse y evitando cambios accidentales."
+  },
+  {
+    "id": 279,
+    "question": "En el proceso de control de cambios, ¿quién decide si una petición de cambio se aprueba o se deniega?",
+    "options": [
+      "El autor del código afectado, de forma individual",
+      "El cliente, sin intervención del equipo",
+      "La autoridad o comité de control de cambios",
+      "Cualquier miembro del equipo, sin registro"
+    ],
+    "answer": 2,
+    "explanation": "Tras reconocer la necesidad y evaluar la petición, es la autoridad/comité de control de cambios quien decide aprobarla (se genera la orden de cambio) o denegarla."
+  },
+  {
+    "id": 280,
+    "question": "En el análisis EVA, el parámetro BCWS (valor planificado) representa:",
+    "options": [
+      "El coste presupuestado del trabajo que debería haberse completado hasta el momento",
+      "El coste real de lo que se ha gastado hasta el momento",
+      "El valor, en coste de línea base, del trabajo realmente realizado",
+      "El presupuesto total al finalizar el proyecto"
+    ],
+    "answer": 0,
+    "explanation": "BCWS (valor planificado) es cuánto trabajo, en coste presupuestado, debería haberse completado hasta el instante analizado. El coste real es ACWP y el valor acumulado, BCWP."
+  },
+  {
+    "id": 281,
+    "question": "En el análisis EVA, el parámetro ACWP (coste real) representa:",
+    "options": [
+      "El trabajo planificado hasta la fecha",
+      "El presupuesto total del proyecto",
+      "La holgura total del camino crítico",
+      "El coste realmente gastado en el trabajo realizado hasta el momento"
+    ],
+    "answer": 3,
+    "explanation": "ACWP (Actual Cost of Work Performed) es el coste realmente gastado en el trabajo ejecutado hasta el momento analizado."
+  },
+  {
+    "id": 282,
+    "question": "En el análisis EVA, el “valor acumulado” (earned value) se corresponde con el parámetro:",
+    "options": ["BCWS", "BCWP", "ACWP", "BAC"],
+    "answer": 1,
+    "explanation": "El valor acumulado o earned value es el BCWP (Budgeted Cost of Work Performed): valor, en coste de línea base, del trabajo realizado."
+  },
+  {
+    "id": 283,
+    "question": "Según el temario, un análisis de valor acumulado (EVA) se realiza SIEMPRE:",
+    "options": [
+      "Al finalizar por completo el proyecto",
+      "Sin tener en cuenta el tiempo transcurrido",
+      "Tomando como referencia un instante de tiempo concreto del desarrollo",
+      "Únicamente en la fase de diseño"
+    ],
+    "answer": 2,
+    "explanation": "El temario recalca que un EVA se hace siempre tomando como referencia un instante de tiempo concreto del desarrollo del proyecto."
+  },
+  {
+    "id": 284,
+    "question": "¿Cuál de las siguientes NO es una de las métricas de seguimiento del proyecto que cita el Tema 6?",
+    "options": [
+      "El número de líneas de código escritas",
+      "Las fechas de inicio y fin",
+      "Las holguras totales y libres",
+      "El análisis del valor acumulado (EVA)"
+    ],
+    "answer": 0,
+    "explanation": "Las métricas de seguimiento son fechas de inicio/fin, duraciones, holguras totales y libres y el análisis del valor acumulado (EVA). Las líneas de código no figuran como métrica de seguimiento."
+  },
+  {
+    "id": 285,
+    "question": "¿Cuál de los siguientes es un dato de categoría especial (con mayor protección) según el temario?",
+    "options": [
+      "El nombre y apellidos",
+      "El número de teléfono",
+      "La dirección de correo electrónico",
+      "Los datos relativos a la salud"
+    ],
+    "answer": 3,
+    "explanation": "Los datos de categoría especial incluyen origen étnico, opiniones políticas, creencias religiosas, datos genéticos, de salud o judiciales. Nombre, teléfono o email son datos personales, pero no especiales."
+  },
+  {
+    "id": 286,
+    "question": "El encargado del tratamiento se caracteriza por:",
+    "options": [
+      "Determinar los fines y los medios del tratamiento",
+      "Tratar los datos por cuenta del responsable, siguiendo sus instrucciones",
+      "Ser siempre el propio interesado",
+      "Imponer las sanciones por incumplimiento"
+    ],
+    "answer": 1,
+    "explanation": "El encargado trata los datos por cuenta del responsable siguiendo sus instrucciones; no decide sobre fines ni medios, y su relación se regula por contrato."
+  },
+  {
+    "id": 287,
+    "question": "El derecho a la portabilidad de los datos consiste en:",
+    "options": [
+      "Solicitar que se borren todos los datos (derecho al olvido)",
+      "Oponerse a cualquier tratamiento",
+      "Recibir los datos en un formato estructurado y de uso común y transmitirlos a otro responsable",
+      "Rectificar los datos inexactos"
+    ],
+    "answer": 2,
+    "explanation": "La portabilidad permite recibir los datos facilitados en un formato estructurado, de uso común y lectura mecánica, y transmitirlos a otro responsable (cuando el tratamiento se basa en consentimiento/contrato y es automatizado)."
+  },
+  {
+    "id": 288,
+    "question": "El Registro de Actividades de Tratamiento (RAT) es:",
+    "options": [
+      "Un inventario completo de todos los tratamientos de datos personales realizados",
+      "El documento que fija el salario del Delegado de Protección de Datos",
+      "Un registro de las versiones del software",
+      "El contrato con el cliente del proyecto"
+    ],
+    "answer": 0,
+    "explanation": "El RAT (Art. 30 RGPD / Art. 31 LOPDGDD) es un inventario completo de los tratamientos de datos; obligatorio para organizaciones de más de 250 empleados, tratamientos no ocasionales, categorías especiales o con riesgos."
+  },
+  {
+    "id": 289,
+    "question": "Según la Ley de Propiedad Intelectual, el autor de una obra:",
+    "options": [
+      "Sólo puede ser una persona jurídica (empresa)",
+      "Es quien compra los derechos de explotación",
+      "Deja de serlo a los 70 años",
+      "Es siempre la persona física que crea la obra, con condición irrenunciable e intransferible"
+    ],
+    "answer": 3,
+    "explanation": "El autor (Art. 5) es la persona física que crea la obra; su condición es irrenunciable, intransferible y perpetua (Art. 14). El titular, en cambio, puede ser el autor u otra persona que reciba los derechos."
+  },
+  {
+    "id": 290,
+    "question": "Según el temario, los derechos patrimoniales sobre la obra de una persona física duran:",
+    "options": [
+      "25 años desde la creación",
+      "70 años después de la muerte del autor",
+      "Indefinidamente",
+      "Sólo mientras el autor esté vivo"
+    ],
+    "answer": 1,
+    "explanation": "Para una persona física, la duración es de 70 años tras la muerte del autor (para persona jurídica, 70 años desde la divulgación)."
+  },
+  {
+    "id": 291,
+    "question": "¿Cuál de las siguientes NO es una de las ‘cuatro libertades’ del software libre?",
+    "options": [
+      "Ejecutar el programa para cualquier propósito",
+      "Estudiar el código fuente y adaptarlo",
+      "Obligar a que el software sea siempre gratuito",
+      "Redistribuir copias del programa"
+    ],
+    "answer": 2,
+    "explanation": "Las cuatro libertades son ejecutar, estudiar/adaptar, redistribuir copias y distribuir versiones modificadas. El software libre no obliga a ser gratuito (software libre ≠ software gratuito)."
+  },
+  {
+    "id": 292,
+    "question": "Una licencia de copyleft débil (por ejemplo, LGPL o MPL) se caracteriza por:",
+    "options": [
+      "Ser más flexible y permitir vincular el código con software propietario",
+      "Prohibir cualquier redistribución",
+      "Ser una licencia de software propietario cerrado",
+      "Obligar a publicar todo el sistema bajo la misma licencia sin excepción"
+    ],
+    "answer": 0,
+    "explanation": "El copyleft débil (LGPL, MPL) es más flexible que el copyleft fuerte (GPL): permite vincular el código con software propietario."
+  },
+  {
+    "id": 293,
+    "question": "Según el temario, ¿cuál es una ventaja de la regulación de una profesión frente al mercado libre?",
+    "options": [
+      "Eliminar por completo los colegios profesionales",
+      "Impedir comparar competencias entre países",
+      "Reducir la calidad del servicio al usuario",
+      "Reducir el intrusismo laboral y garantizar la calidad de productos y servicios"
+    ],
+    "answer": 3,
+    "explanation": "El temario cita como ventajas de la regulación poder comparar competencias entre regiones/países, reducir el intrusismo laboral y garantizar la calidad de productos y servicios."
+  },
+  {
+    "id": 294,
+    "question": "¿Cuál de los siguientes es uno de los ‘Diez Mandamientos de la Ética Informática’?",
+    "options": [
+      "Podrás copiar cualquier software propietario libremente",
+      "No utilizarás una computadora para dañar a otras personas",
+      "Podrás husmear en los archivos informáticos de otras personas",
+      "Los recursos informáticos ajenos pueden usarse sin permiso"
+    ],
+    "answer": 1,
+    "explanation": "Los Diez Mandamientos de la Ética Informática (1992) incluyen ‘no usar una computadora para dañar a otras personas’ y ‘no copiar ni usar software propietario sin pagar’, entre otros."
+  },
+  {
+    "id": 295,
+    "question": "¿Cuál es el orden correcto de las fases del Proceso Unificado (UP)?",
+    "options": [
+      "Inicio → Elaboración → Construcción → Transición",
+      "Análisis → Diseño → Codificación → Pruebas",
+      "Exploración → Planificación → Iteraciones → Muerte",
+      "Inicio → Construcción → Elaboración → Transición"
+    ],
+    "answer": 0,
+    "explanation": "El Desarrollo Unificado (UP) consta de cuatro fases: Inicio (ámbito y casos de uso), Elaboración (plan, estimaciones, diseño básico), Construcción (implementación por iteraciones) y Transición (entrega al usuario)."
+  },
+  {
+    "id": 296,
+    "question": "El modelo de proceso en espiral se caracteriza por:",
+    "options": [
+      "Codificar sin ninguna fase de diseño",
+      "Entregar una única versión al final sin iteraciones",
+      "Incorporar el análisis de riesgos y el prototipado en ciclos sucesivos",
+      "Prohibir cualquier cambio en los requisitos"
+    ],
+    "answer": 2,
+    "explanation": "El modelo en espiral es un modelo evolutivo guiado por el riesgo: en cada ciclo se evalúan alternativas, se analizan riesgos y se construyen prototipos."
+  },
+  {
+    "id": 297,
+    "question": "En el Proceso Unificado, una iteración se define como:",
+    "options": [
+      "La entrega final del producto al cliente",
+      "Una secuencia de actividades con un plan y un criterio de evaluación que produce una nueva versión interna (incremento)",
+      "Una reunión diaria del equipo",
+      "La fase de mantenimiento del software"
+    ],
+    "answer": 1,
+    "explanation": "Una iteración es una secuencia de actividades con un plan establecido y un criterio de evaluación, que da como resultado una nueva versión interna (un incremento)."
+  },
+  {
+    "id": 298,
+    "question": "¿Cuál de los siguientes NO es uno de los parámetros que se contabilizan al calcular los puntos de función?",
+    "options": [
+      "Entradas de usuario",
+      "Salidas de usuario",
+      "Interfaces externas",
+      "Líneas de código fuente"
+    ],
+    "answer": 3,
+    "explanation": "Los puntos de función cuentan entradas de usuario, salidas de usuario, peticiones/consultas, ficheros e interfaces externas, cada uno con su peso. Las líneas de código no intervienen en su cálculo."
+  },
+  {
+    "id": 299,
+    "question": "Una ventaja de los puntos de función es que:",
+    "options": [
+      "Son independientes del lenguaje de programación y se calculan desde la especificación",
+      "Sólo pueden calcularse cuando el código está terminado",
+      "Dependen del número de líneas de código",
+      "Son exclusivos del lenguaje ensamblador"
+    ],
+    "answer": 0,
+    "explanation": "Los puntos de función son independientes del lenguaje, se calculan a partir de la especificación, usan información del dominio del problema y facilitan la reutilización."
+  },
+  {
+    "id": 300,
+    "question": "La estimación por analogía consiste en:",
+    "options": [
+      "Fijar el coste según lo que el cliente puede pagar",
+      "Usar todo el tiempo disponible",
+      "Calcular el coste comparando con proyectos similares previos del mismo dominio",
+      "Contar entradas y salidas del sistema"
+    ],
+    "answer": 2,
+    "explanation": "La estimación por analogía calcula el coste comparando con proyectos similares del mismo dominio; es precisa si se dispone de datos previos, pero exige mantener una base de datos histórica."
+  },
+  {
+    "id": 301,
+    "question": "En COCOMO 2, los factores de escala (que afectan al exponente B) incluyen, entre otros:",
+    "options": [
+      "El color de la interfaz de usuario",
+      "La experiencia previa de la organización con este tipo de proyecto (precedentedness)",
+      "El número de comerciales de la empresa",
+      "La antigüedad del hardware de oficina"
+    ],
+    "answer": 1,
+    "explanation": "Los factores de escala del exponente incluyen la experiencia previa (precedentedness), la flexibilidad del desarrollo, la resolución de arquitectura/riesgos, la cohesión del equipo y la madurez del proceso."
+  },
+  {
+    "id": 302,
+    "question": "Un riesgo que afecta a la calidad o a la realización del desarrollo se denomina riesgo:",
+    "options": ["Del proyecto", "Del negocio", "Organizacional", "Del producto"],
+    "answer": 3,
+    "explanation": "Los riesgos del producto afectan a la calidad o a la realización del desarrollo; los del proyecto a la agenda/recursos y los del negocio a la organización."
+  },
+  {
+    "id": 303,
+    "question": "Según el temario, ‘que las herramientas CASE no puedan integrarse’ es un ejemplo de riesgo de tipo:",
+    "options": ["Herramientas", "Tecnología", "Personas", "Requerimientos"],
+    "answer": 0,
+    "explanation": "En la tabla de identificación de riesgos, la imposibilidad de integrar las herramientas CASE se clasifica como riesgo de tipo Herramientas."
+  },
+  {
+    "id": 304,
+    "question": "Que el personal muestre moral baja y haya malas relaciones en el equipo es un identificador potencial de un riesgo de tipo:",
+    "options": ["Tecnología", "Herramientas", "Personas", "Estimación"],
+    "answer": 2,
+    "explanation": "En la monitorización de riesgos, la moral baja y las malas relaciones entre miembros son identificadores de un riesgo de tipo Personas."
+  },
+  {
+    "id": 305,
+    "question": "Según el temario, un grupo formado por miembros con la misma motivación:",
+    "options": [
+      "Es siempre el más eficaz",
+      "Puede ser problemático; un grupo efectivo equilibra los distintos tipos de personalidad",
+      "No necesita comunicación",
+      "Debe estar formado sólo por orientados a sí mismos"
+    ],
+    "answer": 1,
+    "explanation": "Un grupo con todos los miembros de la misma motivación puede ser problemático; un grupo efectivo equilibra los tipos (a la tarea, a sí mismos y a la interacción)."
+  },
+  {
+    "id": 306,
+    "question": "Según el temario, el liderazgo del grupo debe basarse en:",
+    "options": [
+      "Un estilo estrictamente autocrático",
+      "La antigüedad en la empresa exclusivamente",
+      "El mayor salario del equipo",
+      "El respeto y la competencia técnica, no en el título o status"
+    ],
+    "answer": 3,
+    "explanation": "El liderazgo debe basarse en el respeto y la competencia técnica, no en un título que dé status; un liderazgo democrático resulta más efectivo que uno autocrático."
+  },
+  {
+    "id": 307,
+    "question": "¿Cuál de los siguientes es un factor que influye en las comunicaciones del grupo según el temario?",
+    "options": [
+      "El status de sus miembros",
+      "El precio del software",
+      "El número de líneas de código",
+      "La marca del ordenador"
+    ],
+    "answer": 0,
+    "explanation": "Los factores que influyen en las comunicaciones del grupo son el status y las personalidades de sus miembros, la composición del grupo y los canales de comunicación."
+  },
+  {
+    "id": 308,
+    "question": "¿Cuál de los siguientes es un elemento de configuración software (ECS) típico según el temario?",
+    "options": [
+      "El salario del jefe de proyecto",
+      "La factura eléctrica de la oficina",
+      "La especificación de requisitos del software",
+      "El horario del equipo"
+    ],
+    "answer": 2,
+    "explanation": "Entre los ECS típicos están la especificación del sistema, el plan del proyecto, la especificación de requisitos, los diseños, los listados de código fuente, los planes de prueba y los ejecutables."
+  },
+  {
+    "id": 309,
+    "question": "La base de datos de configuraciones sirve principalmente para:",
+    "options": [
+      "Calcular el presupuesto del proyecto",
+      "Registrar la información de las configuraciones y apoyar la evaluación del impacto del cambio",
+      "Almacenar los correos del cliente",
+      "Estimar los puntos de función"
+    ],
+    "answer": 1,
+    "explanation": "La base de datos de configuraciones registra la información relevante de las configuraciones y sirve de apoyo a la evaluación del impacto de un cambio."
+  },
+  {
+    "id": 310,
+    "question": "En el análisis EVA, el parámetro BAC (Budget At Completion) representa:",
+    "options": [
+      "El coste real gastado hasta la fecha",
+      "La holgura libre de la tarea",
+      "El valor acumulado hasta el momento",
+      "La cantidad de trabajo planificado (en coste) al finalizar el proyecto/tarea"
+    ],
+    "answer": 3,
+    "explanation": "BAC (Budget At Completion) es la cantidad de trabajo planificado, en coste, al finalizar el proyecto o tarea (el presupuesto total)."
+  },
+  {
+    "id": 311,
+    "question": "En el cálculo de holguras, las siglas LF corresponden a:",
+    "options": [
+      "El límite de fin (fecha más tardía de finalización)",
+      "El comienzo anticipado",
+      "El fin anticipado",
+      "El límite de comienzo"
+    ],
+    "answer": 0,
+    "explanation": "LF es el límite de fin (fecha más tardía de finalización). CA es el comienzo anticipado, FA el fin anticipado y LC el límite de comienzo."
+  },
+  {
+    "id": 312,
+    "question": "Una actividad A tiene su comienzo anticipado en el día 2, una duración de 7 días y su límite de fin (LF) en el día 15. ¿Cuál es su holgura total (HT)?",
+    "options": ["0 días", "9 días", "6 días", "24 días"],
+    "answer": 2,
+    "explanation": "La holgura total se calcula como HT = LF − comienzo anticipado − duración = 15 − 2 − 7 = 6 días (ejemplo del temario)."
+  },
+  {
+    "id": 313,
+    "question": "Al consumir la holgura de una actividad, según el temario, puede ocurrir que:",
+    "options": [
+      "El proyecto termine antes automáticamente",
+      "Otra actividad pase a ser crítica (aparezca un nuevo camino crítico)",
+      "Desaparezca el camino crítico",
+      "El coste real se reduzca a cero"
+    ],
+    "answer": 1,
+    "explanation": "Al consumir la holgura de una actividad, otra actividad puede quedarse sin holgura y convertirse en crítica, apareciendo un nuevo camino crítico."
+  },
+  {
+    "id": 314,
+    "question": "El objetivo de la monitorización y control de un proyecto es, según el Tema 6:",
+    "options": [
+      "Escribir el código de la aplicación",
+      "Diseñar la base de datos",
+      "Redactar el contrato con el cliente",
+      "Tomar las decisiones adecuadas para cumplir los plazos, costes y expectativas previstos"
+    ],
+    "answer": 3,
+    "explanation": "La monitorización y control busca tomar las decisiones adecuadas para garantizar el éxito del proyecto: cumplir plazos, costes y expectativas del usuario previstos."
+  },
+  {
+    "id": 315,
+    "question": "Según el temario, la información financiera (nóminas, cuentas bancarias) y el perfil profesional se clasifican en el nivel:",
+    "options": ["Medio", "Básico", "Alto", "No es un dato personal"],
+    "answer": 0,
+    "explanation": "El nivel Medio incluye información financiera, infracciones administrativas o penales, perfil profesional y servicios sociales. El básico son datos comunes (nombre, DNI, email) y el alto, datos especialmente protegidos."
+  },
+  {
+    "id": 316,
+    "question": "¿Cuál es la ley que adapta el RGPD en España y regula los derechos digitales?",
+    "options": [
+      "El RGPD (Reglamento UE 2016/679)",
+      "La Ley de Propiedad Intelectual (RDL 1/1996)",
+      "La LOPDGDD (Ley Orgánica 3/2018)",
+      "La Ley 2/1974 de Colegios Profesionales"
+    ],
+    "answer": 2,
+    "explanation": "La LOPDGDD (Ley Orgánica 3/2018) adapta el RGPD en España y concreta aspectos como la edad de consentimiento (14 años) y los derechos digitales."
+  },
+  {
+    "id": 317,
+    "question": "El derecho de acceso permite al interesado:",
+    "options": [
+      "Que se borren todos sus datos",
+      "Obtener confirmación de si se tratan sus datos y acceder a ellos, incluida una copia",
+      "Recibir una indemnización automática",
+      "Cambiar la ley de protección de datos"
+    ],
+    "answer": 1,
+    "explanation": "El derecho de acceso permite obtener del responsable la confirmación de si se tratan datos personales y, en su caso, acceder a ellos y obtener una copia."
+  },
+  {
+    "id": 318,
+    "question": "Según el temario, las infracciones muy graves en materia de protección de datos pueden alcanzar multas de hasta:",
+    "options": ["40.000 €", "1.000 €", "300 €", "20.000.000 € o el 4 % de la facturación"],
+    "answer": 3,
+    "explanation": "Las infracciones muy graves pueden multarse con más de 300.000 € y hasta 20.000.000 € o el 4 % de la facturación (leves hasta 40.000 €; graves de 40.001 a 300.000 €)."
+  },
+  {
+    "id": 319,
+    "question": "Según la Ley de Propiedad Intelectual, en un programa de ordenador creado por un empleado en una relación laboral, los derechos de explotación corresponden por defecto a:",
+    "options": [
+      "El empleador (la empresa)",
+      "El empleado, siempre",
+      "El Estado",
+      "El cliente final"
+    ],
+    "answer": 0,
+    "explanation": "El Art. 97 establece que, en los programas de ordenador, los derechos de explotación corresponden por defecto al empleador (salvo pacto en contrario)."
+  },
+  {
+    "id": 320,
+    "question": "El software propietario (no libre) se caracteriza por:",
+    "options": [
+      "Garantizar las cuatro libertades del software libre",
+      "Ser siempre gratuito",
+      "Tener el código fuente cerrado y limitar el uso, modificación o distribución",
+      "No estar protegido por licencias"
+    ],
+    "answer": 2,
+    "explanation": "El software propietario tiene código cerrado y limita al usuario para usarlo, modificarlo o distribuirlo (ej.: Windows, Office, Photoshop)."
+  },
+  {
+    "id": 321,
+    "question": "El ‘shareware’, como tipo de licencia de software propietario, se caracteriza por:",
+    "options": [
+      "Ser software libre con copyleft",
+      "Uso gratuito temporal con limitaciones que se levantan al pagar una licencia",
+      "Permitir modificar y redistribuir el código sin restricciones",
+      "Estar prohibido su uso en cualquier caso"
+    ],
+    "answer": 1,
+    "explanation": "El shareware permite un uso gratuito temporal (a menudo con limitaciones) cuyas restricciones se levantan al pagar una licencia; el código suele ser cerrado."
+  },
+  {
+    "id": 322,
+    "question": "Entre las consecuencias legales de infringir la propiedad intelectual, el temario menciona (en España):",
+    "options": [
+      "Únicamente una advertencia verbal",
+      "La obligación de publicar el código como software libre",
+      "La pérdida del DNI",
+      "Multas e incluso penas de prisión (hasta 4 años y 288.000 €)"
+    ],
+    "answer": 3,
+    "explanation": "Infringir la propiedad intelectual puede acarrear demandas por uso no autorizado, multas, indemnizaciones e incluso prisión (en España, hasta 4 años y 288.000 €), además de daños económicos y reputacionales."
+  },
+  {
+    "id": 323,
+    "question": "Según el temario, ¿cuál es una ventaja del mercado libre (frente a la regulación) de la profesión?",
+    "options": [
+      "Una adaptación más rápida en un sector cambiante y no dejar fuera a profesionales sin titulación",
+      "Reducir el intrusismo laboral",
+      "Garantizar por ley la calidad del servicio",
+      "Obligar a la colegiación"
+    ],
+    "answer": 0,
+    "explanation": "Entre las ventajas del mercado libre, el temario cita que la regulación podría frenar la innovación, la diversidad de roles, una adaptación más rápida y no excluir a profesionales formados por experiencia sin titulación."
+  },
+  {
+    "id": 324,
+    "question": "¿Cuál de las siguientes es una competencia transversal (genérica), común a todas las ingenierías, según el temario?",
+    "options": [
+      "El diseño de compiladores",
+      "La programación de sistemas operativos",
+      "La comunicación oral y escrita",
+      "El diseño de bases de datos relacionales"
+    ],
+    "answer": 2,
+    "explanation": "Las competencias transversales o genéricas (comunes a todas las ingenierías) incluyen organización y planificación, comunicación oral y escrita, trabajo en equipo, resolución de problemas, aprendizaje autónomo y responsabilidad ética."
+  },
+  {
+    "id": 325,
+    "question": "¿Cuál de las siguientes NO es una de las estructuras de equipo que cita el temario?",
+    "options": [
+      "Descentralizado democrático (DD)",
+      "Descentralizado controlado (DC)",
+      "Jerárquico distribuido (JD)",
+      "Centralizado controlado (CC)"
+    ],
+    "answer": 2,
+    "explanation": "El temario cita tres estructuras de equipo: descentralizado democrático (DD), descentralizado controlado (DC) y centralizado controlado (CC). ‘Jerárquico distribuido’ no existe."
+  },
+  {
+    "id": 326,
+    "question": "¿Cuál es una de las críticas al modelo de ciclo de vida en cascada según el temario?",
+    "options": [
+      "Que permite demasiadas iteraciones simultáneas",
+      "Que no define fases de desarrollo",
+      "Que no puede aplicarse a proyectos grandes",
+      "Que se tarda mucho en recorrer todo el ciclo y no refleja el proceso real de desarrollo"
+    ],
+    "answer": 3,
+    "explanation": "Se critica al modelo en cascada que se tarda mucho en recorrer el ciclo (no se pasa de fase hasta acabar la anterior) y que no refleja el proceso real, donde siempre hay iteraciones."
+  },
+  {
+    "id": 327,
+    "question": "Según el temario, la selección del modelo de proceso apropiado depende de:",
+    "options": [
+      "El tipo de software que se va a desarrollar y el equipo del proyecto",
+      "El color corporativo de la empresa",
+      "El número de clientes de la empresa",
+      "La marca del ordenador del jefe"
+    ],
+    "answer": 0,
+    "explanation": "Se debe seleccionar el modelo de proceso apropiado según el tipo de software a desarrollar y el equipo del proyecto; los proyectos pequeños necesitan menos tiempo de desarrollo."
+  },
+  {
+    "id": 328,
+    "question": "La productividad de un programador, según el temario, mide:",
+    "options": [
+      "El número de errores del programa",
+      "La velocidad a la que se produce el software y su documentación asociada",
+      "El coste del hardware",
+      "La duración del contrato del cliente"
+    ],
+    "answer": 1,
+    "explanation": "La productividad mide la ‘velocidad’ a la que los ingenieros producen el software y su documentación asociada; es necesaria para estimar y para evaluar mejoras del proceso."
+  },
+  {
+    "id": 329,
+    "question": "El temario clasifica las medidas de productividad en las relacionadas con el tamaño y las relacionadas con:",
+    "options": [
+      "El precio de venta",
+      "El número de reuniones",
+      "La funcionalidad (puntos de función, puntos de objeto)",
+      "La antigüedad del equipo"
+    ],
+    "answer": 2,
+    "explanation": "Las medidas de productividad se dividen en las relacionadas con el tamaño (líneas de código) y las relacionadas con la funcionalidad (puntos de función, puntos de objeto)."
+  },
+  {
+    "id": 330,
+    "question": "Las siglas COCOMO corresponden a:",
+    "options": [
+      "COmplex COding MOdule",
+      "COmputer COntrol MOnitor",
+      "COst COntrol MOdel",
+      "COnstructive COst MOdel"
+    ],
+    "answer": 3,
+    "explanation": "COCOMO significa COnstructive COst MOdel; es un modelo empírico basado en la experiencia con proyectos, cuya primera versión se publicó en 1981."
+  },
+  {
+    "id": 331,
+    "question": "Según el temario, una dificultad de usar las líneas de código como medida es que:",
+    "options": [
+      "Los lenguajes actuales permiten varias sentencias por línea (o una sentencia en varias líneas)",
+      "No existen lenguajes de programación",
+      "Siempre coinciden con los puntos de función",
+      "Son independientes del lenguaje"
+    ],
+    "answer": 0,
+    "explanation": "Contar líneas de código es problemático: los lenguajes actuales permiten varias sentencias por línea o una sentencia en varias líneas, y hay que decidir qué programas contar."
+  },
+  {
+    "id": 332,
+    "question": "Planificar, según el temario, es decidir de antemano:",
+    "options": [
+      "Únicamente el presupuesto del proyecto",
+      "Qué hay que hacer, cómo, cuándo y quién lo va a hacer",
+      "El color de la interfaz",
+      "El número de líneas de código"
+    ],
+    "answer": 1,
+    "explanation": "Planificar es decidir de antemano QUÉ hay que hacer, CÓMO, CUÁNDO se va a iniciar y QUIÉN lo va a hacer."
+  },
+  {
+    "id": 333,
+    "question": "El cálculo de los tiempos más tempranos de ejecución (early) en una red PERT se realiza:",
+    "options": [
+      "Hacia atrás, tomando el mínimo",
+      "De forma aleatoria",
+      "Hacia delante, tomando el máximo de los caminos que llegan a cada nodo",
+      "Sólo al final del proyecto"
+    ],
+    "answer": 2,
+    "explanation": "Los tiempos early se calculan hacia delante: tᵢ = max[tᵢ + tᵢⱼ]. Los tiempos last se calculan hacia atrás con el mínimo."
+  },
+  {
+    "id": 334,
+    "question": "El proceso de planificación de un proyecto es, según el temario:",
+    "options": [
+      "Un proceso lineal que se hace una sola vez al inicio",
+      "Idéntico a la codificación",
+      "Innecesario en proyectos software",
+      "Un proceso iterativo en el que se revisa el progreso, se actualizan estimaciones y se re-negocian restricciones"
+    ],
+    "answer": 3,
+    "explanation": "La planificación es un bucle iterativo: se establecen restricciones, se define agenda, se revisa el progreso y las estimaciones, se actualiza la agenda y se re-negocian restricciones."
+  },
+  {
+    "id": 335,
+    "question": "Según el temario, la memoria a largo plazo se caracteriza por:",
+    "options": [
+      "Gran capacidad pero acceso lento",
+      "Poca capacidad y acceso instantáneo",
+      "Almacenar sólo datos sensoriales",
+      "Borrarse cada pocos segundos"
+    ],
+    "answer": 0,
+    "explanation": "En la organización de la memoria, la memoria a largo plazo tiene gran capacidad pero acceso lento, frente a la memoria de trabajo (corto plazo)."
+  },
+  {
+    "id": 336,
+    "question": "Según el temario, el conocimiento sintáctico se refiere a:",
+    "options": [
+      "Los conceptos abstractos como el paso de parámetros",
+      "Los detalles de representación (por ejemplo, cómo se escribe un bucle en C)",
+      "La motivación del equipo",
+      "El presupuesto del proyecto"
+    ],
+    "answer": 1,
+    "explanation": "El conocimiento sintáctico se refiere a los detalles de representación (p. ej., un bucle en C); el semántico son los conceptos (asignación, paso de parámetros) y se almacena de forma estructurada."
+  },
+  {
+    "id": 337,
+    "question": "Según el temario, ¿en qué emplea buena parte de su tiempo un programador, además de trabajar solo?",
+    "options": [
+      "Exclusivamente escribiendo código sin interrupciones",
+      "En tareas totalmente ajenas a la informática el 90 % del tiempo",
+      "Interactuando con otras personas (aproximadamente la mitad del tiempo)",
+      "Sin realizar ninguna actividad"
+    ],
+    "answer": 2,
+    "explanation": "Según la distribución del tiempo del temario, una parte muy importante se dedica a interactuar con otras personas (en torno a la mitad), además del trabajo individual y las actividades no productivas."
+  },
+  {
+    "id": 338,
+    "question": "Según el temario, la gestión de la configuración es una actividad de autoprotección para:",
+    "options": [
+      "Estimar el coste del proyecto",
+      "Diseñar la interfaz de usuario",
+      "Seleccionar al personal del equipo",
+      "Identificar, controlar, garantizar la correcta implementación e informar del cambio"
+    ],
+    "answer": 3,
+    "explanation": "La gestión de la configuración es una actividad de autoprotección para identificar el cambio, controlarlo, garantizar que se implementa adecuadamente e informar del mismo a los interesados."
+  },
+  {
+    "id": 339,
+    "question": "La construcción del sistema, en la gestión de la configuración, consiste en combinar los componentes en un ejecutable e implica:",
+    "options": [
+      "La compilación y el linkado (enlazado)",
+      "La estimación por puntos de función",
+      "El análisis de riesgos",
+      "La redacción del plan de calidad"
+    ],
+    "answer": 0,
+    "explanation": "La construcción del sistema combina los componentes en un programa que se ejecuta sobre una configuración destino; implica compilación y linkado (con cuidado si el sistema de desarrollo difiere del de destino)."
+  },
+  {
+    "id": 340,
+    "question": "En EVA, la variación de la planificación (Schedule Variance, SV) se calcula como:",
+    "options": ["BCWP − ACWP", "BCWP − BCWS", "BCWP / BCWS", "ACWP / BCWP"],
+    "answer": 1,
+    "explanation": "SV = BCWP − BCWS (indicador de progreso). Si es positiva, la tarea va adelantada respecto a la agenda planificada."
+  },
+  {
+    "id": 341,
+    "question": "En EVA, la variación de coste (Cost Variance, CV) se calcula como:",
+    "options": ["BCWP − BCWS", "ACWP − BCWS", "BCWP − ACWP", "BCWS / BCWP"],
+    "answer": 2,
+    "explanation": "CV = BCWP − ACWP (indicador de productividad/coste). Si es negativa, se está gastando más de lo previsto."
+  },
+  {
+    "id": 342,
+    "question": "Si en EVA una tarea presenta un SPI = 1,5, según el temario significa que:",
+    "options": [
+      "Va con retraso respecto a la agenda",
+      "Ha gastado un 50 % más de dinero",
+      "La tarea está cancelada",
+      "Sólo ha utilizado el 67 % del tiempo planificado para el trabajo realizado (va adelantada)"
+    ],
+    "answer": 3,
+    "explanation": "Un SPI de 1,5 significa que sólo se ha utilizado el 67 % del tiempo planificado (BCWS = 0,67·BCWP) para completar el trabajo realizado: la tarea va adelantada."
+  },
+  {
+    "id": 343,
+    "question": "En EVA, la variación de la planificación (SV) y el índice SPI son indicadores de:",
+    "options": [
+      "Progreso (avance respecto a la agenda)",
+      "Coste (productividad económica)",
+      "Calidad del código",
+      "Satisfacción del cliente"
+    ],
+    "answer": 0,
+    "explanation": "SV y SPI son indicadores de PROGRESO (avance respecto a la agenda). CV y CPI son indicadores de PRODUCTIVIDAD/coste."
+  },
+  {
+    "id": 344,
+    "question": "Monitorizar una agenda, según el temario, consiste en:",
+    "options": [
+      "Escribir el código de la aplicación",
+      "Comprobar si la agenda real se ajusta a la planificada",
+      "Calcular los puntos de función",
+      "Redactar el manual de usuario"
+    ],
+    "answer": 1,
+    "explanation": "Monitorizar (seguir) una agenda consiste en comprobar si la agenda real (lo que ocurre) se ajusta a la agenda planificada (la intención inicial)."
+  },
+  {
+    "id": 345,
+    "question": "El Comité Europeo de Protección de Datos (CEPD) es:",
+    "options": [
+      "La autoridad de control española que impone sanciones",
+      "El registro donde se inscribe el software",
+      "Un organismo independiente que garantiza la aplicación coherente de la normativa en toda la UE",
+      "El colegio profesional de informáticos"
+    ],
+    "answer": 2,
+    "explanation": "El CEPD es un organismo independiente que garantiza la aplicación coherente de las normas de protección de datos en toda la UE; en España, la autoridad de control es la AEPD."
+  },
+  {
+    "id": 346,
+    "question": "La LOPD (Ley Orgánica de Protección de Datos), antecesora de la actual normativa española, fue aprobada en:",
+    "options": ["2018", "1996", "2008", "1999"],
+    "answer": 3,
+    "explanation": "La LOPD fue aprobada por las Cortes Generales el 13 de diciembre de 1999; después sería sustituida por la LOPDGDD (2018), que adapta el RGPD."
+  },
+  {
+    "id": 347,
+    "question": "Según el temario, para que el consentimiento al tratamiento de datos sea válido debe ser:",
+    "options": [
+      "Libre, específico, informado e inequívoco",
+      "Verbal y sin explicaciones",
+      "Otorgado por un tercero cualquiera",
+      "Permanente e irrevocable"
+    ],
+    "answer": 0,
+    "explanation": "El consentimiento válido (Art. 4.11 RGPD) debe ser libre (sin coacción), específico (por finalidades concretas), informado e inequívoco (por escrito, grabado o acción afirmativa)."
+  },
+  {
+    "id": 348,
+    "question": "El derecho de supresión (‘derecho al olvido’) permite obtener el borrado de los datos cuando, por ejemplo:",
+    "options": [
+      "El responsable así lo desee sin motivo",
+      "Los datos ya no son necesarios para los fines para los que se recogieron",
+      "Han pasado exactamente 70 años",
+      "El interesado cambia de dirección"
+    ],
+    "answer": 1,
+    "explanation": "El derecho de supresión procede, entre otros casos, cuando los datos ya no son necesarios para los fines para los que se recogieron o cuando el interesado retira el consentimiento y no hay otra base jurídica."
+  },
+  {
+    "id": 349,
+    "question": "¿Cuál de los siguientes es un derecho patrimonial (de explotación) del autor según el temario?",
+    "options": [
+      "El derecho de paternidad",
+      "El derecho de integridad",
+      "El derecho de reproducción",
+      "El derecho al olvido"
+    ],
+    "answer": 2,
+    "explanation": "Los derechos patrimoniales (de explotación) son reproducción, transformación, distribución y comunicación pública. Paternidad e integridad son derechos morales."
+  },
+  {
+    "id": 350,
+    "question": "¿Cuál de las siguientes es una excepción a los derechos de autor reconocida por el temario?",
+    "options": [
+      "La venta comercial masiva sin permiso",
+      "La distribución con ánimo de lucro sin licencia",
+      "La eliminación del nombre del autor",
+      "La copia privada"
+    ],
+    "answer": 3,
+    "explanation": "Entre las excepciones a los derechos de autor están el uso educativo, el derecho de cita, la parodia, la copia privada y el préstamo."
+  },
+  {
+    "id": 351,
+    "question": "Según el temario, sobre el contenido generado por Inteligencia Artificial:",
+    "options": [
+      "No siempre es legal su uso comercial; hay dudas sobre la autoría y las IAs se entrenan con contenido protegido",
+      "Todo lo que genera es siempre de dominio público",
+      "Nunca puede usarse para nada",
+      "Está regulado por la LOPDGDD"
+    ],
+    "answer": 0,
+    "explanation": "El temario advierte que no todo lo que genera la IA es legal: existen dudas sobre la autoría y el uso comercial, y las IAs se entrenan con contenido protegido, con condiciones estrictas en muchas plataformas."
+  },
+  {
+    "id": 352,
+    "question": "¿Cuál de los siguientes es un ‘recurso de terceros’ cuyo uso y licencia hay que vigilar según el temario?",
+    "options": [
+      "El sueldo del programador",
+      "Las tipografías (fuentes) y las bibliotecas de código",
+      "El horario de la oficina",
+      "El nombre del proyecto"
+    ],
+    "answer": 1,
+    "explanation": "El temario enumera como recursos de terceros: imágenes, sonidos, vídeos, modelos 3D, texturas, tipografías, bibliotecas/frameworks de código y bases de datos/datasets."
+  },
+  {
+    "id": 353,
+    "question": "Según el temario, la Ingeniería Informática en España:",
+    "options": [
+      "Es la ingeniería con más atribuciones reservadas",
+      "Tiene colegiación obligatoria en toda España",
+      "Quedó fuera del Real Decreto de Cualificaciones Profesionales en 2008, siendo la única ingeniería no incluida, lo que provocó protestas",
+      "Está regulada por el RGPD"
+    ],
+    "answer": 2,
+    "explanation": "En 2008 la Ingeniería Informática fue la única ingeniería no incluida en el Real Decreto de Cualificaciones Profesionales, lo que provocó protestas y manifestaciones; sigue siendo profesión no regulada."
+  },
+  {
+    "id": 354,
+    "question": "Según los marcos curriculares de ACM e IEEE citados en el temario, ¿cuál es una de las disciplinas de la Ingeniería Informática?",
+    "options": [
+      "La Odontología",
+      "El Derecho Mercantil",
+      "La Arquitectura de edificios",
+      "La Ingeniería del Software"
+    ],
+    "answer": 3,
+    "explanation": "ACM e IEEE agrupan las competencias en disciplinas como Ingeniería de Computadores, Ingeniería del Software, Computación Teórica, Sistemas de Información y Tecnologías de la Información."
+  },
+  {
+    "id": 355,
+    "question": "Según el temario, respecto a la estructura del equipo de software:",
+    "options": [
+      "Siempre es mejor la estructura centralizada",
+      "La estructura no influye en el resultado",
+      "El equipo debe tener siempre 12 personas",
+      "No existe una estructura única de equipo que sea la mejor para todos los proyectos"
+    ],
+    "answer": 3,
+    "explanation": "El temario subraya que no hay una estructura de equipo única que sea la mejor para todos los proyectos: depende del tipo de proyecto."
+  },
+  {
+    "id": 356,
+    "question": "En el Desarrollo Unificado, los ‘artefactos’ son:",
+    "options": [
+      "Los modelos, informes y documentos que se producen",
+      "Las personas que realizan el trabajo",
+      "Las fases del proyecto",
+      "Los errores del software"
+    ],
+    "answer": 0,
+    "explanation": "En UP, los artefactos son lo que se produce (modelos, informes, documentos); responden a ‘¿qué se produce?’. El ‘quién’ es el trabajador (ingeniero)."
+  },
+  {
+    "id": 357,
+    "question": "Los modelos de proceso evolutivos (incremental, espiral, unificado) se caracterizan frente a los secuenciales por:",
+    "options": [
+      "Exigir terminar cada fase antes de empezar la siguiente sin iteraciones",
+      "No permitir cambios en los requisitos",
+      "Desarrollar el software de forma iterativa, en versiones o incrementos sucesivos",
+      "Prescindir de la fase de diseño"
+    ],
+    "answer": 2,
+    "explanation": "Los modelos evolutivos desarrollan el software de forma iterativa, en versiones/incrementos sucesivos, frente al modelo secuencial (cascada)."
+  },
+  {
+    "id": 358,
+    "question": "En COCOMO 81, el modo ‘empotrado’ (embedded) se aplica a:",
+    "options": [
+      "Aplicaciones sencillas y bien conocidas desarrolladas por equipos pequeños",
+      "Proyectos complejos en los que el software forma parte de un sistema fuertemente acoplado de hardware, software y procedimientos",
+      "Proyectos sin ninguna restricción",
+      "Proyectos de mantenimiento exclusivamente"
+    ],
+    "answer": 1,
+    "explanation": "El modo empotrado (embedded) de COCOMO 81 corresponde a proyectos complejos donde el software forma parte de un sistema fuertemente acoplado de hardware, software, normativas y procedimientos."
+  },
+  {
+    "id": 359,
+    "question": "El nivel inicial de prototipado de COCOMO 2 realiza las estimaciones a partir de:",
+    "options": [
+      "Líneas de código ya escritas",
+      "El número de empleados de la empresa",
+      "El presupuesto del cliente",
+      "Puntos de objeto y una fórmula simple del esfuerzo"
+    ],
+    "answer": 3,
+    "explanation": "El nivel inicial de prototipado de COCOMO 2 estima con puntos de objeto y una fórmula simple del esfuerzo; soporta reutilización y tiene en cuenta las herramientas CASE."
+  },
+  {
+    "id": 360,
+    "question": "En COCOMO 2, el conductor de coste RELY se refiere a:",
+    "options": [
+      "La fiabilidad requerida del sistema",
+      "El tamaño de la base de datos",
+      "La capacidad de los programadores",
+      "El tiempo de ejecución"
+    ],
+    "answer": 0,
+    "explanation": "RELY es la fiabilidad requerida del sistema. DATA es el tamaño de la base de datos, PCAP la capacidad del programador y TIME las restricciones de tiempo de ejecución."
+  },
+  {
+    "id": 361,
+    "question": "¿Cuál de los siguientes es un factor que afecta a la productividad según el temario?",
+    "options": [
+      "El color de la interfaz",
+      "El número de clientes de la competencia",
+      "La experiencia en el dominio de la aplicación y en la tecnología utilizada",
+      "La marca del teclado"
+    ],
+    "answer": 2,
+    "explanation": "Entre los factores que afectan a la productividad figuran la experiencia en el dominio y en la tecnología, el equipo de trabajo, la calidad del proceso, el tamaño del proyecto y el entorno."
+  },
+  {
+    "id": 362,
+    "question": "En un grafo PERT, las ‘actividades ficticias’ se utilizan para:",
+    "options": [
+      "Añadir tiempo extra al proyecto",
+      "Representar dependencias entre actividades sin consumir tiempo ni recursos",
+      "Calcular el presupuesto",
+      "Sustituir al camino crítico"
+    ],
+    "answer": 1,
+    "explanation": "Las actividades ficticias representan dependencias o precedencias entre actividades sin consumir tiempo ni recursos (se usan en convergencias y divergencias del grafo)."
+  },
+  {
+    "id": 363,
+    "question": "¿Cuál de los siguientes SÍ es un apartado de la estructura del plan del proyecto según el temario?",
+    "options": [
+      "El código fuente de la aplicación",
+      "El manual de usuario final",
+      "La factura del cliente",
+      "Los mecanismos de monitorización y control"
+    ],
+    "answer": 3,
+    "explanation": "La estructura del plan incluye introducción (requisitos y restricciones), estimaciones, análisis de riesgos, mecanismos de monitorización y control, recursos y agenda."
+  },
+  {
+    "id": 364,
+    "question": "En el proceso de gestión de riesgos, la salida de la fase de identificación es:",
+    "options": [
+      "Una lista de riesgos potenciales",
+      "Los planes de contingencia",
+      "El código corregido",
+      "El presupuesto final"
+    ],
+    "answer": 0,
+    "explanation": "La identificación de riesgos produce una lista de riesgos potenciales; el análisis los prioriza; la planificación genera planes de previsión y contingencia; y la monitorización, la evaluación de riesgos."
+  },
+  {
+    "id": 365,
+    "question": "Según el temario, las restricciones básicas sobre la forma de pensar de las personas se deben a:",
+    "options": [
+      "El sueldo y el horario",
+      "La marca del ordenador",
+      "La organización de la memoria, la representación del conocimiento y la influencia de la motivación",
+      "El número de líneas de código escritas"
+    ],
+    "answer": 2,
+    "explanation": "Los límites del pensamiento se deben a la organización de la memoria, la representación del conocimiento y la influencia de la motivación."
+  },
+  {
+    "id": 366,
+    "question": "Según el temario, la motivación de una persona:",
+    "options": [
+      "Es fija e inmutable",
+      "Puede cambiar según circunstancias o eventos externos, y no depende sólo de factores personales",
+      "Depende únicamente del salario",
+      "No influye en el trabajo"
+    ],
+    "answer": 1,
+    "explanation": "La motivación se consigue satisfaciendo necesidades, puede cambiar según circunstancias/eventos externos y depende también de formar parte de un grupo y una cultura, no sólo de factores personales."
+  },
+  {
+    "id": 367,
+    "question": "Según el temario, sobre el uso de tests psicológicos y de aptitud en la selección de personal:",
+    "options": [
+      "Son obligatorios por ley",
+      "Garantizan siempre la mejor contratación",
+      "Están prohibidos",
+      "Algunas compañías los usan, pero no hay evidencias claras de que sean realmente útiles"
+    ],
+    "answer": 3,
+    "explanation": "El temario indica que algunas compañías usan tests psicológicos o de aptitud, pero no hay evidencias de que sean o no realmente útiles. Las decisiones suelen basarse en currículum, entrevista y recomendaciones."
+  },
+  {
+    "id": 368,
+    "question": "La planificación de la gestión de la configuración incluye, entre otras cosas:",
+    "options": [
+      "Definir las entidades a gestionar, los responsables, las herramientas y la base de datos de configuración",
+      "Escribir el código de la aplicación",
+      "Estimar el número de clientes",
+      "Diseñar la campaña de marketing"
+    ],
+    "answer": 0,
+    "explanation": "La planificación de la GC define las entidades a gestionar y su identificación, los responsables de los procedimientos, cómo mantener los registros, las herramientas y la base de datos de configuración (BDC)."
+  },
+  {
+    "id": 369,
+    "question": "Herramientas clásicas de gestión de versiones en Unix como SCCS y RCS se caracterizan por:",
+    "options": [
+      "Compilar y ejecutar el software automáticamente",
+      "Estimar el coste del proyecto",
+      "Identificar versiones/releases y registrar la historia de cambios (trabajando con texto ASCII)",
+      "Diseñar la interfaz gráfica"
+    ],
+    "answer": 2,
+    "explanation": "SCCS y RCS identifican versiones y releases, controlan cambios, gestionan el almacenamiento y registran la historia de cambios; están diseñadas para trabajar con texto ASCII."
+  },
+  {
+    "id": 370,
+    "question": "En Microsoft Project, ¿a qué corresponde el BCWP en español?",
+    "options": [
+      "CPTP (Coste Presupuestado del Trabajo Programado)",
+      "CPTR (Coste Presupuestado del Trabajo Realizado)",
+      "CRTR (Coste Real del Trabajo Realizado)",
+      "BAC (Presupuesto al finalizar)"
+    ],
+    "answer": 1,
+    "explanation": "BCWP = CPTR (Coste Presupuestado del Trabajo Realizado, el valor acumulado). BCWS = CPTP y ACWP = CRTR."
+  },
+  {
+    "id": 371,
+    "question": "Si una tarea con un valor planificado (BCWS) de 400 € sólo se ha completado al 50 %, su BCWP (valor acumulado) es:",
+    "options": ["400 €", "0 €", "800 €", "200 €"],
+    "answer": 3,
+    "explanation": "El BCWP es el valor, en coste de línea base, del trabajo realmente realizado: el 50 % de 400 € = 200 €."
+  },
+  {
+    "id": 372,
+    "question": "Según el temario, ¿cuál de los siguientes es uno de los cinco tipos de información que usa Microsoft Project para analizar el progreso?",
+    "options": [
+      "El costo",
+      "El número de líneas de código",
+      "La satisfacción del cliente",
+      "El color de las tareas"
+    ],
+    "answer": 0,
+    "explanation": "Los cinco tipos de información en Ms Project son: duración, trabajo, fecha de comienzo, fecha de fin y costo."
+  },
+  {
+    "id": 373,
+    "question": "Si en un análisis EVA resulta que el proyecto necesita un 25 % más del tiempo planificado para completar el trabajo, esto refleja un problema de:",
+    "options": [
+      "Presupuesto de hardware",
+      "Recursos humanos disponibles",
+      "Agenda (planificación): va con retraso",
+      "Calidad del código"
+    ],
+    "answer": 2,
+    "explanation": "Necesitar más tiempo del planificado es un problema de agenda/planificación (indicador de progreso, SV/SPI): la tarea o el proyecto va con retraso."
+  },
+  {
+    "id": 374,
+    "question": "Una vez conocidas las actividades, dependencias, duraciones y recursos, ¿qué se calcula al programar la agenda prevista?",
+    "options": [
+      "El precio de venta del producto",
+      "Las fechas más tempranas/tardías y las holguras totales y libres de las actividades",
+      "El número de empleados a contratar",
+      "La campaña publicitaria"
+    ],
+    "answer": 1,
+    "explanation": "Con las entradas (actividades, dependencias, duraciones, recursos) se calculan las fechas de inicio/fin más tempranas y tardías y las holguras totales y libres de las actividades."
+  },
+  {
+    "id": 375,
+    "question": "¿Cuál de los siguientes NO figura entre los ‘participantes’ en el tratamiento de datos según el temario?",
+    "options": [
+      "El responsable del tratamiento",
+      "El encargado del tratamiento",
+      "El Delegado de Protección de Datos",
+      "El Registrador de la Propiedad Intelectual"
+    ],
+    "answer": 3,
+    "explanation": "Los participantes son: autoridades de control, responsable del tratamiento, encargado del tratamiento, Delegado de Protección de Datos e interesado. El Registrador de la Propiedad Intelectual pertenece al Tema 8."
+  },
+  {
+    "id": 376,
+    "question": "¿Cuál de los siguientes datos debe figurar en el Registro de Actividades de Tratamiento (RAT)?",
+    "options": [
+      "Las finalidades del tratamiento y los plazos de conservación",
+      "El sueldo de los empleados",
+      "El código fuente del software",
+      "La marca de los ordenadores"
+    ],
+    "answer": 0,
+    "explanation": "El RAT incluye datos del responsable y DPD, finalidades, base jurídica, categorías de interesados y de datos, destinatarios, transferencias internacionales, plazos de conservación y medidas de seguridad."
+  },
+  {
+    "id": 377,
+    "question": "El derecho de supresión (‘olvido’) NO se aplica cuando el tratamiento es necesario para:",
+    "options": [
+      "Enviar publicidad comercial",
+      "Mejorar las ventas de la empresa",
+      "Ejercer la libertad de expresión e información o cumplir una obligación legal",
+      "Cualquier caso sin excepción"
+    ],
+    "answer": 2,
+    "explanation": "El derecho de supresión no procede cuando el tratamiento es necesario para la libertad de expresión, el cumplimiento de una obligación legal, el interés público en salud, o fines de archivo/investigación."
+  },
+  {
+    "id": 378,
+    "question": "Según el temario, la entidad debe responder a la solicitud de ejercicio de derechos del interesado en un plazo de:",
+    "options": ["72 horas", "1 mes", "1 año", "15 días hábiles"],
+    "answer": 1,
+    "explanation": "El procedimiento para el ejercicio de derechos contempla recibir la petición, comprobar la identidad, registrarla con ticket único y responder en el plazo de 1 mes."
+  },
+  {
+    "id": 379,
+    "question": "Según el temario, en España el registro del software:",
+    "options": [
+      "Es obligatorio para que exista protección",
+      "No existe",
+      "Sólo se puede hacer en EE. UU.",
+      "No es obligatorio (está protegido desde su creación), pero añade seguridad jurídica"
+    ],
+    "answer": 3,
+    "explanation": "En España el software está protegido desde su creación, así que registrarlo no es obligatorio; sin embargo, el registro añade seguridad jurídica (se presume que los derechos inscritos existen y pertenecen a su titular)."
+  },
+  {
+    "id": 380,
+    "question": "¿Qué documentación se necesita para registrar el software en el Registro de la Propiedad Intelectual, según el temario?",
+    "options": [
+      "El formulario oficial, una copia de la obra (código fuente) y la documentación de los autores",
+      "Únicamente el nombre comercial del producto",
+      "El presupuesto del proyecto",
+      "La factura de la luz"
+    ],
+    "answer": 0,
+    "explanation": "Para registrar se necesita el formulario oficial de solicitud, una copia de la obra (código fuente, gráficos, software funcional) y la documentación de los autores (DNI, NIE, pasaporte), más datos de empresa si aplica."
+  },
+  {
+    "id": 381,
+    "question": "En el software propietario, una licencia con DRM se caracteriza por:",
+    "options": [
+      "Ser software libre con copyleft",
+      "Distribuirse gratis sin restricciones",
+      "Estar protegida por mecanismos técnicos (p. ej., para proteger música o vídeos)",
+      "Permitir modificar y redistribuir el código"
+    ],
+    "answer": 2,
+    "explanation": "El software con DRM está protegido por mecanismos técnicos; puede proteger contenidos como música o vídeos. Es un tipo de licencia propietaria, junto a OEM, ROK, perpetuas o limitadas en el tiempo."
+  },
+  {
+    "id": 382,
+    "question": "Según el temario, la estrategia a seguir con los recursos de terceros incluye:",
+    "options": [
+      "Copiar contenido de cualquier web sin permiso",
+      "Buscar recursos con licencias claras, revisar su compatibilidad y documentarlo todo",
+      "Ignorar las licencias",
+      "Usar sólo recursos de pago"
+    ],
+    "answer": 1,
+    "explanation": "La estrategia con recursos de terceros es: buscar recursos con licencias claras y adecuadas al uso, usar bancos fiables, revisar la compatibilidad entre licencias y documentarlo todo."
+  },
+  {
+    "id": 383,
+    "question": "Según el temario, una profesión regulada es aquella cuyo acceso y ejercicio:",
+    "options": [
+      "Son totalmente libres sin ningún requisito",
+      "Dependen del salario ofrecido",
+      "Están prohibidos",
+      "Están condicionados por ley a poseer una titulación específica, superar exámenes estatales o estar colegiado"
+    ],
+    "answer": 3,
+    "explanation": "Una profesión regulada tiene su acceso y ejercicio condicionados por ley a una titulación específica, exámenes estatales o colegiación; el Estado valida la formación (p. ej., médicos, arquitectos, abogados)."
+  },
+  {
+    "id": 384,
+    "question": "¿Cuál de las siguientes es una función de un Colegio Profesional según el temario?",
+    "options": [
+      "La ordenación y control de la profesión, asegurando el cumplimiento del código deontológico",
+      "Fabricar hardware",
+      "Impartir todos los grados universitarios",
+      "Sustituir al Gobierno"
+    ],
+    "answer": 0,
+    "explanation": "Entre las funciones de un colegio profesional están la ordenación y control (matrícula, código deontológico), la representación ante las administraciones, la defensa de los colegiados y la protección de los consumidores."
+  },
+  {
+    "id": 385,
+    "question": "Según el temario, la forma en que el jefe presenta el proyecto al equipo:",
+    "options": [
+      "Determina si el equipo lo ve como una misión a realizar o como trabajos forzados",
+      "No influye en la motivación del equipo",
+      "Sólo importa el salario que se ofrezca",
+      "Es irrelevante para el rendimiento"
+    ],
+    "answer": 0,
+    "explanation": "El temario señala que la forma de presentar el proyecto determina si el equipo lo percibe como una misión a realizar o como trabajos forzados, afectando a la moral."
+  },
+  {
+    "id": 386,
+    "question": "En el modelo UP seguido en las prácticas, la implementación de la capa de lógica de negocio y acceso a datos es objetivo de la fase de:",
+    "options": ["Inicio", "Elaboración", "Transición", "Construcción"],
+    "answer": 3,
+    "explanation": "En UP la implementación del sistema (incluida la capa de lógica de negocio y acceso a datos) se realiza por iteraciones en la fase de Construcción; fue el objetivo de esa fase en las prácticas de gestión de autónomos."
+  },
+  {
+    "id": 387,
+    "question": "Según el temario, las métricas de productividad basadas en volumen por unidad de tiempo:",
+    "options": [
+      "Son siempre exactas",
+      "Son engañosas porque no tienen en cuenta la calidad y deben usarse sólo como guía",
+      "Miden perfectamente la calidad del software",
+      "No dependen del proceso"
+    ],
+    "answer": 1,
+    "explanation": "Todas las métricas basadas en volumen/tiempo son engañosas porque no tienen en cuenta la calidad (la productividad suele aumentar a costa de la calidad); deben usarse sólo como guía."
+  },
+  {
+    "id": 388,
+    "question": "Según el temario, una organización puede ofrecer un precio bajo por un proyecto para:",
+    "options": [
+      "Perder dinero deliberadamente",
+      "Reducir la calidad del software",
+      "Introducirse en un nuevo segmento del mercado (aceptando menos beneficio ahora a cambio de oportunidades futuras)",
+      "Evitar contratar personal"
+    ],
+    "answer": 2,
+    "explanation": "Un factor de coste es la oportunidad de mercado: aceptar poco beneficio en un proyecto para entrar en un nuevo segmento puede dar más beneficio y experiencia después."
+  },
+  {
+    "id": 389,
+    "question": "En COCOMO 2, el nivel inicial de diseño realiza las estimaciones:",
+    "options": [
+      "Después de establecer los requisitos, con fórmulas algorítmicas (a partir de puntos de función convertidos a KLOC)",
+      "Sólo cuando el software está terminado",
+      "Contando pantallas e informes (puntos de objeto)",
+      "Sin ninguna fórmula"
+    ],
+    "answer": 0,
+    "explanation": "El nivel inicial de diseño de COCOMO 2 estima tras establecer los requisitos, con fórmulas algorítmicas (PM = A·Tamaño^B·M) usando puntos de función convertidos a líneas de código (KLOC)."
+  },
+  {
+    "id": 390,
+    "question": "Tres actividades A, B y C, donde A precede a B. Las holguras totales son HT(A)=4, HT(B)=2, HT(C)=3 y las libres HL(A)=2, HL(B)=2, HL(C)=3. Si A se retrasa 3 días, ¿qué ocurre?",
+    "options": [
+      "El proyecto se retrasa 3 días",
+      "A, B y C se vuelven críticas",
+      "No se puede determinar",
+      "El proyecto no se retrasa; B reduce su holgura total en 1 día y C no se ve afectada"
+    ],
+    "answer": 3,
+    "explanation": "Como HT(A)=4, retrasar A 3 días no retrasa el proyecto. Pero HL(A)=2, así que se supera la holgura libre en 3−2=1 día y la siguiente actividad (B) reduce su holgura total en 1 (de 2 a 1). C no depende de A, no se ve afectada."
+  },
+  {
+    "id": 391,
+    "question": "Las holguras totales son HT(A)=2, HT(B)=4, HT(C)=3 y las libres HL(A)=3, HL(B)=2, HL(C)=1. ¿Qué se puede afirmar?",
+    "options": [
+      "Todas las actividades son críticas",
+      "Las condiciones no pueden darse: la holgura libre nunca puede superar a la total",
+      "El proyecto se retrasa 3 días",
+      "A tiene la mayor holgura de las tres"
+    ],
+    "answer": 1,
+    "explanation": "La holgura libre de una actividad nunca puede ser mayor que su holgura total (HL ≤ HT). Como HL(A)=3 > HT(A)=2, las condiciones iniciales son imposibles."
+  },
+  {
+    "id": 392,
+    "question": "En un grafo PERT, un nodo de ‘convergencia’ representa:",
+    "options": [
+      "Una actividad que se divide en varias",
+      "El coste total del proyecto",
+      "Varias actividades que deben finalizar antes de que pueda comenzar la siguiente",
+      "La holgura total del camino crítico"
+    ],
+    "answer": 2,
+    "explanation": "En la precedencia entre actividades, una convergencia es un nodo al que llegan varias actividades que deben finalizar antes de que pueda comenzar la siguiente (la divergencia es lo contrario)."
+  },
+  {
+    "id": 393,
+    "question": "El cálculo de los tiempos más tardíos (last) en una red PERT se realiza:",
+    "options": [
+      "Hacia atrás, tomando el mínimo de (t* − tᵢⱼ) en cada nodo",
+      "Hacia delante, tomando el máximo",
+      "Sumando todas las holguras del proyecto",
+      "De forma aleatoria"
+    ],
+    "answer": 0,
+    "explanation": "Los tiempos last se calculan hacia atrás: t*ⱼ = mín[t*ⱼ − tᵢⱼ]. Los early se calculan hacia delante con el máximo."
+  },
+  {
+    "id": 394,
+    "question": "Según el temario, la resolución de problemas requiere transferir información entre:",
+    "options": [
+      "El hardware y el software",
+      "El cliente y el proveedor",
+      "Dos ordenadores distintos",
+      "La memoria a corto plazo y la memoria de trabajo (información que puede perderse o corromperse)"
+    ],
+    "answer": 3,
+    "explanation": "La resolución de problemas requiere transferir información entre la memoria a corto plazo y la de trabajo; durante esa transferencia la información puede perderse o corromperse."
+  },
+  {
+    "id": 395,
+    "question": "Según el temario, la cohesividad de un grupo se puede propiciar mediante:",
+    "options": [
+      "Aislar a los miembros entre sí",
+      "Eventos sociales, una identidad de grupo propia y sinceridad con la información",
+      "Ocultar la información al equipo",
+      "Eliminar al líder del grupo"
+    ],
+    "answer": 1,
+    "explanation": "La cohesividad se propicia con eventos sociales, desarrollando una identidad de grupo y un área propia, actividades de construcción de grupo y sinceridad con la información."
+  },
+  {
+    "id": 396,
+    "question": "¿Cuál de los siguientes es un factor de selección de personal según el temario?",
+    "options": [
+      "El color favorito del candidato",
+      "La marca de su coche",
+      "La experiencia en la plataforma y en el lenguaje de programación",
+      "Su equipo de fútbol"
+    ],
+    "answer": 2,
+    "explanation": "Los factores de selección son: experiencia en el dominio, en la plataforma y en el lenguaje, estudios previos, capacidad de comunicación, adaptabilidad, actitud y personalidad."
+  },
+  {
+    "id": 397,
+    "question": "Según el temario, una ‘release’ de un sistema es:",
+    "options": [
+      "Una versión del sistema distribuida a los clientes (con nuevas funcionalidades o plataforma)",
+      "Cualquier instancia interna que difiere de otra",
+      "El código fuente sin compilar",
+      "Un tipo de riesgo del proyecto"
+    ],
+    "answer": 0,
+    "explanation": "Una release es una versión del sistema distribuida a los clientes (con funcionalidades nuevas o nueva plataforma); incluye ficheros de configuración y datos, instalación y documentación. Una versión es cualquier instancia que difiere de otra."
+  },
+  {
+    "id": 398,
+    "question": "Una limitación de la herramienta ‘make’, según el temario, es que:",
+    "options": [
+      "No permite compilar nada",
+      "Estima el coste del proyecto",
+      "Sustituye al control de versiones",
+      "Se basa en un modelo físico de dependencias y usa un modelo de cambio por fechas de fichero (puede recompilar de más)"
+    ],
+    "answer": 3,
+    "explanation": "‘make’ se basa en un modelo físico (no lógico) de dependencias, los Makefiles se vuelven complejos y caros de mantener, y usa un modelo de cambio por fechas de fichero, por lo que puede recompilar cuando no hace falta."
+  },
+  {
+    "id": 399,
+    "question": "En un momento del proyecto tenemos SPI < 1 y CPI > 1. ¿Qué podemos afirmar?",
+    "options": [
+      "Va adelantado respecto a la agenda y con sobrecoste",
+      "Va retrasado respecto a la agenda pero gastando menos de lo previsto",
+      "Va adelantado y con ahorro",
+      "Va exactamente según lo previsto en todo"
+    ],
+    "answer": 1,
+    "explanation": "SPI < 1 indica retraso respecto a la agenda; CPI > 1 indica que se gasta menos de lo previsto (ahorro). Por tanto: retrasado pero con ahorro."
+  },
+  {
+    "id": 400,
+    "question": "Una tarea tiene BCWS = 1000, BCWP = 800 y ACWP = 1000. ¿Qué podemos afirmar?",
+    "options": [
+      "Va adelantada y con ahorro",
+      "Va exactamente según lo previsto",
+      "Va retrasada y con sobrecoste (gastando más de lo previsto)",
+      "La tarea ya ha terminado"
+    ],
+    "answer": 2,
+    "explanation": "SV = BCWP − BCWS = 800 − 1000 = −200 (retrasada). CV = BCWP − ACWP = 800 − 1000 = −200 (gasta más de lo previsto, sobrecoste)."
+  },
+  {
+    "id": 401,
+    "question": "Datos EVA (BCWS/BCWP/ACWP) — Tarea1: 1000/1000/800; Tarea2: 800/600/600; Tarea3: 500/500/700; Tarea4: 0/0/0. ¿Cuál de las siguientes afirmaciones es FALSA?",
+    "options": [
+      "La Tarea 3 va según la agenda pero con ahorro",
+      "La Tarea 1 va según la agenda y gastando menos de lo previsto",
+      "La Tarea 2 va retrasada respecto a la agenda",
+      "La Tarea 4 aún no ha comenzado"
+    ],
+    "answer": 0,
+    "explanation": "La Tarea 3 tiene SV = 500−500 = 0 (según la agenda), pero CV = 500−700 = −200: gasta MÁS de lo previsto (sobrecoste), no ahorro; por eso es falsa. (T1: CV=+200 ahorro; T2: SV=−200 retrasada; T4: sin empezar.)"
+  },
+  {
+    "id": 402,
+    "question": "Una tarea tiene BCWP = 600 y ACWP = 800. ¿Cuál es su CPI y qué indica?",
+    "options": [
+      "CPI = 1,33: ahorro",
+      "CPI = 0,75: va adelantada en agenda",
+      "CPI = 1,33: sobrecoste",
+      "CPI = 0,75: gasta más de lo previsto (sobrecoste)"
+    ],
+    "answer": 3,
+    "explanation": "CPI = BCWP/ACWP = 600/800 = 0,75. Al ser menor que 1, la tarea gasta más de lo previsto (sobrecoste). El CPI mide coste, no agenda."
+  },
+  {
+    "id": 403,
+    "question": "Una tarea presenta SPI = 0,8. Según el temario, esto significa que:",
+    "options": [
+      "Va adelantada respecto a la agenda",
+      "Va retrasada: ha necesitado más tiempo del planificado para el trabajo realizado",
+      "Está gastando menos dinero del previsto",
+      "Ha terminado antes de tiempo"
+    ],
+    "answer": 1,
+    "explanation": "SPI = BCWP/BCWS = 0,8 < 1 indica retraso: se ha necesitado más tiempo del planificado para el trabajo realizado (al contrario que un SPI de 1,5, que indicaría adelanto)."
+  },
+  {
+    "id": 404,
+    "question": "Si una tarea presenta CPI = 0,98, según el temario significa que:",
+    "options": [
+      "Ha ahorrado mucho dinero",
+      "Va muy adelantada en la agenda",
+      "Ha gastado ligeramente más del presupuesto (va algo por encima de lo previsto)",
+      "Ha terminado el proyecto"
+    ],
+    "answer": 2,
+    "explanation": "Un CPI de 0,98 (< 1) indica que se ha gastado algo más de lo presupuestado; en el ejemplo del temario, un 2,4 % por encima del presupuesto planificado."
+  },
+  {
+    "id": 405,
+    "question": "El RGPD es de aplicación (entró en vigor) el:",
+    "options": [
+      "25 de mayo de 2018 (fecha de aplicación)",
+      "13 de diciembre de 1999",
+      "5 de diciembre de 2018",
+      "27 de abril de 2016, sin más fechas"
+    ],
+    "answer": 0,
+    "explanation": "El RGPD fue emitido por el Parlamento y el Consejo Europeo el 27 de abril de 2016 y es de aplicación desde el 25 de mayo de 2018."
+  },
+  {
+    "id": 406,
+    "question": "El derecho a la limitación del tratamiento permite al interesado:",
+    "options": [
+      "Recibir una indemnización económica",
+      "Borrar la ley de protección de datos",
+      "Cambiar de responsable automáticamente",
+      "Solicitar que se ‘congele’ el uso de sus datos (p. ej., mientras se verifica su exactitud)"
+    ],
+    "answer": 3,
+    "explanation": "El derecho de limitación permite ‘congelar’ el uso de los datos, por ejemplo mientras se comprueba su exactitud tras impugnarla, o cuando el tratamiento es ilícito y el interesado prefiere la limitación a la supresión."
+  },
+  {
+    "id": 407,
+    "question": "El nombramiento de un Delegado de Protección de Datos (DPD) es obligatorio, entre otros casos, cuando:",
+    "options": [
+      "La empresa tiene menos de 5 empleados",
+      "Se trata de autoridades u organismos públicos (o tratamientos a gran escala de categorías especiales)",
+      "No se tratan datos personales",
+      "El tratamiento se hace en papel"
+    ],
+    "answer": 1,
+    "explanation": "El DPD es obligatorio para autoridades u organismos públicos, y para responsables/encargados cuyo tratamiento a gran escala requiera observación sistemática o implique categorías especiales de datos."
+  },
+  {
+    "id": 408,
+    "question": "Según el temario, mantener el RAT y realizar la EIPD cuando proceda es:",
+    "options": [
+      "Una tarea que se hace una sola vez",
+      "Opcional en todos los casos",
+      "Una obligación continua, no solamente inicial",
+      "Responsabilidad exclusiva del interesado"
+    ],
+    "answer": 2,
+    "explanation": "Documentar y registrar (mantener el RAT y realizar la EIPD si procede) es una obligación continua del responsable, no sólo inicial."
+  },
+  {
+    "id": 409,
+    "question": "¿Cuál de las siguientes es una ventaja del software privativo (propietario) según el temario?",
+    "options": [
+      "La protección de la propiedad intelectual y un mayor control sobre el software",
+      "La total transparencia del código",
+      "La ausencia de coste para el usuario",
+      "La libertad de modificación y redistribución"
+    ],
+    "answer": 0,
+    "explanation": "Como ventajas del software privativo el temario cita el beneficio económico, la protección de la propiedad intelectual y un mayor control sobre el software."
+  },
+  {
+    "id": 410,
+    "question": "Según el temario, tramitar telemáticamente una solicitud de registro en el Registro Central de la Propiedad Intelectual (2025) cuesta aproximadamente:",
+    "options": [
+      "288.000 €",
+      "71 € al año",
+      "Es gratuito en todos los casos",
+      "Aproximadamente 8,26 €"
+    ],
+    "answer": 3,
+    "explanation": "Según el temario, la tramitación telemática de un expediente de solicitud cuesta 8,26 € (14,97 € si es presencial), con tasas que pueden variar en registros territoriales."
+  },
+  {
+    "id": 411,
+    "question": "Según el temario, ¿por qué es importante proteger la propiedad intelectual?",
+    "options": [
+      "Para impedir cualquier uso del software",
+      "Para fomentar la innovación y el desarrollo y evitar el plagio y la apropiación indebida",
+      "Para eliminar a la competencia",
+      "Para aumentar los impuestos"
+    ],
+    "answer": 1,
+    "explanation": "Se protege la propiedad intelectual para fomentar la innovación y el desarrollo y evitar el plagio y la apropiación indebida (el sector tecnológico supone ya más del 20 % del PIB en España)."
+  },
+  {
+    "id": 412,
+    "question": "¿Cuál de las siguientes es una ventaja del software libre según el temario?",
+    "options": [
+      "La falta de soporte oficial",
+      "La curva de aprendizaje",
+      "La personalización, el ahorro y la colaboración/mejora continua",
+      "La compatibilidad limitada"
+    ],
+    "answer": 2,
+    "explanation": "Como ventajas del software libre el temario cita la personalización y el ahorro, la colaboración y mejora continua, la seguridad y transparencia, y la ética y comunidad. Las otras opciones son desventajas."
+  },
+  {
+    "id": 413,
+    "question": "Según el temario, una posible solución al debate regulación vs mercado libre sería:",
+    "options": [
+      "Aplicar regulaciones estrictas a ciberseguridad, sistemas críticos y salud, y dejar más libres sectores de menor riesgo (como videojuegos)",
+      "Regular absolutamente todo por igual",
+      "Eliminar toda regulación",
+      "Prohibir la profesión informática"
+    ],
+    "answer": 0,
+    "explanation": "El temario propone encontrar un equilibrio: regulaciones más estrictas en ciberseguridad, sistemas críticos y salud, y mayor libertad en sectores de menor riesgo, como el desarrollo de videojuegos."
+  },
+  {
+    "id": 414,
+    "question": "Según el temario, ¿cuál es una razón para colegiarse en informática?",
+    "options": [
+      "Es obligatorio por ley colegiarse",
+      "Sustituye al título universitario",
+      "Permite no pagar impuestos",
+      "Pertenecer a una red profesional, tener voz colectiva para exigir la regulación y defensa jurídica"
+    ],
+    "answer": 3,
+    "explanation": "Entre las razones para colegiarse: pertenecer a una red profesional, voz colectiva para exigir la regulación, formación y bolsa de empleo, defensa jurídica y mejora del reconocimiento social (cuota baja, primer año gratuito)."
+  },
+  {
+    "id": 415,
+    "question": "¿Cuál de los siguientes es un factor a tener en cuenta al organizar el equipo de software según el temario?",
+    "options": [
+      "El color de la oficina",
+      "La marca del ordenador",
+      "El grado de modularización del problema y la rigidez del tiempo de entrega",
+      "El número de competidores en el mercado"
+    ],
+    "answer": 2,
+    "explanation": "Entre los factores están la dificultad y tamaño del problema, el tiempo de vida del grupo, el grado de modularización, la calidad/fiabilidad requerida, la rigidez del plazo de entrega y la comunicación requerida."
+  },
+  {
+    "id": 416,
+    "question": "El modelo de proceso de construcción de prototipos se caracteriza por:",
+    "options": [
+      "Entregar el sistema final sin revisiones",
+      "Construir un prototipo inicial que se refina con el usuario hasta obtener uno aceptable",
+      "Codificar sin ninguna especificación",
+      "Prohibir la participación del usuario"
+    ],
+    "answer": 1,
+    "explanation": "El modelo de construcción de prototipos parte de un diseño rápido, construye un prototipo y lo va refinando con el usuario hasta obtener un prototipo aceptable."
+  },
+  {
+    "id": 417,
+    "question": "En COCOMO 2, el multiplicador PREX se refiere a:",
+    "options": [
+      "La reutilización requerida",
+      "La dificultad de la plataforma",
+      "La agenda requerida",
+      "La experiencia del personal"
+    ],
+    "answer": 3,
+    "explanation": "PREX es la experiencia del personal. RUSE es la reutilización requerida, PDIF la dificultad de la plataforma, SCED la agenda requerida y PERS la capacidad del personal."
+  },
+  {
+    "id": 418,
+    "question": "Según el temario, en las fases tempranas del desarrollo:",
+    "options": [
+      "En las fases tempranas es muy difícil estimar las líneas de código, por lo que se prefieren los puntos de objeto",
+      "Las líneas de código se conocen con exactitud desde el principio",
+      "Los puntos de objeto sólo sirven al final del proyecto",
+      "No se puede estimar de ninguna forma"
+    ],
+    "answer": 0,
+    "explanation": "En fases tempranas es muy difícil estimar el número de líneas de código; por eso se usan los puntos de objeto, más fáciles de estimar a partir de la especificación (pantallas, informes y módulos 3GL)."
+  },
+  {
+    "id": 419,
+    "question": "Una actividad tiene su comienzo anticipado en el día 3, una duración de 5 días y su límite de fin (LF) en el día 12. ¿Cuál es su holgura total?",
+    "options": ["0 días", "9 días", "4 días", "7 días"],
+    "answer": 2,
+    "explanation": "HT = LF − comienzo anticipado − duración = 12 − 3 − 5 = 4 días."
+  },
+  {
+    "id": 420,
+    "question": "A precede a B. La holgura total de A es HT(A)=5 y su holgura libre HL(A)=1. Si A se retrasa 6 días, ¿qué ocurre?",
+    "options": [
+      "No ocurre nada, está dentro de la holgura",
+      "El proyecto se retrasa 1 día (el retraso supera la holgura total de A)",
+      "B se adelanta 1 día",
+      "El proyecto se retrasa 6 días"
+    ],
+    "answer": 1,
+    "explanation": "Como el retraso (6) supera la holgura total de A (5), el proyecto se retrasa en 6 − 5 = 1 día."
+  },
+  {
+    "id": 421,
+    "question": "A precede a B. HT(A)=4 y HL(A)=3. Si A se retrasa 2 días, ¿qué ocurre?",
+    "options": [
+      "El proyecto se retrasa 2 días",
+      "B pierde toda su holgura",
+      "A se vuelve crítica",
+      "No ocurre nada: el retraso está dentro de la holgura libre; ni el proyecto ni B se ven afectados"
+    ],
+    "answer": 3,
+    "explanation": "Al ser el retraso (2) menor que la holgura libre de A (3), las actividades siguientes pueden empezar igual y el proyecto no se retrasa."
+  },
+  {
+    "id": 422,
+    "question": "Según los puntos clave del tema de planificación, la planificación y la estimación son:",
+    "options": [
+      "Procesos iterativos y continuados durante todo el desarrollo del proyecto",
+      "Tareas que se hacen una sola vez al inicio",
+      "Actividades ajenas a la gestión",
+      "Responsabilidad exclusiva del cliente"
+    ],
+    "answer": 0,
+    "explanation": "Los puntos clave indican que la planificación y la estimación son procesos iterativos y continuados durante todo el desarrollo del proyecto."
+  },
+  {
+    "id": 423,
+    "question": "Según el temario, la resolución de problemas en programación:",
+    "options": [
+      "Depende totalmente del lenguaje de programación",
+      "Es un proceso puramente mecánico sin conocimiento",
+      "Es independiente del lenguaje y requiere integrar distintos tipos de conocimiento, desarrollando un modelo semántico de la solución",
+      "No requiere ningún modelo"
+    ],
+    "answer": 2,
+    "explanation": "La resolución de problemas es independiente del lenguaje, requiere integrar conocimiento (del ordenador, tareas, dominio, organización) y desarrollar un modelo semántico de la solución que se contrasta con el problema."
+  },
+  {
+    "id": 424,
+    "question": "Según el temario, el tamaño de un grupo de trabajo debería ser:",
+    "options": [
+      "Cuanto más grande, mejor",
+      "Relativamente pequeño (menos de ocho personas); los proyectos grandes se dividen en varios pequeños",
+      "Siempre de una sola persona",
+      "Indiferente al tamaño"
+    ],
+    "answer": 1,
+    "explanation": "El grupo debe ser relativamente pequeño (menos de ocho personas); los proyectos grandes se dividen en múltiples proyectos pequeños que pueden organizarse de forma informal y democrática."
+  },
+  {
+    "id": 425,
+    "question": "Según el temario, el entorno físico de trabajo (confort, privacidad, iluminación, mobiliario):",
+    "options": [
+      "No influye en nada",
+      "Sólo importa el salario",
+      "Es responsabilidad del cliente",
+      "Influye en la productividad y la satisfacción individual, y deben tenerse en cuenta la salud y la seguridad"
+    ],
+    "answer": 3,
+    "explanation": "El entorno físico de trabajo (confort, privacidad, iluminación, climatización, mobiliario) influye en la productividad y la satisfacción individual; deben considerarse la salud y la seguridad."
+  },
+  {
+    "id": 426,
+    "question": "En la gestión de la configuración, para modificar un elemento de una línea base:",
+    "options": [
+      "Se extrae de la base de datos del proyecto, se modifica y, una vez aprobado, se almacena como nueva línea base",
+      "Se modifica directamente sin ningún control",
+      "Se elimina permanentemente",
+      "No se puede modificar nunca"
+    ],
+    "answer": 0,
+    "explanation": "Los elementos de configuración de una línea base se extraen de la base de datos del proyecto, se modifican mediante tareas de IS y, una vez aprobados y controlados, se vuelven a almacenar como nueva línea base."
+  },
+  {
+    "id": 427,
+    "question": "Al construir el sistema, ¿cuál de las siguientes comprobaciones cita el temario?",
+    "options": [
+      "Comprobar el presupuesto del cliente",
+      "Estimar los puntos de función",
+      "Comprobar que todas las componentes estén incluidas, con la versión adecuada y el compilador correcto",
+      "Diseñar la campaña de marketing"
+    ],
+    "answer": 2,
+    "explanation": "Al construir el sistema hay que comprobar si están todas las componentes, si tienen la versión adecuada, si los ficheros de datos están disponibles y con el nombre correcto y si la versión del compilador es la adecuada."
+  },
+  {
+    "id": 428,
+    "question": "En un momento del proyecto tenemos SPI > 1 y CPI > 1. ¿Qué podemos afirmar?",
+    "options": [
+      "Va retrasado y con sobrecoste",
+      "Va adelantado respecto a la agenda y gastando menos de lo previsto (ahorro)",
+      "Va retrasado pero con ahorro",
+      "Va adelantado pero con sobrecoste"
+    ],
+    "answer": 1,
+    "explanation": "SPI > 1 indica que va adelantado respecto a la agenda; CPI > 1 indica que gasta menos de lo previsto (ahorro)."
+  },
+  {
+    "id": 429,
+    "question": "Una tarea tiene BCWS = 1200, BCWP = 1400 y ACWP = 1200. ¿Qué podemos afirmar?",
+    "options": [
+      "Va retrasada y con sobrecoste",
+      "Va según lo previsto en todo",
+      "La tarea no ha comenzado",
+      "Va adelantada respecto a la agenda y con ahorro (gasta menos de lo previsto)"
+    ],
+    "answer": 3,
+    "explanation": "SV = BCWP − BCWS = 1400 − 1200 = +200 (adelantada). CV = BCWP − ACWP = 1400 − 1200 = +200 (ahorro)."
+  },
+  {
+    "id": 430,
+    "question": "Una tarea tiene BCWS = 1000, BCWP = 750 y ACWP = 500. ¿Cuáles son su CPI y su SPI?",
+    "options": [
+      "CPI = 1,5 (ahorro) y SPI = 0,75 (retrasada)",
+      "CPI = 0,75 y SPI = 1,5",
+      "CPI = 1,5 y SPI = 1,33 (todo correcto)",
+      "CPI = 0,5 y SPI = 0,75"
+    ],
+    "answer": 0,
+    "explanation": "CPI = BCWP/ACWP = 750/500 = 1,5 (gasta menos, ahorro). SPI = BCWP/BCWS = 750/1000 = 0,75 (retrasada)."
+  },
+  {
+    "id": 431,
+    "question": "Datos EVA (BCWS/BCWP/ACWP) — Tarea1: 900/900/900; Tarea2: 700/900/700; Tarea3: 600/400/600. ¿Cuál de las siguientes afirmaciones es FALSA?",
+    "options": [
+      "La Tarea 1 va exactamente según lo previsto en agenda y coste",
+      "La Tarea 2 va adelantada y gastando menos de lo previsto",
+      "La Tarea 3 va adelantada y con ahorro",
+      "La Tarea 2 va adelantada respecto a la agenda"
+    ],
+    "answer": 2,
+    "explanation": "La Tarea 3 tiene SV = 400 − 600 = −200 (retrasada) y CV = 400 − 600 = −200 (sobrecoste); por eso 'va adelantada y con ahorro' es falso. (T1: SV=0 y CV=0; T2: SV=+200 y CV=+200.)"
+  },
+  {
+    "id": 432,
+    "question": "Una tarea con un presupuesto total (BAC) de 2000 € está completada al 40 %. ¿Cuál es su valor acumulado (BCWP)?",
+    "options": ["2000 €", "800 €", "1200 €", "0 €"],
+    "answer": 1,
+    "explanation": "El valor acumulado (BCWP) es el porcentaje completado por el presupuesto: 40 % × 2000 € = 800 €."
+  },
+  {
+    "id": 433,
+    "question": "Para hacer un seguimiento del proyecto en Microsoft Project, según el temario, hay que:",
+    "options": [
+      "Estimar los puntos de función",
+      "Calcular el camino crítico a mano",
+      "Redactar el contrato con el cliente",
+      "Guardar una línea base, establecer una fecha de estado e introducir la información real del proyecto"
+    ],
+    "answer": 3,
+    "explanation": "En Ms Project el seguimiento requiere guardar una línea base (valores previstos), establecer una fecha de estado e introducir la información real del proyecto."
+  },
+  {
+    "id": 434,
+    "question": "Según el temario, mediante el derecho de acceso el interesado puede conocer:",
+    "options": [
+      "Los fines del tratamiento, las categorías de datos, los destinatarios y el plazo de conservación",
+      "El importe que se le pagará por sus datos",
+      "El contenido de la ley que desea cambiar",
+      "Los datos de cualquier otra persona"
+    ],
+    "answer": 0,
+    "explanation": "El derecho de acceso permite conocer los fines del tratamiento, las categorías de datos tratados, los destinatarios, el plazo previsto de conservación y la existencia de otros derechos."
+  },
+  {
+    "id": 435,
+    "question": "En protección de datos, el ‘interesado’ es:",
+    "options": [
+      "La autoridad de control",
+      "El encargado del tratamiento",
+      "La persona física titular de los datos personales",
+      "La empresa que trata los datos"
+    ],
+    "answer": 2,
+    "explanation": "El interesado es la persona física titular de los datos personales, con derechos reconocidos (acceso, supresión, etc.) que puede ejercer mediante un procedimiento claro y accesible."
+  },
+  {
+    "id": 436,
+    "question": "¿Cuál de las siguientes NO es una de las normas de protección de datos que cita el temario?",
+    "options": [
+      "La LOPD (Ley Orgánica 15/1999)",
+      "La Ley de Propiedad Intelectual (RDL 1/1996)",
+      "El RGPD (Reglamento UE de 2016)",
+      "La LOPDGDD (Ley Orgánica 3/2018)"
+    ],
+    "answer": 1,
+    "explanation": "Las normas de protección de datos son la LOPD (15/1999), el RGPD (2016) y la LOPDGDD (3/2018). La Ley de Propiedad Intelectual (RDL 1/1996) regula los derechos de autor (Tema 8)."
+  },
+  {
+    "id": 437,
+    "question": "¿Cuál es el resultado final de registrar el software en la Oficina de Propiedad Intelectual?",
+    "options": [
+      "Una multa",
+      "La publicación obligatoria del código",
+      "Nada, es sólo informativo",
+      "Un certificado que acredita la autoría"
+    ],
+    "answer": 3,
+    "explanation": "Tras preparar la documentación, solicitar el registro y pagar las tasas, se obtiene un certificado que acredita la autoría de la obra."
+  },
+  {
+    "id": 438,
+    "question": "Según el temario, un impacto del software libre en la economía es:",
+    "options": [
+      "Reduce los costes de licencias y favorece modelos de negocio basados en servicios",
+      "Elimina toda la economía del software",
+      "Aumenta el precio de las licencias",
+      "No tiene ningún impacto económico"
+    ],
+    "answer": 0,
+    "explanation": "En la economía, el software libre reduce los costes de licencias, acelera el desarrollo y favorece modelos de negocio basados en servicios."
+  },
+  {
+    "id": 439,
+    "question": "Para registrar el software, la documentación a preparar incluye:",
+    "options": [
+      "El presupuesto del proyecto",
+      "La factura de la luz",
+      "El titular (DNI/CIF), la fecha de divulgación, una copia completa del código fuente y los formularios rellenos",
+      "El nombre comercial del producto únicamente"
+    ],
+    "answer": 2,
+    "explanation": "El procedimiento de registro exige preparar la documentación: titular (DNI o CIF), fecha de divulgación, copia completa del código fuente y formularios rellenos; después se solicita, se pagan tasas y se obtiene el certificado."
+  },
+  {
+    "id": 440,
+    "question": "Según el temario, un impacto social del software libre es:",
+    "options": [
+      "Reduce el acceso a la tecnología",
+      "Promueve el acceso equitativo a la tecnología, refuerza la privacidad y fomenta la cooperación e inclusión",
+      "Impide la inclusión digital",
+      "No afecta a la sociedad"
+    ],
+    "answer": 1,
+    "explanation": "En la sociedad, el software libre promueve el acceso equitativo a la tecnología, refuerza la privacidad y fomenta la cooperación y la inclusión."
+  },
+  {
+    "id": 441,
+    "question": "Según el temario, ¿por qué se defiende la regulación en ámbitos críticos de la informática?",
+    "options": [
+      "Porque el software siempre es un juego",
+      "Para eliminar la competencia",
+      "Para subir los precios",
+      "Porque de sistemas como los sanitarios o de aviación puede depender la vida de las personas"
+    ],
+    "answer": 3,
+    "explanation": "El temario ilustra que en sistemas críticos (sanitarios, aviación) puede depender la vida de las personas: la ingeniería informática no es un juego, lo que justifica una mayor regulación en esos ámbitos."
+  },
+  {
+    "id": 442,
+    "question": "Según el temario, respecto a los colegios profesionales de informática en España:",
+    "options": [
+      "Existen colegios autonómicos, con consejos que los agrupan a nivel nacional, y diferenciados para Ingenieros Técnicos e Ingenieros Informáticos",
+      "Sólo hay un colegio en toda España",
+      "No existe ningún colegio de informática",
+      "Los colegios son empresas privadas con ánimo de lucro"
+    ],
+    "answer": 0,
+    "explanation": "Existen colegios profesionales a nivel autonómico (con consejos que los agrupan a nivel nacional) y diferenciados para Ingenieros Técnicos e Ingenieros Informáticos."
+  },
+  {
+    "id": 443,
+    "question": "Según el temario, la responsabilidad en la Ingeniería Informática:",
+    "options": [
+      "Sólo afecta al cliente",
+      "No existe responsabilidad en el software",
+      "Afecta a profesionales y organizaciones en el desarrollo, distribución y mantenimiento del software, y debe definirse con claridad en cada fase",
+      "Es responsabilidad exclusiva del hardware"
+    ],
+    "answer": 2,
+    "explanation": "La responsabilidad afecta a profesionales y organizaciones en el desarrollo, distribución y mantenimiento del software; al estar cada vez más integrado en procesos críticos, hay que definirla con claridad en cada fase del ciclo de vida."
+  },
+  {
+    "id": 444,
+    "question": "Según el temario, la garantía del software (Ley General de Defensa de Consumidores y Usuarios):",
+    "options": [
+      "No existe garantía en el software",
+      "Obliga al vendedor/desarrollador a asegurar que funciona conforme a lo prometido, con un plazo mínimo (generalmente 2 años)",
+      "Tiene una duración de 70 años",
+      "La debe pagar el cliente"
+    ],
+    "answer": 1,
+    "explanation": "La garantía implica la obligación del vendedor o desarrollador de asegurar que el producto funciona conforme a lo prometido y sin defectos durante un periodo determinado (según la ley española, un plazo mínimo, generalmente de 2 años)."
   }
 ]
