@@ -7,7 +7,9 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from "vue"
+import darkThemeUrl from "highlight.js/styles/github-dark.min.css?url"
+import lightThemeUrl from "highlight.js/styles/intellij-light.min.css?url"
+import { onMounted, onUnmounted, ref } from "vue"
 import DeviceIcon from "@/components/icons/DeviceIcon.vue"
 import MoonIcon from "@/components/icons/MoonIcon.vue"
 import SunIcon from "@/components/icons/SunIcon.vue"
@@ -30,9 +32,7 @@ const loadHighlightTheme = (isDark: boolean) => {
   const link = document.createElement("link")
   link.rel = "stylesheet"
   link.setAttribute("data-highlight-theme", "true")
-  link.href = isDark
-    ? "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css"
-    : "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/intellij-light.min.css"
+  link.href = isDark ? darkThemeUrl : lightThemeUrl
 
   document.head.appendChild(link)
 }
@@ -45,11 +45,7 @@ const applyTheme = (theme: Theme) => {
 
   const isDark = actualTheme === "dark"
 
-  if (isDark) {
-    document.documentElement.classList.add("dark")
-  } else {
-    document.documentElement.classList.remove("dark")
-  }
+  document.documentElement.classList.toggle("dark", isDark)
 
   loadHighlightTheme(isDark)
 
@@ -84,17 +80,19 @@ const cycleTheme = () => {
   }
 }
 
+const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
+const handleSystemPreferenceChange = () => {
+  if (currentTheme.value === "device") {
+    applyTheme("device")
+  }
+}
+
 onMounted(() => {
   setupTheme()
+  mediaQuery.addEventListener("change", handleSystemPreferenceChange)
+})
 
-  const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
-  const handleChange = () => {
-    if (currentTheme.value === "device") {
-      applyTheme("device")
-    }
-  }
-  mediaQuery.addEventListener("change", handleChange)
-
-  return () => mediaQuery.removeEventListener("change", handleChange)
+onUnmounted(() => {
+  mediaQuery.removeEventListener("change", handleSystemPreferenceChange)
 })
 </script>

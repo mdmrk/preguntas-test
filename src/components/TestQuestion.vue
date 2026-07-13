@@ -140,26 +140,12 @@ const shuffledOptions = computed(() =>
   shuffledIndices.value.map((originalIndex) => props.question.options[originalIndex]),
 )
 
-const originalToShuffledIndex = computed(() => {
-  const mapping: Record<number, number> = {}
-  shuffledIndices.value.forEach((originalIndex, shuffledIndex) => {
-    mapping[originalIndex] = shuffledIndex
-  })
-  return mapping
-})
-
-const shuffledToOriginalIndex = computed(() => {
-  const mapping: Record<number, number> = {}
-  shuffledIndices.value.forEach((originalIndex, shuffledIndex) => {
-    mapping[shuffledIndex] = originalIndex
-  })
-  return mapping
-})
+const toOriginalIndex = (shuffledIndex: number) => shuffledIndices.value[shuffledIndex]
 
 const getInitialSelectedOption = () => {
   if (props.answered) {
-    const mappedIndex = originalToShuffledIndex.value[props.question.answer]
-    return mappedIndex !== undefined ? mappedIndex : null
+    const shuffledIndex = shuffledIndices.value.indexOf(props.question.answer)
+    return shuffledIndex === -1 ? null : shuffledIndex
   }
   return null
 }
@@ -184,17 +170,14 @@ const toggleExplanation = () => {
   localStorage.setItem(EXPLANATION_PREF_KEY, String(explanationOpen.value))
 }
 
-const isCorrect = computed(() => {
-  if (selectedOption.value === null) return false
-  const originalIndex = shuffledToOriginalIndex.value[selectedOption.value]
-  return originalIndex === props.question.answer
-})
+const isCorrect = computed(
+  () =>
+    selectedOption.value !== null &&
+    toOriginalIndex(selectedOption.value) === props.question.answer,
+)
 
-const isCorrectOption = (shuffledIndex: number) => {
-  if (!answered.value) return false
-  const originalIndex = shuffledToOriginalIndex.value[shuffledIndex]
-  return originalIndex === props.question.answer
-}
+const isCorrectOption = (shuffledIndex: number) =>
+  answered.value && toOriginalIndex(shuffledIndex) === props.question.answer
 
 const isSelectedIncorrectOption = (shuffledIndex: number) =>
   answered.value && selectedOption.value === shuffledIndex && !isCorrectOption(shuffledIndex)
@@ -252,7 +235,7 @@ const selectAnswer = (shuffledIndex: number, event?: Event) => {
   selectedOption.value = shuffledIndex
   answered.value = true
 
-  const originalIndex = shuffledToOriginalIndex.value[shuffledIndex]
+  const originalIndex = toOriginalIndex(shuffledIndex)
   if (originalIndex === undefined) return
 
   if (isCorrect.value && confettiEnabled.value) {
@@ -297,6 +280,5 @@ const resetQuestion = () => {
   explanationOpen.value = getExplanationPref()
 }
 
-watch(() => props.question, resetQuestion)
-watch(() => props.answered, resetQuestion)
+watch([() => props.question, () => props.answered], resetQuestion)
 </script>

@@ -62,7 +62,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from "vue"
+import { onUnmounted, ref, watch } from "vue"
 import XIcon from "./icons/XIcon.vue"
 
 const EMAILJS_SERVICE_ID = "service_525gx29"
@@ -123,13 +123,22 @@ const submit = async () => {
   }
 }
 
+const handleKeydown = (event: KeyboardEvent) => {
+  if (event.key === "Escape") close()
+}
+
 watch(
   () => props.open,
   (val) => {
     if (val) {
       message.value = ""
       status.value = "idle"
+      window.addEventListener("keydown", handleKeydown)
+    } else {
+      window.removeEventListener("keydown", handleKeydown)
     }
   },
 )
+
+onUnmounted(() => window.removeEventListener("keydown", handleKeydown))
 </script>

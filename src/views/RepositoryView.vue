@@ -97,6 +97,7 @@ import { useRoute } from "vue-router"
 import LoadingSpinnerIcon from "@/components/icons/LoadingSpinnerIcon.vue"
 import TestQuestion from "@/components/TestQuestion.vue"
 import type { Question } from "@/types/test"
+import { formatTestTitle } from "@/utils"
 
 const route = useRoute()
 const questions = shallowRef<Question[]>([])
@@ -106,6 +107,30 @@ const selectedTags = ref<string[]>([])
 const displayedQuestions = shallowRef<Question[]>([])
 const testId = computed(() => route.params.id as string)
 
+const monthMapping: Record<string, number> = {
+  Enero: 0,
+  Febrero: 1,
+  Marzo: 2,
+  Abril: 3,
+  Mayo: 4,
+  Junio: 5,
+  Julio: 6,
+  Agosto: 7,
+  Septiembre: 8,
+  Octubre: 9,
+  Noviembre: 10,
+  Diciembre: 11,
+}
+
+const tagSortKey = (tag: string) => {
+  const [month, year] = tag.split(" ")
+  if (!month || !year) return null
+  const monthIndex = monthMapping[month]
+  const yearNumber = parseInt(year, 10)
+  if (monthIndex === undefined || Number.isNaN(yearNumber)) return null
+  return yearNumber * 12 + monthIndex
+}
+
 const availableTags = computed(() => {
   const tags = new Set<string>()
   questions.value.forEach((question) => {
@@ -114,52 +139,11 @@ const availableTags = computed(() => {
     })
   })
 
-  const monthMapping: Record<string, number> = {
-    Enero: 0,
-    Febrero: 1,
-    Marzo: 2,
-    Abril: 3,
-    Mayo: 4,
-    Junio: 5,
-    Julio: 6,
-    Agosto: 7,
-    Septiembre: 8,
-    Octubre: 9,
-    Noviembre: 10,
-    Diciembre: 11,
-  }
-
   return Array.from(tags).sort((a, b) => {
-    const partsA = a.split(" ")
-    const partsB = b.split(" ")
-
-    if (
-      partsA.length < 2 ||
-      partsB.length < 2 ||
-      !partsA[0] ||
-      !partsA[1] ||
-      !partsB[0] ||
-      !partsB[1]
-    ) {
-      return a.localeCompare(b)
-    }
-
-    const monthA = partsA[0]
-    const yearA = partsA[1]
-    const monthB = partsB[0]
-    const yearB = partsB[1]
-
-    const monthIndexA = monthMapping[monthA]
-    const monthIndexB = monthMapping[monthB]
-
-    if (monthIndexA === undefined || monthIndexB === undefined) {
-      return a.localeCompare(b)
-    }
-
-    const dateA = new Date(parseInt(yearA, 10), monthIndexA)
-    const dateB = new Date(parseInt(yearB, 10), monthIndexB)
-
-    return dateB.getTime() - dateA.getTime()
+    const keyA = tagSortKey(a)
+    const keyB = tagSortKey(b)
+    if (keyA === null || keyB === null) return a.localeCompare(b)
+    return keyB - keyA
   })
 })
 
@@ -181,22 +165,13 @@ const questionCountText = computed(() => {
   return `${filteredCount} de ${totalCount} preguntas mostradas`
 })
 
-const getQuestionNumber = (question: Question) => {
-  return questions.value.findIndex((q) => q.id === question.id) + 1
-}
+const questionNumbers = computed(
+  () => new Map(questions.value.map((question, index) => [question.id, index + 1])),
+)
 
-const testTitle = computed(() => {
-  const base = testId.value
-    .split("-")
-    .map((word, index) => {
-      if (index === 0) {
-        return word.toUpperCase()
-      }
-      return word.charAt(0).toUpperCase() + word.slice(1)
-    })
-    .join(" ")
-  return base
-})
+const getQuestionNumber = (question: Question) => questionNumbers.value.get(question.id) ?? 0
+
+const testTitle = computed(() => formatTestTitle(testId.value))
 
 useHead({
   title: computed(() => `Repositorio - ${testTitle.value}`),

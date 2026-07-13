@@ -1,16 +1,19 @@
-export function shuffle<T>(array: T[]): T[] {
-  let currentIndex = array.length
-  let randomIndex: number
+export function formatTestTitle(id: string): string {
+  return id
+    .split("-")
+    .map((word, index) =>
+      index === 0 ? word.toUpperCase() : word.charAt(0).toUpperCase() + word.slice(1),
+    )
+    .join(" ")
+}
 
-  while (currentIndex !== 0) {
-    randomIndex = Math.floor(Math.random() * currentIndex)
-    currentIndex--
-    // biome-ignore lint/style/noNonNullAssertion: indices are always in bounds within the loop
-    const tempValue = array[currentIndex]!
-    // biome-ignore lint/style/noNonNullAssertion: indices are always in bounds within the loop
-    array[currentIndex] = array[randomIndex]!
-    array[randomIndex] = tempValue
+export function shuffle<T>(array: readonly T[]): T[] {
+  const result = [...array]
+
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[result[i], result[j]] = [result[j], result[i]]
   }
 
-  return array
+  return result
 }

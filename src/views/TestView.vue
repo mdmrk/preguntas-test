@@ -95,7 +95,7 @@ import { useHead } from "@unhead/vue"
 import LoadingSpinnerIcon from "@/components/icons/LoadingSpinnerIcon.vue"
 import TestQuestion from "@/components/TestQuestion.vue"
 import type { Question } from "@/types/test"
-import { shuffle } from "@/utils"
+import { formatTestTitle, shuffle } from "@/utils"
 import "katex/dist/katex.min.css"
 import { computed, markRaw, onMounted, ref, shallowRef } from "vue"
 import { useRoute } from "vue-router"
@@ -116,17 +116,14 @@ const testFinished = ref(false)
 const testId = computed(() => route.params.id as string)
 const year = computed(() => route.params.year as string | undefined)
 
+const shouldShuffleAnswers = computed(
+  () => !doNotShuffle.some((str) => testTitle.value.toLowerCase().includes(str.toLowerCase())),
+)
+
 const questions = computed(() => {
   if (rawQuestions.value.length === 0) return []
 
-  let q = [...rawQuestions.value]
-  const shouldShuffle = !doNotShuffle.some((str) =>
-    testTitle.value.toLowerCase().includes(str.toLowerCase()),
-  )
-
-  if (shouldShuffle) {
-    q = shuffle(q)
-  }
+  const q = shouldShuffleAnswers.value ? shuffle(rawQuestions.value) : [...rawQuestions.value]
 
   if (year.value && year.value.trim() !== "") {
     return q.filter((question) =>
@@ -139,15 +136,7 @@ const questions = computed(() => {
 const currentQuestion = computed(() => questions.value[currentQuestionIndex.value] || null)
 
 const testTitle = computed(() => {
-  let base = testId.value
-    .split("-")
-    .map((word, index) => {
-      if (index === 0) {
-        return word.toUpperCase()
-      }
-      return word.charAt(0).toUpperCase() + word.slice(1)
-    })
-    .join(" ")
+  let base = formatTestTitle(testId.value)
   if (year.value && year.value.trim() !== "") {
     base += ` ${year.value}`
   }
@@ -169,7 +158,6 @@ const stats = computed(() => {
   const correct = answers.value.filter((answer) => answer.isCorrect).length
   const incorrect = answered - correct
   const percentage = answered > 0 ? (correct / answered) * 100 : 0
-  const incorrectPercentage = answered > 0 ? (incorrect / answered) * 100 : 0
   const percentageRounded =
     percentage === 0
       ? 0
@@ -182,25 +170,15 @@ const stats = computed(() => {
     correct,
     incorrect,
     percentage,
-    incorrectPercentage,
     percentageRounded,
   }
 })
-
-const progressBarClasses = computed(() => ({
-  "rounded-l-full": true,
-  "rounded-r-full": stats.value.incorrect === 0,
-}))
 
 const finalPercentage = computed(() => {
   const p = stats.value.percentage
   if (p === 0) return 0
   if (p === 100) return 100
   return Math.max(0.1, Math.min(99.9, Math.round(p * 10) / 10))
-})
-
-const shouldShuffleAnswers = computed(() => {
-  return !doNotShuffle.some((str) => testTitle.value.toLowerCase().includes(str.toLowerCase()))
 })
 
 const handleAnswer = (answer: Answer) => {
