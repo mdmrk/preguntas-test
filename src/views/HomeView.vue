@@ -25,7 +25,12 @@ useHead({
           <MainButton bg="gradient-red" class="relative" text="ADA">
             <MainButton id="ada-parcial-1" bg="gradient-red" text="parcial 1" />
             <MainButton id="ada-parcial-2" bg="gradient-red" text="parcial 2" />
-            <MainButton id="ada-final" years="2025;2024;2023;2022" bg="gradient-red" text="final" />
+            <MainButton
+              id="ada-final"
+              years="2026;2025;2024;2023;2022"
+              bg="gradient-red"
+              text="final"
+            />
           </MainButton>
         </li>
         <li class="w-full">

@@ -9926,5 +9926,941 @@
     "answer": 0,
     "tags": ["Junio 2022"],
     "explanation": "La recurrencia correcta minimiza sobre $k\\in[m-1,n-1]$ (hace falta al menos un nodo por cada una de las $m-1$ puertas anteriores): $met(m,n)=\\min_k(met(m-1,k)+ogw(k,n))$."
+  },
+  {
+    "id": 948,
+    "question": "En el problema del laberinto, elegir el orden en el que se generan los nodos para los 8 posibles movimientos:",
+    "options": [
+      "Las otras dos respuestas son ciertas.",
+      "Tiene impacto en el tiempo de ejecución en la solución mediante vuelta atrás.",
+      "Tiene impacto en el tiempo de ejecución en la solución mediante Ramificación y Poda cuando se emplea la cota optimista como criterio para priorizar nodos."
+    ],
+    "answer": 0,
+    "explanation": "El orden de generación influye tanto en vuelta atrás (rapidez en hallar una primera solución para podar) como en Ramificación y Poda al desempatar nodos con igual cota optimista; ambas afirmaciones son ciertas.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 949,
+    "question": "¿Los algoritmos voraces encuentran siempre la mejor solución posible de forma rápida?",
+    "options": [
+      "No, los algoritmos voraces nunca pueden encontrar soluciones óptimas, solo soluciones aproximadas.",
+      "No necesariamente; son rápidos, pero solo garantizan la solución óptima cuando el problema cumple las condiciones adecuadas para aplicar una estrategia voraz.",
+      "Sí, siempre encuentran la solución óptima porque toman en cada paso la mejor decisión local."
+    ],
+    "answer": 1,
+    "explanation": "Un voraz es rápido, pero solo garantiza optimalidad cuando el problema tiene la estructura adecuada (p. ej. subestructura óptima y elección voraz segura).",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 950,
+    "question": "En la resolución de la versión general del problema del laberinto mediante ramificación y poda, guardar en el nodo una matriz booleana con las casillas ya visitadas en ese camino parcial:",
+    "options": [
+      "Las otras dos respuestas son ciertas.",
+      "Permite evitar caminos con ciclos.",
+      "Puede hacer que la solución mediante ramificación y poda sea más lenta que la de vuelta atrás debido al coste de copiar la matriz."
+    ],
+    "answer": 0,
+    "explanation": "Guardar la matriz de visitadas en cada nodo evita ciclos, pero copiarla en cada nodo generado tiene un coste que puede hacer R&P más lenta que vuelta atrás; ambas cosas son ciertas.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 951,
+    "question": "¿Qué es una cota optimista en un problema de maximización?",
+    "options": [
+      "Una estimación mayor o igual que el mejor valor que podría alcanzarse desde un nodo.",
+      "Una función que necesariamente calcula exactamente el valor de la solución óptima.",
+      "Una estimación menor o igual que el valor de cualquier solución factible alcanzable desde un nodo."
+    ],
+    "answer": 0,
+    "explanation": "En maximización la cota optimista es una sobreestimación: un valor mayor o igual que el mejor alcanzable desde el nodo.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 952,
+    "question": "Si el coste temporal de un algoritmo pertenece a $O(n^2)$, ¿qué estamos indicando?",
+    "options": [
+      "Que su coste está acotado inferiormente por una función proporcional a $n^2$ para cualquier talla.",
+      "Que su coste exacto es siempre $n^2$ operaciones elementales.",
+      "Que su coste está acotado superiormente por una función proporcional a $n^2$ para tallas suficientemente grandes."
+    ],
+    "answer": 2,
+    "explanation": "La notación $O$ expresa una cota superior asintótica: el coste crece, como mucho, proporcionalmente a $n^2$ para tallas suficientemente grandes.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 953,
+    "question": "El empleo de la cota pesimista parcial en algoritmos de Ramificación y Poda:",
+    "options": [
+      "Garantiza tiempos de ejecución más bajos.",
+      "Permite actualizar la mejor solución en curso antes de llegar a una hoja.",
+      "Facilita extraer las decisiones que conducen al valor óptimo."
+    ],
+    "answer": 1,
+    "explanation": "La cota pesimista aporta un valor factible asociado a un nodo interno, lo que permite mejorar la mejor solución en curso sin necesidad de descender hasta una hoja.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 954,
+    "question": "En un algoritmo de Ramificación y Poda para resolver el problema del viajante de comercio, una posible cota optimista para un nodo del árbol de búsqueda puede obtenerse:",
+    "options": [
+      "Suponiendo que todas las aristas restantes tienen coste cero.",
+      "Calculando un recorrido completo factible mediante un algoritmo voraz.",
+      "Calculando el coste de un árbol de recubrimiento de coste mínimo sobre los vértices aún no visitados."
+    ],
+    "answer": 2,
+    "explanation": "El coste de un árbol de recubrimiento mínimo sobre los vértices pendientes nunca supera al de completar el circuito, por lo que es una cota optimista (inferior) válida y ajustada; un recorrido voraz completo sería, en cambio, una cota pesimista.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 955,
+    "question": "¿Cuál de las siguientes listas recoge técnicas o variantes habituales al aplicar Programación Dinámica?",
+    "options": [
+      "Fuerza bruta, ordenación rápida, recorrido en anchura, vuelta atrás y búsqueda binaria.",
+      "Cota optimista, cota pesimista, podas, heurística admisible y cola de prioridad.",
+      "Recursiva ingenua, memoización, iterativa, iterativa con reducción espacial y extracción de la solución óptima."
+    ],
+    "answer": 2,
+    "explanation": "Las variantes propias de Programación Dinámica son la recursiva ingenua, la memoización, la iterativa, la iterativa con reducción de espacio y la extracción de la solución óptima.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 956,
+    "question": "¿Qué problema aparece al intentar aplicar Programación Dinámica directamente a un laberinto versión general?",
+    "options": [
+      "Que Programación Dinámica no permite almacenar resultados parciales.",
+      "Que el laberinto deja de tener casillas accesibles e inaccesibles.",
+      "Que pueden aparecer ciclos entre casillas, dificultando definir un orden de resolución de subproblemas sin dependencias circulares."
+    ],
+    "answer": 2,
+    "explanation": "Con los 8 movimientos de la versión general pueden formarse ciclos entre casillas, lo que impide establecer un orden de resolución de subproblemas libre de dependencias circulares.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 957,
+    "question": "El peor caso del algoritmo Quickselect para encontrar el k-ésimo mínimo se produce cuando:",
+    "options": [
+      "Nunca se da el caso de que $k = p$, siendo $p$ la posición ocupada por el pivote tras un particionado.",
+      "Se dan simultáneamente las otras dos condiciones.",
+      "Tras cada particionado, el pivote $p$ queda en un extremo del vector."
+    ],
+    "answer": 1,
+    "explanation": "El peor caso $\\Theta(n^2)$ requiere que el particionado sea siempre máximamente desequilibrado (pivote en un extremo) y que nunca se acierte $k=p$ antes de tiempo, recurriendo siempre sobre el subvector mayor.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 958,
+    "question": "Al implementar un algoritmo de Vuelta Atrás para el problema de la mochila discreta, ¿qué ventaja fundamental aporta inicializar la variable del mejor valor (best_v) con el resultado de un algoritmo voraz para la mochila discreta (knapsack_d) en lugar de con el valor mínimo representable?",
+    "options": [
+      "Permite realizar podas por cota optimista desde el primer nivel del árbol de exploración.",
+      "Permite el uso de cotas pesimistas para los nodos internos del árbol de búsqueda.",
+      "Permite reducir la complejidad temporal del algoritmo en el peor de los casos."
+    ],
+    "answer": 0,
+    "explanation": "Partir de un valor factible ya bueno hace que la cota optimista de muchos nodos no lo supere, permitiendo podarlos desde los primeros niveles; no cambia la complejidad del peor caso.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 959,
+    "question": "Sea $a > 1$ una constante cualquiera, ¿cuál de las siguientes afirmaciones es necesariamente cierta?",
+    "options": [
+      "$n! \\in O(a^n)$",
+      "Ninguna de las otras dos opciones es correcta.",
+      "$a^n \\in O(n!)$"
+    ],
+    "answer": 2,
+    "explanation": "El factorial crece más deprisa que cualquier exponencial de base constante, luego $a^n \\in O(n!)$ mientras que $n! \\notin O(a^n)$.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 960,
+    "question": "Respecto a las versiones recursiva (memoización) e iterativa del esquema de Programación Dinámica:",
+    "options": [
+      "Ambas versiones siempre realizan la misma cantidad de cálculos.",
+      "Dependiendo del problema, la versión recursiva puede realizar menos cálculos que la iterativa.",
+      "La versión recursiva siempre realiza menor cantidad de cálculos que la iterativa, pero la iterativa es la única opción para lenguajes de programación que no soportan la recursividad."
+    ],
+    "answer": 1,
+    "explanation": "La memoización solo calcula los subproblemas que realmente se necesitan, por lo que en algunos problemas realiza menos cálculos que la versión iterativa, que rellena todo el almacén.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 961,
+    "question": "¿Qué expresa una cota inferior asintótica del coste de un algoritmo?",
+    "options": [
+      "Una función que limita por debajo el crecimiento del coste del algoritmo para tallas suficientemente grandes.",
+      "Una función que limita por encima el crecimiento del coste del algoritmo para tallas suficientemente grandes.",
+      "Una función que calcula exactamente el espacio ocupado por todas las variables del programa."
+    ],
+    "answer": 0,
+    "explanation": "Una cota inferior ($\\Omega$) limita por debajo el crecimiento del coste para tallas suficientemente grandes.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 962,
+    "question": "¿Cuántas aristas tiene un árbol de recubrimiento de un grafo conexo con $n$ vértices?",
+    "options": ["$n$", "$n + 1$", "$n - 1$"],
+    "answer": 2,
+    "explanation": "Todo árbol con $n$ vértices tiene exactamente $n-1$ aristas.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 963,
+    "question": "En el problema del laberinto, ¿cuándo tendría más sentido usar ramificación y poda en lugar de solo vuelta atrás?",
+    "options": [
+      "Cuando no basta con encontrar un camino válido, sino que se quiere encontrar el mejor camino según un criterio, como el de menor coste o menor longitud.",
+      "Cuando se quiere elegir siempre el movimiento que parece mejor localmente, sin retroceder ni comparar soluciones.",
+      "Cuando el laberinto no tiene salida y, por tanto, no existe ningún espacio de soluciones que explorar."
+    ],
+    "answer": 0,
+    "explanation": "Ramificación y Poda aporta ventaja frente a la vuelta atrás en problemas de optimización, cuando se busca el mejor camino según un criterio y las cotas permiten podar.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 964,
+    "question": "¿Qué papel puede tener una solución factible de la mochila discreta en ramificación y poda?",
+    "options": [
+      "Puede usarse para obtener una cota pesimista, porque proporciona un valor alcanzable que ya cumple las restricciones del problema discreto.",
+      "Puede usarse para obtener una cota optimista, porque permite fraccionar objetos y superar cualquier solución discreta.",
+      "Sustituye a la cota optimista, porque una solución factible siempre coincide con la solución óptima."
+    ],
+    "answer": 0,
+    "explanation": "Una solución factible discreta da un valor realmente alcanzable, es decir, una cota pesimista con la que actualizar la mejor solución en curso.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 965,
+    "question": "¿Qué condición debería cumplirse para poder garantizar una complejidad temporal $O(\\log n)$ en Quickselect?",
+    "options": [
+      "Que tras particionar el vector, el elemento buscado coincida con la posición del pivote.",
+      "Que se cumpla el teorema de reducción.",
+      "Eso no es posible."
+    ],
+    "answer": 2,
+    "explanation": "Quickselect debe particionar al menos una vez recorriendo el vector, lo que ya cuesta $\\Theta(n)$; nunca puede bajar a $O(\\log n)$.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 966,
+    "question": "¿Cuál de las siguientes afirmaciones es correcta respecto a Prim y Kruskal?",
+    "options": [
+      "Prim suele ser preferible cuando el grafo es muy denso.",
+      "Kruskal suele ser preferible en grafos muy densos.",
+      "Ambos algoritmos tienen siempre la misma complejidad temporal."
+    ],
+    "answer": 0,
+    "explanation": "Prim (con matriz o montículo) suele rendir mejor en grafos densos, mientras que Kruskal, que ordena aristas, es preferible en grafos dispersos.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 967,
+    "question": "En el problema de la mochila con pesos continuos y sin fraccionamiento, utilizamos como cota la suma de los valores de los objetos que ya se han seleccionado (es decir, que tienen un 1 en el vector). Se trata de una cota:",
+    "options": ["Ninguna de las otras dos opciones.", "Pesimista", "Optimista"],
+    "answer": 1,
+    "explanation": "La suma de los valores ya seleccionados es un valor factible realmente alcanzable, por lo que constituye una cota pesimista en este problema de maximización.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 968,
+    "question": "Un repartidor tiene que repartir $n$ paquetes de gran tamaño. Sólo le cabe un paquete en el camión, por lo que tiene que volver al almacén tras cada reparto. El reparto del paquete $i$-ésimo tarda $t_i$ minutos (contando la vuelta al almacén). El repartidor necesita decidir el orden en el que repartirá los paquetes para minimizar la suma de los tiempos de espera de todos los clientes. Ten en cuenta que el tiempo de espera de un cliente es la suma del tiempo de reparto de su paquete más los tiempos de reparto de los paquetes que se han entregado antes que el suyo. El criterio voraz que encuentra la solución óptima es el siguiente:",
+    "options": [
+      "Repartir primero los paquetes con tiempo de reparto más bajo.",
+      "No existe criterio voraz que garantice encontrar la solución óptima.",
+      "Repartir primero los paquetes con tiempo de reparto más alto."
+    ],
+    "answer": 0,
+    "explanation": "Repartir primero los paquetes más cortos (regla SPT) minimiza la suma de tiempos de espera, ya que los tiempos pequeños se acumulan en más clientes.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 969,
+    "question": "¿Cuál es la diferencia principal entre aplicar el Teorema Maestro y resolver una recurrencia por reducción?",
+    "options": [
+      "El Teorema Maestro solo sirve para algoritmos iterativos, mientras que la reducción solo sirve para algoritmos recursivos.",
+      "La reducción siempre da una solución exacta, mientras que el Teorema Maestro solo puede dar cotas inferiores.",
+      "El Teorema Maestro se aplica directamente a recurrencias de la forma $T(n) = aT(n/b) + f(n)$, mientras que la reducción transforma la recurrencia para obtener una forma más sencilla de resolver."
+    ],
+    "answer": 2,
+    "explanation": "El Teorema Maestro se aplica directamente a recurrencias del tipo $T(n)=aT(n/b)+f(n)$, mientras que el método de reducción manipula la recurrencia hasta llevarla a una forma resoluble.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 970,
+    "question": "¿Qué añade ramificación y poda al resolver un laberinto respecto a una búsqueda con vuelta atrás?",
+    "options": [
+      "Permite atravesar casillas bloqueadas si con ello se llega antes a la salida.",
+      "Permite establecer un criterio para priorizar los nodos factibles a explorar.",
+      "Evita tener que comprobar si una casilla ya ha sido visitada, reduciendo el coste espacial del algoritmo."
+    ],
+    "answer": 1,
+    "explanation": "R&P mantiene una estructura de nodos vivos que permite priorizar cuáles explorar (p. ej. por cota optimista), algo que la vuelta atrás no hace.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 971,
+    "question": "La poda por memoria, es decir, descartar una solución parcial que lleva, con un coste peor, al mismo estado que otra solución parcial explorada anteriormente, reduce significativamente el tiempo de cómputo en el siguiente problema:",
+    "options": [
+      "Mochila con pesos continuos y objetos no fraccionables",
+      "Viajante de comercio",
+      "Función compuesta mínima"
+    ],
+    "answer": 2,
+    "explanation": "En la función compuesta mínima distintos caminos parciales alcanzan el mismo estado, por lo que descartar los que llegan con peor coste (poda por memoria) reduce mucho el cómputo.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 972,
+    "question": "¿Qué relación tiene la técnica de vuelta atrás con el espacio de soluciones?",
+    "options": [
+      "Explora una solución elegida al azar y la acepta si es factible. Luego vuelve atrás y explora otra solución al azar, aceptándola si es factible y mejora a la anterior. Y así sucesivamente hasta probar todas las soluciones factibles posibles.",
+      "Explora sistemáticamente el espacio de soluciones, descartando ramas cuando puede determinar que no conducen a soluciones válidas o mejores.",
+      "Explora únicamente la primera rama del árbol de soluciones, sin retroceder nunca."
+    ],
+    "answer": 1,
+    "explanation": "La vuelta atrás recorre sistemáticamente el árbol del espacio de soluciones y poda las ramas que no pueden llevar a soluciones válidas o mejores.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 973,
+    "question": "¿Qué técnica encaja mejor con la versión general del laberinto?",
+    "options": [
+      "Algoritmo voraz, porque elegir en cada paso la casilla aparentemente más cercana a la salida garantiza siempre el camino óptimo.",
+      "Programación dinámica iterativa directa, porque con 8 movimientos siempre existe un orden simple de cálculo de las casillas.",
+      "Vuelta atrás, porque permite explorar sistemáticamente las alternativas de movimiento y retroceder cuando un camino parcial no conduce a una solución válida."
+    ],
+    "answer": 2,
+    "explanation": "La versión general admite ciclos, por lo que no hay un orden simple de cálculo para PD; la vuelta atrás permite explorar sistemáticamente y retroceder.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 974,
+    "question": "Sea un algoritmo divide y vencerás cuya ecuación de recurrencia tiene la forma $T(n) = h\\,T(n/b) + 1$. ¿Cuál de las siguientes afirmaciones sobre su complejidad temporal asintótica es cierta?",
+    "options": [
+      "Si $b = 4$, la complejidad asintótica es la misma para $h = 1$ y para $h = 2$.",
+      "Si $h = b$, la complejidad asintótica está en $\\Theta(n)$.",
+      "Si $h = 16$, la complejidad asintótica es la misma para $b = 2$ y para $b = 4$."
+    ],
+    "answer": 1,
+    "explanation": "Con $f(n)=1$, el Teorema Maestro da $\\Theta(n^{\\log_b h})$ (o $\\Theta(\\log n)$ si $h=1$). Si $h=b$ entonces $\\log_b h = 1$ y la complejidad es $\\Theta(n)$; las otras dos opciones dan resultados distintos entre sí.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 975,
+    "question": "Si representamos un montículo binario en un vector indexado desde la posición 0 (tal como se implementa en la función sink), ¿cuáles son las expresiones correctas para determinar las posiciones del hijo izquierdo y del hijo derecho de un nodo en el índice $i$?",
+    "options": [
+      "Hijo izquierdo: $2i + 1$; hijo derecho: $2i + 2$.",
+      "Hijo izquierdo: $2i - 1$; hijo derecho: $2i + 1$.",
+      "Hijo izquierdo: $i/2$; hijo derecho: $2i$."
+    ],
+    "answer": 0,
+    "explanation": "En un montículo indexado desde 0, los hijos del nodo $i$ están en $2i+1$ y $2i+2$.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 976,
+    "question": "En un algoritmo voraz, ¿cuál es la función del criterio voraz?",
+    "options": [
+      "Elegir, en cada paso, la alternativa que parece más prometedora según una regla local, con el objetivo de construir una solución óptima.",
+      "Calcular la complejidad temporal del algoritmo, sin influir en las decisiones tomadas.",
+      "Garantizar que cualquier decisión local conduce siempre a una solución óptima, independientemente del problema."
+    ],
+    "answer": 0,
+    "explanation": "El criterio voraz selecciona en cada paso la alternativa localmente más prometedora con la esperanza de construir una solución global óptima.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 977,
+    "question": "¿Qué papel puede tener la mochila continua en ramificación y poda para resolver la mochila discreta?",
+    "options": [
+      "Puede usarse para obtener una cota optimista, porque al permitir fraccionar objetos se obtiene un valor al menos tan bueno como el de la mochila discreta.",
+      "Sustituye completamente a la mochila discreta, porque ambas tienen siempre la misma solución óptima.",
+      "Puede usarse como cota pesimista, porque al permitir fraccionar objetos siempre obtiene un valor menor que cualquier solución discreta."
+    ],
+    "answer": 0,
+    "explanation": "La relajación continua permite fraccionar objetos, por lo que su óptimo es mayor o igual que el discreto: una cota optimista para la mochila discreta.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 978,
+    "question": "El mejor caso del algoritmo Quickselect se produce cuando:",
+    "options": [
+      "Se dan simultáneamente las otras dos condiciones.",
+      "$k = p$, siendo $p$ la posición ocupada por el pivote, tras el primer particionado.",
+      "Tras cada particionado, el pivote $p$ queda en el centro del vector."
+    ],
+    "answer": 1,
+    "explanation": "En el mejor caso el elemento buscado coincide con la posición del pivote tras el primer particionado, resolviéndose en $\\Theta(n)$ con una sola pasada.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 979,
+    "question": "En vuelta atrás, ¿es necesario explorar siempre todo el espacio de soluciones completo?",
+    "options": [
+      "No, porque vuelta atrás solo funciona con una única solución candidata.",
+      "No necesariamente; pueden evitarse ramas mediante podas cuando se sabe que no pueden conducir a una solución válida o mejor.",
+      "Sí, siempre deben generarse todas las combinaciones posibles, aunque se sepa que no son factibles."
+    ],
+    "answer": 1,
+    "explanation": "La vuelta atrás poda ramas en cuanto detecta que no pueden conducir a una solución válida o mejor, evitando explorar todo el espacio.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 980,
+    "question": "El tamaño de una instancia de problema se define como:",
+    "options": [
+      "El número de elementos almacenados en memoria.",
+      "El número de instrucciones simples que realiza el algoritmo que la procesa.",
+      "El número de bits necesarios para codificarla."
+    ],
+    "answer": 2,
+    "explanation": "El tamaño (talla) de una instancia es el número de bits necesarios para codificarla.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 981,
+    "question": "Si un algoritmo A tiene complejidad $O(n)$ y otro B tiene complejidad $O(\\log_m n)$, donde $m > 1$ puede ser cualquier número natural, ¿cuál es la afirmación correcta?",
+    "options": [
+      "Para determinar cuál es asintóticamente más eficiente es necesario disponer de más información.",
+      "B es asintóticamente más eficiente que A.",
+      "A es asintóticamente más eficiente que B."
+    ],
+    "answer": 1,
+    "explanation": "Para cualquier base $m>1$, $\\log_m n = \\frac{\\log n}{\\log m}$ crece más despacio que $n$, por lo que B es asintóticamente más eficiente que A (la base solo cambia una constante).",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 982,
+    "question": "¿Cuándo decimos que un problema tiene subestructura óptima?",
+    "options": [
+      "Cuando cualquier solución factible del problema puede construirse a partir de soluciones no óptimas de sus subproblemas.",
+      "Cuando el problema puede dividirse en subproblemas más pequeños.",
+      "Cuando una solución óptima del problema puede construirse eficientemente a partir de soluciones óptimas de sus subproblemas."
+    ],
+    "answer": 2,
+    "explanation": "Hay subestructura óptima cuando la solución óptima del problema se compone de soluciones óptimas de sus subproblemas.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 983,
+    "question": "En el problema del corte de tubos visto en clase, supongamos ahora que cada corte realizado tiene un coste fijo $c$. ¿Cómo debería modificarse la formulación mediante Programación Dinámica para tener en cuenta este nuevo coste?",
+    "options": [
+      "El problema dejaría de tener subestructura óptima y, por tanto, no podría resolverse mediante Programación Dinámica.",
+      "El problema continuaría teniendo subestructura óptima, pero el almacén necesario pasaría a ser bidimensional.",
+      "Podría continuar resolviéndose igual que hasta ahora, aunque evidentemente la solución podría cambiar."
+    ],
+    "answer": 2,
+    "explanation": "Basta descontar el coste $c$ en la recurrencia al realizar cada corte; se conserva la subestructura óptima y el almacén sigue siendo unidimensional, solo cambian los valores óptimos.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 984,
+    "question": "¿Cuál de las siguientes NO es una cota optimista válida para el problema del viajante de comercio?",
+    "options": [
+      "El coste del camino parcial actual más el de la arista que va de la última ciudad del camino parcial a la primera.",
+      "El coste del árbol de recubrimiento de coste mínimo que se construye partiendo del camino parcial.",
+      "El coste del camino parcial actual, asumiendo que no se va a pasar por más ciudades."
+    ],
+    "answer": 0,
+    "explanation": "Añadir la arista de vuelta al origen puede sobrestimar el coste óptimo de completar el circuito, por lo que no es una cota optimista (inferior) válida.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 985,
+    "question": "¿Qué es una cota optimista en un problema de minimización?",
+    "options": [
+      "Una estimación menor o igual que el menor coste que podría alcanzarse desde un nodo.",
+      "Una estimación mayor o igual que el coste de una solución factible alcanzable desde un nodo.",
+      "Una función que necesariamente calcula exactamente el valor de la solución óptima."
+    ],
+    "answer": 0,
+    "explanation": "En minimización la cota optimista es una subestimación: un valor menor o igual que el menor coste alcanzable desde el nodo.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 986,
+    "question": "Un vehículo debe recorrer una carretera de longitud conocida. A lo largo del recorrido existen estaciones de servicio situadas en posiciones conocidas. El depósito permite recorrer una distancia limitada con un llenado completo. Se desea minimizar el número de repostajes necesarios para llegar al destino. ¿Qué técnica algorítmica es la más apropiada para resolver este problema?",
+    "options": [
+      "Un algoritmo voraz que, cuando sea necesario repostar, seleccione la estación más lejana que pueda alcanzarse con el combustible disponible.",
+      "Un algoritmo de ramificación y poda que evalúe todas las secuencias posibles de repostaje.",
+      "Un algoritmo de programación dinámica que evalúe todas las secuencias posibles de repostaje."
+    ],
+    "answer": 0,
+    "explanation": "Minimizar repostajes admite una solución voraz óptima: repostar lo más tarde posible, es decir, en la estación más lejana alcanzable con el combustible disponible.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 987,
+    "question": "¿Qué permite hacer la técnica de extracción de decisiones óptimas a partir del almacén?",
+    "options": [
+      "Evitar recalcular el valor óptimo de cada subproblema.",
+      "Reconstruir la secuencia de decisiones que conduce al valor óptimo calculado por Programación Dinámica.",
+      "Reducir siempre la complejidad temporal del algoritmo a $\\Theta(1)$."
+    ],
+    "answer": 1,
+    "explanation": "La extracción recorre el almacén ya calculado para reconstruir qué decisiones producen el valor óptimo, no solo su valor.",
+    "tags": ["Junio 2026"]
+  },
+  {
+    "id": 988,
+    "question": "¿Qué establece el principio de optimalidad en Programación Dinámica?",
+    "options": [
+      "Que basta con escoger la mejor decisión local en cada paso para garantizar la solución óptima.",
+      "Que una solución óptima del problema puede construirse a partir de soluciones óptimas de sus subproblemas.",
+      "Que una solución óptima puede construirse siempre a partir de soluciones no factibles."
+    ],
+    "answer": 1,
+    "explanation": "El principio de optimalidad afirma que una solución óptima está formada por soluciones óptimas de sus subproblemas.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 989,
+    "question": "La poda con memoria, es decir, descartar una solución parcial que llega, con un coste peor, al mismo estado que otra solución parcial explorada anteriormente, reduce significativamente el tiempo de cómputo en el siguiente problema (considerando las formulaciones concretas de los problemas estudiadas en clase):",
+    "options": [
+      "Mochila con pesos continuos y objetos no fraccionables",
+      "Función compuesta mínima",
+      "Problema de las n reinas"
+    ],
+    "answer": 1,
+    "explanation": "En la función compuesta mínima varios caminos parciales convergen al mismo estado, por lo que descartar los de peor coste (poda con memoria) reduce mucho el cómputo.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 990,
+    "question": "Asumiendo que el coste de dividir y combinar los subproblemas es polinómico, ¿qué condición es suficiente para evitar que un algoritmo de Divide y Vencerás presente una complejidad temporal exponencial? (entendemos por reducción geométrica que el tamaño de cada subproblema se divide por una constante mayor que 1, por ejemplo $n/2$, $n/3$, etc.; y por reducción lineal que al tamaño se le resta una cantidad constante, por ejemplo $n - 1$, $n - 2$, etc.)",
+    "options": [
+      "Que la reducción de tamaño sea geométrica y no lineal.",
+      "Ninguna, bajo esas condiciones el algoritmo siempre tendrá una complejidad polinómica.",
+      "Que el número de subproblemas se mantenga siempre constante."
+    ],
+    "answer": 0,
+    "explanation": "Con reducción geométrica $T(n)=aT(n/b)+\\text{poly}(n)$ el Teorema Maestro da siempre complejidad polinómica; con reducción lineal y varios subproblemas ($T(n)=aT(n-b)+\\dots$, $a\\ge2$) aparece la explosión exponencial.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 991,
+    "question": "En el contexto del esquema algorítmico de Programación Dinámica, ¿qué busca una versión iterativa con reducción de complejidad espacial?",
+    "options": [
+      "Reducir el tamaño del almacén manteniendo solo los resultados parciales necesarios para calcular los siguientes estados.",
+      "Eliminar la función objetivo del problema para convertirlo en un problema voraz.",
+      "Reducir el número de subproblemas para que el algoritmo sea más rápido."
+    ],
+    "answer": 0,
+    "explanation": "La reducción espacial conserva únicamente los resultados parciales necesarios para calcular los siguientes estados (p. ej. las últimas filas del almacén), reduciendo la memoria sin cambiar el número de subproblemas.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 992,
+    "question": "Al aplicar Programación Dinámica recursiva (memoización) al problema de la mochila con objetos que no se pueden partir y pesos discretos:",
+    "options": [
+      "Ninguna de las otras opciones es correcta.",
+      "Siempre se obtiene una solución más eficiente que la obtenida mediante Divide y Vencerás.",
+      "Puede obtenerse una solución más eficiente que la de Divide y Vencerás si hay solapamiento entre subproblemas."
+    ],
+    "answer": 2,
+    "explanation": "La memoización mejora a Divide y Vencerás precisamente cuando existe solapamiento entre subproblemas, evitando recalcularlos; sin solapamiento no hay ganancia.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 993,
+    "question": "Respecto a la complejidad espacial asintótica de los algoritmos Quicksort, Heapsort y Mergesort respecto al tamaño del vector a ordenar, representado por $n$:",
+    "options": [
+      "Mergesort tiene una complejidad espacial más elevada que los otros dos.",
+      "Quicksort tiene una complejidad espacial más reducida que los otros dos.",
+      "Los tres tienen la misma complejidad espacial."
+    ],
+    "answer": 0,
+    "explanation": "Mergesort necesita $\\Theta(n)$ de espacio auxiliar, frente a $\\Theta(\\log n)$ de la pila de Quicksort y $\\Theta(1)$ de Heapsort; por tanto es el de mayor complejidad espacial.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 994,
+    "question": "Tenemos que $\\lim_{n\\to\\infty} f(n)/g(n) = 7$. ¿Cuál de estas afirmaciones es cierta?",
+    "options": ["$f \\in O(g)$", "$f \\in \\Omega(g)$", "Ambas son ciertas."],
+    "answer": 2,
+    "explanation": "Un límite finito y positivo implica $f \\in \\Theta(g)$, es decir, $f\\in O(g)$ y $f\\in\\Omega(g)$ a la vez.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 995,
+    "question": "Si el coste temporal de un algoritmo pertenece a $O(n^2)$, ¿qué estamos indicando?",
+    "options": [
+      "Que su coste exacto es siempre $n^2$ operaciones elementales.",
+      "Que su coste está acotado inferiormente por una función proporcional a $n^2$ para cualquier talla.",
+      "Que su coste está acotado superiormente por una función proporcional a $n^2$ para tallas suficientemente grandes."
+    ],
+    "answer": 2,
+    "explanation": "La notación $O$ es una cota superior asintótica: el coste crece, como mucho, proporcionalmente a $n^2$ para tallas suficientemente grandes.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 996,
+    "question": "En un algoritmo voraz, ¿cuál es la función del criterio voraz?",
+    "options": [
+      "Elegir, en cada paso, la alternativa que parece más prometedora según una regla local, con la esperanza de construir una solución global óptima.",
+      "Calcular la complejidad temporal del algoritmo, sin influir en las decisiones tomadas.",
+      "Garantizar que cualquier decisión local conduce siempre a una solución óptima, independientemente del problema."
+    ],
+    "answer": 0,
+    "explanation": "El criterio voraz elige en cada paso la alternativa localmente más prometedora, con la esperanza de construir una solución global óptima.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 997,
+    "question": "Respecto a los algoritmos de Backtracking y Ramificación y Poda:",
+    "options": [
+      "Ramificación y Poda siempre explora menos nodos que Backtracking.",
+      "Ambos algoritmos exploran exactamente los mismos nodos.",
+      "Dependiendo del problema y de las cotas utilizadas, un algoritmo de Backtracking puede explorar menos nodos que uno de Ramificación y Poda."
+    ],
+    "answer": 2,
+    "explanation": "No hay garantía general de que R&P explore menos nodos; según el problema y las cotas, la vuelta atrás puede llegar a explorar menos.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 998,
+    "question": "Un algoritmo de Divide y Vencerás que cumple el teorema de reducción:",
+    "options": [
+      "Tiene una complejidad temporal asintótica que siempre se puede mejorar.",
+      "Las otras dos opciones son ambas falsas.",
+      "Tiene una complejidad temporal asintótica que no se puede mejorar."
+    ],
+    "answer": 1,
+    "explanation": "El teorema de reducción da la complejidad de ese algoritmo concreto, pero no implica que siempre pueda mejorarse ni que sea insuperable para el problema; ambas afirmaciones son falsas.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 999,
+    "question": "Respecto al coste de un árbol de recubrimiento mínimo (MST) utilizado en el problema del viajante de comercio:",
+    "options": [
+      "Puede utilizarse tanto como cota optimista como pesimista.",
+      "Puede utilizarse como cota pesimista, pero no como cota optimista.",
+      "Puede utilizarse como cota optimista, pero no como cota pesimista."
+    ],
+    "answer": 2,
+    "explanation": "El coste del MST nunca supera al del circuito óptimo, por lo que sirve como cota optimista (inferior), pero no como cota pesimista.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 1000,
+    "question": "¿Cuál es la diferencia principal entre aplicar el Teorema Maestro y resolver una recurrencia por reducción?",
+    "options": [
+      "El Teorema Maestro se aplica directamente a recurrencias de la forma $T(n) = aT(n/b) + f(n)$, mientras que la reducción transforma la recurrencia para obtener una forma más sencilla de resolver.",
+      "La reducción siempre da una solución exacta, mientras que el Teorema Maestro solo puede dar cotas inferiores.",
+      "El Teorema Maestro solo sirve para algoritmos iterativos, mientras que la reducción solo sirve para algoritmos recursivos."
+    ],
+    "answer": 0,
+    "explanation": "El Teorema Maestro se aplica directamente a recurrencias $T(n)=aT(n/b)+f(n)$, mientras que la reducción manipula la recurrencia para llevarla a una forma más sencilla de resolver.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 1001,
+    "question": "En una isla, tenemos una serie de ciudades conectadas por una red de carreteras. Desde cada ciudad sólo se puede acceder directamente por carretera a unas pocas ciudades (sin pasar por otras ciudades). Queremos convertir algunas de las carreteras existentes en autovías, de manera que todo par de ciudades de la isla esté conectado completamente por autovías, es decir, se pueda ir de una ciudad a otra pasando únicamente por autovías. Conocemos el coste de convertir cada carretera en autovía, y queremos realizar la conversión con el menor coste económico posible. ¿Cuál de estos algoritmos nos da la solución exacta con el menor coste temporal posible?",
+    "options": ["Prim", "Kruskal", "Viajante de comercio"],
+    "answer": 1,
+    "explanation": "Es un árbol de recubrimiento de coste mínimo sobre un grafo disperso (cada ciudad conecta con pocas); Kruskal, que ordena aristas, es preferible frente a Prim en grafos con pocas aristas.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 1002,
+    "question": "Que un problema tenga subestructura óptima garantiza:",
+    "options": [
+      "Ninguna de las otras opciones es correcta.",
+      "Que se puede resolver mediante Programación Dinámica en tiempo polinómico.",
+      "Que se puede resolver mediante Divide y Vencerás en tiempo polinómico."
+    ],
+    "answer": 0,
+    "explanation": "La subestructura óptima por sí sola no garantiza un algoritmo polinómico: hace falta además un número polinómico de subproblemas con solapamiento.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 1003,
+    "question": "¿Por qué el coste de un árbol de recubrimiento mínimo no puede utilizarse como cota pesimista en un algoritmo de Ramificación y Poda para el problema del viajante de comercio?",
+    "options": [
+      "Porque su cálculo tiene una complejidad demasiado elevada.",
+      "Porque su coste puede ser inferior al de la solución óptima del problema.",
+      "Porque siempre coincide con el coste de la solución óptima."
+    ],
+    "answer": 1,
+    "explanation": "El coste del MST es menor o igual que el del circuito óptimo, luego es una cota inferior (optimista); una cota pesimista debe ser un valor factible mayor o igual al óptimo.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 1004,
+    "question": "Imagina que sólo podemos emplear un algoritmo de ordenación rudimentario con complejidad $O(n^2)$. Empleando ese algoritmo de ordenación, ¿cuál sería la complejidad asintótica de la resolución voraz del problema de la mochila continua (en el que los objetos se pueden fraccionar)?",
+    "options": ["Ninguna de las otras dos opciones es correcta.", "$O(n^2)$", "$O(n \\log n)$"],
+    "answer": 1,
+    "explanation": "La solución voraz ordena por relación valor/peso y luego hace una pasada lineal; si la ordenación es $O(n^2)$, esta domina y el coste total es $O(n^2)$.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 1005,
+    "question": "La demostración de optimalidad del algoritmo voraz para el problema del fontanero permite concluir que:",
+    "options": [
+      "Ninguna permutación de las tareas puede producir una suma de tiempos de espera menor que la obtenida al ordenarlas por duración creciente.",
+      "Existen varias ordenaciones distintas con mejor coste que la ordenación creciente.",
+      "La ordenación creciente es la única solución factible del problema."
+    ],
+    "answer": 0,
+    "explanation": "La demostración (por intercambio) prueba que ninguna permutación mejora la suma de tiempos de espera de la ordenación por duración creciente.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 1006,
+    "question": "Estamos aplicando el algoritmo Quicksort, empleando el primer elemento como pivote. Se ha realizado la primera reorganización de los elementos, dando como resultado el vector $\\{6, 1, 5, 2, 7, 9, 15, 8, 10\\}$. Indica sobre qué dos subvectores se realizarán las llamadas recursivas:",
+    "options": [
+      "$\\{6, 1, 5, 2, 7\\}$ y $\\{15, 8, 10\\}$",
+      "$\\{6, 1, 5, 2\\}$ y $\\{9, 15, 8, 10\\}$",
+      "$\\{6\\}$ y $\\{5, 2, 7, 9, 15, 8, 10\\}$"
+    ],
+    "answer": 1,
+    "explanation": "Tras el particionado el pivote (valor 7) queda en su posición definitiva, con $\\{6,1,5,2\\}$ a su izquierda y $\\{9,15,8,10\\}$ a su derecha; las llamadas recursivas se hacen sobre esos dos subvectores, excluyendo el pivote.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 1007,
+    "question": "En el problema de la mochila con pesos continuos y sin fraccionamiento, utilizamos como cota la suma de los valores de los objetos que ya se han seleccionado (es decir, que tienen un 1 en el vector $x$). Se trata de una cota:",
+    "options": ["Ninguna de las otras dos opciones es correcta.", "Optimista", "Pesimista"],
+    "answer": 2,
+    "explanation": "La suma de los valores ya seleccionados es un valor factible realmente alcanzable, por lo que es una cota pesimista en este problema de maximización.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 1008,
+    "question": "Al implementar un algoritmo de Vuelta Atrás para el problema de la mochila discreta, ¿qué ventaja fundamental aporta inicializar la variable del mejor valor (best_v) con el resultado de un algoritmo voraz para la mochila discreta (knapsack_d) en lugar de con el valor mínimo representable?",
+    "options": [
+      "Permite reducir la complejidad temporal del algoritmo en el peor de los casos.",
+      "Permite realizar podas por cota optimista desde el primer nivel del árbol de exploración.",
+      "Permite el uso de cotas pesimistas para los nodos internos del árbol de búsqueda."
+    ],
+    "answer": 1,
+    "explanation": "Partir de un valor factible ya bueno permite que la cota optimista de muchos nodos no lo supere y se poden desde los primeros niveles; no cambia la complejidad del peor caso.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 1009,
+    "question": "En un algoritmo de ramificación y poda para resolver la versión general del problema del laberinto, se almacena para cada celda la longitud mínima conocida del camino con el que se ha alcanzado. ¿Cuál de las siguientes afirmaciones es correcta?",
+    "options": [
+      "Las otras dos opciones son ambas ciertas.",
+      "Asumiendo que el problema podría resolverse mediante programación dinámica, en dicha solución la longitud asociada a una celda también podría actualizarse varias veces a medida que se descubrieran caminos más cortos.",
+      "La existencia de una tabla con la mejor longitud conocida para cada celda permite reducir trabajo redundante, pero no evita la necesidad de explorar otros caminos que llegan a esa celda."
+    ],
+    "answer": 0,
+    "explanation": "Ambas afirmaciones son ciertas: el valor de una celda puede actualizarse varias veces al hallar caminos más cortos, y la tabla reduce trabajo redundante pero no elimina la exploración de otros caminos que mejoren la longitud.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 1010,
+    "question": "En el problema de las Torres de Hanoi, la recurrencia del número de movimientos es $T(n) = 2T(n - 1) + 1$. ¿Cuál es su complejidad temporal?",
+    "options": [
+      "$\\Theta(n^2)$, porque cada disco se mueve exactamente $n$ veces.",
+      "$\\Theta(2^n)$, porque para mover $n$ discos hay que resolver dos subproblemas de tamaño $n - 1$ y hacer un movimiento adicional.",
+      "$\\Theta(n \\log n)$, porque se divide el problema en dos mitades y después se combinan las soluciones."
+    ],
+    "answer": 1,
+    "explanation": "La recurrencia $T(n)=2T(n-1)+1$ tiene reducción lineal con dos subproblemas, lo que da un crecimiento exponencial $\\Theta(2^n)$.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 1011,
+    "question": "Imagina un algoritmo que calcula la suma de los elementos de un vector de números enteros. Marca la afirmación verdadera:",
+    "options": [
+      "El algoritmo no presenta caso mejor ni caso peor.",
+      "El caso peor se produce cuando los enteros tienen el valor máximo que permite su rango.",
+      "El caso mejor se produce cuando el tamaño del vector es 0."
+    ],
+    "answer": 0,
+    "explanation": "El número de operaciones depende solo de la talla del vector y no de sus valores, por lo que no hay distinción entre caso mejor y peor para una misma talla.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 1012,
+    "question": "¿Cuál es una diferencia importante entre el Teorema Maestro y el Teorema de la Reducción?",
+    "options": [
+      "El Teorema de la Reducción solo permite calcular complejidades espaciales, mientras que el Teorema Maestro solo permite calcular complejidades temporales.",
+      "El Teorema Maestro se aplica a recurrencias de la forma $T(n) = aT(n/b) + f(n)$, mientras que el Teorema de la Reducción se aplica a recurrencias que reducen la talla restando una cantidad, como $T(n) = aT(n - b) + f(n)$.",
+      "El Teorema de la Reducción es un caso especial del Teorema Maestro que se puede aplicar sólo cuando $a$ y $b$ coinciden, por ejemplo (asumiendo que $a = b = x$): $T(n) = xT(n/x) + f(n)$."
+    ],
+    "answer": 1,
+    "explanation": "El Teorema Maestro trata reducciones geométricas $T(n)=aT(n/b)+f(n)$, mientras que el Teorema de la Reducción trata reducciones por resta $T(n)=aT(n-b)+f(n)$.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 1013,
+    "question": "En el problema del laberinto, elegir el orden en el que se generan los nodos para los 8 posibles movimientos:",
+    "options": [
+      "Puede tener impacto en el tiempo de ejecución de la solución mediante Ramificación y Poda cuando se emplea la cota optimista como criterio para priorizar nodos debido a empates en dicha cota.",
+      "Las otras dos respuestas son ciertas.",
+      "Tiene impacto en el tiempo de ejecución en la solución mediante Vuelta Atrás."
+    ],
+    "answer": 1,
+    "explanation": "El orden influye tanto en R&P (al desempatar nodos con igual cota optimista) como en vuelta atrás (rapidez en hallar una primera solución para podar); ambas son ciertas.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 1014,
+    "question": "Un agricultor dispone de una parcela rectangular de dimensiones $n \\times m$ que desea dedicar a distintos cultivos. Puede dividir la parcela en subparcelas rectangulares, todas ellas con el mismo ancho $m$, realizando únicamente cortes paralelos al lado de longitud $m$. El beneficio neto obtenido por cada subparcela depende del cultivo asignado y de sus costes de producción, valores que son conocidos de antemano. El agricultor desea determinar cómo dividir la parcela para maximizar el beneficio total esperado. ¿Qué técnica algorítmica es la más apropiada para resolver este problema?",
+    "options": [
+      "Un algoritmo de programación dinámica que analice todas las posibles divisiones.",
+      "Un algoritmo de ramificación y poda que haga uso de alguna estrategia Least Cost.",
+      "Un algoritmo voraz basado en el beneficio neto de cada cultivo por unidad de superficie."
+    ],
+    "answer": 0,
+    "explanation": "Es una variante del corte de tubos: dividir una longitud maximizando el beneficio de los trozos tiene subestructura óptima y subproblemas solapados, resoluble por Programación Dinámica.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 1015,
+    "question": "Al resolver el problema del Viajante de Comercio (TSP) mediante Vuelta Atrás, se puede generar el espacio de estados realizando intercambios (swaps) sobre un vector que contiene los índices de los vértices pendientes. ¿Qué propiedad estructural del circuito queda garantizada de forma implícita gracias a esta estrategia?",
+    "options": [
+      "Que exista una arista válida y directa en el grafo entre cada par de vértices consecutivos del vector.",
+      "Que el coste acumulado de las aristas seleccionadas sea siempre menor que la mejor cota pesimista.",
+      "Que el recorrido pase exactamente una única vez por cada vértice, evitando ciclos internos o vértices duplicados."
+    ],
+    "answer": 2,
+    "explanation": "Al generar permutaciones mediante intercambios sobre el vector de vértices, cada vértice aparece exactamente una vez, garantizando implícitamente que el recorrido no repite vértices.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 1016,
+    "question": "¿Cuál de los siguientes sumatorios representa correctamente el número de veces que se ejecuta la instrucción s++ y permite obtener su complejidad temporal?\n\n```c\nfor (int i=1; i<=n; i+=3)\n  for (int j=1; j<=n/i; j++)\n    s++;\n```",
+    "options": [
+      "$\\sum_{i=1}^{n} \\frac{n}{i}$",
+      "$\\sum_{i=1}^{n/3} \\frac{n}{i}$",
+      "Ninguna de las otras dos opciones es correcta."
+    ],
+    "answer": 2,
+    "explanation": "El bucle externo toma los valores $i=1,4,7,\\dots$ (paso 3), por lo que el número exacto de ejecuciones es $\\sum_{k\\ge0,\\,1+3k\\le n} \\frac{n}{1+3k}$, que no coincide con ninguno de los sumatorios sobre índices consecutivos ofrecidos.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 1017,
+    "question": "Si el coste temporal de un algoritmo pertenece a $\\Theta(n \\log n)$, ¿qué estamos indicando?",
+    "options": [
+      "Que su coste exacto es siempre $n \\log n$ operaciones elementales.",
+      "Que su coste está acotado superior e inferiormente por funciones proporcionales a $n \\log n$ para tallas suficientemente grandes.",
+      "Que su coste está únicamente acotado superiormente por una función proporcional a $n \\log n$."
+    ],
+    "answer": 1,
+    "explanation": "La notación $\\Theta$ indica una cota ajustada: el coste está acotado por arriba y por abajo por funciones proporcionales a $n\\log n$ para tallas suficientemente grandes.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 1018,
+    "question": "¿Qué técnica encaja mejor con la versión general del laberinto?",
+    "options": [
+      "Vuelta atrás, porque permite explorar sistemáticamente las alternativas de movimiento y retroceder cuando un camino parcial no conduce a una solución válida.",
+      "Programación dinámica iterativa directa, porque con 8 movimientos siempre existe un orden simple de cálculo de las casillas.",
+      "Algoritmo voraz, porque elegir en cada paso la casilla aparentemente más cercana a la salida garantiza siempre el camino óptimo."
+    ],
+    "answer": 0,
+    "explanation": "La versión general admite ciclos, lo que impide un orden de cálculo directo para PD; la vuelta atrás explora sistemáticamente las alternativas y retrocede cuando un camino no es válido.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 1019,
+    "question": "¿Cuál de las siguientes afirmaciones es cierta sobre la estrategia LC (Least Cost) en Ramificación y Poda?",
+    "options": [
+      "Hace innecesario el uso de cotas optimistas.",
+      "Garantiza que se exploren menos nodos que con Backtracking.",
+      "Puede retrasar el hallazgo de una solución completa."
+    ],
+    "answer": 2,
+    "explanation": "La estrategia LC expande primero los nodos más prometedores por su cota, avanzando en anchura; esto puede retrasar la llegada a una primera solución completa (hoja) respecto a una búsqueda en profundidad.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 1020,
+    "question": "Una empresa debe seleccionar, de entre un conjunto de proyectos candidatos, cuáles realizar para maximizar el beneficio total sin superar un presupuesto disponible. Cada proyecto tiene un coste y un beneficio asociados, ambos conocidos; los costes están expresados mediante números reales con gran precisión. Cada proyecto debe aceptarse completo o rechazarse completamente. ¿Qué técnica algorítmica es la más apropiada para resolver este problema?",
+    "options": [
+      "Un algoritmo de backtracking, preferiblemente con poda, que explore distintas combinaciones de proyectos y descarte aquellas que no puedan mejorar la mejor solución encontrada.",
+      "Un algoritmo de programación dinámica que almacene el beneficio óptimo para cada presupuesto restante y reutilice dichas soluciones en los cálculos posteriores.",
+      "Un algoritmo voraz que seleccione sucesivamente el proyecto con mayor relación beneficio/coste hasta agotar el presupuesto disponible."
+    ],
+    "answer": 0,
+    "explanation": "Es una mochila 0/1 con costes reales de gran precisión, lo que impide indexar el almacén de PD por presupuesto; procede backtracking con poda que explore combinaciones descartando las que no mejoren la mejor solución.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 1021,
+    "question": "¿Por qué el valor óptimo obtenido para el problema de la mochila continua constituye una cota optimista para el problema de la mochila discreta?",
+    "options": [
+      "Porque la mochila continua permite soluciones adicionales que no están permitidas en la mochila discreta.",
+      "Porque la mochila continua se resuelve mediante un algoritmo voraz.",
+      "Porque cualquier solución factible de la mochila continua puede transformarse en una solución óptima de la mochila discreta."
+    ],
+    "answer": 0,
+    "explanation": "Al permitir fraccionar objetos, la versión continua admite más soluciones que la discreta, por lo que su óptimo es mayor o igual: una cota optimista para la mochila discreta.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 1022,
+    "question": "¿Por qué el coste de un árbol de recubrimiento mínimo (MST) sobre los vértices pendientes puede utilizarse como cota optimista en el problema del viajante de comercio?",
+    "options": [
+      "Porque el MST contiene exactamente las mismas aristas que la solución óptima.",
+      "Porque cualquier circuito hamiltoniano que complete la solución tendrá un coste al menos tan grande como dicho árbol.",
+      "Porque el MST siempre coincide con el circuito hamiltoniano óptimo."
+    ],
+    "answer": 1,
+    "explanation": "Cualquier circuito que complete el recorrido contiene un árbol de recubrimiento, cuyo coste no puede ser menor que el del MST; por eso el MST es una cota optimista (inferior).",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 1023,
+    "question": "¿Qué es una cota optimista en un problema de minimización?",
+    "options": [
+      "Una estimación menor o igual que el menor coste que podría alcanzarse desde un nodo.",
+      "Una estimación mayor o igual que el coste de una solución factible alcanzable desde un nodo.",
+      "Una función que necesariamente calcula exactamente el valor de la solución óptima."
+    ],
+    "answer": 0,
+    "explanation": "En minimización la cota optimista es una subestimación: un valor menor o igual que el menor coste alcanzable desde el nodo.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 1024,
+    "question": "En la resolución de la versión general del problema del laberinto mediante ramificación y poda, guardar en el nodo una matriz booleana con las casillas ya visitadas en ese camino parcial:",
+    "options": [
+      "Puede hacer que la solución mediante ramificación y poda sea más lenta que la de vuelta atrás debido al coste de copiar la matriz en cada nodo generado.",
+      "Las otras dos respuestas son ciertas.",
+      "Permite evitar caminos con ciclos si, al generar nuevos sucesores, el algoritmo utiliza esta matriz para descartar movimientos hacia casillas ya visitadas."
+    ],
+    "answer": 1,
+    "explanation": "Guardar y copiar la matriz de visitadas en cada nodo puede penalizar el tiempo respecto a vuelta atrás, y a la vez permite evitar ciclos al descartar movimientos a casillas ya visitadas; ambas son ciertas.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 1025,
+    "question": "¿Por qué la versión reducida del laberinto puede ser más adecuada para Programación Dinámica que la versión general?",
+    "options": [
+      "Porque Programación Dinámica solo funciona cuando hay exactamente 3 movimientos posibles.",
+      "Porque la versión general no puede resolverse mediante ninguna técnica algorítmica que no sea recursiva.",
+      "Porque si los movimientos permitidos imponen un avance acíclico hacia la salida, puede definirse una recurrencia y resolver las casillas en un orden adecuado."
+    ],
+    "answer": 2,
+    "explanation": "Los movimientos restringidos imponen un avance acíclico hacia la salida, lo que permite ordenar los subproblemas sin dependencias circulares y definir una recurrencia para PD.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 1026,
+    "question": "¿Por qué un algoritmo voraz no es, en general, suficiente para resolver óptimamente un laberinto?",
+    "options": [
+      "Porque los algoritmos voraces no pueden tomar decisiones locales.",
+      "Porque los algoritmos voraces siempre necesitan almacenar todos los caminos posibles completos.",
+      "Porque una decisión local prometedora puede conducir a un callejón sin salida o a un camino peor que otro inicialmente menos atractivo."
+    ],
+    "answer": 2,
+    "explanation": "En el laberinto la mejor decisión local puede llevar a un callejón sin salida o a un camino peor, por lo que el voraz no garantiza la solución óptima.",
+    "tags": ["Julio 2026"]
+  },
+  {
+    "id": 1027,
+    "question": "Imagina que en el problema del laberinto no se permiten movimientos en diagonal. ¿Cuál de las siguientes sería la cota optimista más ajustada?",
+    "options": [
+      "Longitud del camino actual + distancia de Chebyshev hasta la salida del laberinto. La distancia de Chebyshev es el máximo entre el número de filas y el número de columnas que quedan para llegar a la salida.",
+      "Longitud del camino actual + distancia de Manhattan hasta la salida del laberinto. La distancia de Manhattan es la suma del número de filas y el número de columnas que quedan para llegar a la salida.",
+      "Longitud del camino actual."
+    ],
+    "answer": 1,
+    "explanation": "Sin movimientos diagonales el mínimo de pasos restantes es la distancia de Manhattan; sumarla a la longitud actual da la cota optimista admisible más ajustada (Chebyshev correspondería a permitir diagonales).",
+    "tags": ["Julio 2026"]
   }
 ]
