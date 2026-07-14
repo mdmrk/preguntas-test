@@ -4687,5 +4687,1642 @@
     ],
     "answer": 1,
     "explanation": "La garantía implica la obligación del vendedor o desarrollador de asegurar que el producto funciona conforme a lo prometido y sin defectos durante un periodo determinado (según la ley española, un plazo mínimo, generalmente de 2 años)."
+  },
+  {
+    "id": 445,
+    "question": "El modelo de Desarrollo Rápido de Aplicaciones (DRA/RAD) se caracteriza por:",
+    "options": [
+      "Un ciclo de desarrollo muy largo",
+      "La ausencia de fases de desarrollo",
+      "Codificar sin ninguna especificación",
+      "Un ciclo de desarrollo muy corto basado en la construcción con componentes reutilizables"
+    ],
+    "answer": 3,
+    "explanation": "El modelo DRA/RAD busca un ciclo de desarrollo muy corto, apoyándose en la construcción basada en componentes reutilizables."
+  },
+  {
+    "id": 446,
+    "question": "Según el temario, una desventaja de los puntos de función es que:",
+    "options": [
+      "Sólo sirven al final del proyecto",
+      "Dependen de las líneas de código",
+      "Son muy subjetivos (dependen de la estimación de quien los calcula)",
+      "Son exclusivos del ensamblador"
+    ],
+    "answer": 2,
+    "explanation": "El temario indica que los puntos de función son muy subjetivos: dependen del criterio de quien los estima."
+  },
+  {
+    "id": 447,
+    "question": "Según el temario, ¿por qué no existe una forma simple de estimar el esfuerzo con exactitud?",
+    "options": [
+      "Las estimaciones iniciales se basan en información incompleta de los requisitos y pueden usarse tecnologías o equipos no habituales",
+      "Siempre se puede estimar con exactitud",
+      "No influye la información disponible",
+      "El esfuerzo no depende del sistema"
+    ],
+    "answer": 0,
+    "explanation": "No hay forma simple de estimar con exactitud: las estimaciones iniciales parten de información incompleta de los requisitos, y pueden intervenir tecnologías, ordenadores o personas no habituales."
+  },
+  {
+    "id": 448,
+    "question": "Una actividad tiene su comienzo anticipado en el día 5 y su límite de comienzo (LC) en el día 9. ¿Cuál es su holgura total?",
+    "options": ["0 días", "4 días", "9 días", "5 días"],
+    "answer": 1,
+    "explanation": "La holgura total puede obtenerse como límite de comienzo − comienzo anticipado = 9 − 5 = 4 días."
+  },
+  {
+    "id": 449,
+    "question": "Un proyecto tiene dos caminos de inicio a fin: A→B (duraciones 4 y 6 días) y C→D (duraciones 3 y 5 días). ¿Cuál es la duración mínima del proyecto (camino crítico)?",
+    "options": ["8 días", "18 días", "7 días", "10 días"],
+    "answer": 3,
+    "explanation": "El camino A→B dura 4+6=10 días y el camino C→D dura 3+5=8 días. El camino crítico es el más largo: 10 días."
+  },
+  {
+    "id": 450,
+    "question": "A precede a B y B precede a C. Si A está en el camino crítico (HT(A)=0) y se retrasa 2 días, ¿qué ocurre?",
+    "options": [
+      "No ocurre nada",
+      "B y C se adelantan",
+      "El proyecto se retrasa 2 días (A está en el camino crítico)",
+      "Sólo se ve afectada C"
+    ],
+    "answer": 2,
+    "explanation": "Una actividad con holgura total 0 está en el camino crítico; cualquier retraso suyo retrasa el proyecto entero (aquí, 2 días), desplazando a B y a C."
+  },
+  {
+    "id": 451,
+    "question": "Según el temario, la fecha de fin más temprana de una actividad es:",
+    "options": [
+      "Su fecha de comienzo más temprana más su duración",
+      "Su fecha de comienzo más tardía menos la duración",
+      "El máximo de todas las holguras",
+      "Un valor aleatorio"
+    ],
+    "answer": 0,
+    "explanation": "La fecha de fin más temprana de una actividad es su fecha de comienzo más temprana más la duración de la actividad."
+  },
+  {
+    "id": 452,
+    "question": "Según el temario, los grupos de ‘programación extrema’ son:",
+    "options": [
+      "Una organización jerárquica y autocrática",
+      "Una variante de la organización democrática, con decisiones tomadas por los miembros, programación en parejas y responsabilidad colectiva del código",
+      "Un grupo con un único jefe que decide todo",
+      "Un grupo sin comunicación"
+    ],
+    "answer": 1,
+    "explanation": "Los grupos de programación extrema son una variante de la organización democrática: algunas decisiones de gestión las toman los miembros, se programa en parejas y hay responsabilidad colectiva del código."
+  },
+  {
+    "id": 453,
+    "question": "Según los puntos clave del tema de recursos humanos, ¿cuáles son los factores humanos principales que debe comprender el gestor?",
+    "options": [
+      "El presupuesto y el hardware",
+      "El número de líneas de código",
+      "El color de la oficina",
+      "La organización de la memoria, la representación del conocimiento y la influencia de la motivación"
+    ],
+    "answer": 3,
+    "explanation": "Los puntos clave señalan como factores humanos principales la organización de la memoria, la representación del conocimiento y la influencia de la motivación; la composición y comunicación de los grupos también es fundamental."
+  },
+  {
+    "id": 454,
+    "question": "Según el temario, la base de datos de configuraciones debe responder a preguntas como:",
+    "options": [
+      "El presupuesto del proyecto",
+      "Los puntos de función necesarios",
+      "A qué clientes se ha entregado una versión, qué hardware/SO necesita y cuántas versiones se han creado",
+      "El salario del equipo"
+    ],
+    "answer": 2,
+    "explanation": "La BDC debe responder, entre otras, a: a qué clientes se ha entregado una versión, qué hardware y SO necesita, cuántas versiones se han creado y qué versiones se verían afectadas al cambiar una componente."
+  },
+  {
+    "id": 455,
+    "question": "Según el temario, ¿cuándo se genera una nueva ‘release’ (en lugar de sólo una nueva versión interna)?",
+    "options": [
+      "Cuando, además de nuevo código y construcción del sistema, hay nuevos ficheros de datos/configuración y nueva documentación para el cliente",
+      "Cuando se cambia una sola línea de código",
+      "Cuando se estima el coste",
+      "Nunca"
+    ],
+    "answer": 0,
+    "explanation": "Una nueva versión es nuevo código fuente más construcción del sistema; una nueva release añade a eso nuevos ficheros de datos/configuración y nueva documentación (se distribuye al cliente)."
+  },
+  {
+    "id": 456,
+    "question": "Una tarea tiene BCWS = 1500, BCWP = 1200 y ACWP = 1000. ¿Cuáles son su SV y su CV, y qué indican?",
+    "options": [
+      "SV = +300 (adelantada) y CV = −200 (sobrecoste)",
+      "SV = −200 y CV = +300",
+      "SV = 0 y CV = 0",
+      "SV = −300 (retrasada) y CV = +200 (ahorro)"
+    ],
+    "answer": 3,
+    "explanation": "SV = BCWP − BCWS = 1200 − 1500 = −300 (retrasada). CV = BCWP − ACWP = 1200 − 1000 = +200 (ahorro)."
+  },
+  {
+    "id": 457,
+    "question": "Una tarea tiene un valor acumulado (BCWP) de 900 € y un presupuesto total (BAC) de 3000 €. ¿Qué porcentaje se ha completado?",
+    "options": ["90 %", "10 %", "30 %", "3 %"],
+    "answer": 2,
+    "explanation": "El porcentaje completado es BCWP / BAC = 900 / 3000 = 0,30 = 30 %."
+  },
+  {
+    "id": 458,
+    "question": "Datos EVA (BCWS/BCWP/ACWP) — Tarea1: 800/600/900; Tarea2: 1000/1000/800; Tarea3: 500/700/700. ¿Cuál de las siguientes afirmaciones es VERDADERA?",
+    "options": [
+      "La Tarea 2 va según la agenda y con ahorro",
+      "La Tarea 1 va adelantada y con ahorro",
+      "La Tarea 3 va retrasada respecto a la agenda",
+      "La Tarea 1 va exactamente según lo previsto"
+    ],
+    "answer": 0,
+    "explanation": "Tarea2: SV = 1000−1000 = 0 (según la agenda) y CV = 1000−800 = +200 (ahorro) → verdadera. (Tarea1: SV=−200 retrasada, CV=−300 sobrecoste; Tarea3: SV=+200 adelantada.)"
+  },
+  {
+    "id": 459,
+    "question": "Una tarea tiene BCWP = 1000 y ACWP = 1250. ¿Cuál es su CPI y qué indica?",
+    "options": [
+      "CPI = 1,25: ahorro",
+      "CPI = 0,8: gasta más de lo previsto (sobrecoste)",
+      "CPI = 1,25: sobrecoste",
+      "CPI = 0,8: va adelantada en agenda"
+    ],
+    "answer": 1,
+    "explanation": "CPI = BCWP/ACWP = 1000/1250 = 0,8 < 1: gasta más de lo previsto (sobrecoste). El CPI mide coste, no agenda."
+  },
+  {
+    "id": 460,
+    "question": "Según el temario, ante variaciones EVA positivas en unas tareas y negativas en otras, se puede:",
+    "options": [
+      "Cancelar el proyecto",
+      "Ignorar las variaciones",
+      "Aumentar el presupuesto sin control",
+      "Reasignar dinero y recursos de las tareas con variaciones positivas a las que tienen variaciones negativas"
+    ],
+    "answer": 3,
+    "explanation": "Los indicadores EVA (SV, CV, SPI, CPI) ayudan a decidir: las variaciones positivas permiten reasignar dinero y recursos a tareas con variaciones negativas; las negativas pueden indicar problemas."
+  },
+  {
+    "id": 461,
+    "question": "Según el temario, ¿por qué hay que documentar los tratamientos de datos?",
+    "options": [
+      "Para aumentar el precio del software",
+      "Es opcional y meramente decorativo",
+      "Es un requisito legal (RGPD/LOPDGDD), sirve de prueba de cumplimiento ante inspecciones y ayuda a la gestión interna",
+      "Para eliminar a la competencia"
+    ],
+    "answer": 2,
+    "explanation": "Documentar es un requisito legal exigido por el RGPD y la LOPDGDD, sirve de prueba de cumplimiento ante inspecciones y facilita la gestión interna de los tratamientos."
+  },
+  {
+    "id": 462,
+    "question": "El documento de seguridad, según el temario, incluye:",
+    "options": [
+      "La política de seguridad, las medidas técnicas y organizativas y el procedimiento ante brechas",
+      "El presupuesto del proyecto",
+      "El código fuente de la aplicación",
+      "La campaña de marketing"
+    ],
+    "answer": 0,
+    "explanation": "El documento de seguridad recoge la política general de seguridad, las medidas técnicas (control de accesos, cifrado, copias) y organizativas (formación, auditorías) y el procedimiento ante brechas (detección y notificación en 72 h)."
+  },
+  {
+    "id": 463,
+    "question": "Entre las obligaciones del responsable, el temario cita ‘bloquear’ los datos:",
+    "options": [
+      "Bloquear todos los datos siempre",
+      "Bloquear los datos cuando deban rectificarse o suprimirse (muestra de diligencia)",
+      "No bloquear los datos nunca",
+      "Bloquear sólo los datos públicos"
+    ],
+    "answer": 1,
+    "explanation": "El responsable debe evaluar riesgos y bloquear los datos cuando deban rectificarse o suprimirse, como muestra de diligencia y cumplimiento activo."
+  },
+  {
+    "id": 464,
+    "question": "Según el temario, TikTok fue sancionada por la UE con multas de hasta 345 millones € por, entre otras cosas:",
+    "options": [
+      "No pagar impuestos",
+      "Vender hardware defectuoso",
+      "Infringir la propiedad intelectual",
+      "No proteger adecuadamente los datos de menores y falta de transparencia en el tratamiento"
+    ],
+    "answer": 3,
+    "explanation": "El ejemplo de TikTok recoge sanciones por no proteger adecuadamente los datos de menores, falta de transparencia y recogida/tratamiento de datos sin consentimiento válido, con multas de hasta 345 millones €."
+  },
+  {
+    "id": 465,
+    "question": "¿Cuál de las siguientes obras se puede registrar en la Propiedad Intelectual relacionada con la informática, según el temario?",
+    "options": [
+      "Sólo programas de ordenador",
+      "Sólo bases de datos",
+      "Programas de ordenador, bases de datos y páginas web o multimedia",
+      "Cualquier idea abstracta"
+    ],
+    "answer": 2,
+    "explanation": "Relacionado con la profesión se pueden registrar programas de ordenador, bases de datos y páginas electrónicas (web) o multimedia."
+  },
+  {
+    "id": 466,
+    "question": "Según el temario, el formulario ‘Autores 1 T-IV’ lo cumplimentan:",
+    "options": [
+      "Los titulares que adquirieron los derechos por transmisión (contrato de cesión o relación laboral)",
+      "Los autores originales de la obra",
+      "La autoridad de protección de datos",
+      "Los clientes del software"
+    ],
+    "answer": 0,
+    "explanation": "El formulario ‘Autores 1 T-IV’ lo cumplimentan los titulares que hubieran adquirido los derechos por transmisión inter vivos (contrato de cesión o relación laboral) en una primera inscripción; el ‘Autores 1 A-T’ es para autores que a la vez son titulares."
+  },
+  {
+    "id": 467,
+    "question": "Según el temario, respecto a los recursos de terceros (imágenes, sonidos, código) encontrados en Internet:",
+    "options": [
+      "Se pueden usar libremente todos",
+      "No se pueden usar libremente sin verificar antes que se dispone de los permisos/licencia adecuados",
+      "Sólo se pueden usar los de pago",
+      "No existen recursos de terceros"
+    ],
+    "answer": 1,
+    "explanation": "No se puede usar libremente cualquier imagen, sonido o fragmento de código de Internet sin verificar antes que se dispone de los permisos adecuados; usar materiales sin autorización puede tener consecuencias graves."
+  },
+  {
+    "id": 468,
+    "question": "Según los puntos clave del tema, el registro del software:",
+    "options": [
+      "Es muy caro y complejo",
+      "Sólo se puede hacer en EE. UU.",
+      "Es obligatorio para tener protección",
+      "Es sencillo y económico; se tramita como propiedad intelectual a través del Ministerio de Cultura o los órganos autonómicos"
+    ],
+    "answer": 3,
+    "explanation": "Los puntos clave indican que el software está protegido desde su creación (el registro no es obligatorio pero añade seguridad jurídica) y que registrarlo es sencillo y económico, a través del Ministerio de Cultura o los órganos autonómicos."
+  },
+  {
+    "id": 469,
+    "question": "Según el temario, en el ámbito educativo el software libre:",
+    "options": [
+      "Encarece la educación",
+      "Limita el acceso a herramientas",
+      "Ofrece herramientas gratuitas, facilita la igualdad educativa y el desarrollo de habilidades técnicas",
+      "No afecta a la educación"
+    ],
+    "answer": 2,
+    "explanation": "En educación, el software libre ofrece herramientas gratuitas, facilita la igualdad educativa y favorece el desarrollo de habilidades técnicas."
+  },
+  {
+    "id": 470,
+    "question": "Según el temario, la responsabilidad principal del vendedor de software incluye:",
+    "options": [
+      "El deber de informar y asesorar al comprador sobre funcionalidades, limitaciones y condiciones de uso",
+      "No tener ninguna responsabilidad",
+      "Ocultar las limitaciones del producto",
+      "Vender sin ninguna garantía"
+    ],
+    "answer": 0,
+    "explanation": "En la venta de software, la responsabilidad principal del vendedor incluye el deber de informar y asesorar al comprador para que comprenda funcionalidades, limitaciones y condiciones de uso, tanto en canales físicos como digitales."
+  },
+  {
+    "id": 471,
+    "question": "Según el temario, ¿qué normas establecen requisitos de calidad en el desarrollo de software?",
+    "options": [
+      "El RGPD",
+      "Las normas ISO (como la ISO 9000)",
+      "La Ley de Propiedad Intelectual",
+      "La LOPDGDD"
+    ],
+    "answer": 1,
+    "explanation": "Las normas ISO (como la ISO 9000) establecen requisitos de calidad que deben cumplirse en cada fase del desarrollo de software."
+  },
+  {
+    "id": 472,
+    "question": "Según el temario, en la ética informática:",
+    "options": [
+      "La ética no aplica a la informática",
+      "Sólo importa la legalidad",
+      "La ética es opcional",
+      "Las decisiones técnicas tienen consecuencias humanas, sociales y económicas que deben evaluarse desde una perspectiva ética"
+    ],
+    "answer": 3,
+    "explanation": "En un mundo tecnológico, los profesionales TIC deben actuar con responsabilidad respetando no sólo la legalidad sino también principios morales, porque las decisiones técnicas tienen consecuencias humanas, sociales y económicas."
+  },
+  {
+    "id": 473,
+    "question": "Según el temario, ¿sobre quién recae la responsabilidad en el desarrollo de software?",
+    "options": [
+      "Sólo el gestor de proyecto",
+      "Sólo los programadores",
+      "Sobre todos los implicados: analistas, programadores, testers y gestores de proyecto",
+      "Sólo el cliente"
+    ],
+    "answer": 2,
+    "explanation": "La responsabilidad en el desarrollo recae sobre todos los implicados —analistas, programadores, testers y gestores—; cada fase debe cumplir estándares de calidad para minimizar errores y vulnerabilidades."
+  },
+  {
+    "id": 474,
+    "question": "En el modelo UP, ¿qué disciplina (flujo de trabajo) tiene MÁS peso durante la fase de Construcción?",
+    "options": ["Implementación", "Requisitos", "Análisis y diseño", "Modelado del negocio"],
+    "answer": 0,
+    "explanation": "Según el diagrama de flujos de trabajo de UP (hoja 27), la disciplina de Implementación alcanza su máximo peso en la fase de Construcción."
+  },
+  {
+    "id": 475,
+    "question": "Según el diagrama de UP, la disciplina de Análisis y Diseño alcanza su mayor peso en la fase de:",
+    "options": ["Inicio", "Construcción", "Transición", "Elaboración"],
+    "answer": 3,
+    "explanation": "El Análisis y Diseño tiene su mayor peso en la fase de Elaboración (donde se define la arquitectura y el diseño básico)."
+  },
+  {
+    "id": 476,
+    "question": "En el modelo UP, ¿cuál de las siguientes afirmaciones es FALSA?",
+    "options": [
+      "En Transición se realiza el diseño básico de la arquitectura",
+      "En Inicio se define el ámbito del proyecto y los casos de uso",
+      "En Elaboración se realizan el plan del proyecto y las estimaciones",
+      "En Construcción se implementa el sistema mediante iteraciones"
+    ],
+    "answer": 0,
+    "explanation": "El diseño básico de la arquitectura se realiza en Elaboración, no en Transición (fase de entrega y pruebas beta); por eso esa afirmación es falsa. Las otras tres son correctas."
+  },
+  {
+    "id": 477,
+    "question": "En UP, una iteración: (I) tiene un plan establecido y un criterio de evaluación; (II) produce una versión interna nueva (incremento); (III) al final de un ciclo se obtiene una release para el cliente. ¿Cuáles son ciertas?",
+    "options": ["Solo I y II", "Solo I y III", "Solo II", "Todas son ciertas"],
+    "answer": 3,
+    "explanation": "Las tres son ciertas: la iteración tiene plan y criterio de evaluación, genera un incremento (versión interna) y al final del ciclo se obtiene una release para el cliente."
+  },
+  {
+    "id": 478,
+    "question": "Según el diagrama de UP, la disciplina de Requisitos tiene su mayor peso en las fases de:",
+    "options": [
+      "Construcción y Transición",
+      "Solo Transición",
+      "Inicio y Elaboración",
+      "Todas por igual"
+    ],
+    "answer": 2,
+    "explanation": "La disciplina de Requisitos pesa sobre todo al principio (Inicio y Elaboración) y decae en Construcción y Transición."
+  },
+  {
+    "id": 479,
+    "question": "¿En cuáles de los siguientes países de la UE está regulada la profesión de ingeniero informático, según el temario?",
+    "options": [
+      "España, Francia y Alemania",
+      "Reino Unido, Irlanda y Países Bajos",
+      "En ninguno de la UE",
+      "Chipre, Grecia, Italia y Portugal"
+    ],
+    "answer": 3,
+    "explanation": "Según el temario, dentro de la UE solo Chipre, Grecia, Italia y Portugal regulan la profesión de ingeniero informático."
+  },
+  {
+    "id": 480,
+    "question": "Según el temario, respecto a la regulación de la profesión informática a nivel internacional:",
+    "options": [
+      "Tanto IEEE-CS como ACM apoyan la regulación estricta",
+      "IEEE-CS tiende a apoyar la regulación/licencia profesional y ACM se opone a la regulación estricta",
+      "IEEE-CS se opone y ACM la apoya",
+      "Ninguna de las dos organizaciones se pronuncia"
+    ],
+    "answer": 1,
+    "explanation": "IEEE-CS tiende a apoyar la regulación y la licencia profesional; ACM se opone a la regulación estricta, alegando que la informática es transversal y cambiante."
+  },
+  {
+    "id": 481,
+    "question": "La norma europea que regula el reconocimiento de cualificaciones profesionales (y bajo la cual la informática NO figura como profesión regulada) es:",
+    "options": [
+      "La Directiva 2005/36/CE sobre reconocimiento de cualificaciones profesionales",
+      "El RGPD (Reglamento 2016/679)",
+      "La Directiva de Servicios (Bolkestein)",
+      "La LOPDGDD"
+    ],
+    "answer": 0,
+    "explanation": "La Directiva 2005/36/CE regula el reconocimiento de cualificaciones profesionales; bajo ella la informática no figura como profesión regulada en la mayoría de países europeos."
+  },
+  {
+    "id": 482,
+    "question": "Sobre los colegios profesionales de informática en España, ¿cuál de las siguientes afirmaciones es FALSA?",
+    "options": [
+      "Existen colegios autonómicos con consejos que los agrupan a nivel nacional",
+      "Hay colegios diferenciados para Ingenieros Técnicos e Ingenieros Informáticos",
+      "En 2017 el Consejo General de Colegios de Ingeniería Técnica en Informática impugnó el Real Decreto",
+      "La colegiación es obligatoria para ejercer la profesión"
+    ],
+    "answer": 3,
+    "explanation": "En España la colegiación en informática es voluntaria (profesión no regulada); por eso 'la colegiación es obligatoria' es falsa. Las otras tres son ciertas."
+  },
+  {
+    "id": 483,
+    "question": "Sobre las holguras, ¿cuál de las siguientes afirmaciones es CIERTA?",
+    "options": [
+      "La holgura total siempre es mayor o igual que la holgura libre",
+      "La holgura libre siempre es mayor o igual que la holgura total",
+      "La holgura total y la holgura libre son siempre iguales",
+      "La holgura libre puede ser negativa"
+    ],
+    "answer": 0,
+    "explanation": "La holgura libre nunca puede superar a la total: HT ≥ HL siempre (la HT mira el fin del proyecto; la HL, el comienzo más temprano de las siguientes)."
+  },
+  {
+    "id": 484,
+    "question": "A precede a B. HT(A)=3 y HL(A)=3. Si A se retrasa 3 días, ¿qué ocurre?",
+    "options": [
+      "El proyecto se retrasa 3 días",
+      "B reduce su holgura total en 3 días",
+      "A se vuelve crítica y retrasa el proyecto",
+      "No ocurre nada: el retraso coincide con la holgura libre; ni el proyecto ni B se ven afectados"
+    ],
+    "answer": 3,
+    "explanation": "Como el retraso (3) es igual a la holgura libre de A (3), las actividades siguientes pueden empezar igual y el proyecto no se retrasa."
+  },
+  {
+    "id": 485,
+    "question": "Un proyecto tiene tres caminos de inicio a fin con estas duraciones: A (8), B (5+4) y C (3+3+3). ¿Cuál es la duración del camino crítico?",
+    "options": ["8 días", "9 días", "10 días", "26 días"],
+    "answer": 1,
+    "explanation": "A dura 8, B dura 5+4=9 y C dura 3+3+3=9. El camino crítico es el más largo: 9 días (no la suma de todos los caminos, 26)."
+  },
+  {
+    "id": 486,
+    "question": "Una tarea tiene SPI = 1,2 y CPI = 0,9. ¿Cuáles afirmaciones son ciertas? (I) va adelantada en agenda; (II) gasta más de lo previsto; (III) va retrasada.",
+    "options": ["Solo I", "Solo I y II", "Solo III", "Todas son ciertas"],
+    "answer": 1,
+    "explanation": "SPI=1,2>1 → adelantada (I cierta). CPI=0,9<1 → gasta más de lo previsto (II cierta). III es falsa (no va retrasada). Ciertas: I y II."
+  },
+  {
+    "id": 487,
+    "question": "Una tarea tiene BCWS=1000, BCWP=1000 y ACWP=1200. ¿Cuál afirmación es CIERTA?",
+    "options": [
+      "Va adelantada respecto a la agenda",
+      "Va retrasada respecto a la agenda",
+      "Va según la agenda pero gastando más de lo previsto (sobrecoste)",
+      "Todas son falsas"
+    ],
+    "answer": 2,
+    "explanation": "SV = BCWP−BCWS = 1000−1000 = 0 (según la agenda). CV = BCWP−ACWP = 1000−1200 = −200 (sobrecoste). Va según la agenda pero gastando más."
+  },
+  {
+    "id": 488,
+    "question": "En EVA, la variación de coste (CV) se calcula como BCWP − ACWP. Si CV es negativa, la tarea:",
+    "options": [
+      "Va adelantada respecto a la agenda",
+      "Va retrasada respecto a la agenda",
+      "Gasta más de lo previsto (sobrecoste)",
+      "Gasta menos de lo previsto (ahorro)"
+    ],
+    "answer": 2,
+    "explanation": "El CV mide coste, no agenda. Si CV = BCWP−ACWP < 0, se ha gastado más de lo previsto (sobrecoste). Las opciones de agenda son distractores."
+  },
+  {
+    "id": 489,
+    "question": "Datos EVA (BCWS/BCWP/ACWP) — Tarea1: 1000/800/800; Tarea2: 500/600/400; Tarea3: 700/700/900. ¿Cuál afirmación es FALSA?",
+    "options": [
+      "La Tarea 1 va retrasada pero gastando lo previsto",
+      "La Tarea 2 va adelantada y con ahorro",
+      "La Tarea 3 va según la agenda pero con sobrecoste",
+      "La Tarea 3 va según la agenda y con ahorro"
+    ],
+    "answer": 3,
+    "explanation": "Tarea3: SV=700−700=0 (según agenda) pero CV=700−900=−200 (sobrecoste), no ahorro; por eso 'con ahorro' es falsa. (T1: SV=−200, CV=0; T2: SV=+100, CV=+200.)"
+  },
+  {
+    "id": 490,
+    "question": "Una tarea está completada al 25 % y su presupuesto total (BAC) es 4000 €. ¿Cuál es su valor acumulado (BCWP)?",
+    "options": ["4000 €", "3000 €", "1000 €", "No se puede calcular sin conocer el ACWP"],
+    "answer": 2,
+    "explanation": "BCWP = % completado × BAC = 0,25 × 4000 = 1000 €. No hace falta el ACWP para el valor acumulado (BCWP)."
+  },
+  {
+    "id": 491,
+    "question": "En COCOMO 81, ¿cuál de estas asociaciones modo → descripción es FALSA?",
+    "options": [
+      "Orgánico → aplicaciones sencillas, equipos pequeños y experimentados",
+      "Semiseparado → complejidad intermedia",
+      "Empotrado → sistema fuertemente acoplado de hardware, software y procedimientos",
+      "Empotrado → aplicaciones sencillas desarrolladas por equipos pequeños"
+    ],
+    "answer": 3,
+    "explanation": "El modo empotrado es para sistemas complejos fuertemente acoplados, no para aplicaciones sencillas (eso describe el modo orgánico); por eso la última asociación es falsa."
+  },
+  {
+    "id": 492,
+    "question": "Relaciona las técnicas de estimación. ¿Cuál asociación es CORRECTA?",
+    "options": [
+      "Ley de Parkinson → el coste depende de lo que el cliente puede pagar",
+      "La Ley de Parkinson → el coste se ajusta a los recursos disponibles, usando todo el tiempo permitido",
+      "Pricing to win → el coste se ajusta a los recursos disponibles usando todo el tiempo",
+      "Todas son correctas"
+    ],
+    "answer": 1,
+    "explanation": "La Ley de Parkinson ajusta el coste a los recursos disponibles usando todo el tiempo. 'Pricing to win' es lo que el cliente puede pagar; las otras dos opciones intercambian ambas técnicas."
+  },
+  {
+    "id": 493,
+    "question": "¿Cuál de las siguientes afirmaciones sobre la medida de la productividad es FALSA?",
+    "options": [
+      "Las medidas basadas en el tamaño usan líneas de código",
+      "Las medidas basadas en la funcionalidad usan puntos de función o de objeto",
+      "Todas las métricas de productividad basadas en volumen tienen en cuenta la calidad",
+      "Las líneas de código por unidad de tiempo dependen del lenguaje"
+    ],
+    "answer": 2,
+    "explanation": "Las métricas basadas en volumen NO tienen en cuenta la calidad (son engañosas y deben usarse solo como guía); por eso esa afirmación es falsa."
+  },
+  {
+    "id": 494,
+    "question": "¿Cuál de las siguientes asociaciones es CORRECTA?",
+    "options": [
+      "Organización democrática descentralizada → decisiones por consenso y el líder como enlace externo",
+      "Organización democrática descentralizada → un jefe asigna todas las tareas jerárquicamente",
+      "Organización con jefe de trabajo (centralizada) → decisiones por consenso",
+      "Todas son correctas"
+    ],
+    "answer": 0,
+    "explanation": "En la organización democrática descentralizada las decisiones se toman por consenso y el líder actúa como enlace externo. Las otras dos intercambian los rasgos de cada tipo de organización."
+  },
+  {
+    "id": 495,
+    "question": "En la pirámide de Maslow, ¿cuál es el orden CORRECTO de menor a mayor nivel?",
+    "options": [
+      "Fisiológicas → Seguridad → Sociales → Estima → Autorrealización",
+      "Seguridad → Fisiológicas → Sociales → Estima → Autorrealización",
+      "Fisiológicas → Sociales → Seguridad → Autorrealización → Estima",
+      "Autorrealización → Estima → Sociales → Seguridad → Fisiológicas"
+    ],
+    "answer": 0,
+    "explanation": "El orden ascendente es: necesidades fisiológicas, de seguridad, sociales (afiliación), de estima y de autorrealización."
+  },
+  {
+    "id": 496,
+    "question": "El temario clasifica la personalidad en orientadas a la tarea, a sí mismas y a la interacción. ¿Cuál afirmación es CIERTA?",
+    "options": [
+      "Un grupo eficaz debe tener solo personas orientadas a la tarea",
+      "La personalidad no influye en el grupo",
+      "Un grupo eficaz equilibra los distintos tipos de personalidad",
+      "Todas son falsas"
+    ],
+    "answer": 2,
+    "explanation": "Un grupo eficaz equilibra los distintos tipos de personalidad; un grupo con todos los miembros de la misma motivación puede resultar problemático."
+  },
+  {
+    "id": 497,
+    "question": "¿Cuál de las siguientes afirmaciones sobre la línea base es CIERTA?",
+    "options": [
+      "Una línea base puede modificarse libremente sin ningún control",
+      "Para modificar un elemento de una línea base, se extrae, se modifica y, una vez aprobado, se almacena como nueva línea base",
+      "La línea base es el coste real del trabajo realizado",
+      "Todas son falsas"
+    ],
+    "answer": 1,
+    "explanation": "Para modificar un elemento de una línea base se extrae de la base de datos del proyecto, se modifica de forma controlada y, tras aprobarse, se vuelve a almacenar como nueva línea base."
+  },
+  {
+    "id": 498,
+    "question": "Relaciona derecho → descripción. ¿Cuál es CORRECTA?",
+    "options": [
+      "Derecho de acceso → obtener el borrado de los datos",
+      "Derecho de supresión → congelar (limitar) el uso de los datos",
+      "Derecho de portabilidad → recibir los datos en formato estructurado y transmitirlos a otro responsable",
+      "Todas son correctas"
+    ],
+    "answer": 2,
+    "explanation": "La portabilidad permite recibir los datos en formato estructurado y transmitirlos a otro responsable. El acceso no es el borrado (eso es supresión) y la supresión no es congelar (eso es la limitación)."
+  },
+  {
+    "id": 499,
+    "question": "Según el temario, las infracciones LEVES en protección de datos pueden alcanzar multas de hasta:",
+    "options": ["300.000 €", "40.000 €", "20.000.000 €", "300 €"],
+    "answer": 1,
+    "explanation": "Las infracciones leves se sancionan con hasta 40.000 €; las graves de 40.001 a 300.000 € y las muy graves por encima, hasta 20.000.000 € o el 4 % de la facturación."
+  },
+  {
+    "id": 500,
+    "question": "¿Cuál de las siguientes asociaciones licencia → tipo es CORRECTA?",
+    "options": [
+      "GPL → copyleft (obliga a mantener la misma licencia en las obras derivadas)",
+      "GPL → licencia permisiva",
+      "MIT → copyleft fuerte",
+      "Todas son correctas"
+    ],
+    "answer": 0,
+    "explanation": "La GPL es copyleft (obliga a mantener la misma licencia en las derivadas). MIT es permisiva, no copyleft; por eso las otras opciones son incorrectas."
+  },
+  {
+    "id": 501,
+    "question": "¿En cuál de los siguientes casos es MÁS adecuada una estructura de equipo descentralizada democrática (DD)?",
+    "options": [
+      "Un problema difícil, con alta fiabilidad requerida y un equipo pequeño de larga duración",
+      "Un problema sencillo, un programa muy grande y un plazo de entrega rígido",
+      "Alta modularidad y poca comunicación entre los miembros",
+      "Todas son adecuadas para DD"
+    ],
+    "answer": 0,
+    "explanation": "La estructura DD conviene en problemas difíciles, con alta fiabilidad requerida, equipos pequeños y de larga duración, baja modularidad y mucha comunicación (plazo no muy rígido)."
+  },
+  {
+    "id": 502,
+    "question": "Según el temario, una estructura centralizada controlada (CC) resulta más adecuada cuando:",
+    "options": [
+      "El problema es difícil y requiere mucha comunicación",
+      "El problema es relativamente sencillo, el programa es grande y el plazo de entrega es rígido",
+      "El equipo va a durar mucho tiempo y la fiabilidad requerida es alta",
+      "Todas son falsas"
+    ],
+    "answer": 1,
+    "explanation": "La estructura CC conviene con problemas sencillos, programas grandes, equipos de corta duración, alta modularidad, plazo rígido y poca comunicación (resolución rápida y jerárquica)."
+  },
+  {
+    "id": 503,
+    "question": "¿Cuál de las siguientes asociaciones factor → estructura es CORRECTA, según el temario?",
+    "options": [
+      "Plazo de entrega muy rígido → favorece la estructura descentralizada democrática (DD)",
+      "Problema muy difícil → favorece la estructura centralizada controlada (CC)",
+      "Alta fiabilidad requerida → favorece la estructura descentralizada democrática (DD)",
+      "Todas son correctas"
+    ],
+    "answer": 2,
+    "explanation": "Alta fiabilidad favorece la DD. Un plazo rígido favorece la CC (no la DD) y un problema difícil favorece la DD (no la CC); por eso las dos primeras opciones están intercambiadas."
+  },
+  {
+    "id": 504,
+    "question": "Según el diagrama de UP, ¿en qué fase alcanzan su mayor peso las disciplinas de Pruebas y Despliegue?",
+    "options": ["Inicio", "Elaboración", "Solo en Inicio", "Construcción y Transición"],
+    "answer": 3,
+    "explanation": "Las disciplinas de Pruebas y Despliegue alcanzan su mayor peso hacia el final del ciclo, en Construcción y Transición."
+  },
+  {
+    "id": 505,
+    "question": "En UP, la fase de Inicio se centra principalmente en:",
+    "options": [
+      "Definir el ámbito del proyecto y desarrollar los casos de uso",
+      "Implementar el sistema mediante iteraciones",
+      "Entregar el producto a los usuarios con pruebas beta",
+      "Realizar el plan del proyecto y las estimaciones"
+    ],
+    "answer": 0,
+    "explanation": "La fase de Inicio se centra en definir el ámbito del proyecto y desarrollar los casos de uso. Implementar es Construcción, entregar es Transición y el plan/estimaciones corresponde a Elaboración."
+  },
+  {
+    "id": 506,
+    "question": "En UP: (I) cada iteración produce una versión interna (incremento); (II) al final de un ciclo se obtiene una release para el cliente; (III) la fase de Construcción implementa el sistema. ¿Cuáles son ciertas?",
+    "options": ["Solo I y III", "Solo II", "Solo I y II", "Todas son ciertas"],
+    "answer": 3,
+    "explanation": "Las tres son ciertas: cada iteración produce un incremento (versión interna), al final de un ciclo se obtiene una release y la Construcción implementa el sistema mediante iteraciones."
+  },
+  {
+    "id": 507,
+    "question": "Según el temario, sobre la situación académica de la Ingeniería Informática en España:",
+    "options": [
+      "Solo existe un título de grado en toda España",
+      "Existen más de 90 títulos de grado en aproximadamente 70 universidades públicas y privadas",
+      "No se imparte en universidades privadas",
+      "Está fuera del Espacio Europeo de Educación Superior"
+    ],
+    "answer": 1,
+    "explanation": "En España existen más de 90 títulos de grado en Ingeniería Informática en unas 70 universidades públicas y privadas, integrados en el Espacio Europeo de Educación Superior."
+  },
+  {
+    "id": 508,
+    "question": "Sobre la situación profesional de la Ingeniería Informática en España, ¿cuál de las siguientes afirmaciones es FALSA?",
+    "options": [
+      "Es una profesión no regulada, sin atribuciones reservadas",
+      "La colegiación es voluntaria y el ejercicio en libre competencia",
+      "La exclusión de 2008 provocó protestas y manifestaciones en toda España",
+      "Fue la única ingeniería incluida en el Real Decreto de Cualificaciones Profesionales de 2008"
+    ],
+    "answer": 3,
+    "explanation": "Fue la única ingeniería que NO se incluyó en el RD de Cualificaciones de 2008 (de ahí las protestas); decir que fue 'la única incluida' es falso. Las otras tres son ciertas."
+  },
+  {
+    "id": 509,
+    "question": "Según el temario, que la ingeniería informática no sea una profesión regulada a nivel internacional implica que:",
+    "options": [
+      "Solo pueden ejercerla los colegiados",
+      "Está prohibido ejercerla sin licencia",
+      "El acceso al mercado es libre, basándose más en la competencia y la experiencia que en la titulación oficial habilitante",
+      "Todas son ciertas"
+    ],
+    "answer": 2,
+    "explanation": "Al no ser profesión regulada, el acceso al mercado es libre, basándose más en la competencia y la experiencia que en una titulación oficial habilitante."
+  },
+  {
+    "id": 510,
+    "question": "Una actividad NO crítica siempre cumple que:",
+    "options": [
+      "Su holgura total es mayor que 0",
+      "Su holgura total es 0",
+      "Su holgura libre es mayor que su holgura total",
+      "Está en el camino crítico"
+    ],
+    "answer": 0,
+    "explanation": "Una actividad no crítica tiene holgura total mayor que 0. Holgura total 0 y estar en el camino crítico describen a las críticas; además, la holgura libre nunca supera a la total."
+  },
+  {
+    "id": 511,
+    "question": "A precede a B. HT(A)=5 y HL(A)=2. Si A se retrasa 4 días, ¿qué ocurre?",
+    "options": [
+      "El proyecto se retrasa 4 días",
+      "El proyecto no se retrasa; B reduce su holgura total en 2 días",
+      "No ocurre nada, está dentro de la holgura libre",
+      "Todas son falsas"
+    ],
+    "answer": 1,
+    "explanation": "Como HT(A)=5, el proyecto no se retrasa. Pero el retraso (4) supera la holgura libre (2) en 2, así que la siguiente actividad (B) reduce su holgura total en 2 días."
+  },
+  {
+    "id": 512,
+    "question": "Un proyecto tiene dos caminos de inicio a fin: A→B→C (duraciones 2+3+4) y D→E (5+6). ¿Cuál es la duración del camino crítico?",
+    "options": ["9 días", "20 días", "6 días", "11 días"],
+    "answer": 3,
+    "explanation": "A→B→C dura 2+3+4=9 días y D→E dura 5+6=11 días. El camino crítico es el más largo: 11 días (no la suma de todos los caminos, 20)."
+  },
+  {
+    "id": 513,
+    "question": "Una tarea tiene SPI = 0,8 y CPI = 0,8. ¿Cuáles afirmaciones son ciertas? (I) va retrasada; (II) gasta más de lo previsto; (III) va según lo previsto.",
+    "options": ["Solo I", "Solo II", "Solo I y II", "Todas son ciertas"],
+    "answer": 2,
+    "explanation": "SPI=0,8<1 → retrasada (I cierta). CPI=0,8<1 → gasta más de lo previsto (II cierta). III es falsa. Ciertas: I y II."
+  },
+  {
+    "id": 514,
+    "question": "Una tarea tiene BCWS=800, BCWP=1000 y ACWP=1200. ¿Cuál afirmación es CIERTA?",
+    "options": [
+      "Va adelantada respecto a la agenda pero gastando más de lo previsto (sobrecoste)",
+      "Va retrasada y con ahorro",
+      "Va según lo previsto en todo",
+      "Todas son falsas"
+    ],
+    "answer": 0,
+    "explanation": "SV = BCWP−BCWS = 1000−800 = +200 (adelantada). CV = BCWP−ACWP = 1000−1200 = −200 (sobrecoste). Va adelantada pero gastando más de lo previsto."
+  },
+  {
+    "id": 515,
+    "question": "Una tarea tiene BCWP=1200 y BCWS=1000. ¿Cuál es su SPI y qué indica?",
+    "options": [
+      "SPI=0,83: retrasada",
+      "SPI=1,2: adelantada respecto a la agenda",
+      "SPI=1,2: sobrecoste",
+      "SPI=0,83: ahorro"
+    ],
+    "answer": 1,
+    "explanation": "SPI = BCWP/BCWS = 1200/1000 = 1,2 > 1: adelantada respecto a la agenda. El SPI mide progreso (agenda), no coste."
+  },
+  {
+    "id": 516,
+    "question": "Datos EVA (BCWS/BCWP/ACWP) — Tarea1: 600/600/500; Tarea2: 800/600/600; Tarea3: 400/500/600. ¿Cuál afirmación es VERDADERA?",
+    "options": [
+      "La Tarea 2 va adelantada respecto a la agenda",
+      "La Tarea 3 va con ahorro",
+      "La Tarea 1 va retrasada",
+      "La Tarea 1 va según la agenda y con ahorro"
+    ],
+    "answer": 3,
+    "explanation": "Tarea1: SV=600−600=0 (según agenda) y CV=600−500=+100 (ahorro) → verdadera. (Tarea2: SV=−200 retrasada; Tarea3: CV=500−600=−100 sobrecoste, no ahorro.)"
+  },
+  {
+    "id": 517,
+    "question": "Una tarea tiene un valor acumulado (BCWP) de 1500 € y está completada al 50 %. ¿Cuál es su presupuesto total (BAC)?",
+    "options": ["750 €", "1500 €", "3000 €", "No se puede calcular"],
+    "answer": 2,
+    "explanation": "Si BCWP = % completado × BAC, entonces BAC = BCWP / % completado = 1500 / 0,5 = 3000 €."
+  },
+  {
+    "id": 518,
+    "question": "¿Cuál de las siguientes asociaciones nivel de COCOMO 2 → base de estimación es CORRECTA?",
+    "options": [
+      "Nivel post-arquitectura → líneas de código fuente",
+      "Nivel post-arquitectura → puntos de objeto",
+      "Nivel inicial de prototipado → líneas de código",
+      "Todas son correctas"
+    ],
+    "answer": 0,
+    "explanation": "El nivel post-arquitectura de COCOMO 2 estima con líneas de código fuente; el inicial de prototipado usa puntos de objeto (las otras opciones intercambian ambos niveles)."
+  },
+  {
+    "id": 519,
+    "question": "Según el temario, ¿qué ocurre si a un proyecto retrasado se le añade más personal?",
+    "options": [
+      "Siempre reduce el tiempo a la mitad",
+      "Añadir más personal no garantiza reducir el tiempo (la duración no es proporcional al número de personas)",
+      "No tiene ningún efecto en el coste",
+      "Todas son ciertas"
+    ],
+    "answer": 1,
+    "explanation": "La duración de un proyecto no es proporcional al número de personas: añadir personal a un proyecto retrasado no garantiza reducir el tiempo y suele aumentar el coste y la comunicación."
+  },
+  {
+    "id": 520,
+    "question": "¿Cuál de las siguientes afirmaciones sobre la estimación de costes es FALSA?",
+    "options": [
+      "Las estimaciones deben revisarse a medida que avanza el proyecto",
+      "La incertidumbre disminuye conforme se avanza",
+      "Una estimación inicial es siempre exacta",
+      "Se pueden usar varias técnicas y comparar resultados"
+    ],
+    "answer": 2,
+    "explanation": "Una estimación inicial NO es exacta: parte de información incompleta y su incertidumbre solo disminuye conforme avanza el proyecto; por eso esa afirmación es falsa."
+  },
+  {
+    "id": 521,
+    "question": "¿Cuál de las siguientes asociaciones necesidad → ejemplo es CORRECTA (Maslow)?",
+    "options": [
+      "Necesidad social → ser aceptado como parte de un grupo",
+      "Necesidad social → el respeto y la autoestima",
+      "Necesidad de estima → ser aceptado como parte de un grupo",
+      "Todas son correctas"
+    ],
+    "answer": 0,
+    "explanation": "La necesidad social es ser aceptado como parte de un grupo; el respeto y la autoestima son la necesidad de estima (las otras opciones intercambian ambas necesidades)."
+  },
+  {
+    "id": 522,
+    "question": "¿Cuál de los siguientes NO es un factor que influya en las comunicaciones del grupo, según el temario?",
+    "options": [
+      "El status y las personalidades de los miembros",
+      "La composición del grupo",
+      "Los canales de comunicación",
+      "El precio de las licencias de software"
+    ],
+    "answer": 3,
+    "explanation": "Los factores que influyen en las comunicaciones del grupo son el status y las personalidades, la composición del grupo y los canales de comunicación. El precio de las licencias no interviene."
+  },
+  {
+    "id": 523,
+    "question": "Según el temario, el modelo P-CMM (madurez del personal) busca:",
+    "options": [
+      "Estimar el número de líneas de código",
+      "Mejorar las capacidades del personal y no depender de unos pocos individuos",
+      "Controlar las versiones del software",
+      "Todas son falsas"
+    ],
+    "answer": 1,
+    "explanation": "El P-CMM (madurez de la capacidad de gestión del personal) busca mejorar las capacidades del personal, igualar la motivación y no depender de unos pocos individuos clave."
+  },
+  {
+    "id": 524,
+    "question": "¿Cuál de las siguientes asociaciones tarea de gestión de la configuración → objetivo es CORRECTA?",
+    "options": [
+      "Auditoría de configuración → identificar y seguir las versiones",
+      "Control de versiones → verificar que se hizo el cambio y se siguieron los estándares",
+      "Auditoría de configuración → verificar que se hizo el cambio especificado y se siguieron los estándares",
+      "Todas son correctas"
+    ],
+    "answer": 2,
+    "explanation": "La auditoría de configuración verifica que se hizo el cambio especificado y se siguieron los estándares; el control de versiones identifica y sigue las versiones (las dos primeras opciones las intercambian)."
+  },
+  {
+    "id": 525,
+    "question": "¿Cuál de los siguientes NO es un elemento de configuración software (ECS) típico?",
+    "options": [
+      "La especificación de requisitos",
+      "El código fuente",
+      "Los planes de prueba",
+      "El presupuesto de marketing"
+    ],
+    "answer": 3,
+    "explanation": "Entre los ECS típicos están la especificación de requisitos, los diseños, el código fuente, los planes de prueba y los ejecutables. El presupuesto de marketing no es un elemento de configuración software."
+  },
+  {
+    "id": 526,
+    "question": "Según el temario, ¿cuál de estas afirmaciones sobre el consentimiento en protección de datos es FALSA?",
+    "options": [
+      "El consentimiento puede ser tácito y presumirse por el silencio",
+      "Debe ser libre, específico, informado e inequívoco",
+      "Un menor puede prestarlo a partir de los 14 años en España",
+      "Debe darse mediante una acción afirmativa clara"
+    ],
+    "answer": 0,
+    "explanation": "El consentimiento NO puede presumirse por el silencio o la inacción: debe ser inequívoco, mediante una declaración o una acción afirmativa clara. Por eso esa afirmación es falsa."
+  },
+  {
+    "id": 527,
+    "question": "¿Cuál de las siguientes asociaciones organismo → ámbito es CORRECTA?",
+    "options": [
+      "AEPD → organismo europeo que garantiza la coherencia en la UE",
+      "CEPD → autoridad de control española que impone sanciones",
+      "AEPD → autoridad de control española; CEPD → organismo europeo que garantiza la coherencia",
+      "Todas son correctas"
+    ],
+    "answer": 2,
+    "explanation": "La AEPD es la autoridad de control española y el CEPD el organismo europeo que garantiza la coherencia en la UE (las dos primeras opciones intercambian ambos organismos)."
+  },
+  {
+    "id": 528,
+    "question": "Los ‘derechos digitales’ que introduce la LOPDGDD incluyen, entre otros:",
+    "options": [
+      "El derecho a no pagar impuestos",
+      "El derecho a la desconexión digital y a la protección de datos de los menores",
+      "El derecho de propiedad intelectual",
+      "Todas son falsas"
+    ],
+    "answer": 1,
+    "explanation": "Los derechos digitales de la LOPDGDD incluyen, entre otros, la desconexión digital, la intimidad ante los dispositivos y la protección de datos de los menores."
+  },
+  {
+    "id": 529,
+    "question": "¿Cuál de las siguientes asociaciones sobre software libre y propietario es CORRECTA?",
+    "options": [
+      "Software libre → código cerrado y control total del fabricante",
+      "Software propietario → cuatro libertades (usar, estudiar, distribuir, mejorar)",
+      "Software libre → cuatro libertades; software propietario → código cerrado",
+      "Todas son correctas"
+    ],
+    "answer": 2,
+    "explanation": "El software libre garantiza las cuatro libertades; el propietario tiene código cerrado y limita al usuario (las dos primeras opciones intercambian ambos conceptos)."
+  },
+  {
+    "id": 530,
+    "question": "¿Cuál de las siguientes afirmaciones sobre el registro del software es FALSA?",
+    "options": [
+      "El software está protegido desde su creación",
+      "El registro no es obligatorio pero da seguridad jurídica",
+      "Se tramita a través del Ministerio de Cultura o los órganos autonómicos",
+      "El registro es obligatorio para tener cualquier protección"
+    ],
+    "answer": 3,
+    "explanation": "El software está protegido desde su creación, así que el registro NO es obligatorio para tener protección (aunque añade seguridad jurídica); por eso esa afirmación es falsa."
+  },
+  {
+    "id": 531,
+    "question": "¿En cuál de los siguientes casos es MÁS adecuada una estructura descentralizada controlada (DC)?",
+    "options": [
+      "Un proyecto grande y relativamente sencillo que aún requiere cierta comunicación entre subgrupos",
+      "Un problema muy difícil con un equipo de dos personas",
+      "Un proyecto sin ninguna comunicación entre miembros",
+      "Todas son falsas"
+    ],
+    "answer": 0,
+    "explanation": "La DC es el término medio: hay un jefe que coordina, pero la resolución de problemas es grupal. Encaja en proyectos grandes y relativamente sencillos que aún requieren cierta comunicación entre subgrupos."
+  },
+  {
+    "id": 532,
+    "question": "Según el temario, ¿qué estructura de equipo se ve favorecida cuando el grado de modularización del problema es ALTO?",
+    "options": [
+      "La descentralizada democrática (DD)",
+      "La centralizada controlada (CC)",
+      "Ninguna, la modularización no influye",
+      "Todas por igual"
+    ],
+    "answer": 1,
+    "explanation": "Una modularidad alta permite repartir el trabajo con poca comunicación entre miembros, lo que favorece la estructura centralizada controlada (CC). La baja modularidad (mucha comunicación) favorece la DD."
+  },
+  {
+    "id": 533,
+    "question": "Sobre las estructuras de equipo, ¿cuál de las siguientes afirmaciones es FALSA?",
+    "options": [
+      "El rendimiento del equipo es inversamente proporcional a la comunicación que deba entablarse",
+      "No existe una estructura de equipo única que sea la mejor para todos los proyectos",
+      "La duración prevista del grupo afecta a la moral del equipo",
+      "La estructura descentralizada democrática es siempre la mejor opción"
+    ],
+    "answer": 3,
+    "explanation": "No hay una estructura mejor para todos los proyectos: depende de la dificultad, el tamaño, la modularidad, la fiabilidad, el plazo y la comunicación. Por eso decir que la DD es siempre la mejor es falso."
+  },
+  {
+    "id": 534,
+    "question": "Según el diagrama de UP, ¿qué disciplina tiene MENOS peso durante la fase de Inicio?",
+    "options": [
+      "Requisitos",
+      "Modelado del negocio",
+      "Implementación",
+      "Todas tienen el mismo peso"
+    ],
+    "answer": 2,
+    "explanation": "En la fase de Inicio dominan el modelado del negocio y los requisitos; la Implementación es casi inexistente (alcanza su máximo en Construcción)."
+  },
+  {
+    "id": 535,
+    "question": "En UP, ¿cuál de las siguientes afirmaciones sobre la fase de Transición es CIERTA?",
+    "options": [
+      "Se define el ámbito del proyecto y los casos de uso",
+      "Se entrega el producto a los usuarios, con pruebas beta y correcciones",
+      "Se implementa por primera vez la lógica de negocio",
+      "Todas son falsas"
+    ],
+    "answer": 1,
+    "explanation": "En Transición el producto se entrega a los usuarios (pruebas beta, formación, corrección de defectos). Definir el ámbito es Inicio; implementar es Construcción."
+  },
+  {
+    "id": 536,
+    "question": "¿Cuál de las siguientes asociaciones fase de UP → objetivo es CORRECTA?",
+    "options": [
+      "Elaboración → implementar el sistema mediante iteraciones",
+      "Construcción → realizar el plan del proyecto y el diseño básico",
+      "Elaboración → realizar el plan, las estimaciones y el diseño básico de la arquitectura",
+      "Todas son correctas"
+    ],
+    "answer": 2,
+    "explanation": "En Elaboración se realizan el plan, las estimaciones y el diseño básico de la arquitectura; implementar por iteraciones es Construcción (las dos primeras opciones intercambian ambas fases)."
+  },
+  {
+    "id": 537,
+    "question": "Según el temario, ¿cuál es la postura de la ACM respecto a la regulación de la profesión informática?",
+    "options": [
+      "Apoya la licencia profesional obligatoria",
+      "Se opone a la regulación estricta, alegando que la informática es transversal y cambiante",
+      "No tiene ninguna postura",
+      "Exige la colegiación obligatoria"
+    ],
+    "answer": 1,
+    "explanation": "La ACM se opone a la regulación estricta, alegando que la informática es una disciplina transversal y en constante cambio; el IEEE-CS, en cambio, tiende a apoyar la regulación y la licencia profesional."
+  },
+  {
+    "id": 538,
+    "question": "Sobre la profesión informática en Europa, ¿cuál de las siguientes afirmaciones es CIERTA?",
+    "options": [
+      "Está regulada en la mayoría de países de la UE",
+      "La mayoría de los países de la UE no la reconocen como profesión regulada bajo la Directiva 2005/36/CE",
+      "España es uno de los países donde está regulada",
+      "Todas son ciertas"
+    ],
+    "answer": 1,
+    "explanation": "Bajo la Directiva 2005/36/CE, la informática no figura como profesión regulada en la mayoría de países europeos; solo Chipre, Grecia, Italia y Portugal la regulan. España no."
+  },
+  {
+    "id": 539,
+    "question": "¿Cuál de las siguientes NO es una función de un Colegio Profesional según el temario?",
+    "options": [
+      "La ordenación y control de la profesión (código deontológico)",
+      "La representación ante las administraciones",
+      "La defensa de los colegiados y la protección de los consumidores",
+      "La concesión de títulos universitarios de grado"
+    ],
+    "answer": 3,
+    "explanation": "Los colegios ordenan y controlan la profesión, representan ante las administraciones y defienden a colegiados y consumidores. Los títulos universitarios los conceden las universidades, no los colegios."
+  },
+  {
+    "id": 540,
+    "question": "Sobre el camino crítico, ¿cuál de las siguientes afirmaciones es FALSA?",
+    "options": [
+      "Es la secuencia de actividades con holgura total 0",
+      "Determina la duración mínima del proyecto",
+      "Un retraso en una actividad crítica retrasa el proyecto",
+      "Las actividades del camino crítico tienen la mayor holgura del proyecto"
+    ],
+    "answer": 3,
+    "explanation": "Las actividades del camino crítico tienen holgura total 0 (la menor, no la mayor); por eso esa afirmación es falsa. Las otras tres son ciertas."
+  },
+  {
+    "id": 541,
+    "question": "A precede a B. HT(A)=2 y HL(A)=0. Si A se retrasa 1 día, ¿qué ocurre?",
+    "options": [
+      "El proyecto se retrasa 1 día",
+      "B reduce su holgura total en 1 día, pero el proyecto no se retrasa",
+      "No ocurre absolutamente nada",
+      "Todas son falsas"
+    ],
+    "answer": 1,
+    "explanation": "Como HT(A)=2, el retraso de 1 día no retrasa el proyecto. Pero HL(A)=0: cualquier retraso obliga a B a empezar más tarde, reduciendo su holgura total en 1 día."
+  },
+  {
+    "id": 542,
+    "question": "Un proyecto tiene tres caminos: A→B (3+7), C→D (6+3) y E (11). ¿Cuál es la duración del camino crítico?",
+    "options": ["10 días", "9 días", "11 días", "30 días"],
+    "answer": 2,
+    "explanation": "A→B dura 3+7=10, C→D dura 6+3=9 y E dura 11. El camino crítico es el más largo: 11 días (no la suma de todos, 30)."
+  },
+  {
+    "id": 543,
+    "question": "Una tarea tiene SPI = 1 y CPI = 0,75. ¿Cuáles afirmaciones son ciertas? (I) va según la agenda; (II) gasta más de lo previsto; (III) va adelantada.",
+    "options": ["Solo I", "Solo I y II", "Solo II y III", "Todas son ciertas"],
+    "answer": 1,
+    "explanation": "SPI=1 → va según la agenda (I cierta). CPI=0,75<1 → gasta más de lo previsto (II cierta). III es falsa: no va adelantada, va justo según lo previsto."
+  },
+  {
+    "id": 544,
+    "question": "Una tarea tiene BCWS=1200, BCWP=900 y ACWP=900. ¿Cuál afirmación es CIERTA?",
+    "options": [
+      "Va retrasada respecto a la agenda pero gastando exactamente lo previsto",
+      "Va adelantada y con ahorro",
+      "Va retrasada y con sobrecoste",
+      "Todas son falsas"
+    ],
+    "answer": 0,
+    "explanation": "SV = 900−1200 = −300 (retrasada). CV = 900−900 = 0 (gasta exactamente lo previsto para el trabajo realizado, CPI=1)."
+  },
+  {
+    "id": 545,
+    "question": "¿Cuál de las siguientes asociaciones indicador EVA → qué mide es CORRECTA?",
+    "options": [
+      "CPI → progreso respecto a la agenda",
+      "SPI → coste (productividad económica)",
+      "SPI → progreso (agenda); CPI → coste (productividad)",
+      "Todas son correctas"
+    ],
+    "answer": 2,
+    "explanation": "El SPI mide progreso (agenda) y el CPI mide coste (productividad). Las dos primeras opciones intercambian ambos indicadores."
+  },
+  {
+    "id": 546,
+    "question": "Datos EVA (BCWS/BCWP/ACWP) — Tarea1: 500/500/500; Tarea2: 900/700/1000; Tarea3: 600/800/600. ¿Cuál afirmación es FALSA?",
+    "options": [
+      "La Tarea 1 va según lo previsto en agenda y coste",
+      "La Tarea 2 va retrasada y con sobrecoste",
+      "La Tarea 3 va adelantada y con ahorro",
+      "La Tarea 3 va retrasada respecto a la agenda"
+    ],
+    "answer": 3,
+    "explanation": "Tarea3: SV = 800−600 = +200 → va ADELANTADA, no retrasada; por eso esa afirmación es falsa. (T1: SV=0, CV=0; T2: SV=−200 y CV=−300; T3: CV=800−600=+200 ahorro.)"
+  },
+  {
+    "id": 547,
+    "question": "Una tarea tiene BAC=5000 € y BCWP=1000 €. ¿Qué porcentaje se ha completado y cuánto trabajo (en coste) queda?",
+    "options": [
+      "20 % completado; quedan 4000 €",
+      "10 % completado; quedan 4500 €",
+      "80 % completado; quedan 1000 €",
+      "No se puede calcular sin el ACWP"
+    ],
+    "answer": 0,
+    "explanation": "% completado = BCWP/BAC = 1000/5000 = 20 %. El trabajo pendiente en coste es BAC − BCWP = 5000 − 1000 = 4000 €. No hace falta el ACWP."
+  },
+  {
+    "id": 548,
+    "question": "¿Cuál de las siguientes afirmaciones sobre la estimación es CIERTA?",
+    "options": [
+      "La incertidumbre de la estimación aumenta conforme avanza el proyecto",
+      "Los puntos de función dependen del lenguaje de programación",
+      "Los puntos de función son independientes del lenguaje y se calculan desde la especificación",
+      "Todas son ciertas"
+    ],
+    "answer": 2,
+    "explanation": "Los puntos de función son independientes del lenguaje y se calculan desde la especificación. La incertidumbre DISMINUYE al avanzar el proyecto, y son las líneas de código (vía AVC) las que dependen del lenguaje."
+  },
+  {
+    "id": 549,
+    "question": "¿Cuál de estas asociaciones técnica → descripción es FALSA?",
+    "options": [
+      "Estimación por analogía → comparar con proyectos similares previos",
+      "Estimación descendente (top-down) → parte del nivel de sistema",
+      "Estimación ascendente (bottom-up) → parte del nivel de componentes",
+      "Estimación ascendente (bottom-up) → parte del nivel de sistema sin conocer los componentes"
+    ],
+    "answer": 3,
+    "explanation": "La ascendente (bottom-up) parte de los componentes y suma su esfuerzo; partir del nivel de sistema sin conocer los componentes es la DESCENDENTE. Por eso la última asociación es falsa."
+  },
+  {
+    "id": 550,
+    "question": "¿Cuál de las siguientes afirmaciones sobre la gestión de riesgos es FALSA?",
+    "options": [
+      "La identificación produce una lista de riesgos potenciales",
+      "El análisis valora probabilidad y efectos",
+      "La planificación elabora estrategias y planes de contingencia",
+      "La monitorización se realiza una sola vez al inicio del proyecto"
+    ],
+    "answer": 3,
+    "explanation": "La monitorización de riesgos es continua durante todo el proyecto (se reevalúan los riesgos), no se hace una sola vez al inicio; por eso es falsa."
+  },
+  {
+    "id": 551,
+    "question": "¿Cuál de las siguientes asociaciones tipo de riesgo → ejemplo es CORRECTA?",
+    "options": [
+      "Riesgo del proyecto → un competidor lanza antes su producto",
+      "Riesgo del negocio → el personal clave abandona el equipo (afecta a la agenda)",
+      "Riesgo del proyecto → el personal clave abandona el equipo (afecta a la agenda)",
+      "Todas son correctas"
+    ],
+    "answer": 2,
+    "explanation": "Que el personal clave abandone afecta a la agenda/recursos: es un riesgo del PROYECTO. Que un competidor lance antes su producto es un riesgo del NEGOCIO (las dos primeras opciones los intercambian)."
+  },
+  {
+    "id": 552,
+    "question": "Según el temario, ¿cuál de estas afirmaciones sobre el tamaño del grupo es CIERTA?",
+    "options": [
+      "Cuanto más grande sea el grupo, mayor será el rendimiento",
+      "El grupo debería ser pequeño (menos de ocho personas); los proyectos grandes se dividen en varios pequeños",
+      "El tamaño del grupo no influye en la comunicación",
+      "Todas son falsas"
+    ],
+    "answer": 1,
+    "explanation": "El grupo debe ser relativamente pequeño (menos de ocho personas); los proyectos grandes se dividen en múltiples proyectos pequeños. A más miembros, más canales de comunicación y menor rendimiento."
+  },
+  {
+    "id": 553,
+    "question": "¿Cuál de las siguientes NO es una práctica de eXtreme Programming (XP) según el temario?",
+    "options": [
+      "La programación en parejas",
+      "La refactorización del código",
+      "La responsabilidad colectiva del código",
+      "La estimación mediante COCOMO"
+    ],
+    "answer": 3,
+    "explanation": "XP incluye programación en parejas, refactorización y responsabilidad colectiva del código. COCOMO es un modelo de estimación de costes (Tema 2), no una práctica de XP."
+  },
+  {
+    "id": 554,
+    "question": "¿Cuál de las siguientes afirmaciones sobre versiones y releases es CIERTA?",
+    "options": [
+      "Una release es cualquier instancia interna que difiere de otra",
+      "Una versión siempre se distribuye al cliente",
+      "Una release es una versión que se distribuye a los clientes; una versión puede ser solo interna",
+      "Todas son falsas"
+    ],
+    "answer": 2,
+    "explanation": "Una versión es cualquier instancia que difiere de otra (puede ser interna); una release es la versión que se distribuye a los clientes, con ficheros de configuración, instalación y documentación."
+  },
+  {
+    "id": 555,
+    "question": "¿Cuál de las siguientes asociaciones es CORRECTA sobre la gestión de la configuración?",
+    "options": [
+      "Elemento de configuración (ECS) → programas, documentos y datos",
+      "Elemento de configuración (ECS) → solo el código fuente",
+      "Línea base → el coste real del trabajo realizado",
+      "Todas son correctas"
+    ],
+    "answer": 0,
+    "explanation": "La configuración del software está formada por programas, documentos y datos (los ECS). La línea base es el plan/configuración de referencia aprobada, no un coste (eso es el ACWP del Tema 6)."
+  },
+  {
+    "id": 556,
+    "question": "¿Cuál de las siguientes afirmaciones sobre las brechas de seguridad es CIERTA?",
+    "options": [
+      "Deben notificarse en un plazo de 30 días",
+      "Deben notificarse en un plazo de 72 horas",
+      "No es obligatorio notificarlas",
+      "Todas son falsas"
+    ],
+    "answer": 1,
+    "explanation": "El RGPD exige notificar las brechas de seguridad que afecten a datos personales en un plazo de 72 horas."
+  },
+  {
+    "id": 557,
+    "question": "¿Cuál de estas asociaciones norma → contenido es CORRECTA?",
+    "options": [
+      "RGPD → norma europea (2016), aplicable desde 2018",
+      "LOPDGDD → reglamento europeo aplicable en toda la UE",
+      "RGPD → ley orgánica española que fija la edad de consentimiento en 14 años",
+      "Todas son correctas"
+    ],
+    "answer": 0,
+    "explanation": "El RGPD es la norma europea de 2016, aplicable desde 2018. La LOPDGDD es la ley orgánica española (3/2018) que la adapta y fija los 14 años (las otras opciones intercambian ambas normas)."
+  },
+  {
+    "id": 558,
+    "question": "¿Cuál de las siguientes afirmaciones sobre las licencias es FALSA?",
+    "options": [
+      "La GPL es una licencia copyleft",
+      "MIT, BSD y Apache 2.0 son licencias permisivas",
+      "LGPL y MPL son licencias de copyleft débil",
+      "OEM y shareware son licencias de software libre"
+    ],
+    "answer": 3,
+    "explanation": "OEM y shareware son licencias de software PROPIETARIO, no libre; por eso esa afirmación es falsa. Las otras tres son correctas."
+  },
+  {
+    "id": 559,
+    "question": "Según el temario, ¿cuál de estas afirmaciones es CIERTA?",
+    "options": [
+      "Software libre significa siempre software gratuito",
+      "El software libre puede cobrarse; ‘libre’ se refiere a las cuatro libertades, no al precio",
+      "El software libre no puede usarse comercialmente",
+      "Todas son ciertas"
+    ],
+    "answer": 1,
+    "explanation": "Software libre ≠ software gratuito: 'libre' se refiere a las cuatro libertades (ejecutar, estudiar, redistribuir, mejorar), no al precio; puede cobrarse y usarse comercialmente."
+  },
+  {
+    "id": 560,
+    "question": "¿Cuál de las siguientes afirmaciones sobre la ética y la deontología es FALSA?",
+    "options": [
+      "La deontología se recoge en códigos deontológicos",
+      "Los Diez Mandamientos de la Ética Informática incluyen no usar el ordenador para dañar a otros",
+      "Las decisiones técnicas tienen consecuencias humanas, sociales y económicas",
+      "Cumplir la ley es suficiente: los principios éticos no añaden ninguna obligación"
+    ],
+    "answer": 3,
+    "explanation": "El temario insiste en que el profesional debe respetar no solo la legalidad, sino también principios morales; por eso decir que cumplir la ley basta es falso."
+  },
+  {
+    "id": 561,
+    "question": "Con el nivel inicial de prototipado de COCOMO 2 (PM = (NOP × (1 − %reuse/100)) / PROD): NOP = 60 puntos de objeto, reutilización del 25 % y productividad PROD = 15. ¿Cuál es el esfuerzo estimado?",
+    "options": ["4 personas-mes", "3 personas-mes", "2,25 personas-mes", "45 personas-mes"],
+    "answer": 1,
+    "explanation": "PM = (60 × (1 − 25/100)) / 15 = (60 × 0,75) / 15 = 45 / 15 = 3 personas-mes. (45 es el numerador sin dividir; 4 sería sin aplicar la reutilización.)"
+  },
+  {
+    "id": 562,
+    "question": "Calcula los puntos de objeto (sin multiplicador de complejidad) de un sistema con: 2 formularios de complejidad media, 1 informe complejo y 1 módulo 3GL simple. (Pesos — formularios: 7/10/15; informes: 5/7/10; módulos 3GL: 10/15/20)",
+    "options": ["37", "45", "40", "35"],
+    "answer": 2,
+    "explanation": "2 formularios medios × 10 = 20; 1 informe complejo × 10 = 10; 1 módulo 3GL simple × 10 = 10. Total = 40 puntos de objeto."
+  },
+  {
+    "id": 563,
+    "question": "Sobre los puntos de objeto, ¿cuál de las siguientes afirmaciones es FALSA?",
+    "options": [
+      "Se usan cuando se desarrolla con lenguajes 4GL o similares",
+      "Son una estimación ponderada de pantallas, informes y módulos 3GL",
+      "Los puntos de objeto son las clases de objetos del diseño orientado a objetos",
+      "Son más fáciles de estimar que las líneas de código en fases tempranas"
+    ],
+    "answer": 2,
+    "explanation": "El temario advierte expresamente que los puntos de objeto NO son clases de objetos; por eso esa afirmación es falsa. Las otras tres son correctas."
+  },
+  {
+    "id": 564,
+    "question": "¿Cuál de las siguientes NO es una de las categorías de multiplicadores (M) del nivel post-arquitectura de COCOMO 2?",
+    "options": [
+      "Atributos del producto",
+      "Atributos del cliente",
+      "Atributos del personal",
+      "Atributos del proyecto"
+    ],
+    "answer": 1,
+    "explanation": "Las categorías de multiplicadores son: atributos del producto, del ordenador, del personal y del proyecto. No existe una categoría de 'atributos del cliente'."
+  },
+  {
+    "id": 565,
+    "question": "Según el temario, los modelos algorítmicos de costes (como COCOMO) sirven en la planificación para:",
+    "options": [
+      "Sustituir por completo al juicio experto",
+      "Eliminar la incertidumbre de las estimaciones",
+      "Calcular el camino crítico",
+      "Comparar estrategias alternativas de desarrollo (gestión de opciones de coste)"
+    ],
+    "answer": 3,
+    "explanation": "Los modelos algorítmicos proporcionan una base para la planificación al permitir comparar estrategias alternativas (el temario lo ilustra con la tabla de opciones A–F de un sistema espacial empotrado)."
+  },
+  {
+    "id": 566,
+    "question": "En UP, ¿cuál de las siguientes asociaciones fase → nombre de sus iteraciones es CORRECTA (según el temario)?",
+    "options": [
+      "Elaboración → iteraciones de Arquitectura",
+      "Inicio → iteraciones de Desarrollo",
+      "Construcción → iteraciones Preliminares",
+      "Todas son correctas"
+    ],
+    "answer": 0,
+    "explanation": "Según la hoja 26: Inicio → iteraciones Preliminares; Elaboración → Arquitectura; Construcción → Desarrollo; Transición → Transición. Solo la primera asociación es correcta."
+  },
+  {
+    "id": 567,
+    "question": "Según el diagrama de UP: (I) el Modelado del sistema tiene su pico en Inicio–Elaboración; (II) el Despliegue es casi nulo en Inicio; (III) los flujos de soporte (gestión, entorno) desaparecen por completo en Transición. ¿Cuáles son ciertas?",
+    "options": ["Solo I", "Solo I y II", "Todas son ciertas", "Solo II y III"],
+    "answer": 1,
+    "explanation": "I y II son ciertas. III es falsa: los flujos de soporte (gestión de configuración, gestión, entorno) se mantienen más o menos constantes durante TODAS las fases, sin desaparecer."
+  },
+  {
+    "id": 568,
+    "question": "¿Cuál de las siguientes combinaciones de factores favorece TODA ella la estructura centralizada controlada (CC)?",
+    "options": [
+      "Problema difícil + equipo de larga duración + baja modularidad",
+      "Alta fiabilidad + mucha comunicación + plazo flexible",
+      "Problema sencillo + programa grande + alta modularidad + plazo rígido",
+      "Todas favorecen la CC"
+    ],
+    "answer": 2,
+    "explanation": "La CC se ve favorecida por problemas sencillos, programas grandes, alta modularidad, plazos rígidos y poca comunicación. Las combinaciones a y b describen la DD."
+  },
+  {
+    "id": 569,
+    "question": "¿Cuál es el orden CORRECTO de los cinco niveles del modelo CMM de gestión del personal (P-CMM)?",
+    "options": [
+      "Inicial → Definido → Repetible → Gestionado → Optimizado",
+      "Inicial → Repetible → Definido → Gestionado → Optimizado",
+      "Repetible → Inicial → Definido → Optimizado → Gestionado",
+      "Inicial → Repetible → Gestionado → Definido → Optimizado"
+    ],
+    "answer": 1,
+    "explanation": "Los cinco niveles del P-CMM son: Inicial (ad-hoc), Repetible (políticas de mejora), Definido (gestión estandarizada), Gestionado (metas cuantitativas) y Optimizado (mejora continua)."
+  },
+  {
+    "id": 570,
+    "question": "En el P-CMM, ¿qué caracteriza al nivel ‘Definido’?",
+    "options": [
+      "La gestión de recursos humanos es ‘ad-hoc’",
+      "Se establecen metas cuantitativas",
+      "La gestión de recursos humanos está estandarizada para toda la organización",
+      "La mejora continua de métodos"
+    ],
+    "answer": 2,
+    "explanation": "El nivel Definido implica una gestión de recursos humanos estandarizada para la organización. 'Ad-hoc' es Inicial, las metas cuantitativas son Gestionado y la mejora continua es Optimizado."
+  },
+  {
+    "id": 571,
+    "question": "Una tarea presenta BAC = 1000, BCWS = 1000, BCWP = 1000 y ACWP = 1200. ¿Cuál de las siguientes afirmaciones es CIERTA?",
+    "options": [
+      "La tarea ya ha terminado (BCWP = BAC) según la agenda, pero ha gastado 200 de más",
+      "La tarea va adelantada y con ahorro",
+      "La tarea aún no ha comenzado",
+      "Todas son falsas"
+    ],
+    "answer": 0,
+    "explanation": "Como BCWS = BAC, la tarea debería haber terminado; y como BCWP = BAC, HA terminado según la agenda (SV = 0). Pero CV = 1000 − 1200 = −200: se han gastado 200 de más (CPI ≈ 0,83). Es el ejemplo resuelto del temario."
+  },
+  {
+    "id": 572,
+    "question": "Una tarea presenta BAC = 1000, BCWS = 500, BCWP = 0 y ACWP = 0. ¿Cuál de las siguientes afirmaciones es CIERTA?",
+    "options": [
+      "La tarea va según lo previsto",
+      "La tarea ha terminado",
+      "La tarea debería haber comenzado (BCWS > 0) pero aún no lo ha hecho: va retrasada, aunque sin coste real todavía",
+      "Todas son falsas"
+    ],
+    "answer": 2,
+    "explanation": "BCWS = 500 indica que ya debería haberse realizado trabajo por ese valor; BCWP = 0 dice que no se ha hecho nada (SV = −500: retrasada) y ACWP = 0 que aún no se ha gastado nada."
+  },
+  {
+    "id": 573,
+    "question": "Una tarea presenta BAC = 2000, BCWS = 1000, BCWP = 500 y ACWP = 1500. ¿Cuál de las siguientes afirmaciones es FALSA?",
+    "options": [
+      "La tarea va retrasada respecto a la agenda (SV = −500)",
+      "Se ha completado el 25 % de la tarea",
+      "Está gastando mucho más de lo previsto (CV = −1000)",
+      "Su SPI es 2"
+    ],
+    "answer": 3,
+    "explanation": "SPI = BCWP/BCWS = 500/1000 = 0,5, no 2; por eso esa afirmación es falsa. Las demás: SV = −500 (retrasada), % completado = BCWP/BAC = 25 %, CV = 500−1500 = −1000 (sobrecoste)."
+  },
+  {
+    "id": 574,
+    "question": "Una tarea tiene SPI = 0,5 y CPI = 2. ¿Cuáles afirmaciones son ciertas? (I) va muy retrasada; (II) gasta la mitad de lo previsto por trabajo realizado; (III) va adelantada.",
+    "options": ["Solo I", "Solo I y II", "Solo II y III", "Todas son falsas"],
+    "answer": 1,
+    "explanation": "SPI = 0,5 → muy retrasada (I cierta). CPI = 2 → por cada euro gastado se obtiene el doble de valor: gasta la mitad de lo previsto (II cierta). III es falsa."
+  },
+  {
+    "id": 575,
+    "question": "Datos EVA (BAC/BCWS/BCWP/ACWP) — T1: 1000/1000/1000/1000; T2: 1500/1500/1000/1500; T3: 1000/500/500/250; T4: 2000/0/0/0. ¿Cuál afirmación es FALSA?",
+    "options": [
+      "T1 ha terminado exactamente según lo previsto en agenda y coste",
+      "T2 debería haber terminado, pero va retrasada y gastando de más",
+      "T3 va según la agenda y con ahorro",
+      "T4 va retrasada porque aún no ha comenzado"
+    ],
+    "answer": 3,
+    "explanation": "T4 tiene BCWS = 0: todavía NO debía haber comenzado, así que no va retrasada; por eso es falsa. (T1: SV=0, CV=0 y BCWP=BAC; T2: SV=−500, CV=−500 con BCWS=BAC; T3: SV=0, CV=+250.)"
+  },
+  {
+    "id": 576,
+    "question": "Sobre las holguras, ¿cuál de las siguientes igualdades es CORRECTA?",
+    "options": [
+      "HT = límite de comienzo − comienzo anticipado = límite de fin − fin anticipado",
+      "HT = fin anticipado − comienzo anticipado",
+      "HT = comienzo anticipado − límite de comienzo",
+      "HT = duración de la actividad − holgura libre"
+    ],
+    "answer": 0,
+    "explanation": "La holgura total puede calcularse como LC − CA o, equivalentemente, LF − FA. La opción b es la duración, la c tiene el signo invertido y la d no es una igualdad válida."
+  },
+  {
+    "id": 577,
+    "question": "Una actividad tiene comienzo anticipado el día 4, duración 6 y límite de fin el día 10. ¿Qué podemos afirmar?",
+    "options": [
+      "Tiene holgura total 2",
+      "Es una actividad crítica (HT = 0)",
+      "Tiene holgura total 4",
+      "No se puede calcular"
+    ],
+    "answer": 1,
+    "explanation": "HT = LF − CA − duración = 10 − 4 − 6 = 0: la actividad es crítica (está en el camino crítico); cualquier retraso suyo retrasa el proyecto."
+  },
+  {
+    "id": 578,
+    "question": "A precede a B. HT(A) = 3 y HL(A) = 1. Si A se retrasa 5 días, ¿qué ocurre?",
+    "options": [
+      "No ocurre nada",
+      "B pierde 4 días de holgura pero el proyecto no se retrasa",
+      "El proyecto se retrasa 5 días",
+      "El proyecto se retrasa 2 días (el retraso supera la holgura total de A en 2)"
+    ],
+    "answer": 3,
+    "explanation": "El retraso (5) supera la holgura total de A (3): el proyecto se retrasa 5 − 3 = 2 días (y B, lógicamente, también se desplaza)."
+  },
+  {
+    "id": 579,
+    "question": "En un proyecto, G no es crítica (HT(G) = 4) y M es crítica (HT(M) = 0). Si G se retrasa 4 días y M se retrasa 3 días, ¿qué ocurre con el proyecto?",
+    "options": [
+      "Se retrasa 7 días",
+      "No se retrasa nada",
+      "Se retrasa 3 días: G consume exactamente su holgura y el retraso de M (crítica) va íntegro al proyecto",
+      "Se retrasa 4 días"
+    ],
+    "answer": 2,
+    "explanation": "G se retrasa justo su holgura total (4 = HT), así que no afecta al fin del proyecto. M es crítica (HT = 0): sus 3 días de retraso se trasladan íntegros al proyecto. Total: 3 días. (Es el estilo del Ejercicio 1 del temario.)"
+  },
+  {
+    "id": 580,
+    "question": "Dos caminos comparten la actividad final C (duración 5): A(4)→C y B(6)→C. ¿Cuál es la duración del camino crítico?",
+    "options": ["9 días", "15 días", "10 días", "11 días"],
+    "answer": 3,
+    "explanation": "Camino A→C: 4+5 = 9. Camino B→C: 6+5 = 11. El crítico es el más largo: 11 días (15 sería sumar A+B+C, que no es un camino)."
+  },
+  {
+    "id": 581,
+    "question": "Sobre la herramienta MAKE, ¿cuál de las siguientes afirmaciones es FALSA?",
+    "options": [
+      "Mantiene la correspondencia entre código fuente y versiones de código objeto",
+      "El usuario especifica las dependencias de los componentes",
+      "Recompila siempre todos los ficheros del sistema, hayan cambiado o no",
+      "Fuerza la recompilación de los ficheros cuyo fuente cambió después de crearse el objeto"
+    ],
+    "answer": 2,
+    "explanation": "MAKE recompila solo los ficheros cuyo código fuente ha cambiado después de crearse el código objeto (por fechas), no todos siempre; por eso esa afirmación es falsa."
+  },
+  {
+    "id": 582,
+    "question": "¿Cuál de las siguientes preguntas NO forma parte de las que responde una auditoría de configuración?",
+    "options": [
+      "¿Se ha hecho el cambio especificado?",
+      "¿Cuál ha sido el coste económico exacto del cambio?",
+      "¿Se han seguido los estándares de Ingeniería del Software?",
+      "¿Se han actualizado adecuadamente todos los ECS relacionados?"
+    ],
+    "answer": 1,
+    "explanation": "La auditoría responde a: ¿se hizo el cambio?, ¿se siguieron los estándares?, ¿se siguieron los procedimientos para señalar/registrar/divulgar el cambio? y ¿se actualizaron los ECS? El coste económico no es una de sus preguntas."
+  },
+  {
+    "id": 583,
+    "question": "Las cláusulas informativas de protección de datos se estructuran en dos capas. ¿Qué contenido pertenece a la PRIMERA capa (básica)?",
+    "options": [
+      "Identidad del responsable, finalidad principal, base jurídica y derechos básicos",
+      "Los datos completos del DPD y el procedimiento detallado para ejercer derechos",
+      "El registro de actividades de tratamiento completo",
+      "El contrato con el encargado del tratamiento"
+    ],
+    "answer": 0,
+    "explanation": "La primera capa (básica) contiene la identidad del responsable, la finalidad principal, la base jurídica y los derechos básicos; los datos completos (DPD, finalidades detalladas, destinatarios, procedimiento) van en la segunda capa."
+  },
+  {
+    "id": 584,
+    "question": "Sobre los contratos con encargados de tratamiento (Art. 28 RGPD), ¿cuál de las siguientes afirmaciones es CIERTA?",
+    "options": [
+      "Solo son necesarios para empresas de más de 250 empleados",
+      "Son opcionales si hay confianza con el proveedor",
+      "Solo se exigen para datos de categorías especiales",
+      "Son obligatorios siempre que un tercero acceda a datos personales por cuenta del responsable"
+    ],
+    "answer": 3,
+    "explanation": "El contrato (o acto jurídico vinculante) con el encargado es obligatorio siempre que un tercero acceda a datos para prestar un servicio al responsable; su base legal es el Art. 28 RGPD."
+  },
+  {
+    "id": 585,
+    "question": "En el Registro de la Propiedad Intelectual, el impreso de ‘transmisiones inter vivos’ corresponde a:",
+    "options": [
+      "La primera inscripción de un autor que también es titular",
+      "Titulares que adquirieron los derechos por cesión, en una segunda o sucesiva inscripción",
+      "Titulares que adquirieron los derechos por herencia",
+      "Todas son falsas"
+    ],
+    "answer": 1,
+    "explanation": "El impreso de transmisiones inter vivos lo cumplimentan los titulares que adquirieron los derechos por cesión del autor u otro titular, en una segunda o sucesiva inscripción. La herencia es 'mortis causa' y la primera inscripción del autor-titular usa el impreso 1 A-T."
+  },
+  {
+    "id": 586,
+    "question": "Sobre los plazos y el alcance de la propiedad intelectual, ¿cuál de las siguientes afirmaciones es CIERTA?",
+    "options": [
+      "La Ley de Propiedad Intelectual protege las ideas abstractas",
+      "El plazo de los derechos patrimoniales de una persona jurídica cuenta desde la muerte del autor",
+      "Los derechos patrimoniales de una persona jurídica duran 70 años desde la divulgación (en la física, 70 años tras la muerte)",
+      "Todas son ciertas"
+    ],
+    "answer": 2,
+    "explanation": "Para persona jurídica el plazo es de 70 años desde la divulgación; para persona física, 70 años tras la muerte del autor. Las ideas abstractas no se protegen (solo obras concretas)."
+  },
+  {
+    "id": 587,
+    "question": "Según el temario, ¿cuáles son de las POCAS responsabilidades del profesional informático que están específicamente legisladas?",
+    "options": [
+      "La pérdida de información (protección de datos) y la propiedad intelectual",
+      "La calidad del código y la documentación",
+      "La elección del lenguaje de programación",
+      "Todas las responsabilidades están legisladas por igual"
+    ],
+    "answer": 0,
+    "explanation": "El temario señala que la pérdida de información es, junto con la propiedad intelectual, una de las pocas responsabilidades que está legislada (RGPD y normativa española)."
+  },
+  {
+    "id": 588,
+    "question": "¿Cuál de los siguientes SÍ es uno de los Diez Mandamientos de la Ética Informática?",
+    "options": [
+      "Podrás husmear en archivos ajenos si tienes acceso técnico",
+      "Podrás copiar software propietario para uso educativo",
+      "Usarás la computadora para dar testimonio cuando convenga",
+      "No interferirás con el trabajo informático de otras personas"
+    ],
+    "answer": 3,
+    "explanation": "Entre los Diez Mandamientos están: no dañar a otros, no interferir con el trabajo informático ajeno, no husmear en archivos ajenos, no robar, no dar falso testimonio y no copiar software propietario sin pagar."
+  },
+  {
+    "id": 589,
+    "question": "Según los puntos clave del Tema 9, la colegiación es obligatoria:",
+    "options": [
+      "En todas las profesiones",
+      "Solo en las profesiones reguladas",
+      "Nunca es obligatoria",
+      "Solo para los ingenieros informáticos"
+    ],
+    "answer": 1,
+    "explanation": "La colegiación solo es obligatoria en las profesiones reguladas; como la Ingeniería Informática no lo es en España, su colegiación es voluntaria."
+  },
+  {
+    "id": 590,
+    "question": "Sobre los indicadores EVA: (I) SV y CV son variaciones (restas); (II) SPI y CPI son índices (divisiones); (III) un valor de SV = 0 con CV < 0 es imposible. ¿Cuáles son ciertas?",
+    "options": ["Solo I", "Solo II", "Solo I y II", "Todas son ciertas"],
+    "answer": 2,
+    "explanation": "I y II son ciertas (SV=BCWP−BCWS, CV=BCWP−ACWP; SPI=BCWP/BCWS, CPI=BCWP/ACWP). III es falsa: SV=0 con CV<0 es perfectamente posible (según agenda pero con sobrecoste, como el ejemplo T1 del temario)."
   }
 ]
