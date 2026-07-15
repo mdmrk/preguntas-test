@@ -1874,14 +1874,16 @@
       "No debería haber comenzado pero sí lo ha hecho"
     ],
     "answer": 2,
-    "image": "gpi001.png"
+    "image": "gpi001.png",
+    "explanation": "En la tabla EVA, la Tarea 4 tiene BCWS=0 (no estaba planificada para comenzar todavía) y BCWP=0 (no ha generado ningún valor ganado), pero presenta ACWP=800 (coste real incurrido). Esto es incoherente: no se puede haber gastado coste real en una tarea que no ha producido nada de valor ganado ni estaba programada. Por tanto, el valor de ACWP es erróneo."
   },
   {
     "id": 199,
     "question": "Analizando los valores EVA de la imagen...¿qué podemos decir de la tarea 2?",
     "options": ["Todas son ciertas", "Va retrasada", "No ha comenzado", "Debería haber comenzado"],
     "answer": 3,
-    "image": "gpi002.png"
+    "image": "gpi002.png",
+    "explanation": "La Tarea 2 tiene BCWS=1200 (estaba planificado que a estas alturas ya se hubiera realizado trabajo), pero BCWP=0 y ACWP=0 (no ha generado valor ganado ni coste real). Esto significa que, según la planificación, debería haber comenzado pero aún no lo ha hecho. Su SV = BCWP − BCWS = −1200 confirma el retraso."
   },
   {
     "id": 200,
@@ -1893,7 +1895,8 @@
       "El proyecto va atrasado y su productividad es alta"
     ],
     "answer": 2,
-    "image": "gpi003.png"
+    "image": "gpi003.png",
+    "explanation": "Para el conjunto del proyecto (fila Tarea R): SV = BCWP − BCWS = 1800 − 2800 = −1000 < 0, por lo que el proyecto va atrasado respecto a la agenda. Además, CPI = BCWP/ACWP = 1800/2600 ≈ 0,69 < 1, lo que indica una productividad/eficiencia baja (se gasta más de lo que se avanza). En conjunto: el proyecto va atrasado y su productividad es baja."
   },
   {
     "id": 201,
@@ -1905,7 +1908,8 @@
       "No podemos saber si ha terminado"
     ],
     "answer": 3,
-    "image": "gpi004.png"
+    "image": "gpi004.png",
+    "explanation": "La Tarea 1 tiene BCWS=600 y BCWP=600 (SV=0). Como BCWS es el coste presupuestado del trabajo programado hasta la fecha (no el presupuesto total de la tarea) y desconocemos el presupuesto total (BAC) de la tarea, no podemos saber qué porcentaje representa ese BCWP=600 sobre el total. Por ello no es posible determinar si la tarea ha terminado."
   },
   {
     "id": 202,
@@ -1917,7 +1921,8 @@
       "Todas son falsas"
     ],
     "answer": 0,
-    "image": "gpi005.png"
+    "image": "gpi005.png",
+    "explanation": "La Tarea 3 tiene BCWP=1200 y ACWP=800, luego CV = BCWP − ACWP = +400 > 0. Un CV positivo significa que se ha gastado menos de lo presupuestado para el trabajo realizado, es decir, está gastando menos de lo previsto. (Además SV = 1200 − 1000 = +200, va adelantada)."
   },
   {
     "id": 203,
@@ -1929,7 +1934,8 @@
       "Todos los anteriores"
     ],
     "answer": 3,
-    "image": "gpi006.png"
+    "image": "gpi006.png",
+    "explanation": "En el diagrama de Gantt se aprecia una estructura secuencial por fases (Requerimientos → Análisis y diseño → Implementación → Pruebas → Despliegue) propia del modelo en Cascada; incluye una tarea explícita de 'Implementar prototipo', característica del modelo de Prototipado; y la organización iterativa con componentes reutilizables y equipos pequeños en plazos cortos es propia del Desarrollo Rápido de Aplicaciones (RAD). Por tanto, aparecen elementos de todos los anteriores."
   },
   {
     "id": 204,
@@ -1941,14 +1947,16 @@
       "No podemos saber si ha terminado"
     ],
     "answer": 3,
-    "image": "gpi007.png"
+    "image": "gpi007.png",
+    "explanation": "La Tarea 1 tiene BCWS=600 y BCWP=600 (SV=0). Como BCWS es el coste presupuestado del trabajo programado hasta la fecha (no el presupuesto total de la tarea) y desconocemos el presupuesto total (BAC), no podemos saber qué porcentaje supone BCWP=600 sobre el total. Por ello no es posible determinar si la tarea ha terminado."
   },
   {
     "id": 205,
     "question": "¿Qué podemos decir de la tarea 2?",
     "options": ["No ha comenzado", "Debería haber comenzado", "Va retrasada", "Todas son ciertas"],
     "answer": 3,
-    "image": "gpi008.png"
+    "image": "gpi008.png",
+    "explanation": "La Tarea 2 tiene BCWS=1200 pero BCWP=0 y ACWP=0. Esto implica simultáneamente que: no ha comenzado (BCWP=0 y ACWP=0), que debería haber comenzado según lo planificado (BCWS=1200) y que va retrasada (SV = BCWP − BCWS = −1200 < 0). Como las tres afirmaciones son correctas, la respuesta es 'Todas son ciertas'."
   },
   {
     "id": 206,
@@ -1960,7 +1968,8 @@
       "Todas son falsas"
     ],
     "answer": 0,
-    "image": "gpi009.png"
+    "image": "gpi009.png",
+    "explanation": "La Tarea 3 tiene BCWP=1200 y ACWP=800, luego CV = BCWP − ACWP = +400 > 0. Un CV positivo indica que se ha gastado menos de lo presupuestado para el trabajo realizado, es decir, está gastando menos de lo previsto."
   },
   {
     "id": 207,
@@ -1972,7 +1981,8 @@
       "No debería haber comenzado pero sí lo ha hecho"
     ],
     "answer": 2,
-    "image": "gpi010.png"
+    "image": "gpi010.png",
+    "explanation": "La Tarea 4 tiene BCWS=0 (no estaba planificada para comenzar) y BCWP=0 (sin valor ganado), pero ACWP=800 (coste real incurrido). No se puede tener coste real en una tarea que no ha generado ningún valor ganado ni estaba programada, por lo que el valor de ACWP es erróneo."
   },
   {
     "id": 208,
@@ -1984,7 +1994,8 @@
       "El proyecto va atrasado y su productividad es baja"
     ],
     "answer": 3,
-    "image": "gpi011.png"
+    "image": "gpi011.png",
+    "explanation": "Para el conjunto del proyecto (fila Tarea R): SV = BCWP − BCWS = 1800 − 2800 = −1000 < 0, por lo que el proyecto va atrasado. Y CPI = BCWP/ACWP = 1800/2600 ≈ 0,69 < 1, lo que indica una productividad baja. En conjunto: el proyecto va atrasado y su productividad es baja."
   },
   {
     "id": 209,
