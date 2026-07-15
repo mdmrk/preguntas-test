@@ -1,0 +1,2133 @@
+[
+  {
+    "id": 1,
+    "question": "En el análisis EVA, el indicador CV se calcula como:",
+    "options": ["BCWP - ACWP", "BCWP - BCWS", "BCWP / BCWS", "BCWP / ACWP"],
+    "answer": 0,
+    "explanation": "La Variación del Coste (CV — Cost Variance) se calcula como la diferencia entre el Valor Acumulado o Ganado (BCWP) y el Coste Real (ACWP). Esto nos indica si estamos gastando más o menos de lo presupuestado para el trabajo realizado."
+  },
+  {
+    "id": 2,
+    "question": "¿Cuál de las siguientes no es una técnica de estimación de costes de un proyecto?",
+    "options": [
+      "Todas son técnicas de estimación",
+      "Juicio experto",
+      "Modelado de algoritmos de costes",
+      "Ley de Parkinson"
+    ],
+    "answer": 0,
+    "explanation": "Todas las opciones listadas (Juicio experto, Modelado algorítmico como COCOMO y la Ley de Parkinson) son técnicas válidas y reconocidas para la estimación de costes en ingeniería del software."
+  },
+  {
+    "id": 3,
+    "question": "Tenemos tres actividades: A, B y C. A precede a B. Las holguras totales son: HT(A)=2, HT(B)=4 y HT(C)=3. Las holguras libres son: HL(A)=3, HL(B)=2, HL(C)=3. Si A se retrasa 2 días, ¿Qué les ocurre a B y C?",
+    "options": [
+      "Las condiciones iniciales no se pueden dar",
+      "B se convierte en crítica",
+      "Nada, ya que no sobrepasamos la holgura total de A",
+      "La holgura total de B y C pasa a ser de 2 y 1 día respectivamente"
+    ],
+    "answer": 0,
+    "explanation": "Por definición matemática en la planificación de proyectos (PERT/CPM), la Holgura Libre (HL) de una actividad nunca puede ser mayor que su Holgura Total (HT). En este enunciado se indica que HT(A)=2 y HL(A)=3, lo cual es teóricamente imposible."
+  },
+  {
+    "id": 6,
+    "question": "Suponemos que en un momento del desarrollo de un proyecto tenemos unos valores de SPI>1 y CPI<1. ¿Qué podemos decir en esta situación?",
+    "options": [
+      "Puede ser que nos sobre personal",
+      "Deberíamos aumentar el ritmo de trabajo para ajustarnos a la agenda",
+      "Puede ser que nos falte personal",
+      "Esos dos valores son incompatibles"
+    ],
+    "answer": 0,
+    "explanation": "Un SPI > 1 indica que vamos adelantados en la agenda, mientras que un CPI < 1 indica que estamos gastando más de lo presupuestado. Esta combinación suele darse cuando se ha asignado demasiado personal o recursos costosos para acelerar el proyecto (crashing), lo que genera sobrecostes por baja eficiencia o rendimientos decrecientes."
+  },
+  {
+    "id": 13,
+    "question": "En el análisis EVA, la tarea/proyecto está por encima de lo presupuestado si:",
+    "options": ["BCWP < BCWS", "BCWP > ACWP", "Todas son falsas", "BCWP > BCWS"],
+    "answer": 2,
+    "explanation": "Estar 'por encima de lo presupuestado' significa haber incurrido en un sobrecoste, es decir, el Coste Real (ACWP) es mayor que el Valor Acumulado (BCWP). La formulación matemática sería BCWP < ACWP. Como ninguna opción muestra esto correctamente, todas son falsas."
+  },
+  {
+    "id": 18,
+    "question": "¿Cómo se calcula el CPI?",
+    "options": ["BCWP - ACWP", "BCWP - BCWS", "BCWP / ACWP", "BCWP * ACWP"],
+    "answer": 2,
+    "explanation": "El CPI (Cost Performance Index) mide la eficiencia del coste. Se calcula dividiendo el Valor Acumulado (BCWP) entre el Coste Real incurrido (ACWP). Un CPI menor a 1 indica sobrecoste."
+  },
+  {
+    "id": 20,
+    "question": "¿Cómo se calcula el SV?",
+    "options": ["BCWP - BCWS", "BCWP / ACWP", "BCWP / BCWS", "BCWP - ACWP"],
+    "answer": 0,
+    "explanation": "El SV (Schedule Variance o Variación del Cronograma) se calcula restando el Valor Planificado (BCWS) al Valor Acumulado/Ganado (BCWP). Un SV negativo indica que vamos con retraso."
+  },
+  {
+    "id": 21,
+    "question": "¿Cómo se calcula el SPI?",
+    "options": ["BCWP / ACWP", "BCWP - ACWP", "BCWP / BCWS", "BCWP - BCWS"],
+    "answer": 2,
+    "explanation": "El SPI (Schedule Performance Index) es el indicador de eficiencia en el tiempo. Se calcula dividiendo el Valor Acumulado (BCWP) entre el Valor Planificado inicial (BCWS). Un SPI menor a 1 implica retraso."
+  },
+  {
+    "id": 23,
+    "question": "En una iteración del Plan detallado se establece una actividad de revisión de los riesgos del proyecto. Dicha actividad consiste en:",
+    "options": [
+      "Identificar más riesgos para el proyecto",
+      "Volver a analizar la probabilidad y los efectos de todos los riesgos del plan",
+      "Identificar las estrategias para los riesgos más probables",
+      "Revisar las estrategias establecidas en el plan de riesgos"
+    ],
+    "answer": 1,
+    "explanation": "La gestión de riesgos es continua. Revisar los riesgos significa reevaluar los riesgos conocidos periódicamente, ya que a medida que avanza el proyecto, la probabilidad de que ocurran y el impacto que tendrían pueden haber cambiado."
+  },
+  {
+    "id": 24,
+    "question": "¿Qué podemos decir de una tarea si conocemos los valores BCWS = 1200 y BCWP = ACWP?",
+    "options": [
+      "Debería haber comenzado",
+      "Va retrasada",
+      "Todas son ciertas (asumiendo que los valores reales son 0)",
+      "No ha comenzado"
+    ],
+    "answer": 2,
+    "explanation": "Si BCWS es 1200, significa que había trabajo planificado para esta fecha (debería haber comenzado). Si BCWP y ACWP son 0, significa que no se ha hecho nada ni se ha gastado nada (no ha comenzado y por tanto va retrasada). Esta pregunta asume implícitamente que BCWP=ACWP=0."
+  },
+  {
+    "id": 26,
+    "question": "¿Cómo se calcula el CV?",
+    "options": ["BCWP - BCWS", "BCWP / BCWS", "BCWP - ACWP", "BCWP / ACWP"],
+    "answer": 2,
+    "explanation": "CV (Variación del Coste) es el Valor Acumulado (BCWP) menos el Coste Real (ACWP). Un CV negativo indica sobrecoste."
+  },
+  {
+    "id": 29,
+    "question": "En el análisis EVA, la tarea/proyecto va con retraso según la agenda si:",
+    "options": ["BCWP < ACWP", "BCWP < BCWS", "BCWP > ACWP", "BCWP > BCWS"],
+    "answer": 1,
+    "explanation": "Un proyecto va con retraso cuando el trabajo que realmente se ha completado (BCWP, Valor Acumulado) es inferior al trabajo que se había planificado tener listo para esta fecha (BCWS, Valor Planificado)."
+  },
+  {
+    "id": 30,
+    "question": "Tenemos tres actividades: A, B y C. A precede a B. Las holguras totales son: HT(A)=4, HT(B)=2, HT(C)=3. Las holguras libres son: HL(A)=3, HL(B)=2, HL(C)=3. Si A se retrasa 4 días, ¿qué les ocurre a B y C?",
+    "options": [
+      "La holgura total de B y C pasa a ser de 1 y 2 días respectivamente",
+      "Ninguna de las anteriores es cierta",
+      "B se convierte en crítica",
+      "Nada, ya que no sobrepasamos la holgura total de A"
+    ],
+    "answer": 0,
+    "explanation": "El retraso de A (4 días) excede su Holgura Libre (3 días) en 1 día. Ese día extra se le resta forzosamente a la Holgura Total de las actividades sucesoras. Por tanto, HT(B) pasa de 2 a 1, y HT(C) pasa de 3 a 2."
+  },
+  {
+    "id": 32,
+    "question": "En el análisis EVA, el indicador SV se calcula como:",
+    "options": ["BCWP - BCWS", "BCWP / BCWS", "BCWP / ACWP", "BCWP - ACWP"],
+    "answer": 0,
+    "explanation": "Schedule Variance (SV) = Valor Acumulado (BCWP) menos Valor Planificado (BCWS). Un SV negativo indica retraso."
+  },
+  {
+    "id": 33,
+    "question": "¿Cuál de las siguientes no es una técnica de estimación de costes?",
+    "options": ["Modelado algorítmico de costes", "Juicio Experto", "Ley de Parkinson", "Gantt"],
+    "answer": 3,
+    "explanation": "El diagrama de Gantt es una herramienta de planificación temporal y monitorización de agendas, no una técnica para estimar cuánto esfuerzo (dinero/horas) costará el proyecto."
+  },
+  {
+    "id": 40,
+    "question": "En el análisis EVA, el indicador CPI se calcula como:",
+    "options": ["BCWP / ACWP", "BCWP - BCWS", "BCWP - ACWP", "BCWP / BCWS"],
+    "answer": 0,
+    "explanation": "CPI (Cost Performance Index) = BCWP / ACWP. Un CPI > 1 significa que estamos por debajo del presupuesto; un CPI < 1 indica sobrecoste."
+  },
+  {
+    "id": 47,
+    "question": "Tenemos la actividad A, B y C. A precede a B. Las holguras totales son HT(A)=2, HT(B)=4, HT(C)=3. Las holguras libres son HL(A)=3, HL(B)=2, HL(C)=3. Si A se retrasa 2 días, ¿qué les ocurre a B y C?",
+    "options": [
+      "Nada, ya que no sobrepasamos la holgura total de A",
+      "La holgura total de B y C pasa a ser de 2 y 1 días respectivamente",
+      "B se convierte en crítica",
+      "Las condiciones iniciales no se pueden dar"
+    ],
+    "answer": 3,
+    "explanation": "Misma trampa que en la pregunta 3. Matemáticamente, la Holgura Libre (HL) no puede exceder a la Holgura Total (HT). HT(A)=2 y HL(A)=3 es un grafo de dependencias imposible."
+  },
+  {
+    "id": 48,
+    "question": "En el análisis EVA, la tarea/proyecto está por encima de lo presupuesto si:",
+    "options": ["BCWP > BCWS", "BCWP > ACWP", "BCWP < ACWP", "BCWP - ACWP"],
+    "answer": 2,
+    "explanation": "Estar por encima del presupuesto significa gastar más dinero real (ACWP) del valor que realmente hemos aportado al construir el software (BCWP). Por tanto, BCWP < ACWP, lo que da una Variación de Coste (CV) negativa."
+  },
+  {
+    "id": 53,
+    "question": "¿Cuál de estas características no es de la metodología SCRUM?",
+    "options": [
+      "Demo al cliente al final de cada iteración",
+      "Metodología iterativa e incremental",
+      "Reuniones diarias",
+      "Descanso cada 15 días para renovar las ideas"
+    ],
+    "answer": 3,
+    "explanation": "Scrum es iterativo (Sprints) e incluye Dailys (reuniones diarias) y Reviews (demos). Sin embargo, no incluye 'descansos para renovar ideas' como parte de su framework oficial; los Sprints se suceden uno tras otro de manera continua."
+  },
+  {
+    "id": 57,
+    "question": "¿Qué podemos decir de una tarea si conocemos los valores BCWS=1200 y BCWP=ACWP?",
+    "options": [
+      "Todas son ciertas (asumiendo que ACWP/BCWP son 0)",
+      "Va retrasada",
+      "Debería haber comenzado",
+      "No ha comenzado"
+    ],
+    "answer": 0,
+    "explanation": "Si hay Valor Planificado (BCWS > 0) significa que por fecha debería haber comenzado. Al ser BCWP y ACWP iguales (y típicamente en estos ejercicios asumiendo que son 0), implica que no ha comenzado y, por ende, va retrasada. Por tanto, todas son ciertas."
+  },
+  {
+    "id": 68,
+    "question": "Una de las recomendaciones que se deben tener en cuenta durante la estimación de recursos y tiempo de un proyecto informático es:",
+    "options": [
+      "Planificar siempre como si los recursos estuvieran asignados al 100%",
+      "Asignar varias tareas en el mismo periodo, así si una no se puede realizar se realizará otra",
+      "Todas las respuestas son válidas",
+      "Identificar las tareas que consumen más recursos"
+    ],
+    "answer": 3,
+    "explanation": "Identificar las tareas críticas que absorben la mayoría del presupuesto o esfuerzo (regla del 80/20) es vital para enfocarse en su estimación precisa. Es un error planificar asumiendo un rendimiento del 100% (siempre hay bajas, reuniones, etc.)."
+  },
+  {
+    "id": 70,
+    "question": "¿Qué podemos decir de una tarea si conocemos los valores BCWS=BCWP=0 y ACWP=800?",
+    "options": [
+      "No debería haber comenzado, pero sí lo ha hecho",
+      "Debería haber comenzado y no lo ha hecho",
+      "El valor ACWP es erróneo",
+      "El valor BCWP es erróneo"
+    ],
+    "answer": 0,
+    "explanation": "Si BCWS es 0, no estaba planificado hacer nada aún. Si BCWP es 0, no hemos aportado valor al proyecto. Sin embargo, ACWP = 800 significa que ya hemos incurrido en un coste real (quizás hemos comprado licencias o un servidor antes de tiempo). Por tanto, no debía empezar, pero ya hay gastos."
+  },
+  {
+    "id": 71,
+    "question": "¿Cuál de las siguientes no es técnica de estimación de costes de un proyecto?",
+    "options": ["Juicio Experto", "Gantt", "Modelado algorítmico de costes", "Ley de Parkinson"],
+    "answer": 1,
+    "explanation": "El diagrama de Gantt pertenece a la fase de programación y seguimiento temporal del proyecto (Scheduling), no se utiliza para hacer estimaciones de esfuerzo, dinero o líneas de código."
+  },
+  {
+    "id": 75,
+    "question": "En el análisis EVA la tarea/proyecto va adelantada según la agenda si:",
+    "options": ["BCWP > ACWP", "BCWP < BCWS", "BCWP > BCWS", "BCWP < ACWP"],
+    "answer": 2,
+    "explanation": "Si el Valor Acumulado del trabajo realizado (BCWP) es mayor que el Valor Planificado que esperábamos tener completado a día de hoy (BCWS), el SPI será mayor a 1 y por tanto vamos por delante en la agenda."
+  },
+  {
+    "id": 76,
+    "question": "En el caso de producirse un retraso en una actividad, ¿cuál de las siguientes medidas sería la que menos afectaría a la agenda del proyecto?",
+    "options": [
+      "Reemplazar a los recursos asignados a la misma",
+      "Eliminar alguna funcionalidad",
+      "Retrasarla según su holgura libre",
+      "Retrasarla según su holgura total"
+    ],
+    "answer": 2,
+    "explanation": "La Holgura Libre es el tiempo que una tarea puede retrasarse sin afectar ni al final del proyecto ni a la fecha de inicio de sus tareas sucesoras inmediatas. Consumir esta holgura es la forma más 'indolora' de absorber un retraso."
+  },
+  {
+    "id": 78,
+    "question": "El método de planificación PERT es:",
+    "options": [
+      "Una definición en base a una red (grafo dirigido) de dependencias de tareas que llevan al final del proyecto",
+      "Una definición en forma de grafo no dirigido de tareas que ayudan a visualizar el Plan del Proyecto",
+      "Una definición en forma de barras que dan un aspecto visual temporal del Plan del Proyecto",
+      "Ninguna de las anteriores"
+    ],
+    "answer": 0,
+    "explanation": "PERT (Project Evaluation and Review Technique) utiliza grafos de red donde los nodos o arcos (grafos dirigidos) representan las actividades y sus prelaciones temporales (dependencias), lo que permite calcular el camino crítico."
+  },
+  {
+    "id": 83,
+    "question": "En relación con la técnica PERT podemos afirmar que:",
+    "options": [
+      "Una actividad comprendida entre dos actividades no tiene por qué ser crítica",
+      "En una actividad cualquiera el tiempo last podría ser menor que el tiempo early de dicha actividad",
+      "En una actividad el tiempo early es el tiempo máximo en el que se puede iniciar las actividades siguientes sin que ello retrase la duración del proyecto",
+      "Ninguna de las anteriores"
+    ],
+    "answer": 0,
+    "explanation": "Que una actividad tenga predecesoras y sucesoras no implica obligatoriamente que pertenezca al camino crítico. Puede tener holgura. El tiempo last (fin tardío) jamás puede ser menor que el tiempo early (inicio temprano) en una actividad."
+  },
+  {
+    "id": 85,
+    "question": "El plazo de protección de los derechos de autor según la LPI es:",
+    "options": [
+      "20 años a partir de la fecha de registro",
+      "70 años a partir de la fecha de registro",
+      "70 años a partir del fallecimiento del autor",
+      "20 años a partir del fallecimiento del autor"
+    ],
+    "answer": 2,
+    "explanation": "Según la Ley de Propiedad Intelectual vigente en España, los derechos de explotación duran toda la vida del autor y se extienden hasta 70 años después de su fallecimiento o declaración de fallecimiento."
+  },
+  {
+    "id": 87,
+    "question": "Una editorial solicita a una empresa de informática que desarrolle un software para un nuevo libro electrónico. El presidente de la empresa de informática asigna a un director de proyecto para que se haga cargo del desarrollo del proyecto. En este ámbito tenemos:",
+    "options": [
+      "Patrocinador: Director de Proyecto. Vendedor/Socio de Negocio: Editorial",
+      "Gerente de operaciones: Editorial. PMO: Presidente de la empresa de informática. Usuario: persona que compra el libro en el mercado",
+      "Patrocinador: Presidente de la empresa de informática. Cliente: Editorial. Usuario: Persona que compra el libro electrónico en el mercado",
+      "Ninguna de las anteriores"
+    ],
+    "answer": 2,
+    "explanation": "El 'Cliente' es quien solicita y paga (Editorial), el 'Usuario' es el destinatario final del producto (comprador del libro), y el 'Patrocinador' es la alta dirección de la empresa ejecutora que habilita los fondos y nombra al PM."
+  },
+  {
+    "id": 89,
+    "question": "Tras la elaboración del correspondiente grafo PERT, una empresa sabe que las holguras de las 4 actividades de uno de sus proyectos son las siguientes: H(A)=3; H(B)=2; H(C)=0; H(D)=4. Con esa información indica cuál de las siguientes afirmaciones es correcta:",
+    "options": [
+      "El máximo retraso que puede experimentar la actividad A sin que se modifique la duración final del proyecto es 2",
+      "Si la holgura de la actividad D se reduce en una unidad no se alteraría la duración final del proyecto",
+      "La duración final del proyecto será de 9",
+      "Ninguna de las anteriores"
+    ],
+    "answer": 1,
+    "explanation": "La actividad C es crítica (holgura 0). La actividad D tiene una holgura de 4, lo que significa que puede retrasarse hasta 4 unidades de tiempo sin afectar la entrega. Si su holgura se reduce en 1 (pasa a 3), sigue sin sobrepasar su límite, por lo que la duración final permanece inalterada."
+  },
+  {
+    "id": 92,
+    "question": "En un proyecto software:",
+    "options": [
+      "Los riesgos se establecen con precisión en la fase de planificación, ya que suelen ser estables a lo largo del mismo",
+      "Los riesgos identificados se suelen reducir sistemáticamente, es decir, se desarrollan acciones que permitan aumentar la probabilidad de que un riesgo ocurra y/o disminuya el impacto negativo que produciría",
+      "Los riesgos suelen ir cambiando a lo largo del mismo, por lo que en instancias predefinidas conviene rehacer las evaluaciones de riesgos",
+      "Ninguna de las anteriores"
+    ],
+    "answer": 2,
+    "explanation": "Los riesgos son dinámicos. Es necesario revisarlos (monitorización de riesgos) de forma periódica en el proyecto."
+  },
+  {
+    "id": 96,
+    "question": "Propiedades que se pueden medir en un software para evaluar su calidad:",
+    "options": [
+      "Cumplimiento normativo, planificación temporal y adaptabilidad a nuevos entornos",
+      "Características operativas, adaptabilidad a nuevos entornos y capacidad para soportar cambios",
+      "Cumplimiento de la planificación temporal y de los requisitos funcionales del proyecto",
+      "Ninguna de las anteriores"
+    ],
+    "answer": 1,
+    "explanation": "Siguiendo los modelos clásicos de calidad del software (como McCall o Boehm), la calidad del producto se mide por factores del producto final: operabilidad, mantenibilidad (soportar cambios) y portabilidad (nuevos entornos). La planificación temporal es calidad del proceso, no del producto."
+  },
+  {
+    "id": 97,
+    "question": "En un grafo de actividades (PERT):",
+    "options": [
+      "No se consideran relaciones de precedencia entre las actividades",
+      "La holgura total de una actividad indica cuánto se puede atrasar su comienzo sin afectar la duración total del proyecto",
+      "El fin más tardío de una actividad es lo más tarde que puede comenzar una actividad, afectando con su retraso a la duración total del proyecto",
+      "Ninguna de las anteriores"
+    ],
+    "answer": 1,
+    "explanation": "La holgura total es precisamente el margen de tiempo del que dispone una tarea para demorarse sin posponer la fecha final de todo el proyecto."
+  },
+  {
+    "id": 100,
+    "question": "Según el modelo de estimación de 'Puntos de función', ¿Cuál de las siguientes afirmaciones es incorrecta?",
+    "options": [
+      "Depende del lenguaje de programación",
+      "Realiza la estimación a partir de los requisitos",
+      "Es un modelo adecuado para proyectos de gestión",
+      "Ninguna de las anteriores"
+    ],
+    "answer": 0,
+    "explanation": "La principal característica (y ventaja) de la técnica de Puntos de Función respecto a contar líneas de código es que es completamente independiente del lenguaje de programación subyacente."
+  },
+  {
+    "id": 102,
+    "question": "En su proyecto ya se ha finalizado con la identificación de los interesados agregando información sobre sus roles, áreas de conocimiento, necesidades, intereses y expectativas ¿Cuál debería ser el siguiente paso a realizar?",
+    "options": [
+      "Evaluar cómo podrían influir los interesados en el proyecto",
+      "Controlar la participación de los interesados en el proyecto",
+      "Clasificar a los interesados según su influencia e intereses",
+      "Definir la mejor estrategia de comunicaciones con cada grupo de interesados"
+    ],
+    "answer": 3,
+    "explanation": "Una vez recabada toda la información, necesidades e intereses (lo que implica que ya han sido analizados y clasificados), el paso inmediatamente posterior es usar ese análisis para definir el plan de involucramiento o la estrategia de comunicación adecuada para cada uno de ellos."
+  },
+  {
+    "id": 105,
+    "question": "Tenemos una tarea en Microsoft Project de 2 días de duración con un recurso asignado a tiempo completo ¿Qué ocurre si le asignamos otro recurso adicional también a tiempo completo?",
+    "options": [
+      "El trabajo necesario para realizar la tarea se duplicará al ser dos recursos",
+      "La duración de la tarea se reducirá a la mitad",
+      "Depende del tipo de tarea que tenga establecido",
+      "Nada, simplemente tiene en cuenta que la tarea la realizan 2 recursos"
+    ],
+    "answer": 2,
+    "explanation": "En MS Project, el comportamiento al añadir recursos depende del 'Tipo de Tarea' configurado: si es de Trabajo Fijo, la duración bajará a la mitad; si es de Duración Fija, el tiempo no cambiará pero el trabajo asignado se recalculará; si es de Unidades Fijas, actuará de manera dependiente a la configuración de condicionamiento por esfuerzo."
+  },
+  {
+    "id": 106,
+    "question": "Indica cuál de las siguientes afirmaciones sobre dirección de proyectos es FALSA:",
+    "options": [
+      "La dirección de proyectos no es la encargada de equilibrar las restricciones contrapuestas del proyecto",
+      "Los cinco grupos de procesos en la dirección de proyectos son: iniciación, planificación, ejecución, seguimiento y control y cierre",
+      "El objetivo principal de la dirección de proyectos es cumplir con los requisitos del proyecto",
+      "Ninguna de las anteriores"
+    ],
+    "answer": 0,
+    "explanation": "La afirmación es completamente falsa. Justamente, uno de los roles principales de la Dirección de Proyectos es lidiar y encontrar el punto de equilibrio entre las 'restricciones contrapuestas' (el clásico triángulo de hierro: alcance, tiempo, coste y calidad)."
+  },
+  {
+    "id": 108,
+    "question": "La holgura de una tarea:",
+    "options": [
+      "Siempre es cero",
+      "Es el tiempo máximo que puede durar una tarea en caso de comenzar en su inicio temprano y concluir en su fin tardío",
+      "Es el tiempo que disponemos para jugar con el inicio de una tarea sin afectar al proyecto",
+      "Ninguna de las anteriores"
+    ],
+    "answer": 2,
+    "explanation": "La holgura (ya sea libre o total) es un margen temporal. Representa el 'colchón' de días del que dispone el director de proyecto para retrasar el inicio o alargar la ejecución de una actividad sin que esto provoque un retraso en la fecha de entrega final estipulada."
+  },
+  {
+    "id": 109,
+    "question": "Indica cuál de las siguientes características aplican al modelo Canvas de negocio:",
+    "options": [
+      "Se puede dejar apartados sin rellenar, al menos con rellenar el 50 por ciento es válido",
+      "Se utiliza solo para proyectos de robótica",
+      "Es una herramienta nueva que surge después de la segunda guerra mundial",
+      "Se basa en existencia de una propuesta de valor que tenemos que comunicar al cliente mediante un modelo canvas y rellenando todos los apartados"
+    ],
+    "answer": 3,
+    "explanation": "El Business Model Canvas (Lienzo de Modelo de Negocio) es una herramienta estratégica que debe rellenarse en su totalidad (los 9 bloques fundamentales) para tener sentido, y su núcleo central sobre el que pivota todo el modelo es la 'Propuesta de Valor'."
+  },
+  {
+    "id": 110,
+    "question": "¿Cuál de los siguientes NO es un modelo de estimación del software?",
+    "options": [
+      "COCOMO",
+      "Técnica Delphi",
+      "WBS (Work Breakdown Structure)",
+      "Ninguna de las anteriores"
+    ],
+    "answer": 2,
+    "explanation": "COCOMO es un modelo algorítmico y Delphi es una técnica de juicio experto por consenso; ambos son para estimar. WBS (o EDT) no estima nada directamente, es una técnica de descomposición estructural para dividir el alcance del proyecto en partes manejables."
+  },
+  {
+    "id": 112,
+    "question": "Los diagramas de GANTT:",
+    "options": [
+      "Se usan para la planificación temporal",
+      "Se usan para la estimación",
+      "Son unos diagramas de red que permiten calcularles caminos y tiempos límite",
+      "Ninguna de las anteriores"
+    ],
+    "answer": 0,
+    "explanation": "El diagrama de Gantt es una representación gráfica de barras (no de red, como PERT) en la que el eje horizontal representa el calendario temporal y el eje vertical las tareas. Sirve para planificar agendas y ver solapamientos temporales."
+  },
+  {
+    "id": 114,
+    "question": "COCOMO versus PUNTOS DE FUNCIÓN:",
+    "options": [
+      "Ninguna de las anteriores es correcta",
+      "Son dos técnicas distintas pero persiguen exactamente los mismos objetivos: dimensionar proyectos, plazos y costes",
+      "COCOMO estima costes, PUNTOS DE FUNCIÓN no aporta directamente una estimación de costes",
+      "Ninguna de las anteriores"
+    ],
+    "answer": 2,
+    "explanation": "Los Puntos de Función miden únicamente el tamaño del software basándose en su funcionalidad; por sí solos no dan dinero ni horas. Para saber el coste, necesitas introducir ese tamaño en un modelo matemático algorítmico como COCOMO, que es quien calcula el coste final."
+  },
+  {
+    "id": 118,
+    "question": "En el análisis EVA, la tarea/proyecto está por debajo de lo presupuesto si:",
+    "options": ["BCWP > ACWP", "BCWP > BCWS", "BCWP < ACWP", "BCWS < ACWP"],
+    "answer": 0,
+    "explanation": "Estar 'por debajo de lo presupuestado' es positivo: significa que hemos ahorrado dinero. Ocurre cuando el Valor Ganado por el trabajo que hemos entregado (BCWP) es mayor que el Coste Real que hemos tenido que pagar por hacerlo (ACWP). Esto nos da un CV positivo y un CPI mayor a 1."
+  },
+  {
+    "id": 119,
+    "question": "¿Cuál de los siguientes parámetros EVA nos informa de la cantidad de trabajo planificado al final del proyecto/tarea?",
+    "options": ["BCWP", "BAC", "ACWP", "BCWS"],
+    "answer": 1,
+    "explanation": "BAC (Budget At Completion - Presupuesto a la Conclusión) es la suma total de todo el Valor Planificado (BCWS) previsto para el proyecto. Representa el presupuesto base total de todo el trabajo al llegar al 100% de finalización."
+  },
+  {
+    "id": 121,
+    "question": "Usted está trabajando en un proyecto de investigación y desarrollo para lanzar un nuevo producto al mercado. Le quedan pocos días para finalizar el proyecto y está teniendo muchos problemas con los usuarios, el cliente, el patrocinador y los miembros del equipo ¿Qué debería haber realizado primero para mitigar este tipo de problemas?",
+    "options": [
+      "Identificar a todos los interesados",
+      "Crear una matriz para la gestión de conflictos",
+      "Determinar los requisitos y expectativas de los interesados",
+      "Mantener una comunicación fluida con los interesados"
+    ],
+    "answer": 0,
+    "explanation": "El problema descrito es una mala gestión de stakeholders (interesados). El paso número uno absoluto en gestión de proyectos, antes siquiera de poder averiguar sus expectativas o comunicarse con ellos, es haberlos 'Identificado a todos' en la fase de iniciación."
+  },
+  {
+    "id": 124,
+    "question": "La Ley Orgánica 15/1999, de Protección de Datos de Carácter Personal tiene por objeto garantizar y proteger, en lo que concierne al tratamiento de los datos personales:",
+    "options": [
+      "Las libertades públicas de las personas físicas",
+      "Las libertades públicas y los derechos fundamentales de las personas físicas",
+      "Las libertades públicas y los derechos fundamentales de las personas físicas y jurídicas",
+      "Ninguna de las anteriores"
+    ],
+    "answer": 1,
+    "explanation": "Tanto en la antigua LOPD 15/1999 como en la actual LOPDGDD, la protección de datos es un derecho fundamental que ampara única y exclusivamente a las personas físicas (ciudadanos). Las personas jurídicas (empresas o sociedades) no tienen datos personales que proteger bajo esta ley."
+  },
+  {
+    "id": 127,
+    "question": "Respecto a la protección de datos del software de gestión de autónomos, indica cuál de las siguientes sería una acción obligatoria para cumplir con la legislación actual en el caso de desarrollarla como aplicación web:",
+    "options": [
+      "Ninguna de las otras respuestas es correcta",
+      "Nombrar un delegado de protección de datos",
+      "Incluir un apartado de aviso legal en la web",
+      "Registrar los ficheros con los datos de carácter personal en la AEPD"
+    ],
+    "answer": 2,
+    "explanation": "Con la ley actual (RGPD), la opción de registrar ficheros en la AEPD ya no existe, fue eliminada. Nombrar un DPO solo es obligatorio en casos de alto riesgo o volumen. Para cualquier aplicación web actual, es imperativo legal incluir los textos informativos de aviso legal y política de privacidad."
+  },
+  {
+    "id": 131,
+    "question": "Durante una reunión con algunos de los interesados del proyecto, se le pide al PM añadir más trabajo al alcance del proyecto. El PM revisó la correspondencia con el patrocinador antes de que se firmara el acta de constitución y éste se negó a aportar más financiación para el trabajo que supone modificar el alcance mencionado por los interesados. Lo mejor que el PM puede hacer es:",
+    "options": [
+      "Evaluar el impacto sobre el proyecto antes de añadir más trabajo al alcance",
+      "Decirle a los interesados que no se puede modificar ese aspecto del alcance",
+      "Añadir el trabajo si el cronograma del proyecto lo permite",
+      "Dejar que el patrocinador se entere de la solicitud de los interesados"
+    ],
+    "answer": 1,
+    "explanation": "Si el Patrocinador (Sponsor, quien tiene la autoridad de presupuesto final) ya negó tajantemente la financiación para este punto exacto del alcance, el PM debe gestionar las expectativas bloqueando la solicitud e informando a los interesados."
+  },
+  {
+    "id": 147,
+    "question": "Tenemos tres actividades: A, B y C. A precede a B. Las holguras son: HT(A)=4, HL(A)=3; HT(B)=2, HL(B)=2; HT(C)=3, HL(C)=3. Si A se retrasa 4 días, ¿qué ocurre con B y C?",
+    "options": [
+      "La HT de B y C pasa a ser de 1 y 2 días respectivamente",
+      "Nada",
+      "Ninguna de las anteriores es cierta",
+      "B se convierte en crítica"
+    ],
+    "answer": 0,
+    "explanation": "Retrasarse 4 días excede la holgura libre de A (que era 3) en 1 día. Ese día rebosante 'se come' obligatoriamente un día de la holgura total de sus tareas sucesoras. HT(B) 2-1=1, HT(C) 3-1=2."
+  },
+  {
+    "id": 148,
+    "question": "¿Qué ocurriría si en un proyecto el valor EVA de BCWS supera al valor CPTR?",
+    "options": [
+      "El proyecto va atrasado",
+      "Tenemos que abortar el proyecto, puesto que estamos en la situación 'inaceptable'",
+      "El proyecto va con margen de tiempo",
+      "Nos indica que tenemos que prescindir de personal ya que estamos gastando más de lo previsto"
+    ],
+    "answer": 0,
+    "explanation": "BCWS es el Valor Planificado. CPTR es el acrónimo en español de BCWP (Valor Ganado). Si BCWS > BCWP, significa que hemos conseguido avanzar menos de lo que teníamos planeado para esta fecha. Resultado: El proyecto va retrasado."
+  },
+  {
+    "id": 154,
+    "question": "En el análisis EVA, la tarea/proyecto está por debajo de lo presupuestado si:",
+    "options": ["BCWP < ACWP", "BCWP > ACWS", "BCWP > ACWP", "Ninguna de las anteriores"],
+    "answer": 2,
+    "explanation": "Estar por debajo de lo presupuestado significa tener un balance positivo (ahorro). Ocurre cuando el Valor Ganado por lo que hemos construido (BCWP) es numéricamente superior al Coste Real (ACWP) que hemos tenido que pagar por ello."
+  },
+  {
+    "id": 156,
+    "question": "¿Qué podemos decir de una tarea si conocemos los valores BCWS=BCWP=600 y ACWP=1000?",
+    "options": [
+      "Va adelantada respecto a la agenda",
+      "Ha gastado menos de lo previsto",
+      "Va atrasada respecto a la agenda",
+      "No podemos saber si ha terminado sin conocer su BAC"
+    ],
+    "answer": 3,
+    "explanation": "Con BCWP=BCWS sabemos que va en tiempo. Con ACWP>BCWP sabemos que tiene sobrecoste. Pero para dictaminar si está 'terminada', necesitamos saber cuál era el Presupuesto a la Conclusión (BAC). Si el BAC era 600, ha terminado (con pérdidas); si el BAC era 1200, va por la mitad."
+  },
+  {
+    "id": 179,
+    "question": "Has creado el acta de constitución del proyecto, pero no se pudo aprobar. Tu director y su jefe pidieron que el proyecto se iniciara inmediatamente ¿Cuál de las siguientes es la mejor opción?",
+    "options": [
+      "Comenzar el proyecto lo antes posible para no perder tiempo",
+      "Mostrarle a tu director el impacto de proceder sin una aprobación",
+      "Comenzar el trabajo solo con las actividades de la ruta crítica",
+      "No comenzar el proyecto"
+    ],
+    "answer": 1,
+    "explanation": "Al no estar firmada el acta, el PM no tiene autoridad formal ni el presupuesto está asegurado. La mejor práctica es educar a los superiores ('managing up') documentando y mostrando los enormes impactos y riesgos de proceder de manera no oficial."
+  },
+  {
+    "id": 190,
+    "question": "Tras la elaboración del correspondiente grafo PERT, el camino crítico de un proyecto es A-F-G con duraciones de 10, 19 y 10 semanas respectivamente. Podemos asegurar que:",
+    "options": [
+      "La duración total del proyecto es de 39 semanas",
+      "La duración total del proyecto es de 19 semanas",
+      "Estas actividades son las únicas que pueden retrasarse",
+      "Ninguna de las anteriores"
+    ],
+    "answer": 0,
+    "explanation": "La definición del camino crítico establece que su duración marca la duración mínima del proyecto entero. Sumar la duración de todas las actividades secuenciales que componen dicho camino (10 + 19 + 10 = 39) determina el tiempo mínimo absoluto necesario para finalizar el proyecto."
+  },
+  {
+    "id": 191,
+    "question": "La duración del proyecto es de 15 semanas, la varianza del camino crítico es 3,11 y su desviación estándar 1,76 semanas. La probabilidad de que el proyecto termine en 16 semanas es:",
+    "options": ["62,5%", "71,2%", "77,3%", "Ninguna de las anteriores"],
+    "answer": 1,
+    "explanation": "Se calcula el valor Z: Z = (Fecha Objetivo - Fecha Esperada) / Desviación Estándar → Z = (16 - 15) / 1,76 = 0,568. Consultando Z=0,56 en una tabla de distribución normal estandarizada se obtiene una probabilidad aproximada del 71,2%."
+  },
+  {
+    "id": 192,
+    "question": "Tres proyectos: A (70% ganar 5.000€ y 30% ganar 10.000€), B (50% ganar 70.000€ y 50% perder 10.000€), C (25% ganar 20.000€ y 75% perder 35.000€). ¿Cuál es el mejor?",
+    "options": ["Proyecto A", "Proyecto B", "Proyecto C", "Ninguna de las anteriores"],
+    "answer": 1,
+    "explanation": "Se aplica el análisis de Valor Monetario Esperado (EMV): A = (0.7 × 5.000) + (0.3 × 10.000) = +6.500€ | B = (0.5 × 70.000) + (0.5 × -10.000) = +30.000€ | C = (0.25 × 20.000) + (0.75 × -35.000) = -21.250€ | El Proyecto B ofrece el mayor beneficio ponderado."
+  },
+  {
+    "id": 194,
+    "question": "Tres proyectos: A (50% ganar 50.000€ y 50% perder 10.000€), B (30% ganar 40.000€ y 70% ganar 10.000€), C (45% ganar 50.000€ y 55% perder 5.000€). ¿Cuál es el peor?",
+    "options": ["Proyecto A", "Proyecto B", "Proyecto C", "Ninguna de las anteriores"],
+    "answer": 1,
+    "explanation": "Aplicando el Valor Monetario Esperado (EMV): A = (0.5 × 50.000) + (0.5 × -10.000) = +20.000€ | B = (0.3 × 40.000) + (0.7 × 10.000) = +19.000€ | C = (0.45 × 50.000) + (0.55 × -5.000) = +19.750€ | El proyecto B es el que menos valor aporta estadísticamente."
+  },
+  {
+    "id": 197,
+    "question": "Indica cuál de las siguientes afirmaciones sobre dirección de proyectos es incorrecta:",
+    "options": [
+      "El objetivo principal de la dirección de proyectos es cumplir con los requisitos del proyecto",
+      "Los cinco grupos de procesos en la dirección de proyectos son: iniciación, planificación, ejecución, seguimiento y control y cierre",
+      "La dirección de proyectos no es la encargada de equilibrar las restricciones contrapuestas del proyecto",
+      "Ninguna de las anteriores"
+    ],
+    "answer": 2,
+    "explanation": "Es una premisa totalmente incorrecta afirmar que la dirección de proyectos no es la encargada de las restricciones. Por el contrario, lograr el equilibrio y manejar con maestría los trade-offs entre Coste, Tiempo, Alcance, Calidad y Riesgo es la mismísima esencia de la Dirección de Proyectos."
+  },
+  {
+    "id": 198,
+    "question": "Analizando los valores EVA de la imagen...¿qué podemos decir de la tarea 4?",
+    "options": [
+      "El valor BCWP es erróneo",
+      "Debería haber comenzado y no lo ha hecho",
+      "El valor ACWP es erróneo",
+      "No debería haber comenzado pero sí lo ha hecho"
+    ],
+    "answer": 2,
+    "image": "gpi001.png",
+    "explanation": "En la tabla EVA, la Tarea 4 tiene BCWS=0 (no estaba planificada para comenzar todavía) y BCWP=0 (no ha generado ningún valor ganado), pero presenta ACWP=800 (coste real incurrido). Esto es incoherente: no se puede haber gastado coste real en una tarea que no ha producido nada de valor ganado ni estaba programada. Por tanto, el valor de ACWP es erróneo."
+  },
+  {
+    "id": 199,
+    "question": "Analizando los valores EVA de la imagen...¿qué podemos decir de la tarea 2?",
+    "options": ["Todas son ciertas", "Va retrasada", "No ha comenzado", "Debería haber comenzado"],
+    "answer": 3,
+    "image": "gpi002.png",
+    "explanation": "La Tarea 2 tiene BCWS=1200 (estaba planificado que a estas alturas ya se hubiera realizado trabajo), pero BCWP=0 y ACWP=0 (no ha generado valor ganado ni coste real). Esto significa que, según la planificación, debería haber comenzado pero aún no lo ha hecho. Su SV = BCWP − BCWS = −1200 confirma el retraso."
+  },
+  {
+    "id": 200,
+    "question": "Analizando los valores EVA de la imagen...¿qué podemos decir del proyecto en su conjunto?",
+    "options": [
+      "El proyecto va adelantado y su productividad es alta",
+      "El proyecto va adelantado y su productividad es baja",
+      "El proyecto va atrasado y su productividad es baja",
+      "El proyecto va atrasado y su productividad es alta"
+    ],
+    "answer": 2,
+    "image": "gpi003.png",
+    "explanation": "Para el conjunto del proyecto (fila Tarea R): SV = BCWP − BCWS = 1800 − 2800 = −1000 < 0, por lo que el proyecto va atrasado respecto a la agenda. Además, CPI = BCWP/ACWP = 1800/2600 ≈ 0,69 < 1, lo que indica una productividad/eficiencia baja (se gasta más de lo que se avanza). En conjunto: el proyecto va atrasado y su productividad es baja."
+  },
+  {
+    "id": 201,
+    "question": "Analizando los valores EVA de la imagen...¿qué podemos decir de la tarea 1?",
+    "options": [
+      "Ha gastado menos de lo previsto",
+      "Va adelantada respecto a la agenda",
+      "Va atrasada respecto a la agenda",
+      "No podemos saber si ha terminado"
+    ],
+    "answer": 3,
+    "image": "gpi004.png",
+    "explanation": "La Tarea 1 tiene BCWS=600 y BCWP=600 (SV=0). Como BCWS es el coste presupuestado del trabajo programado hasta la fecha (no el presupuesto total de la tarea) y desconocemos el presupuesto total (BAC) de la tarea, no podemos saber qué porcentaje representa ese BCWP=600 sobre el total. Por ello no es posible determinar si la tarea ha terminado."
+  },
+  {
+    "id": 202,
+    "question": "Analizando los valores EVA de la imagen...¿qué podemos decir de la tarea 3?",
+    "options": [
+      "Está gastando menos de lo previsto",
+      "Va retrasada",
+      "No ha comenzado",
+      "Todas son falsas"
+    ],
+    "answer": 0,
+    "image": "gpi005.png",
+    "explanation": "La Tarea 3 tiene BCWP=1200 y ACWP=800, luego CV = BCWP − ACWP = +400 > 0. Un CV positivo significa que se ha gastado menos de lo presupuestado para el trabajo realizado, es decir, está gastando menos de lo previsto. (Además SV = 1200 − 1000 = +200, va adelantada)."
+  },
+  {
+    "id": 203,
+    "question": "En el siguiente diagrama Gantt ¿qué modelo de proceso se está siguiendo?",
+    "options": [
+      "Desarrollo Rápido de aplicaciones",
+      "Cascada",
+      "Prototipado",
+      "Todos los anteriores"
+    ],
+    "answer": 3,
+    "image": "gpi006.png",
+    "explanation": "En el diagrama de Gantt se aprecia una estructura secuencial por fases (Requerimientos → Análisis y diseño → Implementación → Pruebas → Despliegue) propia del modelo en Cascada; incluye una tarea explícita de 'Implementar prototipo', característica del modelo de Prototipado; y la organización iterativa con componentes reutilizables y equipos pequeños en plazos cortos es propia del Desarrollo Rápido de Aplicaciones (RAD). Por tanto, aparecen elementos de todos los anteriores."
+  },
+  {
+    "id": 204,
+    "question": "¿Qué podemos decir de la tarea 1?",
+    "options": [
+      "Ha gastado menos de lo previsto",
+      "Va adelantada respecto a la agenda",
+      "Va atrasada respecto a la agenda",
+      "No podemos saber si ha terminado"
+    ],
+    "answer": 3,
+    "image": "gpi007.png",
+    "explanation": "La Tarea 1 tiene BCWS=600 y BCWP=600 (SV=0). Como BCWS es el coste presupuestado del trabajo programado hasta la fecha (no el presupuesto total de la tarea) y desconocemos el presupuesto total (BAC), no podemos saber qué porcentaje supone BCWP=600 sobre el total. Por ello no es posible determinar si la tarea ha terminado."
+  },
+  {
+    "id": 205,
+    "question": "¿Qué podemos decir de la tarea 2?",
+    "options": ["No ha comenzado", "Debería haber comenzado", "Va retrasada", "Todas son ciertas"],
+    "answer": 3,
+    "image": "gpi008.png",
+    "explanation": "La Tarea 2 tiene BCWS=1200 pero BCWP=0 y ACWP=0. Esto implica simultáneamente que: no ha comenzado (BCWP=0 y ACWP=0), que debería haber comenzado según lo planificado (BCWS=1200) y que va retrasada (SV = BCWP − BCWS = −1200 < 0). Como las tres afirmaciones son correctas, la respuesta es 'Todas son ciertas'."
+  },
+  {
+    "id": 206,
+    "question": "¿Qué podemos decir de la tarea 3?",
+    "options": [
+      "Está gastando menos de lo previsto",
+      "Va retrasada",
+      "No ha comenzado",
+      "Todas son falsas"
+    ],
+    "answer": 0,
+    "image": "gpi009.png",
+    "explanation": "La Tarea 3 tiene BCWP=1200 y ACWP=800, luego CV = BCWP − ACWP = +400 > 0. Un CV positivo indica que se ha gastado menos de lo presupuestado para el trabajo realizado, es decir, está gastando menos de lo previsto."
+  },
+  {
+    "id": 207,
+    "question": "¿Qué podemos decir de la tarea 4?",
+    "options": [
+      "Debería haber comenzado y no lo ha hecho",
+      "El valor BCWP es erróneo",
+      "El valor ACWP es erróneo",
+      "No debería haber comenzado pero sí lo ha hecho"
+    ],
+    "answer": 2,
+    "image": "gpi010.png",
+    "explanation": "La Tarea 4 tiene BCWS=0 (no estaba planificada para comenzar) y BCWP=0 (sin valor ganado), pero ACWP=800 (coste real incurrido). No se puede tener coste real en una tarea que no ha generado ningún valor ganado ni estaba programada, por lo que el valor de ACWP es erróneo."
+  },
+  {
+    "id": 208,
+    "question": "¿Qué podemos decir del proyecto en su conjunto?",
+    "options": [
+      "El proyecto va adelantado y su productividad es baja",
+      "El proyecto va atrasado y su productividad es alta",
+      "El proyecto va adelantado y su productividad es alta",
+      "El proyecto va atrasado y su productividad es baja"
+    ],
+    "answer": 3,
+    "image": "gpi011.png",
+    "explanation": "Para el conjunto del proyecto (fila Tarea R): SV = BCWP − BCWS = 1800 − 2800 = −1000 < 0, por lo que el proyecto va atrasado. Y CPI = BCWP/ACWP = 1800/2600 ≈ 0,69 < 1, lo que indica una productividad baja. En conjunto: el proyecto va atrasado y su productividad es baja."
+  },
+  {
+    "id": 210,
+    "question": "¿Cuál de las siguientes NO es una característica especial del software que dificulta su gestión?",
+    "options": [
+      "Es un producto intangible",
+      "No existe un entendimiento claro sobre el proceso del software",
+      "Su coste de replicación (copia) es muy elevado",
+      "Los grandes sistemas software suelen ser únicos"
+    ],
+    "answer": 2,
+    "explanation": "Las características especiales son: producto intangible, falta de entendimiento claro del proceso y unicidad de los grandes sistemas. El coste de copiar software es casi nulo, no elevado."
+  },
+  {
+    "id": 212,
+    "question": "La duración de un proyecto (TDEV en COCOMO 2), según el temario:",
+    "options": [
+      "Depende del esfuerzo total y es independiente del número de personas que trabajen",
+      "Es proporcional al número de personas asignadas",
+      "Se reduce siempre a la mitad al duplicar el personal",
+      "No puede estimarse hasta finalizar el diseño"
+    ],
+    "answer": 0,
+    "explanation": "El tiempo para completar un proyecto no es proporcional al número de personas; TDEV depende del esfuerzo (PM) total invertido."
+  },
+  {
+    "id": 222,
+    "question": "La secuencia de actividades con holgura total 0 que determina la duración mínima del proyecto es:",
+    "options": ["El cronograma", "La línea base", "El diagrama de Gantt", "El camino crítico"],
+    "answer": 3,
+    "explanation": "El camino crítico es la secuencia de actividades con holgura total 0; cualquier retraso en él retrasa el proyecto."
+  },
+  {
+    "id": 224,
+    "question": "En el análisis EVA, el indicador CPI (Índice de Rendimiento del Coste, IRC) se calcula como:",
+    "options": ["BCWP − ACWP", "BCWP / BCWS", "BCWP / ACWP", "BCWS − BCWP"],
+    "answer": 2,
+    "explanation": "CPI = BCWP/ACWP (valor acumulado entre coste real). BCWP−ACWP es la variación de coste (CV); BCWP/BCWS es el SPI."
+  },
+  {
+    "id": 225,
+    "question": "En el análisis EVA, la tarea/proyecto va ADELANTADA respecto a la agenda si:",
+    "options": ["BCWP < BCWS", "BCWP > BCWS", "ACWP > BCWP", "ACWP < BCWP"],
+    "answer": 1,
+    "explanation": "Si el valor acumulado (BCWP) supera al planificado (BCWS), SV>0 y SPI>1: se ha hecho más trabajo del previsto → adelantado."
+  },
+  {
+    "id": 226,
+    "question": "¿Qué podemos decir de una tarea si BCWS = BCWP = 0 y ACWP = 800?",
+    "options": [
+      "La tarea está terminada",
+      "La tarea va adelantada",
+      "La tarea va según lo previsto",
+      "El valor ACWP es erróneo"
+    ],
+    "answer": 3,
+    "explanation": "Si no había trabajo planificado ni realizado (BCWS=BCWP=0), no puede existir coste real de ese trabajo: ACWP=800 es incoherente."
+  },
+  {
+    "id": 227,
+    "question": "Según la LOPDGDD (L.O. 3/2018), ¿a partir de qué edad puede un menor prestar su consentimiento para el tratamiento de sus datos en España?",
+    "options": ["14 años", "12 años", "16 años", "18 años"],
+    "answer": 0,
+    "explanation": "La LOPDGDD fija la edad de consentimiento en 14 años (el RGPD permite hasta 16, pero España concreta 14)."
+  },
+  {
+    "id": 239,
+    "question": "Los puntos de objeto, frente a los puntos de función, se caracterizan por:",
+    "options": [
+      "Ser más difíciles de calcular en fases tempranas",
+      "Considerar únicamente líneas de código fuente",
+      "Ser más fáciles de estimar, pues sólo consideran pantallas, informes y módulos 3GL",
+      "No poder usarse en el modelo COCOMO 2"
+    ],
+    "answer": 2,
+    "explanation": "Los puntos de objeto son más fáciles de estimar a partir de una especificación porque sólo consideran pantallas, informes y módulos 3GL; por eso son útiles en fases tempranas."
+  },
+  {
+    "id": 241,
+    "question": "En COCOMO 2, el nivel que realiza las estimaciones basándose en líneas de código fuente es el nivel:",
+    "options": [
+      "Inicial de prototipado (puntos de objeto)",
+      "Inicial de diseño (puntos de función)",
+      "De mantenimiento",
+      "Post-arquitectura"
+    ],
+    "answer": 3,
+    "explanation": "COCOMO 2 tiene tres niveles; el post-arquitectura estima a partir de líneas de código fuente. El inicial de prototipado usa puntos de objeto y el inicial de diseño, puntos de función."
+  },
+  {
+    "id": 244,
+    "question": "En el análisis de riesgos, cada riesgo identificado se evalúa fundamentalmente según:",
+    "options": [
+      "Su probabilidad y sus efectos",
+      "Su coste de licencia",
+      "El número de líneas de código afectadas",
+      "La edad del equipo de desarrollo"
+    ],
+    "answer": 0,
+    "explanation": "El análisis de riesgos valora cada riesgo por su probabilidad (baja/moderada/alta) y sus efectos (tolerable/serio/catastrófico)."
+  },
+  {
+    "id": 250,
+    "question": "La holgura libre (HL) de una actividad es:",
+    "options": [
+      "El tiempo que puede retrasarse sin retrasar el proyecto",
+      "El tiempo que puede retrasarse permitiendo que las actividades siguientes empiecen lo antes posible",
+      "La suma de las duraciones del camino crítico",
+      "El coste real del trabajo realizado"
+    ],
+    "answer": 1,
+    "explanation": "La HL es el tiempo que una actividad puede retrasarse permitiendo que las siguientes comiencen lo más pronto posible; la HT, en cambio, mira el fin del proyecto."
+  },
+  {
+    "id": 251,
+    "question": "En el análisis EVA, el indicador SPI (Índice de Rendimiento de la Planificación, IRP) se calcula como:",
+    "options": ["BCWP / ACWP", "BCWP − BCWS", "BCWP / BCWS", "ACWP − BCWP"],
+    "answer": 2,
+    "explanation": "SPI = BCWP/BCWS (valor acumulado entre valor planificado). BCWP/ACWP es el CPI y BCWP−BCWS es la variación de la planificación (SV)."
+  },
+  {
+    "id": 252,
+    "question": "Si en una tarea el coste real (ACWP) es mayor que el valor acumulado (BCWP), podemos afirmar que la tarea:",
+    "options": [
+      "Está gastando más de lo previsto",
+      "Está gastando menos de lo previsto",
+      "Va adelantada respecto a la agenda",
+      "Ha terminado antes de tiempo"
+    ],
+    "answer": 0,
+    "explanation": "Si ACWP > BCWP, la variación de coste (CV = BCWP − ACWP) es negativa y CPI < 1: se gasta más de lo previsto para el trabajo realizado."
+  },
+  {
+    "id": 256,
+    "question": "Ante una brecha de seguridad que afecte a datos personales, ¿en qué plazo debe notificarse según el RGPD?",
+    "options": ["72 horas", "30 días", "6 meses", "1 año"],
+    "answer": 0,
+    "explanation": "La detección y notificación de brechas de seguridad debe realizarse en un plazo de 72 horas."
+  },
+  {
+    "id": 267,
+    "question": "¿Cuál de las siguientes NO es una actividad de gestión del proyecto según el temario?",
+    "options": [
+      "Estimación de costes",
+      "Evaluación del riesgo",
+      "La codificación de los módulos del sistema",
+      "Monitorización del proyecto"
+    ],
+    "answer": 2,
+    "explanation": "Entre las actividades de gestión figuran la calidad del producto, la evaluación del riesgo, la estimación de costes, la confección de agendas, la comunicación con el cliente y la monitorización. Codificar módulos es una actividad de desarrollo, no de gestión."
+  },
+  {
+    "id": 270,
+    "question": "La técnica de estimación conocida como “Ley de Parkinson” establece que:",
+    "options": [
+      "El coste depende de lo que el cliente esté dispuesto a pagar",
+      "El coste está en función de los recursos disponibles, utilizando todo el tiempo permitido",
+      "El coste se calcula por analogía con proyectos anteriores",
+      "El coste se obtiene siempre por juicio experto"
+    ],
+    "answer": 1,
+    "explanation": "Según la Ley de Parkinson, los costes se ajustan a los recursos disponibles usando todo el tiempo permitido; evita presupuestos abultados pero el sistema suele no terminarse."
+  },
+  {
+    "id": 280,
+    "question": "En el análisis EVA, el parámetro BCWS (valor planificado) representa:",
+    "options": [
+      "El coste presupuestado del trabajo que debería haberse completado hasta el momento",
+      "El coste real de lo que se ha gastado hasta el momento",
+      "El valor, en coste de línea base, del trabajo realmente realizado",
+      "El presupuesto total al finalizar el proyecto"
+    ],
+    "answer": 0,
+    "explanation": "BCWS (valor planificado) es cuánto trabajo, en coste presupuestado, debería haberse completado hasta el instante analizado. El coste real es ACWP y el valor acumulado, BCWP."
+  },
+  {
+    "id": 281,
+    "question": "En el análisis EVA, el parámetro ACWP (coste real) representa:",
+    "options": [
+      "El trabajo planificado hasta la fecha",
+      "El presupuesto total del proyecto",
+      "La holgura total del camino crítico",
+      "El coste realmente gastado en el trabajo realizado hasta el momento"
+    ],
+    "answer": 3,
+    "explanation": "ACWP (Actual Cost of Work Performed) es el coste realmente gastado en el trabajo ejecutado hasta el momento analizado."
+  },
+  {
+    "id": 282,
+    "question": "En el análisis EVA, el “valor acumulado” (earned value) se corresponde con el parámetro:",
+    "options": ["BCWS", "BCWP", "ACWP", "BAC"],
+    "answer": 1,
+    "explanation": "El valor acumulado o earned value es el BCWP (Budgeted Cost of Work Performed): valor, en coste de línea base, del trabajo realizado."
+  },
+  {
+    "id": 284,
+    "question": "¿Cuál de las siguientes NO es una de las métricas de seguimiento del proyecto que cita el Tema 6?",
+    "options": [
+      "El número de líneas de código escritas",
+      "Las fechas de inicio y fin",
+      "Las holguras totales y libres",
+      "El análisis del valor acumulado (EVA)"
+    ],
+    "answer": 0,
+    "explanation": "Las métricas de seguimiento son fechas de inicio/fin, duraciones, holguras totales y libres y el análisis del valor acumulado (EVA). Las líneas de código no figuran como métrica de seguimiento."
+  },
+  {
+    "id": 298,
+    "question": "¿Cuál de los siguientes NO es uno de los parámetros que se contabilizan al calcular los puntos de función?",
+    "options": [
+      "Entradas de usuario",
+      "Salidas de usuario",
+      "Interfaces externas",
+      "Líneas de código fuente"
+    ],
+    "answer": 3,
+    "explanation": "Los puntos de función cuentan entradas de usuario, salidas de usuario, peticiones/consultas, ficheros e interfaces externas, cada uno con su peso. Las líneas de código no intervienen en su cálculo."
+  },
+  {
+    "id": 301,
+    "question": "En COCOMO 2, los factores de escala (que afectan al exponente B) incluyen, entre otros:",
+    "options": [
+      "El color de la interfaz de usuario",
+      "La experiencia previa de la organización con este tipo de proyecto (precedentedness)",
+      "El número de comerciales de la empresa",
+      "La antigüedad del hardware de oficina"
+    ],
+    "answer": 1,
+    "explanation": "Los factores de escala del exponente incluyen la experiencia previa (precedentedness), la flexibilidad del desarrollo, la resolución de arquitectura/riesgos, la cohesión del equipo y la madurez del proceso."
+  },
+  {
+    "id": 309,
+    "question": "La base de datos de configuraciones sirve principalmente para:",
+    "options": [
+      "Calcular el presupuesto del proyecto",
+      "Registrar la información de las configuraciones y apoyar la evaluación del impacto del cambio",
+      "Almacenar los correos del cliente",
+      "Estimar los puntos de función"
+    ],
+    "answer": 1,
+    "explanation": "La base de datos de configuraciones registra la información relevante de las configuraciones y sirve de apoyo a la evaluación del impacto de un cambio."
+  },
+  {
+    "id": 310,
+    "question": "En el análisis EVA, el parámetro BAC (Budget At Completion) representa:",
+    "options": [
+      "El coste real gastado hasta la fecha",
+      "La holgura libre de la tarea",
+      "El valor acumulado hasta el momento",
+      "La cantidad de trabajo planificado (en coste) al finalizar el proyecto/tarea"
+    ],
+    "answer": 3,
+    "explanation": "BAC (Budget At Completion) es la cantidad de trabajo planificado, en coste, al finalizar el proyecto o tarea (el presupuesto total)."
+  },
+  {
+    "id": 312,
+    "question": "Una actividad A tiene su comienzo anticipado en el día 2, una duración de 7 días y su límite de fin (LF) en el día 15. ¿Cuál es su holgura total (HT)?",
+    "options": ["0 días", "9 días", "6 días", "24 días"],
+    "answer": 2,
+    "explanation": "La holgura total se calcula como HT = LF − comienzo anticipado − duración = 15 − 2 − 7 = 6 días (ejemplo del temario)."
+  },
+  {
+    "id": 318,
+    "question": "Según el temario, las infracciones muy graves en materia de protección de datos pueden alcanzar multas de hasta:",
+    "options": ["40.000 €", "1.000 €", "300 €", "20.000.000 € o el 4 % de la facturación"],
+    "answer": 3,
+    "explanation": "Las infracciones muy graves pueden multarse con más de 300.000 € y hasta 20.000.000 € o el 4 % de la facturación (leves hasta 40.000 €; graves de 40.001 a 300.000 €)."
+  },
+  {
+    "id": 322,
+    "question": "Entre las consecuencias legales de infringir la propiedad intelectual, el temario menciona (en España):",
+    "options": [
+      "Únicamente una advertencia verbal",
+      "La obligación de publicar el código como software libre",
+      "La pérdida del DNI",
+      "Multas e incluso penas de prisión (hasta 4 años y 288.000 €)"
+    ],
+    "answer": 3,
+    "explanation": "Infringir la propiedad intelectual puede acarrear demandas por uso no autorizado, multas, indemnizaciones e incluso prisión (en España, hasta 4 años y 288.000 €), además de daños económicos y reputacionales."
+  },
+  {
+    "id": 337,
+    "question": "Según el temario, ¿en qué emplea buena parte de su tiempo un programador, además de trabajar solo?",
+    "options": [
+      "Exclusivamente escribiendo código sin interrupciones",
+      "En tareas totalmente ajenas a la informática el 90 % del tiempo",
+      "Interactuando con otras personas (aproximadamente la mitad del tiempo)",
+      "Sin realizar ninguna actividad"
+    ],
+    "answer": 2,
+    "explanation": "Según la distribución del tiempo del temario, una parte muy importante se dedica a interactuar con otras personas (en torno a la mitad), además del trabajo individual y las actividades no productivas."
+  },
+  {
+    "id": 340,
+    "question": "En EVA, la variación de la planificación (Schedule Variance, SV) se calcula como:",
+    "options": ["BCWP − ACWP", "BCWP − BCWS", "BCWP / BCWS", "ACWP / BCWP"],
+    "answer": 1,
+    "explanation": "SV = BCWP − BCWS (indicador de progreso). Si es positiva, la tarea va adelantada respecto a la agenda planificada."
+  },
+  {
+    "id": 341,
+    "question": "En EVA, la variación de coste (Cost Variance, CV) se calcula como:",
+    "options": ["BCWP − BCWS", "ACWP − BCWS", "BCWP − ACWP", "BCWS / BCWP"],
+    "answer": 2,
+    "explanation": "CV = BCWP − ACWP (indicador de productividad/coste). Si es negativa, se está gastando más de lo previsto."
+  },
+  {
+    "id": 342,
+    "question": "Si en EVA una tarea presenta un SPI = 1,5, según el temario significa que:",
+    "options": [
+      "Va con retraso respecto a la agenda",
+      "Ha gastado un 50 % más de dinero",
+      "La tarea está cancelada",
+      "Sólo ha utilizado el 67 % del tiempo planificado para el trabajo realizado (va adelantada)"
+    ],
+    "answer": 3,
+    "explanation": "Un SPI de 1,5 significa que sólo se ha utilizado el 67 % del tiempo planificado (BCWS = 0,67·BCWP) para completar el trabajo realizado: la tarea va adelantada."
+  },
+  {
+    "id": 358,
+    "question": "En COCOMO 81, el modo ‘empotrado’ (embedded) se aplica a:",
+    "options": [
+      "Aplicaciones sencillas y bien conocidas desarrolladas por equipos pequeños",
+      "Proyectos complejos en los que el software forma parte de un sistema fuertemente acoplado de hardware, software y procedimientos",
+      "Proyectos sin ninguna restricción",
+      "Proyectos de mantenimiento exclusivamente"
+    ],
+    "answer": 1,
+    "explanation": "El modo empotrado (embedded) de COCOMO 81 corresponde a proyectos complejos donde el software forma parte de un sistema fuertemente acoplado de hardware, software, normativas y procedimientos."
+  },
+  {
+    "id": 359,
+    "question": "El nivel inicial de prototipado de COCOMO 2 realiza las estimaciones a partir de:",
+    "options": [
+      "Líneas de código ya escritas",
+      "El número de empleados de la empresa",
+      "El presupuesto del cliente",
+      "Puntos de objeto y una fórmula simple del esfuerzo"
+    ],
+    "answer": 3,
+    "explanation": "El nivel inicial de prototipado de COCOMO 2 estima con puntos de objeto y una fórmula simple del esfuerzo; soporta reutilización y tiene en cuenta las herramientas CASE."
+  },
+  {
+    "id": 362,
+    "question": "En un grafo PERT, las ‘actividades ficticias’ se utilizan para:",
+    "options": [
+      "Añadir tiempo extra al proyecto",
+      "Representar dependencias entre actividades sin consumir tiempo ni recursos",
+      "Calcular el presupuesto",
+      "Sustituir al camino crítico"
+    ],
+    "answer": 1,
+    "explanation": "Las actividades ficticias representan dependencias o precedencias entre actividades sin consumir tiempo ni recursos (se usan en convergencias y divergencias del grafo)."
+  },
+  {
+    "id": 371,
+    "question": "Si una tarea con un valor planificado (BCWS) de 400 € sólo se ha completado al 50 %, su BCWP (valor acumulado) es:",
+    "options": ["400 €", "0 €", "800 €", "200 €"],
+    "answer": 3,
+    "explanation": "El BCWP es el valor, en coste de línea base, del trabajo realmente realizado: el 50 % de 400 € = 200 €."
+  },
+  {
+    "id": 373,
+    "question": "Si en un análisis EVA resulta que el proyecto necesita un 25 % más del tiempo planificado para completar el trabajo, esto refleja un problema de:",
+    "options": [
+      "Presupuesto de hardware",
+      "Recursos humanos disponibles",
+      "Agenda (planificación): va con retraso",
+      "Calidad del código"
+    ],
+    "answer": 2,
+    "explanation": "Necesitar más tiempo del planificado es un problema de agenda/planificación (indicador de progreso, SV/SPI): la tarea o el proyecto va con retraso."
+  },
+  {
+    "id": 374,
+    "question": "Una vez conocidas las actividades, dependencias, duraciones y recursos, ¿qué se calcula al programar la agenda prevista?",
+    "options": [
+      "El precio de venta del producto",
+      "Las fechas más tempranas/tardías y las holguras totales y libres de las actividades",
+      "El número de empleados a contratar",
+      "La campaña publicitaria"
+    ],
+    "answer": 1,
+    "explanation": "Con las entradas (actividades, dependencias, duraciones, recursos) se calculan las fechas de inicio/fin más tempranas y tardías y las holguras totales y libres de las actividades."
+  },
+  {
+    "id": 378,
+    "question": "Según el temario, la entidad debe responder a la solicitud de ejercicio de derechos del interesado en un plazo de:",
+    "options": ["72 horas", "1 mes", "1 año", "15 días hábiles"],
+    "answer": 1,
+    "explanation": "El procedimiento para el ejercicio de derechos contempla recibir la petición, comprobar la identidad, registrarla con ticket único y responder en el plazo de 1 mes."
+  },
+  {
+    "id": 389,
+    "question": "En COCOMO 2, el nivel inicial de diseño realiza las estimaciones:",
+    "options": [
+      "Después de establecer los requisitos, con fórmulas algorítmicas (a partir de puntos de función convertidos a KLOC)",
+      "Sólo cuando el software está terminado",
+      "Contando pantallas e informes (puntos de objeto)",
+      "Sin ninguna fórmula"
+    ],
+    "answer": 0,
+    "explanation": "El nivel inicial de diseño de COCOMO 2 estima tras establecer los requisitos, con fórmulas algorítmicas (PM = A·Tamaño^B·M) usando puntos de función convertidos a líneas de código (KLOC)."
+  },
+  {
+    "id": 390,
+    "question": "Tres actividades A, B y C, donde A precede a B. Las holguras totales son HT(A)=4, HT(B)=2, HT(C)=3 y las libres HL(A)=2, HL(B)=2, HL(C)=3. Si A se retrasa 3 días, ¿qué ocurre?",
+    "options": [
+      "El proyecto se retrasa 3 días",
+      "A, B y C se vuelven críticas",
+      "No se puede determinar",
+      "El proyecto no se retrasa; B reduce su holgura total en 1 día y C no se ve afectada"
+    ],
+    "answer": 3,
+    "explanation": "Como HT(A)=4, retrasar A 3 días no retrasa el proyecto. Pero HL(A)=2, así que se supera la holgura libre en 3−2=1 día y la siguiente actividad (B) reduce su holgura total en 1 (de 2 a 1). C no depende de A, no se ve afectada."
+  },
+  {
+    "id": 391,
+    "question": "Las holguras totales son HT(A)=2, HT(B)=4, HT(C)=3 y las libres HL(A)=3, HL(B)=2, HL(C)=1. ¿Qué se puede afirmar?",
+    "options": [
+      "Todas las actividades son críticas",
+      "Las condiciones no pueden darse: la holgura libre nunca puede superar a la total",
+      "El proyecto se retrasa 3 días",
+      "A tiene la mayor holgura de las tres"
+    ],
+    "answer": 1,
+    "explanation": "La holgura libre de una actividad nunca puede ser mayor que su holgura total (HL ≤ HT). Como HL(A)=3 > HT(A)=2, las condiciones iniciales son imposibles."
+  },
+  {
+    "id": 392,
+    "question": "En un grafo PERT, un nodo de ‘convergencia’ representa:",
+    "options": [
+      "Una actividad que se divide en varias",
+      "El coste total del proyecto",
+      "Varias actividades que deben finalizar antes de que pueda comenzar la siguiente",
+      "La holgura total del camino crítico"
+    ],
+    "answer": 2,
+    "explanation": "En la precedencia entre actividades, una convergencia es un nodo al que llegan varias actividades que deben finalizar antes de que pueda comenzar la siguiente (la divergencia es lo contrario)."
+  },
+  {
+    "id": 393,
+    "question": "El cálculo de los tiempos más tardíos (last) en una red PERT se realiza:",
+    "options": [
+      "Hacia atrás, tomando el mínimo de (t* − tᵢⱼ) en cada nodo",
+      "Hacia delante, tomando el máximo",
+      "Sumando todas las holguras del proyecto",
+      "De forma aleatoria"
+    ],
+    "answer": 0,
+    "explanation": "Los tiempos last se calculan hacia atrás: t*ⱼ = mín[t*ⱼ − tᵢⱼ]. Los early se calculan hacia delante con el máximo."
+  },
+  {
+    "id": 399,
+    "question": "En un momento del proyecto tenemos SPI < 1 y CPI > 1. ¿Qué podemos afirmar?",
+    "options": [
+      "Va adelantado respecto a la agenda y con sobrecoste",
+      "Va retrasado respecto a la agenda pero gastando menos de lo previsto",
+      "Va adelantado y con ahorro",
+      "Va exactamente según lo previsto en todo"
+    ],
+    "answer": 1,
+    "explanation": "SPI < 1 indica retraso respecto a la agenda; CPI > 1 indica que se gasta menos de lo previsto (ahorro). Por tanto: retrasado pero con ahorro."
+  },
+  {
+    "id": 400,
+    "question": "Una tarea tiene BCWS = 1000, BCWP = 800 y ACWP = 1000. ¿Qué podemos afirmar?",
+    "options": [
+      "Va adelantada y con ahorro",
+      "Va exactamente según lo previsto",
+      "Va retrasada y con sobrecoste (gastando más de lo previsto)",
+      "La tarea ya ha terminado"
+    ],
+    "answer": 2,
+    "explanation": "SV = BCWP − BCWS = 800 − 1000 = −200 (retrasada). CV = BCWP − ACWP = 800 − 1000 = −200 (gasta más de lo previsto, sobrecoste)."
+  },
+  {
+    "id": 401,
+    "question": "Datos EVA (BCWS/BCWP/ACWP) — Tarea1: 1000/1000/800; Tarea2: 800/600/600; Tarea3: 500/500/700; Tarea4: 0/0/0. ¿Cuál de las siguientes afirmaciones es FALSA?",
+    "options": [
+      "La Tarea 3 va según la agenda pero con ahorro",
+      "La Tarea 1 va según la agenda y gastando menos de lo previsto",
+      "La Tarea 2 va retrasada respecto a la agenda",
+      "La Tarea 4 aún no ha comenzado"
+    ],
+    "answer": 0,
+    "explanation": "La Tarea 3 tiene SV = 500−500 = 0 (según la agenda), pero CV = 500−700 = −200: gasta MÁS de lo previsto (sobrecoste), no ahorro; por eso es falsa. (T1: CV=+200 ahorro; T2: SV=−200 retrasada; T4: sin empezar.)"
+  },
+  {
+    "id": 402,
+    "question": "Una tarea tiene BCWP = 600 y ACWP = 800. ¿Cuál es su CPI y qué indica?",
+    "options": [
+      "CPI = 1,33: ahorro",
+      "CPI = 0,75: va adelantada en agenda",
+      "CPI = 1,33: sobrecoste",
+      "CPI = 0,75: gasta más de lo previsto (sobrecoste)"
+    ],
+    "answer": 3,
+    "explanation": "CPI = BCWP/ACWP = 600/800 = 0,75. Al ser menor que 1, la tarea gasta más de lo previsto (sobrecoste). El CPI mide coste, no agenda."
+  },
+  {
+    "id": 410,
+    "question": "Según el temario, tramitar telemáticamente una solicitud de registro en el Registro Central de la Propiedad Intelectual (2025) cuesta aproximadamente:",
+    "options": [
+      "288.000 €",
+      "71 € al año",
+      "Es gratuito en todos los casos",
+      "Aproximadamente 8,26 €"
+    ],
+    "answer": 3,
+    "explanation": "Según el temario, la tramitación telemática de un expediente de solicitud cuesta 8,26 € (14,97 € si es presencial), con tasas que pueden variar en registros territoriales."
+  },
+  {
+    "id": 419,
+    "question": "Una actividad tiene su comienzo anticipado en el día 3, una duración de 5 días y su límite de fin (LF) en el día 12. ¿Cuál es su holgura total?",
+    "options": ["0 días", "9 días", "4 días", "7 días"],
+    "answer": 2,
+    "explanation": "HT = LF − comienzo anticipado − duración = 12 − 3 − 5 = 4 días."
+  },
+  {
+    "id": 420,
+    "question": "A precede a B. La holgura total de A es HT(A)=5 y su holgura libre HL(A)=1. Si A se retrasa 6 días, ¿qué ocurre?",
+    "options": [
+      "No ocurre nada, está dentro de la holgura",
+      "El proyecto se retrasa 1 día (el retraso supera la holgura total de A)",
+      "B se adelanta 1 día",
+      "El proyecto se retrasa 6 días"
+    ],
+    "answer": 1,
+    "explanation": "Como el retraso (6) supera la holgura total de A (5), el proyecto se retrasa en 6 − 5 = 1 día."
+  },
+  {
+    "id": 421,
+    "question": "A precede a B. HT(A)=4 y HL(A)=3. Si A se retrasa 2 días, ¿qué ocurre?",
+    "options": [
+      "El proyecto se retrasa 2 días",
+      "B pierde toda su holgura",
+      "A se vuelve crítica",
+      "No ocurre nada: el retraso está dentro de la holgura libre; ni el proyecto ni B se ven afectados"
+    ],
+    "answer": 3,
+    "explanation": "Al ser el retraso (2) menor que la holgura libre de A (3), las actividades siguientes pueden empezar igual y el proyecto no se retrasa."
+  },
+  {
+    "id": 428,
+    "question": "En un momento del proyecto tenemos SPI > 1 y CPI > 1. ¿Qué podemos afirmar?",
+    "options": [
+      "Va retrasado y con sobrecoste",
+      "Va adelantado respecto a la agenda y gastando menos de lo previsto (ahorro)",
+      "Va retrasado pero con ahorro",
+      "Va adelantado pero con sobrecoste"
+    ],
+    "answer": 1,
+    "explanation": "SPI > 1 indica que va adelantado respecto a la agenda; CPI > 1 indica que gasta menos de lo previsto (ahorro)."
+  },
+  {
+    "id": 429,
+    "question": "Una tarea tiene BCWS = 1200, BCWP = 1400 y ACWP = 1200. ¿Qué podemos afirmar?",
+    "options": [
+      "Va retrasada y con sobrecoste",
+      "Va según lo previsto en todo",
+      "La tarea no ha comenzado",
+      "Va adelantada respecto a la agenda y con ahorro (gasta menos de lo previsto)"
+    ],
+    "answer": 3,
+    "explanation": "SV = BCWP − BCWS = 1400 − 1200 = +200 (adelantada). CV = BCWP − ACWP = 1400 − 1200 = +200 (ahorro)."
+  },
+  {
+    "id": 430,
+    "question": "Una tarea tiene BCWS = 1000, BCWP = 750 y ACWP = 500. ¿Cuáles son su CPI y su SPI?",
+    "options": [
+      "CPI = 1,5 (ahorro) y SPI = 0,75 (retrasada)",
+      "CPI = 0,75 y SPI = 1,5",
+      "CPI = 1,5 y SPI = 1,33 (todo correcto)",
+      "CPI = 0,5 y SPI = 0,75"
+    ],
+    "answer": 0,
+    "explanation": "CPI = BCWP/ACWP = 750/500 = 1,5 (gasta menos, ahorro). SPI = BCWP/BCWS = 750/1000 = 0,75 (retrasada)."
+  },
+  {
+    "id": 431,
+    "question": "Datos EVA (BCWS/BCWP/ACWP) — Tarea1: 900/900/900; Tarea2: 700/900/700; Tarea3: 600/400/600. ¿Cuál de las siguientes afirmaciones es FALSA?",
+    "options": [
+      "La Tarea 1 va exactamente según lo previsto en agenda y coste",
+      "La Tarea 2 va adelantada y gastando menos de lo previsto",
+      "La Tarea 3 va adelantada y con ahorro",
+      "La Tarea 2 va adelantada respecto a la agenda"
+    ],
+    "answer": 2,
+    "explanation": "La Tarea 3 tiene SV = 400 − 600 = −200 (retrasada) y CV = 400 − 600 = −200 (sobrecoste); por eso 'va adelantada y con ahorro' es falso. (T1: SV=0 y CV=0; T2: SV=+200 y CV=+200.)"
+  },
+  {
+    "id": 432,
+    "question": "Una tarea con un presupuesto total (BAC) de 2000 € está completada al 40 %. ¿Cuál es su valor acumulado (BCWP)?",
+    "options": ["2000 €", "800 €", "1200 €", "0 €"],
+    "answer": 1,
+    "explanation": "El valor acumulado (BCWP) es el porcentaje completado por el presupuesto: 40 % × 2000 € = 800 €."
+  },
+  {
+    "id": 436,
+    "question": "¿Cuál de las siguientes NO es una de las normas de protección de datos que cita el temario?",
+    "options": [
+      "La LOPD (Ley Orgánica 15/1999)",
+      "La Ley de Propiedad Intelectual (RDL 1/1996)",
+      "El RGPD (Reglamento UE de 2016)",
+      "La LOPDGDD (Ley Orgánica 3/2018)"
+    ],
+    "answer": 1,
+    "explanation": "Las normas de protección de datos son la LOPD (15/1999), el RGPD (2016) y la LOPDGDD (3/2018). La Ley de Propiedad Intelectual (RDL 1/1996) regula los derechos de autor (Tema 8)."
+  },
+  {
+    "id": 444,
+    "question": "Según el temario, la garantía del software (Ley General de Defensa de Consumidores y Usuarios):",
+    "options": [
+      "No existe garantía en el software",
+      "Obliga al vendedor/desarrollador a asegurar que funciona conforme a lo prometido, con un plazo mínimo (generalmente 2 años)",
+      "Tiene una duración de 70 años",
+      "La debe pagar el cliente"
+    ],
+    "answer": 1,
+    "explanation": "La garantía implica la obligación del vendedor o desarrollador de asegurar que el producto funciona conforme a lo prometido y sin defectos durante un periodo determinado (según la ley española, un plazo mínimo, generalmente de 2 años)."
+  },
+  {
+    "id": 448,
+    "question": "Una actividad tiene su comienzo anticipado en el día 5 y su límite de comienzo (LC) en el día 9. ¿Cuál es su holgura total?",
+    "options": ["0 días", "4 días", "9 días", "5 días"],
+    "answer": 1,
+    "explanation": "La holgura total puede obtenerse como límite de comienzo − comienzo anticipado = 9 − 5 = 4 días."
+  },
+  {
+    "id": 449,
+    "question": "Un proyecto tiene dos caminos de inicio a fin: A→B (duraciones 4 y 6 días) y C→D (duraciones 3 y 5 días). ¿Cuál es la duración mínima del proyecto (camino crítico)?",
+    "options": ["8 días", "18 días", "7 días", "10 días"],
+    "answer": 3,
+    "explanation": "El camino A→B dura 4+6=10 días y el camino C→D dura 3+5=8 días. El camino crítico es el más largo: 10 días."
+  },
+  {
+    "id": 450,
+    "question": "A precede a B y B precede a C. Si A está en el camino crítico (HT(A)=0) y se retrasa 2 días, ¿qué ocurre?",
+    "options": [
+      "No ocurre nada",
+      "B y C se adelantan",
+      "El proyecto se retrasa 2 días (A está en el camino crítico)",
+      "Sólo se ve afectada C"
+    ],
+    "answer": 2,
+    "explanation": "Una actividad con holgura total 0 está en el camino crítico; cualquier retraso suyo retrasa el proyecto entero (aquí, 2 días), desplazando a B y a C."
+  },
+  {
+    "id": 456,
+    "question": "Una tarea tiene BCWS = 1500, BCWP = 1200 y ACWP = 1000. ¿Cuáles son su SV y su CV, y qué indican?",
+    "options": [
+      "SV = +300 (adelantada) y CV = −200 (sobrecoste)",
+      "SV = −200 y CV = +300",
+      "SV = 0 y CV = 0",
+      "SV = −300 (retrasada) y CV = +200 (ahorro)"
+    ],
+    "answer": 3,
+    "explanation": "SV = BCWP − BCWS = 1200 − 1500 = −300 (retrasada). CV = BCWP − ACWP = 1200 − 1000 = +200 (ahorro)."
+  },
+  {
+    "id": 457,
+    "question": "Una tarea tiene un valor acumulado (BCWP) de 900 € y un presupuesto total (BAC) de 3000 €. ¿Qué porcentaje se ha completado?",
+    "options": ["90 %", "10 %", "30 %", "3 %"],
+    "answer": 2,
+    "explanation": "El porcentaje completado es BCWP / BAC = 900 / 3000 = 0,30 = 30 %."
+  },
+  {
+    "id": 458,
+    "question": "Datos EVA (BCWS/BCWP/ACWP) — Tarea1: 800/600/900; Tarea2: 1000/1000/800; Tarea3: 500/700/700. ¿Cuál de las siguientes afirmaciones es VERDADERA?",
+    "options": [
+      "La Tarea 2 va según la agenda y con ahorro",
+      "La Tarea 1 va adelantada y con ahorro",
+      "La Tarea 3 va retrasada respecto a la agenda",
+      "La Tarea 1 va exactamente según lo previsto"
+    ],
+    "answer": 0,
+    "explanation": "Tarea2: SV = 1000−1000 = 0 (según la agenda) y CV = 1000−800 = +200 (ahorro) → verdadera. (Tarea1: SV=−200 retrasada, CV=−300 sobrecoste; Tarea3: SV=+200 adelantada.)"
+  },
+  {
+    "id": 459,
+    "question": "Una tarea tiene BCWP = 1000 y ACWP = 1250. ¿Cuál es su CPI y qué indica?",
+    "options": [
+      "CPI = 1,25: ahorro",
+      "CPI = 0,8: gasta más de lo previsto (sobrecoste)",
+      "CPI = 1,25: sobrecoste",
+      "CPI = 0,8: va adelantada en agenda"
+    ],
+    "answer": 1,
+    "explanation": "CPI = BCWP/ACWP = 1000/1250 = 0,8 < 1: gasta más de lo previsto (sobrecoste). El CPI mide coste, no agenda."
+  },
+  {
+    "id": 477,
+    "question": "En UP, una iteración: (I) tiene un plan establecido y un criterio de evaluación; (II) produce una versión interna nueva (incremento); (III) al final de un ciclo se obtiene una release para el cliente. ¿Cuáles son ciertas?",
+    "options": ["Solo I y II", "Solo I y III", "Solo II", "Todas son ciertas"],
+    "answer": 3,
+    "explanation": "Las tres son ciertas: la iteración tiene plan y criterio de evaluación, genera un incremento (versión interna) y al final del ciclo se obtiene una release para el cliente."
+  },
+  {
+    "id": 481,
+    "question": "La norma europea que regula el reconocimiento de cualificaciones profesionales (y bajo la cual la informática NO figura como profesión regulada) es:",
+    "options": [
+      "La Directiva 2005/36/CE sobre reconocimiento de cualificaciones profesionales",
+      "El RGPD (Reglamento 2016/679)",
+      "La Directiva de Servicios (Bolkestein)",
+      "La LOPDGDD"
+    ],
+    "answer": 0,
+    "explanation": "La Directiva 2005/36/CE regula el reconocimiento de cualificaciones profesionales; bajo ella la informática no figura como profesión regulada en la mayoría de países europeos."
+  },
+  {
+    "id": 482,
+    "question": "Sobre los colegios profesionales de informática en España, ¿cuál de las siguientes afirmaciones es FALSA?",
+    "options": [
+      "Existen colegios autonómicos con consejos que los agrupan a nivel nacional",
+      "Hay colegios diferenciados para Ingenieros Técnicos e Ingenieros Informáticos",
+      "En 2017 el Consejo General de Colegios de Ingeniería Técnica en Informática impugnó el Real Decreto",
+      "La colegiación es obligatoria para ejercer la profesión"
+    ],
+    "answer": 3,
+    "explanation": "En España la colegiación en informática es voluntaria (profesión no regulada); por eso 'la colegiación es obligatoria' es falsa. Las otras tres son ciertas."
+  },
+  {
+    "id": 483,
+    "question": "Sobre las holguras, ¿cuál de las siguientes afirmaciones es CIERTA?",
+    "options": [
+      "La holgura total siempre es mayor o igual que la holgura libre",
+      "La holgura libre siempre es mayor o igual que la holgura total",
+      "La holgura total y la holgura libre son siempre iguales",
+      "La holgura libre puede ser negativa"
+    ],
+    "answer": 0,
+    "explanation": "La holgura libre nunca puede superar a la total: HT ≥ HL siempre (la HT mira el fin del proyecto; la HL, el comienzo más temprano de las siguientes)."
+  },
+  {
+    "id": 484,
+    "question": "A precede a B. HT(A)=3 y HL(A)=3. Si A se retrasa 3 días, ¿qué ocurre?",
+    "options": [
+      "El proyecto se retrasa 3 días",
+      "B reduce su holgura total en 3 días",
+      "A se vuelve crítica y retrasa el proyecto",
+      "No ocurre nada: el retraso coincide con la holgura libre; ni el proyecto ni B se ven afectados"
+    ],
+    "answer": 3,
+    "explanation": "Como el retraso (3) es igual a la holgura libre de A (3), las actividades siguientes pueden empezar igual y el proyecto no se retrasa."
+  },
+  {
+    "id": 485,
+    "question": "Un proyecto tiene tres caminos de inicio a fin con estas duraciones: A (8), B (5+4) y C (3+3+3). ¿Cuál es la duración del camino crítico?",
+    "options": ["8 días", "9 días", "10 días", "26 días"],
+    "answer": 1,
+    "explanation": "A dura 8, B dura 5+4=9 y C dura 3+3+3=9. El camino crítico es el más largo: 9 días (no la suma de todos los caminos, 26)."
+  },
+  {
+    "id": 486,
+    "question": "Una tarea tiene SPI = 1,2 y CPI = 0,9. ¿Cuáles afirmaciones son ciertas? (I) va adelantada en agenda; (II) gasta más de lo previsto; (III) va retrasada.",
+    "options": ["Solo I", "Solo I y II", "Solo III", "Todas son ciertas"],
+    "answer": 1,
+    "explanation": "SPI=1,2>1 → adelantada (I cierta). CPI=0,9<1 → gasta más de lo previsto (II cierta). III es falsa (no va retrasada). Ciertas: I y II."
+  },
+  {
+    "id": 487,
+    "question": "Una tarea tiene BCWS=1000, BCWP=1000 y ACWP=1200. ¿Cuál afirmación es CIERTA?",
+    "options": [
+      "Va adelantada respecto a la agenda",
+      "Va retrasada respecto a la agenda",
+      "Va según la agenda pero gastando más de lo previsto (sobrecoste)",
+      "Todas son falsas"
+    ],
+    "answer": 2,
+    "explanation": "SV = BCWP−BCWS = 1000−1000 = 0 (según la agenda). CV = BCWP−ACWP = 1000−1200 = −200 (sobrecoste). Va según la agenda pero gastando más."
+  },
+  {
+    "id": 488,
+    "question": "En EVA, la variación de coste (CV) se calcula como BCWP − ACWP. Si CV es negativa, la tarea:",
+    "options": [
+      "Va adelantada respecto a la agenda",
+      "Va retrasada respecto a la agenda",
+      "Gasta más de lo previsto (sobrecoste)",
+      "Gasta menos de lo previsto (ahorro)"
+    ],
+    "answer": 2,
+    "explanation": "El CV mide coste, no agenda. Si CV = BCWP−ACWP < 0, se ha gastado más de lo previsto (sobrecoste). Las opciones de agenda son distractores."
+  },
+  {
+    "id": 489,
+    "question": "Datos EVA (BCWS/BCWP/ACWP) — Tarea1: 1000/800/800; Tarea2: 500/600/400; Tarea3: 700/700/900. ¿Cuál afirmación es FALSA?",
+    "options": [
+      "La Tarea 1 va retrasada pero gastando lo previsto",
+      "La Tarea 2 va adelantada y con ahorro",
+      "La Tarea 3 va según la agenda pero con sobrecoste",
+      "La Tarea 3 va según la agenda y con ahorro"
+    ],
+    "answer": 3,
+    "explanation": "Tarea3: SV=700−700=0 (según agenda) pero CV=700−900=−200 (sobrecoste), no ahorro; por eso 'con ahorro' es falsa. (T1: SV=−200, CV=0; T2: SV=+100, CV=+200.)"
+  },
+  {
+    "id": 490,
+    "question": "Una tarea está completada al 25 % y su presupuesto total (BAC) es 4000 €. ¿Cuál es su valor acumulado (BCWP)?",
+    "options": ["4000 €", "3000 €", "1000 €", "No se puede calcular sin conocer el ACWP"],
+    "answer": 2,
+    "explanation": "BCWP = % completado × BAC = 0,25 × 4000 = 1000 €. No hace falta el ACWP para el valor acumulado (BCWP)."
+  },
+  {
+    "id": 491,
+    "question": "En COCOMO 81, ¿cuál de estas asociaciones modo → descripción es FALSA?",
+    "options": [
+      "Orgánico → aplicaciones sencillas, equipos pequeños y experimentados",
+      "Semiseparado → complejidad intermedia",
+      "Empotrado → sistema fuertemente acoplado de hardware, software y procedimientos",
+      "Empotrado → aplicaciones sencillas desarrolladas por equipos pequeños"
+    ],
+    "answer": 3,
+    "explanation": "El modo empotrado es para sistemas complejos fuertemente acoplados, no para aplicaciones sencillas (eso describe el modo orgánico); por eso la última asociación es falsa."
+  },
+  {
+    "id": 497,
+    "question": "¿Cuál de las siguientes afirmaciones sobre la línea base es CIERTA?",
+    "options": [
+      "Una línea base puede modificarse libremente sin ningún control",
+      "Para modificar un elemento de una línea base, se extrae, se modifica y, una vez aprobado, se almacena como nueva línea base",
+      "La línea base es el coste real del trabajo realizado",
+      "Todas son falsas"
+    ],
+    "answer": 1,
+    "explanation": "Para modificar un elemento de una línea base se extrae de la base de datos del proyecto, se modifica de forma controlada y, tras aprobarse, se vuelve a almacenar como nueva línea base."
+  },
+  {
+    "id": 499,
+    "question": "Según el temario, las infracciones LEVES en protección de datos pueden alcanzar multas de hasta:",
+    "options": ["300.000 €", "40.000 €", "20.000.000 €", "300 €"],
+    "answer": 1,
+    "explanation": "Las infracciones leves se sancionan con hasta 40.000 €; las graves de 40.001 a 300.000 € y las muy graves por encima, hasta 20.000.000 € o el 4 % de la facturación."
+  },
+  {
+    "id": 502,
+    "question": "Según el temario, una estructura centralizada controlada (CC) resulta más adecuada cuando:",
+    "options": [
+      "El problema es difícil y requiere mucha comunicación",
+      "El problema es relativamente sencillo, el programa es grande y el plazo de entrega es rígido",
+      "El equipo va a durar mucho tiempo y la fiabilidad requerida es alta",
+      "Todas son falsas"
+    ],
+    "answer": 1,
+    "explanation": "La estructura CC conviene con problemas sencillos, programas grandes, equipos de corta duración, alta modularidad, plazo rígido y poca comunicación (resolución rápida y jerárquica)."
+  },
+  {
+    "id": 503,
+    "question": "¿Cuál de las siguientes asociaciones factor → estructura es CORRECTA, según el temario?",
+    "options": [
+      "Plazo de entrega muy rígido → favorece la estructura descentralizada democrática (DD)",
+      "Problema muy difícil → favorece la estructura centralizada controlada (CC)",
+      "Alta fiabilidad requerida → favorece la estructura descentralizada democrática (DD)",
+      "Todas son correctas"
+    ],
+    "answer": 2,
+    "explanation": "Alta fiabilidad favorece la DD. Un plazo rígido favorece la CC (no la DD) y un problema difícil favorece la DD (no la CC); por eso las dos primeras opciones están intercambiadas."
+  },
+  {
+    "id": 506,
+    "question": "En UP: (I) cada iteración produce una versión interna (incremento); (II) al final de un ciclo se obtiene una release para el cliente; (III) la fase de Construcción implementa el sistema. ¿Cuáles son ciertas?",
+    "options": ["Solo I y III", "Solo II", "Solo I y II", "Todas son ciertas"],
+    "answer": 3,
+    "explanation": "Las tres son ciertas: cada iteración produce un incremento (versión interna), al final de un ciclo se obtiene una release y la Construcción implementa el sistema mediante iteraciones."
+  },
+  {
+    "id": 508,
+    "question": "Sobre la situación profesional de la Ingeniería Informática en España, ¿cuál de las siguientes afirmaciones es FALSA?",
+    "options": [
+      "Es una profesión no regulada, sin atribuciones reservadas",
+      "La colegiación es voluntaria y el ejercicio en libre competencia",
+      "La exclusión de 2008 provocó protestas y manifestaciones en toda España",
+      "Fue la única ingeniería incluida en el Real Decreto de Cualificaciones Profesionales de 2008"
+    ],
+    "answer": 3,
+    "explanation": "Fue la única ingeniería que NO se incluyó en el RD de Cualificaciones de 2008 (de ahí las protestas); decir que fue 'la única incluida' es falso. Las otras tres son ciertas."
+  },
+  {
+    "id": 509,
+    "question": "Según el temario, que la ingeniería informática no sea una profesión regulada a nivel internacional implica que:",
+    "options": [
+      "Solo pueden ejercerla los colegiados",
+      "Está prohibido ejercerla sin licencia",
+      "El acceso al mercado es libre, basándose más en la competencia y la experiencia que en la titulación oficial habilitante",
+      "Todas son ciertas"
+    ],
+    "answer": 2,
+    "explanation": "Al no ser profesión regulada, el acceso al mercado es libre, basándose más en la competencia y la experiencia que en una titulación oficial habilitante."
+  },
+  {
+    "id": 510,
+    "question": "Una actividad NO crítica siempre cumple que:",
+    "options": [
+      "Su holgura total es mayor que 0",
+      "Su holgura total es 0",
+      "Su holgura libre es mayor que su holgura total",
+      "Está en el camino crítico"
+    ],
+    "answer": 0,
+    "explanation": "Una actividad no crítica tiene holgura total mayor que 0. Holgura total 0 y estar en el camino crítico describen a las críticas; además, la holgura libre nunca supera a la total."
+  },
+  {
+    "id": 511,
+    "question": "A precede a B. HT(A)=5 y HL(A)=2. Si A se retrasa 4 días, ¿qué ocurre?",
+    "options": [
+      "El proyecto se retrasa 4 días",
+      "El proyecto no se retrasa; B reduce su holgura total en 2 días",
+      "No ocurre nada, está dentro de la holgura libre",
+      "Todas son falsas"
+    ],
+    "answer": 1,
+    "explanation": "Como HT(A)=5, el proyecto no se retrasa. Pero el retraso (4) supera la holgura libre (2) en 2, así que la siguiente actividad (B) reduce su holgura total en 2 días."
+  },
+  {
+    "id": 512,
+    "question": "Un proyecto tiene dos caminos de inicio a fin: A→B→C (duraciones 2+3+4) y D→E (5+6). ¿Cuál es la duración del camino crítico?",
+    "options": ["9 días", "20 días", "6 días", "11 días"],
+    "answer": 3,
+    "explanation": "A→B→C dura 2+3+4=9 días y D→E dura 5+6=11 días. El camino crítico es el más largo: 11 días (no la suma de todos los caminos, 20)."
+  },
+  {
+    "id": 513,
+    "question": "Una tarea tiene SPI = 0,8 y CPI = 0,8. ¿Cuáles afirmaciones son ciertas? (I) va retrasada; (II) gasta más de lo previsto; (III) va según lo previsto.",
+    "options": ["Solo I", "Solo II", "Solo I y II", "Todas son ciertas"],
+    "answer": 2,
+    "explanation": "SPI=0,8<1 → retrasada (I cierta). CPI=0,8<1 → gasta más de lo previsto (II cierta). III es falsa. Ciertas: I y II."
+  },
+  {
+    "id": 514,
+    "question": "Una tarea tiene BCWS=800, BCWP=1000 y ACWP=1200. ¿Cuál afirmación es CIERTA?",
+    "options": [
+      "Va adelantada respecto a la agenda pero gastando más de lo previsto (sobrecoste)",
+      "Va retrasada y con ahorro",
+      "Va según lo previsto en todo",
+      "Todas son falsas"
+    ],
+    "answer": 0,
+    "explanation": "SV = BCWP−BCWS = 1000−800 = +200 (adelantada). CV = BCWP−ACWP = 1000−1200 = −200 (sobrecoste). Va adelantada pero gastando más de lo previsto."
+  },
+  {
+    "id": 515,
+    "question": "Una tarea tiene BCWP=1200 y BCWS=1000. ¿Cuál es su SPI y qué indica?",
+    "options": [
+      "SPI=0,83: retrasada",
+      "SPI=1,2: adelantada respecto a la agenda",
+      "SPI=1,2: sobrecoste",
+      "SPI=0,83: ahorro"
+    ],
+    "answer": 1,
+    "explanation": "SPI = BCWP/BCWS = 1200/1000 = 1,2 > 1: adelantada respecto a la agenda. El SPI mide progreso (agenda), no coste."
+  },
+  {
+    "id": 516,
+    "question": "Datos EVA (BCWS/BCWP/ACWP) — Tarea1: 600/600/500; Tarea2: 800/600/600; Tarea3: 400/500/600. ¿Cuál afirmación es VERDADERA?",
+    "options": [
+      "La Tarea 2 va adelantada respecto a la agenda",
+      "La Tarea 3 va con ahorro",
+      "La Tarea 1 va retrasada",
+      "La Tarea 1 va según la agenda y con ahorro"
+    ],
+    "answer": 3,
+    "explanation": "Tarea1: SV=600−600=0 (según agenda) y CV=600−500=+100 (ahorro) → verdadera. (Tarea2: SV=−200 retrasada; Tarea3: CV=500−600=−100 sobrecoste, no ahorro.)"
+  },
+  {
+    "id": 517,
+    "question": "Una tarea tiene un valor acumulado (BCWP) de 1500 € y está completada al 50 %. ¿Cuál es su presupuesto total (BAC)?",
+    "options": ["750 €", "1500 €", "3000 €", "No se puede calcular"],
+    "answer": 2,
+    "explanation": "Si BCWP = % completado × BAC, entonces BAC = BCWP / % completado = 1500 / 0,5 = 3000 €."
+  },
+  {
+    "id": 518,
+    "question": "¿Cuál de las siguientes asociaciones nivel de COCOMO 2 → base de estimación es CORRECTA?",
+    "options": [
+      "Nivel post-arquitectura → líneas de código fuente",
+      "Nivel post-arquitectura → puntos de objeto",
+      "Nivel inicial de prototipado → líneas de código",
+      "Todas son correctas"
+    ],
+    "answer": 0,
+    "explanation": "El nivel post-arquitectura de COCOMO 2 estima con líneas de código fuente; el inicial de prototipado usa puntos de objeto (las otras opciones intercambian ambos niveles)."
+  },
+  {
+    "id": 526,
+    "question": "Según el temario, ¿cuál de estas afirmaciones sobre el consentimiento en protección de datos es FALSA?",
+    "options": [
+      "El consentimiento puede ser tácito y presumirse por el silencio",
+      "Debe ser libre, específico, informado e inequívoco",
+      "Un menor puede prestarlo a partir de los 14 años en España",
+      "Debe darse mediante una acción afirmativa clara"
+    ],
+    "answer": 0,
+    "explanation": "El consentimiento NO puede presumirse por el silencio o la inacción: debe ser inequívoco, mediante una declaración o una acción afirmativa clara. Por eso esa afirmación es falsa."
+  },
+  {
+    "id": 527,
+    "question": "¿Cuál de las siguientes asociaciones organismo → ámbito es CORRECTA?",
+    "options": [
+      "AEPD → organismo europeo que garantiza la coherencia en la UE",
+      "CEPD → autoridad de control española que impone sanciones",
+      "AEPD → autoridad de control española; CEPD → organismo europeo que garantiza la coherencia",
+      "Todas son correctas"
+    ],
+    "answer": 2,
+    "explanation": "La AEPD es la autoridad de control española y el CEPD el organismo europeo que garantiza la coherencia en la UE (las dos primeras opciones intercambian ambos organismos)."
+  },
+  {
+    "id": 538,
+    "question": "Sobre la profesión informática en Europa, ¿cuál de las siguientes afirmaciones es CIERTA?",
+    "options": [
+      "Está regulada en la mayoría de países de la UE",
+      "La mayoría de los países de la UE no la reconocen como profesión regulada bajo la Directiva 2005/36/CE",
+      "España es uno de los países donde está regulada",
+      "Todas son ciertas"
+    ],
+    "answer": 1,
+    "explanation": "Bajo la Directiva 2005/36/CE, la informática no figura como profesión regulada en la mayoría de países europeos; solo Chipre, Grecia, Italia y Portugal la regulan. España no."
+  },
+  {
+    "id": 540,
+    "question": "Sobre el camino crítico, ¿cuál de las siguientes afirmaciones es FALSA?",
+    "options": [
+      "Es la secuencia de actividades con holgura total 0",
+      "Determina la duración mínima del proyecto",
+      "Un retraso en una actividad crítica retrasa el proyecto",
+      "Las actividades del camino crítico tienen la mayor holgura del proyecto"
+    ],
+    "answer": 3,
+    "explanation": "Las actividades del camino crítico tienen holgura total 0 (la menor, no la mayor); por eso esa afirmación es falsa. Las otras tres son ciertas."
+  },
+  {
+    "id": 541,
+    "question": "A precede a B. HT(A)=2 y HL(A)=0. Si A se retrasa 1 día, ¿qué ocurre?",
+    "options": [
+      "El proyecto se retrasa 1 día",
+      "B reduce su holgura total en 1 día, pero el proyecto no se retrasa",
+      "No ocurre absolutamente nada",
+      "Todas son falsas"
+    ],
+    "answer": 1,
+    "explanation": "Como HT(A)=2, el retraso de 1 día no retrasa el proyecto. Pero HL(A)=0: cualquier retraso obliga a B a empezar más tarde, reduciendo su holgura total en 1 día."
+  },
+  {
+    "id": 542,
+    "question": "Un proyecto tiene tres caminos: A→B (3+7), C→D (6+3) y E (11). ¿Cuál es la duración del camino crítico?",
+    "options": ["10 días", "9 días", "11 días", "30 días"],
+    "answer": 2,
+    "explanation": "A→B dura 3+7=10, C→D dura 6+3=9 y E dura 11. El camino crítico es el más largo: 11 días (no la suma de todos, 30)."
+  },
+  {
+    "id": 543,
+    "question": "Una tarea tiene SPI = 1 y CPI = 0,75. ¿Cuáles afirmaciones son ciertas? (I) va según la agenda; (II) gasta más de lo previsto; (III) va adelantada.",
+    "options": ["Solo I", "Solo I y II", "Solo II y III", "Todas son ciertas"],
+    "answer": 1,
+    "explanation": "SPI=1 → va según la agenda (I cierta). CPI=0,75<1 → gasta más de lo previsto (II cierta). III es falsa: no va adelantada, va justo según lo previsto."
+  },
+  {
+    "id": 544,
+    "question": "Una tarea tiene BCWS=1200, BCWP=900 y ACWP=900. ¿Cuál afirmación es CIERTA?",
+    "options": [
+      "Va retrasada respecto a la agenda pero gastando exactamente lo previsto",
+      "Va adelantada y con ahorro",
+      "Va retrasada y con sobrecoste",
+      "Todas son falsas"
+    ],
+    "answer": 0,
+    "explanation": "SV = 900−1200 = −300 (retrasada). CV = 900−900 = 0 (gasta exactamente lo previsto para el trabajo realizado, CPI=1)."
+  },
+  {
+    "id": 545,
+    "question": "¿Cuál de las siguientes asociaciones indicador EVA → qué mide es CORRECTA?",
+    "options": [
+      "CPI → progreso respecto a la agenda",
+      "SPI → coste (productividad económica)",
+      "SPI → progreso (agenda); CPI → coste (productividad)",
+      "Todas son correctas"
+    ],
+    "answer": 2,
+    "explanation": "El SPI mide progreso (agenda) y el CPI mide coste (productividad). Las dos primeras opciones intercambian ambos indicadores."
+  },
+  {
+    "id": 546,
+    "question": "Datos EVA (BCWS/BCWP/ACWP) — Tarea1: 500/500/500; Tarea2: 900/700/1000; Tarea3: 600/800/600. ¿Cuál afirmación es FALSA?",
+    "options": [
+      "La Tarea 1 va según lo previsto en agenda y coste",
+      "La Tarea 2 va retrasada y con sobrecoste",
+      "La Tarea 3 va adelantada y con ahorro",
+      "La Tarea 3 va retrasada respecto a la agenda"
+    ],
+    "answer": 3,
+    "explanation": "Tarea3: SV = 800−600 = +200 → va ADELANTADA, no retrasada; por eso esa afirmación es falsa. (T1: SV=0, CV=0; T2: SV=−200 y CV=−300; T3: CV=800−600=+200 ahorro.)"
+  },
+  {
+    "id": 547,
+    "question": "Una tarea tiene BAC=5000 € y BCWP=1000 €. ¿Qué porcentaje se ha completado y cuánto trabajo (en coste) queda?",
+    "options": [
+      "20 % completado; quedan 4000 €",
+      "10 % completado; quedan 4500 €",
+      "80 % completado; quedan 1000 €",
+      "No se puede calcular sin el ACWP"
+    ],
+    "answer": 0,
+    "explanation": "% completado = BCWP/BAC = 1000/5000 = 20 %. El trabajo pendiente en coste es BAC − BCWP = 5000 − 1000 = 4000 €. No hace falta el ACWP."
+  },
+  {
+    "id": 548,
+    "question": "¿Cuál de las siguientes afirmaciones sobre la estimación es CIERTA?",
+    "options": [
+      "La incertidumbre de la estimación aumenta conforme avanza el proyecto",
+      "Los puntos de función dependen del lenguaje de programación",
+      "Los puntos de función son independientes del lenguaje y se calculan desde la especificación",
+      "Todas son ciertas"
+    ],
+    "answer": 2,
+    "explanation": "Los puntos de función son independientes del lenguaje y se calculan desde la especificación. La incertidumbre DISMINUYE al avanzar el proyecto, y son las líneas de código (vía AVC) las que dependen del lenguaje."
+  },
+  {
+    "id": 550,
+    "question": "¿Cuál de las siguientes afirmaciones sobre la gestión de riesgos es FALSA?",
+    "options": [
+      "La identificación produce una lista de riesgos potenciales",
+      "El análisis valora probabilidad y efectos",
+      "La planificación elabora estrategias y planes de contingencia",
+      "La monitorización se realiza una sola vez al inicio del proyecto"
+    ],
+    "answer": 3,
+    "explanation": "La monitorización de riesgos es continua durante todo el proyecto (se reevalúan los riesgos), no se hace una sola vez al inicio; por eso es falsa."
+  },
+  {
+    "id": 553,
+    "question": "¿Cuál de las siguientes NO es una práctica de eXtreme Programming (XP) según el temario?",
+    "options": [
+      "La programación en parejas",
+      "La refactorización del código",
+      "La responsabilidad colectiva del código",
+      "La estimación mediante COCOMO"
+    ],
+    "answer": 3,
+    "explanation": "XP incluye programación en parejas, refactorización y responsabilidad colectiva del código. COCOMO es un modelo de estimación de costes (Tema 2), no una práctica de XP."
+  },
+  {
+    "id": 556,
+    "question": "¿Cuál de las siguientes afirmaciones sobre las brechas de seguridad es CIERTA?",
+    "options": [
+      "Deben notificarse en un plazo de 30 días",
+      "Deben notificarse en un plazo de 72 horas",
+      "No es obligatorio notificarlas",
+      "Todas son falsas"
+    ],
+    "answer": 1,
+    "explanation": "El RGPD exige notificar las brechas de seguridad que afecten a datos personales en un plazo de 72 horas."
+  },
+  {
+    "id": 557,
+    "question": "¿Cuál de estas asociaciones norma → contenido es CORRECTA?",
+    "options": [
+      "RGPD → norma europea (2016), aplicable desde 2018",
+      "LOPDGDD → reglamento europeo aplicable en toda la UE",
+      "RGPD → ley orgánica española que fija la edad de consentimiento en 14 años",
+      "Todas son correctas"
+    ],
+    "answer": 0,
+    "explanation": "El RGPD es la norma europea de 2016, aplicable desde 2018. La LOPDGDD es la ley orgánica española (3/2018) que la adapta y fija los 14 años (las otras opciones intercambian ambas normas)."
+  },
+  {
+    "id": 558,
+    "question": "¿Cuál de las siguientes afirmaciones sobre las licencias es FALSA?",
+    "options": [
+      "La GPL es una licencia copyleft",
+      "MIT, BSD y Apache 2.0 son licencias permisivas",
+      "LGPL y MPL son licencias de copyleft débil",
+      "OEM y shareware son licencias de software libre"
+    ],
+    "answer": 3,
+    "explanation": "OEM y shareware son licencias de software PROPIETARIO, no libre; por eso esa afirmación es falsa. Las otras tres son correctas."
+  },
+  {
+    "id": 560,
+    "question": "¿Cuál de las siguientes afirmaciones sobre la ética y la deontología es FALSA?",
+    "options": [
+      "La deontología se recoge en códigos deontológicos",
+      "Los Diez Mandamientos de la Ética Informática incluyen no usar el ordenador para dañar a otros",
+      "Las decisiones técnicas tienen consecuencias humanas, sociales y económicas",
+      "Cumplir la ley es suficiente: los principios éticos no añaden ninguna obligación"
+    ],
+    "answer": 3,
+    "explanation": "El temario insiste en que el profesional debe respetar no solo la legalidad, sino también principios morales; por eso decir que cumplir la ley basta es falso."
+  },
+  {
+    "id": 561,
+    "question": "Con el nivel inicial de prototipado de COCOMO 2 (PM = (NOP × (1 − %reuse/100)) / PROD): NOP = 60 puntos de objeto, reutilización del 25 % y productividad PROD = 15. ¿Cuál es el esfuerzo estimado?",
+    "options": ["4 personas-mes", "3 personas-mes", "2,25 personas-mes", "45 personas-mes"],
+    "answer": 1,
+    "explanation": "PM = (60 × (1 − 25/100)) / 15 = (60 × 0,75) / 15 = 45 / 15 = 3 personas-mes. (45 es el numerador sin dividir; 4 sería sin aplicar la reutilización.)"
+  },
+  {
+    "id": 562,
+    "question": "Calcula los puntos de objeto (sin multiplicador de complejidad) de un sistema con: 2 formularios de complejidad media, 1 informe complejo y 1 módulo 3GL simple. (Pesos — formularios: 7/10/15; informes: 5/7/10; módulos 3GL: 10/15/20)",
+    "options": ["37", "45", "40", "35"],
+    "answer": 2,
+    "explanation": "2 formularios medios × 10 = 20; 1 informe complejo × 10 = 10; 1 módulo 3GL simple × 10 = 10. Total = 40 puntos de objeto."
+  },
+  {
+    "id": 563,
+    "question": "Sobre los puntos de objeto, ¿cuál de las siguientes afirmaciones es FALSA?",
+    "options": [
+      "Se usan cuando se desarrolla con lenguajes 4GL o similares",
+      "Son una estimación ponderada de pantallas, informes y módulos 3GL",
+      "Los puntos de objeto son las clases de objetos del diseño orientado a objetos",
+      "Son más fáciles de estimar que las líneas de código en fases tempranas"
+    ],
+    "answer": 2,
+    "explanation": "El temario advierte expresamente que los puntos de objeto NO son clases de objetos; por eso esa afirmación es falsa. Las otras tres son correctas."
+  },
+  {
+    "id": 564,
+    "question": "¿Cuál de las siguientes NO es una de las categorías de multiplicadores (M) del nivel post-arquitectura de COCOMO 2?",
+    "options": [
+      "Atributos del producto",
+      "Atributos del cliente",
+      "Atributos del personal",
+      "Atributos del proyecto"
+    ],
+    "answer": 1,
+    "explanation": "Las categorías de multiplicadores son: atributos del producto, del ordenador, del personal y del proyecto. No existe una categoría de 'atributos del cliente'."
+  },
+  {
+    "id": 565,
+    "question": "Según el temario, los modelos algorítmicos de costes (como COCOMO) sirven en la planificación para:",
+    "options": [
+      "Sustituir por completo al juicio experto",
+      "Eliminar la incertidumbre de las estimaciones",
+      "Calcular el camino crítico",
+      "Comparar estrategias alternativas de desarrollo (gestión de opciones de coste)"
+    ],
+    "answer": 3,
+    "explanation": "Los modelos algorítmicos proporcionan una base para la planificación al permitir comparar estrategias alternativas (el temario lo ilustra con la tabla de opciones A–F de un sistema espacial empotrado)."
+  },
+  {
+    "id": 567,
+    "question": "Según el diagrama de UP: (I) el Modelado del sistema tiene su pico en Inicio–Elaboración; (II) el Despliegue es casi nulo en Inicio; (III) los flujos de soporte (gestión, entorno) desaparecen por completo en Transición. ¿Cuáles son ciertas?",
+    "options": ["Solo I", "Solo I y II", "Todas son ciertas", "Solo II y III"],
+    "answer": 1,
+    "explanation": "I y II son ciertas. III es falsa: los flujos de soporte (gestión de configuración, gestión, entorno) se mantienen más o menos constantes durante TODAS las fases, sin desaparecer."
+  },
+  {
+    "id": 571,
+    "question": "Una tarea presenta BAC = 1000, BCWS = 1000, BCWP = 1000 y ACWP = 1200. ¿Cuál de las siguientes afirmaciones es CIERTA?",
+    "options": [
+      "La tarea ya ha terminado (BCWP = BAC) según la agenda, pero ha gastado 200 de más",
+      "La tarea va adelantada y con ahorro",
+      "La tarea aún no ha comenzado",
+      "Todas son falsas"
+    ],
+    "answer": 0,
+    "explanation": "Como BCWS = BAC, la tarea debería haber terminado; y como BCWP = BAC, HA terminado según la agenda (SV = 0). Pero CV = 1000 − 1200 = −200: se han gastado 200 de más (CPI ≈ 0,83). Es el ejemplo resuelto del temario."
+  },
+  {
+    "id": 572,
+    "question": "Una tarea presenta BAC = 1000, BCWS = 500, BCWP = 0 y ACWP = 0. ¿Cuál de las siguientes afirmaciones es CIERTA?",
+    "options": [
+      "La tarea va según lo previsto",
+      "La tarea ha terminado",
+      "La tarea debería haber comenzado (BCWS > 0) pero aún no lo ha hecho: va retrasada, aunque sin coste real todavía",
+      "Todas son falsas"
+    ],
+    "answer": 2,
+    "explanation": "BCWS = 500 indica que ya debería haberse realizado trabajo por ese valor; BCWP = 0 dice que no se ha hecho nada (SV = −500: retrasada) y ACWP = 0 que aún no se ha gastado nada."
+  },
+  {
+    "id": 573,
+    "question": "Una tarea presenta BAC = 2000, BCWS = 1000, BCWP = 500 y ACWP = 1500. ¿Cuál de las siguientes afirmaciones es FALSA?",
+    "options": [
+      "La tarea va retrasada respecto a la agenda (SV = −500)",
+      "Se ha completado el 25 % de la tarea",
+      "Está gastando mucho más de lo previsto (CV = −1000)",
+      "Su SPI es 2"
+    ],
+    "answer": 3,
+    "explanation": "SPI = BCWP/BCWS = 500/1000 = 0,5, no 2; por eso esa afirmación es falsa. Las demás: SV = −500 (retrasada), % completado = BCWP/BAC = 25 %, CV = 500−1500 = −1000 (sobrecoste)."
+  },
+  {
+    "id": 574,
+    "question": "Una tarea tiene SPI = 0,5 y CPI = 2. ¿Cuáles afirmaciones son ciertas? (I) va muy retrasada; (II) gasta la mitad de lo previsto por trabajo realizado; (III) va adelantada.",
+    "options": ["Solo I", "Solo I y II", "Solo II y III", "Todas son falsas"],
+    "answer": 1,
+    "explanation": "SPI = 0,5 → muy retrasada (I cierta). CPI = 2 → por cada euro gastado se obtiene el doble de valor: gasta la mitad de lo previsto (II cierta). III es falsa."
+  },
+  {
+    "id": 575,
+    "question": "Datos EVA (BAC/BCWS/BCWP/ACWP) — T1: 1000/1000/1000/1000; T2: 1500/1500/1000/1500; T3: 1000/500/500/250; T4: 2000/0/0/0. ¿Cuál afirmación es FALSA?",
+    "options": [
+      "T1 ha terminado exactamente según lo previsto en agenda y coste",
+      "T2 debería haber terminado, pero va retrasada y gastando de más",
+      "T3 va según la agenda y con ahorro",
+      "T4 va retrasada porque aún no ha comenzado"
+    ],
+    "answer": 3,
+    "explanation": "T4 tiene BCWS = 0: todavía NO debía haber comenzado, así que no va retrasada; por eso es falsa. (T1: SV=0, CV=0 y BCWP=BAC; T2: SV=−500, CV=−500 con BCWS=BAC; T3: SV=0, CV=+250.)"
+  },
+  {
+    "id": 576,
+    "question": "Sobre las holguras, ¿cuál de las siguientes igualdades es CORRECTA?",
+    "options": [
+      "HT = límite de comienzo − comienzo anticipado = límite de fin − fin anticipado",
+      "HT = fin anticipado − comienzo anticipado",
+      "HT = comienzo anticipado − límite de comienzo",
+      "HT = duración de la actividad − holgura libre"
+    ],
+    "answer": 0,
+    "explanation": "La holgura total puede calcularse como LC − CA o, equivalentemente, LF − FA. La opción b es la duración, la c tiene el signo invertido y la d no es una igualdad válida."
+  },
+  {
+    "id": 577,
+    "question": "Una actividad tiene comienzo anticipado el día 4, duración 6 y límite de fin el día 10. ¿Qué podemos afirmar?",
+    "options": [
+      "Tiene holgura total 2",
+      "Es una actividad crítica (HT = 0)",
+      "Tiene holgura total 4",
+      "No se puede calcular"
+    ],
+    "answer": 1,
+    "explanation": "HT = LF − CA − duración = 10 − 4 − 6 = 0: la actividad es crítica (está en el camino crítico); cualquier retraso suyo retrasa el proyecto."
+  },
+  {
+    "id": 578,
+    "question": "A precede a B. HT(A) = 3 y HL(A) = 1. Si A se retrasa 5 días, ¿qué ocurre?",
+    "options": [
+      "No ocurre nada",
+      "B pierde 4 días de holgura pero el proyecto no se retrasa",
+      "El proyecto se retrasa 5 días",
+      "El proyecto se retrasa 2 días (el retraso supera la holgura total de A en 2)"
+    ],
+    "answer": 3,
+    "explanation": "El retraso (5) supera la holgura total de A (3): el proyecto se retrasa 5 − 3 = 2 días (y B, lógicamente, también se desplaza)."
+  },
+  {
+    "id": 579,
+    "question": "En un proyecto, G no es crítica (HT(G) = 4) y M es crítica (HT(M) = 0). Si G se retrasa 4 días y M se retrasa 3 días, ¿qué ocurre con el proyecto?",
+    "options": [
+      "Se retrasa 7 días",
+      "No se retrasa nada",
+      "Se retrasa 3 días: G consume exactamente su holgura y el retraso de M (crítica) va íntegro al proyecto",
+      "Se retrasa 4 días"
+    ],
+    "answer": 2,
+    "explanation": "G se retrasa justo su holgura total (4 = HT), así que no afecta al fin del proyecto. M es crítica (HT = 0): sus 3 días de retraso se trasladan íntegros al proyecto. Total: 3 días. (Es el estilo del Ejercicio 1 del temario.)"
+  },
+  {
+    "id": 580,
+    "question": "Dos caminos comparten la actividad final C (duración 5): A(4)→C y B(6)→C. ¿Cuál es la duración del camino crítico?",
+    "options": ["9 días", "15 días", "10 días", "11 días"],
+    "answer": 3,
+    "explanation": "Camino A→C: 4+5 = 9. Camino B→C: 6+5 = 11. El crítico es el más largo: 11 días (15 sería sumar A+B+C, que no es un camino)."
+  },
+  {
+    "id": 583,
+    "question": "Las cláusulas informativas de protección de datos se estructuran en dos capas. ¿Qué contenido pertenece a la PRIMERA capa (básica)?",
+    "options": [
+      "Identidad del responsable, finalidad principal, base jurídica y derechos básicos",
+      "Los datos completos del DPD y el procedimiento detallado para ejercer derechos",
+      "El registro de actividades de tratamiento completo",
+      "El contrato con el encargado del tratamiento"
+    ],
+    "answer": 0,
+    "explanation": "La primera capa (básica) contiene la identidad del responsable, la finalidad principal, la base jurídica y los derechos básicos; los datos completos (DPD, finalidades detalladas, destinatarios, procedimiento) van en la segunda capa."
+  },
+  {
+    "id": 584,
+    "question": "Sobre los contratos con encargados de tratamiento (Art. 28 RGPD), ¿cuál de las siguientes afirmaciones es CIERTA?",
+    "options": [
+      "Solo son necesarios para empresas de más de 250 empleados",
+      "Son opcionales si hay confianza con el proveedor",
+      "Solo se exigen para datos de categorías especiales",
+      "Son obligatorios siempre que un tercero acceda a datos personales por cuenta del responsable"
+    ],
+    "answer": 3,
+    "explanation": "El contrato (o acto jurídico vinculante) con el encargado es obligatorio siempre que un tercero acceda a datos para prestar un servicio al responsable; su base legal es el Art. 28 RGPD."
+  },
+  {
+    "id": 586,
+    "question": "Sobre los plazos y el alcance de la propiedad intelectual, ¿cuál de las siguientes afirmaciones es CIERTA?",
+    "options": [
+      "La Ley de Propiedad Intelectual protege las ideas abstractas",
+      "El plazo de los derechos patrimoniales de una persona jurídica cuenta desde la muerte del autor",
+      "Los derechos patrimoniales de una persona jurídica duran 70 años desde la divulgación (en la física, 70 años tras la muerte)",
+      "Todas son ciertas"
+    ],
+    "answer": 2,
+    "explanation": "Para persona jurídica el plazo es de 70 años desde la divulgación; para persona física, 70 años tras la muerte del autor. Las ideas abstractas no se protegen (solo obras concretas)."
+  },
+  {
+    "id": 590,
+    "question": "Sobre los indicadores EVA: (I) SV y CV son variaciones (restas); (II) SPI y CPI son índices (divisiones); (III) un valor de SV = 0 con CV < 0 es imposible. ¿Cuáles son ciertas?",
+    "options": ["Solo I", "Solo II", "Solo I y II", "Todas son ciertas"],
+    "answer": 2,
+    "explanation": "I y II son ciertas (SV=BCWP−BCWS, CV=BCWP−ACWP; SPI=BCWP/BCWS, CPI=BCWP/ACWP). III es falsa: SV=0 con CV<0 es perfectamente posible (según agenda pero con sobrecoste, como el ejemplo T1 del temario)."
+  }
+]

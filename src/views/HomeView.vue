@@ -40,7 +40,12 @@ useHead({
           </MainButton>
         </li>
         <li class="w-full"><MainButton id="ped" bg="gradient-amber" text="PED" /></li>
-        <li class="w-full"><MainButton id="gpi" bg="gradient-green" text="GPI" /></li>
+        <li class="w-full">
+          <MainButton bg="gradient-green" class="relative" text="GPI">
+            <MainButton id="gpi" bg="gradient-green" text="completo" />
+            <MainButton id="gpi_dificiles" bg="gradient-green" text="difíciles" />
+          </MainButton>
+        </li>
         <li class="w-full"><MainButton id="hada" bg="gradient-indigo" text="HADA" /></li>
         <li class="w-full">
           <MainButton bg="gradient-lime" class="relative" text="MADS">
